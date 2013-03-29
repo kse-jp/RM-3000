@@ -1,0 +1,5531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnTagSetting.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnTagSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnTagSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>583, 534</value>
+  </data>
+  <data name="btnTagSetting.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnTagSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 40</value>
+  </data>
+  <data name="btnTagSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnTagSetting.Text" xml:space="preserve">
+    <value>TXT_TAG_SETTING</value>
+  </data>
+  <data name="&gt;&gt;btnTagSetting.Name" xml:space="preserve">
+    <value>btnTagSetting</value>
+  </data>
+  <data name="&gt;&gt;btnTagSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTagSetting.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;btnTagSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picOutputCSV.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picOutputCSV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 53</value>
+  </data>
+  <data name="picOutputCSV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 94</value>
+  </data>
+  <data name="picOutputCSV.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="picOutputCSV.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;picOutputCSV.Name" xml:space="preserve">
+    <value>picOutputCSV</value>
+  </data>
+  <data name="&gt;&gt;picOutputCSV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picOutputCSV.Parent" xml:space="preserve">
+    <value>grpCsv</value>
+  </data>
+  <data name="&gt;&gt;picOutputCSV.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 99</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>TXT_CSV_ENDINDEX</value>
+  </data>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>grpCsv</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 66</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>TXT_CSV_STARTINDEX</value>
+  </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>grpCsv</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnOutputCSV.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnOutputCSV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 53</value>
+  </data>
+  <data name="btnOutputCSV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 94</value>
+  </data>
+  <data name="btnOutputCSV.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;btnOutputCSV.Name" xml:space="preserve">
+    <value>btnOutputCSV</value>
+  </data>
+  <data name="&gt;&gt;btnOutputCSV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOutputCSV.Parent" xml:space="preserve">
+    <value>grpCsv</value>
+  </data>
+  <data name="&gt;&gt;btnOutputCSV.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtCsvCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="txtCsvCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 97</value>
+  </data>
+  <data name="txtCsvCount.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="txtCsvCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="txtCsvCount.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="txtCsvCount.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="txtCsvCount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtCsvCount.Name" xml:space="preserve">
+    <value>txtCsvCount</value>
+  </data>
+  <data name="&gt;&gt;txtCsvCount.Type" xml:space="preserve">
+    <value>RM_3000.Controls.NumericTextBox, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCsvCount.Parent" xml:space="preserve">
+    <value>grpCsv</value>
+  </data>
+  <data name="&gt;&gt;txtCsvCount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtCsvStartIndex.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="txtCsvStartIndex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 65</value>
+  </data>
+  <data name="txtCsvStartIndex.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="txtCsvStartIndex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="txtCsvStartIndex.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="txtCsvStartIndex.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtCsvStartIndex.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtCsvStartIndex.Name" xml:space="preserve">
+    <value>txtCsvStartIndex</value>
+  </data>
+  <data name="&gt;&gt;txtCsvStartIndex.Type" xml:space="preserve">
+    <value>RM_3000.Controls.NumericTextBox, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCsvStartIndex.Parent" xml:space="preserve">
+    <value>grpCsv</value>
+  </data>
+  <data name="&gt;&gt;txtCsvStartIndex.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grpCsv.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="grpCsv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="grpCsv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 28</value>
+  </data>
+  <data name="grpCsv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 155</value>
+  </data>
+  <data name="grpCsv.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="grpCsv.Text" xml:space="preserve">
+    <value>TXT_OUTPUT_CSV</value>
+  </data>
+  <data name="&gt;&gt;grpCsv.Name" xml:space="preserve">
+    <value>grpCsv</value>
+  </data>
+  <data name="&gt;&gt;grpCsv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpCsv.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;grpCsv.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Column1.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>ch</value>
+  </data>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column2.HeaderText" xml:space="preserve">
+    <value>TXT_BOARD_SPEC</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>TXT_TAG_MEAS_ITEM</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="dgvMeasTagList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvMeasTagList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvMeasTagList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 288</value>
+  </data>
+  <data name="dgvMeasTagList.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dgvMeasTagList.Name" xml:space="preserve">
+    <value>dgvMeasTagList</value>
+  </data>
+  <data name="&gt;&gt;dgvMeasTagList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvMeasTagList.Parent" xml:space="preserve">
+    <value>pnlMeasTagList</value>
+  </data>
+  <data name="&gt;&gt;dgvMeasTagList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlMeasTagList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="pnlMeasTagList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 2</value>
+  </data>
+  <data name="pnlMeasTagList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlMeasTagList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 288</value>
+  </data>
+  <data name="pnlMeasTagList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnlMeasTagList.Name" xml:space="preserve">
+    <value>pnlMeasTagList</value>
+  </data>
+  <data name="&gt;&gt;pnlMeasTagList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMeasTagList.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;pnlMeasTagList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 295</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>TXT_TAG_SETTING</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabItems</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn10.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>TXT_TAG_MEAS_ITEM</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="dgvCalcList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvCalcList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvCalcList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 293</value>
+  </data>
+  <data name="dgvCalcList.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcList.Name" xml:space="preserve">
+    <value>dgvCalcList</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcList.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 293</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 295</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>TXT_CALC_ITEM_LIST</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabItems</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 206</value>
+  </data>
+  <data name="tabItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>674, 323</value>
+  </data>
+  <data name="tabItems.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabItems.Name" xml:space="preserve">
+    <value>tabItems</value>
+  </data>
+  <data name="&gt;&gt;tabItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabItems.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;tabItems.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>TXT_GRAPH_TITLE</value>
+  </data>
+  <data name="dgvGraph.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 156</value>
+  </data>
+  <data name="dgvGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dgvGraph.Name" xml:space="preserve">
+    <value>dgvGraph</value>
+  </data>
+  <data name="&gt;&gt;dgvGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvGraph.Parent" xml:space="preserve">
+    <value>pnlGraph</value>
+  </data>
+  <data name="&gt;&gt;dgvGraph.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlGraph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="pnlGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 22</value>
+  </data>
+  <data name="pnlGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 156</value>
+  </data>
+  <data name="pnlGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.Name" xml:space="preserve">
+    <value>pnlGraph</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.Parent" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnGraphAxisSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="btnGraphAxisSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGraphAxisSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 40</value>
+  </data>
+  <data name="btnGraphAxisSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 30</value>
+  </data>
+  <data name="btnGraphAxisSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnGraphAxisSetting.Text" xml:space="preserve">
+    <value>TXT_GRAPH_SETTING</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.Name" xml:space="preserve">
+    <value>btnGraphAxisSetting</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbColor.Items" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items1" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items2" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items3" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items4" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items5" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items6" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items7" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items8" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items9" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items10" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items11" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items12" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items13" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items14" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items15" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items16" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items17" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items18" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items19" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items20" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items21" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items22" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items23" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items24" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items25" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items26" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items27" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items28" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items29" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items30" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items31" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items32" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items33" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items34" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items35" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items36" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items37" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items38" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items39" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items40" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items41" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items42" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items43" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items44" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items45" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items46" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items47" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items48" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items49" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items50" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items51" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items52" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items53" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items54" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items55" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items56" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items57" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items58" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items59" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items60" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items61" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items62" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items63" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items64" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items65" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items66" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items67" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items68" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items69" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items70" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items71" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items72" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items73" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items74" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items75" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items76" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items77" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items78" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items79" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items80" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items81" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items82" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items83" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items84" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items85" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items86" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items87" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items88" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items89" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items90" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items91" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items92" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items93" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items94" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items95" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items96" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items97" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items98" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items99" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items100" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items101" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items102" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items103" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items104" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items105" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items106" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items107" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items108" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items109" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items110" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items111" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items112" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items113" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items114" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items115" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items116" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items117" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items118" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items119" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items120" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items121" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items122" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items123" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items124" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items125" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items126" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items127" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items128" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items129" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items130" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items131" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items132" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items133" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items134" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items135" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items136" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items137" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items138" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items139" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items140" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items141" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items142" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items143" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items144" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items145" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items146" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items147" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items148" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items149" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items150" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items151" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items152" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items153" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items154" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items155" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items156" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items157" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items158" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items159" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items160" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items161" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items162" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items163" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items164" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items165" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items166" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items167" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items168" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items169" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items170" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items171" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items172" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items173" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items174" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items175" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items176" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items177" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items178" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items179" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items180" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items181" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items182" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items183" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items184" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items185" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items186" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items187" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items188" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items189" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items190" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items191" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items192" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items193" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items194" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items195" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items196" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items197" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items198" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items199" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items200" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items201" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items202" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items203" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items204" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items205" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items206" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items207" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items208" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items209" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items210" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items211" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items212" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items213" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items214" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items215" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items216" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items217" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items218" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items219" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items220" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items221" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items222" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items223" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items224" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items225" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items226" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items227" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items228" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items229" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items230" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items231" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items232" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items233" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items234" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items235" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items236" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items237" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items238" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items239" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items240" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items241" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items242" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items243" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items244" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items245" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items246" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items247" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items248" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items249" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items250" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items251" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items252" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items253" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items254" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items255" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items256" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items257" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items258" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items259" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items260" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items261" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items262" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items263" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items264" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items265" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items266" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items267" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items268" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items269" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items270" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items271" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items272" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items273" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items274" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items275" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items276" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items277" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items278" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items279" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items280" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items281" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items282" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items283" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items284" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items285" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items286" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items287" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items288" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items289" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items290" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items291" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items292" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items293" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items294" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items295" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items296" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items297" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items298" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items299" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items300" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items301" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items302" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items303" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items304" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items305" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items306" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items307" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items308" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items309" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items310" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items311" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items312" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items313" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items314" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items315" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items316" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items317" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items318" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items319" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items320" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items321" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items322" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items323" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items324" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items325" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items326" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items327" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items328" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items329" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items330" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items331" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items332" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items333" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items334" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items335" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items336" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items337" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items338" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items339" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items340" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items341" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items342" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items343" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items344" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items345" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items346" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items347" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items348" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items349" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items350" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items351" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items352" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items353" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items354" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items355" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items356" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items357" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items358" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items359" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items360" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items361" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items362" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items363" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items364" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items365" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items366" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items367" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items368" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items369" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items370" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items371" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items372" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items373" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items374" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items375" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items376" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items377" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items378" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items379" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items380" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items381" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items382" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items383" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items384" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items385" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items386" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items387" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items388" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items389" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items390" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items391" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items392" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items393" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items394" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items395" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items396" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items397" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items398" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items399" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items400" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items401" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items402" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items403" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items404" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items405" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items406" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items407" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items408" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items409" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items410" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items411" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items412" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items413" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items414" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items415" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items416" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items417" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items418" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items419" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items420" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items421" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items422" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items423" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items424" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items425" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items426" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items427" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items428" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items429" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items430" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items431" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items432" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items433" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items434" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items435" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items436" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items437" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items438" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items439" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items440" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items441" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items442" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items443" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items444" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items445" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items446" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items447" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items448" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items449" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items450" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items451" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items452" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items453" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items454" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items455" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items456" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items457" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items458" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items459" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items460" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items461" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items462" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items463" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items464" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items465" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items466" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items467" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items468" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items469" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items470" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items471" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items472" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items473" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items474" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items475" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items476" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items477" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items478" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items479" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items480" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items481" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items482" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items483" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items484" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items485" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items486" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items487" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items488" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items489" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items490" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items491" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items492" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items493" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items494" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items495" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items496" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items497" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items498" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items499" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items500" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items501" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items502" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items503" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items504" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items505" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items506" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items507" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items508" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items509" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items510" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items511" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items512" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items513" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items514" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items515" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items516" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items517" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items518" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items519" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items520" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items521" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items522" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items523" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items524" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items525" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items526" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items527" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items528" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items529" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items530" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items531" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items532" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items533" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items534" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items535" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items536" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items537" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items538" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items539" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items540" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items541" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items542" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items543" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items544" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items545" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items546" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items547" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items548" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items549" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items550" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items551" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items552" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items553" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items554" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items555" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items556" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items557" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items558" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items559" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items560" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items561" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items562" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items563" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items564" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items565" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items566" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items567" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items568" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items569" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items570" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items571" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items572" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items573" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items574" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items575" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items576" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items577" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items578" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items579" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items580" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items581" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items582" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items583" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items584" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items585" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items586" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items587" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items588" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items589" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items590" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items591" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items592" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items593" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items594" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items595" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items596" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items597" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items598" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items599" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items600" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items601" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items602" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items603" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items604" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items605" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items606" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items607" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items608" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items609" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items610" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items611" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items612" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items613" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items614" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items615" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items616" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items617" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items618" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items619" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items620" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items621" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items622" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items623" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items624" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items625" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items626" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items627" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items628" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items629" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items630" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items631" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items632" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items633" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items634" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items635" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items636" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items637" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items638" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items639" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items640" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items641" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items642" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items643" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items644" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items645" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items646" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items647" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items648" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items649" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items650" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items651" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items652" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items653" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items654" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items655" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items656" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items657" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items658" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items659" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items660" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items661" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items662" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items663" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items664" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items665" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items666" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items667" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items668" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items669" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items670" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items671" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items672" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items673" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items674" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items675" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items676" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items677" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items678" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items679" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items680" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items681" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items682" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items683" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items684" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items685" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items686" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items687" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items688" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items689" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items690" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items691" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items692" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items693" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items694" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items695" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items696" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items697" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items698" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items699" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items700" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items701" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items702" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items703" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items704" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items705" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items706" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items707" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items708" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items709" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items710" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items711" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items712" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items713" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items714" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items715" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items716" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items717" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items718" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items719" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items720" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items721" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items722" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items723" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items724" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items725" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items726" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items727" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items728" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items729" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items730" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items731" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items732" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items733" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items734" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items735" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items736" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items737" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items738" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items739" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items740" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items741" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items742" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items743" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items744" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items745" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items746" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items747" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items748" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items749" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items750" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items751" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items752" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items753" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items754" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items755" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items756" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items757" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items758" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items759" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items760" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items761" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items762" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items763" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items764" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items765" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items766" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items767" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items768" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items769" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items770" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items771" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items772" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items773" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items774" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items775" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items776" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items777" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items778" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items779" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items780" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items781" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items782" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items783" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items784" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items785" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items786" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items787" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items788" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items789" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items790" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items791" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items792" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items793" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items794" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items795" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items796" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items797" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items798" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items799" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items800" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items801" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items802" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items803" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items804" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items805" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items806" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items807" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items808" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items809" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items810" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items811" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items812" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items813" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items814" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items815" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items816" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items817" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items818" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items819" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items820" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items821" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items822" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items823" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items824" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items825" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items826" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items827" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items828" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items829" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items830" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items831" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items832" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items833" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items834" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items835" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items836" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items837" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items838" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items839" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items840" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items841" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items842" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items843" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items844" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items845" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items846" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items847" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items848" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items849" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items850" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items851" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items852" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items853" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items854" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items855" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items856" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items857" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items858" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items859" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items860" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items861" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items862" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items863" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items864" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items865" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items866" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items867" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items868" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items869" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items870" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items871" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items872" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items873" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items874" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items875" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items876" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items877" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items878" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items879" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items880" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items881" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items882" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items883" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items884" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items885" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items886" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items887" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items888" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items889" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items890" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items891" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items892" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items893" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items894" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items895" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items896" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items897" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items898" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items899" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items900" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items901" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items902" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items903" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items904" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items905" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items906" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items907" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items908" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items909" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items910" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items911" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items912" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items913" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items914" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items915" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items916" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items917" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items918" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items919" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items920" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items921" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items922" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items923" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items924" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items925" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items926" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items927" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items928" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items929" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items930" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items931" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items932" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items933" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items934" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items935" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items936" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items937" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items938" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items939" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items940" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items941" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items942" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items943" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items944" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items945" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items946" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items947" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items948" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items949" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items950" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items951" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items952" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items953" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items954" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items955" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items956" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items957" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items958" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items959" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items960" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items961" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items962" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items963" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items964" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items965" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items966" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items967" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items968" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items969" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items970" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items971" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items972" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items973" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items974" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items975" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items976" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items977" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items978" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items979" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items980" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items981" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items982" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items983" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items984" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items985" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items986" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items987" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items988" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items989" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items990" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items991" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items992" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items993" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items994" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items995" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items996" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items997" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items998" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items999" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items1000" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items1001" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items1002" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items1003" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items1004" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items1005" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items1006" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items1007" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items1008" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items1009" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items1010" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items1011" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items1012" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items1013" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items1014" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items1015" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items1016" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items1017" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items1018" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items1019" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items1020" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items1021" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items1022" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items1023" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items1024" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1025" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items1026" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items1027" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items1028" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items1029" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items1030" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items1031" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items1032" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items1033" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items1034" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items1035" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items1036" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items1037" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items1038" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items1039" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items1040" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items1041" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items1042" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items1043" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items1044" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items1045" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items1046" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items1047" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items1048" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items1049" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items1050" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items1051" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items1052" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items1053" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items1054" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items1055" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items1056" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items1057" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items1058" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items1059" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items1060" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items1061" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items1062" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1063" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items1064" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items1065" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items1066" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items1067" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items1068" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items1069" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items1070" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items1071" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items1072" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items1073" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items1074" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1075" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items1076" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items1077" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items1078" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items1079" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items1080" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items1081" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items1082" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items1083" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items1084" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items1085" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items1086" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items1087" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items1088" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items1089" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items1090" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items1091" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items1092" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items1093" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items1094" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items1095" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items1096" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items1097" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items1098" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items1099" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items1100" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items1101" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items1102" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items1103" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items1104" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items1105" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items1106" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items1107" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items1108" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1109" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items1110" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items1111" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items1112" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items1113" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items1114" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items1115" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items1116" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items1117" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items1118" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items1119" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items1120" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items1121" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items1122" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items1123" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items1124" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items1125" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items1126" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items1127" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.Items1128" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="cmbColor.Items1129" xml:space="preserve">
+    <value>AliceBlue</value>
+  </data>
+  <data name="cmbColor.Items1130" xml:space="preserve">
+    <value>AntiqueWhite</value>
+  </data>
+  <data name="cmbColor.Items1131" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="cmbColor.Items1132" xml:space="preserve">
+    <value>Aquamarine</value>
+  </data>
+  <data name="cmbColor.Items1133" xml:space="preserve">
+    <value>Azure</value>
+  </data>
+  <data name="cmbColor.Items1134" xml:space="preserve">
+    <value>Beige</value>
+  </data>
+  <data name="cmbColor.Items1135" xml:space="preserve">
+    <value>Bisque</value>
+  </data>
+  <data name="cmbColor.Items1136" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="cmbColor.Items1137" xml:space="preserve">
+    <value>BlanchedAlmond</value>
+  </data>
+  <data name="cmbColor.Items1138" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="cmbColor.Items1139" xml:space="preserve">
+    <value>BlueViolet</value>
+  </data>
+  <data name="cmbColor.Items1140" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="cmbColor.Items1141" xml:space="preserve">
+    <value>BurlyWood</value>
+  </data>
+  <data name="cmbColor.Items1142" xml:space="preserve">
+    <value>CadetBlue</value>
+  </data>
+  <data name="cmbColor.Items1143" xml:space="preserve">
+    <value>Chartreuse</value>
+  </data>
+  <data name="cmbColor.Items1144" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="cmbColor.Items1145" xml:space="preserve">
+    <value>Coral</value>
+  </data>
+  <data name="cmbColor.Items1146" xml:space="preserve">
+    <value>CornflowerBlue</value>
+  </data>
+  <data name="cmbColor.Items1147" xml:space="preserve">
+    <value>Cornsilk</value>
+  </data>
+  <data name="cmbColor.Items1148" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="cmbColor.Items1149" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="cmbColor.Items1150" xml:space="preserve">
+    <value>DarkBlue</value>
+  </data>
+  <data name="cmbColor.Items1151" xml:space="preserve">
+    <value>DarkCyan</value>
+  </data>
+  <data name="cmbColor.Items1152" xml:space="preserve">
+    <value>DarkGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items1153" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="cmbColor.Items1154" xml:space="preserve">
+    <value>DarkGreen</value>
+  </data>
+  <data name="cmbColor.Items1155" xml:space="preserve">
+    <value>DarkKhaki</value>
+  </data>
+  <data name="cmbColor.Items1156" xml:space="preserve">
+    <value>DarkMagenta</value>
+  </data>
+  <data name="cmbColor.Items1157" xml:space="preserve">
+    <value>DarkOliveGreen</value>
+  </data>
+  <data name="cmbColor.Items1158" xml:space="preserve">
+    <value>DarkOrange</value>
+  </data>
+  <data name="cmbColor.Items1159" xml:space="preserve">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="cmbColor.Items1160" xml:space="preserve">
+    <value>DarkRed</value>
+  </data>
+  <data name="cmbColor.Items1161" xml:space="preserve">
+    <value>DarkSalmon</value>
+  </data>
+  <data name="cmbColor.Items1162" xml:space="preserve">
+    <value>DarkSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1163" xml:space="preserve">
+    <value>DarkSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items1164" xml:space="preserve">
+    <value>DarkSlateGray</value>
+  </data>
+  <data name="cmbColor.Items1165" xml:space="preserve">
+    <value>DarkTurquoise</value>
+  </data>
+  <data name="cmbColor.Items1166" xml:space="preserve">
+    <value>DarkViolet</value>
+  </data>
+  <data name="cmbColor.Items1167" xml:space="preserve">
+    <value>DeepPink</value>
+  </data>
+  <data name="cmbColor.Items1168" xml:space="preserve">
+    <value>DeepSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items1169" xml:space="preserve">
+    <value>DimGray</value>
+  </data>
+  <data name="cmbColor.Items1170" xml:space="preserve">
+    <value>DodgerBlue</value>
+  </data>
+  <data name="cmbColor.Items1171" xml:space="preserve">
+    <value>Firebrick</value>
+  </data>
+  <data name="cmbColor.Items1172" xml:space="preserve">
+    <value>FloralWhite</value>
+  </data>
+  <data name="cmbColor.Items1173" xml:space="preserve">
+    <value>ForestGreen</value>
+  </data>
+  <data name="cmbColor.Items1174" xml:space="preserve">
+    <value>Fuchsia</value>
+  </data>
+  <data name="cmbColor.Items1175" xml:space="preserve">
+    <value>Gainsboro</value>
+  </data>
+  <data name="cmbColor.Items1176" xml:space="preserve">
+    <value>GhostWhite</value>
+  </data>
+  <data name="cmbColor.Items1177" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cmbColor.Items1178" xml:space="preserve">
+    <value>Goldenrod</value>
+  </data>
+  <data name="cmbColor.Items1179" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="cmbColor.Items1180" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="cmbColor.Items1181" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="cmbColor.Items1182" xml:space="preserve">
+    <value>Honeydew</value>
+  </data>
+  <data name="cmbColor.Items1183" xml:space="preserve">
+    <value>HotPink</value>
+  </data>
+  <data name="cmbColor.Items1184" xml:space="preserve">
+    <value>IndianRed</value>
+  </data>
+  <data name="cmbColor.Items1185" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="cmbColor.Items1186" xml:space="preserve">
+    <value>Ivory</value>
+  </data>
+  <data name="cmbColor.Items1187" xml:space="preserve">
+    <value>Khaki</value>
+  </data>
+  <data name="cmbColor.Items1188" xml:space="preserve">
+    <value>Lavender</value>
+  </data>
+  <data name="cmbColor.Items1189" xml:space="preserve">
+    <value>LavenderBlush</value>
+  </data>
+  <data name="cmbColor.Items1190" xml:space="preserve">
+    <value>LawnGreen</value>
+  </data>
+  <data name="cmbColor.Items1191" xml:space="preserve">
+    <value>LemonChiffon</value>
+  </data>
+  <data name="cmbColor.Items1192" xml:space="preserve">
+    <value>LightBlue</value>
+  </data>
+  <data name="cmbColor.Items1193" xml:space="preserve">
+    <value>LightCoral</value>
+  </data>
+  <data name="cmbColor.Items1194" xml:space="preserve">
+    <value>LightCyan</value>
+  </data>
+  <data name="cmbColor.Items1195" xml:space="preserve">
+    <value>LightGoldenrodYellow</value>
+  </data>
+  <data name="cmbColor.Items1196" xml:space="preserve">
+    <value>LightGreen</value>
+  </data>
+  <data name="cmbColor.Items1197" xml:space="preserve">
+    <value>LightGray</value>
+  </data>
+  <data name="cmbColor.Items1198" xml:space="preserve">
+    <value>LightPink</value>
+  </data>
+  <data name="cmbColor.Items1199" xml:space="preserve">
+    <value>LightSalmon</value>
+  </data>
+  <data name="cmbColor.Items1200" xml:space="preserve">
+    <value>LightSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1201" xml:space="preserve">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="cmbColor.Items1202" xml:space="preserve">
+    <value>LightSlateGray</value>
+  </data>
+  <data name="cmbColor.Items1203" xml:space="preserve">
+    <value>LightSteelBlue</value>
+  </data>
+  <data name="cmbColor.Items1204" xml:space="preserve">
+    <value>LightYellow</value>
+  </data>
+  <data name="cmbColor.Items1205" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="cmbColor.Items1206" xml:space="preserve">
+    <value>LimeGreen</value>
+  </data>
+  <data name="cmbColor.Items1207" xml:space="preserve">
+    <value>Linen</value>
+  </data>
+  <data name="cmbColor.Items1208" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="cmbColor.Items1209" xml:space="preserve">
+    <value>Maroon</value>
+  </data>
+  <data name="cmbColor.Items1210" xml:space="preserve">
+    <value>MediumAquamarine</value>
+  </data>
+  <data name="cmbColor.Items1211" xml:space="preserve">
+    <value>MediumBlue</value>
+  </data>
+  <data name="cmbColor.Items1212" xml:space="preserve">
+    <value>MediumOrchid</value>
+  </data>
+  <data name="cmbColor.Items1213" xml:space="preserve">
+    <value>MediumPurple</value>
+  </data>
+  <data name="cmbColor.Items1214" xml:space="preserve">
+    <value>MediumSeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1215" xml:space="preserve">
+    <value>MediumSlateBlue</value>
+  </data>
+  <data name="cmbColor.Items1216" xml:space="preserve">
+    <value>MediumSpringGreen</value>
+  </data>
+  <data name="cmbColor.Items1217" xml:space="preserve">
+    <value>MediumTurquoise</value>
+  </data>
+  <data name="cmbColor.Items1218" xml:space="preserve">
+    <value>MediumVioletRed</value>
+  </data>
+  <data name="cmbColor.Items1219" xml:space="preserve">
+    <value>MidnightBlue</value>
+  </data>
+  <data name="cmbColor.Items1220" xml:space="preserve">
+    <value>MintCream</value>
+  </data>
+  <data name="cmbColor.Items1221" xml:space="preserve">
+    <value>MistyRose</value>
+  </data>
+  <data name="cmbColor.Items1222" xml:space="preserve">
+    <value>Moccasin</value>
+  </data>
+  <data name="cmbColor.Items1223" xml:space="preserve">
+    <value>NavajoWhite</value>
+  </data>
+  <data name="cmbColor.Items1224" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="cmbColor.Items1225" xml:space="preserve">
+    <value>OldLace</value>
+  </data>
+  <data name="cmbColor.Items1226" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="cmbColor.Items1227" xml:space="preserve">
+    <value>OliveDrab</value>
+  </data>
+  <data name="cmbColor.Items1228" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="cmbColor.Items1229" xml:space="preserve">
+    <value>OrangeRed</value>
+  </data>
+  <data name="cmbColor.Items1230" xml:space="preserve">
+    <value>Orchid</value>
+  </data>
+  <data name="cmbColor.Items1231" xml:space="preserve">
+    <value>PaleGoldenrod</value>
+  </data>
+  <data name="cmbColor.Items1232" xml:space="preserve">
+    <value>PaleGreen</value>
+  </data>
+  <data name="cmbColor.Items1233" xml:space="preserve">
+    <value>PaleTurquoise</value>
+  </data>
+  <data name="cmbColor.Items1234" xml:space="preserve">
+    <value>PaleVioletRed</value>
+  </data>
+  <data name="cmbColor.Items1235" xml:space="preserve">
+    <value>PapayaWhip</value>
+  </data>
+  <data name="cmbColor.Items1236" xml:space="preserve">
+    <value>PeachPuff</value>
+  </data>
+  <data name="cmbColor.Items1237" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="cmbColor.Items1238" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="cmbColor.Items1239" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="cmbColor.Items1240" xml:space="preserve">
+    <value>PowderBlue</value>
+  </data>
+  <data name="cmbColor.Items1241" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cmbColor.Items1242" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="cmbColor.Items1243" xml:space="preserve">
+    <value>RosyBrown</value>
+  </data>
+  <data name="cmbColor.Items1244" xml:space="preserve">
+    <value>RoyalBlue</value>
+  </data>
+  <data name="cmbColor.Items1245" xml:space="preserve">
+    <value>SaddleBrown</value>
+  </data>
+  <data name="cmbColor.Items1246" xml:space="preserve">
+    <value>Salmon</value>
+  </data>
+  <data name="cmbColor.Items1247" xml:space="preserve">
+    <value>SandyBrown</value>
+  </data>
+  <data name="cmbColor.Items1248" xml:space="preserve">
+    <value>SeaGreen</value>
+  </data>
+  <data name="cmbColor.Items1249" xml:space="preserve">
+    <value>SeaShell</value>
+  </data>
+  <data name="cmbColor.Items1250" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="cmbColor.Items1251" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="cmbColor.Items1252" xml:space="preserve">
+    <value>SkyBlue</value>
+  </data>
+  <data name="cmbColor.Items1253" xml:space="preserve">
+    <value>SlateBlue</value>
+  </data>
+  <data name="cmbColor.Items1254" xml:space="preserve">
+    <value>SlateGray</value>
+  </data>
+  <data name="cmbColor.Items1255" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="cmbColor.Items1256" xml:space="preserve">
+    <value>SpringGreen</value>
+  </data>
+  <data name="cmbColor.Items1257" xml:space="preserve">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cmbColor.Items1258" xml:space="preserve">
+    <value>Tan</value>
+  </data>
+  <data name="cmbColor.Items1259" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="cmbColor.Items1260" xml:space="preserve">
+    <value>Thistle</value>
+  </data>
+  <data name="cmbColor.Items1261" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="cmbColor.Items1262" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="cmbColor.Items1263" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="cmbColor.Items1264" xml:space="preserve">
+    <value>Wheat</value>
+  </data>
+  <data name="cmbColor.Items1265" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="cmbColor.Items1266" xml:space="preserve">
+    <value>WhiteSmoke</value>
+  </data>
+  <data name="cmbColor.Items1267" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="cmbColor.Items1268" xml:space="preserve">
+    <value>YellowGreen</value>
+  </data>
+  <data name="cmbColor.ListColors" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EEAQAAAIwBU3lzdGVtLkNv
+        bGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tTeXN0ZW0uRHJhd2luZy5Db2xvciwgU3lzdGVtLkRyYXdp
+        bmcsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iMDNmNWY3
+        ZjExZDUwYTNhXV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQAABZTeXN0ZW0uRHJhd2luZy5Db2xv
+        cltdAgAAAAgICQMAAAAAAAAAAAAAAAcDAAAAAAEAAAAAAAAABBRTeXN0ZW0uRHJhd2luZy5Db2xvcgIA
+        AAAL
+</value>
+  </data>
+  <data name="cmbColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 106</value>
+  </data>
+  <data name="cmbColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 24</value>
+  </data>
+  <data name="cmbColor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cmbColor.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbColor.Name" xml:space="preserve">
+    <value>cmbColor</value>
+  </data>
+  <data name="&gt;&gt;cmbColor.Type" xml:space="preserve">
+    <value>RM_3000.Classes.ColorComboBox, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbColor.Parent" xml:space="preserve">
+    <value>pnlGraphDetail</value>
+  </data>
+  <data name="&gt;&gt;cmbColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>TXT_TAG_MEAS_ITEM</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="dgvGraphDetail.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvGraphDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvGraphDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 288</value>
+  </data>
+  <data name="dgvGraphDetail.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvGraphDetail.Name" xml:space="preserve">
+    <value>dgvGraphDetail</value>
+  </data>
+  <data name="&gt;&gt;dgvGraphDetail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvGraphDetail.Parent" xml:space="preserve">
+    <value>pnlGraphDetail</value>
+  </data>
+  <data name="&gt;&gt;dgvGraphDetail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlGraphDetail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="pnlGraphDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 79</value>
+  </data>
+  <data name="pnlGraphDetail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlGraphDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 288</value>
+  </data>
+  <data name="pnlGraphDetail.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.Name" xml:space="preserve">
+    <value>pnlGraphDetail</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnRemoveGraph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="btnRemoveGraph.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRemoveGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 0</value>
+  </data>
+  <data name="btnRemoveGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRemoveGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 25</value>
+  </data>
+  <data name="btnRemoveGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnRemoveGraph.Text" xml:space="preserve">
+    <value>TXT_GRAPH_DELETE</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.Name" xml:space="preserve">
+    <value>btnRemoveGraph</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtGraphTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="txtGraphTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 44</value>
+  </data>
+  <data name="txtGraphTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtGraphTitle.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="txtGraphTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 23</value>
+  </data>
+  <data name="txtGraphTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.Name" xml:space="preserve">
+    <value>txtGraphTitle</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 26</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 15</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>TXT_GRAPH_TITLE</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 190</value>
+  </data>
+  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 373</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>TXT_TAG_SETTING</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="grpGraph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="grpGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 5</value>
+  </data>
+  <data name="grpGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpGraph.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 569</value>
+  </data>
+  <data name="grpGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="grpGraph.Text" xml:space="preserve">
+    <value>TXT_GRAPH_SETTING</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.Name" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnAddGraphTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddGraphTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 311</value>
+  </data>
+  <data name="btnAddGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnAddGraphTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 32</value>
+  </data>
+  <data name="btnAddGraphTag.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnAddGraphTag.Text" xml:space="preserve">
+    <value>＞＞</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.Name" xml:space="preserve">
+    <value>btnAddGraphTag</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnRemoveGraphTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRemoveGraphTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 363</value>
+  </data>
+  <data name="btnRemoveGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRemoveGraphTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 32</value>
+  </data>
+  <data name="btnRemoveGraphTag.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnRemoveGraphTag.Text" xml:space="preserve">
+    <value>＜＜</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.Name" xml:space="preserve">
+    <value>btnRemoveGraphTag</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 5</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>TXT_ANALYSIS_SETTING</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblSampleTiming.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblSampleTiming.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSampleTiming.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 118</value>
+  </data>
+  <data name="lblSampleTiming.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 23</value>
+  </data>
+  <data name="lblSampleTiming.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="lblSampleTiming.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblSampleTiming.Name" xml:space="preserve">
+    <value>lblSampleTiming</value>
+  </data>
+  <data name="&gt;&gt;lblSampleTiming.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSampleTiming.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;lblSampleTiming.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblSamplingTiming_Title.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblSamplingTiming_Title.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSamplingTiming_Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 122</value>
+  </data>
+  <data name="lblSamplingTiming_Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="lblSamplingTiming_Title.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="lblSamplingTiming_Title.Text" xml:space="preserve">
+    <value>TXT_SAMPLING_PERIOD</value>
+  </data>
+  <data name="lblSamplingTiming_Title.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblSamplingTiming_Title.Name" xml:space="preserve">
+    <value>lblSamplingTiming_Title</value>
+  </data>
+  <data name="&gt;&gt;lblSamplingTiming_Title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSamplingTiming_Title.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;lblSamplingTiming_Title.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblFileName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblFileName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 23</value>
+  </data>
+  <data name="lblFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 23</value>
+  </data>
+  <data name="lblFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="lblFileName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblFileName.Name" xml:space="preserve">
+    <value>lblFileName</value>
+  </data>
+  <data name="&gt;&gt;lblFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFileName.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;lblFileName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 27</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>TXT_FILE_NAME</value>
+  </data>
+  <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblTotalShotCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblTotalShotCount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTotalShotCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 143</value>
+  </data>
+  <data name="lblTotalShotCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 23</value>
+  </data>
+  <data name="lblTotalShotCount.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblTotalShotCount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblTotalShotCount.Name" xml:space="preserve">
+    <value>lblTotalShotCount</value>
+  </data>
+  <data name="&gt;&gt;lblTotalShotCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTotalShotCount.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;lblTotalShotCount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 147</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>TXT_MEASUREMENT_COUNT</value>
+  </data>
+  <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblMode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblMode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 93</value>
+  </data>
+  <data name="lblMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 23</value>
+  </data>
+  <data name="lblMode.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblMode.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblMode.Name" xml:space="preserve">
+    <value>lblMode</value>
+  </data>
+  <data name="&gt;&gt;lblMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMode.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;lblMode.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblMeasEndDateTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblMeasEndDateTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMeasEndDateTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 70</value>
+  </data>
+  <data name="lblMeasEndDateTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 23</value>
+  </data>
+  <data name="lblMeasEndDateTime.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lblMeasEndDateTime.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblMeasEndDateTime.Name" xml:space="preserve">
+    <value>lblMeasEndDateTime</value>
+  </data>
+  <data name="&gt;&gt;lblMeasEndDateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMeasEndDateTime.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;lblMeasEndDateTime.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 74</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>TXT_MEASUREMENT_END_DATE</value>
+  </data>
+  <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 97</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>TXT_MODE</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblMeasStartDateTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblMeasStartDateTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMeasStartDateTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 46</value>
+  </data>
+  <data name="lblMeasStartDateTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 23</value>
+  </data>
+  <data name="lblMeasStartDateTime.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblMeasStartDateTime.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblMeasStartDateTime.Name" xml:space="preserve">
+    <value>lblMeasStartDateTime</value>
+  </data>
+  <data name="&gt;&gt;lblMeasStartDateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMeasStartDateTime.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;lblMeasStartDateTime.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 50</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>TXT_MEASUREMENT_START_DATE</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="picReadFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picReadFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 53</value>
+  </data>
+  <data name="picReadFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 94</value>
+  </data>
+  <data name="picReadFile.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="picReadFile.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;picReadFile.Name" xml:space="preserve">
+    <value>picReadFile</value>
+  </data>
+  <data name="&gt;&gt;picReadFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picReadFile.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;picReadFile.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnRead.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 53</value>
+  </data>
+  <data name="btnRead.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 90</value>
+  </data>
+  <data name="btnRead.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnRead.Text" xml:space="preserve">
+    <value>TXT_READ</value>
+  </data>
+  <data name="&gt;&gt;btnRead.Name" xml:space="preserve">
+    <value>btnRead</value>
+  </data>
+  <data name="&gt;&gt;btnRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRead.Parent" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;btnRead.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="grpAnalyzeFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="grpAnalyzeFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 28</value>
+  </data>
+  <data name="grpAnalyzeFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpAnalyzeFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpAnalyzeFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 173</value>
+  </data>
+  <data name="grpAnalyzeFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grpAnalyzeFile.Text" xml:space="preserve">
+    <value>TXT_ANALYSIS_FILE</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.Name" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pnlMain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="pnlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 580</value>
+  </data>
+  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnStart.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="btnStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1029, 586</value>
+  </data>
+  <data name="btnStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 33</value>
+  </data>
+  <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnStart.Text" xml:space="preserve">
+    <value>TXT_START</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Name" xml:space="preserve">
+    <value>btnStart</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 584</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 40</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>テストGetData</value>
+  </data>
+  <data name="button1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1180, 630</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>TXT_ANALYSIS_START</value>
+  </data>
+  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn10</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn11</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn12</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn7</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn8</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAnalyzeStart</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

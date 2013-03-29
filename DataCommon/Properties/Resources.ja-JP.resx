@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CSV_HEADER_CHANNELSETTING" xml:space="preserve">
+    <value>ChNo,ボード種,測定タイミング,項目名１,単位１,項目名2,単位2</value>
+    <comment>ChNo,ボード種,測定タイミング,項目名１,単位１,項目名2,単位2</comment>
+  </data>
+  <data name="CSV_HEADER_MEASUREDATA" xml:space="preserve">
+    <value>開始時間,終了時間,サンプル数</value>
+    <comment>開始時間,終了時間,サンプル数</comment>
+  </data>
+  <data name="CSV_HEADER_MEASURESETTING" xml:space="preserve">
+    <value>測定モード,サンプリング周期</value>
+    <comment>測定モード,サンプリング周期</comment>
+  </data>
+  <data name="CSV_TITLE_CHANNELSETTING" xml:space="preserve">
+    <value>チャンネル情報</value>
+    <comment>チャンネル情報</comment>
+  </data>
+  <data name="CSV_TITLE_MEASUREDATA" xml:space="preserve">
+    <value>測定データ</value>
+  </data>
+  <data name="CSV_TITLE_MEASURESETTING" xml:space="preserve">
+    <value>測定条件情報</value>
+    <comment>測定条件情報</comment>
+  </data>
+  <data name="ERROR_END_TIME_MUST_MORE" xml:space="preserve">
+    <value>終了時間が開始時間よりも前です。</value>
+    <comment>EndTime must more than StartTime</comment>
+  </data>
+  <data name="ERROR_FILE_NOT_FOUND" xml:space="preserve">
+    <value>ファイルがありません。</value>
+    <comment>File not found</comment>
+  </data>
+  <data name="ERROR_INVALID_ARRAY_SIZE" xml:space="preserve">
+    <value>無効は配列サイズです。</value>
+    <comment>Invalid array size</comment>
+  </data>
+  <data name="ERROR_INVALID_COLOR_VALUE" xml:space="preserve">
+    <value>無効な色設定(24bit)です。</value>
+    <comment>Invalid color value (24bit)</comment>
+  </data>
+  <data name="ERROR_INVALID_FILE_PATH" xml:space="preserve">
+    <value>無効なフォルダです。</value>
+    <comment>Invalid folder path</comment>
+  </data>
+  <data name="ERROR_INVALID_FILTER_VALUE" xml:space="preserve">
+    <value>無効なフィルター設定値です。</value>
+    <comment>Invalid filter value</comment>
+  </data>
+  <data name="ERROR_INVALID_HOLD_VALUE" xml:space="preserve">
+    <value>無効なホールド設定値です。</value>
+    <comment>Invalid hold value</comment>
+  </data>
+  <data name="ERROR_INVALID_PATH" xml:space="preserve">
+    <value>無効なパスです。</value>
+    <comment>Invalid path</comment>
+  </data>
+  <data name="ERROR_INVALID_RANGE_VALUE" xml:space="preserve">
+    <value>無効な範囲設定です。</value>
+    <comment>Invalid range value</comment>
+  </data>
+  <data name="ERROR_MIN_MORE_THAN_MAX" xml:space="preserve">
+    <value>最小値が最大値を超えています。</value>
+    <comment>Min value is more than Max value</comment>
+  </data>
+  <data name="ERROR_START_TIME_MUST_LESS" xml:space="preserve">
+    <value>開始時間が終了時間を超えています。</value>
+    <comment>StartTime must less than EndTime</comment>
+  </data>
+  <data name="ERROR_VALUE_OUT_OF_RANGE" xml:space="preserve">
+    <value>無効な範囲設定です。</value>
+    <comment>Value out of range</comment>
+  </data>
+  <data name="ERROR_XML_CLASSTYPE_NOT_EXIST" xml:space="preserve">
+    <value>TypeOfClass XMLタグが見つかりません。</value>
+    <comment>TypeOfClass XML Tag not found</comment>
+  </data>
+  <data name="TXT_ROTATIONAL_SPEED" xml:space="preserve">
+    <value>回転数</value>
+    <comment>回転数</comment>
+  </data>
+  <data name="TXT_NONE1" xml:space="preserve">
+    <value>ナシ</value>
+    <comment>ナシ</comment>
+  </data>
+  <data name="TXT_NONE2" xml:space="preserve">
+    <value>(なし)</value>
+    <comment>(なし)</comment>
+  </data>
+  <data name="TXT_TRIGGER_EXTERN" xml:space="preserve">
+    <value>外部</value>
+    <comment>外部</comment>
+  </data>
+  <data name="TXT_TRIGGER_MAIN" xml:space="preserve">
+    <value>基準</value>
+    <comment>基準</comment>
+  </data>
+  <data name="TXT_TRIGGER_SELF" xml:space="preserve">
+    <value>自己</value>
+    <comment>自己</comment>
+  </data>
+  <data name="TXT_TRIGGER_TYPE" xml:space="preserve">
+    <value>自己,基準,外部</value>
+    <comment>自己,基準,外部</comment>
+  </data>
+  <data name="TXT_ZERO_VALUE" xml:space="preserve">
+    <value>ゼロ点</value>
+    <comment>ゼロ点</comment>
+  </data>
+  <data name="MSG_CSV_HEADER_OUTPUT" xml:space="preserve">
+    <value>ヘッダー出力中</value>
+    <comment>ヘッダー出力中</comment>
+  </data>
+  <data name="MSG_CSV_RECORD_OUTPUT" xml:space="preserve">
+    <value>データ出力中</value>
+    <comment>データ出力中</comment>
+  </data>
+  <data name="TXT_CENTERSCALE" xml:space="preserve">
+    <value>センタースケール</value>
+    <comment>センタースケール</comment>
+  </data>
+  <data name="TXT_DISTANCE" xml:space="preserve">
+    <value>軸間隔</value>
+    <comment>軸間隔</comment>
+  </data>
+  <data name="TXT_MAX" xml:space="preserve">
+    <value>最大値</value>
+    <comment>最大値</comment>
+  </data>
+  <data name="TXT_MIN" xml:space="preserve">
+    <value>最小値</value>
+    <comment>最小値</comment>
+  </data>
+  <data name="TXT_OVERLAYSHOT_COUNT" xml:space="preserve">
+    <value>重ね書きショット数</value>
+    <comment>重ね書きショット数</comment>
+  </data>
+  <data name="TXT_RANGESCALE" xml:space="preserve">
+    <value>±スケール</value>
+    <comment>±スケール</comment>
+  </data>
+  <data name="TXT_FULLSCALE" xml:space="preserve">
+    <value>フルスケール</value>
+    <comment>フルスケール</comment>
+  </data>
+  <data name="TXT_SENSOROUTPUT" xml:space="preserve">
+    <value>センサー出力設定</value>
+    <comment>センサー出力設定</comment>
+  </data>
+</root>

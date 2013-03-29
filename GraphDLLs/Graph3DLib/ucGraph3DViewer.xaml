@@ -1,0 +1,82 @@
+﻿    <UserControl x:Class="Graph3DLib.ucGraph3DViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:my="clr-namespace:RM3000.Controls"
+             mc:Ignorable="d"              
+             d:DesignHeight="500" d:DesignWidth="500" MouseLeave="UserControl_MouseLeave" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown" MouseUp="Window_MouseUp"  MouseWheel="Window_MouseWheel"  MinHeight="150"  MinWidth="100" PreviewKeyDown="UserControl_PreviewKeyDown" PreviewKeyUp="UserControl_PreviewKeyUp" Focusable="True" Loaded="UserControl_Loaded" MouseEnter="UserControl_MouseEnter">
+        
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <ContentControl IsTabStop="True">        
+        <Grid>
+            
+            <Viewport3D Name="viewport" MinHeight="150" MinWidth="100" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="100" OpacityMask="White" Focusable="True">
+                <Viewport3D.Camera>
+                    <PerspectiveCamera x:Name="camera"
+	  FarPlaneDistance="100"
+	  LookDirection="0,0,-105"
+	  UpDirection="0,1,0"
+	  NearPlaneDistance="0" 
+	  Position="0,0,5" 
+	  FieldOfView="50" />
+                </Viewport3D.Camera>
+
+
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <DirectionalLight 
+	    Color="White" 
+	    Direction="-5,-5,-7" />
+                    </ModelVisual3D.Content>
+
+                </ModelVisual3D>
+            </Viewport3D>
+            <my:CircularMeter  x:Name="circularMeter" StartDegree="135" EndDegree="200" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="256"/>
+            <Expander Header="Control Panel" Name="ExpPanel" IsExpanded="False" AllowDrop="False" Width="210" OverridesDefaultStyle="True" Template="{StaticResource CustomExtenderArrowUp}" FontWeight="Bold" Height="Auto" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Margin="0,0,0,0"  FontSize="14">
+                <Grid Height="Auto" HorizontalAlignment="Left" Name="grid1" Margin="0,0,0,0" Background="White" Width="210" Focusable="True" Opacity="100">
+                    <Grid Background="#A1C0C0C0" Height="118" HorizontalAlignment="Left" Margin="5,154,0,5" Name="gridControlPanel" Width="200" VerticalAlignment="Top" Visibility="Collapsed">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="19*" />
+                            <ColumnDefinition Width="92*" />
+                            <ColumnDefinition Width="41*" />
+                            <ColumnDefinition Width="35*" />
+                        </Grid.ColumnDefinitions>
+                        <Slider Margin="6,31,5,0" Name="sliderCamX" ValueChanged="silderCamX_ValueChanged" SmallChange="1" Maximum="50" Minimum="-50" Value="0" Height="22" VerticalAlignment="Top" Grid.Column="1" />
+                        <Slider Margin="6,59,5,0" Name="sliderCamY" Maximum="50" SmallChange="1" ValueChanged="sliderCamY_ValueChanged" Minimum="-50" Value="0" Grid.Column="1" Height="25" VerticalAlignment="Top" />
+                        <Slider Margin="6,87,6,0" Name="sliderCamZ" Maximum="50" SmallChange="1" ValueChanged="sliderCamZ_ValueChanged" Minimum="15" Value="0" Height="22" VerticalAlignment="Top" Grid.Column="1" />
+                        <TextBox Grid.Column="2" Height="23" Margin="1,30,0,0" Name="txtCamX" Text="0" VerticalAlignment="Top"  TextChanged="txtCam_TextChanged" PreviewTextInput="txtCam_PreviewTextInput"  MaxLength="4" LostFocus="txtCam_LostFocus" />
+                        <TextBox Grid.Column="2" Margin="1,58,0,36" Name="txtCamY" Text="0" TextChanged="txtCam_TextChanged" PreviewTextInput="txtCam_PreviewTextInput" MaxLength="4" LostFocus="txtCam_LostFocus"/>
+                        <TextBox Grid.Column="2" Height="23" Margin="0,0,0,8" Name="txtCamZ" Text="0" VerticalAlignment="Bottom" TextChanged="txtCam_TextChanged" PreviewTextInput="txtCam_PreviewTextInput" MaxLength="4" LostFocus="txtCam_LostFocus"/>
+                        <Label Content="位置" Focusable="False" FontWeight="Bold" Foreground="Blue" Grid.ColumnSpan="4" Height="28" HorizontalContentAlignment="Center" Margin="0,-3,0,0" Name="lblCameraCtrl" VerticalAlignment="Top" />
+                        <Label Content="X" Grid.ColumnSpan="2" Margin="6,29,93,61" Name="lblCamX" />
+                        <Label Content="Y" Grid.ColumnSpan="2" Height="28" Margin="6,58,93,0" Name="lblCamY" VerticalAlignment="Top" />
+                        <Label Content="Z" Grid.ColumnSpan="2" Height="28" Margin="6,0,93,6" Name="lblCamZ" VerticalAlignment="Bottom" />
+                    </Grid>
+                    <Grid Background="#A1C0C0C0" Height="144" HorizontalAlignment="Left" Margin="5,5,0,5" Name="grid2" VerticalAlignment="Top" Width="200">
+                        <Label Content="ズーム／回転" Focusable="False" FontWeight="Bold" Foreground="Blue" Height="28" HorizontalContentAlignment="Center" Margin="-1,0,1,0" Name="lblRotationCtrl" VerticalAlignment="Top" />
+                        <Slider Margin="75,116,0,0" Name="sliderRotateSpeed" HorizontalAlignment="Left" Width="75" Height="22" VerticalAlignment="Top" ValueChanged="sliderRotateSpeed_ValueChanged" Maximum="30" Minimum="1" Value="7.5" />
+                        <RepeatButton HorizontalAlignment="Left" Margin="6,55,0,65" Name="btnLeft" Width="30" Click="btnLeft_Click" Content="左"></RepeatButton>
+                        <RepeatButton Margin="76,55,74,65" Name="btnReset" Click="btnReset_Click" Content="クリア"></RepeatButton>
+                        <RepeatButton Margin="0,55,6,65" Name="btnRight" Click="btnRight_Click" HorizontalAlignment="Right" Width="30" Content="右"></RepeatButton>
+                        <RepeatButton Margin="133,55,0,65" Name="btnZoomIn" HorizontalAlignment="Left" Width="25" Click="btnZoomIn_Click">+</RepeatButton>
+                        <RepeatButton Margin="42,55,0,65" Name="btnZoomOut" HorizontalAlignment="Left" Width="27" Click="btnZoomOut_Click">-</RepeatButton>
+                        <RepeatButton Height="23" Margin="82,26,81,0" Name="btnUp" VerticalAlignment="Top" Click="btnUp_Click" Content="上"></RepeatButton>
+                        <RepeatButton Height="23" Margin="82,0,81,36" Name="btnDown" VerticalAlignment="Bottom" Click="btnDown_Click" Content="下"></RepeatButton>
+                        <Label Content="回転速度" Height="28" HorizontalAlignment="Left" Margin="4,0,0,2" Name="lblRotateSpeed" VerticalAlignment="Bottom" Width="Auto" />
+                    </Grid>
+                </Grid>
+                <Expander.Background>
+                    <SolidColorBrush />
+                </Expander.Background>
+            </Expander>
+        </Grid>
+    </ContentControl>          
+</UserControl>

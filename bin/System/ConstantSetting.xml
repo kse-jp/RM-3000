@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConstantSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IsUpdated>false</IsUpdated>
+  <ConstantList>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J00</NameJ>
+      <NameE>Name E00</NameE>
+      <NameC>Name C00</NameC>
+      <Value>3.1415926535</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J01</NameJ>
+      <NameE>Name E01</NameE>
+      <NameC>Name C01</NameC>
+      <Value>510.800808440335</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J02</NameJ>
+      <NameE>Name E02</NameE>
+      <NameC>Name C02</NameC>
+      <Value>510.800808440335</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J03</NameJ>
+      <NameE>Name E03</NameE>
+      <NameC>Name C03</NameC>
+      <Value>1234.98</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J04</NameJ>
+      <NameE>Name E04</NameE>
+      <NameC>Name C04</NameC>
+      <Value>156.159670164883</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J05</NameJ>
+      <NameE>Name E05</NameE>
+      <NameC>Name C05</NameC>
+      <Value>256.279135707896</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J06</NameJ>
+      <NameE>Name E06</NameE>
+      <NameC>Name C06</NameC>
+      <Value>1234822</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J07</NameJ>
+      <NameE>Name E07</NameE>
+      <NameC>Name C07</NameC>
+      <Value>854.477566133476</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J08</NameJ>
+      <NameE>Name E08</NameE>
+      <NameC>Name C08</NameC>
+      <Value>2345.789</Value>
+    </ConstantData>
+    <ConstantData>
+      <IsUpdated>false</IsUpdated>
+      <NameJ>Name J09</NameJ>
+      <NameE>Name E09</NameE>
+      <NameC>Name C09</NameC>
+      <Value>3.141592</Value>
+    </ConstantData>
+  </ConstantList>
+</ConstantSetting>

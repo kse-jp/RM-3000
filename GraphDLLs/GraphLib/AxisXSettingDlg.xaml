@@ -1,0 +1,29 @@
+﻿<Window x:Class="GraphLib.AxisXSettingDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Setting Axis" Height="249" Width="355" WindowStyle="SingleBorderWindow"         
+        ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid Height="213" Width="325">
+        <Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="52,178,0,0" Name="btnOK" VerticalAlignment="Top" Width="75" Click="btnOK_Click" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="202,178,0,0" Name="btnCancel" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+        <GroupBox Header="groupBox1" Height="172" HorizontalAlignment="Left" Name="grbAxis" VerticalAlignment="Top" Width="313">
+            <Grid Height="145" Width="296">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="193*" />
+                    <ColumnDefinition Width="103*" />
+                </Grid.ColumnDefinitions>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="87,22,0,0" Name="txtMinValue" VerticalAlignment="Top" Width="79" PreviewTextInput="txtMinValue_PreviewTextInput" TextChanged="txtMinValue_TextChanged" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="87,51,0,0" Name="txtMaxValue" VerticalAlignment="Top" Width="79" TextChanged="txtMaxValue_TextChanged" PreviewTextInput="txtMaxValue_PreviewTextInput" />
+                <Label Content="MinValue" Height="28" HorizontalAlignment="Left" Margin="10,22,0,0" Name="lblMin" VerticalAlignment="Top" />
+                <Label Content="MaxValue" Height="28" HorizontalAlignment="Left" Margin="9,51,0,0" Name="lblMax" VerticalAlignment="Top" />
+                <Label Content="AxisName" Height="28" HorizontalAlignment="Left" Margin="9,82,0,0" Name="lblAxisName" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="87,82,0,0" Name="txtAxisName" VerticalAlignment="Top" Width="79" />
+                <Label Content="MaxPlot" Height="28" HorizontalAlignment="Left" Margin="9,111,0,0" Name="lblMaxPlot" VerticalAlignment="Top" Visibility="Hidden" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="87,111,0,0" Name="txtMaxPlot" VerticalAlignment="Top" Width="79" PreviewTextInput="txtMaxPlot_PreviewTextInput" TextChanged="txtMaxPlot_TextChanged" Visibility="Hidden" />
+                <Label Content="CurrentMin" HorizontalAlignment="Center" Margin="0,22,0,100" Name="lblCurrMin" Width="103" Foreground="Crimson" HorizontalContentAlignment="Center" Grid.Column="1" />
+                <Label Content="CurrentMax" HorizontalAlignment="Center" Margin="0,49,0,73" Name="lblCurrMax" Width="103" Foreground="Crimson" HorizontalContentAlignment="Center" Grid.Column="1" />
+                <Label Content="Current Data" Height="27" HorizontalAlignment="Center" Name="lblCurrentData" VerticalAlignment="Top" Width="103" Foreground="Crimson" HorizontalContentAlignment="Center" Grid.Column="1" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

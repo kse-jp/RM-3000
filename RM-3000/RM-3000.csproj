@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0A73FAD-9CDC-44B0-8B0F-C9D1AD582F34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RM_3000</RootNamespace>
+    <AssemblyName>RM-3000</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>rm300.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\bin\Debug\RM-3000.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\bin\Release\RM-3000.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Graph3DLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\3DGraph\Graph3DLib.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\2DGraph\GraphLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.5.0.27147, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AppResource.cs" />
+    <Compile Include="Classes\CalcOperator.cs" />
+    <Compile Include="Classes\CalibrationTable.cs" />
+    <Compile Include="Classes\CalibrationTableArray.cs" />
+    <Compile Include="Classes\BoardInfoStruct.cs" />
+    <Compile Include="Classes\ColorComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\ColorTextBoxColumn.cs" />
+    <Compile Include="Classes\CommunicationRM3000.cs" />
+    <Compile Include="Classes\HardInfoStruct.cs" />
+    <Compile Include="Classes\InfoStructBase.cs" />
+    <Compile Include="Classes\MeasureDataTask.cs" />
+    <Compile Include="Classes\RangeColor.cs" />
+    <Compile Include="Classes\RealTimeData.cs" />
+    <Compile Include="Classes\Sequences\CommunicationMonitor.cs" />
+    <Compile Include="Classes\Sequences\TestSequence.cs" />
+    <Compile Include="Classes\SettingItem.cs" />
+    <Compile Include="Classes\SettingStage.cs" />
+    <Compile Include="Classes\SystemSetting.cs" />
+    <Compile Include="Controls\AutoFontSizeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AutoFontSizeLabel.Designer.cs">
+      <DependentUpon>AutoFontSizeLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NumericTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\uctrlChannelSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\uctrlChannelSetting.Designer.cs">
+      <DependentUpon>uctrlChannelSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\uctrlLocationSetting2.xaml.cs">
+      <DependentUpon>uctrlLocationSetting2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\uctrlLocationTargetSetting.xaml.cs">
+      <DependentUpon>uctrlLocationTargetSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\uctrlPositionUnit.xaml.cs">
+      <DependentUpon>uctrlPositionUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataGenerator.cs" />
+    <Compile Include="Forms\Analyze\frmAnalyzeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analyze\frmAnalyzeMain.Designer.cs">
+      <DependentUpon>frmAnalyzeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Analyze\frmAnalyzeStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analyze\frmAnalyzeStart.Designer.cs">
+      <DependentUpon>frmAnalyzeStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Analyze\frmAnalyzeDataSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analyze\frmAnalyzeDataSelector.Designer.cs">
+      <DependentUpon>frmAnalyzeDataSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common\dlgProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\dlgProgress.Designer.cs">
+      <DependentUpon>dlgProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Graph\frmGraphAxisSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Graph\frmGraphAxisSetting.Designer.cs">
+      <DependentUpon>frmGraphAxisSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Maintenance\frmSystemMainte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Maintenance\frmSystemMainte.Designer.cs">
+      <DependentUpon>frmSystemMainte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Graph\frmGraph2D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Graph\frmGraph2D.Designer.cs">
+      <DependentUpon>frmGraph2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Graph\frmGraph3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Graph\frmGraph3D.Designer.cs">
+      <DependentUpon>frmGraph3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmInputSaveFileName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmInputSaveFileName.Designer.cs">
+      <DependentUpon>frmInputSaveFileName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasurePattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasurePattern.Designer.cs">
+      <DependentUpon>frmMeasurePattern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureSetting.Designer.cs">
+      <DependentUpon>frmMeasureSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureGraphSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureGraphSetting.Designer.cs">
+      <DependentUpon>frmMeasureGraphSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parts\frm3DGraphController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parts\frm3DGraphController.Designer.cs">
+      <DependentUpon>frm3DGraphController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Analyze\frmAnalyzeController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Analyze\frmAnalyzeController.Designer.cs">
+      <DependentUpon>frmAnalyzeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureController.Designer.cs">
+      <DependentUpon>frmMeasureController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureMain.Designer.cs">
+      <DependentUpon>frmMeasureMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Measurement\frmMeasureStart.Designer.cs">
+      <DependentUpon>frmMeasureStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parts\frmMeasureInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parts\frmMeasureInfo.Designer.cs">
+      <DependentUpon>frmMeasureInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parts\frmTagValueList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parts\frmTagValueList.Designer.cs">
+      <DependentUpon>frmTagValueList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parts\frmGraphController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parts\frmGraphController.Designer.cs">
+      <DependentUpon>frmGraphController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmChannelSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmChannelSetting.Designer.cs">
+      <DependentUpon>frmChannelSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmLocationSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmLocationSetting.Designer.cs">
+      <DependentUpon>frmLocationSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmLocationSetting2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmLocationSetting2.Designer.cs">
+      <DependentUpon>frmLocationSetting2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmLocationTargetSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmLocationTargetSetting.Designer.cs">
+      <DependentUpon>frmLocationTargetSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagChannelPatternRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagChannelPatternRead.Designer.cs">
+      <DependentUpon>frmTagChannelPatternRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagChannelPatternWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagChannelPatternWrite.Designer.cs">
+      <DependentUpon>frmTagChannelPatternWrite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmPositionSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmPositionSetting.Designer.cs">
+      <DependentUpon>frmPositionSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmSettingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmSettingMenu.Designer.cs">
+      <DependentUpon>frmSettingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagChannelRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagChannelRelation.Designer.cs">
+      <DependentUpon>frmTagChannelRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagSetting.Designer.cs">
+      <DependentUpon>frmTagSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagSettingConstant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagSettingConstant.Designer.cs">
+      <DependentUpon>frmTagSettingConstant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagSettingSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTagSettingSelect.Designer.cs">
+      <DependentUpon>frmTagSettingSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTimingSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\frmTimingSetting.Designer.cs">
+      <DependentUpon>frmTimingSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\ucTimingSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\ucTimingSetting.Designer.cs">
+      <DependentUpon>ucTimingSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AutoFontSizeLabel.resx">
+      <DependentUpon>AutoFontSizeLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\uctrlChannelSetting.resx">
+      <DependentUpon>uctrlChannelSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analyze\frmAnalyzeController.resx">
+      <DependentUpon>frmAnalyzeController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analyze\frmAnalyzeMain.resx">
+      <DependentUpon>frmAnalyzeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analyze\frmAnalyzeStart.resx">
+      <DependentUpon>frmAnalyzeStart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Analyze\frmAnalyzeDataSelector.resx">
+      <DependentUpon>frmAnalyzeDataSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\dlgProgress.resx">
+      <DependentUpon>dlgProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Graph\frmGraphAxisSetting.resx">
+      <DependentUpon>frmGraphAxisSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Maintenance\frmSystemMainte.resx">
+      <DependentUpon>frmSystemMainte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Graph\frmGraph2D.resx">
+      <DependentUpon>frmGraph2D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Graph\frmGraph3D.resx">
+      <DependentUpon>frmGraph3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measurement\frmInputSaveFileName.resx">
+      <DependentUpon>frmInputSaveFileName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measurement\frmMeasureGraphSetting.resx">
+      <DependentUpon>frmMeasureGraphSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measurement\frmMeasurePattern.resx">
+      <DependentUpon>frmMeasurePattern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measurement\frmMeasureSetting.resx">
+      <DependentUpon>frmMeasureSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parts\frm3DGraphController.resx">
+      <DependentUpon>frm3DGraphController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measurement\frmMeasureController.resx">
+      <DependentUpon>frmMeasureController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measurement\frmMeasureMain.resx">
+      <DependentUpon>frmMeasureMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Measurement\frmMeasureStart.resx">
+      <DependentUpon>frmMeasureStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parts\frmMeasureInfo.resx">
+      <DependentUpon>frmMeasureInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parts\frmTagValueList.resx">
+      <DependentUpon>frmTagValueList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parts\frmGraphController.resx">
+      <DependentUpon>frmGraphController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmChannelSetting.resx">
+      <DependentUpon>frmChannelSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmLocationSetting.resx">
+      <DependentUpon>frmLocationSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmLocationSetting2.resx">
+      <DependentUpon>frmLocationSetting2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmLocationTargetSetting.resx">
+      <DependentUpon>frmLocationTargetSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmTagChannelPatternRead.resx">
+      <DependentUpon>frmTagChannelPatternRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmSettingMenu.resx">
+      <DependentUpon>frmSettingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmTagChannelPatternWrite.resx">
+      <DependentUpon>frmTagChannelPatternWrite.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmPositionSetting.resx">
+      <DependentUpon>frmPositionSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmTagChannelRelation.resx">
+      <DependentUpon>frmTagChannelRelation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmTagSetting.resx">
+      <DependentUpon>frmTagSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmTagSettingConstant.resx">
+      <DependentUpon>frmTagSettingConstant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmTagSettingSelect.resx">
+      <DependentUpon>frmTagSettingSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\frmTimingSetting.resx">
+      <DependentUpon>frmTimingSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\ucTimingSetting.resx">
+      <DependentUpon>ucTimingSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-Hans.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Graph3DLib.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GraphLib.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.en-US.Designer.cs" />
+    <Compile Include="Properties\Resources.ja-JP.Designer.cs" />
+    <Compile Include="Properties\Resources.zh-Hans.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\WeifenLuo.WinFormsUI.Docking.dll" />
+    <Content Include="Resources\Images\3DGraph\B.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\F.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\L.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechBottom_B.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechBottom_F.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechBottom_L.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechBottom_R.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechTop_B.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechTop_F.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechTop_L.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\MechTop_R.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\PostLeft_B.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\PostLeft_F.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\PostRight_B.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\PostRight_F.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\PostLeft_LR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\PostRight_LR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\3DGraph\R.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Backgrounds\Back_Bis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Backgrounds\Back_Non.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Backgrounds\ロゴ入りサンプル.png" />
+    <Content Include="Resources\Images\Buttons\3DGraphController\Display_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\3DGraphController\Display_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\3DGraphController\NonDisplay_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\3DGraphController\NonDisplay_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\CSV_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\CSV_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\ReadFile_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\ReadFile_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\PrintScreen_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\PrintScreen_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\GraphController\Arrange_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\GraphController\Arrange_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\GraphController\ZoomIn_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\GraphController\ZoomIn_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\GraphController\ZoomOut_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\GraphController\ZoomOut_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Back_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Back_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\EndPosition_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\EndPosition_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\FF_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\FF_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Gain_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Gain_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Pause_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Pause_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\REW_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\REW_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\StartPosition_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\StartPosition_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Start_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Start_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Stop_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Measurement\Stop_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Channel_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Channel_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Channel_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Language\Button_Chinese_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Language\Button_Chinese_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Language\Button_English_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Language\Button_English_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Language\Button_Japanese_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Language\Button_Japanese_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_SensorAdjustment_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_SensorAdjustment_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_SensorAdjustment_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Tag_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Tag_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Tag_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Relation_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Relation_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_Relation_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_SensorPosition_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_SensorPosition_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Setting\Button_SensorPosition_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Analyze_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Analyze_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Analyze_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Mainte_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Mainte_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Mainte_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Measure_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Measure_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Measure_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Setting_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Setting_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Setting_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icons\rm300.ico" />
+    <Content Include="Resources\Images\Motifs\Motif_Analyze.png" />
+    <Content Include="Resources\Images\Motifs\Motif_Mainte.png" />
+    <Content Include="Resources\Images\Motifs\Motif_Measure.png" />
+    <Content Include="Resources\Images\Motifs\Motif_Setting.png" />
+    <Content Include="Resources\Images\Main\POWER_off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Main\POWER_on.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rm300.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Images\Sensor\sensor_r_normal_top.png" />
+    <Resource Include="Resources\Images\Sensor\sensor_r_normal_right.png" />
+    <Resource Include="Resources\Images\Sensor\sensor_r_normal_left.png" />
+    <Resource Include="Resources\Images\Sensor\sensor_r_normal_bottom.png" />
+    <Resource Include="Resources\Images\Sensor\sensor_r_active_top.png" />
+    <Resource Include="Resources\Images\Sensor\sensor_r_active_right.png" />
+    <Resource Include="Resources\Images\Sensor\sensor_r_active_left.png" />
+    <Resource Include="Resources\Images\Sensor\sensor_r_active_bottom.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CalcExpression\CalcCommon.csproj">
+      <Project>{967DC0F0-5BAC-44DA-AA3D-47F920B576C4}</Project>
+      <Name>CalcCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{2793B577-AEB9-4B41-B348-71A12A3D203D}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataCommon\DataCommon.csproj">
+      <Project>{AB1DC004-5DFF-41CB-A5A6-6AE787E8477F}</Project>
+      <Name>DataCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RMCommunication\RMCommunication.csproj">
+      <Project>{FDC98E2B-ACFF-4BC4-9397-CABE26967937}</Project>
+      <Name>RMCommunication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RMCommunication\RMCommunication.csproj">
+      <Project>{FDC98E2B-ACFF-4BC4-9397-CABE26967937}</Project>
+      <Name>RMCommunication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RMCommunication\RMCommunication.csproj">
+      <Project>{FDC98E2B-ACFF-4BC4-9397-CABE26967937}</Project>
+      <Name>RMCommunication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\uctrlLocationSetting2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\uctrlLocationTargetSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\uctrlPositionUnit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

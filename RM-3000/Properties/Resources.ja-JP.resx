@@ -1,0 +1,1255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERROR_INVALID_FILTER_VALUE" xml:space="preserve">
+    <value>無効なフィルター設定です。</value>
+    <comment>invalid filter value</comment>
+  </data>
+  <data name="ERROR_INVALID_HOLD_VALUE" xml:space="preserve">
+    <value>無効なホールド設定です。</value>
+    <comment>invalid hold value</comment>
+  </data>
+  <data name="ERROR_INVALID_RANGE_VALUE" xml:space="preserve">
+    <value>無効なレンジ設定です。</value>
+    <comment>invalid range value</comment>
+  </data>
+  <data name="ERROR_INVALID_VALUE" xml:space="preserve">
+    <value>無効な値です。</value>
+    <comment>invalid input value</comment>
+  </data>
+  <data name="ERROR_TAG_SETTING_CONSTANT_FILE_NOT_FOUND" xml:space="preserve">
+    <value>定数設定ファイル[ConstantSetting.xml]がありません。</value>
+    <comment>定数設定ファイル[ConstantSetting.xml]がありません。</comment>
+  </data>
+  <data name="ERROR_TAG_SETTING_DATATAG_FILE_NOT_FOUND" xml:space="preserve">
+    <value>測定項目設定ファイル[DataTagSetting.xml]がありません。</value>
+    <comment>測定項目設定ファイル[DataTagSetting.xml]がありません。</comment>
+  </data>
+  <data name="MSG_CHANNELSETTING_CONFIRM_SAVE" xml:space="preserve">
+    <value>チャンネル設定が更新されています。保存してもよろしいでしょうか？</value>
+    <comment>チャンネル設定が更新されています。保存してもよろしいでしょうか？</comment>
+  </data>
+  <data name="MSG_DATA_MODIFIED_CONFIRM_EXIT" xml:space="preserve">
+    <value>入力内容を破棄します。よろしいですか？</value>
+    <comment>内容が変更されていますが、終了してもよろしいでしょうか？</comment>
+  </data>
+  <data name="MSG_EXISTED_SELECT_TAG_NO" xml:space="preserve">
+    <value>選択されたタグはすでに存在しています。</value>
+    <comment>選択されたタグはすでに存在しています。</comment>
+  </data>
+  <data name="MSG_FILE_NAME_EXIST" xml:space="preserve">
+    <value>ファイル名はすでに存在しています。他のファイル名を入力して下さい。</value>
+    <comment>ファイル名はすでに存在しています。他のファイル名を入力して下さい。</comment>
+  </data>
+  <data name="MSG_INVALID_FILE_NAME" xml:space="preserve">
+    <value>無効なファイル名です。</value>
+    <comment>無効なファイル名です。</comment>
+  </data>
+  <data name="MSG_CONFIRM_DISCARD" xml:space="preserve">
+    <value>入力内容を破棄します。よろしいですか？</value>
+    <comment>Are you sure to discard changes?</comment>
+  </data>
+  <data name="MSG_RELATION_NOT_ALL_ASSIGNED" xml:space="preserve">
+    <value>全てのCHが割り当てられていません。</value>
+    <comment>not all channel is assigned</comment>
+  </data>
+  <data name="MSG_TAG_ALREADY_SELECTED" xml:space="preserve">
+    <value>選択された項目はすでに設定されています。</value>
+    <comment>選択された項目はすでに設定されています。</comment>
+  </data>
+  <data name="MSG_TAG_CH_PATTERN_CONFIRM_SAVE" xml:space="preserve">
+    <value>パターンを保存してもよろしいでしょうか。</value>
+    <comment>Are you sure to save Pattern file?</comment>
+  </data>
+  <data name="MSG_TAG_CONSTANT_NOT_SELECT" xml:space="preserve">
+    <value>定数項目が選択されていません。</value>
+    <comment>No constant selected.</comment>
+  </data>
+  <data name="MSG_TAG_SELECT_INVALID" xml:space="preserve">
+    <value>測定項目が選択されていません。</value>
+    <comment>No Tag selected.</comment>
+  </data>
+  <data name="MSG_TAG_SETTING_CONFIRM_DELETE" xml:space="preserve">
+    <value>選択された測定項目を削除してもよろしいでしょうか。</value>
+    <comment>Are you sure to delete the selected tag?</comment>
+  </data>
+  <data name="TXT_GRAPH_CENTER_SCALE" xml:space="preserve">
+    <value>センタースケール</value>
+    <comment>センタースケール</comment>
+  </data>
+  <data name="TXT_GRAPH_TITLE" xml:space="preserve">
+    <value>グラフタイトル</value>
+    <comment>グラフタイトル</comment>
+  </data>
+  <data name="TXT_GRAPH_COLOR" xml:space="preserve">
+    <value>グラフ表示色</value>
+    <comment>グラフ表示色</comment>
+  </data>
+  <data name="TXT_GRAPH_DELETE" xml:space="preserve">
+    <value>グラフ削除</value>
+    <comment>グラフ削除</comment>
+  </data>
+  <data name="TXT_ANALYSIS_FILE" xml:space="preserve">
+    <value>解析ファイル</value>
+    <comment>解析ファイル</comment>
+  </data>
+  <data name="TXT_GRAPH_SETTING" xml:space="preserve">
+    <value>グラフ設定</value>
+    <comment>グラフ設定</comment>
+  </data>
+  <data name="TXT_ANALYSIS_MAIN" xml:space="preserve">
+    <value>解析中</value>
+    <comment>解析中</comment>
+  </data>
+  <data name="TXT_TAG_MEAS_ITEM" xml:space="preserve">
+    <value>測定項目名</value>
+    <comment>測定項目名</comment>
+  </data>
+  <data name="TXT_MODE" xml:space="preserve">
+    <value>モード</value>
+    <comment>計測モード</comment>
+  </data>
+  <data name="TXT_GRAPH_SCALE" xml:space="preserve">
+    <value>＋－スケール</value>
+    <comment>＋－スケール</comment>
+  </data>
+  <data name="TXT_ANALYSIS_SETTING" xml:space="preserve">
+    <value>解析設定</value>
+    <comment>解析設定</comment>
+  </data>
+  <data name="TXT_ANALYSIS_TOTAL_SHOT" xml:space="preserve">
+    <value>総ショット数</value>
+    <comment>総ショット数</comment>
+  </data>
+  <data name="TXT_BOARD_SPEC" xml:space="preserve">
+    <value>ボード種</value>
+    <comment>ボード種</comment>
+  </data>
+  <data name="TXT_BOTTOM" xml:space="preserve">
+    <value>ボトム</value>
+    <comment>ボトム</comment>
+  </data>
+  <data name="TXT_CANCEL" xml:space="preserve">
+    <value>キャンセル</value>
+    <comment>キャンセル</comment>
+  </data>
+  <data name="TXT_CHANNEL_SETTING" xml:space="preserve">
+    <value>チャンネル設定</value>
+    <comment>チャンネル設定</comment>
+  </data>
+  <data name="TXT_CHANNEL_SETTING_GET_BOARD_TYPE" xml:space="preserve">
+    <value>ボード種取得</value>
+    <comment>ボード種取得</comment>
+  </data>
+  <data name="TXT_CHANNEL_SETTING_TIMING_SETTING" xml:space="preserve">
+    <value>計測タイミング設定</value>
+    <comment>計測タイミング設定</comment>
+  </data>
+  <data name="TXT_FILTER" xml:space="preserve">
+    <value>フィルタ</value>
+    <comment>フィルタ</comment>
+  </data>
+  <data name="TXT_HOLD_SETTING" xml:space="preserve">
+    <value>ホールド設定</value>
+    <comment>ホールド設定</comment>
+  </data>
+  <data name="TXT_MEASUREMENT_MAIN" xml:space="preserve">
+    <value>測定中</value>
+    <comment>測定中</comment>
+  </data>
+  <data name="TXT_MEASURE_START" xml:space="preserve">
+    <value>測定開始</value>
+    <comment>測定開始</comment>
+  </data>
+  <data name="TXT_NONE_HIRAKANA" xml:space="preserve">
+    <value>(なし)</value>
+    <comment>(なし)</comment>
+  </data>
+  <data name="TXT_PATTERN_CREATED_DATE" xml:space="preserve">
+    <value>作成日</value>
+    <comment>作成日</comment>
+  </data>
+  <data name="TXT_PATTERN_FILE_NAME" xml:space="preserve">
+    <value>パターンファイル名</value>
+    <comment>パターンファイル名</comment>
+  </data>
+  <data name="TXT_PATTERN_NAME" xml:space="preserve">
+    <value>パターン名</value>
+    <comment>パターン名</comment>
+  </data>
+  <data name="TXT_PATTERN_TEXT_READ" xml:space="preserve">
+    <value>パターン読込み</value>
+    <comment>パターン読込み</comment>
+  </data>
+  <data name="TXT_PEAK" xml:space="preserve">
+    <value>ピーク</value>
+    <comment>ピーク</comment>
+  </data>
+  <data name="TXT_PRECISION" xml:space="preserve">
+    <value>精密補償</value>
+    <comment>精密補償</comment>
+  </data>
+  <data name="TXT_RANGE" xml:space="preserve">
+    <value>設定レンジ</value>
+    <comment>設定レンジ</comment>
+  </data>
+  <data name="TXT_SAVE_SETTING" xml:space="preserve">
+    <value>設定保存</value>
+    <comment>設定保存</comment>
+  </data>
+  <data name="TXT_SELECT" xml:space="preserve">
+    <value>選択</value>
+    <comment>選択</comment>
+  </data>
+  <data name="TXT_TAG_CONSTANT_HEADER" xml:space="preserve">
+    <value>定数項目一覧</value>
+    <comment>定数項目一覧</comment>
+  </data>
+  <data name="TXT_TAG_CONSTANT_ITEM_NAME" xml:space="preserve">
+    <value>定数項目名</value>
+    <comment>定数項目名</comment>
+  </data>
+  <data name="TXT_TAG_CONSTANT_TEXT" xml:space="preserve">
+    <value>定数項目選択</value>
+    <comment>定数項目選択</comment>
+  </data>
+  <data name="TXT_TAG_CONSTANT_VALUE" xml:space="preserve">
+    <value>値</value>
+    <comment>値</comment>
+  </data>
+  <data name="TXT_TAG_RELATION_CHANNEL_SET" xml:space="preserve">
+    <value>チャンネル結び付け設定</value>
+    <comment>チャンネル結び付け設定</comment>
+  </data>
+  <data name="TXT_TAG_RELATION_MEAS_ITEM_DATA" xml:space="preserve">
+    <value>測定項目</value>
+    <comment>測定項目</comment>
+  </data>
+  <data name="TXT_TAG_RELATION_PATTERN_FILE" xml:space="preserve">
+    <value>測定項目結び付けパターンファイル</value>
+    <comment>測定項目結び付けパターンファイル</comment>
+  </data>
+  <data name="TXT_TAG_RELATION_PATTERN_ROTATION" xml:space="preserve">
+    <value>回転数結び付け設定</value>
+    <comment>回転数結び付け設定</comment>
+  </data>
+  <data name="TXT_TAG_RELATION_TEXT" xml:space="preserve">
+    <value>測定項目ーチャンネル結び付け設定</value>
+    <comment>測定項目ーチャンネル結び付け設定</comment>
+  </data>
+  <data name="TXT_TAG_SELECT_HEADER" xml:space="preserve">
+    <value>測定項目一覧</value>
+    <comment>測定項目一覧</comment>
+  </data>
+  <data name="TXT_TAG_SELECT_TEXT" xml:space="preserve">
+    <value>測定項目選択画面</value>
+    <comment>測定項目選択画面</comment>
+  </data>
+  <data name="TXT_TAG_SETTING" xml:space="preserve">
+    <value>測定項目設定</value>
+    <comment>測定項目設定</comment>
+  </data>
+  <data name="TXT_CLOSE" xml:space="preserve">
+    <value>閉じる</value>
+    <comment>閉じる</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_CONSTANT_ADD" xml:space="preserve">
+    <value>定数の追加</value>
+    <comment>定数の追加</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_CONSTANT_SELECT" xml:space="preserve">
+    <value>定数の選択</value>
+    <comment>定数の選択</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_CUP_BEHIDE" xml:space="preserve">
+    <value>カッコ ）</value>
+    <comment>カッコ ）</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_CUP_FRONT" xml:space="preserve">
+    <value>カッコ（</value>
+    <comment>カッコ（</comment>
+  </data>
+  <data name="TXT_DELETE" xml:space="preserve">
+    <value>削除</value>
+    <comment>削除</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_DIVIDE" xml:space="preserve">
+    <value>除算(/)</value>
+    <comment>除算(/)</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_EVAL_EXPRESSION" xml:space="preserve">
+    <value>演算式確認</value>
+    <comment>演算式確認</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_FULL_SCALE" xml:space="preserve">
+    <value>フルスケール</value>
+    <comment>フルスケール</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_MINUS" xml:space="preserve">
+    <value>マイナス(-)</value>
+    <comment>マイナス(-)</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_MULTIPLY" xml:space="preserve">
+    <value>乗算(*)</value>
+    <comment>乗算(*)</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_PLUS" xml:space="preserve">
+    <value>プラス(+)</value>
+    <comment>プラス(+)</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_POINT" xml:space="preserve">
+    <value>小数点桁数</value>
+    <comment>小数点桁数</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_TAG_KIND" xml:space="preserve">
+    <value>計測項目種別</value>
+    <comment>計測項目種別</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_TAG_KIND_LIST" xml:space="preserve">
+    <value>計測,演算２（解析）</value>
+    <comment>計測,演算２（解析）</comment>
+  </data>
+  <data name="TXT_TAG_NAME" xml:space="preserve">
+    <value>名称</value>
+    <comment>名称</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_TAG_SELECT" xml:space="preserve">
+    <value>測定項目の選択</value>
+    <comment>測定項目の選択</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_UPDATE" xml:space="preserve">
+    <value>更新</value>
+    <comment>更新</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_ZERO_SCALE" xml:space="preserve">
+    <value>ゼロスケール</value>
+    <comment>ゼロスケール</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_ZERO_STATIC" xml:space="preserve">
+    <value>静的ゼロ</value>
+    <comment>静的ゼロ</comment>
+  </data>
+  <data name="TXT_TIMING_EXTERNAL_TIMING" xml:space="preserve">
+    <value>外部タイミング</value>
+    <comment>外部タイミング</comment>
+  </data>
+  <data name="TXT_MODE1" xml:space="preserve">
+    <value>モード1</value>
+    <comment>モード1</comment>
+  </data>
+  <data name="TXT_MODE2" xml:space="preserve">
+    <value>モード2</value>
+    <comment>モード2</comment>
+  </data>
+  <data name="TXT_TIMING_REF_TIMING" xml:space="preserve">
+    <value>基準タイミング</value>
+    <comment>基準タイミング</comment>
+  </data>
+  <data name="TXT_TIMING_SETTING" xml:space="preserve">
+    <value>測定タイミング設定</value>
+    <comment>測定タイミング設定</comment>
+  </data>
+  <data name="TXT_TRIGGER_TYPE" xml:space="preserve">
+    <value>自己,基準,外部</value>
+    <comment>自己,基準,外部</comment>
+  </data>
+  <data name="TXT_UNIT" xml:space="preserve">
+    <value>単位</value>
+    <comment>単位</comment>
+  </data>
+  <data name="TXT_MEASURE_SETTING" xml:space="preserve">
+    <value>測定設定</value>
+    <comment>測定設定</comment>
+  </data>
+  <data name="TXT_ITEM" xml:space="preserve">
+    <value>項目</value>
+    <comment>項目</comment>
+  </data>
+  <data name="TXT_CURRENT_VALUE_LIST" xml:space="preserve">
+    <value>現在値リスト</value>
+    <comment>現在値リスト</comment>
+  </data>
+  <data name="TXT_ROTATION" xml:space="preserve">
+    <value>回転数</value>
+    <comment>回転数</comment>
+  </data>
+  <data name="TXT_READ" xml:space="preserve">
+    <value>Read</value>
+    <comment>Read</comment>
+  </data>
+  <data name="MSG_GRAPH_CONFIRM_REMOVE" xml:space="preserve">
+    <value>選択したグラフを削除してもよろしいでしょうか？</value>
+    <comment>選択したグラフを削除してもよろしいでしょうか？</comment>
+  </data>
+  <data name="MSG_GRAPH_DIFFERENT_UNIT" xml:space="preserve">
+    <value>グラフには同一単位の項目のみ設定可能です。</value>
+    <comment>グラフには同一単位の項目のみ設定可能です。</comment>
+  </data>
+  <data name="TXT_WRITE" xml:space="preserve">
+    <value>Write</value>
+    <comment>Write</comment>
+  </data>
+  <data name="TXT_DISPLAY_METHOD" xml:space="preserve">
+    <value>表示方法</value>
+    <comment>表示方法</comment>
+  </data>
+  <data name="TXT_DOT" xml:space="preserve">
+    <value>ドット</value>
+    <comment>ドット</comment>
+  </data>
+  <data name="TXT_DURING_MEASUREMENT_MODE" xml:space="preserve">
+    <value>測定中　モード{0}</value>
+    <comment>計測中　モード{0}</comment>
+  </data>
+  <data name="TXT_END" xml:space="preserve">
+    <value>終了</value>
+    <comment>終了</comment>
+  </data>
+  <data name="TXT_GRAPH_MENU" xml:space="preserve">
+    <value>グラフメニュー</value>
+    <comment>グラフメニュー</comment>
+  </data>
+  <data name="TXT_LINE" xml:space="preserve">
+    <value>ライン</value>
+    <comment>ライン</comment>
+  </data>
+  <data name="TXT_MEASUREMENT_INFO" xml:space="preserve">
+    <value>測定情報</value>
+    <comment>測定情報</comment>
+  </data>
+  <data name="TXT_MEASUREMENT_TIME" xml:space="preserve">
+    <value>測定時間</value>
+    <comment>測定時間</comment>
+  </data>
+  <data name="TXT_OPERATION" xml:space="preserve">
+    <value>操作</value>
+    <comment>操作</comment>
+  </data>
+  <data name="TXT_SAMPLING_PERIOD" xml:space="preserve">
+    <value>サンプリング周期</value>
+    <comment>サンプリング周期</comment>
+  </data>
+  <data name="TXT_START" xml:space="preserve">
+    <value>開始</value>
+    <comment>開始</comment>
+  </data>
+  <data name="TXT_STOP" xml:space="preserve">
+    <value>停止</value>
+    <comment>停止</comment>
+  </data>
+  <data name="MSG_TAG_ALREADY_SELECTED_IN_GRAPH" xml:space="preserve">
+    <value>選択された項目はグラフ設定に設定されています。グラフ設定から削除してから実行して下さい。</value>
+    <comment>選択された項目はグラフ設定に設定されています。グラフ設定から削除してから実行して下さい。</comment>
+  </data>
+  <data name="ERROR_MEASURE_SETTING_FILE_NOT_FOUND" xml:space="preserve">
+    <value>測定設定ファイル[MeasureSetting.xml]がありません。</value>
+    <comment>測定設定ファイル[MeasureSetting.xml]がありません。</comment>
+  </data>
+  <data name="TXT_MODE3" xml:space="preserve">
+    <value>モード3</value>
+    <comment>モード3</comment>
+  </data>
+  <data name="TXT_SETTING" xml:space="preserve">
+    <value>設定</value>
+    <comment>設定</comment>
+  </data>
+  <data name="TXT_PATTERN_TEXT_WRITE" xml:space="preserve">
+    <value>パターン書き込み</value>
+    <comment>パターン書き込み</comment>
+  </data>
+  <data name="TXT_PATTERN_TEXT" xml:space="preserve">
+    <value>パターンファイル読込</value>
+    <comment>パターンファイル読込</comment>
+  </data>
+  <data name="TXT_MEASURE_PATTERN" xml:space="preserve">
+    <value>測定パターン</value>
+    <comment>測定パターン</comment>
+  </data>
+  <data name="TXT_OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="TXT_NUMBER_OF_TIMES" xml:space="preserve">
+    <value>回</value>
+    <comment>回</comment>
+  </data>
+  <data name="TXT_SAMPLING_COUNT" xml:space="preserve">
+    <value>サンプリング回数</value>
+    <comment>サンプリング回数</comment>
+  </data>
+  <data name="TXT_UNIT_MICROSECOND" xml:space="preserve">
+    <value>μｓ</value>
+    <comment>μｓ</comment>
+  </data>
+  <data name="TXT_UNIT_SECOND" xml:space="preserve">
+    <value>秒</value>
+    <comment>秒</comment>
+  </data>
+  <data name="MSG_CONFIRM_SAVE" xml:space="preserve">
+    <value>保存してもよろしいでしょうか？</value>
+    <comment>保存してもよろしいでしょうか？</comment>
+  </data>
+  <data name="MSG_RELATION_INVALID_SETTING" xml:space="preserve">
+    <value>測定項目-CHの割り当てが正しく設定されていません。</value>
+    <comment>測定項目-CHの割り当てが正しく設定されていません。</comment>
+  </data>
+  <data name="TXT_DATA_DIRECTORY_NAME_FORMAT" xml:space="preserve">
+    <value>yyyyMMdd HHmmss</value>
+    <comment>Used in DateTime.Now.ToString()</comment>
+  </data>
+  <data name="MSG_TAG_CANNOT_SELECT" xml:space="preserve">
+    <value>無効な測定項目が選択されました。</value>
+    <comment>Unavailable Tag is selected</comment>
+  </data>
+  <data name="MSG_TAG_MEET_CONDITION" xml:space="preserve">
+    <value>複数値を持つ項目がグラフに割り当てられています。モードの変更時には、一度本項目を解除してください。</value>
+    <comment>Warning DataTag meet condition</comment>
+  </data>
+  <data name="MSG_TAG_ID_UNAVAILABLE" xml:space="preserve">
+    <value>無効な測定項目です。</value>
+    <comment>無効な測定項目です。</comment>
+  </data>
+  <data name="TXT_ADD_3D" xml:space="preserve">
+    <value>3D表示の追加</value>
+    <comment>3D表示の追加</comment>
+  </data>
+  <data name="TXT_ANIMATION_SETTING" xml:space="preserve">
+    <value>アニメーション設定</value>
+    <comment>アニメーション設定</comment>
+  </data>
+  <data name="TXT_BACK" xml:space="preserve">
+    <value>戻る</value>
+    <comment>戻る</comment>
+  </data>
+  <data name="TXT_GAIN" xml:space="preserve">
+    <value>進む</value>
+    <comment>進む</comment>
+  </data>
+  <data name="TXT_HIDE" xml:space="preserve">
+    <value>非表示</value>
+    <comment>非表示</comment>
+  </data>
+  <data name="TXT_LARGE" xml:space="preserve">
+    <value>大</value>
+    <comment>大</comment>
+  </data>
+  <data name="TXT_MEDIUM" xml:space="preserve">
+    <value>中</value>
+    <comment>中</comment>
+  </data>
+  <data name="TXT_SHOW" xml:space="preserve">
+    <value>表示</value>
+    <comment>表示</comment>
+  </data>
+  <data name="TXT_SMALL" xml:space="preserve">
+    <value>小</value>
+    <comment>小</comment>
+  </data>
+  <data name="TXT_SPEED" xml:space="preserve">
+    <value>速度</value>
+    <comment>速度</comment>
+  </data>
+  <data name="TXT_STRIPPER_PLATE" xml:space="preserve">
+    <value>ストリッパープレート</value>
+    <comment>ストリッパープレート</comment>
+  </data>
+  <data name="TXT_BACK_POSITION" xml:space="preserve">
+    <value>戻る
+&lt;&lt;</value>
+    <comment>戻る
+&lt;&lt;</comment>
+  </data>
+  <data name="TXT_DATETIME_FORMAT" xml:space="preserve">
+    <value>yyyy年MM月dd日 HH:mm:ss</value>
+    <comment>yyyy年MM月dd日 HH:mm:ss</comment>
+  </data>
+  <data name="TXT_END_POSITION" xml:space="preserve">
+    <value>末尾
+&gt;&gt;|</value>
+    <comment>末尾
+&gt;&gt;|</comment>
+  </data>
+  <data name="TXT_GAIN_POSITION" xml:space="preserve">
+    <value>進む
+&gt;&gt;</value>
+    <comment>進む
+&gt;&gt;</comment>
+  </data>
+  <data name="TXT_MEASUREMENT_DATE" xml:space="preserve">
+    <value>測定日</value>
+    <comment>測定日</comment>
+  </data>
+  <data name="TXT_START_POSITION" xml:space="preserve">
+    <value>先頭
+|&lt;&lt;</value>
+    <comment>先頭
+|&lt;&lt;</comment>
+  </data>
+  <data name="TXT_ANALYSIS_TITLE" xml:space="preserve">
+    <value>測定　解析中</value>
+    <comment>測定　解析中</comment>
+  </data>
+  <data name="TXT_MEASUREMENT_END_DATE" xml:space="preserve">
+    <value>測定終了日時</value>
+    <comment>測定終了日時</comment>
+  </data>
+  <data name="TXT_MEASUREMENT_START_DATE" xml:space="preserve">
+    <value>測定開始日時</value>
+    <comment>測定開始日時</comment>
+  </data>
+  <data name="TXT_3D" xml:space="preserve">
+    <value>3D表示</value>
+    <comment>3D表示</comment>
+  </data>
+  <data name="TXT_ANGLE" xml:space="preserve">
+    <value>角度</value>
+    <comment>Angle</comment>
+  </data>
+  <data name="TXT_DEGREE" xml:space="preserve">
+    <value>度</value>
+    <comment>度</comment>
+  </data>
+  <data name="MSG_DEGREE_OUT_OF_RANGE" xml:space="preserve">
+    <value>角度は0～360度の範囲で設定してください。</value>
+    <comment>角度は0～360度の範囲で設定してください。</comment>
+  </data>
+  <data name="MSG_DEGREE_OVER_VALUE" xml:space="preserve">
+    <value>角度1は角度2よりも小さい値を設定してください。</value>
+    <comment>角度1は角度2よりも小さい値を設定してください。</comment>
+  </data>
+  <data name="MSG_PARAM_DEGREE1" xml:space="preserve">
+    <value>円メーター角度1</value>
+    <comment>円メーター角度1</comment>
+  </data>
+  <data name="MSG_PARAM_DEGREE2" xml:space="preserve">
+    <value>円メーター角度2</value>
+    <comment>円メーター角度2</comment>
+  </data>
+  <data name="TXT_CALC_ITEM_LIST" xml:space="preserve">
+    <value>演算項目一覧</value>
+    <comment>演算項目一覧</comment>
+  </data>
+  <data name="TXT_SETTINGMAIN_CHANNELSETTING" xml:space="preserve">
+    <value>チャンネル設定</value>
+    <comment>チャンネル設定</comment>
+  </data>
+  <data name="TXT_SETTINGMAIN_LOCATIONSETTING" xml:space="preserve">
+    <value>センサー位置設定</value>
+    <comment>センサー位置設定</comment>
+  </data>
+  <data name="TXT_SETTINGMAIN_POSITIONSETTING" xml:space="preserve">
+    <value>センサー設置設定</value>
+    <comment>センサー設置設定</comment>
+  </data>
+  <data name="TXT_SETTINGMAIN_RELATIONSETTING" xml:space="preserve">
+    <value>チャンネル項目結び付け設定</value>
+    <comment>チャンネル項目結び付け設定</comment>
+  </data>
+  <data name="TXT_SETTINGMAIN_TAGSETTING" xml:space="preserve">
+    <value>項目設定</value>
+    <comment>項目設定</comment>
+  </data>
+  <data name="MSG_TAG_ALREADY_ASSIGNED" xml:space="preserve">
+    <value>グラフ項目はすでに割り当てられています。</value>
+    <comment>Graph Tag is alreadly assigned</comment>
+  </data>
+  <data name="MSG_MEAS_INIT" xml:space="preserve">
+    <value>測定準備中</value>
+    <comment>測定準備中</comment>
+  </data>
+  <data name="MSG_MEAS_SAVE_FILES" xml:space="preserve">
+    <value>測定結果保存中</value>
+    <comment>測定結果保存中</comment>
+  </data>
+  <data name="MSG_MEAS_STOP_TEST" xml:space="preserve">
+    <value>測定停止</value>
+    <comment>測定停止</comment>
+  </data>
+  <data name="MSG_MEAS_END" xml:space="preserve">
+    <value>測定終了</value>
+    <comment>測定終了</comment>
+  </data>
+  <data name="TXT_3D_BACK" xml:space="preserve">
+    <value>裏面</value>
+    <comment>裏面</comment>
+  </data>
+  <data name="TXT_3D_FRONT" xml:space="preserve">
+    <value>正面</value>
+    <comment>正面</comment>
+  </data>
+  <data name="TXT_3D_LEFT" xml:space="preserve">
+    <value>左側面</value>
+    <comment>左側面</comment>
+  </data>
+  <data name="TXT_3D_RIGHT" xml:space="preserve">
+    <value>右側面</value>
+    <comment>右側面</comment>
+  </data>
+  <data name="TXT_GRAPH_MENU_3D" xml:space="preserve">
+    <value>3D表示コントローラ</value>
+    <comment>3D表示コントローラ</comment>
+  </data>
+  <data name="TXT_SETTING_LANGUAGE" xml:space="preserve">
+    <value>言語設定</value>
+    <comment>言語設定</comment>
+  </data>
+  <data name="TXT_ANALYSIS" xml:space="preserve">
+    <value>解析</value>
+    <comment>解析</comment>
+  </data>
+  <data name="TXT_MEASUREMENT" xml:space="preserve">
+    <value>測定</value>
+    <comment>測定</comment>
+  </data>
+  <data name="TXT_OUTPUT_CSV" xml:space="preserve">
+    <value>CSV出力</value>
+    <comment>CSV出力</comment>
+  </data>
+  <data name="ERROR_INVALID_CSV_STARTINDEX" xml:space="preserve">
+    <value>CSV出力の開始位置は1以上を指定してください。</value>
+    <comment>CSV出力の開始位置は1以上を指定してください。</comment>
+  </data>
+  <data name="ERROR_INVALID_CSV_ENDINDEX" xml:space="preserve">
+    <value>CSV出力の終了位置は1以上を指定してください。</value>
+    <comment>CSV出力の終了位置は1以上を指定してください。</comment>
+  </data>
+  <data name="TXT_DISTANCE" xml:space="preserve">
+    <value>軸間隔</value>
+    <comment>軸間隔</comment>
+  </data>
+  <data name="TXT_MAX" xml:space="preserve">
+    <value>最大値</value>
+    <comment>最大値</comment>
+  </data>
+  <data name="TXT_MIN" xml:space="preserve">
+    <value>最小値</value>
+    <comment>最小値</comment>
+  </data>
+  <data name="TXT_SHOT" xml:space="preserve">
+    <value>表示ショット</value>
+    <comment>表示ショット</comment>
+  </data>
+  <data name="TXT_SHOT_NUMBER" xml:space="preserve">
+    <value>ショット数</value>
+    <comment>ショット数</comment>
+  </data>
+  <data name="TXT_SHOT_START" xml:space="preserve">
+    <value>開始ショット</value>
+    <comment>開始ショット</comment>
+  </data>
+  <data name="MSG_OVER_MAX_SMALL_AXIS" xml:space="preserve">
+    <value>軸目盛数が{0}より小さくなるように設定してください。</value>
+    <comment>軸目盛数が{0}より小さくなるように設定してください。</comment>
+  </data>
+  <data name="TXT_SIGN_P_M" xml:space="preserve">
+    <value>±</value>
+    <comment>±</comment>
+  </data>
+  <data name="TXT_UNIT_DEGREE" xml:space="preserve">
+    <value>°</value>
+    <comment>°</comment>
+  </data>
+  <data name="TXT_UNIT_MILLISECOND" xml:space="preserve">
+    <value>ms</value>
+    <comment>ms</comment>
+  </data>
+  <data name="MSG_MODE1_TRIGGER_TYPE_CHANGED" xml:space="preserve">
+    <value>モード1の基準タイミングが変更されました。</value>
+    <comment>モード1の基準タイミングが変更されました。</comment>
+  </data>
+  <data name="MSG_DONT_MULTI_START" xml:space="preserve">
+    <value>RM-3000は既に起動されています。</value>
+    <comment>RM-3000は既に起動されています。</comment>
+  </data>
+  <data name="MSG_DONT_SETUP_MEAS" xml:space="preserve">
+    <value>測定準備が整っていません。RM-3000との接続を確認してください。</value>
+    <comment>測定準備が整っていません。RM-3000との接続を確認してください。</comment>
+  </data>
+  <data name="MSG_START_MEAS_FAILED" xml:space="preserve">
+    <value>測定開始処理に失敗しました。再度処理を行ってください。</value>
+    <comment>測定開始処理に失敗しました。再度処理を行ってください。</comment>
+  </data>
+  <data name="TXT_POSITION_ZERO_SETTING" xml:space="preserve">
+    <value>センサ設置 ＆ 静的ゼロ設定</value>
+    <comment>センサ設置 ＆ 静的ゼロ設定</comment>
+  </data>
+  <data name="TXT_RESET_ZERO" xml:space="preserve">
+    <value>解除</value>
+    <comment>解除</comment>
+  </data>
+  <data name="TXT_SET_ZERO" xml:space="preserve">
+    <value>ゼロ設定</value>
+    <comment>ゼロ設定</comment>
+  </data>
+  <data name="MSG_DISTANCE_EXCEED_MAX" xml:space="preserve">
+    <value>軸間隔が上限値を超えています。</value>
+    <comment>軸間隔が上限値を超えています。</comment>
+  </data>
+  <data name="MSG_MIN_MUST_LESS_THAN_MAX" xml:space="preserve">
+    <value>最小値は最大値より小さい値を設定してください。</value>
+    <comment>最小値は最大値より小さい値を設定してください。</comment>
+  </data>
+  <data name="MSG_VALUE_MUST_MORE_THAN_ZERO" xml:space="preserve">
+    <value>0より大きい値を設定してください。</value>
+    <comment>0より大きい値を設定してください。</comment>
+  </data>
+  <data name="LIST_SENSOR_TARGET" xml:space="preserve">
+    <value>ストリッパプレート,上金型,バッキングプレート(上), ラム, 下金型, バッキングプレート(下)</value>
+    <comment>センサ位置設置画面のセンサターゲット</comment>
+  </data>
+  <data name="TXT_BACKINGPLATE_DEPTH" xml:space="preserve">
+    <value>バッキングプレート奥行(Z)mm</value>
+    <comment>バッキングプレート奥行(Z)mm</comment>
+  </data>
+  <data name="TXT_BACKINGPLATE_LENGTH" xml:space="preserve">
+    <value>バッキングプレート長さ(X)mm</value>
+    <comment>バッキングプレート長さ(X)mm</comment>
+  </data>
+  <data name="TXT_BOLSTER_DEPTH" xml:space="preserve">
+    <value>ボルスタ奥行(Z)mm</value>
+    <comment>ボルスタ奥行(Z)mm</comment>
+  </data>
+  <data name="TXT_BOLSTER_LENGTH" xml:space="preserve">
+    <value>ボルスタ長さ(X)mm</value>
+    <comment>ボルスタ長さ(X)mm</comment>
+  </data>
+  <data name="TXT_BOLSTER_MOLD_SETTING" xml:space="preserve">
+    <value>ボルスタ・金型設定</value>
+    <comment>ボルスタ・金型設定</comment>
+  </data>
+  <data name="TXT_CHANNEL" xml:space="preserve">
+    <value>ch</value>
+    <comment>ch</comment>
+  </data>
+  <data name="TXT_MOLD_DEPTH" xml:space="preserve">
+    <value>金型奥行(Z)mm</value>
+    <comment>金型奥行(Z)mm</comment>
+  </data>
+  <data name="TXT_MOLD_DISP" xml:space="preserve">
+    <value>金型表示</value>
+    <comment>金型表示</comment>
+  </data>
+  <data name="TXT_MOLD_LENGTH" xml:space="preserve">
+    <value>金型長さ(X)mm</value>
+    <comment>金型長さ(X)mm</comment>
+  </data>
+  <data name="TXT_POSITION" xml:space="preserve">
+    <value>POS</value>
+    <comment>POS</comment>
+  </data>
+  <data name="TXT_SENSOR_DOWN" xml:space="preserve">
+    <value>下</value>
+    <comment>下</comment>
+  </data>
+  <data name="TXT_SENSOR_LEFT" xml:space="preserve">
+    <value>左</value>
+    <comment>左</comment>
+  </data>
+  <data name="TXT_SENSOR_RIGHT" xml:space="preserve">
+    <value>右</value>
+    <comment>右</comment>
+  </data>
+  <data name="TXT_SENSOR_UP" xml:space="preserve">
+    <value>上</value>
+    <comment>上</comment>
+  </data>
+  <data name="TXT_TARGET" xml:space="preserve">
+    <value>測定対象</value>
+    <comment>測定対象</comment>
+  </data>
+  <data name="TXT_TITLE_LOCATION_CANVAS" xml:space="preserve">
+    <value>センサ位置設置キャンバス</value>
+    <comment>センサ位置設置キャンバス</comment>
+  </data>
+  <data name="TXT_TITLE_SENSOR_LOCATION_SETTING" xml:space="preserve">
+    <value>センサ位置設置画面</value>
+    <comment>センサ位置設置画面</comment>
+  </data>
+  <data name="TXT_UPDATE" xml:space="preserve">
+    <value>更新</value>
+    <comment>更新</comment>
+  </data>
+  <data name="TXT_WAY" xml:space="preserve">
+    <value>測定方向</value>
+    <comment>測定方向</comment>
+  </data>
+  <data name="TXT_X_POSITION" xml:space="preserve">
+    <value>X位置</value>
+    <comment>X位置</comment>
+  </data>
+  <data name="TXT_Z_POSITION" xml:space="preserve">
+    <value>Z位置</value>
+    <comment>Z位置</comment>
+  </data>
+  <data name="TXT_CSV_ENDINDEX" xml:space="preserve">
+    <value>終了位置</value>
+    <comment>終了位置</comment>
+  </data>
+  <data name="TXT_CSV_STARTINDEX" xml:space="preserve">
+    <value>開始位置</value>
+    <comment>開始位置</comment>
+  </data>
+  <data name="TXT_OUTPUT" xml:space="preserve">
+    <value>出力</value>
+    <comment>出力</comment>
+  </data>
+  <data name="ERROR_INVALID_CSV_OVERINDEX" xml:space="preserve">
+    <value>終了位置が開始位置より前に設定されています。</value>
+    <comment>終了位置が開始位置より前に設定されています。</comment>
+  </data>
+  <data name="ERROR_CSV_OUTPUT" xml:space="preserve">
+    <value>CSVの出力に失敗しました。</value>
+    <comment>CSVの出力に失敗しました。</comment>
+  </data>
+  <data name="MSG_CSV_OUTPUT_COMPLETE" xml:space="preserve">
+    <value>CSVの出力が完了しました。</value>
+    <comment>CSVの出力が完了しました。</comment>
+  </data>
+  <data name="MSG_BOLSTER_OUTSIDE_SCOPE" xml:space="preserve">
+    <value>ボルスタの範囲外のため、センサを削除しますが、よろしいですか？</value>
+    <comment>ボルスタの範囲外のため、センサを削除しますが、よろしいですか？</comment>
+  </data>
+  <data name="MSG_NUMBER_LESS_THAN_BOLSTER_DEPTH" xml:space="preserve">
+    <value>ボルスタ奥行より小さい数字を入力してください。</value>
+    <comment>ボルスタ奥行より小さい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_NUMBER_LESS_THAN_BOLSTER_LENGTH" xml:space="preserve">
+    <value>ボルスタ長さより小さい数字を入力してください。</value>
+    <comment>ボルスタ長さより小さい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_NUMBER_LESS_THAN_MOLD_DEPTH" xml:space="preserve">
+    <value>金型奥行より小さい数字を入力してください。</value>
+    <comment>金型奥行より小さい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_NUMBER_LESS_THAN_MOLD_LENGTH" xml:space="preserve">
+    <value>金型長さより小さい数字を入力してください。</value>
+    <comment>金型長さより小さい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH" xml:space="preserve">
+    <value>金型奥行より大きい数字を入力してください。</value>
+    <comment>金型奥行より大きい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH_SURFACE" xml:space="preserve">
+    <value>金型(プレス面)奥行より大きい数字を入力してください。</value>
+    <comment>金型(プレス面)奥行より大きい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LEN" xml:space="preserve">
+    <value>金型長さより大きい数字を入力してください。</value>
+    <comment>金型長さより大きい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LENGTH_SURFACE" xml:space="preserve">
+    <value>金型(プレス面)長さより大きい数字を入力してください。</value>
+    <comment>金型(プレス面)長さより大きい数字を入力してください。</comment>
+  </data>
+  <data name="MSG_PLEASE_ENTER_X" xml:space="preserve">
+    <value>X位置を入力してください。</value>
+    <comment>X位置を入力してください。</comment>
+  </data>
+  <data name="MSG_PLEASE_ENTER_Z" xml:space="preserve">
+    <value>Z位置を入力してください。</value>
+    <comment>Z位置を入力してください。</comment>
+  </data>
+  <data name="MSG_PLEASE_INPUT" xml:space="preserve">
+    <value>入力してください。</value>
+    <comment>入力してください。</comment>
+  </data>
+  <data name="MSG_SET_MEASURE_OBJECT" xml:space="preserve">
+    <value>測定対象を設定してください。</value>
+    <comment>測定対象を設定してください。</comment>
+  </data>
+  <data name="ERROR_READ_BOARDINFO_FAILE" xml:space="preserve">
+    <value>ボード情報の取得に失敗しました。</value>
+    <comment>ボード情報の取得に失敗しました。</comment>
+  </data>
+  <data name="MSG_DIFF_CHSETTING" xml:space="preserve">
+    <value>チャンネル設定に設定されたボード種別と実際のボード種別に差異があります。
+チャンネル設定を再度行ってください。</value>
+    <comment>チャンネル設定に設定されたボード種別と実際のボード種別に差異があります。
+チャンネル設定を再度行ってください。</comment>
+  </data>
+  <data name="MSG_CANT_ASSIGN_REVOLUTION" xml:space="preserve">
+    <value>回転タグは登録できません。</value>
+    <comment>回転タグは登録できません。</comment>
+  </data>
+  <data name="MSG_REVOLUTION_REMOVE_FIRST" xml:space="preserve">
+    <value>回転タグがグラフに割り当てられています。モードの変更時には、一度本項目を解除してください。</value>
+    <comment>回転タグがグラフに割り当てられています。モードの変更時には、一度本項目を解除してください。</comment>
+  </data>
+  <data name="TXT_ANALYSIS_START" xml:space="preserve">
+    <value>解析開始</value>
+    <comment>解析開始</comment>
+  </data>
+  <data name="TXT_ALLMODE" xml:space="preserve">
+    <value>全モード</value>
+    <comment>全モード</comment>
+  </data>
+  <data name="TXT_FILE_NAME" xml:space="preserve">
+    <value>ファイル名</value>
+    <comment>ファイル名</comment>
+  </data>
+  <data name="TXT_SEARCH_ANALYSIS_FILE" xml:space="preserve">
+    <value>解析ファイル検索</value>
+    <comment>解析ファイル検索</comment>
+  </data>
+  <data name="TXT_SEARCH_FOLDER_NAME" xml:space="preserve">
+    <value>検索フォルダ名</value>
+    <comment>検索フォルダ名</comment>
+  </data>
+  <data name="MSG_DUPLICATE_FILE_CHECK" xml:space="preserve">
+    <value>ファイルがすでに存在しています。上書き保存されますがよろしいですか？</value>
+    <comment>ファイルがすでに存在しています。上書き保存されますがよろしいですか？</comment>
+  </data>
+  <data name="MSG_FILENAME_EMPTY_CHECK" xml:space="preserve">
+    <value>ファイル名が入力されていません。</value>
+    <comment>ファイル名が入力されていません。</comment>
+  </data>
+  <data name="TXT_WRITE_FOLDER_INPUT" xml:space="preserve">
+    <value>保存ファイル名入力</value>
+    <comment>保存ファイル名入力</comment>
+  </data>
+  <data name="MSG_INPUT_FILENAME" xml:space="preserve">
+    <value>データファイルの名前を入力してください。</value>
+    <comment>データファイルの名前を入力してください。</comment>
+  </data>
+  <data name="TXT_INPUT_FILENAME" xml:space="preserve">
+    <value>データファイル名入力</value>
+    <comment>データファイル名入力</comment>
+  </data>
+  <data name="MSG_FILENAME_INVALID_CHECK" xml:space="preserve">
+    <value>ファイル名には次の文字は使えません。
+ \ / : * ? " &lt; &gt; |</value>
+    <comment>ファイル名には次の文字は使えません。
+ \ / : * ? " &lt; &gt; |</comment>
+  </data>
+  <data name="MSG_MEASURE_DATA_CONFIRM_EXIT" xml:space="preserve">
+    <value>測定結果内容を破棄します。よろしいですか？</value>
+    <comment>測定結果内容を破棄します。よろしいですか？</comment>
+  </data>
+  <data name="TXT_END_WITHOUT_SAVE" xml:space="preserve">
+    <value>保存せずに終了</value>
+    <comment>保存せずに終了</comment>
+  </data>
+  <data name="TXT_SAVE" xml:space="preserve">
+    <value>保存</value>
+    <comment>保存</comment>
+  </data>
+  <data name="TXT_MEASUREMENT_COUNT" xml:space="preserve">
+    <value>測定数</value>
+    <comment>測定数</comment>
+  </data>
+  <data name="TXT_SHOT_UNIT" xml:space="preserve">
+    <value>ショット</value>
+    <comment>ショット</comment>
+  </data>
+  <data name="MSG_NOTHING_MEAS_CHANNEL" xml:space="preserve">
+    <value>測定有効となっている項目(チャンネル)がありません。</value>
+    <comment>測定有効となっている項目(チャンネル)がありません。</comment>
+  </data>
+  <data name="MSG_DISTANCE_LESS_THAN_SAMPLING_RATE" xml:space="preserve">
+    <value>表示幅をサンプリング周期よりも長くしてください。</value>
+    <comment>表示幅をサンプリング周期よりも長くしてください。</comment>
+  </data>
+  <data name="MSG_TEMPSENSOR_NOT_EXIST" xml:space="preserve">
+    <value>測定対象センサに温度センサが取り付けられていません。
+測定結果は0℃の時の結果となります。
+正確に測定するには、温度センサの取り付けを再度確認してください。
+
+[0]</value>
+  </data>
+  <data name="MSG_TAG_ASSIGN_MEAS_ONLY" xml:space="preserve">
+    <value>チャンネルには測定項目以外は設定できません。</value>
+    <comment>Only measurement tags can be assigned</comment>
+  </data>
+  <data name="MSG_CSV_OUTPUT_MSG" xml:space="preserve">
+    <value>CSV出力中です。</value>
+    <comment>CSV出力中です。</comment>
+  </data>
+  <data name="MSG_CSV_OUTPUT_TITLE" xml:space="preserve">
+    <value>CSV出力</value>
+    <comment>CSV出力</comment>
+  </data>
+  <data name="MSG_CANCEL" xml:space="preserve">
+    <value>キャンセルしました。</value>
+    <comment>キャンセルしました。</comment>
+  </data>
+  <data name="MSG_WARMINGUP" xml:space="preserve">
+    <value>暖気中</value>
+    <comment>暖気中</comment>
+  </data>
+  <data name="MSG_GRAPH_LIST_CANT_EMPTY" xml:space="preserve">
+    <value>グラフには少なくとも1つ以上の項目を設定してください。</value>
+    <comment>グラフには少なくとも1つ以上の項目を設定してください。</comment>
+  </data>
+  <data name="MSG_ANGLE_MUST_NOT_SAME" xml:space="preserve">
+    <value>同じ角度を設定できません。</value>
+    <comment>同じ角度を設定できません。</comment>
+  </data>
+  <data name="MSG_SHOTNUM_MAX_10" xml:space="preserve">
+    <value>重ね書きショット数は最大10までに設定してください。</value>
+    <comment>重ね書きショット数は最大10までに設定してください。</comment>
+  </data>
+  <data name="TXT_TAG_SETTING_SENSOR_OUTPUT" xml:space="preserve">
+    <value>センサ出力設定</value>
+    <comment>センサ出力設定</comment>
+  </data>
+  <data name="TXT_X_AXIS" xml:space="preserve">
+    <value>X軸</value>
+    <comment>X</comment>
+  </data>
+  <data name="TXT_Y_AXIS" xml:space="preserve">
+    <value>Y軸</value>
+    <comment>Y</comment>
+  </data>
+  <data name="MSG_TEMPCHECK" xml:space="preserve">
+    <value>測定指定チャンネルに温度センサのないチャンネルが存在します。
+設定を再確認してください。
+[{0}]
+
+そのまま測定することも可能ですが、データが正確でない恐れがあります。</value>
+    <comment>測定指定チャンネルに温度センサのないチャンネルが存在します。</comment>
+  </data>
+  <data name="MSG_TEMPCHECK_CAPTION" xml:space="preserve">
+    <value>温度センサ取り付け確認</value>
+    <comment>温度センサ取り付け確認</comment>
+  </data>
+  <data name="MSG_TAGSETTING_NG_EXPRESSION" xml:space="preserve">
+    <value>演算式に誤りがあります。</value>
+    <comment>演算式に誤りがあります。</comment>
+  </data>
+  <data name="MSG_TAGSETTING_OK_EXPRESSION" xml:space="preserve">
+    <value>演算式を確認しました。</value>
+    <comment>演算式を確認しました。</comment>
+  </data>
+  <data name="MSG_DELETE_MEASUREDATA" xml:space="preserve">
+    <value>指定された測定データを削除します。よろしいですか？</value>
+    <comment>指定された測定データを削除します。よろしいですか？</comment>
+  </data>
+  <data name="MSG_DELETE_MEASUREDATA_TITLE" xml:space="preserve">
+    <value>測定データ削除</value>
+    <comment>測定データ削除</comment>
+  </data>
+  <data name="MSG_MEAS_EMERGENCY_STOP" xml:space="preserve">
+    <value>バッファオーバーフローが発生しました。
+測定可能な条件を超えています。
+条件を見直して再測定してください。
+
+測定を緊急停止します。</value>
+    <comment>測定を緊急停止します。</comment>
+  </data>
+</root>

@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="RM_3000.uctrlLocationSetting2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="900"
+             Loaded="Window_Loaded" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" MouseLeftButtonUp="Window_MouseLeftButtonUp">
+    <UserControl.Resources>
+        <BitmapImage x:Key="image_sensor_r_normal_bottom" UriSource="../Resources/Images/Sensor/sensor_r_normal_bottom.png"></BitmapImage>
+        <BitmapImage x:Key="image_sensor_r_normal_top" UriSource="../Resources/Images/Sensor/sensor_r_normal_top.png"></BitmapImage>
+        <BitmapImage x:Key="image_sensor_r_normal_left" UriSource="../Resources/Images/Sensor/sensor_r_normal_left.png"></BitmapImage>
+        <BitmapImage x:Key="image_sensor_r_normal_right" UriSource="../Resources/Images/Sensor/sensor_r_normal_right.png"></BitmapImage>
+        <BitmapImage x:Key="image_sensor_r_active_bottom" UriSource="../Resources/Images/Sensor/sensor_r_active_bottom.png"></BitmapImage>
+        <BitmapImage x:Key="image_sensor_r_active_top" UriSource="../Resources/Images/Sensor/sensor_r_active_top.png"></BitmapImage>
+        <BitmapImage x:Key="image_sensor_r_active_left" UriSource="../Resources/Images/Sensor/sensor_r_active_left.png"></BitmapImage>
+        <BitmapImage x:Key="image_sensor_r_active_right" UriSource="../Resources/Images/Sensor/sensor_r_active_right.png"></BitmapImage>
+    </UserControl.Resources>
+    <Grid>
+        <Canvas Name="cvsRoot" Margin="0,0,0,0" SizeChanged="cvsRoot_SizeChanged">
+            <Canvas Name="cvsFreeSensorArea" Width="100" Height="100" Background="Black" Canvas.Right="30" Canvas.Top="30">
+                <Rectangle Fill="White" Width="98" Height="98" Canvas.Left="1" Canvas.Top="1"></Rectangle>
+            </Canvas>
+            <ScrollViewer Name="scrollViewer" Canvas.Left="0" Canvas.Top="0" Canvas.Right="240" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Background="Black" PreviewMouseWheel="scrollViewer_PreviewMouseWheel" Margin="0,0,230,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" PreviewKeyDown="scrollViewer_PreviewKeyDown" PreviewKeyUp="scrollViewer_PreviewKeyUp" SizeChanged="scrollViewer_SizeChanged">
+                <Canvas Name="cvsBase" Margin="0,0,0,0" Background="LightGray">
+                    <Canvas Name="cvsBolster" Width="750" Height="400" Background="#FFF2D883" SnapsToDevicePixels="True">
+                        <Rectangle Name="rectBolsterBase" Stroke="#FF6a6a6a" Width="750" Height="400" StrokeThickness="1" Fill="#FFE2EFAC"></Rectangle>
+                        <Canvas Name="cvsUnderKanagata" Width="650" Height="350" Canvas.Left="50" Canvas.Top="25" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFBABAB7" SnapsToDevicePixels="True">
+                            <Rectangle Name="rectUnderKanagataBase" Stroke="#FF6a6a6a" Width="650" Height="350" StrokeThickness="1" Fill="#FFBABAB7"></Rectangle>
+                        </Canvas>
+                        <Canvas Name="cvsPressKanagata" Width="550" Height="250" Canvas.Left="100" Canvas.Top="75" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFEEEEEE" SnapsToDevicePixels="True">
+                            <Rectangle Name="rectPressKanagata" Stroke="#FF6a6a6a" Width="550" Height="250" StrokeThickness="1" Fill="#FFDFDFDF"></Rectangle>
+                        </Canvas>
+                    </Canvas>
+                </Canvas>
+            </ScrollViewer>
+            <Slider Name="sliderZoom" Width="30" Height="250" Minimum="1" Maximum="30" Canvas.Top="149" Canvas.Right="76" Orientation="Vertical" IsTabStop="False" SmallChange="1" IsSnapToTickEnabled="True" KeyUp="sliderZoom_KeyUp" />
+        </Canvas>
+
+    </Grid>
+</UserControl>

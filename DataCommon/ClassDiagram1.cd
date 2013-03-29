@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DataCommon.AnalyzeData">
+    <Position X="27.25" Y="12.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAQEAAAAAEAAAAAAIAAEAAAAAAAAAAA=</HashCode>
+      <FileName>AnalyzeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.Value_Standard">
+    <Position X="37.5" Y="17.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIAAAAgAAAAAAA=</HashCode>
+      <FileName>Value_Standard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.B_BoardSetting">
+    <Position X="15.75" Y="11.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAIAAAAAAAAEAA=</HashCode>
+      <FileName>B_BoardSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.BoardSettingBase" Collapsed="true">
+    <Position X="17.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BoardSettingBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.ChannelMeasSetting">
+    <Position X="23.25" Y="5.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="DataCommon.ChannelMeasSetting.TriggerType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ChannelMeasSetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAAAAAIAAEAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>ChannelMeasSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.ChannelSetting">
+    <Position X="27.25" Y="8" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="DataCommon.ChannelSetting.chKindType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ChannelSetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="DataCommon.ChannelSetting.TriggerType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ChannelSetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAABAAAAAAECAAAAAAAAAAABAAAAAQAAAQABAA=</HashCode>
+      <FileName>ChannelSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.ChannelsSetting">
+    <Position X="22.25" Y="9" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAABAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChannelsSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.AppResource" Collapsed="true">
+    <Position X="18.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Constant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.DataClassBase">
+    <Position X="30" Y="10.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataClassBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.DataTag">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAFAAECAAAECgEAEAAARAAAAAQACAEAQIgIAAAABAAA=</HashCode>
+      <FileName>DataTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.DataTagSetting">
+    <Position X="32.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>DataTagSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.DataValue" Collapsed="true">
+    <Position X="38.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.GraphSetting">
+    <Position X="25.75" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAEAEEAIAAAACAAAAAAIAAAACAAAAAAA=</HashCode>
+      <FileName>GraphSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.GraphTag">
+    <Position X="28.75" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEABAAAAAQAAAABACAAAAAgAAAAAA=</HashCode>
+      <FileName>GraphTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.L_BoardSetting">
+    <Position X="22.5" Y="11.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>L_BoardSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.MeasureData">
+    <Position X="31.75" Y="12.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAABAAEAAAgACAAIAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MeasureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.MeasureSetting">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAIIAAAADEAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>MeasureSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.PositionSetting">
+    <Position X="21" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="DataCommon.PositionSetting.WayType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PositionSetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="DataCommon.PositionSetting.TargetType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PositionSetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAEIAAAACAAAAAABAAAAARAAQAAQAE=</HashCode>
+      <FileName>PositionSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.R_BoardSetting">
+    <Position X="18" Y="11.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>R_BoardSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.RelationSetting">
+    <Position X="31" Y="7.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>MAAAAAAAAAAAAAAEAAAAAAAAAAgwAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>RelationSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.SensorPositionSetting">
+    <Position X="24.5" Y="8" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACIEAAAgCAAAAAAEAAAAQAAIAEAAKAQQACAIEAACAAA=</HashCode>
+      <FileName>SensorPositionSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.SettingBase">
+    <Position X="23.25" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAABgAAAAAgEAAAAEIACBAAAAAAEAAAQAAAAA=</HashCode>
+      <FileName>SettingBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.TagChannelRelationsSetting">
+    <Position X="17" Y="5.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TagChannelRelationsSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.ChannelData">
+    <Position X="35.75" Y="13.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAkBAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChannelData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.V_BoardSetting">
+    <Position X="20.25" Y="11.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAACAAEAAAAEAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>V_BoardSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.Value_Mode2">
+    <Position X="39.75" Y="17.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAgAAAAAAA=</HashCode>
+      <FileName>Value_Mode2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.ConstantData">
+    <Position X="23" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEACAAAAAAAAAAAAAAAAAgAAAAAgA=</HashCode>
+      <FileName>ConstantData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.ConstantSetting">
+    <Position X="21.25" Y="15" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAQAA=</HashCode>
+      <FileName>ConstantSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.TagChannelPattern">
+    <Position X="33.25" Y="7.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAEAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TagChannelPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCommon.SampleData">
+    <Position X="33.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SampleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="DataCommon.TYPEOFCLASS" Collapsed="true">
+    <Position X="16.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAICAYABJSAAAACQEAoAAAAIAEEACIAIAAAAAA=</HashCode>
+      <FileName>Constant.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -85,9 +85,8 @@
             this.pnlMain.Controls.Add(this.panel2);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(571, 192);
+            this.pnlMain.Size = new System.Drawing.Size(571, 160);
             this.pnlMain.TabIndex = 4;
             // 
             // panel1
@@ -101,16 +100,18 @@
             this.panel1.Controls.Add(this.btnShow);
             this.panel1.Controls.Add(this.btnHide);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(282, 30);
+            this.panel1.Location = new System.Drawing.Point(282, 25);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 87);
+            this.panel1.Size = new System.Drawing.Size(273, 72);
             this.panel1.TabIndex = 4;
             // 
             // picShow
             // 
-            this.picShow.Location = new System.Drawing.Point(163, 30);
+            this.picShow.Location = new System.Drawing.Point(163, 25);
+            this.picShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picShow.Name = "picShow";
-            this.picShow.Size = new System.Drawing.Size(89, 47);
+            this.picShow.Size = new System.Drawing.Size(89, 39);
             this.picShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picShow.TabIndex = 12;
             this.picShow.TabStop = false;
@@ -118,9 +119,10 @@
             // 
             // picHide
             // 
-            this.picHide.Location = new System.Drawing.Point(19, 30);
+            this.picHide.Location = new System.Drawing.Point(19, 25);
+            this.picHide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picHide.Name = "picHide";
-            this.picHide.Size = new System.Drawing.Size(91, 47);
+            this.picHide.Size = new System.Drawing.Size(91, 39);
             this.picHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHide.TabIndex = 11;
             this.picHide.TabStop = false;
@@ -128,9 +130,10 @@
             // 
             // btnLarge
             // 
-            this.btnLarge.Location = new System.Drawing.Point(184, 83);
+            this.btnLarge.Location = new System.Drawing.Point(184, 69);
+            this.btnLarge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLarge.Name = "btnLarge";
-            this.btnLarge.Size = new System.Drawing.Size(80, 33);
+            this.btnLarge.Size = new System.Drawing.Size(80, 27);
             this.btnLarge.TabIndex = 10;
             this.btnLarge.Text = "TXT_LARGE";
             this.btnLarge.UseVisualStyleBackColor = true;
@@ -139,9 +142,10 @@
             // 
             // btnMedium
             // 
-            this.btnMedium.Location = new System.Drawing.Point(98, 83);
+            this.btnMedium.Location = new System.Drawing.Point(98, 69);
+            this.btnMedium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMedium.Name = "btnMedium";
-            this.btnMedium.Size = new System.Drawing.Size(80, 33);
+            this.btnMedium.Size = new System.Drawing.Size(80, 27);
             this.btnMedium.TabIndex = 9;
             this.btnMedium.Text = "TXT_MEDIUM";
             this.btnMedium.UseVisualStyleBackColor = true;
@@ -150,9 +154,10 @@
             // 
             // btnSmall
             // 
-            this.btnSmall.Location = new System.Drawing.Point(12, 83);
+            this.btnSmall.Location = new System.Drawing.Point(12, 69);
+            this.btnSmall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSmall.Name = "btnSmall";
-            this.btnSmall.Size = new System.Drawing.Size(80, 33);
+            this.btnSmall.Size = new System.Drawing.Size(80, 27);
             this.btnSmall.TabIndex = 8;
             this.btnSmall.Text = "TXT_SMALL";
             this.btnSmall.UseVisualStyleBackColor = true;
@@ -161,9 +166,10 @@
             // 
             // btnShow
             // 
-            this.btnShow.Location = new System.Drawing.Point(163, 30);
+            this.btnShow.Location = new System.Drawing.Point(163, 25);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(80, 33);
+            this.btnShow.Size = new System.Drawing.Size(80, 27);
             this.btnShow.TabIndex = 7;
             this.btnShow.Text = "TXT_SHOW";
             this.btnShow.UseVisualStyleBackColor = true;
@@ -171,9 +177,10 @@
             // 
             // btnHide
             // 
-            this.btnHide.Location = new System.Drawing.Point(30, 30);
+            this.btnHide.Location = new System.Drawing.Point(30, 25);
+            this.btnHide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(80, 33);
+            this.btnHide.Size = new System.Drawing.Size(80, 27);
             this.btnHide.TabIndex = 6;
             this.btnHide.Text = "TXT_HIDE";
             this.btnHide.UseVisualStyleBackColor = true;
@@ -184,7 +191,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(273, 22);
+            this.label3.Size = new System.Drawing.Size(273, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "TXT_STRIPPER_PLATE";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,16 +211,18 @@
             this.pnlAnimation.Controls.Add(this.btnStart);
             this.pnlAnimation.Controls.Add(this.label2);
             this.pnlAnimation.Controls.Add(this.trackSpeed);
-            this.pnlAnimation.Location = new System.Drawing.Point(3, 30);
+            this.pnlAnimation.Location = new System.Drawing.Point(3, 25);
+            this.pnlAnimation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAnimation.Name = "pnlAnimation";
-            this.pnlAnimation.Size = new System.Drawing.Size(273, 157);
+            this.pnlAnimation.Size = new System.Drawing.Size(273, 131);
             this.pnlAnimation.TabIndex = 3;
             // 
             // picGain
             // 
-            this.picGain.Location = new System.Drawing.Point(174, 96);
+            this.picGain.Location = new System.Drawing.Point(174, 80);
+            this.picGain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picGain.Name = "picGain";
-            this.picGain.Size = new System.Drawing.Size(60, 60);
+            this.picGain.Size = new System.Drawing.Size(60, 50);
             this.picGain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGain.TabIndex = 16;
             this.picGain.TabStop = false;
@@ -221,9 +230,10 @@
             // 
             // picBack
             // 
-            this.picBack.Location = new System.Drawing.Point(40, 96);
+            this.picBack.Location = new System.Drawing.Point(40, 80);
+            this.picBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBack.Name = "picBack";
-            this.picBack.Size = new System.Drawing.Size(60, 60);
+            this.picBack.Size = new System.Drawing.Size(60, 50);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBack.TabIndex = 15;
             this.picBack.TabStop = false;
@@ -231,9 +241,10 @@
             // 
             // picStop
             // 
-            this.picStop.Location = new System.Drawing.Point(174, 18);
+            this.picStop.Location = new System.Drawing.Point(174, 15);
+            this.picStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStop.Name = "picStop";
-            this.picStop.Size = new System.Drawing.Size(60, 60);
+            this.picStop.Size = new System.Drawing.Size(60, 50);
             this.picStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picStop.TabIndex = 14;
             this.picStop.TabStop = false;
@@ -244,16 +255,17 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(273, 22);
+            this.label4.Size = new System.Drawing.Size(273, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "TXT_ANIMATION_SETTING";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picStart
             // 
-            this.picStart.Location = new System.Drawing.Point(40, 18);
+            this.picStart.Location = new System.Drawing.Point(40, 15);
+            this.picStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStart.Name = "picStart";
-            this.picStart.Size = new System.Drawing.Size(60, 60);
+            this.picStart.Size = new System.Drawing.Size(60, 50);
             this.picStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picStart.TabIndex = 13;
             this.picStart.TabStop = false;
@@ -261,9 +273,10 @@
             // 
             // btnGain
             // 
-            this.btnGain.Location = new System.Drawing.Point(151, 108);
+            this.btnGain.Location = new System.Drawing.Point(151, 90);
+            this.btnGain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGain.Name = "btnGain";
-            this.btnGain.Size = new System.Drawing.Size(101, 33);
+            this.btnGain.Size = new System.Drawing.Size(101, 27);
             this.btnGain.TabIndex = 8;
             this.btnGain.Text = "TXT_GAIN";
             this.btnGain.UseVisualStyleBackColor = true;
@@ -272,9 +285,10 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(18, 108);
+            this.btnBack.Location = new System.Drawing.Point(18, 90);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(101, 33);
+            this.btnBack.Size = new System.Drawing.Size(101, 27);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "TXT_BACK";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -283,19 +297,20 @@
             // 
             // lblSpeed
             // 
-            this.lblSpeed.Font = new System.Drawing.Font("Meiryo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblSpeed.Location = new System.Drawing.Point(207, 76);
+            this.lblSpeed.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSpeed.Location = new System.Drawing.Point(207, 63);
             this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(45, 26);
+            this.lblSpeed.Size = new System.Drawing.Size(45, 22);
             this.lblSpeed.TabIndex = 6;
             this.lblSpeed.Text = "0";
             this.lblSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(151, 30);
+            this.btnStop.Location = new System.Drawing.Point(151, 25);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(101, 33);
+            this.btnStop.Size = new System.Drawing.Size(101, 27);
             this.btnStop.TabIndex = 5;
             this.btnStop.Text = "TXT_STOP";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -304,9 +319,10 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(18, 30);
+            this.btnStart.Location = new System.Drawing.Point(18, 25);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(101, 33);
+            this.btnStart.Size = new System.Drawing.Size(101, 27);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "TXT_START";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -315,16 +331,17 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(3, 76);
+            this.label2.Location = new System.Drawing.Point(3, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 26);
+            this.label2.Size = new System.Drawing.Size(63, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "TXT_SPEED";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // trackSpeed
             // 
-            this.trackSpeed.Location = new System.Drawing.Point(72, 76);
+            this.trackSpeed.Location = new System.Drawing.Point(72, 63);
+            this.trackSpeed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackSpeed.Name = "trackSpeed";
             this.trackSpeed.Size = new System.Drawing.Size(130, 45);
             this.trackSpeed.TabIndex = 2;
@@ -338,17 +355,18 @@
             this.pnlHeader.Controls.Add(this.lblGraphMenu);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(569, 27);
+            this.pnlHeader.Size = new System.Drawing.Size(569, 22);
             this.pnlHeader.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.Location = new System.Drawing.Point(544, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 27);
+            this.btnClose.Size = new System.Drawing.Size(25, 22);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "×";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -359,7 +377,7 @@
             this.lblGraphMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGraphMenu.Location = new System.Drawing.Point(0, 0);
             this.lblGraphMenu.Name = "lblGraphMenu";
-            this.lblGraphMenu.Size = new System.Drawing.Size(569, 27);
+            this.lblGraphMenu.Size = new System.Drawing.Size(569, 22);
             this.lblGraphMenu.TabIndex = 0;
             this.lblGraphMenu.Text = "TXT_GRAPH_MENU_3D";
             this.lblGraphMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -368,9 +386,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.tstrip3DGraph);
-            this.panel2.Location = new System.Drawing.Point(282, 123);
+            this.panel2.Location = new System.Drawing.Point(282, 102);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(274, 63);
+            this.panel2.Size = new System.Drawing.Size(274, 52);
             this.panel2.TabIndex = 6;
             // 
             // tstrip3DGraph
@@ -382,9 +401,9 @@
             this.toolStripBtnBack,
             this.toolStripBtnLeft,
             this.toolStripBtnRight});
-            this.tstrip3DGraph.Location = new System.Drawing.Point(3, 15);
+            this.tstrip3DGraph.Location = new System.Drawing.Point(3, 12);
             this.tstrip3DGraph.Name = "tstrip3DGraph";
-            this.tstrip3DGraph.Size = new System.Drawing.Size(269, 32);
+            this.tstrip3DGraph.Size = new System.Drawing.Size(269, 27);
             this.tstrip3DGraph.TabIndex = 5;
             this.tstrip3DGraph.Text = "TXT_ADD_3D";
             // 
@@ -434,13 +453,12 @@
             // 
             // frm3DGraphController
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 192);
+            this.ClientSize = new System.Drawing.Size(571, 160);
             this.Controls.Add(this.pnlMain);
-            this.Font = new System.Drawing.Font("Meiryo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm3DGraphController";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frm3DGraphController";

@@ -532,8 +532,8 @@ namespace RM_3000.Forms.Parts
                     this.Height = this.unitLabels[0].Top + this.unitLabels[0].Height + lblTitle.Height + heightMargin;
                 else
                 {
-                    this.tabControl1.Height = this.unitLabels[0].Top + this.unitLabels[0].Height + lblTitle.Height + heightMargin;
-                    this.Height = this.tabControl1.Top + this.tabControl1.Height + heightMargin;
+                    this.tabControl1.Height = this.unitLabels[0].Top + this.unitLabels[0].Height + lblTitle.Height + heightMargin * 2;
+                    this.Height = this.tabControl1.Top + this.tabControl1.Height;
                 }
 
                 //set data point display

@@ -7,7 +7,7 @@ using System.IO;
 
 namespace DataCommon
 {
-    public class SampleDataManager : DataClassBase , IList<SampleData>
+    public class SampleDataManager : DataClassBase , IList<SampleData>, ICloneable
     {
         #region public Const
         /// <summary>
@@ -834,5 +834,28 @@ namespace DataCommon
             }
 
         }
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            SampleDataManager ret = new SampleDataManager();
+
+            ret.HeaderData = (SampleDataHeader)this.HeaderData.Clone();
+            ret.AutoWriteFlag = this.AutoWriteFlag;
+            ret.FolderPath = this.FolderPath;
+
+            if(this.sampleDatas != null)
+                for (int i = 0; i < this.sampleDatas.Count; i++)
+                {
+                    ret.sampleDatas.Add((SampleData)this.sampleDatas[i].Clone());
+                }
+
+            ret.startIndex = this.startIndex;
+            ret.endIndex = this.endIndex;
+
+            return ret;
+        }
+        #endregion
     }
 }

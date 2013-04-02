@@ -6,7 +6,7 @@ namespace DataCommon
     /// チャンネル測定設定
     /// </summary>
     [Serializable]
-    public class ChannelMeasSetting : SettingBase
+    public class ChannelMeasSetting : SettingBase , ICloneable
     {
         #region private member
         /// <summary>
@@ -123,6 +123,22 @@ namespace DataCommon
 
             return true;
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            ChannelMeasSetting ret = new ChannelMeasSetting();
+
+            ret.MainTrigger = this.MainTrigger;
+            ret.Mode2_Trigger = this.Mode2_Trigger;
+            ret.Degree1 = this.Degree1;
+            ret.Degree2 = this.Degree2;
+
+            return ret;
+        }
+
         #endregion
     }
 }

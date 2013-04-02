@@ -109,5 +109,17 @@ namespace DataCommon
             return s;
         }
         #endregion
+
+        public override object CloneMethod()
+        {
+            V_BoardSetting ret = new V_BoardSetting();
+
+            ret.Filter = this.Filter;
+            ret.Range = this.Range;
+            ret.Full = this.Full;
+            ret.Zero = this.Zero;
+
+            return ret;
+        }
     }
 }

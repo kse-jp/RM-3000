@@ -11,7 +11,7 @@ namespace DataCommon
     /// </summary>
     [Serializable]
     [XmlRoot("MeasureData")]
-    public class MeasureData : DataClassBase
+    public class MeasureData : DataClassBase , ICloneable
     {
         public delegate void OutputProgressMessageHandler(int NowStep, int MaxStep);
 
@@ -147,6 +147,51 @@ namespace DataCommon
         #endregion
 
         #region private method
+        /// <summary>
+        ///     指定した精度の数値に切り捨てします。</summary>
+        /// <param name="dValue">
+        ///     丸め対象の倍精度浮動小数点数。</param>
+        /// <param name="iDigits">
+        ///     戻り値の有効桁数の精度。</param>
+        /// <returns>
+        ///     iDigits に等しい精度の数値に切り捨てられた数値。</returns>
+        private double ToRoundDown(double srcValue, int iDigits)
+        {
+            double dCoef = System.Math.Pow(10, iDigits);
+
+            if (srcValue > 0)
+                return System.Math.Floor(srcValue * dCoef) / dCoef;
+            else
+                return System.Math.Ceiling(srcValue * dCoef) / dCoef;
+
+        }
+
+        /// <summary>
+        ///     指定した精度の数値に切り捨てし、文字列で返します。</summary>
+        /// <param name="dValue">
+        ///     丸め対象の倍精度浮動小数点数。</param>
+        /// <param name="iDigits">
+        ///     戻り値の有効桁数の精度。</param>
+        /// <returns>
+        ///     iDigits に等しい精度の数値に切り捨てられた数値。</returns>
+        private string GetRoundDownString(double srcValue, int iDigits)
+        {
+            double retvalue = ToRoundDown(srcValue, iDigits);
+
+            string formatstr = "0";
+
+            for (int i = 0; i < iDigits; i++)
+            {
+                if (i == 0)
+                    formatstr += ".0";
+                else
+                    formatstr += "0";
+            }
+
+            return retvalue.ToString(formatstr);
+        }
+
+
         #endregion
 
         #region public method
@@ -441,16 +486,6 @@ namespace DataCommon
         }
 
         /// <summary>
-        /// データClose
-        /// </summary>
-        public void CloseData()
-        {
-            sampleDatas.CloseData();
-        }
-
-        #endregion
-
-        /// <summary>
         /// データをCSV用文字列で出力
         /// </summary>
         /// <param name="filename">出力先File </param>
@@ -478,9 +513,9 @@ namespace DataCommon
             sb.AppendLine();
 
             StringBuilder sbChannelHeader = new StringBuilder();
-            StringBuilder sbMode1ZeroValueHeader = new StringBuilder(); 
+            StringBuilder sbMode1ZeroValueHeader = new StringBuilder();
             //チャンネル横列
-            for(int i = 0 ; i < sampleDatas.HeaderData.ChannelsDataType.Length; i++)
+            for (int i = 0; i < sampleDatas.HeaderData.ChannelsDataType.Length; i++)
             {
                 SampleDataHeader.CHANNELDATATYPE datatype = sampleDatas.HeaderData.ChannelsDataType[i];
 
@@ -506,7 +541,7 @@ namespace DataCommon
                         if (SampleDatas.HeaderData.Mode == ModeType.MODE1)
                         {
                             dt1 = AnalyzeData_Parent.DataTagSetting.GetTag(AnalyzeData_Parent.TagChannelRelationSetting.RelationList[i].TagNo_1);
-                            
+
                             sbMode1ZeroValueHeader.AppendFormat("{0},"
                                 , (dt1 != null ? GetRoundDownString((double)dt1.StaticZero, dt1.Point) : "---"));
                         }
@@ -552,7 +587,7 @@ namespace DataCommon
 
             //Channelヘッダの書き込み
             System.IO.File.AppendAllText(filename, sb.ToString(), System.Text.Encoding.GetEncoding("shift-jis"));
-            
+
             //一度クリア
             sb.Clear();
 
@@ -566,12 +601,12 @@ namespace DataCommon
 
                 decimal rpmdata = 0;
 
-                for (int sampleIndex = 0 ; sampleIndex < samples.Count; sampleIndex++) 
+                for (int sampleIndex = 0; sampleIndex < samples.Count; sampleIndex++)
                 {
                     //キャンセル処理
                     if (bCancelCSVOutput) return false;
 
-                    OutputProgressMessageEvent(tmpcount + sampleIndex + 1 , length);
+                    OutputProgressMessageEvent(tmpcount + sampleIndex + 1, length);
 
                     SampleData sd = samples[sampleIndex];
 
@@ -633,7 +668,7 @@ namespace DataCommon
 
                                 break;
                             case "Value_Mode2":
-                                for (int index = 0 ; index < ((Value_Mode2)ch.DataValues).Values.Length; index++)
+                                for (int index = 0; index < ((Value_Mode2)ch.DataValues).Values.Length; index++)
                                 {
                                     if (sbList.Count <= index)
                                     {
@@ -678,7 +713,7 @@ namespace DataCommon
 
                     // 一行書込み
                     System.IO.File.AppendAllText(filename, sb.ToString(), System.Text.Encoding.GetEncoding("shift-jis"));
-                    
+
                     //クリア
                     sb.Clear();
 
@@ -703,49 +738,44 @@ namespace DataCommon
             return true;
         }
 
-
         /// <summary>
-        ///     指定した精度の数値に切り捨てします。</summary>
-        /// <param name="dValue">
-        ///     丸め対象の倍精度浮動小数点数。</param>
-        /// <param name="iDigits">
-        ///     戻り値の有効桁数の精度。</param>
-        /// <returns>
-        ///     iDigits に等しい精度の数値に切り捨てられた数値。</returns>
-        private double ToRoundDown(double srcValue, int iDigits)
+        /// データClose
+        /// </summary>
+        public void CloseData()
         {
-            double dCoef = System.Math.Pow(10, iDigits);
-
-            if (srcValue > 0)
-                return System.Math.Floor(srcValue * dCoef) / dCoef;
-            else
-                return System.Math.Ceiling(srcValue * dCoef) / dCoef;
-
+            sampleDatas.CloseData();
         }
 
+        #endregion
+
+
+        #region ICloneable メンバー
+
         /// <summary>
-        ///     指定した精度の数値に切り捨てし、文字列で返します。</summary>
-        /// <param name="dValue">
-        ///     丸め対象の倍精度浮動小数点数。</param>
-        /// <param name="iDigits">
-        ///     戻り値の有効桁数の精度。</param>
-        /// <returns>
-        ///     iDigits に等しい精度の数値に切り捨てられた数値。</returns>
-        private string GetRoundDownString(double srcValue, int iDigits)
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
         {
-            double retvalue = ToRoundDown(srcValue, iDigits);
+            MeasureData ret = new MeasureData();
+            ret.TestDate = this.TestDate;
+            ret.StartTime = this.StartTime; 
+            ret.EndTime = this.EndTime;
+            ret.SamplingTiming = this.SamplingTiming;
+            ret.SamplesCount = this.SamplesCount;
+            
+            if(this.SampleDatas != null)
+            ret.SampleDatas = (SampleDataManager)this.SampleDatas.Clone();
 
-            string formatstr = "0";
+            if(this.CalcDatas != null)
+                ret.CalcDatas = (CalcDataManager)this.CalcDatas.Clone();
+    
+            ret.bCancelCSVOutput = this.bCancelCSVOutput;
+            ret.IsUpdated = this.IsUpdated;
 
-            for (int i = 0; i < iDigits; i++)
-            {
-                if (i == 0)
-                    formatstr += ".0";
-                else
-                    formatstr += "0";
-            }
-
-            return retvalue.ToString(formatstr);
+            return ret;
         }
+
+        #endregion
     }
 }

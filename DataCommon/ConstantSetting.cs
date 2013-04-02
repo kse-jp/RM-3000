@@ -5,7 +5,7 @@ namespace DataCommon
     /// <summary>
     /// constant Setting class
     /// </summary>
-    public class ConstantSetting : SettingBase
+    public class ConstantSetting : SettingBase ,ICloneable
     {
         #region private member
         #endregion
@@ -78,6 +78,23 @@ namespace DataCommon
             string s = string.Format("ConstantSetting -constantList={0}", ConstantList);
             return s;
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            ConstantSetting ret = new ConstantSetting();
+
+            if (ConstantList != null)
+                for (int i = 0; i < this.ConstantList.Length; i++)
+                {
+                    ret.ConstantList[i] = (ConstantData)this.ConstantList[i].Clone();
+                }
+
+            return ret;
+        }
+
         #endregion
     }
 }

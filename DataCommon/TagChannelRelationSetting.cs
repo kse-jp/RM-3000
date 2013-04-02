@@ -2,6 +2,7 @@
 using System.Text;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Collections.Generic;
 
 namespace DataCommon
 {
@@ -9,7 +10,7 @@ namespace DataCommon
     /// 基本設定
     /// </summary>
     [Serializable]
-    public class TagChannelRelationSetting : SettingBase
+    public class TagChannelRelationSetting : SettingBase , ICloneable
     {
         #region private member
         /// <summary>
@@ -98,6 +99,23 @@ namespace DataCommon
             sb.Append(string.Format("TagChannelRelationSetting-RelationSetting={0}", relationList));
             return sb.ToString();
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            TagChannelRelationSetting ret = new TagChannelRelationSetting();
+
+            if(this.relationList != null)
+                ret.relationList = new List<RelationSetting>(this.relationList).ToArray();
+
+            ret.IsUpdated = this.IsUpdated;
+
+            return ret;
+
+        }
+
         #endregion
     }
 }

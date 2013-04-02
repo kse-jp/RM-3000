@@ -2,6 +2,7 @@
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace DataCommon
 {
@@ -9,7 +10,7 @@ namespace DataCommon
     /// 基本設定
     /// </summary>
     [Serializable]
-    public class MeasureSetting : SettingBase
+    public class MeasureSetting : SettingBase ,ICloneable
     {
         #region private member
         /// <summary>
@@ -257,6 +258,39 @@ namespace DataCommon
             sb.Append(string.Format("MeasureSetting-Mode={0}", mode));
             return sb.ToString();
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
+        {
+            MeasureSetting ret = new MeasureSetting();
+            ret.mode = this.mode;
+
+            if(this.measTagList != null)
+               ret.measTagList = new List<int>(this.measTagList).ToArray();
+            
+            if(this.graphSettingList != null)
+                for (int i = 0; i < this.graphSettingList.Length; i++)
+                {
+                    ret.graphSettingList[i] = (GraphSetting)this.graphSettingList[i].Clone();
+                }
+
+            ret.samplingCountLimit = this.samplingCountLimit;
+            ret.samplingTiming_Mode2 = this.samplingTiming_Mode2;
+            ret.samplingTiming_Mode3 = this.samplingTiming_Mode3;
+            ret.measureTime_Mode2 = this.measureTime_Mode2;
+            ret.measureTime_Mode3 = this.measureTime_Mode3;
+
+            ret.IsUpdated = this.IsUpdated;
+
+            return ret;
+        }
+
         #endregion
     }
 }

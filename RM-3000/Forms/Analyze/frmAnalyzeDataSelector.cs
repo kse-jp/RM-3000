@@ -187,7 +187,7 @@ namespace RM_3000.Forms.Analyze
             {
                 if (ana.DirectoryPath.Replace(this.SelectFolderName + "\\", "").Replace("\\","") == dgvDataList.SelectedRows[0].Cells[0].Value.ToString())
                 {
-                    this.SelectAnalyzeData = ana;
+                    this.SelectAnalyzeData = (AnalyzeData)ana.Clone();
                     break;
                 }
             }
@@ -303,6 +303,18 @@ namespace RM_3000.Forms.Analyze
                     SelectFolderName = tmpFileName;
                 }
             }
+        }
+
+        /// <summary>
+        /// フォーム閉じる
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmAnalyzeDataSelector_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            AnalyzeDataList.Clear();
+
+            GC.Collect();
         }
     }
 }

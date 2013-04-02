@@ -80,5 +80,17 @@ namespace DataCommon
             return s;
         }
         #endregion
+
+        public override object CloneMethod()
+        {
+            L_BoardSetting ret = new L_BoardSetting();
+
+            ret.Range = this.Range;
+            ret.Full = this.Full;
+            ret.SensorOutput = this.SensorOutput;
+
+            return ret;
+        }
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace DataCommon
 {
@@ -94,6 +95,15 @@ namespace DataCommon
 
         public object Clone()
         {
+            ChannelsSetting ret = new ChannelsSetting();
+
+            for (int i = 0; i < ChannelSettingList.Length; i++)
+            {
+                ret.ChannelSettingList[i] = (ChannelSetting)this.ChannelSettingList[i].Clone();
+            }
+
+            ret.ChannelMeasSetting = (ChannelMeasSetting)this.ChannelMeasSetting.Clone();
+
             return null;
         }
 

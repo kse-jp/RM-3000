@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace DataCommon
 {
-    public class SampleDataHeader : DataClassBase
+    public class SampleDataHeader : DataClassBase, ICloneable
     {
 
         /// <summary>
@@ -299,5 +299,23 @@ namespace DataCommon
 
         #endregion
 
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            SampleDataHeader ret = new SampleDataHeader();
+
+            ret.Data = (byte[])this.Data.Clone();
+            ret.Mode = this.Mode;
+            ret.SamplesCount = this.SamplesCount;
+            ret.ChannelsDataType = (CHANNELDATATYPE[])this.ChannelsDataType.Clone();
+            ret.ChannelCount = this.ChannelCount;
+            ret.SizeofOneSample = this.SizeofOneSample;
+
+            return ret;
+        }
+
+        #endregion
     }
 }

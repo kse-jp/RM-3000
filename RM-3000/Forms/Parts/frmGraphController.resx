@@ -151,7 +151,7 @@
   <data name="pctArrange.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADr8AAA6/ATgFUyQAABkSSURBVHhe7Z15cBXHnccdg7EB
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsAAAA7AAWrWiQkAABkSSURBVHhe7Z15cBXHnccdg7EB
         XRySMTbn2rGrHBPvVrImtcYJTuJUxTF/7GZtgziEJIQE5r5vIQECcR9CSAIdSEgCIW7MZTDmML4Sr+04
         W7UV20ntf7u1u+Ute72Hobc/Pa/15s1rgd7MSEFPQ9WnxOuZ7jf9+377mOP13COECOjCGBMDug7GxICu
         gzExoOtgTAzoOhgTA7oOxsRYkf++E6JbDHQP0SPE/bb/622mfAGheJu0iBVj4p0IHQAHcp+kp6RXiIQQ
@@ -267,7 +267,7 @@
   <data name="picZoomOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADr8AAA6/ATgFUyQAAB4/SURBVHhe7Z15dFVFnscV3ICQ
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsAAAA7AAWrWiQkAAB4/SURBVHhe7Z15dFVFnscV3ICQ
         sIZ9R6FF2VwAN1CkQVHbRm1k04SwC8gqSwIEQgDZCUtIgrKFfV8V9x1t7XbUtuecOdPLnPlv5szM6Tn2
         OEtrTX3qpm7qvfyyvHcTeM88zvmcR+6tu9X3W+utqnuNUipBLUbcmKD2IG5MUHsQNyaoPYgbE9QexI0J
         ag/ixkjR/64toW6CK4KJb0mLSBE3VkbJDXAj12vqaeqXkFRCwwQ1go1fG9/EPRoYU0haVYa4UYILlFzI
@@ -406,7 +406,7 @@
   <data name="picZoomIn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADr8AAA6/ATgFUyQAAB7nSURBVHhe7Z13dJZVnscVbEBI
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsAAAA7AAWrWiQkAAB7nSURBVHhe7Z13dJZVnscVbEBI
         qKF3FEaUZgFsoMiAoo5jGaVpIHQBqQZIgEAIXUqoSVBa6EWkKfaOjs646jh7zp6dsmf/2z27e2aPs24Z
         vXs/98l9ct83v+QtTxLemJdzPicvz3Ofdr/fW59773OFUipJHUbcmKTuIG5MUncQNyapO4gbk9QdxI1J
         6g7ixljR/64spX6SGsHEt6RFrIgbI1F6A9zI1ZoGmoalpJTSOEm1YOPXxjdxjwbGFJJWkRA3SnCB0gsZ

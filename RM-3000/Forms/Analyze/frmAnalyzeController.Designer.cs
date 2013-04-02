@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.picPrintScreen = new System.Windows.Forms.PictureBox();
             this.btnPrintScreen = new System.Windows.Forms.Button();
             this.trackMain = new System.Windows.Forms.TrackBar();
             this.lblScrollMax = new System.Windows.Forms.Label();
@@ -58,14 +57,15 @@
             this.ScrollSub = new System.Windows.Forms.HScrollBar();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnREW = new System.Windows.Forms.Button();
+            this.picPrintScreen = new System.Windows.Forms.PictureBox();
             this.pnlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPrintScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picREW)).BeginInit();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPrintScreen)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -94,28 +94,15 @@
             this.pnlMain.Controls.Add(this.btnREW);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1241, 101);
+            this.pnlMain.Size = new System.Drawing.Size(1241, 121);
             this.pnlMain.TabIndex = 0;
-            // 
-            // picPrintScreen
-            // 
-            this.picPrintScreen.Location = new System.Drawing.Point(1158, 34);
-            this.picPrintScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picPrintScreen.Name = "picPrintScreen";
-            this.picPrintScreen.Size = new System.Drawing.Size(75, 54);
-            this.picPrintScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPrintScreen.TabIndex = 30;
-            this.picPrintScreen.TabStop = false;
-            this.picPrintScreen.Click += new System.EventHandler(this.picPrintScreen_Click);
             // 
             // btnPrintScreen
             // 
-            this.btnPrintScreen.Location = new System.Drawing.Point(1158, 34);
-            this.btnPrintScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrintScreen.Location = new System.Drawing.Point(1158, 41);
             this.btnPrintScreen.Name = "btnPrintScreen";
-            this.btnPrintScreen.Size = new System.Drawing.Size(66, 54);
+            this.btnPrintScreen.Size = new System.Drawing.Size(66, 65);
             this.btnPrintScreen.TabIndex = 29;
             this.btnPrintScreen.Text = "Print Screen";
             this.btnPrintScreen.UseVisualStyleBackColor = true;
@@ -124,10 +111,9 @@
             // trackMain
             // 
             this.trackMain.AutoSize = false;
-            this.trackMain.Location = new System.Drawing.Point(174, 34);
-            this.trackMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.trackMain.Location = new System.Drawing.Point(174, 41);
             this.trackMain.Name = "trackMain";
-            this.trackMain.Size = new System.Drawing.Size(816, 19);
+            this.trackMain.Size = new System.Drawing.Size(816, 23);
             this.trackMain.TabIndex = 12;
             this.trackMain.ValueChanged += new System.EventHandler(this.trackMain_ValueChanged);
             this.trackMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trackMain_MouseDown);
@@ -135,11 +121,11 @@
             // lblScrollMax
             // 
             this.lblScrollMax.BackColor = System.Drawing.Color.Transparent;
-            this.lblScrollMax.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblScrollMax.Font = new System.Drawing.Font("メイリオ", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblScrollMax.ForeColor = System.Drawing.Color.Black;
-            this.lblScrollMax.Location = new System.Drawing.Point(898, 52);
+            this.lblScrollMax.Location = new System.Drawing.Point(898, 63);
             this.lblScrollMax.Name = "lblScrollMax";
-            this.lblScrollMax.Size = new System.Drawing.Size(92, 14);
+            this.lblScrollMax.Size = new System.Drawing.Size(92, 17);
             this.lblScrollMax.TabIndex = 28;
             this.lblScrollMax.Text = "240";
             this.lblScrollMax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -147,11 +133,11 @@
             // lblScrollMin
             // 
             this.lblScrollMin.BackColor = System.Drawing.Color.Transparent;
-            this.lblScrollMin.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblScrollMin.Font = new System.Drawing.Font("メイリオ", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblScrollMin.ForeColor = System.Drawing.Color.Black;
-            this.lblScrollMin.Location = new System.Drawing.Point(174, 54);
+            this.lblScrollMin.Location = new System.Drawing.Point(174, 65);
             this.lblScrollMin.Name = "lblScrollMin";
-            this.lblScrollMin.Size = new System.Drawing.Size(60, 14);
+            this.lblScrollMin.Size = new System.Drawing.Size(60, 17);
             this.lblScrollMin.TabIndex = 27;
             this.lblScrollMin.Text = "120";
             this.lblScrollMin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,11 +145,11 @@
             // lblShotMax
             // 
             this.lblShotMax.BackColor = System.Drawing.Color.Transparent;
-            this.lblShotMax.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblShotMax.Font = new System.Drawing.Font("メイリオ", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblShotMax.ForeColor = System.Drawing.Color.Black;
-            this.lblShotMax.Location = new System.Drawing.Point(914, 22);
+            this.lblShotMax.Location = new System.Drawing.Point(914, 27);
             this.lblShotMax.Name = "lblShotMax";
-            this.lblShotMax.Size = new System.Drawing.Size(76, 13);
+            this.lblShotMax.Size = new System.Drawing.Size(76, 16);
             this.lblShotMax.TabIndex = 26;
             this.lblShotMax.Text = "10000";
             this.lblShotMax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -173,11 +159,11 @@
             // 
             this.lblShotMin.AutoSize = true;
             this.lblShotMin.BackColor = System.Drawing.Color.Transparent;
-            this.lblShotMin.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblShotMin.Font = new System.Drawing.Font("メイリオ", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblShotMin.ForeColor = System.Drawing.Color.Black;
-            this.lblShotMin.Location = new System.Drawing.Point(179, 22);
+            this.lblShotMin.Location = new System.Drawing.Point(179, 27);
             this.lblShotMin.Name = "lblShotMin";
-            this.lblShotMin.Size = new System.Drawing.Size(14, 14);
+            this.lblShotMin.Size = new System.Drawing.Size(15, 17);
             this.lblShotMin.TabIndex = 25;
             this.lblShotMin.Text = "1";
             this.lblShotMin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,21 +173,20 @@
             // 
             this.lblTrackValueTitle.AutoSize = true;
             this.lblTrackValueTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTrackValueTitle.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTrackValueTitle.Font = new System.Drawing.Font("メイリオ", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblTrackValueTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTrackValueTitle.Location = new System.Drawing.Point(249, 52);
+            this.lblTrackValueTitle.Location = new System.Drawing.Point(249, 63);
             this.lblTrackValueTitle.Name = "lblTrackValueTitle";
-            this.lblTrackValueTitle.Size = new System.Drawing.Size(109, 14);
+            this.lblTrackValueTitle.Size = new System.Drawing.Size(110, 17);
             this.lblTrackValueTitle.TabIndex = 24;
             this.lblTrackValueTitle.Text = "TrackBar (Debug)";
             this.lblTrackValueTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // picFF
             // 
-            this.picFF.Location = new System.Drawing.Point(1077, 34);
-            this.picFF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picFF.Location = new System.Drawing.Point(1077, 41);
             this.picFF.Name = "picFF";
-            this.picFF.Size = new System.Drawing.Size(75, 54);
+            this.picFF.Size = new System.Drawing.Size(75, 65);
             this.picFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFF.TabIndex = 23;
             this.picFF.TabStop = false;
@@ -209,10 +194,9 @@
             // 
             // picGain
             // 
-            this.picGain.Location = new System.Drawing.Point(996, 33);
-            this.picGain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picGain.Location = new System.Drawing.Point(996, 40);
             this.picGain.Name = "picGain";
-            this.picGain.Size = new System.Drawing.Size(75, 54);
+            this.picGain.Size = new System.Drawing.Size(75, 65);
             this.picGain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGain.TabIndex = 22;
             this.picGain.TabStop = false;
@@ -220,10 +204,9 @@
             // 
             // picBack
             // 
-            this.picBack.Location = new System.Drawing.Point(93, 34);
-            this.picBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBack.Location = new System.Drawing.Point(93, 41);
             this.picBack.Name = "picBack";
-            this.picBack.Size = new System.Drawing.Size(75, 54);
+            this.picBack.Size = new System.Drawing.Size(75, 65);
             this.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBack.TabIndex = 21;
             this.picBack.TabStop = false;
@@ -231,10 +214,9 @@
             // 
             // picREW
             // 
-            this.picREW.Location = new System.Drawing.Point(12, 34);
-            this.picREW.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picREW.Location = new System.Drawing.Point(12, 41);
             this.picREW.Name = "picREW";
-            this.picREW.Size = new System.Drawing.Size(75, 54);
+            this.picREW.Size = new System.Drawing.Size(75, 65);
             this.picREW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picREW.TabIndex = 20;
             this.picREW.TabStop = false;
@@ -243,11 +225,11 @@
             // lblScrollValueTitle
             // 
             this.lblScrollValueTitle.AutoSize = true;
-            this.lblScrollValueTitle.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblScrollValueTitle.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblScrollValueTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblScrollValueTitle.Location = new System.Drawing.Point(740, 52);
+            this.lblScrollValueTitle.Location = new System.Drawing.Point(740, 63);
             this.lblScrollValueTitle.Name = "lblScrollValueTitle";
-            this.lblScrollValueTitle.Size = new System.Drawing.Size(123, 15);
+            this.lblScrollValueTitle.Size = new System.Drawing.Size(124, 18);
             this.lblScrollValueTitle.TabIndex = 19;
             this.lblScrollValueTitle.Text = "ScrollBar (Debug)";
             this.lblScrollValueTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -255,11 +237,11 @@
             // lblScrollValue
             // 
             this.lblScrollValue.AutoSize = true;
-            this.lblScrollValue.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblScrollValue.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblScrollValue.ForeColor = System.Drawing.Color.Red;
-            this.lblScrollValue.Location = new System.Drawing.Point(870, 52);
+            this.lblScrollValue.Location = new System.Drawing.Point(870, 63);
             this.lblScrollValue.Name = "lblScrollValue";
-            this.lblScrollValue.Size = new System.Drawing.Size(15, 15);
+            this.lblScrollValue.Size = new System.Drawing.Size(16, 18);
             this.lblScrollValue.TabIndex = 17;
             this.lblScrollValue.Text = "0";
             this.lblScrollValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,11 +250,11 @@
             // 
             this.lblTrackValue.AutoSize = true;
             this.lblTrackValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblTrackValue.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTrackValue.Font = new System.Drawing.Font("メイリオ", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblTrackValue.ForeColor = System.Drawing.Color.Black;
-            this.lblTrackValue.Location = new System.Drawing.Point(365, 52);
+            this.lblTrackValue.Location = new System.Drawing.Point(365, 63);
             this.lblTrackValue.Name = "lblTrackValue";
-            this.lblTrackValue.Size = new System.Drawing.Size(14, 14);
+            this.lblTrackValue.Size = new System.Drawing.Size(15, 17);
             this.lblTrackValue.TabIndex = 16;
             this.lblTrackValue.Text = "0";
             this.lblTrackValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,8 +272,9 @@
             this.pnlHeader.Controls.Add(this.lblMode);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1239, 22);
+            this.pnlHeader.Size = new System.Drawing.Size(1239, 27);
             this.pnlHeader.TabIndex = 9;
             // 
             // lblSamplingTiming_Title
@@ -299,7 +282,7 @@
             this.lblSamplingTiming_Title.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblSamplingTiming_Title.Location = new System.Drawing.Point(328, 0);
             this.lblSamplingTiming_Title.Name = "lblSamplingTiming_Title";
-            this.lblSamplingTiming_Title.Size = new System.Drawing.Size(220, 22);
+            this.lblSamplingTiming_Title.Size = new System.Drawing.Size(220, 27);
             this.lblSamplingTiming_Title.TabIndex = 8;
             this.lblSamplingTiming_Title.Text = "TXT_SAMPLING_PERIOD";
             this.lblSamplingTiming_Title.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -309,7 +292,7 @@
             this.lblSamplingTiming.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblSamplingTiming.Location = new System.Drawing.Point(548, 0);
             this.lblSamplingTiming.Name = "lblSamplingTiming";
-            this.lblSamplingTiming.Size = new System.Drawing.Size(78, 22);
+            this.lblSamplingTiming.Size = new System.Drawing.Size(78, 27);
             this.lblSamplingTiming.TabIndex = 7;
             this.lblSamplingTiming.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -318,7 +301,7 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTitle.Location = new System.Drawing.Point(87, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(170, 22);
+            this.lblTitle.Size = new System.Drawing.Size(170, 27);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "TXT_ANALYSIS_TITLE";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,7 +311,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
             this.label2.Location = new System.Drawing.Point(626, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 22);
+            this.label2.Size = new System.Drawing.Size(140, 27);
             this.label2.TabIndex = 5;
             this.label2.Text = "TXT_MEASUREMENT_START_DATE";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -338,7 +321,7 @@
             this.lblMeasureStartDateTime.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblMeasureStartDateTime.Location = new System.Drawing.Point(766, 0);
             this.lblMeasureStartDateTime.Name = "lblMeasureStartDateTime";
-            this.lblMeasureStartDateTime.Size = new System.Drawing.Size(169, 22);
+            this.lblMeasureStartDateTime.Size = new System.Drawing.Size(169, 27);
             this.lblMeasureStartDateTime.TabIndex = 4;
             this.lblMeasureStartDateTime.Text = "--:--:--.---";
             this.lblMeasureStartDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,7 +331,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Location = new System.Drawing.Point(935, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 22);
+            this.label1.Size = new System.Drawing.Size(138, 27);
             this.label1.TabIndex = 2;
             this.label1.Text = "TXT_MEASUREMENT_END_DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -358,7 +341,7 @@
             this.lblMeasureEndDateTime.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblMeasureEndDateTime.Location = new System.Drawing.Point(1073, 0);
             this.lblMeasureEndDateTime.Name = "lblMeasureEndDateTime";
-            this.lblMeasureEndDateTime.Size = new System.Drawing.Size(166, 22);
+            this.lblMeasureEndDateTime.Size = new System.Drawing.Size(166, 27);
             this.lblMeasureEndDateTime.TabIndex = 1;
             this.lblMeasureEndDateTime.Text = "--:--:--.---";
             this.lblMeasureEndDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -368,16 +351,15 @@
             this.lblMode.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblMode.Location = new System.Drawing.Point(0, 0);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(87, 22);
+            this.lblMode.Size = new System.Drawing.Size(87, 27);
             this.lblMode.TabIndex = 3;
             this.lblMode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFF
             // 
-            this.btnFF.Location = new System.Drawing.Point(1077, 38);
-            this.btnFF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFF.Location = new System.Drawing.Point(1077, 46);
             this.btnFF.Name = "btnFF";
-            this.btnFF.Size = new System.Drawing.Size(75, 45);
+            this.btnFF.Size = new System.Drawing.Size(75, 54);
             this.btnFF.TabIndex = 13;
             this.btnFF.Text = "TXT_END_POSITION";
             this.btnFF.UseVisualStyleBackColor = true;
@@ -385,10 +367,9 @@
             // 
             // btnGain
             // 
-            this.btnGain.Location = new System.Drawing.Point(996, 37);
-            this.btnGain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGain.Location = new System.Drawing.Point(996, 45);
             this.btnGain.Name = "btnGain";
-            this.btnGain.Size = new System.Drawing.Size(75, 45);
+            this.btnGain.Size = new System.Drawing.Size(75, 54);
             this.btnGain.TabIndex = 14;
             this.btnGain.Text = "TXT_GAIN_POSITION";
             this.btnGain.UseVisualStyleBackColor = true;
@@ -396,7 +377,7 @@
             // 
             // ScrollSub
             // 
-            this.ScrollSub.Location = new System.Drawing.Point(174, 67);
+            this.ScrollSub.Location = new System.Drawing.Point(174, 81);
             this.ScrollSub.Name = "ScrollSub";
             this.ScrollSub.Size = new System.Drawing.Size(816, 31);
             this.ScrollSub.TabIndex = 15;
@@ -404,10 +385,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(93, 37);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(93, 45);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 45);
+            this.btnBack.Size = new System.Drawing.Size(75, 54);
             this.btnBack.TabIndex = 11;
             this.btnBack.Text = "TXT_BACK_POSITION";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -415,24 +395,34 @@
             // 
             // btnREW
             // 
-            this.btnREW.Location = new System.Drawing.Point(12, 37);
-            this.btnREW.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnREW.Location = new System.Drawing.Point(12, 45);
             this.btnREW.Name = "btnREW";
-            this.btnREW.Size = new System.Drawing.Size(75, 45);
+            this.btnREW.Size = new System.Drawing.Size(75, 54);
             this.btnREW.TabIndex = 10;
             this.btnREW.Text = "TXT_START_POSITION";
             this.btnREW.UseVisualStyleBackColor = true;
             this.btnREW.Click += new System.EventHandler(this.btnREW_Click);
             // 
+            // picPrintScreen
+            // 
+            this.picPrintScreen.Location = new System.Drawing.Point(1158, 41);
+            this.picPrintScreen.Name = "picPrintScreen";
+            this.picPrintScreen.Size = new System.Drawing.Size(75, 65);
+            this.picPrintScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPrintScreen.TabIndex = 30;
+            this.picPrintScreen.TabStop = false;
+            this.picPrintScreen.Click += new System.EventHandler(this.picPrintScreen_Click);
+            // 
             // frmAnalyzeController
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 101);
+            this.ClientSize = new System.Drawing.Size(1241, 121);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMain);
-            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAnalyzeController";
@@ -443,13 +433,13 @@
             this.Shown += new System.EventHandler(this.frmAnalyzeController_Shown);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPrintScreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picREW)).EndInit();
             this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picPrintScreen)).EndInit();
             this.ResumeLayout(false);
 
         }

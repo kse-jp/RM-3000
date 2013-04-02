@@ -35,19 +35,18 @@
             // elHostGraph
             // 
             this.elHostGraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elHostGraph.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.elHostGraph.Location = new System.Drawing.Point(0, 0);
             this.elHostGraph.Name = "elHostGraph";
-            this.elHostGraph.Size = new System.Drawing.Size(491, 418);
+            this.elHostGraph.Size = new System.Drawing.Size(491, 453);
             this.elHostGraph.TabIndex = 0;
             this.elHostGraph.Text = "elementHost1";
             this.elHostGraph.Child = this.graphViewer;
             // 
             // frmGraph2D
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 418);
+            this.ClientSize = new System.Drawing.Size(491, 453);
             this.Controls.Add(this.elHostGraph);
             this.Name = "frmGraph2D";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

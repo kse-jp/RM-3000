@@ -57,10 +57,10 @@
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnUpdate.Location = new System.Drawing.Point(246, 150);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(246, 180);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(89, 28);
+            this.btnUpdate.Size = new System.Drawing.Size(89, 34);
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "TXT_UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -71,10 +71,10 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(341, 150);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Location = new System.Drawing.Point(341, 180);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 28);
+            this.btnCancel.Size = new System.Drawing.Size(89, 34);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "TXT_CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -82,54 +82,54 @@
             // 
             // lblUnit1
             // 
-            this.lblUnit1.Location = new System.Drawing.Point(27, 34);
+            this.lblUnit1.Location = new System.Drawing.Point(27, 41);
             this.lblUnit1.Name = "lblUnit1";
-            this.lblUnit1.Size = new System.Drawing.Size(69, 15);
+            this.lblUnit1.Size = new System.Drawing.Size(69, 18);
             this.lblUnit1.TabIndex = 3;
             this.lblUnit1.Text = "UNIT1";
             this.lblUnit1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblMin
             // 
-            this.lblMin.Location = new System.Drawing.Point(103, 7);
+            this.lblMin.Location = new System.Drawing.Point(103, 9);
             this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(63, 15);
+            this.lblMin.Size = new System.Drawing.Size(63, 18);
             this.lblMin.TabIndex = 0;
             this.lblMin.Text = "TXT_MIN";
             this.lblMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(229, 7);
+            this.label1.Location = new System.Drawing.Point(229, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 15);
+            this.label1.Size = new System.Drawing.Size(65, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "TXT_MAX";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDistance
             // 
-            this.lblDistance.Location = new System.Drawing.Point(324, 7);
+            this.lblDistance.Location = new System.Drawing.Point(324, 9);
             this.lblDistance.Name = "lblDistance";
-            this.lblDistance.Size = new System.Drawing.Size(100, 15);
+            this.lblDistance.Size = new System.Drawing.Size(100, 18);
             this.lblDistance.TabIndex = 2;
             this.lblDistance.Text = "TXT_DISTANCE";
             this.lblDistance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblUnit2
             // 
-            this.lblUnit2.Location = new System.Drawing.Point(30, 60);
+            this.lblUnit2.Location = new System.Drawing.Point(30, 72);
             this.lblUnit2.Name = "lblUnit2";
-            this.lblUnit2.Size = new System.Drawing.Size(66, 15);
+            this.lblUnit2.Size = new System.Drawing.Size(66, 18);
             this.lblUnit2.TabIndex = 9;
             this.lblUnit2.Text = "UNIT2";
             this.lblUnit2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblShotNumber
             // 
-            this.lblShotNumber.Location = new System.Drawing.Point(189, 88);
+            this.lblShotNumber.Location = new System.Drawing.Point(189, 106);
             this.lblShotNumber.Name = "lblShotNumber";
-            this.lblShotNumber.Size = new System.Drawing.Size(131, 15);
+            this.lblShotNumber.Size = new System.Drawing.Size(131, 18);
             this.lblShotNumber.TabIndex = 16;
             this.lblShotNumber.Text = "TXT_SHOT_NUMBER";
             this.lblShotNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,9 +137,9 @@
             // 
             // lblShotStart
             // 
-            this.lblShotStart.Location = new System.Drawing.Point(75, 88);
+            this.lblShotStart.Location = new System.Drawing.Point(75, 106);
             this.lblShotStart.Name = "lblShotStart";
-            this.lblShotStart.Size = new System.Drawing.Size(119, 15);
+            this.lblShotStart.Size = new System.Drawing.Size(119, 18);
             this.lblShotStart.TabIndex = 15;
             this.lblShotStart.Text = "TXT_SHOT_START";
             this.lblShotStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,9 +147,9 @@
             // 
             // lblShot
             // 
-            this.lblShot.Location = new System.Drawing.Point(5, 115);
+            this.lblShot.Location = new System.Drawing.Point(5, 138);
             this.lblShot.Name = "lblShot";
-            this.lblShot.Size = new System.Drawing.Size(91, 15);
+            this.lblShot.Size = new System.Drawing.Size(91, 18);
             this.lblShot.TabIndex = 17;
             this.lblShot.Text = "TXT_SHOT";
             this.lblShot.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -158,26 +158,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 34);
+            this.label2.Location = new System.Drawing.Point(189, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 15);
+            this.label2.Size = new System.Drawing.Size(18, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "~";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(189, 60);
+            this.label3.Location = new System.Drawing.Point(189, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 15);
+            this.label3.Size = new System.Drawing.Size(18, 18);
             this.label3.TabIndex = 11;
             this.label3.Text = "~";
             // 
             // lblSign
             // 
-            this.lblSign.Location = new System.Drawing.Point(203, 60);
+            this.lblSign.Location = new System.Drawing.Point(203, 72);
             this.lblSign.Name = "lblSign";
-            this.lblSign.Size = new System.Drawing.Size(29, 15);
+            this.lblSign.Size = new System.Drawing.Size(29, 18);
             this.lblSign.TabIndex = 12;
             this.lblSign.Text = "TXT_SIGN_P_M";
             this.lblSign.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -189,11 +189,10 @@
             this.ntbShotNumber.AllowSpace = false;
             this.ntbShotNumber.AllowString = false;
             this.ntbShotNumber.IsInteger = true;
-            this.ntbShotNumber.Location = new System.Drawing.Point(229, 112);
-            this.ntbShotNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbShotNumber.Location = new System.Drawing.Point(229, 135);
             this.ntbShotNumber.MaxLength = 6;
             this.ntbShotNumber.Name = "ntbShotNumber";
-            this.ntbShotNumber.Size = new System.Drawing.Size(64, 23);
+            this.ntbShotNumber.Size = new System.Drawing.Size(64, 25);
             this.ntbShotNumber.TabIndex = 19;
             this.ntbShotNumber.Text = "0";
             this.ntbShotNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -206,11 +205,10 @@
             this.ntbShotStart.AllowSpace = false;
             this.ntbShotStart.AllowString = false;
             this.ntbShotStart.IsInteger = true;
-            this.ntbShotStart.Location = new System.Drawing.Point(102, 112);
-            this.ntbShotStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbShotStart.Location = new System.Drawing.Point(102, 135);
             this.ntbShotStart.MaxLength = 10;
             this.ntbShotStart.Name = "ntbShotStart";
-            this.ntbShotStart.Size = new System.Drawing.Size(64, 23);
+            this.ntbShotStart.Size = new System.Drawing.Size(64, 25);
             this.ntbShotStart.TabIndex = 18;
             this.ntbShotStart.Text = "1";
             this.ntbShotStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -223,11 +221,10 @@
             this.ntbDistanceY.AllowSpace = false;
             this.ntbDistanceY.AllowString = false;
             this.ntbDistanceY.IsInteger = false;
-            this.ntbDistanceY.Location = new System.Drawing.Point(342, 57);
-            this.ntbDistanceY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbDistanceY.Location = new System.Drawing.Point(342, 69);
             this.ntbDistanceY.MaxLength = 6;
             this.ntbDistanceY.Name = "ntbDistanceY";
-            this.ntbDistanceY.Size = new System.Drawing.Size(64, 23);
+            this.ntbDistanceY.Size = new System.Drawing.Size(64, 25);
             this.ntbDistanceY.TabIndex = 14;
             this.ntbDistanceY.Text = "0";
             this.ntbDistanceY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -239,11 +236,10 @@
             this.ntbMaxY.AllowSpace = false;
             this.ntbMaxY.AllowString = false;
             this.ntbMaxY.IsInteger = false;
-            this.ntbMaxY.Location = new System.Drawing.Point(229, 57);
-            this.ntbMaxY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbMaxY.Location = new System.Drawing.Point(229, 69);
             this.ntbMaxY.MaxLength = 6;
             this.ntbMaxY.Name = "ntbMaxY";
-            this.ntbMaxY.Size = new System.Drawing.Size(64, 23);
+            this.ntbMaxY.Size = new System.Drawing.Size(64, 25);
             this.ntbMaxY.TabIndex = 13;
             this.ntbMaxY.Text = "0";
             this.ntbMaxY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -255,11 +251,10 @@
             this.ntbMinY.AllowSpace = false;
             this.ntbMinY.AllowString = false;
             this.ntbMinY.IsInteger = false;
-            this.ntbMinY.Location = new System.Drawing.Point(102, 57);
-            this.ntbMinY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbMinY.Location = new System.Drawing.Point(102, 69);
             this.ntbMinY.MaxLength = 5;
             this.ntbMinY.Name = "ntbMinY";
-            this.ntbMinY.Size = new System.Drawing.Size(64, 23);
+            this.ntbMinY.Size = new System.Drawing.Size(64, 25);
             this.ntbMinY.TabIndex = 10;
             this.ntbMinY.Text = "-9999.99";
             this.ntbMinY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -271,11 +266,10 @@
             this.ntbDistanceX.AllowSpace = false;
             this.ntbDistanceX.AllowString = false;
             this.ntbDistanceX.IsInteger = false;
-            this.ntbDistanceX.Location = new System.Drawing.Point(342, 32);
-            this.ntbDistanceX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbDistanceX.Location = new System.Drawing.Point(342, 38);
             this.ntbDistanceX.MaxLength = 5;
             this.ntbDistanceX.Name = "ntbDistanceX";
-            this.ntbDistanceX.Size = new System.Drawing.Size(64, 23);
+            this.ntbDistanceX.Size = new System.Drawing.Size(64, 25);
             this.ntbDistanceX.TabIndex = 7;
             this.ntbDistanceX.Text = "0";
             this.ntbDistanceX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -287,11 +281,10 @@
             this.ntbMaxX.AllowSpace = false;
             this.ntbMaxX.AllowString = false;
             this.ntbMaxX.IsInteger = false;
-            this.ntbMaxX.Location = new System.Drawing.Point(229, 32);
-            this.ntbMaxX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbMaxX.Location = new System.Drawing.Point(229, 38);
             this.ntbMaxX.MaxLength = 5;
             this.ntbMaxX.Name = "ntbMaxX";
-            this.ntbMaxX.Size = new System.Drawing.Size(64, 23);
+            this.ntbMaxX.Size = new System.Drawing.Size(64, 25);
             this.ntbMaxX.TabIndex = 6;
             this.ntbMaxX.Text = "0";
             this.ntbMaxX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -303,11 +296,10 @@
             this.ntbMinX.AllowSpace = false;
             this.ntbMinX.AllowString = false;
             this.ntbMinX.IsInteger = false;
-            this.ntbMinX.Location = new System.Drawing.Point(102, 32);
-            this.ntbMinX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ntbMinX.Location = new System.Drawing.Point(102, 38);
             this.ntbMinX.MaxLength = 5;
             this.ntbMinX.Name = "ntbMinX";
-            this.ntbMinX.Size = new System.Drawing.Size(64, 23);
+            this.ntbMinX.Size = new System.Drawing.Size(64, 25);
             this.ntbMinX.TabIndex = 4;
             this.ntbMinX.Text = "0";
             this.ntbMinX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -316,27 +308,27 @@
             // lblAxisX
             // 
             this.lblAxisX.AutoSize = true;
-            this.lblAxisX.Location = new System.Drawing.Point(5, 34);
+            this.lblAxisX.Location = new System.Drawing.Point(5, 41);
             this.lblAxisX.Name = "lblAxisX";
-            this.lblAxisX.Size = new System.Drawing.Size(82, 15);
+            this.lblAxisX.Size = new System.Drawing.Size(83, 18);
             this.lblAxisX.TabIndex = 2;
             this.lblAxisX.Text = "TXT_X_AXIS";
             // 
             // lblAxisY
             // 
             this.lblAxisY.AutoSize = true;
-            this.lblAxisY.Location = new System.Drawing.Point(5, 60);
+            this.lblAxisY.Location = new System.Drawing.Point(5, 72);
             this.lblAxisY.Name = "lblAxisY";
-            this.lblAxisY.Size = new System.Drawing.Size(82, 15);
+            this.lblAxisY.Size = new System.Drawing.Size(83, 18);
             this.lblAxisY.TabIndex = 8;
             this.lblAxisY.Text = "TXT_Y_AXIS";
             // 
             // frmGraphAxisSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(442, 190);
+            this.ClientSize = new System.Drawing.Size(442, 228);
             this.Controls.Add(this.lblAxisY);
             this.Controls.Add(this.lblAxisX);
             this.Controls.Add(this.label3);
@@ -360,8 +352,9 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblSign);
-            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("Meiryo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGraphAxisSetting";

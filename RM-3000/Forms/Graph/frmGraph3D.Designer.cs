@@ -36,21 +36,18 @@
             // 
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementHost1.Location = new System.Drawing.Point(0, 0);
-            this.elementHost1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(508, 412);
+            this.elementHost1.Size = new System.Drawing.Size(475, 415);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.graph3DViewer;
             // 
             // frmGraph3D
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 412);
+            this.ClientSize = new System.Drawing.Size(475, 415);
             this.Controls.Add(this.elementHost1);
-            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGraph3D";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmGlaph3D";

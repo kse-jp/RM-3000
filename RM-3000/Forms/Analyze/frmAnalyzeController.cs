@@ -122,6 +122,11 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         private const int maxDataCount = 100000;
         /// <summary>
+        /// check loop 3D animation
+        /// </summary>
+        private bool isLoop3DAnimation = false;
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="log">ログ</param>
@@ -393,6 +398,14 @@ namespace RM_3000.Forms.Parts
             isStartAnimation = false;
             EnabledButton(true);
 
+        }
+        /// <summary>
+        /// Get/Set Loop 3D animation
+        /// </summary>
+        public bool Loop3DAnimation
+        {
+            get { return isLoop3DAnimation; }
+            set { isLoop3DAnimation = value; }
         }
 
         /// <summary>
@@ -1506,10 +1519,21 @@ namespace RM_3000.Forms.Parts
         /// <param name="duration"></param>
         private void frmGraph3D_OnAnimationCompleted(double duration)
         {
-            if (trackMain.Value != trackMain.Maximum)
+
+            if (!this.isLoop3DAnimation)
             {
-                this.Clear3DGraphData();
-                trackMain.Value++;
+                if (trackMain.Value != trackMain.Maximum)
+                {
+                    this.Clear3DGraphData();
+                    trackMain.Value++;
+                }
+            }
+            else
+            {
+                if (!this.bw3Dgraph.IsBusy)
+                {
+                    this.bw3Dgraph.RunWorkerAsync();
+                }
             }
         }
 

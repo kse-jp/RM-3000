@@ -55,6 +55,11 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         List<Image> imageList1 = new List<Image>();
 
+        /// <summary>
+        /// systemconfig
+        /// </summary>
+        CommonLib.SystemConfig systemconfig = null;
+
 
         /// <summary>
         /// Constructor
@@ -215,6 +220,18 @@ namespace RM_3000.Forms.Parts
                 AppResource.SetControlsText(this);
                 EnableControlStatus(this.controlState);
                 this.trackSpeed.Value = 5;
+                this.systemconfig = new SystemConfig();
+                systemconfig.LoadXmlFile();
+
+                string[] rval = systemconfig.ValueRate_3D_R.ToString().Split('.');
+
+                if (rval != null && rval.Length == 2)
+                {
+                    ddlOnePlaces.SelectedItem = rval[0];
+                    ddlDecimal.SelectedItem = rval[1];
+                }
+
+
             }
             catch (Exception ex)
             {
@@ -270,6 +287,8 @@ namespace RM_3000.Forms.Parts
                     this.btnBack.Enabled = true;
                     this.btnGain.Enabled = true;
                     this.tstrip3DGraph.Enabled = true;
+                    this.ddlDecimal.Enabled = true;
+                    this.ddlOnePlaces.Enabled = true;
                     break;
                 case ControlState.Start:
                     this.btnStart.Enabled = false;
@@ -277,6 +296,8 @@ namespace RM_3000.Forms.Parts
                     this.btnBack.Enabled = false;
                     this.btnGain.Enabled = false;
                     this.tstrip3DGraph.Enabled = false;
+                    this.ddlDecimal.Enabled = false;
+                    this.ddlOnePlaces.Enabled = false;
                     break;
                 case ControlState.DisableAll:
                     this.btnStart.Enabled = false;
@@ -284,6 +305,8 @@ namespace RM_3000.Forms.Parts
                     this.btnBack.Enabled = false;
                     this.btnGain.Enabled = false;
                     this.tstrip3DGraph.Enabled = false;
+                    this.ddlDecimal.Enabled = false;
+                    this.ddlOnePlaces.Enabled = false;
                     break;
             }
         }
@@ -300,6 +323,30 @@ namespace RM_3000.Forms.Parts
                 ContorolButtonImageInit();
                 picStart.Image = imageList1[(int)picStart.Tag + 1];
                 Application.DoEvents();
+
+
+                decimal rval = Convert.ToDecimal(ddlOnePlaces.SelectedItem + "." + ddlDecimal.SelectedItem);
+
+                if (rval != this.systemconfig.ValueRate_3D_R)
+                {
+                    if (rval > 0)
+                    {
+                        this.systemconfig.ValueRate_3D_R = rval;
+                        this.systemconfig.SaveXmlFile();
+                        this.analyzeController.Set3DGraphRFactor();
+                    }
+                    else
+                    {
+                        string[] rvalold = systemconfig.ValueRate_3D_R.ToString().Split('.');
+
+                        if (rvalold != null && rvalold.Length == 2)
+                        {
+                            ddlOnePlaces.SelectedItem = rvalold[0];
+                            ddlDecimal.SelectedItem = rvalold[1];
+                        }
+                    }
+
+                }
 
                 EnableControlStatus(ControlState.DisableAll);
                 this.analyzeController.Start3DAnimation();
@@ -699,6 +746,9 @@ namespace RM_3000.Forms.Parts
             }
         }
         #endregion
+
+
+
 
 
 

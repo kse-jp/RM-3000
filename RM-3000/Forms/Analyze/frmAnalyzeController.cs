@@ -380,6 +380,7 @@ namespace RM_3000.Forms.Parts
             bw3Dgraph.RunWorkerAsync();
             isStartAnimation = true;
         }
+
         /// <summary>
         /// 3Dアニメーション停止
         /// </summary>
@@ -398,6 +399,25 @@ namespace RM_3000.Forms.Parts
             isStartAnimation = false;
             EnabledButton(true);
 
+        }
+
+        /// <summary>
+        /// 3D Setting R factor
+        /// </summary>
+        public void Set3DGraphRFactor()
+        {
+            // 自動アニメーション用スレッド停止
+            for (int i = 0; i < this.graph3DList.Count; i++)
+            {
+                if (this.graph3DList[i] != null)
+                {
+                    this.graph3DList[i].SetRFactor();
+
+                    this.graph3DList[i].ClearData();
+                    this.graph3DList[i].SetData(this.dataList[0].ToArray());
+                    //this.graph3DList[i].CreateAnimation();
+                }
+            }
         }
         /// <summary>
         /// Get/Set Loop 3D animation
@@ -1097,6 +1117,11 @@ namespace RM_3000.Forms.Parts
                 {
                     this.bw3Dgraph.RunWorkerAsync();
                 }
+                else
+                {
+                    this.bw3Dgraph.CancelAsync();
+                    this.bw3Dgraph.RunWorkerAsync();
+                }
 
 
             }
@@ -1530,8 +1555,15 @@ namespace RM_3000.Forms.Parts
             }
             else
             {
+                Clear3DGraphData();
+                SetDataToGraph3D();
                 if (!this.bw3Dgraph.IsBusy)
                 {
+                    this.bw3Dgraph.RunWorkerAsync();
+                }
+                else
+                {
+                    this.bw3Dgraph.CancelAsync();
                     this.bw3Dgraph.RunWorkerAsync();
                 }
             }

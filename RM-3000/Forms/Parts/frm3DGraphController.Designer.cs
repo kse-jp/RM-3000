@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm3DGraphController));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ddlDecimal = new System.Windows.Forms.ComboBox();
+            this.ddlOnePlaces = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picShow = new System.Windows.Forms.PictureBox();
             this.picHide = new System.Windows.Forms.PictureBox();
@@ -63,6 +68,7 @@
             this.toolStripBtnLeft = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRight = new System.Windows.Forms.ToolStripButton();
             this.pnlMain.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).BeginInit();
@@ -80,6 +86,7 @@
             // pnlMain
             // 
             this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMain.Controls.Add(this.panel3);
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlAnimation);
             this.pnlMain.Controls.Add(this.pnlHeader);
@@ -87,8 +94,78 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(571, 160);
+            this.pnlMain.Size = new System.Drawing.Size(731, 160);
             this.pnlMain.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.ddlDecimal);
+            this.panel3.Controls.Add(this.ddlOnePlaces);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(561, 25);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(164, 131);
+            this.panel3.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(73, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = ".";
+            // 
+            // ddlDecimal
+            // 
+            this.ddlDecimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlDecimal.FormattingEnabled = true;
+            this.ddlDecimal.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.ddlDecimal.Location = new System.Drawing.Point(88, 34);
+            this.ddlDecimal.Margin = new System.Windows.Forms.Padding(0);
+            this.ddlDecimal.Name = "ddlDecimal";
+            this.ddlDecimal.Size = new System.Drawing.Size(47, 23);
+            this.ddlDecimal.TabIndex = 5;
+            // 
+            // ddlOnePlaces
+            // 
+            this.ddlOnePlaces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlOnePlaces.FormattingEnabled = true;
+            this.ddlOnePlaces.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.ddlOnePlaces.Location = new System.Drawing.Point(26, 34);
+            this.ddlOnePlaces.Margin = new System.Windows.Forms.Padding(0);
+            this.ddlOnePlaces.Name = "ddlOnePlaces";
+            this.ddlOnePlaces.Size = new System.Drawing.Size(47, 23);
+            this.ddlOnePlaces.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "TXT_R_FACTOR";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -377,13 +454,13 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(569, 22);
+            this.pnlHeader.Size = new System.Drawing.Size(729, 22);
             this.pnlHeader.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Location = new System.Drawing.Point(544, 0);
+            this.btnClose.Location = new System.Drawing.Point(704, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(25, 22);
@@ -398,7 +475,7 @@
             this.lblGraphMenu.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblGraphMenu.Location = new System.Drawing.Point(0, 0);
             this.lblGraphMenu.Name = "lblGraphMenu";
-            this.lblGraphMenu.Size = new System.Drawing.Size(569, 22);
+            this.lblGraphMenu.Size = new System.Drawing.Size(729, 22);
             this.lblGraphMenu.TabIndex = 0;
             this.lblGraphMenu.Text = "TXT_GRAPH_MENU_3D";
             this.lblGraphMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -481,7 +558,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 160);
+            this.ClientSize = new System.Drawing.Size(731, 160);
             this.Controls.Add(this.pnlMain);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -491,6 +568,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm3DGraphController_FormClosing);
             this.Load += new System.EventHandler(this.frm3DGraphController_Load);
             this.pnlMain.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).EndInit();
@@ -544,6 +622,11 @@
         private System.Windows.Forms.PictureBox picStart;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox chkLoop;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox ddlDecimal;
+        private System.Windows.Forms.ComboBox ddlOnePlaces;
+        private System.Windows.Forms.Label label1;
 
     }
 }

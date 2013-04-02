@@ -1248,4 +1248,8 @@ Please change a condition, and measure it again.
 Emergency shutdown.</value>
     <comment>測定を緊急停止します。</comment>
   </data>
+  <data name="TXT_R_FACTOR" xml:space="preserve">
+    <value>R Factor</value>
+    <comment>R Factor</comment>
+  </data>
 </root>

@@ -1096,7 +1096,7 @@ namespace GraphLib
                     this.SelectLanguage = LanguageMode.Japanese;
 
                     ResourceManager resmanager = new ResourceManager(typeof(global::GraphLib.Properties.Resources));
-                    ExpPanel.Header = resmanager.GetString("extLegend", _CultureInfo);                   
+                    ExpPanel.Header = resmanager.GetString("extLegend", _CultureInfo);
                 }
             }
             catch (Exception ex)
@@ -2125,7 +2125,11 @@ namespace GraphLib
                             ((Button)gridcanvas.Children[4]).Click -= new RoutedEventHandler(this.BtnZoomInX_Click);
                             ((Button)gridcanvas.Children[5]).Click -= new RoutedEventHandler(this.BtnZoomOutX_Click);
                             ((Button)gridcanvas.Children[6]).Click -= new RoutedEventHandler(this.BtnZoomInY_Click);
+                            ((Button)gridcanvas.Children[6]).PreviewMouseLeftButtonUp -= new MouseButtonEventHandler(this.BtnZoomInY_MouseUp);
+                            ((Button)gridcanvas.Children[6]).PreviewMouseLeftButtonDown -= new MouseButtonEventHandler(this.BtnZoomInY_MouseDown);
                             ((Button)gridcanvas.Children[7]).Click -= new RoutedEventHandler(this.BtnZoomOutY_Click);
+                            ((Button)gridcanvas.Children[7]).PreviewMouseLeftButtonUp -= new MouseButtonEventHandler(this.BtnZoomOutY_MouseUp);
+                            ((Button)gridcanvas.Children[7]).PreviewMouseLeftButtonDown -= new MouseButtonEventHandler(this.BtnZoomOutY_MouseDown);
                             ((Button)gridcanvas.Children[8]).Click -= new RoutedEventHandler(this.BtnMeasureX_Click);
                             ((Button)gridcanvas.Children[9]).Click -= new RoutedEventHandler(this.BtnMeasureY_Click);
                             ((Button)gridcanvas.Children[10]).Click -= new RoutedEventHandler(this.BtnMeasureY2_Click);
@@ -2155,7 +2159,11 @@ namespace GraphLib
                         graphGridLine.ButtonZoomInX.Click += new RoutedEventHandler(this.BtnZoomInX_Click);
                         graphGridLine.ButtonZoomOutX.Click += new RoutedEventHandler(this.BtnZoomOutX_Click);
                         graphGridLine.ButtonZoomInY.Click += new RoutedEventHandler(this.BtnZoomInY_Click);
+                        graphGridLine.ButtonZoomInY.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(this.BtnZoomInY_MouseDown);
+                        graphGridLine.ButtonZoomInY.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(this.BtnZoomInY_MouseUp);
                         graphGridLine.ButtonZoomOutY.Click += new RoutedEventHandler(this.BtnZoomOutY_Click);
+                        graphGridLine.ButtonZoomOutY.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(this.BtnZoomOutY_MouseDown);
+                        graphGridLine.ButtonZoomOutY.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(this.BtnZoomOutY_MouseUp);
 
                         if (_IsAxisXZoomEnable)
                         {
@@ -2504,6 +2512,55 @@ namespace GraphLib
                 _Log4NetClass.ShowError(ex.ToString(), "BtnZoomOutX_Click");
             }
         }
+
+        /// <summary>
+        /// BtnZoomInY_MouseUp 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnZoomInY_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+                ShowButtonZoom(btn, true, false);
+        }
+
+        /// <summary>
+        /// BtnZoomInY_MouseDown
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnZoomInY_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+                ShowButtonZoom(btn, true, true);
+        }
+
+        /// <summary>
+        /// BtnZoomOutY_MouseUp
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnZoomOutY_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+                ShowButtonZoom(btn, false, false);
+        }
+
+        /// <summary>
+        /// BtnZoomOutY_MouseDown
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnZoomOutY_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+                ShowButtonZoom(btn, false, true);
+        }
+
         /// <summary>
         /// BtnZoomInY_Click
         /// </summary>
@@ -3528,8 +3585,7 @@ namespace GraphLib
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void
-            Grid_MouseUp(object sender, MouseButtonEventArgs e)
+        private void Grid_MouseUp(object sender, MouseButtonEventArgs e)
         {
             try
             {
@@ -4527,6 +4583,36 @@ namespace GraphLib
                     imgname = imgprefix + axis + "On";
                 else
                     imgname = imgprefix + axis + "Off";
+
+                button.Background = new ImageBrush((ImageSource)resource[imgname]);
+            }
+        }
+
+        /// <summary>
+        /// ShowButtonZoom 
+        /// </summary>
+        /// <param name="button">button</param>
+        /// <param name="isZoomIn">Zoom in/out</param>
+        /// <param name="isOn">if on or off</param>
+        private void ShowButtonZoom(Button button, bool isZoomIn, bool isOn)
+        {
+            string imgname = string.Empty;
+
+            if (button != null)
+            {
+                ResourceDictionary resource = new ResourceDictionary();
+                resource.Source = new Uri("/GraphLib;component/Resource.xaml",
+                                     UriKind.RelativeOrAbsolute);
+
+                if (isZoomIn)
+                    imgname = "ImgZoomIn_";
+                else
+                    imgname = "ImgZoomOut_";
+
+                if (isOn)
+                    imgname = imgname + "ON";
+                else
+                    imgname = imgname + "OFF";
 
                 button.Background = new ImageBrush((ImageSource)resource[imgname]);
             }

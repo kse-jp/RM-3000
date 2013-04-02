@@ -1167,7 +1167,7 @@ namespace RM_3000.Forms.Graph
                 graphinfo.GraphMode = GraphLib.GraphMode.Normal;
             graphinfo.StartDateTime = dt;
             graphinfo.DateTimeFormat = "mm:ss.ff";
-            graphinfo.IsLineGraph = false;
+            graphinfo.IsLineGraph = (this.IsMeasure) ? true : false;
             graphinfo.ShowDateTimeAxisX = false;
             graphinfo.ShowValueLabelX = !this.IsMeasure || SystemSetting.SystemConfig.IsDebugMode;
             graphinfo.ShowValueLabelY = true;
@@ -1192,7 +1192,7 @@ namespace RM_3000.Forms.Graph
                     chinfo.IsEnabled = true;
                     graphinfo.ChannelInfos.Add(chinfo);
                 }
-            }            
+            }
             graphinfo.MaxChannel = graphinfo.ChannelInfos.Count;
 
             this.GraphInfo = graphinfo;
@@ -1255,7 +1255,7 @@ namespace RM_3000.Forms.Graph
                     chinfo.IsEnabled = true;
                     graphinfo.ChannelInfos.Add(chinfo);
                 }
-            }            
+            }
             graphinfo.MaxChannel = graphinfo.ChannelInfos.Count;
 
             this.GraphInfo = graphinfo;
@@ -1303,7 +1303,7 @@ namespace RM_3000.Forms.Graph
 
             graphinfo.StartDateTime = dt;
             graphinfo.DateTimeFormat = "ss.ffff";
-            graphinfo.IsLineGraph = false;
+            graphinfo.IsLineGraph = (this.IsMeasure) ? true : false;
             graphinfo.ShowDateTimeAxisX = false;
             graphinfo.ShowValueLabelX = !this.IsMeasure || SystemSetting.SystemConfig.IsDebugMode;
             graphinfo.ShowValueLabelY = true;
@@ -1424,6 +1424,6 @@ namespace RM_3000.Forms.Graph
 
         #endregion
 
-        
+
     }
 }

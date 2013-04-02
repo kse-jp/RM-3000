@@ -174,14 +174,14 @@ namespace RM_3000.Forms.Parts
             }
             set
             {
-                this.controlState = value;
+                this.controlState = value;               
             }
         }
 
-
+  
         #endregion
 
-        #region private method
+        #region private method       
         /// <summary>
         /// Error Message
         /// </summary>
@@ -212,9 +212,9 @@ namespace RM_3000.Forms.Parts
 
             try
             {
-                AppResource.SetControlsText(this);
+                AppResource.SetControlsText(this);                
                 EnableControlStatus(this.controlState);
-                this.trackSpeed.Value = 5;
+                this.trackSpeed.Value = 5;                
             }
             catch (Exception ex)
             {
@@ -229,8 +229,8 @@ namespace RM_3000.Forms.Parts
             ContorolButtonImageInit();
 
             //Set Stripper show picture and flag as "Show" at default
-            this.picShow.Image = imageList1[(int)picShow.Tag + 1];
-            this.isHideStripper = false;
+           this.picShow.Image = imageList1[(int)picShow.Tag + 1];
+           this.isHideStripper = false;
 
         }
         /// <summary>
@@ -425,7 +425,7 @@ namespace RM_3000.Forms.Parts
             {
                 isHideStripper = true;
                 SetHideStripper(isHideStripper);
-
+                
             }
             catch (Exception ex)
             {
@@ -539,8 +539,8 @@ namespace RM_3000.Forms.Parts
                     }
                     else if (trackval < 5)
                     {
-                        speedval = (((double)trackval * 2) / 10);
-                        this.lblSpeed.Text = speedval.ToString();
+                        speedval =(((double)trackval * 2) / 10);
+                        this.lblSpeed.Text = speedval.ToString(); 
                         this.graph3DList[i].SetSpeed(speedval);
                     }
                     else if (trackval > 5)
@@ -647,26 +647,22 @@ namespace RM_3000.Forms.Parts
         private void picStop_Click(object sender, EventArgs e)
         {
             if (btnStop.Enabled)
-                btnStop_Click(btnStop, e);
+                btnStop_Click(btnStop,e);
 
         }
 
         private void picBack_Click(object sender, EventArgs e)
         {
             if (btnBack.Enabled)
-                btnBack_Click(btnBack, e);
+                btnBack_Click(btnBack,e);
 
         }
 
         private void picGain_Click(object sender, EventArgs e)
         {
             if (btnGain.Enabled)
-                btnGain_Click(btnGain, e);
-        }
+                btnGain_Click(btnGain,e);
 
-        private void chkLoop_Click(object sender, EventArgs e)
-        {
-            this.analyzeController.Loop3DAnimation = chkLoop.Checked;
         }
 
         /// <summary>
@@ -699,10 +695,6 @@ namespace RM_3000.Forms.Parts
             }
         }
         #endregion
-
-
-
-
 
     }
 }

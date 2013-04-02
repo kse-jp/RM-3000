@@ -261,6 +261,16 @@ namespace RM_3000.Forms.Settings
             int index = 0;
             try
             {
+                //revolution tag
+                dgvRotation.Rows.Clear();
+                if (this.selectedRotation != null || this.selectedRotation.TagNo != -1)
+                {
+                    dgvRotation.Rows.Add(new string[] { selectedRotation.GetSystemTagName(), selectedRotation.GetSystemUnit(), selectedRotation.TagNo.ToString() });
+                }
+                else
+                {
+                    dgvRotation.Rows.Add(new string[] { "---", "---", "-1" });
+                }
                 dgvBoardChannel.Rows.Clear();
                 {
                     //int k = 0;
@@ -278,7 +288,7 @@ namespace RM_3000.Forms.Settings
                             kind = (int)this.chSetting.ChannelSettingList[index - 1].ChKind;
                         }
 
-                        if (kind == 2)
+                        if (kind == (int)ChannelKindType.R)
                         {
                             if (tag != null)
                             {
@@ -363,11 +373,15 @@ namespace RM_3000.Forms.Settings
                         {
                             lblSelectedPatternFile.Text = f.SelectedPatternFile;
                             var pt = f.SelectedPatternData;
-                            for (int i = 0; i < 10; i++)
+                            //set revolution tag
+                            this.selectedRotation = FindDataTag(pt.RelationSetting.RelationList[0].TagNo_1);
+
+                            for (int i = 1; i <= 10; i++)
                             {
-                                this.selectedTagArray[i] = FindDataTag(pt.RelationSetting.RelationList[i].TagNo_1);
-                                this.selectedTagSecond[i] = FindDataTag(pt.RelationSetting.RelationList[i].TagNo_2);
+                                this.selectedTagArray[i - 1] = FindDataTag(pt.RelationSetting.RelationList[i].TagNo_1);
+                                this.selectedTagSecond[i - 1] = FindDataTag(pt.RelationSetting.RelationList[i].TagNo_2);
                             }
+                            
                             //compare current ChannelSetting to loaded ChannelSetting
                             if (this.chSetting != null)
                             {
@@ -448,6 +462,12 @@ namespace RM_3000.Forms.Settings
             string tagNo = string.Empty;
             try
             {
+                //if (this.chSetting.ChannelSettingList[dgvBoardChannel.CurrentCell.RowIndex].ChKind == ChannelKindType.N)
+                if(this.dgvBoardChannel[1,dgvBoardChannel.CurrentCell.RowIndex].Value.ToString().Equals("---"))
+                {
+                    ShowErrorMessage(AppResource.GetString("MSG_Can't_assign_to_board_type_N"));
+                    return;
+                }
                 if (selectedRotation != null)
                 {
                     if (this.setting.DataTagList[dgvDataTag.CurrentCell.RowIndex].TagNo == selectedRotation.TagNo)

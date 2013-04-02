@@ -122,6 +122,11 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         private const int maxDataCount = 100000;
         /// <summary>
+        /// check loop 3D animation
+        /// </summary>
+        private bool isLoop3DAnimation = false;
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="log">ログ</param>
@@ -375,6 +380,7 @@ namespace RM_3000.Forms.Parts
             bw3Dgraph.RunWorkerAsync();
             isStartAnimation = true;
         }
+
         /// <summary>
         /// 3Dアニメーション停止
         /// </summary>
@@ -393,6 +399,33 @@ namespace RM_3000.Forms.Parts
             isStartAnimation = false;
             EnabledButton(true);
 
+        }
+
+        /// <summary>
+        /// 3D Setting R factor
+        /// </summary>
+        public void Set3DGraphRFactor()
+        {
+            // 自動アニメーション用スレッド停止
+            for (int i = 0; i < this.graph3DList.Count; i++)
+            {
+                if (this.graph3DList[i] != null)
+                {
+                    this.graph3DList[i].SetRFactor();
+
+                    this.graph3DList[i].ClearData();
+                    this.graph3DList[i].SetData(this.dataList[0].ToArray());
+                    //this.graph3DList[i].CreateAnimation();
+                }
+            }
+        }
+        /// <summary>
+        /// Get/Set Loop 3D animation
+        /// </summary>
+        public bool Loop3DAnimation
+        {
+            get { return isLoop3DAnimation; }
+            set { isLoop3DAnimation = value; }
         }
 
         /// <summary>
@@ -1084,6 +1117,11 @@ namespace RM_3000.Forms.Parts
                 {
                     this.bw3Dgraph.RunWorkerAsync();
                 }
+                else
+                {
+                    this.bw3Dgraph.CancelAsync();
+                    this.bw3Dgraph.RunWorkerAsync();
+                }
 
 
             }
@@ -1506,10 +1544,28 @@ namespace RM_3000.Forms.Parts
         /// <param name="duration"></param>
         private void frmGraph3D_OnAnimationCompleted(double duration)
         {
-            if (trackMain.Value != trackMain.Maximum)
+
+            if (!this.isLoop3DAnimation)
             {
-                this.Clear3DGraphData();
-                trackMain.Value++;
+                if (trackMain.Value != trackMain.Maximum)
+                {
+                    this.Clear3DGraphData();
+                    trackMain.Value++;
+                }
+            }
+            else
+            {
+                Clear3DGraphData();
+                SetDataToGraph3D();
+                if (!this.bw3Dgraph.IsBusy)
+                {
+                    this.bw3Dgraph.RunWorkerAsync();
+                }
+                else
+                {
+                    this.bw3Dgraph.CancelAsync();
+                    this.bw3Dgraph.RunWorkerAsync();
+                }
             }
         }
 

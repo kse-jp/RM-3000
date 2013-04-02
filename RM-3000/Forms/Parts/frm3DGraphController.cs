@@ -55,6 +55,11 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         List<Image> imageList1 = new List<Image>();
 
+        /// <summary>
+        /// systemconfig
+        /// </summary>
+        CommonLib.SystemConfig systemconfig = null;
+
 
         /// <summary>
         /// Constructor
@@ -174,14 +179,14 @@ namespace RM_3000.Forms.Parts
             }
             set
             {
-                this.controlState = value;               
+                this.controlState = value;
             }
         }
 
-  
+
         #endregion
 
-        #region private method       
+        #region private method
         /// <summary>
         /// Error Message
         /// </summary>
@@ -212,9 +217,21 @@ namespace RM_3000.Forms.Parts
 
             try
             {
-                AppResource.SetControlsText(this);                
+                AppResource.SetControlsText(this);
                 EnableControlStatus(this.controlState);
-                this.trackSpeed.Value = 5;                
+                this.trackSpeed.Value = 5;
+                this.systemconfig = new SystemConfig();
+                systemconfig.LoadXmlFile();
+
+                string[] rval = systemconfig.ValueRate_3D_R.ToString().Split('.');
+
+                if (rval != null && rval.Length == 2)
+                {
+                    ddlOnePlaces.SelectedItem = rval[0];
+                    ddlDecimal.SelectedItem = rval[1];
+                }
+
+
             }
             catch (Exception ex)
             {
@@ -229,8 +246,8 @@ namespace RM_3000.Forms.Parts
             ContorolButtonImageInit();
 
             //Set Stripper show picture and flag as "Show" at default
-           this.picShow.Image = imageList1[(int)picShow.Tag + 1];
-           this.isHideStripper = false;
+            this.picShow.Image = imageList1[(int)picShow.Tag + 1];
+            this.isHideStripper = false;
 
         }
         /// <summary>
@@ -270,6 +287,8 @@ namespace RM_3000.Forms.Parts
                     this.btnBack.Enabled = true;
                     this.btnGain.Enabled = true;
                     this.tstrip3DGraph.Enabled = true;
+                    this.ddlDecimal.Enabled = true;
+                    this.ddlOnePlaces.Enabled = true;
                     break;
                 case ControlState.Start:
                     this.btnStart.Enabled = false;
@@ -277,6 +296,8 @@ namespace RM_3000.Forms.Parts
                     this.btnBack.Enabled = false;
                     this.btnGain.Enabled = false;
                     this.tstrip3DGraph.Enabled = false;
+                    this.ddlDecimal.Enabled = false;
+                    this.ddlOnePlaces.Enabled = false;
                     break;
                 case ControlState.DisableAll:
                     this.btnStart.Enabled = false;
@@ -284,6 +305,8 @@ namespace RM_3000.Forms.Parts
                     this.btnBack.Enabled = false;
                     this.btnGain.Enabled = false;
                     this.tstrip3DGraph.Enabled = false;
+                    this.ddlDecimal.Enabled = false;
+                    this.ddlOnePlaces.Enabled = false;
                     break;
             }
         }
@@ -300,6 +323,30 @@ namespace RM_3000.Forms.Parts
                 ContorolButtonImageInit();
                 picStart.Image = imageList1[(int)picStart.Tag + 1];
                 Application.DoEvents();
+
+
+                decimal rval = Convert.ToDecimal(ddlOnePlaces.SelectedItem + "." + ddlDecimal.SelectedItem);
+
+                if (rval != this.systemconfig.ValueRate_3D_R)
+                {
+                    if (rval > 0)
+                    {
+                        this.systemconfig.ValueRate_3D_R = rval;
+                        this.systemconfig.SaveXmlFile();
+                        this.analyzeController.Set3DGraphRFactor();
+                    }
+                    else
+                    {
+                        string[] rvalold = systemconfig.ValueRate_3D_R.ToString().Split('.');
+
+                        if (rvalold != null && rvalold.Length == 2)
+                        {
+                            ddlOnePlaces.SelectedItem = rvalold[0];
+                            ddlDecimal.SelectedItem = rvalold[1];
+                        }
+                    }
+
+                }
 
                 EnableControlStatus(ControlState.DisableAll);
                 this.analyzeController.Start3DAnimation();
@@ -425,7 +472,7 @@ namespace RM_3000.Forms.Parts
             {
                 isHideStripper = true;
                 SetHideStripper(isHideStripper);
-                
+
             }
             catch (Exception ex)
             {
@@ -539,8 +586,8 @@ namespace RM_3000.Forms.Parts
                     }
                     else if (trackval < 5)
                     {
-                        speedval =(((double)trackval * 2) / 10);
-                        this.lblSpeed.Text = speedval.ToString(); 
+                        speedval = (((double)trackval * 2) / 10);
+                        this.lblSpeed.Text = speedval.ToString();
                         this.graph3DList[i].SetSpeed(speedval);
                     }
                     else if (trackval > 5)
@@ -647,22 +694,26 @@ namespace RM_3000.Forms.Parts
         private void picStop_Click(object sender, EventArgs e)
         {
             if (btnStop.Enabled)
-                btnStop_Click(btnStop,e);
+                btnStop_Click(btnStop, e);
 
         }
 
         private void picBack_Click(object sender, EventArgs e)
         {
             if (btnBack.Enabled)
-                btnBack_Click(btnBack,e);
+                btnBack_Click(btnBack, e);
 
         }
 
         private void picGain_Click(object sender, EventArgs e)
         {
             if (btnGain.Enabled)
-                btnGain_Click(btnGain,e);
+                btnGain_Click(btnGain, e);
+        }
 
+        private void chkLoop_Click(object sender, EventArgs e)
+        {
+            this.analyzeController.Loop3DAnimation = chkLoop.Checked;
         }
 
         /// <summary>
@@ -695,6 +746,13 @@ namespace RM_3000.Forms.Parts
             }
         }
         #endregion
+
+
+
+
+
+
+
 
     }
 }

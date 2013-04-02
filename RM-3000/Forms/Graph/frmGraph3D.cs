@@ -260,6 +260,28 @@ namespace RM_3000.Forms.Graph
         {
             this.graph3DViewer.RotationByAngle(wayType, rotateAngle);
         }
+        /// <summary>
+        /// Set R Factor
+        /// </summary>
+        public void SetRFactor()
+        {
+            var graphinf = this.graph3DViewer.GraphInfo;
+            // Set high/low of sensors
+            var sensorsHighValues = new double[10];
+            for (int i = 0; i < sensorsHighValues.Length; i++)
+            {
+
+                SystemSetting.SystemConfig.LoadXmlFile();
+                if (this.AnalyzeData.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.B)
+                    sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_B;
+                else if (this.AnalyzeData.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.R)
+                    sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_R * (double)SystemSetting.SystemConfig.ValueRate_3D_R;
+                else
+                    sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_B;
+            }
+            graphinf.SensorHighValues = sensorsHighValues;
+            this.graph3DViewer.GraphInfo = graphinf;                        
+        }
         #endregion
 
         #region private method
@@ -380,8 +402,7 @@ namespace RM_3000.Forms.Graph
                     if (this.AnalyzeData.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.B)
                         sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_B;
                     else if (this.AnalyzeData.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.R)
-                        sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_R / (double)SystemSetting.SystemConfig.ValueRate_3D_R;
-                    //sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_R * (double)SystemSetting.SystemConfig.ValueRate_3D_R;
+                        sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_R * (double)SystemSetting.SystemConfig.ValueRate_3D_R;
                     else
                         sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_B;
 #endif

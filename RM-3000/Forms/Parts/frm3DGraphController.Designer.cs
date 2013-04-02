@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm3DGraphController));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ddlDecimal = new System.Windows.Forms.ComboBox();
+            this.ddlOnePlaces = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picShow = new System.Windows.Forms.PictureBox();
             this.picHide = new System.Windows.Forms.PictureBox();
@@ -40,11 +45,12 @@
             this.btnHide = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlAnimation = new System.Windows.Forms.Panel();
+            this.chkLoop = new System.Windows.Forms.CheckBox();
+            this.picStart = new System.Windows.Forms.PictureBox();
             this.picGain = new System.Windows.Forms.PictureBox();
             this.picBack = new System.Windows.Forms.PictureBox();
             this.picStop = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.picStart = new System.Windows.Forms.PictureBox();
             this.btnGain = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblSpeed = new System.Windows.Forms.Label();
@@ -62,14 +68,15 @@
             this.toolStripBtnLeft = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRight = new System.Windows.Forms.ToolStripButton();
             this.pnlMain.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).BeginInit();
             this.pnlAnimation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +86,7 @@
             // pnlMain
             // 
             this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMain.Controls.Add(this.panel3);
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlAnimation);
             this.pnlMain.Controls.Add(this.pnlHeader);
@@ -86,8 +94,78 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(571, 160);
+            this.pnlMain.Size = new System.Drawing.Size(731, 160);
             this.pnlMain.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.ddlDecimal);
+            this.panel3.Controls.Add(this.ddlOnePlaces);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(561, 25);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(164, 131);
+            this.panel3.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(73, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = ".";
+            // 
+            // ddlDecimal
+            // 
+            this.ddlDecimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlDecimal.FormattingEnabled = true;
+            this.ddlDecimal.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.ddlDecimal.Location = new System.Drawing.Point(88, 34);
+            this.ddlDecimal.Margin = new System.Windows.Forms.Padding(0);
+            this.ddlDecimal.Name = "ddlDecimal";
+            this.ddlDecimal.Size = new System.Drawing.Size(47, 23);
+            this.ddlDecimal.TabIndex = 5;
+            // 
+            // ddlOnePlaces
+            // 
+            this.ddlOnePlaces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlOnePlaces.FormattingEnabled = true;
+            this.ddlOnePlaces.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.ddlOnePlaces.Location = new System.Drawing.Point(26, 34);
+            this.ddlOnePlaces.Margin = new System.Windows.Forms.Padding(0);
+            this.ddlOnePlaces.Name = "ddlOnePlaces";
+            this.ddlOnePlaces.Size = new System.Drawing.Size(47, 23);
+            this.ddlOnePlaces.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "TXT_R_FACTOR";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -130,6 +208,7 @@
             // 
             // btnLarge
             // 
+            this.btnLarge.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnLarge.Location = new System.Drawing.Point(184, 69);
             this.btnLarge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLarge.Name = "btnLarge";
@@ -142,6 +221,7 @@
             // 
             // btnMedium
             // 
+            this.btnMedium.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnMedium.Location = new System.Drawing.Point(98, 69);
             this.btnMedium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMedium.Name = "btnMedium";
@@ -154,6 +234,7 @@
             // 
             // btnSmall
             // 
+            this.btnSmall.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnSmall.Location = new System.Drawing.Point(12, 69);
             this.btnSmall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSmall.Name = "btnSmall";
@@ -166,6 +247,7 @@
             // 
             // btnShow
             // 
+            this.btnShow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnShow.Location = new System.Drawing.Point(163, 25);
             this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
@@ -189,6 +271,7 @@
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(273, 18);
@@ -199,11 +282,12 @@
             // pnlAnimation
             // 
             this.pnlAnimation.BackColor = System.Drawing.Color.Silver;
+            this.pnlAnimation.Controls.Add(this.chkLoop);
+            this.pnlAnimation.Controls.Add(this.picStart);
             this.pnlAnimation.Controls.Add(this.picGain);
             this.pnlAnimation.Controls.Add(this.picBack);
             this.pnlAnimation.Controls.Add(this.picStop);
             this.pnlAnimation.Controls.Add(this.label4);
-            this.pnlAnimation.Controls.Add(this.picStart);
             this.pnlAnimation.Controls.Add(this.btnGain);
             this.pnlAnimation.Controls.Add(this.btnBack);
             this.pnlAnimation.Controls.Add(this.lblSpeed);
@@ -216,6 +300,28 @@
             this.pnlAnimation.Name = "pnlAnimation";
             this.pnlAnimation.Size = new System.Drawing.Size(273, 131);
             this.pnlAnimation.TabIndex = 3;
+            // 
+            // chkLoop
+            // 
+            this.chkLoop.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkLoop.Location = new System.Drawing.Point(192, 14);
+            this.chkLoop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkLoop.Name = "chkLoop";
+            this.chkLoop.Size = new System.Drawing.Size(60, 50);
+            this.chkLoop.TabIndex = 18;
+            this.chkLoop.UseVisualStyleBackColor = true;
+            this.chkLoop.Click += new System.EventHandler(this.chkLoop_Click);
+            // 
+            // picStart
+            // 
+            this.picStart.Location = new System.Drawing.Point(18, 14);
+            this.picStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picStart.Name = "picStart";
+            this.picStart.Size = new System.Drawing.Size(60, 50);
+            this.picStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picStart.TabIndex = 13;
+            this.picStart.TabStop = false;
+            this.picStart.Click += new System.EventHandler(this.picStart_Click);
             // 
             // picGain
             // 
@@ -241,7 +347,7 @@
             // 
             // picStop
             // 
-            this.picStop.Location = new System.Drawing.Point(174, 15);
+            this.picStop.Location = new System.Drawing.Point(107, 14);
             this.picStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStop.Name = "picStop";
             this.picStop.Size = new System.Drawing.Size(60, 50);
@@ -253,23 +359,13 @@
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(273, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "TXT_ANIMATION_SETTING";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picStart
-            // 
-            this.picStart.Location = new System.Drawing.Point(40, 15);
-            this.picStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picStart.Name = "picStart";
-            this.picStart.Size = new System.Drawing.Size(60, 50);
-            this.picStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picStart.TabIndex = 13;
-            this.picStart.TabStop = false;
-            this.picStart.Click += new System.EventHandler(this.picStart_Click);
             // 
             // btnGain
             // 
@@ -297,7 +393,7 @@
             // 
             // lblSpeed
             // 
-            this.lblSpeed.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSpeed.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblSpeed.Location = new System.Drawing.Point(207, 63);
             this.lblSpeed.Name = "lblSpeed";
             this.lblSpeed.Size = new System.Drawing.Size(45, 22);
@@ -331,6 +427,7 @@
             // 
             // label2
             // 
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(3, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 22);
@@ -357,13 +454,13 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(569, 22);
+            this.pnlHeader.Size = new System.Drawing.Size(729, 22);
             this.pnlHeader.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Location = new System.Drawing.Point(544, 0);
+            this.btnClose.Location = new System.Drawing.Point(704, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(25, 22);
@@ -375,9 +472,10 @@
             // lblGraphMenu
             // 
             this.lblGraphMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblGraphMenu.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblGraphMenu.Location = new System.Drawing.Point(0, 0);
             this.lblGraphMenu.Name = "lblGraphMenu";
-            this.lblGraphMenu.Size = new System.Drawing.Size(569, 22);
+            this.lblGraphMenu.Size = new System.Drawing.Size(729, 22);
             this.lblGraphMenu.TabIndex = 0;
             this.lblGraphMenu.Text = "TXT_GRAPH_MENU_3D";
             this.lblGraphMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -396,6 +494,7 @@
             // 
             this.tstrip3DGraph.AutoSize = false;
             this.tstrip3DGraph.Dock = System.Windows.Forms.DockStyle.None;
+            this.tstrip3DGraph.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tstrip3DGraph.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBtnFront,
             this.toolStripBtnBack,
@@ -411,6 +510,7 @@
             // 
             this.toolStripBtnFront.AutoSize = false;
             this.toolStripBtnFront.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripBtnFront.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripBtnFront.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnFront.Image")));
             this.toolStripBtnFront.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnFront.Name = "toolStripBtnFront";
@@ -422,6 +522,7 @@
             // 
             this.toolStripBtnBack.AutoSize = false;
             this.toolStripBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripBtnBack.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnBack.Image")));
             this.toolStripBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnBack.Name = "toolStripBtnBack";
@@ -433,6 +534,7 @@
             // 
             this.toolStripBtnLeft.AutoSize = false;
             this.toolStripBtnLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripBtnLeft.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripBtnLeft.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnLeft.Image")));
             this.toolStripBtnLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnLeft.Name = "toolStripBtnLeft";
@@ -444,6 +546,7 @@
             // 
             this.toolStripBtnRight.AutoSize = false;
             this.toolStripBtnRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripBtnRight.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripBtnRight.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnRight.Image")));
             this.toolStripBtnRight.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnRight.Name = "toolStripBtnRight";
@@ -455,7 +558,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 160);
+            this.ClientSize = new System.Drawing.Size(731, 160);
             this.Controls.Add(this.pnlMain);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -465,15 +568,16 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm3DGraphController_FormClosing);
             this.Load += new System.EventHandler(this.frm3DGraphController_Load);
             this.pnlMain.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).EndInit();
             this.pnlAnimation.ResumeLayout(false);
             this.pnlAnimation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -517,6 +621,12 @@
         private System.Windows.Forms.PictureBox picStop;
         private System.Windows.Forms.PictureBox picStart;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.CheckBox chkLoop;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox ddlDecimal;
+        private System.Windows.Forms.ComboBox ddlOnePlaces;
+        private System.Windows.Forms.Label label1;
 
     }
 }

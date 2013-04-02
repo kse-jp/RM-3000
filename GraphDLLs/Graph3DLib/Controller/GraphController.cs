@@ -365,11 +365,7 @@ namespace Graph3DLib.Controller
 
             _TranslateData = new List<TranslateData>[6];
             _UpperModelPositions = _MachineModel.UpperModelsPosition;
-            _SensorInfoX = new List<SensorPosition>[6];
-            _SensorInfoY = new List<SensorPosition>[6];
-            _SensorInfoZ = new List<SensorPosition>[6];
-            _SensorXOppositeArrays = new SensorOpposite[6];
-            _SensorZOppositeArrays = new SensorOpposite[6];
+            
             _DataScaleforEachObject = new double[6];
 
             _Tranform3DGroups = CreateTranform3DGroups();
@@ -389,7 +385,14 @@ namespace Graph3DLib.Controller
         {
             try
             {
+                _SensorInfoX = new List<SensorPosition>[6];
+                _SensorInfoY = new List<SensorPosition>[6];
+                _SensorInfoZ = new List<SensorPosition>[6];
+                _SensorXOppositeArrays = new SensorOpposite[6];
+                _SensorZOppositeArrays = new SensorOpposite[6];
+
                 SensorPosition[] sensorpos = _GraphInfo.SensorPositions;
+                
                 for (int i = 0; i < sensorpos.Length; i++)
                 {
                     if (sensorpos[i] != null)

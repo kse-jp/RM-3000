@@ -1287,4 +1287,8 @@ Please try restart agin.</comment>
 測定を緊急停止します。</value>
     <comment>測定を緊急停止します。</comment>
   </data>
+  <data name="TXT_R_FACTOR" xml:space="preserve">
+    <value>Rセンサー倍率</value>
+    <comment>Rセンサー倍率</comment>
+  </data>
 </root>

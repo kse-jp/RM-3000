@@ -2,20 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                    >
 
-    <BitmapImage x:Key="ImgZoomIn" UriSource="Icon/ZoomIn_OFF.png" />
-    <BitmapImage x:Key="ImgZoomOut" UriSource="Icon/ZoomOut_OFF.png" />
-    <BitmapImage x:Key="ImgZoomIn_ON" UriSource="Icon/ZoomIn_ON.png" />
-    <BitmapImage x:Key="ImgZoomOut_ON" UriSource="Icon/ZoomOut_ON.png" />
-    <BitmapImage x:Key="ImgZoomIn_OFF" UriSource="Icon/ZoomIn_OFF.png" />
-    <BitmapImage x:Key="ImgZoomOut_OFF" UriSource="Icon/ZoomOut_OFF.png" />
+    <BitmapImage x:Key="ImgZoomIn" UriSource="Icon/ZoomIn.gif" />
+    <BitmapImage x:Key="ImgZoomOut" UriSource="Icon/ZoomOut.gif" />
     <BitmapImage x:Key="ImgXOn" UriSource="Icon/X_ON.png" />
     <BitmapImage x:Key="ImgXOff" UriSource="Icon/X_OFF.png" />
     <BitmapImage x:Key="ImgYOn" UriSource="Icon/Y_ON.png" />
     <BitmapImage x:Key="ImgYOff" UriSource="Icon/Y_OFF.png" />
     <BitmapImage x:Key="ImgY2On" UriSource="Icon/Y2_ON.png" />
 
-  
-    
     <Style x:Key="MouseOverButtonStyle" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>

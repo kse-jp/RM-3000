@@ -48,9 +48,8 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(224, 80);
+            this.panel2.Size = new System.Drawing.Size(224, 67);
             this.panel2.TabIndex = 3;
             // 
             // panel4
@@ -59,18 +58,19 @@
             this.panel4.Controls.Add(this.lblSamplingPeriod);
             this.panel4.Controls.Add(this.lblSamplingRate);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 27);
+            this.panel4.Location = new System.Drawing.Point(0, 22);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 24);
+            this.panel4.Size = new System.Drawing.Size(222, 20);
             this.panel4.TabIndex = 6;
             // 
             // lblUnit
             // 
             this.lblUnit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblUnit.Font = new System.Drawing.Font("Meiryo", 9F);
+            this.lblUnit.Font = new System.Drawing.Font("メイリオ", 9F);
             this.lblUnit.Location = new System.Drawing.Point(172, 0);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(44, 24);
+            this.lblUnit.Size = new System.Drawing.Size(44, 20);
             this.lblUnit.TabIndex = 6;
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -79,7 +79,7 @@
             this.lblSamplingPeriod.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblSamplingPeriod.Location = new System.Drawing.Point(117, 0);
             this.lblSamplingPeriod.Name = "lblSamplingPeriod";
-            this.lblSamplingPeriod.Size = new System.Drawing.Size(55, 24);
+            this.lblSamplingPeriod.Size = new System.Drawing.Size(55, 20);
             this.lblSamplingPeriod.TabIndex = 5;
             this.lblSamplingPeriod.Text = "999999";
             this.lblSamplingPeriod.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -89,7 +89,7 @@
             this.lblSamplingRate.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblSamplingRate.Location = new System.Drawing.Point(0, 0);
             this.lblSamplingRate.Name = "lblSamplingRate";
-            this.lblSamplingRate.Size = new System.Drawing.Size(117, 24);
+            this.lblSamplingRate.Size = new System.Drawing.Size(117, 20);
             this.lblSamplingRate.TabIndex = 3;
             this.lblSamplingRate.Text = "TXT_SAMPLING_PERIOD";
             this.lblSamplingRate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,17 +101,18 @@
             this.panel1.Controls.Add(this.lblMeasurementInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 27);
+            this.panel1.Size = new System.Drawing.Size(222, 22);
             this.panel1.TabIndex = 1;
             // 
             // btnEnd
             // 
             this.btnEnd.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEnd.Location = new System.Drawing.Point(197, 0);
+            this.btnEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(25, 27);
+            this.btnEnd.Size = new System.Drawing.Size(25, 22);
             this.btnEnd.TabIndex = 1;
             this.btnEnd.Text = "×";
             this.btnEnd.UseVisualStyleBackColor = true;
@@ -122,20 +123,19 @@
             this.lblMeasurementInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMeasurementInfo.Location = new System.Drawing.Point(0, 0);
             this.lblMeasurementInfo.Name = "lblMeasurementInfo";
-            this.lblMeasurementInfo.Size = new System.Drawing.Size(222, 27);
+            this.lblMeasurementInfo.Size = new System.Drawing.Size(222, 22);
             this.lblMeasurementInfo.TabIndex = 0;
             this.lblMeasurementInfo.Text = "TXT_MEASUREMENT_INFO";
             this.lblMeasurementInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMeasureInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(224, 80);
+            this.ClientSize = new System.Drawing.Size(224, 67);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Meiryo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMeasureInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmMeasureInfo";

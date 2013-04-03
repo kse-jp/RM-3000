@@ -122,9 +122,17 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         private const int maxDataCount = 100000;
         /// <summary>
-        /// check loop 3D animation
+        /// check loop 3D animation One Shot
         /// </summary>
-        private bool isLoop3DAnimation = false;
+        private bool isLoop3DOneShot = false;
+        /// <summary>
+        /// check loop 3D animation All Shot
+        /// </summary>
+        private bool isLoop3DAllShot = false;
+        /// <summary>
+        /// check restart animation
+        /// </summary>
+        private bool isWorkerRestart = false;
 
         /// <summary>
         /// Constructor
@@ -414,18 +422,26 @@ namespace RM_3000.Forms.Parts
                     this.graph3DList[i].SetRFactor();
 
                     this.graph3DList[i].ClearData();
-                    this.graph3DList[i].SetData(this.dataList[0].ToArray());
-                    //this.graph3DList[i].CreateAnimation();
+                    this.graph3DList[i].SetData(this.dataList[0].ToArray());                   
                 }
             }
         }
         /// <summary>
-        /// Get/Set Loop 3D animation
+        /// Get/Set Loop 3D animation One Shot
         /// </summary>
-        public bool Loop3DAnimation
+        public bool Loop3DOneShot
         {
-            get { return isLoop3DAnimation; }
-            set { isLoop3DAnimation = value; }
+            get { return isLoop3DOneShot; }
+            set { isLoop3DOneShot = value; }
+        }
+
+        /// <summary>
+        /// Get/Set Loop 3D animation All Shot
+        /// </summary>
+        public bool Loop3DAllShot
+        {
+            get { return isLoop3DAllShot; }
+            set { isLoop3DAllShot = value; }
         }
 
         /// <summary>
@@ -681,6 +697,7 @@ namespace RM_3000.Forms.Parts
                         this.bw3Dgraph.WorkerSupportsCancellation = true;
                         this.bw3Dgraph.WorkerReportsProgress = false;
                         this.bw3Dgraph.DoWork += new DoWorkEventHandler(this.bw3DGraph_Animation);
+                        this.bw3Dgraph.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw3DGraph_WorkerCompleted);
 
                         // 3Dグラフへデータセット
                         if (this.dataList != null && this.dataList.Count > 0 && this.dataList[0] != null)
@@ -781,6 +798,7 @@ namespace RM_3000.Forms.Parts
                 if (bw3Dgraph.IsBusy)
                     bw3Dgraph.CancelAsync();
                 bw3Dgraph.DoWork -= bw3DGraph_Animation;
+                bw3Dgraph.RunWorkerCompleted -= bw3DGraph_WorkerCompleted;
                 bw3Dgraph.Dispose();
                 this.MdiParent.Resize -= frmAnalyzeMain_Resize;
 
@@ -1119,8 +1137,9 @@ namespace RM_3000.Forms.Parts
                 }
                 else
                 {
+                    isWorkerRestart = true;
                     this.bw3Dgraph.CancelAsync();
-                    this.bw3Dgraph.RunWorkerAsync();
+                    //    this.bw3Dgraph.RunWorkerAsync();
                 }
 
 
@@ -1513,6 +1532,20 @@ namespace RM_3000.Forms.Parts
         }
 
         /// <summary>
+        /// backgound worker completed (for restart animation)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bw3DGraph_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (isWorkerRestart)
+            {
+                isWorkerRestart = false;
+                bw3Dgraph.RunWorkerAsync();
+            }
+        }
+
+        /// <summary>
         /// backgound worker 3D Graph Animation
         /// </summary>
         /// <param name="sender"></param>
@@ -1535,7 +1568,7 @@ namespace RM_3000.Forms.Parts
                     if (this.isStartAnimation)
                         this.graph3DList[i].StartAnimation();
                 }
-            }
+            }           
         }
 
         /// <summary>
@@ -1545,12 +1578,17 @@ namespace RM_3000.Forms.Parts
         private void frmGraph3D_OnAnimationCompleted(double duration)
         {
 
-            if (!this.isLoop3DAnimation)
+            if (!this.isLoop3DOneShot)
             {
                 if (trackMain.Value != trackMain.Maximum)
                 {
                     this.Clear3DGraphData();
                     trackMain.Value++;
+                }
+                else if (this.isLoop3DAllShot)
+                {
+                    this.Clear3DGraphData();
+                    trackMain.Value = 0;
                 }
             }
             else
@@ -1563,8 +1601,8 @@ namespace RM_3000.Forms.Parts
                 }
                 else
                 {
-                    this.bw3Dgraph.CancelAsync();
-                    this.bw3Dgraph.RunWorkerAsync();
+                    isWorkerRestart = true;
+                    this.bw3Dgraph.CancelAsync();                  
                 }
             }
         }

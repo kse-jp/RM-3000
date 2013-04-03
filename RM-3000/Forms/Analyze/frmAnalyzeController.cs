@@ -125,6 +125,10 @@ namespace RM_3000.Forms.Parts
         /// check loop 3D animation
         /// </summary>
         private bool isLoop3DAnimation = false;
+        /// <summary>
+        /// check restart animation
+        /// </summary>
+        private bool isWorkerRestart = false;
 
         /// <summary>
         /// Constructor
@@ -681,6 +685,7 @@ namespace RM_3000.Forms.Parts
                         this.bw3Dgraph.WorkerSupportsCancellation = true;
                         this.bw3Dgraph.WorkerReportsProgress = false;
                         this.bw3Dgraph.DoWork += new DoWorkEventHandler(this.bw3DGraph_Animation);
+                        this.bw3Dgraph.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw3DGraph_WorkerCompleted);
 
                         // 3Dグラフへデータセット
                         if (this.dataList != null && this.dataList.Count > 0 && this.dataList[0] != null)
@@ -781,6 +786,7 @@ namespace RM_3000.Forms.Parts
                 if (bw3Dgraph.IsBusy)
                     bw3Dgraph.CancelAsync();
                 bw3Dgraph.DoWork -= bw3DGraph_Animation;
+                bw3Dgraph.RunWorkerCompleted -= bw3DGraph_WorkerCompleted;
                 bw3Dgraph.Dispose();
                 this.MdiParent.Resize -= frmAnalyzeMain_Resize;
 
@@ -1119,8 +1125,9 @@ namespace RM_3000.Forms.Parts
                 }
                 else
                 {
+                    isWorkerRestart = true;
                     this.bw3Dgraph.CancelAsync();
-                    this.bw3Dgraph.RunWorkerAsync();
+                    //    this.bw3Dgraph.RunWorkerAsync();
                 }
 
 
@@ -1513,6 +1520,20 @@ namespace RM_3000.Forms.Parts
         }
 
         /// <summary>
+        /// backgound worker completed (for restart animation)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bw3DGraph_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (isWorkerRestart)
+            {
+                isWorkerRestart = false;
+                bw3Dgraph.RunWorkerAsync();
+            }
+        }
+
+        /// <summary>
         /// backgound worker 3D Graph Animation
         /// </summary>
         /// <param name="sender"></param>
@@ -1535,7 +1556,7 @@ namespace RM_3000.Forms.Parts
                     if (this.isStartAnimation)
                         this.graph3DList[i].StartAnimation();
                 }
-            }
+            }           
         }
 
         /// <summary>
@@ -1563,8 +1584,8 @@ namespace RM_3000.Forms.Parts
                 }
                 else
                 {
-                    this.bw3Dgraph.CancelAsync();
-                    this.bw3Dgraph.RunWorkerAsync();
+                    isWorkerRestart = true;
+                    this.bw3Dgraph.CancelAsync();                  
                 }
             }
         }

@@ -230,6 +230,12 @@ namespace RM_3000.Forms.Parts
                     ddlOnePlaces.SelectedItem = rval[0];
                     ddlDecimal.SelectedItem = rval[1];
                 }
+                else
+                {
+                    ddlOnePlaces.SelectedItem = "1";
+                    ddlDecimal.SelectedItem = "0";
+                }
+
 
 
             }

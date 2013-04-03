@@ -122,9 +122,13 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         private const int maxDataCount = 100000;
         /// <summary>
-        /// check loop 3D animation
+        /// check loop 3D animation One Shot
         /// </summary>
-        private bool isLoop3DAnimation = false;
+        private bool isLoop3DOneShot = false;
+        /// <summary>
+        /// check loop 3D animation All Shot
+        /// </summary>
+        private bool isLoop3DAllShot = false;
         /// <summary>
         /// check restart animation
         /// </summary>
@@ -418,18 +422,26 @@ namespace RM_3000.Forms.Parts
                     this.graph3DList[i].SetRFactor();
 
                     this.graph3DList[i].ClearData();
-                    this.graph3DList[i].SetData(this.dataList[0].ToArray());
-                    //this.graph3DList[i].CreateAnimation();
+                    this.graph3DList[i].SetData(this.dataList[0].ToArray());                   
                 }
             }
         }
         /// <summary>
-        /// Get/Set Loop 3D animation
+        /// Get/Set Loop 3D animation One Shot
         /// </summary>
-        public bool Loop3DAnimation
+        public bool Loop3DOneShot
         {
-            get { return isLoop3DAnimation; }
-            set { isLoop3DAnimation = value; }
+            get { return isLoop3DOneShot; }
+            set { isLoop3DOneShot = value; }
+        }
+
+        /// <summary>
+        /// Get/Set Loop 3D animation All Shot
+        /// </summary>
+        public bool Loop3DAllShot
+        {
+            get { return isLoop3DAllShot; }
+            set { isLoop3DAllShot = value; }
         }
 
         /// <summary>
@@ -1566,12 +1578,17 @@ namespace RM_3000.Forms.Parts
         private void frmGraph3D_OnAnimationCompleted(double duration)
         {
 
-            if (!this.isLoop3DAnimation)
+            if (!this.isLoop3DOneShot)
             {
                 if (trackMain.Value != trackMain.Maximum)
                 {
                     this.Clear3DGraphData();
                     trackMain.Value++;
+                }
+                else if (this.isLoop3DAllShot)
+                {
+                    this.Clear3DGraphData();
+                    trackMain.Value = 0;
                 }
             }
             else

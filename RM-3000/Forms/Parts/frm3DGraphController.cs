@@ -716,10 +716,25 @@ namespace RM_3000.Forms.Parts
             if (btnGain.Enabled)
                 btnGain_Click(btnGain, e);
         }
-
+        
+        /// <summary>
+        /// chkLoop_Click (one shot loop)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkLoop_Click(object sender, EventArgs e)
         {
-            this.analyzeController.Loop3DAnimation = chkLoop.Checked;
+            this.analyzeController.Loop3DOneShot = chkLoop.Checked;
+        }
+
+        /// <summary>
+        /// chkLoopAll_Click (all shot loop)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void chkLoopAll_Click(object sender, EventArgs e)
+        {
+            this.analyzeController.Loop3DAllShot = chkLoopAll.Checked;
         }
 
         /// <summary>
@@ -752,6 +767,8 @@ namespace RM_3000.Forms.Parts
             }
         }
         #endregion
+
+      
 
 
 

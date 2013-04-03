@@ -13,6 +13,12 @@ namespace DataCommon
     public class SampleData : DataClassBase, ICloneable
     {
         /// <summary>
+        /// 測定時間（時分秒まで）
+        /// Mode1,Mode2のみ
+        /// </summary>
+        public DateTime SampleTime { get; set; }
+
+        /// <summary>
         /// １チャンネル分のデータ
         /// </summary>
         [XmlArray("Channels")]

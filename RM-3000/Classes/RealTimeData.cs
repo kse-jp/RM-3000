@@ -20,6 +20,32 @@ namespace RM_3000
         /// </summary>
         public static bool bRecord = false;
 
+        /// <summary>
+        /// モード１条件による保存対象フラグ
+        /// </summary>
+        public static bool bMode1_Now_Record = false;
+
+        /// <summary>
+        /// Mode1スタート時間
+        /// </summary>
+        public static DateTime Cond_StartTime_Mode1;
+
+        /// <summary>
+        /// Mode1条件判断用ショットカウント
+        /// </summary>
+        public static int Cond_ShotCount_Mode1;
+
+        /// <summary>
+        /// Mode1条件判断用測定停止時間
+        /// </summary>
+        public static DateTime Cond_StopTime_Mode1;
+
+        /// <summary>
+        /// 平均算出用保持領域
+        /// </summary>
+        public static List<SampleData> TmpAverage_Samples = new List<SampleData>();
+
+
         private static MeasureData RealMeasureData = new MeasureData();
 
         private static List<SampleData> Samples = new List<SampleData>();
@@ -77,7 +103,14 @@ namespace RM_3000
             lock (lockobj_samples)
             {
 
-                if (bRecord)
+                //モード1の場合
+                if (RM_3000.Sequences.TestSequence.GetInstance().Mode == Sequences.TestSequence.ModeType.Mode1)
+                {
+                    //モード１の条件に入っているか？
+                    bMode1_Now_Record = Judge_Mode1_Condition(realdata);
+                }
+
+                if (bRecord && bMode1_Now_Record)
                 {
                     //テストデータとして記憶
                     RealMeasureData.SampleDatas.Add(realdata);
@@ -141,6 +174,45 @@ namespace RM_3000
 
             }        
         }
+
+        /// <summary>
+        /// モード１の条件により、測定範囲内であるかを判定
+        /// </summary>
+        /// <param name="realdata"></param>
+        /// <returns></returns>
+        private static bool Judge_Mode1_Condition(SampleData realdata)
+        {
+            bool ret = false;
+
+            Mode1_MeasCondition cond = SystemSetting.MeasureSetting.Mode1_MeasCondition;
+
+            switch (cond.MeasConditionType)
+            {
+                case Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS:
+                    ret = true;
+                    break;
+
+                case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS:
+                    ret = true;
+                    break;
+
+                case Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS:
+                    ret = true;
+                    break;
+
+                case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS:
+                    if ((realdata.SampleTime - Cond_StopTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
+                        ret = true;
+                    break;
+
+                case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME:
+                    ret = true;
+                    break;
+            }
+
+            return ret;
+        }
+
         /// <summary>
         /// GetRealTimeDatas
         /// </summary>

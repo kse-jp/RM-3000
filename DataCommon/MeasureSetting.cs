@@ -52,6 +52,11 @@ namespace DataCommon
         /// 0～1500　秒
         /// </summary>
         private int measureTime_Mode3 = 0;
+        /// <summary>
+        /// モード1 測定条件
+        /// </summary>
+        private Mode1_MeasCondition mode1_MeasCondition = new Mode1_MeasCondition();
+
         #endregion
 
         #region public member
@@ -195,6 +200,19 @@ namespace DataCommon
             }
             get { return this.measureTime_Mode3; }
         }
+
+        /// <summary>
+        /// モード１測定条件　
+        /// </summary>
+        public Mode1_MeasCondition Mode1_MeasCondition
+        {
+            set 
+            { 
+                this.mode1_MeasCondition = value;
+                this.IsUpdated = true;
+            }
+            get { return this.mode1_MeasCondition; }
+        }
         #endregion
 
         #region constructor
@@ -246,6 +264,14 @@ namespace DataCommon
             this.measureTime_Mode2 = data.measureTime_Mode2;
             this.measureTime_Mode3 = data.measureTime_Mode3;
 
+            this.mode1_MeasCondition.MeasConditionType = data.mode1_MeasCondition.MeasConditionType;
+            this.mode1_MeasCondition.Interval_count = data.mode1_MeasCondition.Interval_count;
+            this.mode1_MeasCondition.Average_count = data.mode1_MeasCondition.Average_count;
+            this.mode1_MeasCondition.Inverval_time2shot_time = data.mode1_MeasCondition.Inverval_time2shot_time;
+            this.mode1_MeasCondition.Inverval_time2shot_shots = data.mode1_MeasCondition.Inverval_time2shot_shots;
+            this.mode1_MeasCondition.Inverval_time2time_meastime = data.mode1_MeasCondition.Inverval_time2time_meastime;
+            this.mode1_MeasCondition.Inverval_time2time_stoptime = data.mode1_MeasCondition.Inverval_time2time_stoptime;
+
             this.IsUpdated = false;
         }
         /// <summary>
@@ -285,6 +311,11 @@ namespace DataCommon
             ret.samplingTiming_Mode3 = this.samplingTiming_Mode3;
             ret.measureTime_Mode2 = this.measureTime_Mode2;
             ret.measureTime_Mode3 = this.measureTime_Mode3;
+
+            if (this.Mode1_MeasCondition != null)
+            {
+                ret.mode1_MeasCondition = (Mode1_MeasCondition)this.mode1_MeasCondition.Clone();
+            }
 
             ret.IsUpdated = this.IsUpdated;
 

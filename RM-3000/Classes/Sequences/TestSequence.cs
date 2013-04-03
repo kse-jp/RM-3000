@@ -802,6 +802,9 @@ namespace RM_3000.Sequences
         /// <param name="sampleData"></param>
         private void SetMode1Data(Mode1Record reserveData, ref SampleData sampleData)
         {
+
+            sampleData.SampleTime = ((Mode1Header)reserveData.HeaderData).Time;
+
             sampleData.ChannelDatas = new ChannelData[11];
             Value_Standard valuedata = null;
             Value_MaxMin valueMaxMin = null;
@@ -946,6 +949,8 @@ namespace RM_3000.Sequences
         /// <param name="sampleData"></param>
         private void SetMode2Data(Mode2Record reserveData, ref SampleData sampleData)
         {
+            sampleData.SampleTime = ((Mode2Header)reserveData.HeaderData).Time;
+
             sampleData.ChannelDatas = new ChannelData[11];
             Value_Standard valuedata = new Value_Standard();
             Value_Mode2 value2data = new Value_Mode2();

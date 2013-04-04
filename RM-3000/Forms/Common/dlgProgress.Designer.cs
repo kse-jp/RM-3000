@@ -36,34 +36,34 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 45);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.progressBar1.Location = new System.Drawing.Point(12, 37);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(471, 23);
+            this.progressBar1.Size = new System.Drawing.Size(471, 19);
             this.progressBar1.TabIndex = 0;
             // 
             // lblMessage
             // 
-            this.lblMessage.Location = new System.Drawing.Point(12, 9);
+            this.lblMessage.Location = new System.Drawing.Point(12, 7);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(471, 32);
+            this.lblMessage.Size = new System.Drawing.Size(471, 27);
             this.lblMessage.TabIndex = 1;
             this.lblMessage.Text = "label1";
             // 
             // lblStatus
             // 
-            this.lblStatus.Location = new System.Drawing.Point(299, 20);
+            this.lblStatus.Location = new System.Drawing.Point(299, 17);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(184, 21);
+            this.lblStatus.Size = new System.Drawing.Size(184, 17);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "label2";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(404, 75);
+            this.btnCancel.Location = new System.Drawing.Point(404, 62);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(79, 28);
+            this.btnCancel.Size = new System.Drawing.Size(79, 23);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "TXT_CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -71,17 +71,16 @@
             // 
             // dlgProgress
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 112);
+            this.ClientSize = new System.Drawing.Size(495, 93);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.progressBar1);
-            this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "dlgProgress";

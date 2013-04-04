@@ -67,7 +67,7 @@
             // lblUnit
             // 
             this.lblUnit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblUnit.Font = new System.Drawing.Font("メイリオ", 9F);
+            this.lblUnit.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblUnit.Location = new System.Drawing.Point(172, 0);
             this.lblUnit.Name = "lblUnit";
             this.lblUnit.Size = new System.Drawing.Size(44, 20);

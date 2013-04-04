@@ -104,5 +104,17 @@ namespace RM_3000.Classes
                 e.Graphics.DrawString(s, this.Font, Brushes.Black, 28, e.Bounds.Top);
             }
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // ColorComboBox
+            // 
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Size = new System.Drawing.Size(121, 20);
+            this.ResumeLayout(false);
+
+        }
     }
 }

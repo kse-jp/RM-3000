@@ -364,8 +364,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Classes\ColorComboBox.resx">
+      <DependentUpon>ColorComboBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\AutoFontSizeLabel.resx">
       <DependentUpon>AutoFontSizeLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NumericTextbox.resx">
+      <DependentUpon>NumericTextbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\uctrlChannelSetting.resx">
       <DependentUpon>uctrlChannelSetting.cs</DependentUpon>

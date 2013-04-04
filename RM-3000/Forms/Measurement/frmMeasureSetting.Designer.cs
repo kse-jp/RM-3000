@@ -30,7 +30,6 @@
         {
             this.grpMain = new System.Windows.Forms.GroupBox();
             this.chDetailMode1 = new System.Windows.Forms.CheckBox();
-
             this.txtSampling = new RM_3000.Controls.NumericTextBox();
             this.txtMeasureTime = new RM_3000.Controls.NumericTextBox();
             this.lblUnitSecond = new System.Windows.Forms.Label();
@@ -78,7 +77,7 @@
             this.grpMain.Location = new System.Drawing.Point(12, 11);
             this.grpMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(203, 213);
+            this.grpMain.Size = new System.Drawing.Size(203, 256);
             this.grpMain.TabIndex = 0;
             this.grpMain.TabStop = false;
             this.grpMain.Text = "TXT_MODE1";
@@ -86,7 +85,7 @@
             // chDetailMode1
             // 
             this.chDetailMode1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chDetailMode1.Location = new System.Drawing.Point(6, 209);
+            this.chDetailMode1.Location = new System.Drawing.Point(5, 211);
             this.chDetailMode1.Name = "chDetailMode1";
             this.chDetailMode1.Size = new System.Drawing.Size(191, 28);
             this.chDetailMode1.TabIndex = 7;
@@ -94,35 +93,6 @@
             this.chDetailMode1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chDetailMode1.UseVisualStyleBackColor = true;
             this.chDetailMode1.CheckedChanged += new System.EventHandler(this.chDetailMode1_CheckedChanged);
-            // 
-            // txtSampling
-            // 
-            this.txtSampling.AllowMinus = false;
-            this.txtSampling.AllowSpace = false;
-            this.txtSampling.AllowString = false;
-            this.txtSampling.IsInteger = true;
-            this.txtSampling.Location = new System.Drawing.Point(26, 54);
-            this.txtSampling.MaxLength = 8;
-            this.txtSampling.Name = "txtSampling";
-            this.txtSampling.Size = new System.Drawing.Size(112, 25);
-            this.txtSampling.TabIndex = 1;
-            this.txtSampling.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSampling.TextChanged += new System.EventHandler(this.txtSampling_TextChanged);
-            // 
-            // txtMeasureTime
-            // 
-            this.txtMeasureTime.AllowMinus = false;
-            this.txtMeasureTime.AllowSpace = false;
-            this.txtMeasureTime.AllowString = false;
-            this.txtMeasureTime.IsInteger = true;
-            this.txtMeasureTime.Location = new System.Drawing.Point(27, 120);
-            this.txtMeasureTime.MaxLength = 4;
-            this.txtMeasureTime.Name = "txtMeasureTime";
-            this.txtMeasureTime.Size = new System.Drawing.Size(111, 25);
-            this.txtMeasureTime.TabIndex = 5;
-            this.txtMeasureTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMeasureTime.Visible = false;
-            this.txtMeasureTime.TextChanged += new System.EventHandler(this.txtMeasureTime_TextChanged);
             // 
             // txtSampling
             // 
@@ -294,7 +264,7 @@
             this.numTime2Time_StopTime.Location = new System.Drawing.Point(423, 183);
             this.numTime2Time_StopTime.MaxLength = 2;
             this.numTime2Time_StopTime.Name = "numTime2Time_StopTime";
-            this.numTime2Time_StopTime.Size = new System.Drawing.Size(160, 25);
+            this.numTime2Time_StopTime.Size = new System.Drawing.Size(160, 23);
             this.numTime2Time_StopTime.TabIndex = 16;
             this.numTime2Time_StopTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Time_StopTime.TextChanged += new System.EventHandler(this.numTime2Time_StopTime_TextChanged);
@@ -322,7 +292,7 @@
             this.numTime2Time_MeasTime.Location = new System.Drawing.Point(423, 153);
             this.numTime2Time_MeasTime.MaxLength = 2;
             this.numTime2Time_MeasTime.Name = "numTime2Time_MeasTime";
-            this.numTime2Time_MeasTime.Size = new System.Drawing.Size(160, 25);
+            this.numTime2Time_MeasTime.Size = new System.Drawing.Size(160, 23);
             this.numTime2Time_MeasTime.TabIndex = 14;
             this.numTime2Time_MeasTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Time_MeasTime.TextChanged += new System.EventHandler(this.numTime2Time_MeasTime_TextChanged);
@@ -411,7 +381,7 @@
             this.numTime2Shot_Shots.Location = new System.Drawing.Point(423, 123);
             this.numTime2Shot_Shots.MaxLength = 5;
             this.numTime2Shot_Shots.Name = "numTime2Shot_Shots";
-            this.numTime2Shot_Shots.Size = new System.Drawing.Size(160, 25);
+            this.numTime2Shot_Shots.Size = new System.Drawing.Size(160, 23);
             this.numTime2Shot_Shots.TabIndex = 12;
             this.numTime2Shot_Shots.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Shot_Shots.TextChanged += new System.EventHandler(this.numTime2Shot_Shots_TextChanged);
@@ -437,7 +407,7 @@
             this.numTime2Shot_Time.Location = new System.Drawing.Point(423, 93);
             this.numTime2Shot_Time.MaxLength = 2;
             this.numTime2Shot_Time.Name = "numTime2Shot_Time";
-            this.numTime2Shot_Time.Size = new System.Drawing.Size(160, 25);
+            this.numTime2Shot_Time.Size = new System.Drawing.Size(160, 23);
             this.numTime2Shot_Time.TabIndex = 10;
             this.numTime2Shot_Time.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Shot_Time.TextChanged += new System.EventHandler(this.numTime2Shot_Time_TextChanged);
@@ -474,7 +444,7 @@
             this.numAverageCount.Location = new System.Drawing.Point(423, 63);
             this.numAverageCount.MaxLength = 4;
             this.numAverageCount.Name = "numAverageCount";
-            this.numAverageCount.Size = new System.Drawing.Size(160, 25);
+            this.numAverageCount.Size = new System.Drawing.Size(160, 23);
             this.numAverageCount.TabIndex = 8;
             this.numAverageCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numAverageCount.TextChanged += new System.EventHandler(this.numAverageCount_TextChanged);
@@ -489,7 +459,7 @@
             this.numIntervalCount.Location = new System.Drawing.Point(423, 33);
             this.numIntervalCount.MaxLength = 5;
             this.numIntervalCount.Name = "numIntervalCount";
-            this.numIntervalCount.Size = new System.Drawing.Size(160, 25);
+            this.numIntervalCount.Size = new System.Drawing.Size(160, 23);
             this.numIntervalCount.TabIndex = 6;
             this.numIntervalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numIntervalCount.TextChanged += new System.EventHandler(this.numIntervalCount_TextChanged);

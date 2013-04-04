@@ -198,6 +198,8 @@ namespace RM_3000.Forms.Measurement
                     {
                         this.BeginInvoke((MethodInvoker)delegate() 
                             {
+                                this.measureTask.Pause();
+
                                 MessageBox.Show(AppResource.GetString("MSG_MEAS_EMERGENCY_STOP"), AppResource.GetString("TXT_MEASUREMENT"), MessageBoxButtons.OK, MessageBoxIcon.Stop);
                                 //測定を停止する。
                                 testSquence.EndTest();

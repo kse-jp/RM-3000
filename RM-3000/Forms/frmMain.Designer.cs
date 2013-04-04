@@ -60,7 +60,7 @@
             // 
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackColor = System.Drawing.Color.MediumBlue;
-            this.toolStrip1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStrip1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton_Setting,
             this.toolStripButton_Measure,
@@ -69,7 +69,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1264, 120);
+            this.toolStrip1.Size = new System.Drawing.Size(1370, 140);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -79,7 +79,7 @@
             this.toolStripButton_Setting.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.toolStripButton_Setting.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton_Setting.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Setting.Font = new System.Drawing.Font("Meiryo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Setting.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Setting.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Setting.Name = "toolStripButton_Setting";
@@ -96,7 +96,7 @@
             this.toolStripButton_Measure.AutoSize = false;
             this.toolStripButton_Measure.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Measure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripButton_Measure.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Measure.Font = new System.Drawing.Font("Meiryo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Measure.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Measure.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Measure.Name = "toolStripButton_Measure";
@@ -113,7 +113,7 @@
             this.toolStripButton_Anaryze.AutoSize = false;
             this.toolStripButton_Anaryze.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Anaryze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripButton_Anaryze.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Anaryze.Font = new System.Drawing.Font("Meiryo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Anaryze.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Anaryze.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Anaryze.Name = "toolStripButton_Anaryze";
@@ -130,7 +130,7 @@
             this.toolStripButton_Mainte.AutoSize = false;
             this.toolStripButton_Mainte.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Mainte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripButton_Mainte.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Mainte.Font = new System.Drawing.Font("Meiryo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Mainte.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Mainte.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Mainte.Name = "toolStripButton_Mainte";
@@ -149,18 +149,18 @@
             this.pnlDrawArea.Controls.Add(this.pictureBox1);
             this.pnlDrawArea.Controls.Add(this.pictureBox2);
             this.pnlDrawArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDrawArea.Location = new System.Drawing.Point(0, 120);
+            this.pnlDrawArea.Location = new System.Drawing.Point(0, 140);
             this.pnlDrawArea.Name = "pnlDrawArea";
-            this.pnlDrawArea.Size = new System.Drawing.Size(1264, 642);
+            this.pnlDrawArea.Size = new System.Drawing.Size(1370, 610);
             this.pnlDrawArea.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(66, 117);
+            this.pictureBox1.Location = new System.Drawing.Point(77, 137);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1131, 375);
+            this.pictureBox1.Size = new System.Drawing.Size(1319, 437);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -170,18 +170,18 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(567, 435);
+            this.pictureBox2.Location = new System.Drawing.Point(661, 507);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(655, 195);
+            this.pictureBox2.Size = new System.Drawing.Size(764, 227);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(497, 85);
+            this.button1.Location = new System.Drawing.Point(580, 99);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 27);
             this.button1.TabIndex = 2;
             this.button1.Text = "nakaTEST";
             this.button1.UseVisualStyleBackColor = true;
@@ -190,27 +190,27 @@
             // 
             // txtTest_StartIndex
             // 
-            this.txtTest_StartIndex.Location = new System.Drawing.Point(733, 63);
+            this.txtTest_StartIndex.Location = new System.Drawing.Point(855, 73);
             this.txtTest_StartIndex.Name = "txtTest_StartIndex";
-            this.txtTest_StartIndex.Size = new System.Drawing.Size(100, 19);
+            this.txtTest_StartIndex.Size = new System.Drawing.Size(116, 21);
             this.txtTest_StartIndex.TabIndex = 7;
             this.txtTest_StartIndex.Text = "1";
             this.txtTest_StartIndex.Visible = false;
             // 
             // txtTest_GetCount
             // 
-            this.txtTest_GetCount.Location = new System.Drawing.Point(733, 88);
+            this.txtTest_GetCount.Location = new System.Drawing.Point(855, 102);
             this.txtTest_GetCount.Name = "txtTest_GetCount";
-            this.txtTest_GetCount.Size = new System.Drawing.Size(100, 19);
+            this.txtTest_GetCount.Size = new System.Drawing.Size(116, 21);
             this.txtTest_GetCount.TabIndex = 8;
             this.txtTest_GetCount.Text = "100";
             this.txtTest_GetCount.Visible = false;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(585, 63);
+            this.button5.Location = new System.Drawing.Point(682, 73);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 45);
+            this.button5.Size = new System.Drawing.Size(142, 53);
             this.button5.TabIndex = 6;
             this.button5.Text = "ohno_GetCSV";
             this.button5.UseVisualStyleBackColor = true;
@@ -219,9 +219,9 @@
             // 
             // btnGetCalibrationCurve
             // 
-            this.btnGetCalibrationCurve.Location = new System.Drawing.Point(585, 12);
+            this.btnGetCalibrationCurve.Location = new System.Drawing.Point(682, 14);
             this.btnGetCalibrationCurve.Name = "btnGetCalibrationCurve";
-            this.btnGetCalibrationCurve.Size = new System.Drawing.Size(122, 45);
+            this.btnGetCalibrationCurve.Size = new System.Drawing.Size(142, 53);
             this.btnGetCalibrationCurve.TabIndex = 9;
             this.btnGetCalibrationCurve.Text = "ohno_Get検量線";
             this.btnGetCalibrationCurve.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@
             this.picStatusLED.BackColor = System.Drawing.Color.Transparent;
             this.picStatusLED.Location = new System.Drawing.Point(0, 3);
             this.picStatusLED.Name = "picStatusLED";
-            this.picStatusLED.Size = new System.Drawing.Size(109, 109);
+            this.picStatusLED.Size = new System.Drawing.Size(127, 127);
             this.picStatusLED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picStatusLED.TabIndex = 1;
             this.picStatusLED.TabStop = false;
@@ -250,26 +250,26 @@
             this.panel1.BackColor = System.Drawing.Color.MediumBlue;
             this.panel1.Controls.Add(this.picStatusLED);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(1143, 2);
+            this.panel1.Location = new System.Drawing.Point(1333, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(116, 114);
+            this.panel1.Size = new System.Drawing.Size(135, 134);
             this.panel1.TabIndex = 10;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 61);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 71);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(117, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 762);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGetCalibrationCurve);
             this.Controls.Add(this.txtTest_GetCount);
@@ -278,6 +278,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pnlDrawArea);
             this.Controls.Add(this.toolStrip1);
+            this.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

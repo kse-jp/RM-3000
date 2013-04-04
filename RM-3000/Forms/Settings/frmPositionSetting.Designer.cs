@@ -55,10 +55,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(762, 332);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(762, 277);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 34);
+            this.button3.Size = new System.Drawing.Size(153, 28);
             this.button3.TabIndex = 11;
             this.button3.Text = "TXT_CLOSE";
             this.button3.UseVisualStyleBackColor = true;
@@ -71,99 +70,109 @@
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(12, 22);
+            this.elementHost1.Location = new System.Drawing.Point(12, 18);
+            this.elementHost1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(92, 282);
+            this.elementHost1.Size = new System.Drawing.Size(92, 235);
             this.elementHost1.TabIndex = 12;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.uctrlPositionUnit1;
             // 
             // elementHost2
             // 
-            this.elementHost2.Location = new System.Drawing.Point(104, 22);
+            this.elementHost2.Location = new System.Drawing.Point(104, 18);
+            this.elementHost2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(92, 282);
+            this.elementHost2.Size = new System.Drawing.Size(92, 235);
             this.elementHost2.TabIndex = 13;
             this.elementHost2.Text = "elementHost2";
             this.elementHost2.Child = this.uctrlPositionUnit2;
             // 
             // elementHost3
             // 
-            this.elementHost3.Location = new System.Drawing.Point(194, 22);
+            this.elementHost3.Location = new System.Drawing.Point(194, 18);
+            this.elementHost3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost3.Name = "elementHost3";
-            this.elementHost3.Size = new System.Drawing.Size(92, 282);
+            this.elementHost3.Size = new System.Drawing.Size(92, 235);
             this.elementHost3.TabIndex = 14;
             this.elementHost3.Text = "elementHost3";
             this.elementHost3.Child = this.uctrlPositionUnit3;
             // 
             // elementHost4
             // 
-            this.elementHost4.Location = new System.Drawing.Point(284, 22);
+            this.elementHost4.Location = new System.Drawing.Point(284, 18);
+            this.elementHost4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost4.Name = "elementHost4";
-            this.elementHost4.Size = new System.Drawing.Size(92, 282);
+            this.elementHost4.Size = new System.Drawing.Size(92, 235);
             this.elementHost4.TabIndex = 15;
             this.elementHost4.Text = "elementHost4";
             this.elementHost4.Child = this.uctrlPositionUnit4;
             // 
             // elementHost5
             // 
-            this.elementHost5.Location = new System.Drawing.Point(374, 22);
+            this.elementHost5.Location = new System.Drawing.Point(374, 18);
+            this.elementHost5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost5.Name = "elementHost5";
-            this.elementHost5.Size = new System.Drawing.Size(92, 282);
+            this.elementHost5.Size = new System.Drawing.Size(92, 235);
             this.elementHost5.TabIndex = 16;
             this.elementHost5.Text = "elementHost5";
             this.elementHost5.Child = this.uctrlPositionUnit5;
             // 
             // elementHost6
             // 
-            this.elementHost6.Location = new System.Drawing.Point(464, 22);
+            this.elementHost6.Location = new System.Drawing.Point(464, 18);
+            this.elementHost6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost6.Name = "elementHost6";
-            this.elementHost6.Size = new System.Drawing.Size(92, 282);
+            this.elementHost6.Size = new System.Drawing.Size(92, 235);
             this.elementHost6.TabIndex = 17;
             this.elementHost6.Text = "elementHost6";
             this.elementHost6.Child = this.uctrlPositionUnit6;
             // 
             // elementHost7
             // 
-            this.elementHost7.Location = new System.Drawing.Point(554, 22);
+            this.elementHost7.Location = new System.Drawing.Point(554, 18);
+            this.elementHost7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost7.Name = "elementHost7";
-            this.elementHost7.Size = new System.Drawing.Size(92, 282);
+            this.elementHost7.Size = new System.Drawing.Size(92, 235);
             this.elementHost7.TabIndex = 18;
             this.elementHost7.Text = "elementHost7";
             this.elementHost7.Child = this.uctrlPositionUnit7;
             // 
             // elementHost8
             // 
-            this.elementHost8.Location = new System.Drawing.Point(644, 22);
+            this.elementHost8.Location = new System.Drawing.Point(644, 18);
+            this.elementHost8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost8.Name = "elementHost8";
-            this.elementHost8.Size = new System.Drawing.Size(92, 282);
+            this.elementHost8.Size = new System.Drawing.Size(92, 235);
             this.elementHost8.TabIndex = 19;
             this.elementHost8.Text = "elementHost8";
             this.elementHost8.Child = this.uctrlPositionUnit8;
             // 
             // elementHost9
             // 
-            this.elementHost9.Location = new System.Drawing.Point(734, 22);
+            this.elementHost9.Location = new System.Drawing.Point(734, 18);
+            this.elementHost9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost9.Name = "elementHost9";
-            this.elementHost9.Size = new System.Drawing.Size(92, 282);
+            this.elementHost9.Size = new System.Drawing.Size(92, 235);
             this.elementHost9.TabIndex = 20;
             this.elementHost9.Text = "elementHost9";
             this.elementHost9.Child = this.uctrlPositionUnit9;
             // 
             // elementHost10
             // 
-            this.elementHost10.Location = new System.Drawing.Point(824, 22);
+            this.elementHost10.Location = new System.Drawing.Point(824, 18);
+            this.elementHost10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.elementHost10.Name = "elementHost10";
-            this.elementHost10.Size = new System.Drawing.Size(92, 282);
+            this.elementHost10.Size = new System.Drawing.Size(92, 235);
             this.elementHost10.TabIndex = 21;
             this.elementHost10.Text = "elementHost10";
             this.elementHost10.Child = this.uctrlPositionUnit10;
             // 
             // frmPositionSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 372);
+            this.ClientSize = new System.Drawing.Size(925, 310);
             this.Controls.Add(this.elementHost10);
             this.Controls.Add(this.elementHost9);
             this.Controls.Add(this.elementHost8);
@@ -175,8 +184,7 @@
             this.Controls.Add(this.elementHost2);
             this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.button3);
-            this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Name = "frmPositionSetting";
             this.Text = "TXT_POSITION_ZERO_SETTING";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPositionSetting_FormClosed);

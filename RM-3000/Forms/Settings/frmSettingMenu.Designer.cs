@@ -64,9 +64,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1063, 320);
+            this.pictureBox1.Location = new System.Drawing.Point(1240, 374);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 256);
+            this.pictureBox1.Size = new System.Drawing.Size(145, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -74,10 +74,10 @@
             // picChannelSettingButton
             // 
             this.picChannelSettingButton.BackColor = System.Drawing.Color.Transparent;
-            this.picChannelSettingButton.Location = new System.Drawing.Point(132, 33);
-            this.picChannelSettingButton.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.picChannelSettingButton.Location = new System.Drawing.Point(154, 39);
+            this.picChannelSettingButton.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.picChannelSettingButton.Name = "picChannelSettingButton";
-            this.picChannelSettingButton.Size = new System.Drawing.Size(255, 255);
+            this.picChannelSettingButton.Size = new System.Drawing.Size(297, 297);
             this.picChannelSettingButton.TabIndex = 0;
             this.picChannelSettingButton.TabStop = false;
             this.picChannelSettingButton.Click += new System.EventHandler(this.picButton_Click);
@@ -87,10 +87,10 @@
             // picTagSettingButton
             // 
             this.picTagSettingButton.BackColor = System.Drawing.Color.Transparent;
-            this.picTagSettingButton.Location = new System.Drawing.Point(132, 320);
-            this.picTagSettingButton.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.picTagSettingButton.Location = new System.Drawing.Point(154, 374);
+            this.picTagSettingButton.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.picTagSettingButton.Name = "picTagSettingButton";
-            this.picTagSettingButton.Size = new System.Drawing.Size(255, 255);
+            this.picTagSettingButton.Size = new System.Drawing.Size(297, 297);
             this.picTagSettingButton.TabIndex = 0;
             this.picTagSettingButton.TabStop = false;
             this.picTagSettingButton.Click += new System.EventHandler(this.picButton_Click);
@@ -100,10 +100,10 @@
             // picSensorLocationButton
             // 
             this.picSensorLocationButton.BackColor = System.Drawing.Color.Transparent;
-            this.picSensorLocationButton.Location = new System.Drawing.Point(462, 33);
-            this.picSensorLocationButton.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.picSensorLocationButton.Location = new System.Drawing.Point(539, 39);
+            this.picSensorLocationButton.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.picSensorLocationButton.Name = "picSensorLocationButton";
-            this.picSensorLocationButton.Size = new System.Drawing.Size(255, 255);
+            this.picSensorLocationButton.Size = new System.Drawing.Size(297, 297);
             this.picSensorLocationButton.TabIndex = 0;
             this.picSensorLocationButton.TabStop = false;
             this.picSensorLocationButton.Click += new System.EventHandler(this.picButton_Click);
@@ -113,10 +113,10 @@
             // picRelationButton
             // 
             this.picRelationButton.BackColor = System.Drawing.Color.Transparent;
-            this.picRelationButton.Location = new System.Drawing.Point(462, 320);
-            this.picRelationButton.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.picRelationButton.Location = new System.Drawing.Point(539, 374);
+            this.picRelationButton.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.picRelationButton.Name = "picRelationButton";
-            this.picRelationButton.Size = new System.Drawing.Size(255, 255);
+            this.picRelationButton.Size = new System.Drawing.Size(297, 297);
             this.picRelationButton.TabIndex = 0;
             this.picRelationButton.TabStop = false;
             this.picRelationButton.Click += new System.EventHandler(this.picButton_Click);
@@ -126,10 +126,10 @@
             // picSensorPositiontButton
             // 
             this.picSensorPositiontButton.BackColor = System.Drawing.Color.Transparent;
-            this.picSensorPositiontButton.Location = new System.Drawing.Point(792, 33);
-            this.picSensorPositiontButton.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.picSensorPositiontButton.Location = new System.Drawing.Point(924, 39);
+            this.picSensorPositiontButton.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.picSensorPositiontButton.Name = "picSensorPositiontButton";
-            this.picSensorPositiontButton.Size = new System.Drawing.Size(255, 255);
+            this.picSensorPositiontButton.Size = new System.Drawing.Size(297, 297);
             this.picSensorPositiontButton.TabIndex = 0;
             this.picSensorPositiontButton.TabStop = false;
             this.picSensorPositiontButton.Click += new System.EventHandler(this.picButton_Click);
@@ -139,11 +139,11 @@
             // lblChannelSetting
             // 
             this.lblChannelSetting.BackColor = System.Drawing.Color.Transparent;
-            this.lblChannelSetting.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblChannelSetting.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblChannelSetting.ForeColor = System.Drawing.Color.Black;
-            this.lblChannelSetting.Location = new System.Drawing.Point(123, 292);
+            this.lblChannelSetting.Location = new System.Drawing.Point(143, 342);
             this.lblChannelSetting.Name = "lblChannelSetting";
-            this.lblChannelSetting.Size = new System.Drawing.Size(274, 25);
+            this.lblChannelSetting.Size = new System.Drawing.Size(320, 29);
             this.lblChannelSetting.TabIndex = 11;
             this.lblChannelSetting.Text = "TXT_CHANNEL_SETTING";
             this.lblChannelSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,11 +151,11 @@
             // lblSensorLocationSetting
             // 
             this.lblSensorLocationSetting.BackColor = System.Drawing.Color.Transparent;
-            this.lblSensorLocationSetting.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSensorLocationSetting.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblSensorLocationSetting.ForeColor = System.Drawing.Color.Black;
-            this.lblSensorLocationSetting.Location = new System.Drawing.Point(453, 292);
+            this.lblSensorLocationSetting.Location = new System.Drawing.Point(528, 342);
             this.lblSensorLocationSetting.Name = "lblSensorLocationSetting";
-            this.lblSensorLocationSetting.Size = new System.Drawing.Size(274, 25);
+            this.lblSensorLocationSetting.Size = new System.Drawing.Size(320, 29);
             this.lblSensorLocationSetting.TabIndex = 12;
             this.lblSensorLocationSetting.Text = "TXT_SETTINGMAIN_LOCATIONSETTING";
             this.lblSensorLocationSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,11 +163,11 @@
             // lblRelationSetting
             // 
             this.lblRelationSetting.BackColor = System.Drawing.Color.Transparent;
-            this.lblRelationSetting.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblRelationSetting.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblRelationSetting.ForeColor = System.Drawing.Color.Black;
-            this.lblRelationSetting.Location = new System.Drawing.Point(453, 579);
+            this.lblRelationSetting.Location = new System.Drawing.Point(528, 677);
             this.lblRelationSetting.Name = "lblRelationSetting";
-            this.lblRelationSetting.Size = new System.Drawing.Size(274, 25);
+            this.lblRelationSetting.Size = new System.Drawing.Size(320, 29);
             this.lblRelationSetting.TabIndex = 13;
             this.lblRelationSetting.Text = "TXT_SETTINGMAIN_RELATIONSETTING";
             this.lblRelationSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,11 +175,11 @@
             // lblTagSetting
             // 
             this.lblTagSetting.BackColor = System.Drawing.Color.Transparent;
-            this.lblTagSetting.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTagSetting.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblTagSetting.ForeColor = System.Drawing.Color.Black;
-            this.lblTagSetting.Location = new System.Drawing.Point(123, 579);
+            this.lblTagSetting.Location = new System.Drawing.Point(143, 677);
             this.lblTagSetting.Name = "lblTagSetting";
-            this.lblTagSetting.Size = new System.Drawing.Size(274, 25);
+            this.lblTagSetting.Size = new System.Drawing.Size(320, 29);
             this.lblTagSetting.TabIndex = 14;
             this.lblTagSetting.Text = "TXT_SETTINGMAIN_TAGSETTING";
             this.lblTagSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,11 +187,11 @@
             // lblSensorPositionSetting
             // 
             this.lblSensorPositionSetting.BackColor = System.Drawing.Color.Transparent;
-            this.lblSensorPositionSetting.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSensorPositionSetting.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblSensorPositionSetting.ForeColor = System.Drawing.Color.Black;
-            this.lblSensorPositionSetting.Location = new System.Drawing.Point(783, 292);
+            this.lblSensorPositionSetting.Location = new System.Drawing.Point(913, 342);
             this.lblSensorPositionSetting.Name = "lblSensorPositionSetting";
-            this.lblSensorPositionSetting.Size = new System.Drawing.Size(274, 25);
+            this.lblSensorPositionSetting.Size = new System.Drawing.Size(320, 29);
             this.lblSensorPositionSetting.TabIndex = 15;
             this.lblSensorPositionSetting.Text = "TXT_SETTINGMAIN_POSITIONSETTING";
             this.lblSensorPositionSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,11 +199,11 @@
             // lblLanguageSetting
             // 
             this.lblLanguageSetting.BackColor = System.Drawing.Color.Transparent;
-            this.lblLanguageSetting.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblLanguageSetting.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblLanguageSetting.ForeColor = System.Drawing.Color.Black;
-            this.lblLanguageSetting.Location = new System.Drawing.Point(783, 579);
+            this.lblLanguageSetting.Location = new System.Drawing.Point(913, 677);
             this.lblLanguageSetting.Name = "lblLanguageSetting";
-            this.lblLanguageSetting.Size = new System.Drawing.Size(274, 25);
+            this.lblLanguageSetting.Size = new System.Drawing.Size(320, 29);
             this.lblLanguageSetting.TabIndex = 12;
             this.lblLanguageSetting.Text = "TXT_SETTING_LANGUAGE";
             this.lblLanguageSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,13 +212,13 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
             this.tableLayoutPanel1.Controls.Add(this.picChannelSettingButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblLanguageSetting, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblTagSetting, 1, 4);
@@ -236,13 +236,13 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 262F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 262F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1190, 627);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 306F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 306F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 731);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // panel1
@@ -251,18 +251,18 @@
             this.panel1.Controls.Add(this.picEnglish);
             this.panel1.Controls.Add(this.picChanese);
             this.panel1.Controls.Add(this.picJapanese);
-            this.panel1.Location = new System.Drawing.Point(792, 320);
-            this.panel1.Margin = new System.Windows.Forms.Padding(12, 3, 12, 3);
+            this.panel1.Location = new System.Drawing.Point(924, 374);
+            this.panel1.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 255);
+            this.panel1.Size = new System.Drawing.Size(298, 297);
             this.panel1.TabIndex = 16;
             // 
             // picEnglish
             // 
             this.picEnglish.BackColor = System.Drawing.Color.Transparent;
-            this.picEnglish.Location = new System.Drawing.Point(26, 165);
+            this.picEnglish.Location = new System.Drawing.Point(30, 193);
             this.picEnglish.Name = "picEnglish";
-            this.picEnglish.Size = new System.Drawing.Size(202, 80);
+            this.picEnglish.Size = new System.Drawing.Size(236, 94);
             this.picEnglish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picEnglish.TabIndex = 21;
             this.picEnglish.TabStop = false;
@@ -271,9 +271,9 @@
             // picChanese
             // 
             this.picChanese.BackColor = System.Drawing.Color.Transparent;
-            this.picChanese.Location = new System.Drawing.Point(26, 85);
+            this.picChanese.Location = new System.Drawing.Point(30, 99);
             this.picChanese.Name = "picChanese";
-            this.picChanese.Size = new System.Drawing.Size(202, 80);
+            this.picChanese.Size = new System.Drawing.Size(236, 94);
             this.picChanese.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picChanese.TabIndex = 20;
             this.picChanese.TabStop = false;
@@ -282,9 +282,9 @@
             // picJapanese
             // 
             this.picJapanese.BackColor = System.Drawing.Color.Transparent;
-            this.picJapanese.Location = new System.Drawing.Point(26, 6);
+            this.picJapanese.Location = new System.Drawing.Point(30, 8);
             this.picJapanese.Name = "picJapanese";
-            this.picJapanese.Size = new System.Drawing.Size(202, 80);
+            this.picJapanese.Size = new System.Drawing.Size(236, 94);
             this.picJapanese.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picJapanese.TabIndex = 19;
             this.picJapanese.TabStop = false;
@@ -292,13 +292,14 @@
             // 
             // frmSettingMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1190, 627);
+            this.ClientSize = new System.Drawing.Size(1370, 731);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSettingMenu";
             this.Text = "frmSettingMenu";

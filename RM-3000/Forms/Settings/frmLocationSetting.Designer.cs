@@ -28,23 +28,31 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkDispKanagata = new System.Windows.Forms.CheckBox();
-            this.txtPressKanagataHeight = new System.Windows.Forms.TextBox();
-            this.txtUnderKanagataHeight = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPressKanagataWidth = new System.Windows.Forms.TextBox();
-            this.txtUnderKanagataWidth = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtBolsterHeight = new System.Windows.Forms.TextBox();
-            this.txtBolsterWidth = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPressKanagataHeight = new RM_3000.Controls.NumericTextBox();
+            this.txtUnderKanagataHeight = new RM_3000.Controls.NumericTextBox();
+            this.txtPressKanagataWidth = new RM_3000.Controls.NumericTextBox();
+            this.txtUnderKanagataWidth = new RM_3000.Controls.NumericTextBox();
+            this.txtBolsterHeight = new RM_3000.Controls.NumericTextBox();
+            this.txtBolsterWidth = new RM_3000.Controls.NumericTextBox();
             this.gridSetting = new RM_3000.CustomDataGridView();
             this.ColumnChannel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,9 +69,10 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(515, 461);
+            this.btnUpdate.Location = new System.Drawing.Point(515, 397);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(89, 28);
+            this.btnUpdate.Size = new System.Drawing.Size(89, 23);
             this.btnUpdate.TabIndex = 100;
             this.btnUpdate.Text = "TXT_UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -73,9 +82,10 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(610, 461);
+            this.btnCancel.Location = new System.Drawing.Point(610, 397);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 28);
+            this.btnCancel.Size = new System.Drawing.Size(89, 23);
             this.btnCancel.TabIndex = 101;
             this.btnCancel.Text = "TXT_CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -90,9 +100,11 @@
             this.groupBox1.Controls.Add(this.txtBolsterWidth);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(687, 162);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(687, 135);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TXT_BOLSTER_MOLD_SETTING";
@@ -108,9 +120,11 @@
             this.groupBox2.Controls.Add(this.txtUnderKanagataWidth);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(209, 24);
+            this.groupBox2.Location = new System.Drawing.Point(209, 20);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(411, 130);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(411, 108);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
@@ -119,116 +133,165 @@
             this.chkDispKanagata.AutoSize = true;
             this.chkDispKanagata.Checked = true;
             this.chkDispKanagata.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDispKanagata.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.chkDispKanagata.Location = new System.Drawing.Point(11, -4);
+            this.chkDispKanagata.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.chkDispKanagata.Location = new System.Drawing.Point(11, -3);
+            this.chkDispKanagata.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkDispKanagata.Name = "chkDispKanagata";
-            this.chkDispKanagata.Size = new System.Drawing.Size(138, 24);
+            this.chkDispKanagata.Size = new System.Drawing.Size(137, 21);
             this.chkDispKanagata.TabIndex = 3;
             this.chkDispKanagata.Text = "TXT_MOLD_DISP";
             this.chkDispKanagata.UseVisualStyleBackColor = true;
             this.chkDispKanagata.CheckedChanged += new System.EventHandler(this.chkDispKanagata_CheckedChanged);
             // 
-            // txtPressKanagataHeight
-            // 
-            this.txtPressKanagataHeight.Location = new System.Drawing.Point(217, 93);
-            this.txtPressKanagataHeight.Name = "txtPressKanagataHeight";
-            this.txtPressKanagataHeight.Size = new System.Drawing.Size(142, 25);
-            this.txtPressKanagataHeight.TabIndex = 7;
-            this.txtPressKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtUnderKanagataHeight
-            // 
-            this.txtUnderKanagataHeight.Location = new System.Drawing.Point(11, 93);
-            this.txtUnderKanagataHeight.Name = "txtUnderKanagataHeight";
-            this.txtUnderKanagataHeight.Size = new System.Drawing.Size(142, 25);
-            this.txtUnderKanagataHeight.TabIndex = 5;
-            this.txtUnderKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(214, 72);
+            this.label5.Location = new System.Drawing.Point(214, 60);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 18);
+            this.label5.Size = new System.Drawing.Size(120, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "TXT_MOLD_DEPTH";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 72);
+            this.label6.Location = new System.Drawing.Point(6, 60);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 18);
+            this.label6.Size = new System.Drawing.Size(176, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "TXT_BACKINGPLATE_DEPTH";
-            // 
-            // txtPressKanagataWidth
-            // 
-            this.txtPressKanagataWidth.Location = new System.Drawing.Point(217, 42);
-            this.txtPressKanagataWidth.Name = "txtPressKanagataWidth";
-            this.txtPressKanagataWidth.Size = new System.Drawing.Size(142, 25);
-            this.txtPressKanagataWidth.TabIndex = 6;
-            this.txtPressKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtUnderKanagataWidth
-            // 
-            this.txtUnderKanagataWidth.Location = new System.Drawing.Point(12, 43);
-            this.txtUnderKanagataWidth.Name = "txtUnderKanagataWidth";
-            this.txtUnderKanagataWidth.Size = new System.Drawing.Size(142, 25);
-            this.txtUnderKanagataWidth.TabIndex = 4;
-            this.txtUnderKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(214, 21);
+            this.label3.Location = new System.Drawing.Point(214, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 18);
+            this.label3.Size = new System.Drawing.Size(129, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "TXT_MOLD_LENGTH";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 21);
+            this.label4.Location = new System.Drawing.Point(6, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 18);
+            this.label4.Size = new System.Drawing.Size(185, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "TXT_BACKINGPLATE_LENGTH";
-            // 
-            // txtBolsterHeight
-            // 
-            this.txtBolsterHeight.Location = new System.Drawing.Point(25, 117);
-            this.txtBolsterHeight.Name = "txtBolsterHeight";
-            this.txtBolsterHeight.Size = new System.Drawing.Size(142, 25);
-            this.txtBolsterHeight.TabIndex = 2;
-            this.txtBolsterHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtBolsterWidth
-            // 
-            this.txtBolsterWidth.Location = new System.Drawing.Point(25, 67);
-            this.txtBolsterWidth.Name = "txtBolsterWidth";
-            this.txtBolsterWidth.Size = new System.Drawing.Size(142, 25);
-            this.txtBolsterWidth.TabIndex = 1;
-            this.txtBolsterWidth.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 96);
+            this.label2.Location = new System.Drawing.Point(22, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 18);
+            this.label2.Size = new System.Drawing.Size(140, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "TXT_BOLSTER_DEPTH";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 45);
+            this.label1.Location = new System.Drawing.Point(19, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 18);
+            this.label1.Size = new System.Drawing.Size(149, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "TXT_BOLSTER_LENGTH";
+            // 
+            // txtPressKanagataHeight
+            // 
+            this.txtPressKanagataHeight.AllowMinus = true;
+            this.txtPressKanagataHeight.AllowSpace = false;
+            this.txtPressKanagataHeight.AllowString = false;
+            this.txtPressKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtPressKanagataHeight.IsInteger = true;
+            this.txtPressKanagataHeight.Location = new System.Drawing.Point(217, 77);
+            this.txtPressKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPressKanagataHeight.MaxLength = 10;
+            this.txtPressKanagataHeight.Name = "txtPressKanagataHeight";
+            this.txtPressKanagataHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtPressKanagataHeight.TabIndex = 7;
+            this.txtPressKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPressKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtUnderKanagataHeight
+            // 
+            this.txtUnderKanagataHeight.AllowMinus = true;
+            this.txtUnderKanagataHeight.AllowSpace = false;
+            this.txtUnderKanagataHeight.AllowString = false;
+            this.txtUnderKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtUnderKanagataHeight.IsInteger = true;
+            this.txtUnderKanagataHeight.Location = new System.Drawing.Point(11, 77);
+            this.txtUnderKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnderKanagataHeight.MaxLength = 10;
+            this.txtUnderKanagataHeight.Name = "txtUnderKanagataHeight";
+            this.txtUnderKanagataHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtUnderKanagataHeight.TabIndex = 5;
+            this.txtUnderKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUnderKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtPressKanagataWidth
+            // 
+            this.txtPressKanagataWidth.AllowMinus = true;
+            this.txtPressKanagataWidth.AllowSpace = false;
+            this.txtPressKanagataWidth.AllowString = false;
+            this.txtPressKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtPressKanagataWidth.IsInteger = true;
+            this.txtPressKanagataWidth.Location = new System.Drawing.Point(217, 35);
+            this.txtPressKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPressKanagataWidth.MaxLength = 10;
+            this.txtPressKanagataWidth.Name = "txtPressKanagataWidth";
+            this.txtPressKanagataWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtPressKanagataWidth.TabIndex = 6;
+            this.txtPressKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPressKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtUnderKanagataWidth
+            // 
+            this.txtUnderKanagataWidth.AllowMinus = true;
+            this.txtUnderKanagataWidth.AllowSpace = false;
+            this.txtUnderKanagataWidth.AllowString = false;
+            this.txtUnderKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtUnderKanagataWidth.IsInteger = true;
+            this.txtUnderKanagataWidth.Location = new System.Drawing.Point(12, 36);
+            this.txtUnderKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnderKanagataWidth.MaxLength = 10;
+            this.txtUnderKanagataWidth.Name = "txtUnderKanagataWidth";
+            this.txtUnderKanagataWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtUnderKanagataWidth.TabIndex = 4;
+            this.txtUnderKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUnderKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtBolsterHeight
+            // 
+            this.txtBolsterHeight.AllowMinus = true;
+            this.txtBolsterHeight.AllowSpace = false;
+            this.txtBolsterHeight.AllowString = false;
+            this.txtBolsterHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtBolsterHeight.IsInteger = true;
+            this.txtBolsterHeight.Location = new System.Drawing.Point(25, 97);
+            this.txtBolsterHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBolsterHeight.MaxLength = 10;
+            this.txtBolsterHeight.Name = "txtBolsterHeight";
+            this.txtBolsterHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtBolsterHeight.TabIndex = 2;
+            this.txtBolsterHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBolsterHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtBolsterWidth
+            // 
+            this.txtBolsterWidth.AllowMinus = true;
+            this.txtBolsterWidth.AllowSpace = false;
+            this.txtBolsterWidth.AllowString = false;
+            this.txtBolsterWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtBolsterWidth.IsInteger = true;
+            this.txtBolsterWidth.Location = new System.Drawing.Point(25, 56);
+            this.txtBolsterWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBolsterWidth.MaxLength = 10;
+            this.txtBolsterWidth.Name = "txtBolsterWidth";
+            this.txtBolsterWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtBolsterWidth.TabIndex = 1;
+            this.txtBolsterWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBolsterWidth.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // gridSetting
             // 
@@ -238,6 +301,14 @@
             this.gridSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnChannel,
@@ -247,14 +318,13 @@
             this.ColumnSensorNumber,
             this.ColumnMeasureDirection,
             this.ColumnMeasureTarget});
-            this.gridSetting.Location = new System.Drawing.Point(12, 181);
-            this.gridSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridSetting.Location = new System.Drawing.Point(12, 151);
             this.gridSetting.MultiSelect = false;
             this.gridSetting.Name = "gridSetting";
             this.gridSetting.RowHeadersVisible = false;
             this.gridSetting.RowTemplate.Height = 21;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSetting.Size = new System.Drawing.Size(687, 267);
+            this.gridSetting.Size = new System.Drawing.Size(687, 235);
             this.gridSetting.TabIndex = 0;
             this.gridSetting.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSetting_CellEndEdit);
             this.gridSetting.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gridSetting_CellValidating);
@@ -263,7 +333,10 @@
             // 
             // ColumnChannel
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnChannel.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnChannel.HeaderText = "TXT_CHANNEL";
+            this.ColumnChannel.MaxInputLength = 2;
             this.ColumnChannel.Name = "ColumnChannel";
             this.ColumnChannel.ReadOnly = true;
             this.ColumnChannel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -271,6 +344,8 @@
             // 
             // ColumnType
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnType.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnType.HeaderText = "TXT_BOARD_SPEC";
             this.ColumnType.Name = "ColumnType";
             this.ColumnType.ReadOnly = true;
@@ -279,18 +354,24 @@
             // 
             // ColumnPointX
             // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnPointX.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnPointX.HeaderText = "TXT_X_POSITION";
             this.ColumnPointX.Name = "ColumnPointX";
             this.ColumnPointX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnPointY
             // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnPointY.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnPointY.HeaderText = "TXT_Z_POSITION";
             this.ColumnPointY.Name = "ColumnPointY";
             this.ColumnPointY.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnSensorNumber
             // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnSensorNumber.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColumnSensorNumber.HeaderText = "TXT_POSITION";
             this.ColumnSensorNumber.Name = "ColumnSensorNumber";
             this.ColumnSensorNumber.ReadOnly = true;
@@ -299,12 +380,16 @@
             // 
             // ColumnMeasureDirection
             // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnMeasureDirection.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColumnMeasureDirection.HeaderText = "TXT_WAY";
             this.ColumnMeasureDirection.Name = "ColumnMeasureDirection";
             this.ColumnMeasureDirection.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnMeasureTarget
             // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnMeasureTarget.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColumnMeasureTarget.DisplayStyleForCurrentCellOnly = true;
             this.ColumnMeasureTarget.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ColumnMeasureTarget.HeaderText = "TXT_TARGET";
@@ -314,16 +399,16 @@
             // 
             // frmLocationSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(711, 501);
+            this.ClientSize = new System.Drawing.Size(711, 430);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.gridSetting);
-            this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmLocationSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TXT_TITLE_SENSOR_LOCATION_SETTING";
@@ -348,16 +433,16 @@
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.CheckBox chkDispKanagata;
-		private System.Windows.Forms.TextBox txtPressKanagataHeight;
-		private System.Windows.Forms.TextBox txtUnderKanagataHeight;
+		private RM_3000.Controls.NumericTextBox txtPressKanagataHeight;
+        private RM_3000.Controls.NumericTextBox txtUnderKanagataHeight;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox txtPressKanagataWidth;
-		private System.Windows.Forms.TextBox txtUnderKanagataWidth;
+        private RM_3000.Controls.NumericTextBox txtPressKanagataWidth;
+		private RM_3000.Controls.NumericTextBox txtUnderKanagataWidth;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox txtBolsterHeight;
-		private System.Windows.Forms.TextBox txtBolsterWidth;
+		private RM_3000.Controls.NumericTextBox txtBolsterHeight;
+		private RM_3000.Controls.NumericTextBox txtBolsterWidth;
 		private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChannel;

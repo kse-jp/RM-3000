@@ -1072,6 +1072,11 @@ namespace RM_3000.Forms.Measurement
         /// <returns>true : matched / false : unmatched</returns>
         private bool CheckMatchConditionGraphTag(int tagNo1, int tagNo2)
         {
+            if (tagNo1 == -1 || tagNo2 == -1)
+            {
+                return false;
+            }
+
             if (this.chSetting != null && this.chSetting.ChannelSettingList != null)
             {
                 if (this.relationSetting != null && this.relationSetting.RelationList != null)

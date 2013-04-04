@@ -131,8 +131,10 @@ namespace RM_3000.Controls
             // 
             // NumericTextBox
             // 
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ResumeLayout(false);
+
         }
         /// <summary>
         /// Check valid input number

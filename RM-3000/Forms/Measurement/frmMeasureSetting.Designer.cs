@@ -30,6 +30,7 @@
         {
             this.grpMain = new System.Windows.Forms.GroupBox();
             this.chDetailMode1 = new System.Windows.Forms.CheckBox();
+
             this.txtSampling = new RM_3000.Controls.NumericTextBox();
             this.txtMeasureTime = new RM_3000.Controls.NumericTextBox();
             this.lblUnitSecond = new System.Windows.Forms.Label();
@@ -73,12 +74,11 @@
             this.grpMain.Controls.Add(this.lblMeasureTime);
             this.grpMain.Controls.Add(this.lblSamplingTime);
             this.grpMain.Controls.Add(this.cboSampling);
-            this.grpMain.Font = new System.Drawing.Font("メイリオ", 9F);
-            this.grpMain.Location = new System.Drawing.Point(12, 13);
+            this.grpMain.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.grpMain.Location = new System.Drawing.Point(12, 11);
             this.grpMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpMain.Size = new System.Drawing.Size(203, 256);
+            this.grpMain.Size = new System.Drawing.Size(203, 213);
             this.grpMain.TabIndex = 0;
             this.grpMain.TabStop = false;
             this.grpMain.Text = "TXT_MODE1";
@@ -124,12 +124,43 @@
             this.txtMeasureTime.Visible = false;
             this.txtMeasureTime.TextChanged += new System.EventHandler(this.txtMeasureTime_TextChanged);
             // 
+            // txtSampling
+            // 
+            this.txtSampling.AllowMinus = false;
+            this.txtSampling.AllowSpace = false;
+            this.txtSampling.AllowString = false;
+            this.txtSampling.IsInteger = true;
+            this.txtSampling.Location = new System.Drawing.Point(26, 45);
+            this.txtSampling.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSampling.MaxLength = 8;
+            this.txtSampling.Name = "txtSampling";
+            this.txtSampling.Size = new System.Drawing.Size(112, 23);
+            this.txtSampling.TabIndex = 1;
+            this.txtSampling.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSampling.TextChanged += new System.EventHandler(this.txtSampling_TextChanged);
+            // 
+            // txtMeasureTime
+            // 
+            this.txtMeasureTime.AllowMinus = false;
+            this.txtMeasureTime.AllowSpace = false;
+            this.txtMeasureTime.AllowString = false;
+            this.txtMeasureTime.IsInteger = true;
+            this.txtMeasureTime.Location = new System.Drawing.Point(27, 100);
+            this.txtMeasureTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMeasureTime.MaxLength = 4;
+            this.txtMeasureTime.Name = "txtMeasureTime";
+            this.txtMeasureTime.Size = new System.Drawing.Size(111, 23);
+            this.txtMeasureTime.TabIndex = 5;
+            this.txtMeasureTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMeasureTime.Visible = false;
+            this.txtMeasureTime.TextChanged += new System.EventHandler(this.txtMeasureTime_TextChanged);
+            // 
             // lblUnitSecond
             // 
-            this.lblUnitSecond.Font = new System.Drawing.Font("メイリオ", 9F);
-            this.lblUnitSecond.Location = new System.Drawing.Point(144, 124);
+            this.lblUnitSecond.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblUnitSecond.Location = new System.Drawing.Point(144, 103);
             this.lblUnitSecond.Name = "lblUnitSecond";
-            this.lblUnitSecond.Size = new System.Drawing.Size(53, 18);
+            this.lblUnitSecond.Size = new System.Drawing.Size(53, 15);
             this.lblUnitSecond.TabIndex = 6;
             this.lblUnitSecond.Text = "TXT_UNIT_SECOND";
             this.lblUnitSecond.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,10 +168,10 @@
             // 
             // lblUnit
             // 
-            this.lblUnit.Font = new System.Drawing.Font("メイリオ", 9F);
-            this.lblUnit.Location = new System.Drawing.Point(144, 57);
+            this.lblUnit.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblUnit.Location = new System.Drawing.Point(144, 47);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(53, 18);
+            this.lblUnit.Size = new System.Drawing.Size(53, 15);
             this.lblUnit.TabIndex = 3;
             this.lblUnit.Text = "TXT_NUMBER_OF_TIMES";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,10 +179,10 @@
             // lblMeasureTime
             // 
             this.lblMeasureTime.AutoSize = true;
-            this.lblMeasureTime.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblMeasureTime.Location = new System.Drawing.Point(6, 99);
+            this.lblMeasureTime.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblMeasureTime.Location = new System.Drawing.Point(6, 82);
             this.lblMeasureTime.Name = "lblMeasureTime";
-            this.lblMeasureTime.Size = new System.Drawing.Size(167, 18);
+            this.lblMeasureTime.Size = new System.Drawing.Size(166, 15);
             this.lblMeasureTime.TabIndex = 4;
             this.lblMeasureTime.Text = "TXT_MEASUREMENT_TIME";
             this.lblMeasureTime.Visible = false;
@@ -159,20 +190,22 @@
             // lblSamplingTime
             // 
             this.lblSamplingTime.AutoSize = true;
-            this.lblSamplingTime.Font = new System.Drawing.Font("メイリオ", 9F);
-            this.lblSamplingTime.Location = new System.Drawing.Point(6, 32);
+            this.lblSamplingTime.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSamplingTime.Location = new System.Drawing.Point(6, 27);
             this.lblSamplingTime.Name = "lblSamplingTime";
-            this.lblSamplingTime.Size = new System.Drawing.Size(152, 18);
+            this.lblSamplingTime.Size = new System.Drawing.Size(151, 15);
             this.lblSamplingTime.TabIndex = 0;
             this.lblSamplingTime.Text = "TXT_SAMPLING_COUNT";
             // 
             // cboSampling
             // 
             this.cboSampling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSampling.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cboSampling.FormattingEnabled = true;
-            this.cboSampling.Location = new System.Drawing.Point(26, 53);
+            this.cboSampling.Location = new System.Drawing.Point(26, 44);
+            this.cboSampling.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboSampling.Name = "cboSampling";
-            this.cboSampling.Size = new System.Drawing.Size(112, 26);
+            this.cboSampling.Size = new System.Drawing.Size(112, 23);
             this.cboSampling.TabIndex = 2;
             this.cboSampling.SelectedIndexChanged += new System.EventHandler(this.cboSampling_SelectedIndexChanged);
             // 
@@ -183,7 +216,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(17, 276);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(89, 34);
+            this.btnUpdate.Size = new System.Drawing.Size(89, 28);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "TXT_UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -197,7 +230,7 @@
             this.btnCancel.Location = new System.Drawing.Point(112, 276);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 34);
+            this.btnCancel.Size = new System.Drawing.Size(89, 28);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "TXT_CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -474,7 +507,7 @@
             // 
             // frmMeasureSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(223, 319);
@@ -482,9 +515,8 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.grpMain);
-            this.Font = new System.Drawing.Font("メイリオ", 9F);
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMeasureSetting";

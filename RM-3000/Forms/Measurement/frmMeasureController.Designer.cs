@@ -57,7 +57,7 @@
             this.lblDuringMeasurementMode.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDuringMeasurementMode.Location = new System.Drawing.Point(0, 0);
             this.lblDuringMeasurementMode.Name = "lblDuringMeasurementMode";
-            this.lblDuringMeasurementMode.Size = new System.Drawing.Size(68, 27);
+            this.lblDuringMeasurementMode.Size = new System.Drawing.Size(68, 22);
             this.lblDuringMeasurementMode.TabIndex = 0;
             this.lblDuringMeasurementMode.Text = "TXT_MEASUREMENT_MAIN";
             this.lblDuringMeasurementMode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -74,9 +74,8 @@
             this.panel1.Controls.Add(this.lblMeasureTime);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(998, 27);
+            this.panel1.Size = new System.Drawing.Size(998, 22);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -84,7 +83,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
             this.label2.Location = new System.Drawing.Point(333, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 27);
+            this.label2.Size = new System.Drawing.Size(201, 22);
             this.label2.TabIndex = 5;
             this.label2.Text = "TXT_MEASUREMENT_COUNT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -94,7 +93,7 @@
             this.lblMeasureCount.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblMeasureCount.Location = new System.Drawing.Point(534, 0);
             this.lblMeasureCount.Name = "lblMeasureCount";
-            this.lblMeasureCount.Size = new System.Drawing.Size(94, 27);
+            this.lblMeasureCount.Size = new System.Drawing.Size(94, 22);
             this.lblMeasureCount.TabIndex = 4;
             this.lblMeasureCount.Text = "--------";
             this.lblMeasureCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -114,7 +113,7 @@
             this.lblMode.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblMode.Location = new System.Drawing.Point(68, 0);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(145, 27);
+            this.lblMode.Size = new System.Drawing.Size(145, 22);
             this.lblMode.TabIndex = 3;
             this.lblMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -123,7 +122,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Location = new System.Drawing.Point(703, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 27);
+            this.label1.Size = new System.Drawing.Size(201, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "TXT_MEASUREMENT_TIME";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,7 +132,7 @@
             this.lblMeasureTime.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblMeasureTime.Location = new System.Drawing.Point(904, 0);
             this.lblMeasureTime.Name = "lblMeasureTime";
-            this.lblMeasureTime.Size = new System.Drawing.Size(94, 27);
+            this.lblMeasureTime.Size = new System.Drawing.Size(94, 22);
             this.lblMeasureTime.TabIndex = 1;
             this.lblMeasureTime.Text = "--:--:--.---";
             this.lblMeasureTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,15 +151,17 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 80);
+            this.panel2.Size = new System.Drawing.Size(1000, 67);
             this.panel2.TabIndex = 2;
             // 
             // picbtnExit
             // 
-            this.picbtnExit.Location = new System.Drawing.Point(187, 28);
+            this.picbtnExit.Location = new System.Drawing.Point(187, 23);
+            this.picbtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbtnExit.Name = "picbtnExit";
-            this.picbtnExit.Size = new System.Drawing.Size(48, 48);
+            this.picbtnExit.Size = new System.Drawing.Size(48, 40);
             this.picbtnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picbtnExit.TabIndex = 8;
             this.picbtnExit.TabStop = false;
@@ -168,9 +169,10 @@
             // 
             // picbtnStop
             // 
-            this.picbtnStop.Location = new System.Drawing.Point(118, 28);
+            this.picbtnStop.Location = new System.Drawing.Point(118, 23);
+            this.picbtnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbtnStop.Name = "picbtnStop";
-            this.picbtnStop.Size = new System.Drawing.Size(48, 48);
+            this.picbtnStop.Size = new System.Drawing.Size(48, 40);
             this.picbtnStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picbtnStop.TabIndex = 7;
             this.picbtnStop.TabStop = false;
@@ -178,9 +180,10 @@
             // 
             // picbtnStart
             // 
-            this.picbtnStart.Location = new System.Drawing.Point(49, 28);
+            this.picbtnStart.Location = new System.Drawing.Point(49, 23);
+            this.picbtnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbtnStart.Name = "picbtnStart";
-            this.picbtnStart.Size = new System.Drawing.Size(48, 48);
+            this.picbtnStart.Size = new System.Drawing.Size(48, 40);
             this.picbtnStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picbtnStart.TabIndex = 6;
             this.picbtnStart.TabStop = false;
@@ -203,9 +206,10 @@
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.Location = new System.Drawing.Point(209, 34);
+            this.btnExit.Location = new System.Drawing.Point(209, 28);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 33);
+            this.btnExit.Size = new System.Drawing.Size(75, 27);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "TXT_END";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -216,9 +220,10 @@
             // 
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnStop.Location = new System.Drawing.Point(116, 34);
+            this.btnStop.Location = new System.Drawing.Point(116, 28);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 33);
+            this.btnStop.Size = new System.Drawing.Size(75, 27);
             this.btnStop.TabIndex = 3;
             this.btnStop.Text = "TXT_STOP";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -229,9 +234,10 @@
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnStart.Location = new System.Drawing.Point(23, 34);
+            this.btnStart.Location = new System.Drawing.Point(23, 28);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 33);
+            this.btnStart.Size = new System.Drawing.Size(75, 27);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "TXT_START";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -252,14 +258,13 @@
             // 
             // frmMeasureController
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 80);
+            this.ClientSize = new System.Drawing.Size(1000, 67);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMeasureController";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "計測中　モード{0}";

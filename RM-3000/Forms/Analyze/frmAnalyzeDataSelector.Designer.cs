@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,6 +43,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -57,7 +57,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDataList = new System.Windows.Forms.DataGridView();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,7 +110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -134,15 +133,7 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataList.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dgvDataList.Location = new System.Drawing.Point(12, 98);
+            this.dgvDataList.Location = new System.Drawing.Point(14, 114);
             this.dgvDataList.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvDataList.MultiSelect = false;
             this.dgvDataList.Name = "dgvDataList";
@@ -150,7 +141,7 @@
             this.dgvDataList.RowHeadersVisible = false;
             this.dgvDataList.RowTemplate.Height = 21;
             this.dgvDataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDataList.Size = new System.Drawing.Size(962, 355);
+            this.dgvDataList.Size = new System.Drawing.Size(1122, 415);
             this.dgvDataList.TabIndex = 1;
             this.dgvDataList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataList_CellDoubleClick);
             // 
@@ -332,9 +323,9 @@
             // lblFileName
             // 
             this.lblFileName.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblFileName.Location = new System.Drawing.Point(12, 27);
+            this.lblFileName.Location = new System.Drawing.Point(14, 31);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(148, 18);
+            this.lblFileName.Size = new System.Drawing.Size(173, 22);
             this.lblFileName.TabIndex = 2;
             this.lblFileName.Text = "TXT_SEARCH_FOLDER_NAME";
             this.lblFileName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -342,19 +333,19 @@
             // txtFileName
             // 
             this.txtFileName.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtFileName.Location = new System.Drawing.Point(166, 22);
+            this.txtFileName.Location = new System.Drawing.Point(194, 26);
             this.txtFileName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(466, 23);
+            this.txtFileName.Size = new System.Drawing.Size(543, 23);
             this.txtFileName.TabIndex = 3;
             this.txtFileName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFileName_KeyDown);
             // 
             // btnFolderSelector
             // 
             this.btnFolderSelector.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnFolderSelector.Location = new System.Drawing.Point(638, 22);
+            this.btnFolderSelector.Location = new System.Drawing.Point(744, 26);
             this.btnFolderSelector.Name = "btnFolderSelector";
-            this.btnFolderSelector.Size = new System.Drawing.Size(37, 23);
+            this.btnFolderSelector.Size = new System.Drawing.Size(43, 27);
             this.btnFolderSelector.TabIndex = 4;
             this.btnFolderSelector.Text = "...";
             this.btnFolderSelector.UseVisualStyleBackColor = true;
@@ -363,9 +354,9 @@
             // rdoMode1
             // 
             this.rdoMode1.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rdoMode1.Location = new System.Drawing.Point(112, 66);
+            this.rdoMode1.Location = new System.Drawing.Point(131, 78);
             this.rdoMode1.Name = "rdoMode1";
-            this.rdoMode1.Size = new System.Drawing.Size(104, 24);
+            this.rdoMode1.Size = new System.Drawing.Size(121, 28);
             this.rdoMode1.TabIndex = 5;
             this.rdoMode1.Text = "TXT_MODE1";
             this.rdoMode1.UseVisualStyleBackColor = true;
@@ -374,9 +365,9 @@
             // rdoMode2
             // 
             this.rdoMode2.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rdoMode2.Location = new System.Drawing.Point(222, 66);
+            this.rdoMode2.Location = new System.Drawing.Point(259, 78);
             this.rdoMode2.Name = "rdoMode2";
-            this.rdoMode2.Size = new System.Drawing.Size(112, 24);
+            this.rdoMode2.Size = new System.Drawing.Size(131, 28);
             this.rdoMode2.TabIndex = 6;
             this.rdoMode2.Text = "TXT_MODE2";
             this.rdoMode2.UseVisualStyleBackColor = true;
@@ -385,9 +376,9 @@
             // rdoMode3
             // 
             this.rdoMode3.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rdoMode3.Location = new System.Drawing.Point(340, 66);
+            this.rdoMode3.Location = new System.Drawing.Point(397, 78);
             this.rdoMode3.Name = "rdoMode3";
-            this.rdoMode3.Size = new System.Drawing.Size(104, 24);
+            this.rdoMode3.Size = new System.Drawing.Size(121, 28);
             this.rdoMode3.TabIndex = 7;
             this.rdoMode3.Text = "TXT_MODE3";
             this.rdoMode3.UseVisualStyleBackColor = true;
@@ -397,9 +388,9 @@
             // 
             this.rdoAll.Checked = true;
             this.rdoAll.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rdoAll.Location = new System.Drawing.Point(18, 66);
+            this.rdoAll.Location = new System.Drawing.Point(21, 78);
             this.rdoAll.Name = "rdoAll";
-            this.rdoAll.Size = new System.Drawing.Size(88, 24);
+            this.rdoAll.Size = new System.Drawing.Size(103, 28);
             this.rdoAll.TabIndex = 8;
             this.rdoAll.TabStop = true;
             this.rdoAll.Text = "TXT_ALLMODE";
@@ -410,9 +401,9 @@
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnOK.Location = new System.Drawing.Point(790, 461);
+            this.btnOK.Location = new System.Drawing.Point(922, 537);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(89, 40);
+            this.btnOK.Size = new System.Drawing.Size(104, 46);
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "TXT_OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -422,9 +413,9 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnCancel.Location = new System.Drawing.Point(885, 461);
+            this.btnCancel.Location = new System.Drawing.Point(1032, 537);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 40);
+            this.btnCancel.Size = new System.Drawing.Size(104, 46);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "TXT_CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -434,9 +425,9 @@
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnDelete.Location = new System.Drawing.Point(18, 461);
+            this.btnDelete.Location = new System.Drawing.Point(21, 537);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(89, 40);
+            this.btnDelete.Size = new System.Drawing.Size(104, 46);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "TXT_DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -445,8 +436,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewTextBoxColumn1.FillWeight = 10F;
             this.dataGridViewTextBoxColumn1.HeaderText = "TXT_MEASDATA_FILE_NAME";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -457,8 +448,8 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTextBoxColumn2.FillWeight = 50F;
             this.dataGridViewTextBoxColumn2.HeaderText = "TXT_MEASDATA_DATE";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -469,8 +460,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewTextBoxColumn3.FillWeight = 10F;
             this.dataGridViewTextBoxColumn3.HeaderText = "1";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -481,8 +472,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewTextBoxColumn4.FillWeight = 1F;
             this.dataGridViewTextBoxColumn4.HeaderText = "1";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -493,8 +484,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewTextBoxColumn5.FillWeight = 10F;
             this.dataGridViewTextBoxColumn5.HeaderText = "3";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -505,8 +496,8 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewTextBoxColumn7.FillWeight = 10F;
             this.dataGridViewTextBoxColumn7.HeaderText = "5";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
@@ -517,8 +508,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewTextBoxColumn8.FillWeight = 10F;
             this.dataGridViewTextBoxColumn8.HeaderText = "6";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -529,8 +520,8 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewTextBoxColumn9.FillWeight = 10F;
             this.dataGridViewTextBoxColumn9.HeaderText = "7";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
@@ -541,8 +532,8 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewTextBoxColumn10.FillWeight = 10F;
             this.dataGridViewTextBoxColumn10.HeaderText = "8";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -553,8 +544,8 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewTextBoxColumn11.FillWeight = 10F;
             this.dataGridViewTextBoxColumn11.HeaderText = "9";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -565,8 +556,8 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewTextBoxColumn12.FillWeight = 10F;
             this.dataGridViewTextBoxColumn12.HeaderText = "10";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -577,8 +568,8 @@
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewTextBoxColumn13.FillWeight = 1F;
             this.dataGridViewTextBoxColumn13.HeaderText = "10";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
@@ -589,8 +580,8 @@
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewTextBoxColumn14.FillWeight = 1F;
             this.dataGridViewTextBoxColumn14.HeaderText = "10";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
@@ -601,8 +592,8 @@
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn15.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn15.DefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewTextBoxColumn15.FillWeight = 10F;
             this.dataGridViewTextBoxColumn15.HeaderText = "10";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
@@ -612,9 +603,9 @@
             // 
             // frmAnalyzeDataSelector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 506);
+            this.ClientSize = new System.Drawing.Size(1150, 590);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -626,6 +617,7 @@
             this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.dgvDataList);
+            this.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Name = "frmAnalyzeDataSelector";
             this.Text = "TXT_SEARCH_ANALYSIS_FILE";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAnalyzeDataSelector_FormClosed);

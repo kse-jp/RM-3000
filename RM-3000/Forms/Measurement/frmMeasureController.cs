@@ -200,6 +200,40 @@ namespace RM_3000.Forms.Parts
 
         }
 
+        public void SetCondition(bool bCond_MeasurePause)
+        {
+            if (InvokeRequired)
+            {
+                this.BeginInvoke((MethodInvoker)delegate() { SetCondition(bCond_MeasurePause); });
+                return;
+            }
+
+            if (bCond_MeasurePause)
+            {
+                lblStatus.Text = AppResource.GetString("TXT_MEAS_RECPAUSE");
+                lblStatus.BackColor = Color.Orange;
+            }
+            else
+            {
+                switch (this.measureStatus)
+                {
+                    case MeasureStatus.Start:
+                        lblStatus.Text = AppResource.GetString("TXT_MEAS_RUN");
+                        lblStatus.BackColor = Color.Cyan;
+                        break;
+                    case MeasureStatus.Stop:
+                        lblStatus.Text = AppResource.GetString("TXT_MEAS_PAUSE");
+                        lblStatus.BackColor = Color.Yellow;
+                        break;
+                    case MeasureStatus.Exit:
+                        lblStatus.Text = AppResource.GetString("TXT_MEAS_STOP");
+                        lblStatus.BackColor = SystemColors.Control;
+                        break;
+
+                }
+            }
+        }
+
         #endregion
 
         #region private method

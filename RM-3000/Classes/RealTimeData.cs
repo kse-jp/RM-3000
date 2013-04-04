@@ -41,6 +41,14 @@ namespace RM_3000
         public static DateTime Cond_StopTime_Mode1;
 
         /// <summary>
+        /// 条件による測定一時停止状態フラグ
+        /// </summary>
+        public static bool bCond_MeasurePause
+        {
+            get { return (!bMode1_Now_Record && RM_3000.Sequences.TestSequence.GetInstance().Mode == Sequences.TestSequence.ModeType.Mode1); }
+        }
+
+        /// <summary>
         /// 平均算出用保持領域
         /// </summary>
         public static List<SampleData> TmpAverage_Samples = new List<SampleData>();
@@ -108,13 +116,67 @@ namespace RM_3000
                 {
                     //モード１の条件に入っているか？
                     bMode1_Now_Record = Judge_Mode1_Condition(realdata);
+
+                    //平均測定の場合
+                    if (SystemSetting.MeasureSetting.Mode1_MeasCondition.MeasConditionType == Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS)
+                    {
+                        // 保存タイミング = 平均演算をする
+                        if (bMode1_Now_Record)
+                        {
+                            for (int shotindex = 0 ; shotindex < TmpAverage_Samples.Count ; shotindex++)
+                            {
+                                SampleData tmp = TmpAverage_Samples[shotindex];
+
+                                for (int i = 0; i < tmp.ChannelDatas.Length; i++)
+                                {
+                                    if (realdata.ChannelDatas[i] == null) continue;
+
+                                    if (realdata.ChannelDatas[i].DataValues is Value_Standard)
+                                    {
+                                        ((Value_Standard)realdata.ChannelDatas[i].DataValues).Value += ((Value_Standard)tmp.ChannelDatas[i].DataValues).Value;
+
+                                        //全て足しこんだなら、平均演算
+                                        if (shotindex + 1 == TmpAverage_Samples.Count)
+                                            ((Value_Standard)realdata.ChannelDatas[i].DataValues).Value /= TmpAverage_Samples.Count + 1;
+                                    }
+                                    else if (realdata.ChannelDatas[i].DataValues is Value_MaxMin)
+                                    {
+                                        ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MaxValue += ((Value_MaxMin)tmp.ChannelDatas[i].DataValues).MaxValue;
+                                        ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MinValue += ((Value_MaxMin)tmp.ChannelDatas[i].DataValues).MinValue;
+
+                                        //全て足しこんだなら、平均演算
+                                        if (shotindex + 1 == TmpAverage_Samples.Count)
+                                        {
+                                            ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MaxValue /= TmpAverage_Samples.Count + 1;
+                                            ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MinValue /= TmpAverage_Samples.Count + 1;
+                                        }
+                                    }
+                                }
+                            }
+
+                            //溜め込み用をクリア
+                            TmpAverage_Samples.Clear();
+                            GC.Collect();
+                        }
+                        // 保存タイミングではない
+                        else
+                        {
+                            //平均処理用に溜め込み
+                            TmpAverage_Samples.Add(realdata);
+                        }
+                    }                
                 }
 
-                if (bRecord && bMode1_Now_Record)
+                //保存指示ありかつ、Mode1ならばモード１判定OKかを判別
+                if (bRecord && (bMode1_Now_Record || RM_3000.Sequences.TestSequence.GetInstance().Mode != Sequences.TestSequence.ModeType.Mode1))
                 {
                     //テストデータとして記憶
                     RealMeasureData.SampleDatas.Add(realdata);
                 }
+
+                //モード1で保存タイミングではない時は、描画にもためない。
+                if (bCond_MeasurePause)
+                    return;
 
                 SampleData realdata_sample = (SampleData)realdata.Clone();
 
@@ -182,7 +244,7 @@ namespace RM_3000
         /// <returns></returns>
         private static bool Judge_Mode1_Condition(SampleData realdata)
         {
-            bool ret = false;
+            bool ret = bMode1_Now_Record;
 
             Mode1_MeasCondition cond = SystemSetting.MeasureSetting.Mode1_MeasCondition;
 
@@ -193,20 +255,109 @@ namespace RM_3000
                     break;
 
                 case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS:
-                    ret = true;
+
+                    //一定間隔取得時はショット数をデクリメントし、0以下になったら保存とする。
+                    if (Cond_ShotCount_Mode1 <= 0)
+                    {
+                        Cond_ShotCount_Mode1 = cond.Interval_count;
+                        ret = true;
+                    }
+                    else
+                    {
+                        ret = false;
+                    }
+
+                    Cond_ShotCount_Mode1--;
+                    
                     break;
 
                 case Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS:
-                    ret = true;
+
+                    //平均取得時はショット数をインクリメントし、保存ON時に本関数の外側で演算。
+                    Cond_ShotCount_Mode1++;
+
+                    if (Cond_ShotCount_Mode1 >= cond.Average_count)
+                    {
+                        ret = true;
+                        Cond_ShotCount_Mode1 = 0;
+                    }
+                    else
+                    {
+                        ret = false;
+                    }
+
                     break;
 
                 case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS:
-                    if ((realdata.SampleTime - Cond_StopTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
-                        ret = true;
+
+                    //測定時
+                    if (bMode1_Now_Record)
+                    {
+                        if (Cond_ShotCount_Mode1 >= cond.Inverval_time2shot_shots)
+                        {
+                            Cond_ShotCount_Mode1 = 0;
+                            Cond_StopTime_Mode1 = realdata.SampleTime;
+                            ret = false;
+                        }
+                        //測定ショット数よりも次回測定間隔が先に来てしまっている場合
+                        else if ((realdata.SampleTime - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
+                        {
+                            //測定ショット数をクリアし測定のままとする。
+                            Cond_ShotCount_Mode1 = 0;
+                            Cond_StartTime_Mode1 = realdata.SampleTime;
+                            Cond_ShotCount_Mode1++;
+                        }
+                        else
+                        {
+                            Cond_ShotCount_Mode1++;
+                        }
+
+                    }
+                    //未測定時
+                    else
+                    {
+                        //時間経過をしていれば
+                        if ((realdata.SampleTime - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
+                        {
+                            Cond_StartTime_Mode1 = realdata.SampleTime;
+
+                            Cond_ShotCount_Mode1 = 1;
+
+                            ret = true;
+                        }
+                    }
                     break;
 
                 case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME:
-                    ret = true;
+                    //測定時
+                    if (bMode1_Now_Record)
+                    {
+                        //時間経過をしていれば
+                        if ((realdata.SampleTime - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2time_meastime)
+                        {
+                            Cond_ShotCount_Mode1 = 0;
+                            Cond_StopTime_Mode1 = realdata.SampleTime;
+
+                            ret = false;
+                        }
+                        else
+                        {
+                            Cond_ShotCount_Mode1++;
+                        }
+
+                    }
+                    //未測定時
+                    else
+                    {
+                        //時間経過をしていれば
+                        if ((realdata.SampleTime - Cond_StopTime_Mode1).TotalMinutes >= cond.Inverval_time2time_stoptime)
+                        {
+                            Cond_StartTime_Mode1 = realdata.SampleTime;
+                            Cond_ShotCount_Mode1++;
+                            ret = true;
+                        }
+                    }
+
                     break;
             }
 
@@ -389,6 +540,13 @@ namespace RM_3000
             }
 
             Samples.Clear();
+            TmpAverage_Samples.Clear();
+
+            //モード１条件の初期化
+            Cond_ShotCount_Mode1 = 0;
+            Cond_StartTime_Mode1 = RealMeasureData.StartTime;
+            Cond_StopTime_Mode1 = RealMeasureData.StartTime;
+
             receiveCount = 0;
 
             return true;
@@ -481,6 +639,9 @@ namespace RM_3000
 
             if(Samples != null)
                 Samples.Clear();
+
+            if (TmpAverage_Samples != null)
+                TmpAverage_Samples.Clear();
 
             GC.Collect();
         }

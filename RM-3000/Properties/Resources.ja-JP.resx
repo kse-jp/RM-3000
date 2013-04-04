@@ -1304,4 +1304,20 @@
     <value>モード１測定条件</value>
     <comment>モード１測定条件</comment>
   </data>
+  <data name="TXT_MEAS_PAUSE" xml:space="preserve">
+    <value>一時停止</value>
+    <comment>一時停止</comment>
+  </data>
+  <data name="TXT_MEAS_RECPAUSE" xml:space="preserve">
+    <value>記録停止中</value>
+    <comment>記録停止中</comment>
+  </data>
+  <data name="TXT_MEAS_RUN" xml:space="preserve">
+    <value>記録中</value>
+    <comment>記録中</comment>
+  </data>
+  <data name="TXT_MEAS_STOP" xml:space="preserve">
+    <value>停止</value>
+    <comment>停止</comment>
+  </data>
 </root>

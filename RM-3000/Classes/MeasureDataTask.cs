@@ -24,6 +24,15 @@ namespace RM_3000.Classes
         /// 測定データ受信イベント
         /// </summary>
         public event DataReceivedDelegate DataReceived = null;
+        /// <summary>
+        /// 状態通知デリゲート
+        /// </summary>
+        /// <param name="MeasurePause"></param>
+        public delegate void GotConditionDelegate(bool bCond_MeasurePause);
+        /// <summary>
+        /// 状態通知イベント
+        /// </summary>
+        public event GotConditionDelegate GotCondition = null;
 
         /// <summary>
         /// ログ
@@ -158,7 +167,9 @@ namespace RM_3000.Classes
                     {
                         this.swTask.Reset();
                         this.swTask.Start();
-                        
+
+                        GetCondition();
+
                         CollectMeasureData();
                     }
                 }
@@ -174,6 +185,27 @@ namespace RM_3000.Classes
 
 
         }
+
+        /// <summary>
+        /// 状態取得
+        /// </summary>
+        private void GetCondition()
+        {
+            OnGotCondition(RealTimeData.bCond_MeasurePause);
+        }
+
+        /// <summary>
+        /// 状態取得イベントを発行する
+        /// </summary>
+        /// <param name="bCond_MeasurePause"></param>
+        private void OnGotCondition(bool bCond_MeasurePause)
+        {
+            if (this.GotCondition != null)
+            {
+                this.GotCondition(bCond_MeasurePause);
+            }
+        }
+
         /// <summary>
         /// 測定データを収集する
         /// </summary>

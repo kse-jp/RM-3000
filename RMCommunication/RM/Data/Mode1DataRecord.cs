@@ -71,7 +71,17 @@ namespace Riken.IO.Communication.RM.Data
             } 
         }
 
-        public DateTime Time { get { return DateTime.Parse(string.Format("0{0}:{1}{2}", _Time[1].ToString(), _Time[2].ToString(), _Time[3].ToString())); } }
+        public DateTime Time 
+        { 
+            get 
+            { 
+                return DateTime.Parse(
+                    string.Format("{0}:{1}:{2}",
+                        _Time[0].ToString("X"), 
+                        _Time[3].ToString("X"), 
+                        _Time[2].ToString("X"))); 
+            } 
+        }
         public UInt16 RevolutionSpeed { get { return _RevolutionSpeed; } }
 
     }

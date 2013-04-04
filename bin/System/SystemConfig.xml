@@ -1,6 +1,6 @@
 <?xml version="1.0"?><root>
 <SystemLanguage Language="Japanese" />
-<IsSimulationMode>True</IsSimulationMode>
+<IsSimulationMode>False</IsSimulationMode>
 <IsDebugMode>False</IsDebugMode>
 <MaxSmallAxis>21</MaxSmallAxis>
 <SensorHighValue_B>10000</SensorHighValue_B>

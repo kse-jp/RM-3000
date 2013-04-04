@@ -13,7 +13,7 @@ using Calc;
 
 namespace DataCommon
 {
-    public class CalcDataManager
+    public class CalcDataManager : ICloneable
     {
         #region private member
         /// <summary>
@@ -122,10 +122,22 @@ namespace DataCommon
 
         #endregion
 
+        #region public property
+
         /// <summary>
         /// 保存フォルダパス
         /// </summary>
         public string FolderPath { get; set; }
+
+        public int icount { get; set; }
+
+        public int startIndex { get; set; }
+
+        public int endIndex { get; set; }
+
+        public int SamplesCount { get; set; }
+
+        #endregion
 
         public CalcDataManager()
         {
@@ -173,7 +185,7 @@ namespace DataCommon
             measureSetting = src_MeasureSetting;
         }
 
-
+        #region public method
         /// <summary>
         /// 実演算
         /// </summary>
@@ -410,39 +422,6 @@ namespace DataCommon
         }
 
         /// <summary>
-        /// []の中の文字列をなしにする
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns>"@2[変位右下]*(@3[下死点１]+@4[下死点２])"</returns>
-        private string GetReplace(string s)
-        {
-            int len = s.Length;
-            int iFind1 = 0;
-            int iFind2 = 0;
-
-            string stTarget = string.Empty;
-
-            while( s.Length > 0 )
-            {
-                // 先頭から '[' を検索し、見つかった位置を取得する
-                iFind1 = s.IndexOf('[');
-                iFind2 = s.IndexOf(']');
-                if (iFind1 >= 0)
-                {
-                    // 3 文字目の後から 9 文字の文字列を取得する
-                    stTarget = s.Substring(iFind1, iFind2 - iFind1 + 1);
-
-                    s = s.Replace(stTarget, " ");
-                }
-                else
-                {
-                    break;
-                }
-            }
-            return s;
-        }
-
-        /// <summary>
         /// 演算設定処理
         /// </summary>
         /// <returns></returns>
@@ -524,7 +503,7 @@ namespace DataCommon
                     calcCount_o = 0;
                     int iFind1 = 0;
                     int iFind2 = 0;
-                    string stTarget = string.Empty; 
+                    string stTarget = string.Empty;
 
                     for (index = 0; index < dataTagSetting.DataTagList.Length; index++)
                     {
@@ -588,7 +567,7 @@ namespace DataCommon
                 if (calc.CalcFormulaJudge(strCalcName, strExpression, valCalcResult, ref strErrorMessage) == false)
                 {
                     //error
-//                    MessageBox.Show(strErrorMessage + "\n" + AppResource.GetString("MSG_DATA_CALCERR_MSG1"), "演算初期設定", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    //                    MessageBox.Show(strErrorMessage + "\n" + AppResource.GetString("MSG_DATA_CALCERR_MSG1"), "演算初期設定", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -604,39 +583,6 @@ namespace DataCommon
             }
             return bRet;
         }
-
-
-        #region private method
-        /// <summary>
-        /// Error Message
-        /// </summary>
-        /// <param name="ex"></param>
-        private void ShowErrorMessage(Exception ex)
-        {
-            MessageBox.Show(string.Format("{0}\n{1}", ex.Message, ex.StackTrace), "CalcExpression", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-        /// <summary>
-        /// Error Message
-        /// </summary>
-        /// <param name="ex"></param>
-        private void ShowErrorMessage(string message)
-        {
-            //if (this.log != null) this.log.PutErrorLog(message);
-            MessageBox.Show(message, "CalcExpression", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-        /// <summary>
-        /// logging operation
-        /// </summary>
-        /// <param name="message"></param>
-        private void PutLog(string message)
-        {
-            //if (this.log != null) log.PutLog(message);
-
-        }
-        #endregion
-
-
-        public int icount { get; set; }
 
         internal List<CalcData> GetRange(int _startindex, int length, List<SampleData> sampleDatas)
         {
@@ -669,10 +615,148 @@ namespace DataCommon
         }
         
 
-        public int startIndex { get; set; }
+        #endregion
 
-        public int endIndex { get; set; }
+        #region private method
+        /// <summary>
+        /// Error Message
+        /// </summary>
+        /// <param name="ex"></param>
+        private void ShowErrorMessage(Exception ex)
+        {
+            MessageBox.Show(string.Format("{0}\n{1}", ex.Message, ex.StackTrace), "CalcExpression", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        /// <summary>
+        /// Error Message
+        /// </summary>
+        /// <param name="ex"></param>
+        private void ShowErrorMessage(string message)
+        {
+            //if (this.log != null) this.log.PutErrorLog(message);
+            MessageBox.Show(message, "CalcExpression", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        /// <summary>
+        /// logging operation
+        /// </summary>
+        /// <param name="message"></param>
+        private void PutLog(string message)
+        {
+            //if (this.log != null) log.PutLog(message);
 
-        public int SamplesCount { get; set; }
+        }
+
+        /// <summary>
+        /// []の中の文字列をなしにする
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns>"@2[変位右下]*(@3[下死点１]+@4[下死点２])"</returns>
+        private string GetReplace(string s)
+        {
+            int len = s.Length;
+            int iFind1 = 0;
+            int iFind2 = 0;
+
+            string stTarget = string.Empty;
+
+            while (s.Length > 0)
+            {
+                // 先頭から '[' を検索し、見つかった位置を取得する
+                iFind1 = s.IndexOf('[');
+                iFind2 = s.IndexOf(']');
+                if (iFind1 >= 0)
+                {
+                    // 3 文字目の後から 9 文字の文字列を取得する
+                    stTarget = s.Substring(iFind1, iFind2 - iFind1 + 1);
+
+                    s = s.Replace(stTarget, " ");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return s;
+        }
+
+        #endregion
+
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            CalcDataManager ret = new CalcDataManager();
+
+            ret.CalcDatas = new List<CalcData>(this.CalcDatas);
+
+            ret.calcinitFlag = this.calcinitFlag;
+            if(this.dataTagSetting != null)
+                ret.dataTagSetting = (DataTagSetting)this.dataTagSetting.Clone();
+            if(this.constantSetting != null)
+                ret.constantSetting = (ConstantSetting)this.constantSetting.Clone();
+            if(this.tagChannelRelationSetting != null)
+                ret.tagChannelRelationSetting = (TagChannelRelationSetting)this.tagChannelRelationSetting.Clone();
+            if (this.measureSetting != null)
+                ret.measureSetting = (MeasureSetting)this.measureSetting.Clone();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                ret.list.Add((DataTag)list[i].Clone());
+            }
+
+            ret.CurFilePath = this.CurFilePath;
+
+            if(this.sampleDatas != null)
+                ret.sampleDatas = (SampleDataManager)this.sampleDatas.Clone();
+
+            ret.calcCount = this.calcCount;
+
+            ret.strErrorMessage = this.strErrorMessage;
+
+            if (this.valConstant != null)
+                ret.valConstant = new List<double>(this.valConstant).ToArray();
+
+            if( this.strConstantName != null)
+                ret.strConstantName = new List<string>(this.strConstantName).ToArray();
+
+            if (this.valVariable != null)
+                ret.valVariable = new List<double>(this.valVariable).ToArray();
+
+
+            ret.dataHandleVar = this.dataHandleVar;
+
+            if (this.strVariableName != null)
+                ret.strVariableName = new List<string>(this.strVariableName).ToArray();
+
+            if (this.strCalcName != null)
+                ret.strCalcName = new List<string>(this.strCalcName).ToArray();
+
+            if (this.strExpression != null)
+                ret.strExpression = new List<string>(this.strExpression).ToArray();
+
+            if(this.iCalcIndex != null)
+                ret.iCalcIndex = new List<int>(this.iCalcIndex).ToArray();
+
+            if(this.valCalcResult != null)
+                ret.valCalcResult = new List<double>(this.valCalcResult).ToArray();
+
+            ret.dataHandleCalc = this.dataHandleCalc;
+
+            if(this.calc != null)
+                ret.calc = new CalcCommon();
+    
+            if(this.calclock != null)
+                ret.calclock = new object();
+
+            ret.FolderPath = this.FolderPath;
+            ret.icount = this.icount;
+            ret.startIndex = this.startIndex;
+            ret.endIndex = this.endIndex;
+            ret.SamplesCount = this.SamplesCount;
+
+            return ret;
+
+        }
+        #endregion
     }
 }

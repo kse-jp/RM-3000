@@ -1256,4 +1256,68 @@
     <value>Rセンサー倍率</value>
     <comment>Rセンサー倍率</comment>
   </data>
+  <data name="TXT_AVERAGE_COUNT" xml:space="preserve">
+    <value>平均回数</value>
+    <comment>平均回数</comment>
+  </data>
+  <data name="TXT_COUNT" xml:space="preserve">
+    <value>回数目</value>
+    <comment>回数目</comment>
+  </data>
+  <data name="TXT_MEASTIME_MIN" xml:space="preserve">
+    <value>測定時間(min)</value>
+    <comment>測定時間(min)</comment>
+  </data>
+  <data name="TXT_MEAS_AVERAGE" xml:space="preserve">
+    <value>平均測定</value>
+    <comment>平均測定</comment>
+  </data>
+  <data name="TXT_MEAS_EVERY_SHOT" xml:space="preserve">
+    <value>毎ショット測定</value>
+    <comment>毎ショット測定</comment>
+  </data>
+  <data name="TXT_MEAS_INT_SHOT" xml:space="preserve">
+    <value>任意回数毎の1ショットを測定</value>
+    <comment>任意回数毎の1ショットを測定</comment>
+  </data>
+  <data name="TXT_MEAS_INT_TIME2SHOT" xml:space="preserve">
+    <value>任意時間毎の任意回数のショット測定</value>
+    <comment>任意時間毎の任意回数のショット測定</comment>
+  </data>
+  <data name="TXT_MEAS_INT_TIME2TIME" xml:space="preserve">
+    <value>任意時間ごとの任意時間測定</value>
+    <comment>任意時間ごとの任意時間測定</comment>
+  </data>
+  <data name="TXT_SHOT_COUNT" xml:space="preserve">
+    <value>ショット数</value>
+    <comment>ショット数</comment>
+  </data>
+  <data name="TXT_STOPTIME_MIN" xml:space="preserve">
+    <value>停止時間(min)</value>
+    <comment>停止時間(min)</comment>
+  </data>
+  <data name="TXT_TIME_MIN" xml:space="preserve">
+    <value>時間(min)</value>
+    <comment>時間(min)</comment>
+  </data>
+  <data name="TXT_MEAS_CONDITION_MODE1" xml:space="preserve">
+    <value>モード１測定条件</value>
+    <comment>モード１測定条件</comment>
+  </data>
+  <data name="TXT_MEAS_PAUSE" xml:space="preserve">
+    <value>一時停止</value>
+    <comment>一時停止</comment>
+  </data>
+  <data name="TXT_MEAS_RECPAUSE" xml:space="preserve">
+    <value>記録停止中</value>
+    <comment>記録停止中</comment>
+  </data>
+  <data name="TXT_MEAS_RUN" xml:space="preserve">
+    <value>記録中</value>
+    <comment>記録中</comment>
+  </data>
+  <data name="TXT_MEAS_STOP" xml:space="preserve">
+    <value>停止</value>
+    <comment>停止</comment>
+  </data>
 </root>

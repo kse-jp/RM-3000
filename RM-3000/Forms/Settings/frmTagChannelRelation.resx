@@ -249,11 +249,14 @@
   <data name="Column4.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="dgvBoardChannel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="dgvBoardChannel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 26</value>
+    <value>0, 0</value>
   </data>
   <data name="dgvBoardChannel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 242</value>
+    <value>436, 249</value>
   </data>
   <data name="dgvBoardChannel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -265,9 +268,36 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dgvBoardChannel.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>panel4</value>
   </data>
   <data name="&gt;&gt;dgvBoardChannel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 249</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
@@ -333,11 +363,14 @@
   <data name="Column6.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="dgvRotation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="dgvRotation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 26</value>
+    <value>0, 0</value>
   </data>
   <data name="dgvRotation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 54</value>
+    <value>436, 61</value>
   </data>
   <data name="dgvRotation.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -349,9 +382,36 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dgvRotation.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;dgvRotation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 61</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">

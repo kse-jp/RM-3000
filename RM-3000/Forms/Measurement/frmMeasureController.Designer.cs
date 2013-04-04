@@ -44,6 +44,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbtnExit)).BeginInit();
@@ -102,7 +103,7 @@
             this.lblUnit.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUnit.Location = new System.Drawing.Point(628, 0);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(75, 22);
+            this.lblUnit.Size = new System.Drawing.Size(75, 27);
             this.lblUnit.TabIndex = 6;
             this.lblUnit.Text = "---";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,6 +140,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblStatus);
             this.panel2.Controls.Add(this.picbtnExit);
             this.panel2.Controls.Add(this.picbtnStop);
             this.panel2.Controls.Add(this.picbtnStart);
@@ -194,9 +196,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMessage.BackColor = System.Drawing.Color.White;
             this.lblMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMessage.Location = new System.Drawing.Point(266, 26);
+            this.lblMessage.Location = new System.Drawing.Point(265, 32);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(721, 33);
+            this.lblMessage.Size = new System.Drawing.Size(617, 39);
             this.lblMessage.TabIndex = 5;
             this.lblMessage.Text = "測定中　残り　NNN秒\r\nモード1、データ保存中・・・";
             // 
@@ -242,6 +244,18 @@
             this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStatus.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblStatus.Location = new System.Drawing.Point(889, 32);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(98, 39);
+            this.lblStatus.TabIndex = 9;
+            this.lblStatus.Text = "TXT_STOP";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmMeasureController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -283,5 +297,6 @@
         private System.Windows.Forms.Label lblUnit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMeasureCount;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

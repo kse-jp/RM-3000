@@ -6,7 +6,7 @@ namespace DataCommon
     /// PositionSetting
     /// </summary>
     [Serializable]
-    public class PositionSetting : SettingBase
+    public class PositionSetting : SettingBase , ICloneable
     {
         /// <summary>
         /// 方向Enum
@@ -142,6 +142,23 @@ namespace DataCommon
             string s = string.Format("PositionSetting-ChannelNo={0},X={1},Z={2}", chNo, x, z);
             return s;
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            PositionSetting ret = new PositionSetting();
+
+            ret.ChNo = this.ChNo;
+            ret.X = this.X;
+            ret.Z = this.Z;
+            ret.Way = this.Way;
+            ret.Target = this.Target;
+
+            return ret;
+        }
+
         #endregion
     }
 }

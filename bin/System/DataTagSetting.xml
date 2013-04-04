@@ -6,7 +6,7 @@
       <IsUpdated>true</IsUpdated>
       <TagNo>1</TagNo>
       <TagKind>0</TagKind>
-      <Point>1</Point>
+      <Point>3</Point>
       <Expression />
       <StaticZero>27452</StaticZero>
       <TagNameE>CH1</TagNameE>
@@ -34,7 +34,7 @@
       <IsUpdated>true</IsUpdated>
       <TagNo>3</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
       <StaticZero>1234.0827114427860696517412935</StaticZero>
       <TagNameE>CH3</TagNameE>

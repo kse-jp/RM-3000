@@ -9,7 +9,7 @@ namespace DataCommon
     /// 基本設定
     /// </summary>
     [Serializable]
-    public class SensorPositionSetting : SettingBase
+    public class SensorPositionSetting : SettingBase, ICloneable
     {
         #region private member
         /// <summary>
@@ -210,6 +210,29 @@ namespace DataCommon
             sb.Append(string.Format("SensorPositionSetting-PositionList={0}", positionList));
             return sb.ToString();
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            SensorPositionSetting ret = new SensorPositionSetting();
+
+            ret.BolsterWidth = this.BolsterWidth;
+            ret.BolsterDepth = this.BolsterDepth;
+            ret.UsedMold = this.UsedMold;
+            ret.MoldWidth = this.MoldWidth;
+            ret.MoldDepth = this.MoldDepth;
+            ret.MoldPressWidth = this.MoldPressWidth;
+            ret.MoldPressDepth = this.MoldPressDepth;
+
+            if (this.PositionList != null)
+                for (int i = 0; i < this.PositionList.Length; i++)
+                    ret.PositionList[i] = (PositionSetting)this.PositionList[i].Clone();
+
+            return ret;
+        }
+
         #endregion
     }
 }

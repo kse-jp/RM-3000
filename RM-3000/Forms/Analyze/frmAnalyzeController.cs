@@ -422,7 +422,7 @@ namespace RM_3000.Forms.Parts
                     this.graph3DList[i].SetRFactor();
 
                     this.graph3DList[i].ClearData();
-                    this.graph3DList[i].SetData(this.dataList[0].ToArray());                   
+                    this.graph3DList[i].SetData(this.dataList[0].ToArray());
                 }
             }
         }
@@ -1552,23 +1552,30 @@ namespace RM_3000.Forms.Parts
         /// <param name="e"></param>
         private void bw3DGraph_Animation(object sender, DoWorkEventArgs e)
         {
-            BackgroundWorker worker = sender as BackgroundWorker;
-            if ((worker.CancellationPending == true))
+            try
             {
-                e.Cancel = true;
-                return;
-            }
-
-            for (int i = 0; i < this.graph3DList.Count; i++)
-            {
-                if (this.graph3DList[i] != null)
+                BackgroundWorker worker = sender as BackgroundWorker;
+                if ((worker.CancellationPending == true))
                 {
-                    this.graph3DList[i].CreateAnimation();
-
-                    if (this.isStartAnimation)
-                        this.graph3DList[i].StartAnimation();
+                    e.Cancel = true;
+                    return;
                 }
-            }           
+
+                for (int i = 0; i < this.graph3DList.Count; i++)
+                {
+                    if (this.graph3DList[i] != null)
+                    {
+                        this.graph3DList[i].CreateAnimation();
+
+                        if (this.isStartAnimation)
+                            this.graph3DList[i].StartAnimation();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
         }
 
         /// <summary>
@@ -1577,33 +1584,40 @@ namespace RM_3000.Forms.Parts
         /// <param name="duration"></param>
         private void frmGraph3D_OnAnimationCompleted(double duration)
         {
-
-            if (!this.isLoop3DOneShot)
+            try
             {
-                if (trackMain.Value != trackMain.Maximum)
+                if (!this.isLoop3DOneShot)
                 {
-                    this.Clear3DGraphData();
-                    trackMain.Value++;
-                }
-                else if (this.isLoop3DAllShot)
-                {
-                    this.Clear3DGraphData();
-                    trackMain.Value = 0;
-                }
-            }
-            else
-            {
-                Clear3DGraphData();
-                SetDataToGraph3D();
-                if (!this.bw3Dgraph.IsBusy)
-                {
-                    this.bw3Dgraph.RunWorkerAsync();
+                    if (trackMain.Value != trackMain.Maximum)
+                    {
+                        this.Clear3DGraphData();
+                        trackMain.Value++;
+                    }
+                    else if (this.isLoop3DAllShot)
+                    {
+                        this.Clear3DGraphData();
+                        trackMain.Value = 0;
+                    }
                 }
                 else
                 {
-                    isWorkerRestart = true;
-                    this.bw3Dgraph.CancelAsync();                  
+                    Clear3DGraphData();
+                    SetDataToGraph3D();
+                    if (!this.bw3Dgraph.IsBusy)
+                    {
+                        this.bw3Dgraph.RunWorkerAsync();
+                    }
+                    else
+                    {
+                        isWorkerRestart = true;
+                        this.bw3Dgraph.CancelAsync();
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
             }
         }
 

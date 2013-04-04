@@ -628,6 +628,7 @@
             this.Controls.Add(this.dgvDataList);
             this.Name = "frmAnalyzeDataSelector";
             this.Text = "TXT_SEARCH_ANALYSIS_FILE";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAnalyzeDataSelector_FormClosed);
             this.Load += new System.EventHandler(this.frmAnalyzeDataSelector_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataList)).EndInit();
             this.ResumeLayout(false);

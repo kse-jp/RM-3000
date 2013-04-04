@@ -6,7 +6,7 @@ namespace DataCommon
     /// constant value class
     /// </summary>
     [Serializable]
-    public class ConstantData : SettingBase
+    public class ConstantData : SettingBase , ICloneable
     {
         #region private member
         
@@ -69,6 +69,24 @@ namespace DataCommon
             string s = string.Format("ConstantData -NameJ={0},NameE={1},NameC={2},Value={3}", NameJ, NameE, NameC, Value);
             return s;
         }
+        #endregion
+
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            ConstantData ret = new ConstantData();
+
+            ret.NameJ = this.NameJ;
+            ret.NameE = this.NameE;
+            ret.NameC = this.NameC;
+
+            ret.Value = this.Value;
+
+            return ret;
+        }
+
         #endregion
     }
 }

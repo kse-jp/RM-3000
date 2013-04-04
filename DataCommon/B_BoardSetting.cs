@@ -58,5 +58,16 @@ namespace DataCommon
             return s;
         }
         #endregion
+
+        public override object CloneMethod()
+        {
+            B_BoardSetting ret = new B_BoardSetting();
+
+            ret.Hold = this.Hold;
+            ret.Precision = this.Precision;
+
+            return ret;
+
+        }
     }
 }

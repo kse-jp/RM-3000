@@ -104,6 +104,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TXT_WRITE_FOLDER_INPUT";
             this.Load += new System.EventHandler(this.frmInputSaveFileName_Load);
+            this.Shown += new System.EventHandler(this.frmInputSaveFileName_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

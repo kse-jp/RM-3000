@@ -2,6 +2,7 @@
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace DataCommon
 {
@@ -9,7 +10,7 @@ namespace DataCommon
     /// 基本設定
     /// </summary>
     [Serializable]
-    public class MeasureSetting : SettingBase
+    public class MeasureSetting : SettingBase ,ICloneable
     {
         #region private member
         /// <summary>
@@ -51,6 +52,11 @@ namespace DataCommon
         /// 0～1500　秒
         /// </summary>
         private int measureTime_Mode3 = 0;
+        /// <summary>
+        /// モード1 測定条件
+        /// </summary>
+        private Mode1_MeasCondition mode1_MeasCondition = new Mode1_MeasCondition();
+
         #endregion
 
         #region public member
@@ -194,6 +200,19 @@ namespace DataCommon
             }
             get { return this.measureTime_Mode3; }
         }
+
+        /// <summary>
+        /// モード１測定条件　
+        /// </summary>
+        public Mode1_MeasCondition Mode1_MeasCondition
+        {
+            set 
+            { 
+                this.mode1_MeasCondition = value;
+                this.IsUpdated = true;
+            }
+            get { return this.mode1_MeasCondition; }
+        }
         #endregion
 
         #region constructor
@@ -245,6 +264,14 @@ namespace DataCommon
             this.measureTime_Mode2 = data.measureTime_Mode2;
             this.measureTime_Mode3 = data.measureTime_Mode3;
 
+            this.mode1_MeasCondition.MeasConditionType = data.mode1_MeasCondition.MeasConditionType;
+            this.mode1_MeasCondition.Interval_count = data.mode1_MeasCondition.Interval_count;
+            this.mode1_MeasCondition.Average_count = data.mode1_MeasCondition.Average_count;
+            this.mode1_MeasCondition.Inverval_time2shot_time = data.mode1_MeasCondition.Inverval_time2shot_time;
+            this.mode1_MeasCondition.Inverval_time2shot_shots = data.mode1_MeasCondition.Inverval_time2shot_shots;
+            this.mode1_MeasCondition.Inverval_time2time_meastime = data.mode1_MeasCondition.Inverval_time2time_meastime;
+            this.mode1_MeasCondition.Inverval_time2time_stoptime = data.mode1_MeasCondition.Inverval_time2time_stoptime;
+
             this.IsUpdated = false;
         }
         /// <summary>
@@ -257,6 +284,44 @@ namespace DataCommon
             sb.Append(string.Format("MeasureSetting-Mode={0}", mode));
             return sb.ToString();
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
+        {
+            MeasureSetting ret = new MeasureSetting();
+            ret.mode = this.mode;
+
+            if(this.measTagList != null)
+               ret.measTagList = new List<int>(this.measTagList).ToArray();
+            
+            if(this.graphSettingList != null)
+                for (int i = 0; i < this.graphSettingList.Length; i++)
+                {
+                    ret.graphSettingList[i] = (GraphSetting)this.graphSettingList[i].Clone();
+                }
+
+            ret.samplingCountLimit = this.samplingCountLimit;
+            ret.samplingTiming_Mode2 = this.samplingTiming_Mode2;
+            ret.samplingTiming_Mode3 = this.samplingTiming_Mode3;
+            ret.measureTime_Mode2 = this.measureTime_Mode2;
+            ret.measureTime_Mode3 = this.measureTime_Mode3;
+
+            if (this.Mode1_MeasCondition != null)
+            {
+                ret.mode1_MeasCondition = (Mode1_MeasCondition)this.mode1_MeasCondition.Clone();
+            }
+
+            ret.IsUpdated = this.IsUpdated;
+
+            return ret;
+        }
+
         #endregion
     }
 }

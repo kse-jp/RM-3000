@@ -157,6 +157,7 @@
     <Compile Include="L_BoardSetting.cs" />
     <Compile Include="MeasureData.cs" />
     <Compile Include="MeasureSetting.cs" />
+    <Compile Include="Mode1_MeasCondition.cs" />
     <Compile Include="SampleDataHeader.cs" />
     <Compile Include="SampleDataManager.cs" />
     <Compile Include="TagChannelPattern.cs" />

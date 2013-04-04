@@ -112,8 +112,6 @@ namespace RM_3000.Forms.Measurement
             switch (status)
             {
                 case Sequences.TestSequence.TestStatusType.Run:
-                    //測定開始時間をリセット
-                    RealTimeData.SetStartTime(DateTime.Now);
 
                     controllerForm.SetMeasureStatus(frmMeasureController.MeasureStatus.Start);
 
@@ -155,6 +153,7 @@ namespace RM_3000.Forms.Measurement
                         this.Enabled = false;
 
                         RealTimeData.EndData();
+                        this.measureTask.Pause();
 
                         bool bret = true;
 
@@ -231,6 +230,19 @@ namespace RM_3000.Forms.Measurement
         #region private method
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bCond_MeasurePause"></param>
+        private void GotCondition(bool bCond_MeasurePause)
+        {
+            var time = DateTime.Now - RealTimeData.GetStartTime();
+            this.controllerForm.SetMeasureTime(time.ToString("hh\\:mm\\:ss\\.fff"));
+
+            this.controllerForm.SetCondition(bCond_MeasurePause);
+
+        }
+
+        /// <summary>
         /// 測定データをセットする
         /// </summary>
         /// <param name="dataList">測定データ</param>
@@ -238,8 +250,8 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                var time = DateTime.Now - RealTimeData.GetStartTime();
-                this.controllerForm.SetMeasureTime(time.ToString("hh\\:mm\\:ss\\.fff"));
+                //var time = DateTime.Now - RealTimeData.GetStartTime();
+                //this.controllerForm.SetMeasureTime(time.ToString("hh\\:mm\\:ss\\.fff"));
 
                 //総サンプル数の取得
                 this.controllerForm.SetMeasureCount(RealTimeData.receiveCount.ToString());
@@ -329,6 +341,7 @@ namespace RM_3000.Forms.Measurement
 
                 // 測定データ収集タスク
                 this.measureTask = new MeasureDataTask(this.log);
+                this.measureTask.GotCondition += new MeasureDataTask.GotConditionDelegate(this.GotCondition);
                 this.measureTask.DataReceived += new MeasureDataTask.DataReceivedDelegate(this.SetMeasureData);
                 this.measureTask.DataReceived += new MeasureDataTask.DataReceivedDelegate(this.tagValueListForm.SetMeasureData);
                 for (int i = 0; i < this.graph2DList.Length; i++)
@@ -353,6 +366,7 @@ namespace RM_3000.Forms.Measurement
 
             if (this.log != null) this.log.PutLog("frmMeasureMain.frmMeasureMain_Load() - 測定中画面のロードを終了しました。");
         }
+
         /// <summary>
         /// フォーム表示イベント
         /// </summary>
@@ -653,6 +667,7 @@ namespace RM_3000.Forms.Measurement
 
                             //Simulatorモードならばここで終了
                             RealTimeData.EndData();
+                            this.measureTask.Pause();
 
                             //データが一つでも受信されていればデータ保存する。
                             if (RealTimeData.receiveCount != 0)

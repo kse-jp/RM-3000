@@ -40,6 +40,11 @@ namespace RM_3000.Forms.Measurement
         /// ファイル名
         /// </summary>
         private string _FileName = string.Empty;
+
+        /// <summary>
+        /// 初期ファイル名
+        /// </summary>
+        private string DefaultFilePath = string.Empty;
         #endregion
 
         /// <summary>
@@ -95,11 +100,14 @@ namespace RM_3000.Forms.Measurement
 
             this._FileName = txtFileName.Text.Trim();
 
-            if (System.IO.Directory.Exists(this.FolderName + @"\" + this.FileName))
+            if (DefaultFilePath != this.FolderName + @"\" + this.FileName)
             {
-                if (MessageBox.Show(AppResource.GetString("MSG_DUPLICATE_FILE_CHECK"), AppResource.GetString("TXT_WRITE_FOLDER_INPUT"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+                if (System.IO.Directory.Exists(this.FolderName + @"\" + this.FileName))
                 {
-                    return;
+                    if (MessageBox.Show(AppResource.GetString("MSG_DUPLICATE_FILE_CHECK"), AppResource.GetString("TXT_WRITE_FOLDER_INPUT"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+                    {
+                        return;
+                    }
                 }
             }
 
@@ -133,6 +141,17 @@ namespace RM_3000.Forms.Measurement
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmInputSaveFileName_Shown(object sender, EventArgs e)
+        {
+            //初期ファイルパスを保存
+            DefaultFilePath = this.FolderName + @"\" + this.FileName; 
         }
 
     }

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MeasureSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <IsUpdated>true</IsUpdated>
+  <IsUpdated>false</IsUpdated>
   <Mode>1</Mode>
   <MeasTagList>
-    <int>1</int>
+    <int>-1</int>
     <int>2</int>
-    <int>3</int>
-    <int>4</int>
-    <int>5</int>
-    <int>6</int>
-    <int>7</int>
-    <int>8</int>
-    <int>9</int>
-    <int>10</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
   </MeasTagList>
   <GraphSettingList>
     <GraphSetting>
@@ -538,9 +538,19 @@
       <NumbeOfShotMode2>1</NumbeOfShotMode2>
     </GraphSetting>
   </GraphSettingList>
-  <SamplingCountLimit>2</SamplingCountLimit>
+  <SamplingCountLimit>0</SamplingCountLimit>
   <SamplingTiming_Mode2>500</SamplingTiming_Mode2>
   <SamplingTiming_Mode3>250</SamplingTiming_Mode3>
   <MeasureTime_Mode2>0</MeasureTime_Mode2>
   <MeasureTime_Mode3>0</MeasureTime_Mode3>
+  <Mode1_MeasCondition>
+    <IsUpdated>true</IsUpdated>
+    <MeasConditionType>MEAS_INT_TIME2TIME</MeasConditionType>
+    <Interval_count>10</Interval_count>
+    <Average_count>10</Average_count>
+    <Inverval_time2shot_time>1</Inverval_time2shot_time>
+    <Inverval_time2shot_shots>10</Inverval_time2shot_shots>
+    <Inverval_time2time_meastime>1</Inverval_time2time_meastime>
+    <Inverval_time2time_stoptime>1</Inverval_time2time_stoptime>
+  </Mode1_MeasCondition>
 </MeasureSetting>

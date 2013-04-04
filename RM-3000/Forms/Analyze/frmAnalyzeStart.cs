@@ -231,7 +231,7 @@ namespace RM_3000.Forms.Analyze
             bool selectAll = false;
             try
             {
-                this.analyzeData.Deserialize();
+                this.analyzeData.Desirialize_WithOut_Data();
             }
             catch
             {

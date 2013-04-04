@@ -58,6 +58,7 @@
             this.ScrollSub = new System.Windows.Forms.HScrollBar();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnREW = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPrintScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackMain)).BeginInit();
@@ -66,13 +67,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picREW)).BeginInit();
             this.pnlHeader.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMain.Controls.Add(this.picPrintScreen);
-            this.pnlMain.Controls.Add(this.btnPrintScreen);
+            this.pnlMain.Controls.Add(this.groupBox1);
             this.pnlMain.Controls.Add(this.trackMain);
             this.pnlMain.Controls.Add(this.lblScrollMax);
             this.pnlMain.Controls.Add(this.lblScrollMin);
@@ -101,7 +102,7 @@
             // 
             // picPrintScreen
             // 
-            this.picPrintScreen.Location = new System.Drawing.Point(1158, 34);
+            this.picPrintScreen.Location = new System.Drawing.Point(3, 13);
             this.picPrintScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picPrintScreen.Name = "picPrintScreen";
             this.picPrintScreen.Size = new System.Drawing.Size(75, 54);
@@ -112,10 +113,10 @@
             // 
             // btnPrintScreen
             // 
-            this.btnPrintScreen.Location = new System.Drawing.Point(1158, 34);
+            this.btnPrintScreen.Location = new System.Drawing.Point(6, 22);
             this.btnPrintScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrintScreen.Name = "btnPrintScreen";
-            this.btnPrintScreen.Size = new System.Drawing.Size(66, 54);
+            this.btnPrintScreen.Size = new System.Drawing.Size(66, 34);
             this.btnPrintScreen.TabIndex = 29;
             this.btnPrintScreen.Text = "Print Screen";
             this.btnPrintScreen.UseVisualStyleBackColor = true;
@@ -424,6 +425,17 @@
             this.btnREW.UseVisualStyleBackColor = true;
             this.btnREW.Click += new System.EventHandler(this.btnREW_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.picPrintScreen);
+            this.groupBox1.Controls.Add(this.btnPrintScreen);
+            this.groupBox1.Location = new System.Drawing.Point(1155, 22);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(82, 73);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            // 
             // frmAnalyzeController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -450,6 +462,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picREW)).EndInit();
             this.pnlHeader.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -486,6 +499,7 @@
         private System.Windows.Forms.Label lblSamplingTiming_Title;
         private System.Windows.Forms.Label lblSamplingTiming;
         private System.Windows.Forms.PictureBox picPrintScreen;
+        private System.Windows.Forms.GroupBox groupBox1;
 
     }
 }

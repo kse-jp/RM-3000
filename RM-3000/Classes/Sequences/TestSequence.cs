@@ -495,6 +495,11 @@ namespace RM_3000.Sequences
             //    WatchTimmerThread.Start();
             //}
 
+            //測定開始時間をリセット
+            RealTimeData.SetStartTime(DateTime.Now);
+            RealTimeData.Cond_StartTime_Mode1 = RealTimeData.GetStartTime();
+            RealTimeData.bMode1_Now_Record = true;
+
             //ステータスの変更
             TestStatus = TestStatusType.Run;
 
@@ -743,7 +748,7 @@ namespace RM_3000.Sequences
 
                     if (measureSetting.Mode == (int)ModeType.Mode1){
                         if( measureSetting.SamplingCountLimit != 0 &&
-                            measureSetting.SamplingCountLimit <= RealTimeData.receiveCount + 1)
+                            measureSetting.SamplingCountLimit < RealTimeData.receiveCount + 1)
                                 bLimit = true;
                     }
                     else if(measureSetting.Mode == (int)ModeType.Mode3) {
@@ -767,8 +772,11 @@ namespace RM_3000.Sequences
                         // 測定停止
                         if (TestStatus != TestStatusType.Stop && TestStatus != TestStatusType.RuntoStop && Endth == null)
                         {
-                            //測定停止時は追加
-                            RealTimeData.AddRealData(sampleData);
+                            //測定停止時はモード1以外は追加
+                            //モード1は別途条件があるため、この受信にて測定数が＋されるとは限らない。
+                            //よって、予定測定数を超えた時点での判定とするため、本受信を含めないこととする。
+                            if (measureSetting.Mode != (int)ModeType.Mode1)
+                                RealTimeData.AddRealData(sampleData);
 
                             Endth = new System.Threading.Thread(new System.Threading.ThreadStart(EndMethod));
                             Endth.Start();
@@ -802,6 +810,9 @@ namespace RM_3000.Sequences
         /// <param name="sampleData"></param>
         private void SetMode1Data(Mode1Record reserveData, ref SampleData sampleData)
         {
+
+            sampleData.SampleTime = ((Mode1Header)reserveData.HeaderData).Time;
+
             sampleData.ChannelDatas = new ChannelData[11];
             Value_Standard valuedata = null;
             Value_MaxMin valueMaxMin = null;
@@ -946,6 +957,8 @@ namespace RM_3000.Sequences
         /// <param name="sampleData"></param>
         private void SetMode2Data(Mode2Record reserveData, ref SampleData sampleData)
         {
+            sampleData.SampleTime = ((Mode2Header)reserveData.HeaderData).Time;
+
             sampleData.ChannelDatas = new ChannelData[11];
             Value_Standard valuedata = new Value_Standard();
             Value_Mode2 value2data = new Value_Mode2();

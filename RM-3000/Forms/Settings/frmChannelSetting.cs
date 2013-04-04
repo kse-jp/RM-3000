@@ -509,10 +509,9 @@ namespace RM_3000.Forms.Settings
                             this.setting.Serialize();
                             PutLog("Save ChannelsSetting.xml");
 
-
-                            //チャンネルタイプに変更があった場合は結び付け情報をクリアする
                             for (int channelIndex = 0; channelIndex < 10; channelIndex++)
                             {
+                                //チャンネルタイプに変更があった場合は結び付け情報をクリアする
                                 //不一致 または N:なしだった場合
                                 if (this.setting.ChannelSettingList[channelIndex].ChKind != this.oldSetting[channelIndex] ||
                                     this.setting.ChannelSettingList[channelIndex].ChKind == ChannelKindType.N)
@@ -531,7 +530,23 @@ namespace RM_3000.Forms.Settings
                                     SystemSetting.PositionSetting.IsUpdated = true;
                                 
                                 }
+
+                                //桁数変更の場合反映
+                                if (SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_1 != -1 &&
+                                    this.setting.ChannelSettingList[channelIndex].NumPoint != SystemSetting.DataTagSetting.GetTag(SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_1).Point)
+                                {
+                                    SystemSetting.DataTagSetting.GetTag(SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_1).Point = this.setting.ChannelSettingList[channelIndex].NumPoint;
+                                    SystemSetting.DataTagSetting.IsUpdated = true;
+                                }
+
+                                if (SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_2 != -1 &&
+                                    this.setting.ChannelSettingList[channelIndex].NumPoint != SystemSetting.DataTagSetting.GetTag(SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_2).Point)
+                                {
+                                    SystemSetting.DataTagSetting.GetTag(SystemSetting.RelationSetting.RelationList[channelIndex + 2].TagNo_1).Point = this.setting.ChannelSettingList[channelIndex].NumPoint;
+                                    SystemSetting.DataTagSetting.IsUpdated = true;
+                                }
                             }
+                        
 
                             //チャンネル結び付け情報を更新
                             if (SystemSetting.RelationSetting.IsUpdated && SystemSetting.PositionSetting.IsUpdated)
@@ -540,6 +555,11 @@ namespace RM_3000.Forms.Settings
                                 SystemSetting.PositionSetting.Serialize();
                             }
 
+                            //データタグ情報を更新
+                            if (SystemSetting.DataTagSetting.IsUpdated)
+                            {
+                                SystemSetting.DataTagSetting.Serialize();
+                            }
 
                             //チャンネル設定の整合性OK確認
                             for (int channelIndex = 0; channelIndex < DataCommon.Constants.MAX_CHANNELCOUNT ; channelIndex++)

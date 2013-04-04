@@ -5,15 +5,9 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>1</ChNo>
-      <ChKind>L</ChKind>
-      <BoardSetting xsi:type="L_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Range>0</Range>
-        <SensorOutput>0.499</SensorOutput>
-        <Full>50</Full>
-      </BoardSetting>
+      <ChKind>N</ChKind>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
-      <NumPoint>1</NumPoint>
+      <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
@@ -22,7 +16,7 @@
       <BoardSetting xsi:type="B_BoardSetting">
         <IsUpdated>false</IsUpdated>
         <Hold>1</Hold>
-        <Precision>true</Precision>
+        <Precision>false</Precision>
       </BoardSetting>
       <Mode1_Trigger>SELF</Mode1_Trigger>
       <NumPoint>0</NumPoint>
@@ -30,97 +24,57 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>3</ChNo>
-      <ChKind>V</ChKind>
-      <BoardSetting xsi:type="V_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Filter>0</Filter>
-        <Range>0</Range>
-        <Full>50.000</Full>
-        <Zero>0.000</Zero>
-      </BoardSetting>
+      <ChKind>N</ChKind>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>4</ChNo>
-      <ChKind>R</ChKind>
-      <BoardSetting xsi:type="R_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Precision>true</Precision>
-      </BoardSetting>
+      <ChKind>N</ChKind>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>5</ChNo>
-      <ChKind>R</ChKind>
-      <BoardSetting xsi:type="R_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Precision>true</Precision>
-      </BoardSetting>
+      <ChKind>N</ChKind>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>6</ChNo>
-      <ChKind>B</ChKind>
-      <BoardSetting xsi:type="B_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Hold>1</Hold>
-        <Precision>true</Precision>
-      </BoardSetting>
-      <Mode1_Trigger>SELF</Mode1_Trigger>
+      <ChKind>N</ChKind>
+      <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>7</ChNo>
-      <ChKind>B</ChKind>
-      <BoardSetting xsi:type="B_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Hold>1</Hold>
-        <Precision>true</Precision>
-      </BoardSetting>
-      <Mode1_Trigger>SELF</Mode1_Trigger>
+      <ChKind>N</ChKind>
+      <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>8</ChNo>
-      <ChKind>B</ChKind>
-      <BoardSetting xsi:type="B_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Hold>1</Hold>
-        <Precision>true</Precision>
-      </BoardSetting>
-      <Mode1_Trigger>SELF</Mode1_Trigger>
+      <ChKind>N</ChKind>
+      <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>9</ChNo>
-      <ChKind>B</ChKind>
-      <BoardSetting xsi:type="B_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Hold>1</Hold>
-        <Precision>true</Precision>
-      </BoardSetting>
-      <Mode1_Trigger>SELF</Mode1_Trigger>
+      <ChKind>N</ChKind>
+      <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>10</ChNo>
-      <ChKind>B</ChKind>
-      <BoardSetting xsi:type="B_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Hold>1</Hold>
-        <Precision>true</Precision>
-      </BoardSetting>
-      <Mode1_Trigger>SELF</Mode1_Trigger>
+      <ChKind>N</ChKind>
+      <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
   </ChannelSettingList>

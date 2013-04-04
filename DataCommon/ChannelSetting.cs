@@ -8,7 +8,7 @@ namespace DataCommon
     /// Channel Setting
     /// </summary>
     [Serializable]
-    public class ChannelSetting : SettingBase
+    public class ChannelSetting : SettingBase , ICloneable
     {
         #region private member
         /// <summary>
@@ -131,6 +131,26 @@ namespace DataCommon
                         chNo, chKind, mode1_trigger, BoardSetting);
             return s;
         }
+        #endregion
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            ChannelSetting ret = new ChannelSetting();
+
+            ret.ChNo = this.ChNo;
+            ret.ChKind = this.ChKind;
+            
+            if(this.BoardSetting != null)
+                ret.BoardSetting = (BoardSettingBase)this.BoardSetting.Clone();
+    
+            ret.Mode1_Trigger = this.Mode1_Trigger;
+            ret.NumPoint = this.NumPoint;
+
+            return ret;
+        }
+
         #endregion
     }
 }

@@ -8,7 +8,7 @@ namespace DataCommon
     /// 基本設定
     /// </summary>
     //[Serializable]
-    public class AnalyzeData
+    public class AnalyzeData : ICloneable
     {
         public delegate void OutputProgressMessageHandler(string Message, int NowStep, int MaxStep);
 
@@ -379,5 +379,27 @@ namespace DataCommon
 
         #endregion
 
+
+        #region ICloneable メンバー
+
+        public object Clone()
+        {
+            AnalyzeData ret = new AnalyzeData();
+
+            ret.MeasureSetting = (MeasureSetting)this.MeasureSetting.Clone();
+            ret.TagChannelRelationSetting = (TagChannelRelationSetting)this.TagChannelRelationSetting.Clone();
+            ret.DataTagSetting = (DataTagSetting)this.DataTagSetting.Clone();
+            ret.ChannelsSetting = (ChannelsSetting)this.ChannelsSetting.Clone();
+            ret.MeasureData = (MeasureData)this.MeasureData.Clone();
+            ret.PositionSetting = (SensorPositionSetting)this.PositionSetting;
+            ret.ConstantSetting = (ConstantSetting)this.ConstantSetting;
+
+            ret.DirectoryPath = this.DirectoryPath;
+            ret.bCancelCSVOutput = this.bCancelCSVOutput;
+
+            return ret;
+        }
+
+        #endregion
     }
 }

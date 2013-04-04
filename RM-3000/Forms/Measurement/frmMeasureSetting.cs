@@ -38,6 +38,10 @@ namespace RM_3000.Forms.Measurement
         /// ダーティフラグ
         /// </summary>
         private bool dirty = false;
+        /// <summary>
+        /// モード1測定条件（保持用）
+        /// </summary>
+        private Mode1_MeasCondition mode1_MeasCondition;
         #endregion
 
         #region public member
@@ -102,6 +106,7 @@ namespace RM_3000.Forms.Measurement
                 this.txtSampling.Focus();
                 return false;
             }
+
             try
             {
                 if (this.MeasSetting.SamplingCountLimit != val)
@@ -116,6 +121,7 @@ namespace RM_3000.Forms.Measurement
                 this.txtSampling.Focus();
                 return false;
             }
+
             if (this.MeasSetting.Mode != 1)
             {
                 //measure time
@@ -151,6 +157,100 @@ namespace RM_3000.Forms.Measurement
                     return false;
                 }
             }
+            else
+            {
+
+                Mode1_MeasCondition.EnumMeasConditionType tmpConditionType = Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS;
+                //モード１測定設定
+                if (rdoEveryShot.Checked)
+                    tmpConditionType = Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS;
+                else if (rdoINT_Shot.Checked)
+                    tmpConditionType = Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS;
+                else if (rdoAverage.Checked)
+                    tmpConditionType = Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS;
+                else if (rdoINT_Time2Shot.Checked)
+                    tmpConditionType = Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS;
+                else if (rdoINT_Time2Time.Checked)
+                    tmpConditionType = Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME;
+
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != tmpConditionType)
+                    this.MeasSetting.Mode1_MeasCondition.MeasConditionType = tmpConditionType;
+
+                try
+                {
+                    if (this.MeasSetting.Mode1_MeasCondition.Interval_count != int.Parse(numIntervalCount.Text))
+                        this.MeasSetting.Mode1_MeasCondition.Interval_count = int.Parse(numIntervalCount.Text);
+                }
+                catch (Exception ex)
+                {
+                    ShowWarningMessage(ex.Message);
+                    this.numIntervalCount.Focus();
+                    return false;
+                }
+
+                try
+                {
+                    if (this.MeasSetting.Mode1_MeasCondition.Average_count != int.Parse(numAverageCount.Text))
+                        this.MeasSetting.Mode1_MeasCondition.Average_count = int.Parse(numAverageCount.Text);
+                }
+                catch (Exception ex)
+                {
+                    ShowWarningMessage(ex.Message);
+                    this.numAverageCount.Focus();
+                    return false;
+                }
+
+                try
+                {
+                    if (this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_time != int.Parse(numTime2Shot_Time.Text))
+                        this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_time = int.Parse(numTime2Shot_Time.Text);
+                }
+                catch (Exception ex)
+                {
+                    ShowWarningMessage(ex.Message);
+                    this.numTime2Shot_Time.Focus();
+                    return false;
+                }
+
+                try
+                {
+                    if (this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_shots != int.Parse(numTime2Shot_Shots.Text))
+                        this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_shots = int.Parse(numTime2Shot_Shots.Text);
+                }
+                catch (Exception ex)
+                {
+                    ShowWarningMessage(ex.Message);
+                    this.numTime2Shot_Shots.Focus();
+                    return false;
+                }
+
+                try
+                {
+                    if (this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_meastime != int.Parse(numTime2Time_MeasTime.Text))
+                        this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_meastime = int.Parse(numTime2Time_MeasTime.Text);
+                }
+                catch (Exception ex)
+                {
+                    ShowWarningMessage(ex.Message);
+                    this.numTime2Time_MeasTime.Focus();
+                    return false;
+                }
+
+                try
+                {
+                    if (this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_stoptime != int.Parse(numTime2Time_StopTime.Text))
+                        this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_stoptime = int.Parse(numTime2Time_StopTime.Text);
+                }
+                catch (Exception ex)
+                {
+                    ShowWarningMessage(ex.Message);
+                    this.numTime2Time_StopTime.Focus();
+                    return false;
+                }
+
+                this.dirty |= this.MeasSetting.Mode1_MeasCondition.IsUpdated;
+            }
+
             return true;
         }
         /// <summary>
@@ -174,6 +274,37 @@ namespace RM_3000.Forms.Measurement
                 this.binding = true;
                 switch ((ModeType)this.MeasSetting.Mode)
                 {
+                    case ModeType.MODE1:
+
+                        switch (this.MeasSetting.Mode1_MeasCondition.MeasConditionType)
+                        {
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS:
+                                rdoEveryShot.Checked = true;
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS:
+                                rdoINT_Shot.Checked = true;
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS:
+                                rdoAverage.Checked = true;
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS:
+                                rdoINT_Time2Shot.Checked = true;
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME:
+                                rdoINT_Time2Time.Checked = true;
+                                break;
+
+                        }
+
+                        this.numIntervalCount.Text = this.MeasSetting.Mode1_MeasCondition.Interval_count.ToString();
+                        this.numAverageCount.Text = this.MeasSetting.Mode1_MeasCondition.Average_count.ToString();
+                        this.numTime2Shot_Time.Text = this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_time.ToString();
+                        this.numTime2Shot_Shots.Text = this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_shots.ToString();
+                        this.numTime2Time_MeasTime.Text = this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_meastime.ToString();
+                        this.numTime2Time_StopTime.Text = this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_stoptime.ToString();
+
+                        break;
+
                     case ModeType.MODE2:
                         grpMain.Text = "TXT_MODE2";
                         this.lblSamplingTime.Text = "TXT_SAMPLING_PERIOD";
@@ -193,6 +324,10 @@ namespace RM_3000.Forms.Measurement
                         SetSamplingToCombo(this.MeasSetting.SamplingTiming_Mode2);
                         txtSampling.Visible = false;
                         lblUnit.Visible = false;
+
+                        chDetailMode1.Checked = false;
+                        chDetailMode1.Visible = false;
+                        
                         break;
                     case ModeType.MODE3:
                         grpMain.Text = "TXT_MODE3";
@@ -213,10 +348,16 @@ namespace RM_3000.Forms.Measurement
                         SetSamplingToCombo(this.MeasSetting.SamplingTiming_Mode3);
                         txtSampling.Visible = false;
                         lblUnit.Visible = false;
+
+                        chDetailMode1.Checked = false;
+                        chDetailMode1.Visible = false;
+                        
                         break;
                 }
                 this.txtSampling.Text = this.MeasSetting.SamplingCountLimit.ToString();
                 this.sampling = this.MeasSetting.SamplingCountLimit;
+
+                this.mode1_MeasCondition = (Mode1_MeasCondition)this.MeasSetting.Mode1_MeasCondition.Clone();
 
                 // 言語切替
                 AppResource.SetControlsText(this);
@@ -302,6 +443,11 @@ namespace RM_3000.Forms.Measurement
                                 if (this.MeasSetting.SamplingCountLimit != this.sampling)
                                 {
                                     this.MeasSetting.SamplingCountLimit = this.sampling;
+                                }
+
+                                if (this.MeasSetting.Mode1_MeasCondition.IsUpdated)
+                                {
+                                    this.MeasSetting.Mode1_MeasCondition = (Mode1_MeasCondition)mode1_MeasCondition.Clone();
                                 }
                                 break;
                             case ModeType.MODE2:
@@ -487,7 +633,249 @@ namespace RM_3000.Forms.Measurement
                 ShowErrorMessage(ex);
             }
         }
+
+        private void numIntervalCount_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.binding)
+                {
+                    return;
+                }
+
+                int val;
+                if (!int.TryParse(this.numIntervalCount.Text, out val))
+                {
+                    this.dirty = true;
+                    return;
+                }
+
+                if(this.MeasSetting.Mode1_MeasCondition.Interval_count != val)
+                    this.dirty = true;
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+
+        }
+
+        private void numAverageCount_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.binding)
+                {
+                    return;
+                }
+
+                int val;
+                if (!int.TryParse(this.numAverageCount.Text, out val))
+                {
+                    this.dirty = true;
+                    return;
+                }
+
+                if(this.MeasSetting.Mode1_MeasCondition.Average_count != val)
+                    this.dirty = true;
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+
+        }
+
+        private void numTime2Shot_Time_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (this.binding)
+                {
+                    return;
+                }
+
+                int val;
+                if (!int.TryParse(this.numTime2Shot_Time.Text, out val))
+                {
+                    this.dirty = true;
+                    return;
+                }
+
+                if(this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_time != val)
+                    this.dirty = true;
+
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+
+        }
+
+        private void numTime2Shot_Shots_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (this.binding)
+                {
+                    return;
+                }
+
+                int val;
+                if (!int.TryParse(this.numTime2Shot_Shots.Text, out val))
+                {
+                    this.dirty = true;
+                    return;
+                }
+
+                if(this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_shots != val)
+                    this.dirty = true;
+
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+
+        private void numTime2Time_MeasTime_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.binding)
+                {
+                    return;
+                }
+
+                int val;
+                if (!int.TryParse(this.numTime2Time_MeasTime.Text, out val))
+                {
+                    this.dirty = true;
+                    return;
+                }
+
+                if(this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_meastime != val)
+                    this.dirty = true;
+
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+
+        private void numTime2Time_StopTime_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.binding)
+                {
+                    return;
+                }
+
+                int val;
+                if (!int.TryParse(this.numTime2Time_StopTime.Text, out val))
+                {
+                    this.dirty = true;
+                    return;
+                }
+
+                if(this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_stoptime != val)
+                    this.dirty = true;
+
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+
+        }
+
+        /// <summary>
+        /// Mode1測定条件ON/OFF
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void chDetailMode1_CheckedChanged(object sender, EventArgs e)
+        {
+            grpMode1Condition.Visible = chDetailMode1.Checked;
+        }
+
+        /// <summary>
+        /// Mode1測定条件 グループ表示/非表示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void grpMode1Condition_VisibleChanged(object sender, EventArgs e)
+        {
+            if (grpMode1Condition.Visible)
+            {
+                this.Width += (grpMode1Condition.Width + 10);
+            }
+            else
+            {
+                this.Width -= (grpMode1Condition.Width + 10);
+            }
+        }
+
+        private void rdoEveryShot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.binding)
+                return;
+
+            if (rdoEveryShot.Checked)
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS)
+                    this.dirty = true;
+        }
+
+        private void rdoINT_Shot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.binding)
+                return;
+
+            if (rdoINT_Shot.Checked)
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS)
+                    this.dirty = true;
+        }
+
+        private void rdoAverage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.binding)
+                return;
+
+            if (rdoAverage.Checked)
+                if(this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS)
+                    this.dirty = true;
+
+        }
+
+        private void rdoINT_Time2Shot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.binding)
+                return;
+
+            if (rdoINT_Time2Shot.Checked)
+                if(this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS)
+                    this.dirty = true;
+        }
+
+        private void rdoINT_Time2Time_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.binding)
+                return;
+
+            if (rdoINT_Time2Time.Checked)
+                if(this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME)
+                    this.dirty = true;
+        }
+
         #endregion
+
+
+
 
     }
 }

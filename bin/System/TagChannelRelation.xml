@@ -11,7 +11,7 @@
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>1</ChannelNo>
-      <TagNo_1>1</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
@@ -23,49 +23,49 @@
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>3</ChannelNo>
-      <TagNo_1>3</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>4</ChannelNo>
-      <TagNo_1>4</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>5</ChannelNo>
-      <TagNo_1>5</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>6</ChannelNo>
-      <TagNo_1>6</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>7</ChannelNo>
-      <TagNo_1>7</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>8</ChannelNo>
-      <TagNo_1>8</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>9</ChannelNo>
-      <TagNo_1>9</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>10</ChannelNo>
-      <TagNo_1>10</TagNo_1>
+      <TagNo_1>-1</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
   </RelationList>

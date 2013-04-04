@@ -45,6 +45,7 @@
             this.btnHide = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlAnimation = new System.Windows.Forms.Panel();
+            this.chkLoopAll = new System.Windows.Forms.CheckBox();
             this.chkLoop = new System.Windows.Forms.CheckBox();
             this.picStart = new System.Windows.Forms.PictureBox();
             this.picGain = new System.Windows.Forms.PictureBox();
@@ -67,7 +68,6 @@
             this.toolStripBtnBack = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnLeft = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRight = new System.Windows.Forms.ToolStripButton();
-            this.chkLoopAll = new System.Windows.Forms.CheckBox();
             this.pnlMain.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,7 +95,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(731, 160);
+            this.pnlMain.Size = new System.Drawing.Size(731, 168);
             this.pnlMain.TabIndex = 4;
             // 
             // panel3
@@ -107,7 +107,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(561, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 131);
+            this.panel3.Size = new System.Drawing.Size(164, 139);
             this.panel3.TabIndex = 8;
             // 
             // label5
@@ -182,7 +182,7 @@
             this.panel1.Location = new System.Drawing.Point(282, 25);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 72);
+            this.panel1.Size = new System.Drawing.Size(273, 83);
             this.panel1.TabIndex = 4;
             // 
             // picShow
@@ -300,24 +300,36 @@
             this.pnlAnimation.Location = new System.Drawing.Point(3, 25);
             this.pnlAnimation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAnimation.Name = "pnlAnimation";
-            this.pnlAnimation.Size = new System.Drawing.Size(273, 131);
+            this.pnlAnimation.Size = new System.Drawing.Size(273, 139);
             this.pnlAnimation.TabIndex = 3;
+            // 
+            // chkLoopAll
+            // 
+            this.chkLoopAll.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkLoopAll.Location = new System.Drawing.Point(192, 20);
+            this.chkLoopAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkLoopAll.Name = "chkLoopAll";
+            this.chkLoopAll.Size = new System.Drawing.Size(60, 50);
+            this.chkLoopAll.TabIndex = 19;
+            this.chkLoopAll.Text = "Total Shot";
+            this.chkLoopAll.UseVisualStyleBackColor = true;
+            this.chkLoopAll.Click += new System.EventHandler(this.chkLoopAll_Click);
             // 
             // chkLoop
             // 
             this.chkLoop.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkLoop.Location = new System.Drawing.Point(144, 14);
+            this.chkLoop.Location = new System.Drawing.Point(108, 19);
             this.chkLoop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkLoop.Name = "chkLoop";
             this.chkLoop.Size = new System.Drawing.Size(60, 50);
             this.chkLoop.TabIndex = 18;
-            this.chkLoop.Text = "#18";
+            this.chkLoop.Text = "1Shot";
             this.chkLoop.UseVisualStyleBackColor = true;
             this.chkLoop.Click += new System.EventHandler(this.chkLoop_Click);
             // 
             // picStart
             // 
-            this.picStart.Location = new System.Drawing.Point(6, 14);
+            this.picStart.Location = new System.Drawing.Point(18, 19);
             this.picStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStart.Name = "picStart";
             this.picStart.Size = new System.Drawing.Size(60, 50);
@@ -328,7 +340,7 @@
             // 
             // picGain
             // 
-            this.picGain.Location = new System.Drawing.Point(174, 80);
+            this.picGain.Location = new System.Drawing.Point(174, 87);
             this.picGain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picGain.Name = "picGain";
             this.picGain.Size = new System.Drawing.Size(60, 50);
@@ -339,7 +351,7 @@
             // 
             // picBack
             // 
-            this.picBack.Location = new System.Drawing.Point(40, 80);
+            this.picBack.Location = new System.Drawing.Point(42, 86);
             this.picBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBack.Name = "picBack";
             this.picBack.Size = new System.Drawing.Size(60, 50);
@@ -350,7 +362,7 @@
             // 
             // picStop
             // 
-            this.picStop.Location = new System.Drawing.Point(72, 14);
+            this.picStop.Location = new System.Drawing.Point(108, 87);
             this.picStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStop.Name = "picStop";
             this.picStop.Size = new System.Drawing.Size(60, 50);
@@ -397,7 +409,7 @@
             // lblSpeed
             // 
             this.lblSpeed.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblSpeed.Location = new System.Drawing.Point(207, 63);
+            this.lblSpeed.Location = new System.Drawing.Point(207, 64);
             this.lblSpeed.Name = "lblSpeed";
             this.lblSpeed.Size = new System.Drawing.Size(45, 22);
             this.lblSpeed.TabIndex = 6;
@@ -431,7 +443,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(3, 63);
+            this.label2.Location = new System.Drawing.Point(3, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 22);
             this.label2.TabIndex = 3;
@@ -440,7 +452,7 @@
             // 
             // trackSpeed
             // 
-            this.trackSpeed.Location = new System.Drawing.Point(72, 63);
+            this.trackSpeed.Location = new System.Drawing.Point(72, 67);
             this.trackSpeed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackSpeed.Name = "trackSpeed";
             this.trackSpeed.Size = new System.Drawing.Size(130, 45);
@@ -487,7 +499,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.tstrip3DGraph);
-            this.panel2.Location = new System.Drawing.Point(282, 102);
+            this.panel2.Location = new System.Drawing.Point(282, 112);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(274, 52);
@@ -557,23 +569,11 @@
             this.toolStripBtnRight.Text = "TXT_3D_RIGHT";
             this.toolStripBtnRight.Click += new System.EventHandler(this.toolStripBtnRight_Click);
             // 
-            // chkLoopAll
-            // 
-            this.chkLoopAll.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkLoopAll.Location = new System.Drawing.Point(210, 14);
-            this.chkLoopAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chkLoopAll.Name = "chkLoopAll";
-            this.chkLoopAll.Size = new System.Drawing.Size(60, 50);
-            this.chkLoopAll.TabIndex = 19;
-            this.chkLoopAll.Text = "#45";
-            this.chkLoopAll.UseVisualStyleBackColor = true;
-            this.chkLoopAll.Click += new System.EventHandler(this.chkLoopAll_Click);
-            // 
             // frm3DGraphController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 160);
+            this.ClientSize = new System.Drawing.Size(731, 168);
             this.Controls.Add(this.pnlMain);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

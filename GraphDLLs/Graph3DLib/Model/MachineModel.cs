@@ -36,7 +36,7 @@ namespace Graph3DLib.Model
         /// <summary>
         /// set top part position for set high between plate
         /// </summary>
-        private const double _UpDownToppartPosition = -6.5;
+        private const double _UpDownToppartPosition = -4.5;
         #endregion
 
         #region Private Variable
@@ -348,57 +348,46 @@ namespace Graph3DLib.Model
                 Point3D[] toprampoint = new Point3D[8];
                 Point3D[] topstripperpoint = new Point3D[8];
 
-                toprampoint[0] = new Point3D(-6.5, 8 + _UpDownToppartPosition, -2.5);
-                toprampoint[1] = new Point3D(6.5, 8 + _UpDownToppartPosition, -2.5);
-                toprampoint[2] = new Point3D(6.5, 8 + _UpDownToppartPosition, 2.5);
-                toprampoint[3] = new Point3D(-6.5, 8 + _UpDownToppartPosition, 2.5);
-                toprampoint[4] = new Point3D(-6.5, 9.5 + _UpDownToppartPosition, -2.5);
-                toprampoint[5] = new Point3D(6.5, 9.5 + _UpDownToppartPosition, -2.5);
-                toprampoint[6] = new Point3D(6.5, 9.5 + _UpDownToppartPosition, 2.5);
-                toprampoint[7] = new Point3D(-6.5, 9.5 + _UpDownToppartPosition, 2.5);
+                toprampoint[0] = new Point3D(-7, 8 + _UpDownToppartPosition, -3.5);
+                toprampoint[1] = new Point3D(7, 8 + _UpDownToppartPosition, -3.5);
+                toprampoint[2] = new Point3D(7, 8 + _UpDownToppartPosition, 3.5);
+                toprampoint[3] = new Point3D(-7, 8 + _UpDownToppartPosition, 3.5);
+                toprampoint[4] = new Point3D(-7, 9.5 + _UpDownToppartPosition, -3.5);
+                toprampoint[5] = new Point3D(7, 9.5 + _UpDownToppartPosition, -3.5);
+                toprampoint[6] = new Point3D(7, 9.5 + _UpDownToppartPosition, 3.5);
+                toprampoint[7] = new Point3D(-7, 9.5 + _UpDownToppartPosition, 3.5);
 
-                topmechpoint[0] = new Point3D(-6, 7 + _UpDownToppartPosition, -2.5);
-                topmechpoint[1] = new Point3D(6, 7 + _UpDownToppartPosition, -2.5);
-                topmechpoint[2] = new Point3D(6, 7 + _UpDownToppartPosition, 2.5);
-                topmechpoint[3] = new Point3D(-6, 7 + _UpDownToppartPosition, 2.5);
-                topmechpoint[4] = new Point3D(-6, 8 + _UpDownToppartPosition, -2.5);
-                topmechpoint[5] = new Point3D(6, 8 + _UpDownToppartPosition, -2.5);
-                topmechpoint[6] = new Point3D(6, 8 + _UpDownToppartPosition, 2.5);
-                topmechpoint[7] = new Point3D(-6, 8 + _UpDownToppartPosition, 2.5);
+                topmechpoint[0] = new Point3D(-6, 7 + _UpDownToppartPosition, -3);
+                topmechpoint[1] = new Point3D(6, 7 + _UpDownToppartPosition, -3);
+                topmechpoint[2] = new Point3D(6, 7 + _UpDownToppartPosition, 3);
+                topmechpoint[3] = new Point3D(-6, 7 + _UpDownToppartPosition, 3);
+                topmechpoint[4] = new Point3D(-6, 8 + _UpDownToppartPosition, -3);
+                topmechpoint[5] = new Point3D(6, 8 + _UpDownToppartPosition, -3);
+                topmechpoint[6] = new Point3D(6, 8 + _UpDownToppartPosition, 3);
+                topmechpoint[7] = new Point3D(-6, 8 + _UpDownToppartPosition, 3);
 
-                topplatepoint[0] = new Point3D(-5.5, 6 + _UpDownToppartPosition, -2);
-                topplatepoint[1] = new Point3D(5.5, 6 + _UpDownToppartPosition, -2);
-                topplatepoint[2] = new Point3D(5.5, 6 + _UpDownToppartPosition, 2);
-                topplatepoint[3] = new Point3D(-5.5, 6 + _UpDownToppartPosition, 2);
-                topplatepoint[4] = new Point3D(-5.5, 7 + _UpDownToppartPosition, -2);
-                topplatepoint[5] = new Point3D(5.5, 7 + _UpDownToppartPosition, -2);
-                topplatepoint[6] = new Point3D(5.5, 7 + _UpDownToppartPosition, 2);
-                topplatepoint[7] = new Point3D(-5.5, 7 + _UpDownToppartPosition, 2);
+                topplatepoint[0] = new Point3D(-5.5, 6 + _UpDownToppartPosition, -2.3);
+                topplatepoint[1] = new Point3D(5.5, 6 + _UpDownToppartPosition, -2.3);
+                topplatepoint[2] = new Point3D(5.5, 6 + _UpDownToppartPosition, 2.3);
+                topplatepoint[3] = new Point3D(-5.5, 6 + _UpDownToppartPosition, 2.3);
+                topplatepoint[4] = new Point3D(-5.5, 7 + _UpDownToppartPosition, -2.3);
+                topplatepoint[5] = new Point3D(5.5, 7 + _UpDownToppartPosition, -2.3);
+                topplatepoint[6] = new Point3D(5.5, 7 + _UpDownToppartPosition, 2.3);
+                topplatepoint[7] = new Point3D(-5.5, 7 + _UpDownToppartPosition, 2.3);
 
-                topstripperpoint[0] = new Point3D(-5.5, 5.5 + _UpDownToppartPosition, -2);
-                topstripperpoint[1] = new Point3D(5.5, 5.5 + _UpDownToppartPosition, -2);
-                topstripperpoint[2] = new Point3D(5.5, 5.5 + _UpDownToppartPosition, 2);
-                topstripperpoint[3] = new Point3D(-5.5, 5.5 + _UpDownToppartPosition, 2);
-                topstripperpoint[4] = new Point3D(-5.5, 6 + _UpDownToppartPosition, -2);
-                topstripperpoint[5] = new Point3D(5.5, 6 + _UpDownToppartPosition, -2);
-                topstripperpoint[6] = new Point3D(5.5, 6 + _UpDownToppartPosition, 2);
-                topstripperpoint[7] = new Point3D(-5.5, 6 + _UpDownToppartPosition, 2);
+                topstripperpoint[0] = new Point3D(-5.5, 5.5 + _UpDownToppartPosition, -2.3);
+                topstripperpoint[1] = new Point3D(5.5, 5.5 + _UpDownToppartPosition, -2.3);
+                topstripperpoint[2] = new Point3D(5.5, 5.5 + _UpDownToppartPosition, 2.3);
+                topstripperpoint[3] = new Point3D(-5.5, 5.5 + _UpDownToppartPosition, 2.3);
+                topstripperpoint[4] = new Point3D(-5.5, 6 + _UpDownToppartPosition, -2.3);
+                topstripperpoint[5] = new Point3D(5.5, 6 + _UpDownToppartPosition, -2.3);
+                topstripperpoint[6] = new Point3D(5.5, 6 + _UpDownToppartPosition, 2.3);
+                topstripperpoint[7] = new Point3D(-5.5, 6 + _UpDownToppartPosition, 2.3);
 
-                //if (!_IsImageTexture)
-                //if (true)
-                //{
                 topplatemodel.Children.Add(squaremodel.Create(_PartColors[(int)MachinePart.Ram], toprampoint));
                 topplatemodel.Children.Add(squaremodel.Create(_PartColors[(int)MachinePart.MachinePlate], topmechpoint));
                 topplatemodel.Children.Add(squaremodel.Create(_PartColors[(int)MachinePart.UpperPress], topplatepoint));
                 topplatemodel.Children.Add(squaremodel.Create(_PartColors[(int)MachinePart.Stripper], topstripperpoint));
-                //}
-                //else
-                //{
-                //    topplatemodel.Children.Add(squaremodel.Create(@".\\Images\\TopRam.jpg", toprampoint));
-                //    topplatemodel.Children.Add(squaremodel.Create(@".\\Images\\TopPlate.jpg", topmechpoint));
-                //    topplatemodel.Children.Add(squaremodel.Create(@".\\Images\\TopPress.jpg", topplatepoint));
-                //    topplatemodel.Children.Add(squaremodel.Create(@".\\Images\\Stripper.jpg", topstripperpoint));
-                //}
 
 
                 topplatemodel.Children[0].Transform = CreateTranform3DGroup();
@@ -414,7 +403,7 @@ namespace Graph3DLib.Model
 
                 //if (!_IsImageTexture)
                 //{
-                topshaftgroup.Children.Add(ellipsemodel.Create(_PartColors[(int)MachinePart.Shaft], new Point3D(0, 8.5 + _UpDownToppartPosition, 0), 7));
+                topshaftgroup.Children.Add(ellipsemodel.Create(_PartColors[(int)MachinePart.Shaft], new Point3D(0, 8.5 + _UpDownToppartPosition, 0), 5));
                 //}
                 //else
                 //{
@@ -443,7 +432,7 @@ namespace Graph3DLib.Model
 
         private Transform3DGroup CreateTranform3DGroup()
         {
-            Transform3DGroup tranform = new Transform3DGroup();            
+            Transform3DGroup tranform = new Transform3DGroup();
             tranform.Children.Add(new RotateTransform3D());    //X
             tranform.Children.Add(new RotateTransform3D());    //Y
             tranform.Children.Add(new RotateTransform3D());    //Z
@@ -452,7 +441,7 @@ namespace Graph3DLib.Model
             tranform.Children.Add(new TranslateTransform3D()); // X
             tranform.Children.Add(new TranslateTransform3D()); // Y
             tranform.Children.Add(new TranslateTransform3D()); // Z
-            
+
 
             return tranform;
         }
@@ -465,9 +454,9 @@ namespace Graph3DLib.Model
         {
             try
             {
-                double rampos_y = -6;
-                double mechpos_y = -4.5;
-                double platepos_y = -3.5;
+                double rampos_y = -4;
+                double mechpos_y = -2.5;
+                double platepos_y = -1.5;
 
                 SquareModel squaremodel = new SquareModel();
                 Model3DGroup bottompartgroup = new Model3DGroup();
@@ -483,52 +472,52 @@ namespace Graph3DLib.Model
                 Point3D[] labelleft = new Point3D[4];
                 Point3D[] labelright = new Point3D[4];
 
-                bottomrampoint[0] = new Point3D(-6.5, rampos_y, -2.5);
-                bottomrampoint[1] = new Point3D(6.5, rampos_y, -2.5);
-                bottomrampoint[2] = new Point3D(6.5, rampos_y, 2.5);
-                bottomrampoint[3] = new Point3D(-6.5, rampos_y, 2.5);
-                bottomrampoint[4] = new Point3D(-6.5, rampos_y + 1.5, -2.5);
-                bottomrampoint[5] = new Point3D(6.5, rampos_y + 1.5, -2.5);
-                bottomrampoint[6] = new Point3D(6.5, rampos_y + 1.5, 2.5);
-                bottomrampoint[7] = new Point3D(-6.5, rampos_y + 1.5, 2.5);
+                bottomrampoint[0] = new Point3D(-7, rampos_y, -3.5);
+                bottomrampoint[1] = new Point3D(7, rampos_y, -3.5);
+                bottomrampoint[2] = new Point3D(7, rampos_y, 3.5);
+                bottomrampoint[3] = new Point3D(-7, rampos_y, 3.5);
+                bottomrampoint[4] = new Point3D(-7, rampos_y + 1.5, -3.5);
+                bottomrampoint[5] = new Point3D(7, rampos_y + 1.5, -3.5);
+                bottomrampoint[6] = new Point3D(7, rampos_y + 1.5, 3.5);
+                bottomrampoint[7] = new Point3D(-7, rampos_y + 1.5, 3.5);
 
-                bottommechpoint[0] = new Point3D(-6, mechpos_y, -2.5);
-                bottommechpoint[1] = new Point3D(6, mechpos_y, -2.5);
-                bottommechpoint[2] = new Point3D(6, mechpos_y, 2.5);
-                bottommechpoint[3] = new Point3D(-6, mechpos_y, 2.5);
-                bottommechpoint[4] = new Point3D(-6, mechpos_y + 1, -2.5);
-                bottommechpoint[5] = new Point3D(6, mechpos_y + 1, -2.5);
-                bottommechpoint[6] = new Point3D(6, mechpos_y + 1, 2.5);
-                bottommechpoint[7] = new Point3D(-6, mechpos_y + 1, 2.5);
+                bottommechpoint[0] = new Point3D(-6, mechpos_y, -3);
+                bottommechpoint[1] = new Point3D(6, mechpos_y, -3);
+                bottommechpoint[2] = new Point3D(6, mechpos_y, 3);
+                bottommechpoint[3] = new Point3D(-6, mechpos_y, 3);
+                bottommechpoint[4] = new Point3D(-6, mechpos_y + 1, -3);
+                bottommechpoint[5] = new Point3D(6, mechpos_y + 1, -3);
+                bottommechpoint[6] = new Point3D(6, mechpos_y + 1, 3);
+                bottommechpoint[7] = new Point3D(-6, mechpos_y + 1, 3);
 
-                bottomplatepoint[0] = new Point3D(-5.5, platepos_y, -2);
-                bottomplatepoint[1] = new Point3D(5.5, platepos_y, -2);
-                bottomplatepoint[2] = new Point3D(5.5, platepos_y, 2);
-                bottomplatepoint[3] = new Point3D(-5.5, platepos_y, 2);
-                bottomplatepoint[4] = new Point3D(-5.5, platepos_y + 1, -2);
-                bottomplatepoint[5] = new Point3D(5.5, platepos_y + 1, -2);
-                bottomplatepoint[6] = new Point3D(5.5, platepos_y + 1, 2);
-                bottomplatepoint[7] = new Point3D(-5.5, platepos_y + 1, 2);
+                bottomplatepoint[0] = new Point3D(-5.5, platepos_y, -2.3);
+                bottomplatepoint[1] = new Point3D(5.5, platepos_y, -2.3);
+                bottomplatepoint[2] = new Point3D(5.5, platepos_y, 2.3);
+                bottomplatepoint[3] = new Point3D(-5.5, platepos_y, 2.3);
+                bottomplatepoint[4] = new Point3D(-5.5, platepos_y + 1, -2.3);
+                bottomplatepoint[5] = new Point3D(5.5, platepos_y + 1, -2.3);
+                bottomplatepoint[6] = new Point3D(5.5, platepos_y + 1, 2.3);
+                bottomplatepoint[7] = new Point3D(-5.5, platepos_y + 1, 2.3);
 
-                labelfront[0] = new Point3D(-0.5, rampos_y + 1, 2.5001);
-                labelfront[1] = new Point3D(0.5, rampos_y + 1, 2.5001);
-                labelfront[2] = new Point3D(0.5, rampos_y, 2.5001);
-                labelfront[3] = new Point3D(-0.5, rampos_y, 2.5001);
+                labelfront[0] = new Point3D(-0.5, rampos_y + 1, 3.5001);
+                labelfront[1] = new Point3D(0.5, rampos_y + 1, 3.5001);
+                labelfront[2] = new Point3D(0.5, rampos_y, 3.5001);
+                labelfront[3] = new Point3D(-0.5, rampos_y, 3.5001);
 
-                labelback[1] = new Point3D(-0.5, 1 + rampos_y, -2.5001);
-                labelback[0] = new Point3D(0.5, 1 + rampos_y, -2.5001);
-                labelback[3] = new Point3D(0.5, rampos_y, -2.5001);
-                labelback[2] = new Point3D(-0.5, rampos_y, -2.5001);
+                labelback[1] = new Point3D(-0.5, 1 + rampos_y, -3.5001);
+                labelback[0] = new Point3D(0.5, 1 + rampos_y, -3.5001);
+                labelback[3] = new Point3D(0.5, rampos_y, -3.5001);
+                labelback[2] = new Point3D(-0.5, rampos_y, -3.5001);
 
-                labelleft[0] = new Point3D(-6.5001, 1 + rampos_y, -0.5);
-                labelleft[1] = new Point3D(-6.5001, 1 + rampos_y, 0.5);
-                labelleft[2] = new Point3D(-6.5001, rampos_y, 0.5);
-                labelleft[3] = new Point3D(-6.5001, rampos_y, -0.5);
+                labelleft[0] = new Point3D(-7.0001, 1 + rampos_y, -0.5);
+                labelleft[1] = new Point3D(-7.0001, 1 + rampos_y, 0.5);
+                labelleft[2] = new Point3D(-7.0001, rampos_y, 0.5);
+                labelleft[3] = new Point3D(-7.0001, rampos_y, -0.5);
 
-                labelright[1] = new Point3D(6.5001, 1 + rampos_y, -0.5);
-                labelright[0] = new Point3D(6.5001, 1 + rampos_y, 0.5);
-                labelright[3] = new Point3D(6.5001, rampos_y, 0.5);
-                labelright[2] = new Point3D(6.5001, rampos_y, -0.5);
+                labelright[1] = new Point3D(7.0001, 1 + rampos_y, -0.5);
+                labelright[0] = new Point3D(7.0001, 1 + rampos_y, 0.5);
+                labelright[3] = new Point3D(7.0001, rampos_y, 0.5);
+                labelright[2] = new Point3D(7.0001, rampos_y, -0.5);
 
 
                 //if (!_IsImageTexture)
@@ -590,23 +579,23 @@ namespace Graph3DLib.Model
                 double width = 10;
                 double deep = 6;
 
-                machinetoppoint[0] = new Point3D(-width, 11.5 + _UpDownToppartPosition, -deep);
-                machinetoppoint[1] = new Point3D(width, 11.5 + _UpDownToppartPosition, -deep);
-                machinetoppoint[2] = new Point3D(width, 11.5 + _UpDownToppartPosition, deep);
-                machinetoppoint[3] = new Point3D(-width, 11.5 + _UpDownToppartPosition, deep);
-                machinetoppoint[4] = new Point3D(-width, 16.8 + _UpDownToppartPosition, -deep);
-                machinetoppoint[5] = new Point3D(width, 16.8 + _UpDownToppartPosition, -deep);
-                machinetoppoint[6] = new Point3D(width, 16.8 + _UpDownToppartPosition, deep);
-                machinetoppoint[7] = new Point3D(-width, 16.8 + _UpDownToppartPosition, deep);
+                machinetoppoint[0] = new Point3D(-width, 10.5 + _UpDownToppartPosition, -deep);
+                machinetoppoint[1] = new Point3D(width, 10.5 + _UpDownToppartPosition, -deep);
+                machinetoppoint[2] = new Point3D(width, 10.5 + _UpDownToppartPosition, deep);
+                machinetoppoint[3] = new Point3D(-width, 10.5 + _UpDownToppartPosition, deep);
+                machinetoppoint[4] = new Point3D(-width, 15.8 + _UpDownToppartPosition, -deep);
+                machinetoppoint[5] = new Point3D(width, 15.8 + _UpDownToppartPosition, -deep);
+                machinetoppoint[6] = new Point3D(width, 15.8 + _UpDownToppartPosition, deep);
+                machinetoppoint[7] = new Point3D(-width, 15.8 + _UpDownToppartPosition, deep);
 
-                machinebottompoint[0] = new Point3D(-width, -11.5, -deep);
-                machinebottompoint[1] = new Point3D(width, -11.5, -deep);
-                machinebottompoint[2] = new Point3D(width, -11.5, deep);
-                machinebottompoint[3] = new Point3D(-width, -11.5, deep);
-                machinebottompoint[4] = new Point3D(-width, -6, -deep);
-                machinebottompoint[5] = new Point3D(width, -6, -deep);
-                machinebottompoint[6] = new Point3D(width, -6, deep);
-                machinebottompoint[7] = new Point3D(-width, -6, deep);
+                machinebottompoint[0] = new Point3D(-width, -10.5, -deep);
+                machinebottompoint[1] = new Point3D(width, -10.5, -deep);
+                machinebottompoint[2] = new Point3D(width, -10.5, deep);
+                machinebottompoint[3] = new Point3D(-width, -10.5, deep);
+                machinebottompoint[4] = new Point3D(-width, -4, -deep);
+                machinebottompoint[5] = new Point3D(width, -4, -deep);
+                machinebottompoint[6] = new Point3D(width, -4, deep);
+                machinebottompoint[7] = new Point3D(-width, -4, deep);
 
                 if (!_IsImageTexture)
                 {
@@ -654,6 +643,8 @@ namespace Graph3DLib.Model
         {
             try
             {
+                double toppoint = 10.5;
+                double bottompoint = -4;
                 SquareModel squaremodel = new SquareModel();
                 Model3DGroup machinepostgroup = new Model3DGroup();
                 Model3DGroup machinepostlinegroup = new Model3DGroup();
@@ -663,44 +654,44 @@ namespace Graph3DLib.Model
                 Point3D[] machinepost4 = new Point3D[8];
                 double x1 = 10;//8.5;
                 double x2 = 6.5;
-                double z1 = 4;
+                double z1 = 3.95;
                 double z2 = 6;
 
-                machinepost1[0] = new Point3D(-x1, -6, z1);
-                machinepost1[1] = new Point3D(-x2 - .1, -6, z1);
-                machinepost1[2] = new Point3D(-x2 - .1, -6, z2);
-                machinepost1[3] = new Point3D(-x1, -6, z2);
-                machinepost1[4] = new Point3D(-x1, 11.5 + _UpDownToppartPosition, z1);
-                machinepost1[5] = new Point3D(-x2 - .1, 11.5 + _UpDownToppartPosition, z1);
-                machinepost1[6] = new Point3D(-x2 - .1, 11.5 + _UpDownToppartPosition, z2);
-                machinepost1[7] = new Point3D(-x1, 11.5 + _UpDownToppartPosition, z2);
+                machinepost1[0] = new Point3D(-x1, bottompoint, z1);
+                machinepost1[1] = new Point3D(-x2 - .1, bottompoint, z1);
+                machinepost1[2] = new Point3D(-x2 - .1, bottompoint, z2);
+                machinepost1[3] = new Point3D(-x1, bottompoint, z2);
+                machinepost1[4] = new Point3D(-x1, toppoint + _UpDownToppartPosition, z1);
+                machinepost1[5] = new Point3D(-x2 - .1, toppoint + _UpDownToppartPosition, z1);
+                machinepost1[6] = new Point3D(-x2 - .1, toppoint + _UpDownToppartPosition, z2);
+                machinepost1[7] = new Point3D(-x1, toppoint + _UpDownToppartPosition, z2);
 
-                machinepost2[0] = new Point3D(-x1, -6, -z2);
-                machinepost2[1] = new Point3D(-x2 - .1, -6, -z2);
-                machinepost2[2] = new Point3D(-x2 - .1, -6, -z1);
-                machinepost2[3] = new Point3D(-x1, -6, -z1);
-                machinepost2[4] = new Point3D(-x1, 11.5 + _UpDownToppartPosition, -z2);
-                machinepost2[5] = new Point3D(-x2 - .1, 11.5 + _UpDownToppartPosition, -z2);
-                machinepost2[6] = new Point3D(-x2 - .1, 11.5 + _UpDownToppartPosition, -z1);
-                machinepost2[7] = new Point3D(-x1, 11.5 + _UpDownToppartPosition, -z1);
+                machinepost2[0] = new Point3D(-x1, bottompoint, -z2);
+                machinepost2[1] = new Point3D(-x2 - .1, bottompoint, -z2);
+                machinepost2[2] = new Point3D(-x2 - .1, bottompoint, -z1);
+                machinepost2[3] = new Point3D(-x1, bottompoint, -z1);
+                machinepost2[4] = new Point3D(-x1, toppoint + _UpDownToppartPosition, -z2);
+                machinepost2[5] = new Point3D(-x2 - .1, toppoint + _UpDownToppartPosition, -z2);
+                machinepost2[6] = new Point3D(-x2 - .1, toppoint + _UpDownToppartPosition, -z1);
+                machinepost2[7] = new Point3D(-x1, toppoint + _UpDownToppartPosition, -z1);
 
-                machinepost3[0] = new Point3D(x2 + .1, -6, -z2);
-                machinepost3[1] = new Point3D(x1, -6, -z2);
-                machinepost3[2] = new Point3D(x1, -6, -z1);
-                machinepost3[3] = new Point3D(x2 + .1, -6, -z1);
-                machinepost3[4] = new Point3D(x2 + .1, 11.5 + _UpDownToppartPosition, -z2);
-                machinepost3[5] = new Point3D(x1, 11.5 + _UpDownToppartPosition, -z2);
-                machinepost3[6] = new Point3D(x1, 11.5 + _UpDownToppartPosition, -z1);
-                machinepost3[7] = new Point3D(x2 + .1, 11.5 + _UpDownToppartPosition, -z1);
+                machinepost3[0] = new Point3D(x2 + .1, bottompoint, -z2);
+                machinepost3[1] = new Point3D(x1, bottompoint, -z2);
+                machinepost3[2] = new Point3D(x1, bottompoint, -z1);
+                machinepost3[3] = new Point3D(x2 + .1, bottompoint, -z1);
+                machinepost3[4] = new Point3D(x2 + .1, toppoint + _UpDownToppartPosition, -z2);
+                machinepost3[5] = new Point3D(x1, toppoint + _UpDownToppartPosition, -z2);
+                machinepost3[6] = new Point3D(x1, toppoint + _UpDownToppartPosition, -z1);
+                machinepost3[7] = new Point3D(x2 + .1, toppoint + _UpDownToppartPosition, -z1);
 
-                machinepost4[0] = new Point3D(x2 - .1, -6, z1);
-                machinepost4[1] = new Point3D(x1, -6, z1);
-                machinepost4[2] = new Point3D(x1, -6, z2);
-                machinepost4[3] = new Point3D(x2 - .1, -6, z2);
-                machinepost4[4] = new Point3D(x2 - .1, 11.5 + _UpDownToppartPosition, z1);
-                machinepost4[5] = new Point3D(x1, 11.5 + _UpDownToppartPosition, z1);
-                machinepost4[6] = new Point3D(x1, 11.5 + _UpDownToppartPosition, z2);
-                machinepost4[7] = new Point3D(x2 - .1, 11.5 + _UpDownToppartPosition, z2);
+                machinepost4[0] = new Point3D(x2 - .1, bottompoint, z1);
+                machinepost4[1] = new Point3D(x1, bottompoint, z1);
+                machinepost4[2] = new Point3D(x1, bottompoint, z2);
+                machinepost4[3] = new Point3D(x2 - .1, bottompoint, z2);
+                machinepost4[4] = new Point3D(x2 - .1, toppoint + _UpDownToppartPosition, z1);
+                machinepost4[5] = new Point3D(x1, toppoint + _UpDownToppartPosition, z1);
+                machinepost4[6] = new Point3D(x1, toppoint + _UpDownToppartPosition, z2);
+                machinepost4[7] = new Point3D(x2 - .1, toppoint + _UpDownToppartPosition, z2);
                 if (!_IsImageTexture)
                 {
                     machinepostgroup.Children.Add(squaremodel.Create(_PartColors[(int)MachinePart.MachinePost], machinepost1));
@@ -714,26 +705,42 @@ namespace Graph3DLib.Model
                     string[] postpicleft = new string[6];
                     postpicleft[0] = _ImagePath + "PostLeft_F.png";
                     postpicleft[1] = _ImagePath + "PostRight_B.png";
-                    postpicleft[2] = _ImagePath + "PostLeft_LR.png";
-                    postpicleft[3] = _ImagePath + "PostLeft_LR.png";
+                    postpicleft[2] = _ImagePath + "PostRight_LR.png";
+                    postpicleft[3] = _ImagePath + "PostRight_LR.png";
                     postpicleft[4] = _ImagePath + "PostLeft_F.png";
                     postpicleft[5] = _ImagePath + "PostLeft_F.png";
+
+                    string[] postpicleft2 = new string[6];
+                    postpicleft2[0] = _ImagePath + "PostLeft_F.png";
+                    postpicleft2[1] = _ImagePath + "PostRight_B.png";
+                    postpicleft2[2] = _ImagePath + "PostLeft_LR.png";
+                    postpicleft2[3] = _ImagePath + "PostLeft_LR.png";
+                    postpicleft2[4] = _ImagePath + "PostLeft_F.png";
+                    postpicleft2[5] = _ImagePath + "PostLeft_F.png";
 
                     string[] postpicright = new string[6];
                     postpicright[0] = _ImagePath + "PostRight_F.png";
                     postpicright[1] = _ImagePath + "PostLeft_B.png";
-                    postpicright[2] = _ImagePath + "PostRight_LR.png";
-                    postpicright[3] = _ImagePath + "PostRight_LR.png";
+                    postpicright[2] = _ImagePath + "PostLeft_LR.png";
+                    postpicright[3] = _ImagePath + "PostLeft_LR.png";
                     postpicright[4] = _ImagePath + "PostRight_F.png";
                     postpicright[5] = _ImagePath + "PostRight_F.png";
+
+                    string[] postpicright2 = new string[6];
+                    postpicright2[0] = _ImagePath + "PostRight_F.png";
+                    postpicright2[1] = _ImagePath + "PostLeft_B.png";
+                    postpicright2[2] = _ImagePath + "PostRight_LR.png";
+                    postpicright2[3] = _ImagePath + "PostRight_LR.png";
+                    postpicright2[4] = _ImagePath + "PostRight_F.png";
+                    postpicright2[5] = _ImagePath + "PostRight_F.png";
 
                     //machinepostgroup.Children.Add(squaremodel.CreatePosts(machinetexture, machinepost1, false, ptexture0, ptexture1));
                     //machinepostgroup.Children.Add(squaremodel.CreatePosts(machinetexture, machinepost2, false, ptexture0, ptexture1));
                     //machinepostgroup.Children.Add(squaremodel.CreatePosts(machinetexture, machinepost3, false, ptexture0, ptexture1));
                     //machinepostgroup.Children.Add(squaremodel.CreatePosts(machinetexture, machinepost4, false, ptexture0, ptexture1));
                     machinepostgroup.Children.Add(squaremodel.Create(postpicleft, machinepost1, false));
-                    machinepostgroup.Children.Add(squaremodel.Create(postpicleft, machinepost2, false));
-                    machinepostgroup.Children.Add(squaremodel.Create(postpicright, machinepost3, false));
+                    machinepostgroup.Children.Add(squaremodel.Create(postpicleft2, machinepost2, false));
+                    machinepostgroup.Children.Add(squaremodel.Create(postpicright2, machinepost3, false));
                     machinepostgroup.Children.Add(squaremodel.Create(postpicright, machinepost4, false));
                     machinepostgroup.Children.Add(machinepostlinegroup);
 

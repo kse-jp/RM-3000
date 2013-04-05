@@ -530,6 +530,10 @@ namespace GraphLib
         /// start index rawdata plot (for current line)
         /// </summary>
         private int _StartIndexRawDataPlot = 0;
+        /// <summary>
+        /// current chinfo
+        /// </summary>
+        private ChannelInfo[] _CurrentChInfo = null;
         #endregion
 
         #region Delegate
@@ -2149,7 +2153,7 @@ namespace GraphLib
                         gridcanvas.Children.Add(graphGridLine.ButtonMeasureY);
                         gridcanvas.Children.Add(graphGridLine.ButtonMeasureY2);
                         //For Test Speed
-                        gridcanvas.Children.Add(graphGridLine.CreateSpeedCheckLabel());
+                        //gridcanvas.Children.Add(graphGridLine.CreateSpeedCheckLabel());
                         //For Test Speed
 
                         //button click event                       
@@ -4676,45 +4680,64 @@ namespace GraphLib
         private void CreateLegendPanel()
         {
             ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
+            bool chksame = true;
+
             if (chInfo != null && chInfo.Length > 0)
             {
-                gridLegend.RowDefinitions.Clear();
-                gridLegend.Children.Clear();
-                this.ShowLegend = true;
-
-                for (int i = 0; i < chInfo.Length; i++)
+                if (_CurrentChInfo != null && _CurrentChInfo.Length == chInfo.Length)
                 {
-                    RowDefinition r = new RowDefinition();
-                    r.Height = new GridLength(25, GridUnitType.Auto);
+                    for (int i = 0; i < chInfo.Length; i++)
+                    {
+                        if ((_CurrentChInfo[i].CHColor != chInfo[i].CHColor) || (_CurrentChInfo[i].CHNo != chInfo[i].CHNo) ||
+                            (_CurrentChInfo[i].IsEnabled != chInfo[i].IsEnabled) || (_CurrentChInfo[i].CHName != chInfo[i].CHName))
+                        {
+                            chksame = false;
+                            break;
+                        }
+                    }
+                }
+                else
+                    chksame = false;
 
-                    gridLegend.RowDefinitions.Add(r);
+                if (!chksame)
+                {
+                    _CurrentChInfo = chInfo;
+                    gridLegend.RowDefinitions.Clear();
+                    gridLegend.Children.Clear();
+                    this.ShowLegend = true;
 
+                    for (int i = 0; i < chInfo.Length; i++)
+                    {
+                        RowDefinition r = new RowDefinition();
+                        r.Height = new GridLength(27, GridUnitType.Pixel);
 
-                    Rectangle rect = new Rectangle();
-                    rect.Name = "rectLgLine" + i.ToString();
-                    rect.Width = 12;
-                    rect.Height = 12;
-                    rect.Stroke = new SolidColorBrush(Colors.Black);
-                    rect.Fill = new SolidColorBrush(chInfo[i].CHColor);
-                    rect.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                    rect.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                    rect.Margin = new Thickness(5, 0, 0, 3);
-                    Grid.SetColumn(rect, 0);
-                    Grid.SetRow(rect, i);
-                    gridLegend.Children.Add(rect);
+                        gridLegend.RowDefinitions.Add(r);
 
-                    Label label = new Label();
-                    label.Name = "lblLgName" + i.ToString();
-                    label.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                    label.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                    label.Margin = new Thickness(5, 0, 0, 3);
-                    label.Content = chInfo[i].CHName;
-                    label.FontSize = 12;
-                    Grid.SetColumn(label, 1);
-                    Grid.SetRow(label, i);
+                        Rectangle rect = new Rectangle();
+                        rect.Name = "rectLgLine" + i.ToString();
+                        rect.Width = 12;
+                        rect.Height = 12;
+                        rect.Stroke = new SolidColorBrush(Colors.Black);
+                        rect.Fill = new SolidColorBrush(chInfo[i].CHColor);
+                        rect.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        rect.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                        rect.Margin = new Thickness(5, 0, 0, 3);
+                        Grid.SetColumn(rect, 0);
+                        Grid.SetRow(rect, i);
+                        gridLegend.Children.Add(rect);
 
+                        Label label = new Label();
+                        label.Name = "lblLgName" + i.ToString();
+                        label.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        label.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                        label.Margin = new Thickness(5, 0, 0, 3);
+                        label.Content = chInfo[i].CHName;
+                        label.FontSize = 12;
+                        Grid.SetColumn(label, 1);
+                        Grid.SetRow(label, i);
 
-                    gridLegend.Children.Add(label);
+                        gridLegend.Children.Add(label);
+                    }
                 }
             }
             else

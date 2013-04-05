@@ -152,7 +152,7 @@
             this.rdoTimingRef.Location = new System.Drawing.Point(6, 30);
             this.rdoTimingRef.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoTimingRef.Name = "rdoTimingRef";
-            this.rdoTimingRef.Size = new System.Drawing.Size(184, 16);
+            this.rdoTimingRef.Size = new System.Drawing.Size(154, 16);
             this.rdoTimingRef.TabIndex = 0;
             this.rdoTimingRef.TabStop = true;
             this.rdoTimingRef.Text = "TXT_TIMING_REF_TIMING";
@@ -166,7 +166,7 @@
             this.rdoTimingExternal.Location = new System.Drawing.Point(6, 54);
             this.rdoTimingExternal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoTimingExternal.Name = "rdoTimingExternal";
-            this.rdoTimingExternal.Size = new System.Drawing.Size(224, 16);
+            this.rdoTimingExternal.Size = new System.Drawing.Size(190, 16);
             this.rdoTimingExternal.TabIndex = 1;
             this.rdoTimingExternal.TabStop = true;
             this.rdoTimingExternal.Text = "TXT_TIMING_EXTERNAL_TIMING";

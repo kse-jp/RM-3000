@@ -185,6 +185,7 @@
             this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.button3);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmPositionSetting";
             this.Text = "TXT_POSITION_ZERO_SETTING";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPositionSetting_FormClosed);

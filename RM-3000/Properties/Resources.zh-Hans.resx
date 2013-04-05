@@ -713,7 +713,7 @@
     <value>角度</value>
     <comment>Angle</comment>
   </data>
-  <data name="TXT_DEGREE" xml:space="preserve">
+  <data name="TXT_DEGREE_UNIT" xml:space="preserve">
     <value>度</value>
     <comment>度</comment>
   </data>

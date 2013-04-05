@@ -246,7 +246,7 @@ namespace RM_3000.Forms.Settings
                 testSequence.ChannelEnables = channelsEnables;
 
                 //サンプリングを１sに設定
-                testSequence.SamplingTiming = 300000; // 300ms = 300,000 us
+                testSequence.SamplingTiming = 50000; // 50ms = 50,000 us
 
                 //一時的にモード3の時間指定なしで動くようにSystemSettingを調整する。
                 SystemSetting.MeasureSetting.MeasureTime_Mode3 = 0;
@@ -314,20 +314,39 @@ namespace RM_3000.Forms.Settings
             }
 
             //本番通信モード            
-            SampleData data = RealTimeData.GetLastData(true);
+            //SampleData data = RealTimeData.GetLastData(true);
 
-
-            if (data == null) return;
             try
             {
-                foreach (ChannelData ch in data.ChannelDatas)
-                {
-                    //回転数は飛ばす
-                    if (ch == null) continue;
-                    if (ch.Position == 0) continue;
 
-                    PositionUnits[ch.Position - 1].NowValue = ((Value_Standard)ch.DataValues).Value;
+                List<SampleData> datas = RealTimeData.GetRealTimeDatas();
+
+                if (datas == null) return;
+                if (datas.Count == 0) return;
+
+                SampleData data = datas[0];
+
+                if (data == null) return;
+
+                for (int i = 1; i < datas.Count; i++)
+                {
+                    for (int j = 0; j < data.ChannelDatas.Length; j++)
+                    {
+                        if (data.ChannelDatas[j] == null) continue;
+                        //回転数は飛ばす
+                        if (data.ChannelDatas[j].Position == 0) continue;
+
+                        ((Value_Standard)data.ChannelDatas[j].DataValues).Value += ((Value_Standard)datas[i].ChannelDatas[j].DataValues).Value;
+
+                        if (i == datas.Count - 1)
+                        {
+                            ((Value_Standard)data.ChannelDatas[j].DataValues).Value /= datas.Count;
+                            PositionUnits[data.ChannelDatas[j].Position - 1].NowValue = ((Value_Standard)data.ChannelDatas[j].DataValues).Value;
+                        }
+                    }
                 }
+
+
             }
             catch
             {

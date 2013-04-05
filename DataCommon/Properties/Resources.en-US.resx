@@ -264,4 +264,8 @@
     <value>Sensor Output</value>
     <comment>Sensor Output</comment>
   </data>
+  <data name="TXT_DEGREE" xml:space="preserve">
+    <value>Degree</value>
+    <comment>Degree</comment>
+  </data>
 </root>

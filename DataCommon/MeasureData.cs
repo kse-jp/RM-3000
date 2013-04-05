@@ -3,6 +3,7 @@ using System.Text;
 using System.Xml.Serialization;
 using System.Xml;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataCommon
 {
@@ -500,6 +501,8 @@ namespace DataCommon
             DataTag dt1 = null;
             DataTag dt2 = null;
 
+            decimal degree_offset = 0; 
+
             sb.Append(CommonResource.GetString("CSV_TITLE_MEASUREDATA"));
             sb.AppendLine();
             sb.Append(CommonResource.GetString("CSV_HEADER_MEASUREDATA"));
@@ -528,7 +531,7 @@ namespace DataCommon
                             sbChannelHeader.Append(CommonResource.GetString("TXT_ROTATIONAL_SPEED") + ",");
                             break;
                         case ModeType.MODE2:
-                            sbChannelHeader.Append("ShotNo," + CommonResource.GetString("TXT_ROTATIONAL_SPEED") + ",");
+                            sbChannelHeader.Append("ShotNo," + CommonResource.GetString("TXT_ROTATIONAL_SPEED") + "," + CommonResource.GetString("TXT_DEGREE") + ",");
                             break;
                         case ModeType.MODE3:
                             break;
@@ -590,6 +593,10 @@ namespace DataCommon
 
             //一度クリア
             sb.Clear();
+
+            //Mode2の場合、角度計算を行う。
+            if (sampleDatas.HeaderData.Mode == ModeType.MODE2)
+                CalculateDegrees();
 
             //初回取得
             int tmpcount = 0;
@@ -674,6 +681,9 @@ namespace DataCommon
 
                                 break;
                             case "Value_Mode2":
+                                degree_offset =
+                                    (AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree2 - AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree1) / ((Value_Mode2)ch.DataValues).Values.Length;
+
                                 for (int index = 0; index < ((Value_Mode2)ch.DataValues).Values.Length; index++)
                                 {
                                     if (sbList.Count <= index)
@@ -681,9 +691,11 @@ namespace DataCommon
                                         //サンプル分を作成
                                         sbList.Add(new StringBuilder());
                                         //ショット目、回転数
-                                        sbList[index].AppendFormat("{0},{1},", startIndex + tmpcount + sampleIndex + 1, rpmdata);
+                                        sbList[index].AppendFormat("{0},{1},{2},", startIndex + tmpcount + sampleIndex + 1, rpmdata
+                                            , GetRoundDownString((double)(degree_offset * index + AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree1), 1));
                                     }
 
+                                    //角度と数値を追加
                                     sbList[index].AppendFormat("{0},"
                                         , GetRoundDownString((double)((Value_Mode2)ch.DataValues).Values[index], dt1.Point));
 
@@ -747,6 +759,98 @@ namespace DataCommon
             return true;
         }
 
+
+        /// <summary>
+        /// Calculate Degree1 and Degree2 with Shot.10 data
+        /// 入角度，出角度を計算する（ショット10のデータを使用する）
+        /// </summary>
+        private void CalculateDegrees()
+        {
+            // if measuring timing != MAIN Trigger, exit.
+            var chSetting = AnalyzeData_Parent.ChannelsSetting;
+            if (chSetting.ChannelMeasSetting.Mode2_Trigger != Mode2TriggerType.MAIN)
+            {
+                return;
+            }
+
+            var shotIndex = (AnalyzeData_Parent.MeasureData.SamplesCount >= 10) ? 9 : AnalyzeData_Parent.MeasureData.SamplesCount - 1;
+
+            // get 1 shot data
+            var dataList = new List<SampleData>();
+            var calcList = new List<CalcData>();
+            AnalyzeData_Parent.MeasureData.GetRange(shotIndex, 1, out dataList, out calcList);
+
+            // check the revolution == 0
+            var data = dataList.Last();
+            var rev = ((Value_Standard)data.ChannelDatas[0].DataValues).Value;
+            if (rev == 0)
+            {
+                return;
+            }
+
+            // get the number of the shot
+            var dataCount = 0;
+            int PointIndex94 = 0;
+            foreach (ChannelData ch in data.ChannelDatas)
+            {
+                if (ch != null && ch.Position != 0 && ch.DataValues != null)
+                {
+                    //基準chに割り当てられたデータを使用する
+                    if (ch.Position == AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.MainTrigger)
+                    {
+                        dataCount = ((Value_Mode2)ch.DataValues).Values.Length;
+
+                        //1つ目のデータを取得
+                        decimal startValue = ((Value_Mode2)ch.DataValues).Values[0];
+
+                        for (int valIndex = 1; valIndex < dataCount; valIndex++)
+                        {
+                            if (((Value_Mode2)ch.DataValues).Values[valIndex] >= startValue)
+                            {
+                                //1つ目のデータを越えた部分が94%に戻ったところ
+                                PointIndex94 = valIndex;
+                                break;
+                            }
+                        }
+
+                        break;
+                    }
+                }
+            }
+            if (dataCount == 0 || PointIndex94 == 0)
+            {
+                return;
+            }
+
+            // Calculate Degree1 and Degree2
+            //this.AnalyzeData.ChannelsSetting.ChannelMeasSetting.Degree1 = (int)(180 - 3 * 0.94 * dataCount * this.AnalyzeData.MeasureSetting.SamplingTiming_Mode2 / 1000000 * (double)rev);
+            //this.AnalyzeData.ChannelsSetting.ChannelMeasSetting.Degree2 = (int)(180 + (6 * dataCount - 3 * 0.94 * dataCount) * this.AnalyzeData.MeasureSetting.SamplingTiming_Mode2 / 1000000 * (double)rev);
+            decimal degree1 = (decimal)(180 - 3 * PointIndex94 * AnalyzeData_Parent.MeasureSetting.SamplingTiming_Mode2 / 1000000.0 * (double)rev);
+            decimal degree2 = (decimal)(180 + (6 * dataCount - 3 * PointIndex94) * AnalyzeData_Parent.MeasureSetting.SamplingTiming_Mode2 / 1000000.0 * (double)rev);
+
+            if (degree1 > 0 && degree2 <= 360 && degree1 < degree2)
+            {
+                AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree1 = degree1;
+                AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree2 = degree2;
+            }
+            else
+            {
+                if (degree1 <= 0)
+                    AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree1 = 0;
+                else if (degree1 > 360)
+                    AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree2 = 360;
+                else
+                    AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree2 = degree1;
+
+                if (degree2 <= 0)
+                    AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree1 = 0;
+                else if (degree2 > 360)
+                    AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree2 = 360;
+                else
+                    AnalyzeData_Parent.ChannelsSetting.ChannelMeasSetting.Degree2 = degree2;
+            }
+        }
+
         /// <summary>
         /// データClose
         /// </summary>
@@ -754,6 +858,8 @@ namespace DataCommon
         {
             sampleDatas.CloseData();
         }
+
+
 
         #endregion
 

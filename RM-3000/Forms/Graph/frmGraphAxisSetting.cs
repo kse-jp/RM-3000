@@ -275,7 +275,7 @@ namespace RM_3000.Forms.Graph
                         this.ntbShotNumber.Visible = true;
                         this.lblShot.Visible = true;
                     }
-                    this.lblUnit1.Text = "TXT_DEGREE";
+                    this.lblUnit1.Text = "TXT_DEGREE_UNIT";
                     this.lblUnit2.Text = string.Empty;
                     ntbMinX.Enabled = false;
                     ntbMaxX.Enabled = false;

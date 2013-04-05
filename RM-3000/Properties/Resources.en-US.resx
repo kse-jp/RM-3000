@@ -724,7 +724,7 @@
     <value>Angle</value>
     <comment>Angle</comment>
   </data>
-  <data name="TXT_DEGREE" xml:space="preserve">
+  <data name="TXT_DEGREE_UNIT" xml:space="preserve">
     <value>Degree</value>
     <comment>Degree</comment>
   </data>

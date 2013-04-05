@@ -264,4 +264,8 @@
     <value>センサー出力設定</value>
     <comment>センサー出力設定</comment>
   </data>
+  <data name="TXT_DEGREE" xml:space="preserve">
+    <value>角度</value>
+    <comment>角度</comment>
+  </data>
 </root>

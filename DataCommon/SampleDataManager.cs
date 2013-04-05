@@ -573,7 +573,7 @@ namespace DataCommon
         /// <param name="length"></param>
         public void DeserializeData(int startIndex, int length)
         {
-            byte[] buffer = new byte[100000];
+            byte[] buffer = new byte[10000];
             byte[] tmpsizebuff = new byte[2];
             UInt16 samplecount = 0;
             int channelcount = 0;
@@ -643,8 +643,8 @@ namespace DataCommon
 
                         //回転数は各1ショット毎に１つなので下記式となる
                         //回転数 + ChPosition(チャンネル分+回転数分) +  ( サンプル数 * (1レコードサイズ - 回転数分)  )
-                        fs.Read(buffer, 0, ONE_DATA_SIZE + channelcount + (samplecount * (SizeofOneSample - ONE_DATA_SIZE)));
-                        //fs.Seek(ONE_DATA_SIZE + channelcount + (samplecount * (SizeofOneSample - ONE_DATA_SIZE)), SeekOrigin.Current);
+                        //fs.Read(buffer, 0, ONE_DATA_SIZE + channelcount + (samplecount * (SizeofOneSample - ONE_DATA_SIZE)));
+                        fs.Seek(ONE_DATA_SIZE + channelcount + (samplecount * (SizeofOneSample - ONE_DATA_SIZE)), SeekOrigin.Current);
                         //fs.Seek(channelcount + (samplecount * SizeofOneSample), SeekOrigin.Current);
                     }
 

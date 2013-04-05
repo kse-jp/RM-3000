@@ -88,7 +88,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 15);
             this.label3.TabIndex = 3;
-            this.label3.Text = "TXT_DEGREE";
+            this.label3.Text = "TXT_DEGREE_UNIT";
             // 
             // label2
             // 

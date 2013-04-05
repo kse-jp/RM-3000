@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGraph3D));
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.graph3DViewer = new Graph3DLib.ucGraph3DViewer();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(508, 412);
             this.Controls.Add(this.elementHost1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGraph3D";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

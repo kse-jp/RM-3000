@@ -291,7 +291,7 @@ namespace RM_3000.Forms.Settings
             switch (pic.Name)
             {
                 case "picSensorLocationButton":
-                    frm = new frmLocationSetting();
+                    frm = new frmLocationSetting(this.log);
                     break;
                 case "picChannelSettingButton":
                     frm = new frmChannelSetting(this.log);

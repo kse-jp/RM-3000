@@ -41,18 +41,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkDispKanagata = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtPressKanagataHeight = new RM_3000.Controls.NumericTextBox();
             this.txtUnderKanagataHeight = new RM_3000.Controls.NumericTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtPressKanagataWidth = new RM_3000.Controls.NumericTextBox();
             this.txtUnderKanagataWidth = new RM_3000.Controls.NumericTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtBolsterHeight = new RM_3000.Controls.NumericTextBox();
             this.txtBolsterWidth = new RM_3000.Controls.NumericTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gridSetting = new RM_3000.CustomDataGridView();
             this.ColumnChannel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,6 +143,38 @@
             this.chkDispKanagata.UseVisualStyleBackColor = true;
             this.chkDispKanagata.CheckedChanged += new System.EventHandler(this.chkDispKanagata_CheckedChanged);
             // 
+            // txtPressKanagataHeight
+            // 
+            this.txtPressKanagataHeight.AllowMinus = true;
+            this.txtPressKanagataHeight.AllowSpace = false;
+            this.txtPressKanagataHeight.AllowString = false;
+            this.txtPressKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtPressKanagataHeight.IsInteger = true;
+            this.txtPressKanagataHeight.Location = new System.Drawing.Point(217, 77);
+            this.txtPressKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPressKanagataHeight.MaxLength = 7;
+            this.txtPressKanagataHeight.Name = "txtPressKanagataHeight";
+            this.txtPressKanagataHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtPressKanagataHeight.TabIndex = 7;
+            this.txtPressKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPressKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtUnderKanagataHeight
+            // 
+            this.txtUnderKanagataHeight.AllowMinus = true;
+            this.txtUnderKanagataHeight.AllowSpace = false;
+            this.txtUnderKanagataHeight.AllowString = false;
+            this.txtUnderKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtUnderKanagataHeight.IsInteger = true;
+            this.txtUnderKanagataHeight.Location = new System.Drawing.Point(11, 77);
+            this.txtUnderKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnderKanagataHeight.MaxLength = 7;
+            this.txtUnderKanagataHeight.Name = "txtUnderKanagataHeight";
+            this.txtUnderKanagataHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtUnderKanagataHeight.TabIndex = 5;
+            this.txtUnderKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUnderKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -160,6 +192,38 @@
             this.label6.Size = new System.Drawing.Size(176, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "TXT_BACKINGPLATE_DEPTH";
+            // 
+            // txtPressKanagataWidth
+            // 
+            this.txtPressKanagataWidth.AllowMinus = true;
+            this.txtPressKanagataWidth.AllowSpace = false;
+            this.txtPressKanagataWidth.AllowString = false;
+            this.txtPressKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtPressKanagataWidth.IsInteger = true;
+            this.txtPressKanagataWidth.Location = new System.Drawing.Point(217, 35);
+            this.txtPressKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPressKanagataWidth.MaxLength = 7;
+            this.txtPressKanagataWidth.Name = "txtPressKanagataWidth";
+            this.txtPressKanagataWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtPressKanagataWidth.TabIndex = 6;
+            this.txtPressKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPressKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtUnderKanagataWidth
+            // 
+            this.txtUnderKanagataWidth.AllowMinus = true;
+            this.txtUnderKanagataWidth.AllowSpace = false;
+            this.txtUnderKanagataWidth.AllowString = false;
+            this.txtUnderKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtUnderKanagataWidth.IsInteger = true;
+            this.txtUnderKanagataWidth.Location = new System.Drawing.Point(12, 36);
+            this.txtUnderKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnderKanagataWidth.MaxLength = 7;
+            this.txtUnderKanagataWidth.Name = "txtUnderKanagataWidth";
+            this.txtUnderKanagataWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtUnderKanagataWidth.TabIndex = 4;
+            this.txtUnderKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUnderKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // label3
             // 
@@ -179,6 +243,38 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "TXT_BACKINGPLATE_LENGTH";
             // 
+            // txtBolsterHeight
+            // 
+            this.txtBolsterHeight.AllowMinus = true;
+            this.txtBolsterHeight.AllowSpace = false;
+            this.txtBolsterHeight.AllowString = false;
+            this.txtBolsterHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtBolsterHeight.IsInteger = true;
+            this.txtBolsterHeight.Location = new System.Drawing.Point(25, 97);
+            this.txtBolsterHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBolsterHeight.MaxLength = 7;
+            this.txtBolsterHeight.Name = "txtBolsterHeight";
+            this.txtBolsterHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtBolsterHeight.TabIndex = 2;
+            this.txtBolsterHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBolsterHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtBolsterWidth
+            // 
+            this.txtBolsterWidth.AllowMinus = true;
+            this.txtBolsterWidth.AllowSpace = false;
+            this.txtBolsterWidth.AllowString = false;
+            this.txtBolsterWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtBolsterWidth.IsInteger = true;
+            this.txtBolsterWidth.Location = new System.Drawing.Point(25, 56);
+            this.txtBolsterWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBolsterWidth.MaxLength = 7;
+            this.txtBolsterWidth.Name = "txtBolsterWidth";
+            this.txtBolsterWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtBolsterWidth.TabIndex = 1;
+            this.txtBolsterWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBolsterWidth.Leave += new System.EventHandler(this.txt_Leave);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -196,102 +292,6 @@
             this.label1.Size = new System.Drawing.Size(149, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "TXT_BOLSTER_LENGTH";
-            // 
-            // txtPressKanagataHeight
-            // 
-            this.txtPressKanagataHeight.AllowMinus = true;
-            this.txtPressKanagataHeight.AllowSpace = false;
-            this.txtPressKanagataHeight.AllowString = false;
-            this.txtPressKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtPressKanagataHeight.IsInteger = true;
-            this.txtPressKanagataHeight.Location = new System.Drawing.Point(217, 77);
-            this.txtPressKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPressKanagataHeight.MaxLength = 10;
-            this.txtPressKanagataHeight.Name = "txtPressKanagataHeight";
-            this.txtPressKanagataHeight.Size = new System.Drawing.Size(142, 23);
-            this.txtPressKanagataHeight.TabIndex = 7;
-            this.txtPressKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPressKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtUnderKanagataHeight
-            // 
-            this.txtUnderKanagataHeight.AllowMinus = true;
-            this.txtUnderKanagataHeight.AllowSpace = false;
-            this.txtUnderKanagataHeight.AllowString = false;
-            this.txtUnderKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtUnderKanagataHeight.IsInteger = true;
-            this.txtUnderKanagataHeight.Location = new System.Drawing.Point(11, 77);
-            this.txtUnderKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUnderKanagataHeight.MaxLength = 10;
-            this.txtUnderKanagataHeight.Name = "txtUnderKanagataHeight";
-            this.txtUnderKanagataHeight.Size = new System.Drawing.Size(142, 23);
-            this.txtUnderKanagataHeight.TabIndex = 5;
-            this.txtUnderKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUnderKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtPressKanagataWidth
-            // 
-            this.txtPressKanagataWidth.AllowMinus = true;
-            this.txtPressKanagataWidth.AllowSpace = false;
-            this.txtPressKanagataWidth.AllowString = false;
-            this.txtPressKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtPressKanagataWidth.IsInteger = true;
-            this.txtPressKanagataWidth.Location = new System.Drawing.Point(217, 35);
-            this.txtPressKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPressKanagataWidth.MaxLength = 10;
-            this.txtPressKanagataWidth.Name = "txtPressKanagataWidth";
-            this.txtPressKanagataWidth.Size = new System.Drawing.Size(142, 23);
-            this.txtPressKanagataWidth.TabIndex = 6;
-            this.txtPressKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPressKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtUnderKanagataWidth
-            // 
-            this.txtUnderKanagataWidth.AllowMinus = true;
-            this.txtUnderKanagataWidth.AllowSpace = false;
-            this.txtUnderKanagataWidth.AllowString = false;
-            this.txtUnderKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtUnderKanagataWidth.IsInteger = true;
-            this.txtUnderKanagataWidth.Location = new System.Drawing.Point(12, 36);
-            this.txtUnderKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUnderKanagataWidth.MaxLength = 10;
-            this.txtUnderKanagataWidth.Name = "txtUnderKanagataWidth";
-            this.txtUnderKanagataWidth.Size = new System.Drawing.Size(142, 23);
-            this.txtUnderKanagataWidth.TabIndex = 4;
-            this.txtUnderKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUnderKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtBolsterHeight
-            // 
-            this.txtBolsterHeight.AllowMinus = true;
-            this.txtBolsterHeight.AllowSpace = false;
-            this.txtBolsterHeight.AllowString = false;
-            this.txtBolsterHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtBolsterHeight.IsInteger = true;
-            this.txtBolsterHeight.Location = new System.Drawing.Point(25, 97);
-            this.txtBolsterHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBolsterHeight.MaxLength = 10;
-            this.txtBolsterHeight.Name = "txtBolsterHeight";
-            this.txtBolsterHeight.Size = new System.Drawing.Size(142, 23);
-            this.txtBolsterHeight.TabIndex = 2;
-            this.txtBolsterHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtBolsterHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtBolsterWidth
-            // 
-            this.txtBolsterWidth.AllowMinus = true;
-            this.txtBolsterWidth.AllowSpace = false;
-            this.txtBolsterWidth.AllowString = false;
-            this.txtBolsterWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtBolsterWidth.IsInteger = true;
-            this.txtBolsterWidth.Location = new System.Drawing.Point(25, 56);
-            this.txtBolsterWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBolsterWidth.MaxLength = 10;
-            this.txtBolsterWidth.Name = "txtBolsterWidth";
-            this.txtBolsterWidth.Size = new System.Drawing.Size(142, 23);
-            this.txtBolsterWidth.TabIndex = 1;
-            this.txtBolsterWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtBolsterWidth.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // gridSetting
             // 
@@ -329,7 +329,6 @@
             this.gridSetting.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSetting_CellEndEdit);
             this.gridSetting.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gridSetting_CellValidating);
             this.gridSetting.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.gridSetting_EditingControlShowing);
-            this.gridSetting.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridSetting_KeyDown);
             // 
             // ColumnChannel
             // 

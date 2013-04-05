@@ -52,10 +52,13 @@ namespace RM_3000
         /// <summary>
         /// constructor
         /// </summary>
-        public frmLocationSetting()
+        /// <param name="log">ログ</param>
+        public frmLocationSetting(LogManager log)
 		{
 			InitializeComponent();
-		}
+
+            this.log = log;
+        }
         #endregion
 
         #region Private EventHandler
@@ -64,412 +67,52 @@ namespace RM_3000
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void frmLocationSetting_Shown(object sender, EventArgs e)
+        private void frmLocationSetting_Load(object sender, EventArgs e)
         {
-            this.gridSetting.CurrentCell = null;
-            this.gridSetting.SelectionChanged += new System.EventHandler(this.gridSetting_SelectionChanged);
-            //this.gridSetting.CurrentCell = this.gridSetting.Rows[lastSensorIndex].Cells[0];
-
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gridSetting_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
-        {
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void txt_Leave(object sender, EventArgs e)
-        {
-            TextBox txtbox = (TextBox)sender;
-            int val;
-            if (txtbox.Text == "")
+            try
             {
-                ShowWarningMessage(AppResource.GetString("MSG_PLEASE_INPUT"));
-                txtbox.Focus();
-                return;
-            }
-            else
-            {
-                val = int.Parse(txtbox.Text.ToString());
-            }
-            switch (txtbox.Name)
-            {
-                case ("txtBolsterWidth"):
-                    if (this.txtPressKanagataWidth.Text != "" && val <= int.Parse(this.txtPressKanagataWidth.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LENGTH_SURFACE"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    else if (this.txtUnderKanagataWidth.Text != "" && val <= int.Parse(this.txtUnderKanagataWidth.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LEN"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    break;
-                case ("txtBolsterHeight"):
-                    if (this.txtPressKanagataHeight.Text != "" && val <= int.Parse(this.txtPressKanagataHeight.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH_SURFACE"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    else if (this.txtUnderKanagataHeight.Text != "" && val <= int.Parse(this.txtUnderKanagataHeight.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    break;
-                case ("txtUnderKanagataWidth"):
-                    if (this.txtBolsterWidth.Text != "" && val >= int.Parse(this.txtBolsterWidth.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_LENGTH"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    else if (this.txtPressKanagataWidth.Text != "" && val <= int.Parse(this.txtPressKanagataWidth.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LENGTH_SURFACE"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    break;
-                case ("txtUnderKanagataHeight"):
-                    if (this.txtBolsterHeight.Text != "" && val >= int.Parse(this.txtBolsterHeight.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_DEPTH"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    else if (this.txtPressKanagataHeight.Text != "" && val <= int.Parse(this.txtPressKanagataHeight.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH_SURFACE"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    break;
-                case ("txtPressKanagataWidth"):
-                    if (this.txtBolsterWidth.Text != "" && val >= int.Parse(this.txtBolsterWidth.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_LENGTH"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    else if (this.txtUnderKanagataWidth.Text != "" && val >= int.Parse(this.txtUnderKanagataWidth.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_MOLD_LENGTH"));
-                        txtbox.Focus();
-                        return;
-                    }
+                AppResource.SetControlsText(this);
 
-                    break;
-                case ("txtPressKanagataHeight"):
-                    if (this.txtBolsterHeight.Text != "" && val >= int.Parse(this.txtBolsterHeight.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_DEPTH"));
-                        txtbox.Focus();
-                        return;
-                    }
-                    else if (this.txtUnderKanagataHeight.Text != "" && val >= int.Parse(this.txtUnderKanagataHeight.Text.ToString()))
-                    {
-                        ShowWarningMessage(AppResource.GetString("金型奥行より小さい数字を入力してください。"));
-                        txtbox.Focus();
-                        return;
-                    }
+                //システム設定からチャンネル設定を取得
+                this.chSettings = SystemSetting.ChannelsSetting;
 
-                    break;
-            }
-            this.sensorPositionSetting.IsUpdated = true;
-
-            this.locationSetting2.resizeBolsterKanagata(this.getSettingStage());
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gridSetting_SelectionChanged(object sender, EventArgs e)
-        {
-            DataGridViewRow row = ((DataGridView)sender).SelectedRows[0];
-            if (row != null && row.Cells["ColumnChannel"].Value != null)
-            {
-                int selectedRowIndex = row.Index;
-                string sensorType = row.Cells["ColumnType"].Value.ToString();
-                this.locationSetting2.settingListSelectedRowChanged(selectedRowIndex, sensorType);
-            }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void chkDispKanagata_CheckedChanged(object sender, EventArgs e)
-        {
-            this.locationSetting2.visibleKanagata(this.chkDispKanagata.Checked);
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gridSetting_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            if (e.Control is DataGridViewTextBoxEditingControl)
-            {
-
-                DataGridView dgv = (DataGridView)sender;
-                DataGridViewTextBoxEditingControl tb = (DataGridViewTextBoxEditingControl)e.Control;
-
-                tb.KeyPress -= new KeyPressEventHandler(gridSetting_KeyPress);
-
-                if (dgv.CurrentCell.ColumnIndex == 2 || dgv.CurrentCell.ColumnIndex == 3) // 数字入力制限の列を指定する
+                //システム設定からセンサ位置情報を取得
+                if (SystemSetting.PositionSetting != null)
                 {
-                    tb.ImeMode = ImeMode.Disable;
-                    tb.KeyPress += new KeyPressEventHandler(gridSetting_KeyPress);
+                    this.sensorPositionSetting = SystemSetting.PositionSetting;
+                }
+                else
+                {
+                    this.sensorPositionSetting = new SensorPositionSetting();
+                    this.sensorPositionSetting.PositionList = new PositionSetting[10];
+                    for (int i = 0; i < this.sensorPositionSetting.PositionList.Length; i++)
+                    {
+                        this.sensorPositionSetting.PositionList[i] = new PositionSetting();
+                        this.sensorPositionSetting.PositionList[i].ChNo = -1;
+                        this.sensorPositionSetting.PositionList[i].X = -100;
+                        this.sensorPositionSetting.PositionList[i].Z = -100;
+                        this.sensorPositionSetting.PositionList[i].Way = PositionSetting.WayType.INVAILED;
+                        this.sensorPositionSetting.PositionList[i].Target = PositionSetting.TargetType.INVAILED;
+                    }
                 }
 
+                this.readSettingData();
+                this.setGridData();
+
+                frmLocationSetting2 win2 = new frmLocationSetting2();
+                this.locationSetting2 = win2;
+
+                win2.locationSetting = this;
+                win2.setLocationSetting(this);
+
+                win2.Show(this.Parent);
+                win2.setDefault(this.getSettingStage(), this.settingList);
+
+                win2.DoneInitailized += new EventHandler(win2_DoneInitailized);
             }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gridSetting_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = this.gridSetting.Rows[e.RowIndex];
-
-            if (this.settingList[e.RowIndex].sensorNumber > 0 && (this.settingList[e.RowIndex].type == "R" || this.settingList[e.RowIndex].type == "B"))
+            catch (Exception ex)
             {
-                if (this.gridSetting.Columns[e.ColumnIndex].Name == "ColumnPointX" || this.gridSetting.Columns[e.ColumnIndex].Name == "ColumnPointY")
-                {
-                    int bolsterWidth = int.Parse(this.txtBolsterWidth.Text);
-                    int bolsterHeight = int.Parse(this.txtBolsterHeight.Text);
-                    int editPointX = int.Parse(row.Cells["ColumnPointX"].Value.ToString());
-                    int editPointY = int.Parse(row.Cells["ColumnPointY"].Value.ToString());
-
-                    if (editPointX <= bolsterWidth && editPointY <= bolsterHeight)
-                    {
-                        this.locationSetting2.setSensorPosition(e.RowIndex, editPointX, editPointY, false);
-                        this.settingList[e.RowIndex].x = editPointX;
-                        this.settingList[e.RowIndex].y = editPointY;
-                        if (this.sensorPositionSetting.PositionList[e.RowIndex].X != editPointX || this.sensorPositionSetting.PositionList[e.RowIndex].Z != editPointY)
-                        {
-                            this.sensorPositionSetting.IsUpdated = true;
-                        }
-                    }
-                    else
-                    {
-                        //MSG_BOLSTER_OUTSIDE_SCOPE
-                        //if (MessageBox.Show("ボルスタの範囲外のため、センサを削除しますが、よろしいですか？", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
-                        if (MessageBox.Show(AppResource.GetString("MSG_BOLSTER_OUTSIDE_SCOPE"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
-                        {
-                            //センサの削除実行
-                            locationSetting2.removeSensor(e.RowIndex);
-
-                        }
-                    }
-                }
-                //Target combobox check if user edit value in grid then set isUpdate flag
-                int temp = -1;
-                if (this.gridSetting.Columns[e.ColumnIndex].Name == "ColumnMeasureTarget") 
-                {
-                    if (!(this.gridSetting.Rows[e.RowIndex].Cells["ColumnMeasureTarget"].Value == null || this.gridSetting.Rows[e.RowIndex].Cells["ColumnMeasureTarget"].Value.ToString() == string.Empty))
-                    {
-                        for (int j = 0; j < this.measureTargetConboBoxItems.Length; j++)
-                        {
-                            if (this.measureTargetConboBoxItems[j] == this.gridSetting.Rows[e.RowIndex].Cells["ColumnMeasureTarget"].Value.ToString())
-                            {
-                                temp = j;
-                                break;
-                            }
-                        }
-                    }
-                    
-                    if ((int)this.sensorPositionSetting.PositionList[e.RowIndex].Target != temp)
-                    {
-                        this.sensorPositionSetting.IsUpdated = true;
-                    }
-                }
-            }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gridSetting_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            bool isValid = true;
-
-            DataGridView dgv = (DataGridView)sender;
-
-            if (e.RowIndex == dgv.NewRowIndex || !dgv.IsCurrentCellDirty)
-            {
-                return;
-            }
-
-            DataGridViewRow row = dgv.Rows[e.RowIndex];
-            if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointX" && e.FormattedValue.ToString() == "")
-            {
-                //MessageBox.Show("X位置を入力してください。", "入力エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MSG_PLEASE_ENTER_X
-                dgv.Rows[e.RowIndex].ErrorText = AppResource.GetString("MSG_PLEASE_ENTER_X");
-                isValid = false;
-            }
-            else if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointY" && e.FormattedValue.ToString() == "")
-            {
-                //MessageBox.Show("Z位置を入力してください。", "入力エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dgv.Rows[e.RowIndex].ErrorText = AppResource.GetString("MSG_PLEASE_ENTER_Z");
-                isValid = false;
-            }
-
-
-            if (isValid == false)
-            {
-                dgv.CancelEdit();
-                e.Cancel = true;
-
-                showErrorMessage(dgv.Rows[e.RowIndex].ErrorText);
-                dgv.Rows[e.RowIndex].ErrorText = string.Empty;
-            }
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gridSetting_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // 入力可能文字
-            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != '\b')
-            {
-                e.Handled = true;
-            }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gridSetting_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                //e.Handled = true;
-            }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            //this.locationSetting2.Close();
-            this.Close();
-
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            bool isValid = true;
-            SettingItem item;
-            SettingStage settingStage = this.getSettingStage();
-            int underKanagataX = (int)System.Math.Floor(((double)settingStage.bolsterWidth - (double)settingStage.underKanagataWidth) / 2);
-            int underKanagataY = (int)System.Math.Floor(((double)settingStage.bolsterHeight - (double)settingStage.underKanagataHeight) / 2);
-            int pressKanagataX = (int)System.Math.Floor(((double)settingStage.bolsterWidth - (double)settingStage.pressKanagataWidth) / 2);
-            int pressKanagataY = (int)System.Math.Floor(((double)settingStage.bolsterHeight - (double)settingStage.pressKanagataHeight) / 2);
-
-
-            for (int i = 0; i < this.settingList.Count; i++)
-            {
-                item = this.settingList[i];
-                DataGridViewRow row = this.gridSetting.Rows[i];
-
-                if (item.sensorNumber > 0 && (row.Cells["ColumnMeasureTarget"].Value == null || row.Cells["ColumnMeasureTarget"].Value.ToString() == ""))
-                {
-                    this.gridSetting.CurrentCell = row.Cells["ColumnMeasureTarget"];
-                    //this.showErrorMessage("測定対象を設定してください。");
-                    ShowWarningMessage(AppResource.GetString("MSG_SET_MEASURE_OBJECT"));
-                    isValid = false;
-                    //break;
-                    return;
-                }
-                else if (item.sensorNumber > 0)
-                {
-                    for (int j = 0; j < this.measureTargetConboBoxItems.Length; j++)
-                    {
-                        if (this.measureTargetConboBoxItems[j] == row.Cells["ColumnMeasureTarget"].Value.ToString())
-                        {
-                            item.measureTarget = j;
-                            break;
-                        }
-                    }
-                }
-            }
-
-            //if (isValid == true)
-            if(this.sensorPositionSetting.IsUpdated || isValid)
-            {
-                if (MessageBox.Show(AppResource.GetString("MSG_CONFIRM_SAVE"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
-                {
-                    this.sensorPositionSetting.BolsterWidth = int.Parse(this.txtBolsterWidth.Text.ToString());
-                    this.sensorPositionSetting.BolsterDepth = int.Parse(this.txtBolsterHeight.Text.ToString());
-                    this.sensorPositionSetting.UsedMold = this.chkDispKanagata.Checked;
-                    this.sensorPositionSetting.MoldWidth = int.Parse(this.txtUnderKanagataWidth.Text.ToString());
-                    this.sensorPositionSetting.MoldDepth = int.Parse(this.txtUnderKanagataHeight.Text.ToString());
-                    this.sensorPositionSetting.MoldPressWidth = int.Parse(this.txtPressKanagataWidth.Text.ToString());
-                    this.sensorPositionSetting.MoldPressDepth = int.Parse(this.txtPressKanagataHeight.Text.ToString());
-
-                    for (int i = 0; i < this.settingList.Count; i++)
-                    {
-                        item = this.settingList[i];
-                        if (item.type == "B" || item.type == "R")
-                        {
-                            if (item.sensorNumber > 0)
-                            {
-                                this.sensorPositionSetting.PositionList[i].ChNo = item.channel;
-                                this.sensorPositionSetting.PositionList[i].X = item.x;
-                                this.sensorPositionSetting.PositionList[i].Z = item.y;
-                            }
-                            else
-                            {
-                                this.sensorPositionSetting.PositionList[i].ChNo = -1;
-                                this.sensorPositionSetting.PositionList[i].X = -100;
-                                this.sensorPositionSetting.PositionList[i].Z = -100;
-                            }
-                            this.sensorPositionSetting.PositionList[i].Target = (PositionSetting.TargetType)item.measureTarget;
-                            if (item.type == "B")
-                            {
-                                this.sensorPositionSetting.PositionList[i].Way = PositionSetting.WayType.INVAILED;
-                            }
-                            else if (item.type == "R")
-                            {
-                                this.sensorPositionSetting.PositionList[i].Way = (PositionSetting.WayType)item.measureDirection;
-                            }
-                        }
-                    }
-                    this.sensorPositionSetting.Serialize();
-                    //PutLog("Save SensorPositionSetting.xml");
-                    this.locationSetting2.isClosing = true;
-                    this.locationSetting2.Close();
-                    this.Close();
-                }
+                ShowErrorMessage(ex);
             }
         }
         /// <summary>
@@ -479,20 +122,27 @@ namespace RM_3000
         /// <param name="e"></param>
         private void frmLocationSetting_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.sensorPositionSetting.IsUpdated)
+            try
             {
-                if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
+                if (this.sensorPositionSetting.IsUpdated)
                 {
-                    e.Cancel = true;
-                    this.isClosing = false;
-                    return;
+                    if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
+                    {
+                        e.Cancel = true;
+                        this.isClosing = false;
+                        return;
+                    }
+                }
+                this.sensorPositionSetting.Revert();
+                if (this.isClosing == false)
+                {
+                    this.locationSetting2.isClosing = true;
+                    this.locationSetting2.Close();
                 }
             }
-            this.sensorPositionSetting.Revert();
-            if (this.isClosing == false)
+            catch (Exception ex)
             {
-                this.locationSetting2.isClosing = true;
-                this.locationSetting2.Close();
+                ShowErrorMessage(ex);
             }
         }
         /// <summary>
@@ -500,72 +150,475 @@ namespace RM_3000
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void frmLocationSetting_Load(object sender, EventArgs e)
+        private void frmLocationSetting_Shown(object sender, EventArgs e)
         {
-
-            AppResource.SetControlsText(this);
-
-            //ここで設定XMLから読み込む
-
-            //string chSettingsFilePath = CommonLib.SystemDirectoryPath.SystemPath + this.channelSettingXmlFileName;
-            //if (System.IO.File.Exists(chSettingsFilePath))
-            //{
-            //    chSettings = SettingBase.DeserializeFromXml<ChannelsSetting>(chSettingsFilePath);
-            //}
-            //else
-            //{
-            //    if (MessageBox.Show(this, "チャンネルを設定してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error) == System.Windows.Forms.DialogResult.OK)
-            //    {
-            //        this.Close();
-            //    }
-            //    return;
-            //}
-
-            //システム設定からチャンネル設定を取得
-            this.chSettings = SystemSetting.ChannelsSetting;
-
-            //string sensorPositionSettingFilePath = CommonLib.SystemDirectoryPath.SystemPath + this.sensorPositionSettingXmlFileName;
-            //if (System.IO.File.Exists(sensorPositionSettingFilePath))
-            //{
-            //    this.sensorPositionSetting = SettingBase.DeserializeFromXml<SensorPositionSetting>(sensorPositionSettingFilePath);
-            //}
-
-            //システム設定からセンサ位置情報を取得
-            if (SystemSetting.PositionSetting != null)
+            try
             {
-                this.sensorPositionSetting = SystemSetting.PositionSetting;
+                this.gridSetting.CurrentCell = null;
+                this.gridSetting.SelectionChanged += new System.EventHandler(this.gridSetting_SelectionChanged);
             }
-            else
+            catch (Exception ex)
             {
-                this.sensorPositionSetting = new SensorPositionSetting();
-                this.sensorPositionSetting.PositionList = new PositionSetting[10];
-                for (int i = 0; i < this.sensorPositionSetting.PositionList.Length; i++)
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmLocationSetting_Deactivate(object sender, EventArgs e)
+        {
+            try
+            {
+                this.gridSetting.CommitEdit(DataGridViewDataErrorContexts.Commit);
+                this.gridSetting.RefreshEdit();
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txt_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                var txtbox = (TextBox)sender;
+                var val = 0;
+                var hasError = false;
+
+                txtbox.Text = txtbox.Text.Trim();
+                if (string.IsNullOrWhiteSpace(txtbox.Text))
                 {
-                    this.sensorPositionSetting.PositionList[i] = new PositionSetting();
-                    this.sensorPositionSetting.PositionList[i].ChNo = -1;
-                    this.sensorPositionSetting.PositionList[i].X = -100;
-                    this.sensorPositionSetting.PositionList[i].Z = -100;
-                    this.sensorPositionSetting.PositionList[i].Way = PositionSetting.WayType.INVAILED;
-                    this.sensorPositionSetting.PositionList[i].Target = PositionSetting.TargetType.INVAILED;
+                    ShowWarningMessage(AppResource.GetString("MSG_PLEASE_INPUT"));
+                    txtbox.Focus();
+                    return;
+                }
+                else
+                {
+                    val = int.Parse(txtbox.Text.ToString());
+                }
+
+                switch (txtbox.Name)
+                {
+                    case ("txtBolsterWidth"):
+                        if (!string.IsNullOrWhiteSpace(this.txtPressKanagataWidth.Text) && val <= int.Parse(this.txtPressKanagataWidth.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LENGTH_SURFACE"));
+                            hasError = true;
+                        }
+                        else if (this.txtUnderKanagataWidth.Text != "" && val <= int.Parse(this.txtUnderKanagataWidth.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LEN"));
+                            hasError = true;
+                        }
+                        break;
+
+                    case ("txtBolsterHeight"):
+                        if (!string.IsNullOrWhiteSpace(this.txtPressKanagataHeight.Text) && val <= int.Parse(this.txtPressKanagataHeight.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH_SURFACE"));
+                            hasError = true;
+                        }
+                        else if (this.txtUnderKanagataHeight.Text != "" && val <= int.Parse(this.txtUnderKanagataHeight.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH"));
+                            hasError = true;
+                        }
+                        break;
+
+                    case ("txtUnderKanagataWidth"):
+                        if (!string.IsNullOrWhiteSpace(this.txtBolsterWidth.Text) && val >= int.Parse(this.txtBolsterWidth.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_LENGTH"));
+                            hasError = true;
+                        }
+                        else if (this.txtPressKanagataWidth.Text != "" && val <= int.Parse(this.txtPressKanagataWidth.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_LENGTH_SURFACE"));
+                            hasError = true;
+                        }
+                        break;
+
+                    case ("txtUnderKanagataHeight"):
+                        if (!string.IsNullOrWhiteSpace(this.txtBolsterHeight.Text) && val >= int.Parse(this.txtBolsterHeight.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_DEPTH"));
+                            hasError = true;
+                        }
+                        else if (this.txtPressKanagataHeight.Text != "" && val <= int.Parse(this.txtPressKanagataHeight.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_PLEASE_ENTER_NUMBER_MORE_THAN_MOLD_DEPTH_SURFACE"));
+                            hasError = true;
+                        }
+                        break;
+
+                    case ("txtPressKanagataWidth"):
+                        if (!string.IsNullOrWhiteSpace(this.txtBolsterWidth.Text) && val >= int.Parse(this.txtBolsterWidth.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_LENGTH"));
+                            hasError = true;
+                        }
+                        else if (this.txtUnderKanagataWidth.Text != "" && val >= int.Parse(this.txtUnderKanagataWidth.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_MOLD_LENGTH"));
+                            hasError = true;
+                        }
+                        break;
+
+                    case ("txtPressKanagataHeight"):
+                        if (!string.IsNullOrWhiteSpace(this.txtBolsterHeight.Text) && val >= int.Parse(this.txtBolsterHeight.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("MSG_NUMBER_LESS_THAN_BOLSTER_DEPTH"));
+                            hasError = true;
+                        }
+                        else if (this.txtUnderKanagataHeight.Text != "" && val >= int.Parse(this.txtUnderKanagataHeight.Text.ToString()))
+                        {
+                            ShowWarningMessage(AppResource.GetString("金型奥行より小さい数字を入力してください。"));
+                            hasError = true;
+                        }
+                        break;
+                }
+
+                if (hasError)
+                {
+                    txtbox.Focus();
+                    txtbox.SelectAll();
+                    return;
+                }
+
+                this.sensorPositionSetting.IsUpdated = true;
+                this.locationSetting2.resizeBolsterKanagata(this.getSettingStage());
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridSetting_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = ((DataGridView)sender).SelectedRows[0];
+                if (row != null && row.Cells["ColumnChannel"].Value != null)
+                {
+                    int selectedRowIndex = row.Index;
+                    string sensorType = row.Cells["ColumnType"].Value.ToString();
+                    this.locationSetting2.settingListSelectedRowChanged(selectedRowIndex, sensorType);
                 }
             }
-
-            this.readSettingData();
-            this.setGridData();
-
-            frmLocationSetting2 win2 = new frmLocationSetting2();
-            this.locationSetting2 = win2;
-
-            win2.locationSetting = this;
-            win2.setLocationSetting(this);
-
-            win2.Show(this.Parent);
-            win2.setDefault(this.getSettingStage(), this.settingList);
-
-            win2.DoneInitailized += new EventHandler(win2_DoneInitailized);
-
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void chkDispKanagata_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.locationSetting2.visibleKanagata(this.chkDispKanagata.Checked);
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridSetting_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            try
+            {
+                if (e.Control is DataGridViewTextBoxEditingControl)
+                {
+                    DataGridView dgv = (DataGridView)sender;
+                    DataGridViewTextBoxEditingControl tb = (DataGridViewTextBoxEditingControl)e.Control;
 
+                    tb.KeyPress -= new KeyPressEventHandler(gridSetting_KeyPress);
+
+                    if (dgv.CurrentCell.ColumnIndex == 2 || dgv.CurrentCell.ColumnIndex == 3) // 数字入力制限の列を指定する
+                    {
+                        tb.ImeMode = ImeMode.Disable;
+                        tb.KeyPress += new KeyPressEventHandler(gridSetting_KeyPress);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridSetting_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = this.gridSetting.Rows[e.RowIndex];
+
+                if (this.settingList[e.RowIndex].sensorNumber > 0 && (this.settingList[e.RowIndex].type == "R" || this.settingList[e.RowIndex].type == "B"))
+                {
+                    if (this.gridSetting.Columns[e.ColumnIndex].Name == "ColumnPointX" || this.gridSetting.Columns[e.ColumnIndex].Name == "ColumnPointY")
+                    {
+                        int bolsterWidth = int.Parse(this.txtBolsterWidth.Text);
+                        int bolsterHeight = int.Parse(this.txtBolsterHeight.Text);
+                        int editPointX = int.Parse(row.Cells["ColumnPointX"].Value.ToString());
+                        int editPointY = int.Parse(row.Cells["ColumnPointY"].Value.ToString());
+
+                        if (editPointX <= bolsterWidth && editPointY <= bolsterHeight)
+                        {
+                            this.locationSetting2.setSensorPosition(e.RowIndex, editPointX, editPointY, false);
+                            this.settingList[e.RowIndex].x = editPointX;
+                            this.settingList[e.RowIndex].y = editPointY;
+                            if (this.sensorPositionSetting.PositionList[e.RowIndex].X != editPointX || this.sensorPositionSetting.PositionList[e.RowIndex].Z != editPointY)
+                            {
+                                this.sensorPositionSetting.IsUpdated = true;
+                            }
+                        }
+                        else
+                        {
+                            //MSG_BOLSTER_OUTSIDE_SCOPE
+                            //if (MessageBox.Show("ボルスタの範囲外のため、センサを削除しますが、よろしいですか？", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
+                            if (MessageBox.Show(AppResource.GetString("MSG_BOLSTER_OUTSIDE_SCOPE"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
+                            {
+                                //センサの削除実行
+                                locationSetting2.removeSensor(e.RowIndex);
+
+                            }
+                        }
+                    }
+                    //Target combobox check if user edit value in grid then set isUpdate flag
+                    int temp = -1;
+                    if (this.gridSetting.Columns[e.ColumnIndex].Name == "ColumnMeasureTarget")
+                    {
+                        if (!(this.gridSetting.Rows[e.RowIndex].Cells["ColumnMeasureTarget"].Value == null || this.gridSetting.Rows[e.RowIndex].Cells["ColumnMeasureTarget"].Value.ToString() == string.Empty))
+                        {
+                            for (int j = 0; j < this.measureTargetConboBoxItems.Length; j++)
+                            {
+                                if (this.measureTargetConboBoxItems[j] == this.gridSetting.Rows[e.RowIndex].Cells["ColumnMeasureTarget"].Value.ToString())
+                                {
+                                    temp = j;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if ((int)this.sensorPositionSetting.PositionList[e.RowIndex].Target != temp)
+                        {
+                            this.sensorPositionSetting.IsUpdated = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridSetting_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            try
+            {
+                bool isValid = true;
+
+                DataGridView dgv = (DataGridView)sender;
+
+                if (e.RowIndex == dgv.NewRowIndex || !dgv.IsCurrentCellDirty)
+                {
+                    return;
+                }
+
+                DataGridViewRow row = dgv.Rows[e.RowIndex];
+                if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointX" && e.FormattedValue.ToString() == "")
+                {
+                    //MessageBox.Show("X位置を入力してください。", "入力エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MSG_PLEASE_ENTER_X
+                    dgv.Rows[e.RowIndex].ErrorText = AppResource.GetString("MSG_PLEASE_ENTER_X");
+                    isValid = false;
+                }
+                else if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointY" && e.FormattedValue.ToString() == "")
+                {
+                    //MessageBox.Show("Z位置を入力してください。", "入力エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dgv.Rows[e.RowIndex].ErrorText = AppResource.GetString("MSG_PLEASE_ENTER_Z");
+                    isValid = false;
+                }
+
+                if (isValid == false)
+                {
+                    dgv.CancelEdit();
+                    e.Cancel = true;
+
+                    showErrorMessage(dgv.Rows[e.RowIndex].ErrorText);
+                    dgv.Rows[e.RowIndex].ErrorText = string.Empty;
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridSetting_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                // 入力可能文字
+                if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != '\b')
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool isValid = true;
+                SettingItem item;
+                SettingStage settingStage = this.getSettingStage();
+                int underKanagataX = (int)System.Math.Floor(((double)settingStage.bolsterWidth - (double)settingStage.underKanagataWidth) / 2);
+                int underKanagataY = (int)System.Math.Floor(((double)settingStage.bolsterHeight - (double)settingStage.underKanagataHeight) / 2);
+                int pressKanagataX = (int)System.Math.Floor(((double)settingStage.bolsterWidth - (double)settingStage.pressKanagataWidth) / 2);
+                int pressKanagataY = (int)System.Math.Floor(((double)settingStage.bolsterHeight - (double)settingStage.pressKanagataHeight) / 2);
+
+
+                for (int i = 0; i < this.settingList.Count; i++)
+                {
+                    item = this.settingList[i];
+                    DataGridViewRow row = this.gridSetting.Rows[i];
+
+                    if (item.sensorNumber > 0 && (row.Cells["ColumnMeasureTarget"].Value == null || row.Cells["ColumnMeasureTarget"].Value.ToString() == ""))
+                    {
+                        this.gridSetting.CurrentCell = row.Cells["ColumnMeasureTarget"];
+                        //this.showErrorMessage("測定対象を設定してください。");
+                        ShowWarningMessage(AppResource.GetString("MSG_SET_MEASURE_OBJECT"));
+                        isValid = false;
+                        //break;
+                        return;
+                    }
+                    else if (item.sensorNumber > 0)
+                    {
+                        for (int j = 0; j < this.measureTargetConboBoxItems.Length; j++)
+                        {
+                            if (this.measureTargetConboBoxItems[j] == row.Cells["ColumnMeasureTarget"].Value.ToString())
+                            {
+                                item.measureTarget = j;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                //if (isValid == true)
+                if (this.sensorPositionSetting.IsUpdated || isValid)
+                {
+                    if (MessageBox.Show(AppResource.GetString("MSG_CONFIRM_SAVE"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        this.sensorPositionSetting.BolsterWidth = int.Parse(this.txtBolsterWidth.Text.ToString());
+                        this.sensorPositionSetting.BolsterDepth = int.Parse(this.txtBolsterHeight.Text.ToString());
+                        this.sensorPositionSetting.UsedMold = this.chkDispKanagata.Checked;
+                        this.sensorPositionSetting.MoldWidth = int.Parse(this.txtUnderKanagataWidth.Text.ToString());
+                        this.sensorPositionSetting.MoldDepth = int.Parse(this.txtUnderKanagataHeight.Text.ToString());
+                        this.sensorPositionSetting.MoldPressWidth = int.Parse(this.txtPressKanagataWidth.Text.ToString());
+                        this.sensorPositionSetting.MoldPressDepth = int.Parse(this.txtPressKanagataHeight.Text.ToString());
+
+                        for (int i = 0; i < this.settingList.Count; i++)
+                        {
+                            item = this.settingList[i];
+                            if (item.type == "B" || item.type == "R")
+                            {
+                                if (item.sensorNumber > 0)
+                                {
+                                    this.sensorPositionSetting.PositionList[i].ChNo = item.channel;
+                                    this.sensorPositionSetting.PositionList[i].X = item.x;
+                                    this.sensorPositionSetting.PositionList[i].Z = item.y;
+                                }
+                                else
+                                {
+                                    this.sensorPositionSetting.PositionList[i].ChNo = -1;
+                                    this.sensorPositionSetting.PositionList[i].X = -100;
+                                    this.sensorPositionSetting.PositionList[i].Z = -100;
+                                }
+                                this.sensorPositionSetting.PositionList[i].Target = (PositionSetting.TargetType)item.measureTarget;
+                                if (item.type == "B")
+                                {
+                                    this.sensorPositionSetting.PositionList[i].Way = PositionSetting.WayType.INVAILED;
+                                }
+                                else if (item.type == "R")
+                                {
+                                    this.sensorPositionSetting.PositionList[i].Way = (PositionSetting.WayType)item.measureDirection;
+                                }
+                            }
+                        }
+                        this.sensorPositionSetting.Serialize();
+                        //PutLog("Save SensorPositionSetting.xml");
+                        this.locationSetting2.isClosing = true;
+                        this.locationSetting2.Close();
+                        this.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
         #endregion
 
         #region Private Method
@@ -758,16 +811,6 @@ namespace RM_3000
         private DialogResult showErrorMessage(string msg)
         {
             return MessageBox.Show(msg, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void frmLocationSetting_Deactivate(object sender, EventArgs e)
-        {
-            this.gridSetting.CommitEdit(DataGridViewDataErrorContexts.Commit);
-            this.gridSetting.RefreshEdit();
         }
         #endregion
 

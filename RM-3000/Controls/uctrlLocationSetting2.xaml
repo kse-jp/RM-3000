@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="900"
-             Loaded="Window_Loaded" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" MouseLeftButtonUp="Window_MouseLeftButtonUp">
+             Loaded="Window_Loaded" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" MouseLeftButtonUp="Window_MouseLeftButtonUp" FontFamily="Meiryo UI">
     <UserControl.Resources>
         <BitmapImage x:Key="image_sensor_r_normal_bottom" UriSource="../Resources/Images/Sensor/sensor_r_normal_bottom.png"></BitmapImage>
         <BitmapImage x:Key="image_sensor_r_normal_top" UriSource="../Resources/Images/Sensor/sensor_r_normal_top.png"></BitmapImage>

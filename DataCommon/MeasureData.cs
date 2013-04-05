@@ -593,7 +593,13 @@ namespace DataCommon
 
             //初回取得
             int tmpcount = 0;
-            List<SampleData> samples = sampleDatas.GetRange(startIndex, length);
+
+            List<SampleData> samples = null;
+
+            if(SampleDatas.HeaderData.Mode == ModeType.MODE2)
+                samples = sampleDatas.GetRange(startIndex, 1);
+            else
+                samples = sampleDatas.GetRange(startIndex, length);
 
             //データ残ありならばループ
             while (length > tmpcount)
@@ -724,7 +730,10 @@ namespace DataCommon
                 //まだすべてを取得してないければ次を取得
                 if (tmpcount < length)
                 {
-                    samples = sampleDatas.GetRange(tmpcount, length - tmpcount);
+                    if(this.SampleDatas.HeaderData.Mode == ModeType.MODE2)
+                        samples = sampleDatas.GetRange(tmpcount, 1);
+                    else
+                        samples = sampleDatas.GetRange(tmpcount, length - tmpcount);
 
                     //取得ない＝指定分の長さだけデータはないので抜ける。
                     if (samples == null) break;

@@ -1316,4 +1316,8 @@ Emergency shutdown.</value>
     <value>停止</value>
     <comment>停止</comment>
   </data>
+  <data name="ERROR_INVALID_CSV_OVERSAMPLECOUNT" xml:space="preserve">
+    <value>CSV出力の終了位置がデータ数をオーバーしています。</value>
+    <comment>CSV出力の終了位置がデータ数をオーバーしています。</comment>
+  </data>
 </root>

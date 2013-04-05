@@ -1232,6 +1232,12 @@ namespace RM_3000.Forms.Analyze
                     return;
                 }
 
+                if (endindex > analyzeData.MeasureData.SamplesCount)
+                {
+                    ShowErrorMessage(AppResource.GetString("ERROR_INVALID_CSV_OVERSAMPLECOUNT"));
+                    return;
+                }
+
 
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "csv|*.csv";

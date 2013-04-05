@@ -226,6 +226,8 @@ namespace DataCommon
                 //データのヘッダ部分のみ読込         
                 this.MeasureData.Deserialize_Data_OnlyHeader(DirectoryPath + SampleDataManager.FileName);
 
+                //演算項目測定のための初期化
+                this.MeasureData.InitializeforAnalysis(this);
 
                 return true;
             }

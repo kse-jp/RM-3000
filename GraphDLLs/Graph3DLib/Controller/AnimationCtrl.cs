@@ -221,7 +221,7 @@ namespace Graph3DLib.Controller
         public void SetSpeed(double speedRatio)
         {
             try
-            {
+            {               
                 for (int i = 0; i < _AnimationClock.Length; i++)
                 {
                     for (int j = 0; j < _AnimationClock[i].Length; j++)

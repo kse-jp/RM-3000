@@ -177,7 +177,7 @@ namespace Graph3DLib.Model
         /// Create Animation Clock
         /// </summary>
         private void CreateAnimationClock()
-        {
+        {            
             for (int i = 0; i < _AnimationKeyFrameData.Length; i++)
             {
                 if (_AnimationClock[i] != null)
@@ -195,7 +195,7 @@ namespace Graph3DLib.Model
 
                             if (_AnimationClock[i][j] == null && _AnimationKeyFrameData[i][j].KeyFrames.Count > 0)
                             {
-                                _AnimationClock[i][j] = _AnimationKeyFrameData[i][j].CreateClock();
+                                _AnimationClock[i][j] = _AnimationKeyFrameData[i][j].CreateClock();                                                                
                             }
                         }
                     }
@@ -551,7 +551,7 @@ namespace Graph3DLib.Model
                 rotate.CenterY = 8.75;
                 rotate.CenterZ = 0;
 
-                double center = 0;                
+                double center = 0;
 
 
                 Model3DGroup upgroup = _MachineModel.UpperPartModel3DGroup.Children[0] as Model3DGroup;

@@ -34,7 +34,7 @@
                     <ModelVisual3D.Content>
                         <DirectionalLight 
 	    Color="White" 
-	    Direction="-5,-5,-7" />
+	    Direction="-3,-3,-7" />
                     </ModelVisual3D.Content>
 
                 </ModelVisual3D>

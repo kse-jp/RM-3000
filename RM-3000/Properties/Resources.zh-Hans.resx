@@ -1359,4 +1359,8 @@ Please try restart agin.</comment>
     <value>CSV出力の終了位置がデータ数をオーバーしています。</value>
     <comment>CSV出力の終了位置がデータ数をオーバーしています。</comment>
   </data>
+  <data name="MSG_CANT_ASSIGN_TAG" xml:space="preserve">
+    <value>ボード設定のないチャンネルには項目を割り当てることはできません。</value>
+    <comment>ボード設定のないチャンネルには項目を割り当てることはできません。</comment>
+  </data>
 </root>

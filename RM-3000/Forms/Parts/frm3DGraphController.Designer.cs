@@ -68,6 +68,8 @@
             this.toolStripBtnBack = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnLeft = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRight = new System.Windows.Forms.ToolStripButton();
+            this.pic1loop = new System.Windows.Forms.PictureBox();
+            this.picallloop = new System.Windows.Forms.PictureBox();
             this.pnlMain.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,6 +84,8 @@
             this.pnlHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tstrip3DGraph.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1loop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picallloop)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -283,6 +287,8 @@
             // pnlAnimation
             // 
             this.pnlAnimation.BackColor = System.Drawing.Color.Silver;
+            this.pnlAnimation.Controls.Add(this.picallloop);
+            this.pnlAnimation.Controls.Add(this.pic1loop);
             this.pnlAnimation.Controls.Add(this.chkLoopAll);
             this.pnlAnimation.Controls.Add(this.chkLoop);
             this.pnlAnimation.Controls.Add(this.picStart);
@@ -313,18 +319,20 @@
             this.chkLoopAll.TabIndex = 19;
             this.chkLoopAll.Text = "Total Shot";
             this.chkLoopAll.UseVisualStyleBackColor = true;
+            this.chkLoopAll.CheckedChanged += new System.EventHandler(this.chkLoopAll_CheckedChanged);
             this.chkLoopAll.Click += new System.EventHandler(this.chkLoopAll_Click);
             // 
             // chkLoop
             // 
             this.chkLoop.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkLoop.Location = new System.Drawing.Point(108, 19);
+            this.chkLoop.Location = new System.Drawing.Point(106, 19);
             this.chkLoop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkLoop.Name = "chkLoop";
             this.chkLoop.Size = new System.Drawing.Size(60, 50);
             this.chkLoop.TabIndex = 18;
             this.chkLoop.Text = "1Shot";
             this.chkLoop.UseVisualStyleBackColor = true;
+            this.chkLoop.CheckedChanged += new System.EventHandler(this.chkLoop_CheckedChanged);
             this.chkLoop.Click += new System.EventHandler(this.chkLoop_Click);
             // 
             // picStart
@@ -340,7 +348,7 @@
             // 
             // picGain
             // 
-            this.picGain.Location = new System.Drawing.Point(174, 87);
+            this.picGain.Location = new System.Drawing.Point(192, 87);
             this.picGain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picGain.Name = "picGain";
             this.picGain.Size = new System.Drawing.Size(60, 50);
@@ -351,7 +359,7 @@
             // 
             // picBack
             // 
-            this.picBack.Location = new System.Drawing.Point(42, 86);
+            this.picBack.Location = new System.Drawing.Point(18, 87);
             this.picBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBack.Name = "picBack";
             this.picBack.Size = new System.Drawing.Size(60, 50);
@@ -362,7 +370,7 @@
             // 
             // picStop
             // 
-            this.picStop.Location = new System.Drawing.Point(108, 87);
+            this.picStop.Location = new System.Drawing.Point(105, 87);
             this.picStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStop.Name = "picStop";
             this.picStop.Size = new System.Drawing.Size(60, 50);
@@ -569,6 +577,28 @@
             this.toolStripBtnRight.Text = "TXT_3D_RIGHT";
             this.toolStripBtnRight.Click += new System.EventHandler(this.toolStripBtnRight_Click);
             // 
+            // pic1loop
+            // 
+            this.pic1loop.Location = new System.Drawing.Point(105, 19);
+            this.pic1loop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic1loop.Name = "pic1loop";
+            this.pic1loop.Size = new System.Drawing.Size(60, 50);
+            this.pic1loop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic1loop.TabIndex = 20;
+            this.pic1loop.TabStop = false;
+            this.pic1loop.Click += new System.EventHandler(this.pic1loop_Click);
+            // 
+            // picallloop
+            // 
+            this.picallloop.Location = new System.Drawing.Point(192, 19);
+            this.picallloop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picallloop.Name = "picallloop";
+            this.picallloop.Size = new System.Drawing.Size(60, 50);
+            this.picallloop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picallloop.TabIndex = 21;
+            this.picallloop.TabStop = false;
+            this.picallloop.Click += new System.EventHandler(this.picallloop_Click);
+            // 
             // frm3DGraphController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -598,6 +628,8 @@
             this.panel2.ResumeLayout(false);
             this.tstrip3DGraph.ResumeLayout(false);
             this.tstrip3DGraph.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1loop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picallloop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -643,6 +675,8 @@
         private System.Windows.Forms.ComboBox ddlOnePlaces;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkLoopAll;
+        private System.Windows.Forms.PictureBox picallloop;
+        private System.Windows.Forms.PictureBox pic1loop;
 
     }
 }

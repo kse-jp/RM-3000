@@ -417,6 +417,10 @@ namespace RM_3000.Forms.Settings
                     case 0:
                         grpCalc1.Visible = false;
                         IsStaticZeroVisible = true;
+
+                        cboPoint.Visible = false;
+                        lblPoint.Visible = false;
+
                         break;
 
                     //case 1:
@@ -452,6 +456,9 @@ namespace RM_3000.Forms.Settings
                         txtCalc1_2.Visible = false;
                         txtCalc2.Visible = true;
                         this.calcTextbox = txtCalc2;
+
+                        cboPoint.Visible = true;
+                        lblPoint.Visible = true;
                         break;
                 }
                 lblZeroStatic.Visible = IsStaticZeroVisible;

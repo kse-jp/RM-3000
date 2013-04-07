@@ -1320,4 +1320,8 @@ Emergency shutdown.</value>
     <value>CSV出力の終了位置がデータ数をオーバーしています。</value>
     <comment>CSV出力の終了位置がデータ数をオーバーしています。</comment>
   </data>
+  <data name="MSG_CANT_ASSIGN_TAG" xml:space="preserve">
+    <value>Can't assign to board type None.</value>
+    <comment>Can't assign to board type None.</comment>
+  </data>
 </root>

@@ -81,6 +81,11 @@ namespace CommonLib
         /// </summary>
         [System.ComponentModel.DefaultValue(1)]
         public int NumPointLimit { get; set; }
+        /// <summary>
+        /// 設置画面平均処理フラグ
+        /// </summary>
+        public bool IsPositionViewAverage { get; set; }
+
         #endregion
 
         #region public method
@@ -175,6 +180,14 @@ namespace CommonLib
                                         this.NumPointLimit = int.Parse(tempString);
                                     }
                                 }
+                                else if (reader.Name.Equals("IsPositionViewAverage"))
+                                {
+                                    tempString = reader.ReadElementContentAsString();
+                                    if (!string.IsNullOrEmpty(tempString))
+                                    {
+                                        this.IsPositionViewAverage = bool.Parse(tempString);
+                                    }
+                                }
 
                                 break;
                             case XmlNodeType.EndElement:
@@ -259,6 +272,12 @@ namespace CommonLib
                 textWriter.WriteString(this.NumPointLimit.ToString());
                 textWriter.WriteEndElement();
                 textWriter.WriteWhitespace("\n");
+
+                textWriter.WriteStartElement("IsPositionViewAverage");
+                textWriter.WriteString(this.IsPositionViewAverage.ToString());
+                textWriter.WriteEndElement();
+                textWriter.WriteWhitespace("\n");
+                
                 //end root
                 textWriter.WriteEndElement();
                 textWriter.WriteWhitespace("\n");

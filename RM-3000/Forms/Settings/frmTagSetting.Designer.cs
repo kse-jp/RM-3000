@@ -52,7 +52,7 @@
             this.cmbOperators = new System.Windows.Forms.ComboBox();
             this.txtCalc2 = new System.Windows.Forms.TextBox();
             this.cboPoint = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblPoint = new System.Windows.Forms.Label();
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.lblUnit = new System.Windows.Forms.Label();
             this.txtTagName = new System.Windows.Forms.TextBox();
@@ -129,7 +129,7 @@
             resources.ApplyResources(this.pnlTagInfo, "pnlTagInfo");
             this.pnlTagInfo.Controls.Add(this.grpCalc1);
             this.pnlTagInfo.Controls.Add(this.cboPoint);
-            this.pnlTagInfo.Controls.Add(this.label4);
+            this.pnlTagInfo.Controls.Add(this.lblPoint);
             this.pnlTagInfo.Controls.Add(this.txtUnit);
             this.pnlTagInfo.Controls.Add(this.lblUnit);
             this.pnlTagInfo.Controls.Add(this.txtTagName);
@@ -281,10 +281,10 @@
             this.cboPoint.Name = "cboPoint";
             this.cboPoint.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // label4
+            // lblPoint
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblPoint, "lblPoint");
+            this.lblPoint.Name = "lblPoint";
             // 
             // txtUnit
             // 
@@ -407,7 +407,7 @@
         private System.Windows.Forms.Label lblTagKind;
         private System.Windows.Forms.ComboBox cboTagKind;
         private System.Windows.Forms.ComboBox cboPoint;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPoint;
         private System.Windows.Forms.TextBox txtUnit;
         private System.Windows.Forms.Label lblUnit;
         private System.Windows.Forms.TextBox txtTagName;

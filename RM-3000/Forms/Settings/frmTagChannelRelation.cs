@@ -465,7 +465,7 @@ namespace RM_3000.Forms.Settings
                 //if (this.chSetting.ChannelSettingList[dgvBoardChannel.CurrentCell.RowIndex].ChKind == ChannelKindType.N)
                 if(this.dgvBoardChannel[1,dgvBoardChannel.CurrentCell.RowIndex].Value.ToString().Equals("---"))
                 {
-                    ShowErrorMessage(AppResource.GetString("MSG_Can't_assign_to_board_type_N"));
+                    ShowErrorMessage(AppResource.GetString("MSG_CANT_ASSIGN_TAG"));
                     return;
                 }
                 if (selectedRotation != null)

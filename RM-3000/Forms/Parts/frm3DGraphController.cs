@@ -150,6 +150,25 @@ namespace RM_3000.Forms.Parts
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
+            // 1Loop Icon
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\1Loop_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\1Loop_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            // LoopAll Icon
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\LoopAll_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\LoopAll_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+
         }
 
         #region public method
@@ -716,7 +735,20 @@ namespace RM_3000.Forms.Parts
             if (btnGain.Enabled)
                 btnGain_Click(btnGain, e);
         }
-        
+
+        private void pic1loop_Click(object sender, EventArgs e)
+        {
+            chkLoop.Checked = !chkLoop.Checked;
+            chkLoop_Click(chkLoop, e);
+        }
+
+        private void picallloop_Click(object sender, EventArgs e)
+        {
+            chkLoopAll.Checked = !chkLoopAll.Checked;
+            chkLoopAll_Click(chkLoopAll, e);
+        }
+
+
         /// <summary>
         /// chkLoop_Click (one shot loop)
         /// </summary>
@@ -737,6 +769,18 @@ namespace RM_3000.Forms.Parts
             this.analyzeController.Loop3DAllShot = chkLoopAll.Checked;
         }
 
+        private void chkLoop_CheckedChanged(object sender, EventArgs e)
+        {
+            pic1loop.Image = chkLoop.Checked ? imageList1[(int)pic1loop.Tag + 1] : imageList1[(int)pic1loop.Tag];
+            Application.DoEvents();
+        }
+
+        private void chkLoopAll_CheckedChanged(object sender, EventArgs e)
+        {
+            picallloop.Image = chkLoopAll.Checked ? imageList1[(int)picallloop.Tag + 1] : imageList1[(int)picallloop.Tag];
+            Application.DoEvents();
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -750,6 +794,13 @@ namespace RM_3000.Forms.Parts
             picBack.Tag = 8;
             picGain.Image = imageList1[10];
             picGain.Tag = 10;
+            
+            pic1loop.Image = chkLoop.Checked ? imageList1[13] : imageList1[12];
+            pic1loop.Tag = 12;
+
+            picallloop.Image = chkLoopAll.Checked ? imageList1[15] : imageList1[14];
+            picallloop.Tag = 14;
+
         }
 
         /// <summary>
@@ -767,15 +818,6 @@ namespace RM_3000.Forms.Parts
             }
         }
         #endregion
-
-      
-
-
-
-
-
-
-
 
     }
 }

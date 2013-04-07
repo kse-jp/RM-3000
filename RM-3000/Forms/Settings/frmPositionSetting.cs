@@ -101,7 +101,7 @@ namespace RM_3000.Forms.Settings
                 {
                     PositionUnits[i].ZeroSet = false;
                     PositionUnits[i].ZeroEnabled = false;
-                    PositionUnits[i].Point = 0;
+                    PositionUnits[i].Point = SystemSetting.ChannelsSetting.ChannelSettingList[i].NumPoint;
                     continue;
                 }
 
@@ -313,45 +313,72 @@ namespace RM_3000.Forms.Settings
                 return;
             }
 
+            SampleData data = null;
+
             //本番通信モード            
             //SampleData data = RealTimeData.GetLastData(true);
-
-            try
+            if (SystemSetting.SystemConfig.IsPositionViewAverage)
             {
-
-                List<SampleData> datas = RealTimeData.GetRealTimeDatas();
-
-                if (datas == null) return;
-                if (datas.Count == 0) return;
-
-                SampleData data = datas[0];
-
-                if (data == null) return;
-
-                for (int i = 1; i < datas.Count; i++)
+                //平均処理ありモード
+                try
                 {
-                    for (int j = 0; j < data.ChannelDatas.Length; j++)
+
+                    List<SampleData> datas = RealTimeData.GetRealTimeDatas();
+
+                    if (datas == null) return;
+                    if (datas.Count == 0) return;
+
+                    data = datas[0];
+
+                    if (data == null) return;
+
+                    for (int i = 1; i < datas.Count; i++)
                     {
-                        if (data.ChannelDatas[j] == null) continue;
-                        //回転数は飛ばす
-                        if (data.ChannelDatas[j].Position == 0) continue;
-
-                        ((Value_Standard)data.ChannelDatas[j].DataValues).Value += ((Value_Standard)datas[i].ChannelDatas[j].DataValues).Value;
-
-                        if (i == datas.Count - 1)
+                        for (int j = 0; j < data.ChannelDatas.Length; j++)
                         {
-                            ((Value_Standard)data.ChannelDatas[j].DataValues).Value /= datas.Count;
-                            PositionUnits[data.ChannelDatas[j].Position - 1].NowValue = ((Value_Standard)data.ChannelDatas[j].DataValues).Value;
+                            if (data.ChannelDatas[j] == null) continue;
+                            //回転数は飛ばす
+                            if (data.ChannelDatas[j].Position == 0) continue;
+
+                            ((Value_Standard)data.ChannelDatas[j].DataValues).Value += ((Value_Standard)datas[i].ChannelDatas[j].DataValues).Value;
+
+                            if (i == datas.Count - 1)
+                            {
+                                ((Value_Standard)data.ChannelDatas[j].DataValues).Value /= datas.Count;
+                                PositionUnits[data.ChannelDatas[j].Position - 1].NowValue = ((Value_Standard)data.ChannelDatas[j].DataValues).Value;
+                            }
                         }
                     }
+
+
+                }
+                catch
+                {
+                }
+            }
+            else
+            {
+                try
+                {
+                    //平均無モード
+                    data = RealTimeData.GetLastData(true);
+
+                    if (data == null) return;
+
+                    foreach (ChannelData ch in data.ChannelDatas)
+                    {
+                        if (ch == null) continue;
+                        //回転数は飛ばす
+                        if (ch.Position == 0) continue;
+
+                        PositionUnits[ch.Position - 1].NowValue = ((Value_Standard)ch.DataValues).Value;
+                    }
+                }
+                catch
+                {
                 }
 
-
             }
-            catch
-            {
-            }
-
             ////データ取得数をインクリメント
             //GetCount++;
 

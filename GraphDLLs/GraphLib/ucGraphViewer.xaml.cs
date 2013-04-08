@@ -1281,19 +1281,27 @@ namespace GraphLib
                 //Update Channel
                 if (updateCH)
                 {
+                    bool chkinfosame = CheckChannelInfoIsSame();
+
                     if (_GraphInfo.ChannelInfos != null)
                     {
-                        _GraphModel.GraphColor = new Color[_GraphInfo.ChannelInfos.Count];
-                        _GraphModel.GraphLineSize = new double[_GraphInfo.ChannelInfos.Count];
-                        _GraphModel.GraphShow = new bool[_GraphInfo.ChannelInfos.Count];
-                        _GraphModel.ChannelNumber = new int[_GraphInfo.ChannelInfos.Count];
-                        for (int i = 0; i < _GraphInfo.ChannelInfos.Count; i++)
+                        if (!chkinfosame)
                         {
-                            _GraphModel.ChannelNumber[i] = _GraphInfo.ChannelInfos[i].CHNo;
-                            _GraphModel.GraphColor[i] = _GraphInfo.ChannelInfos[i].CHColor;
-                            _GraphModel.GraphLineSize[i] = _GraphThickness;
-                            //_GraphModel.GraphLineSize[i] = _GraphInfo.ChannelInfos[i].CHLineSize;
-                            _GraphModel.GraphShow[i] = _GraphInfo.ChannelInfos[i].IsEnabled;
+                            this.Dispatcher.BeginInvoke(new Action(ClearGraph), System.Windows.Threading.DispatcherPriority.Normal, null);
+                            _GraphModel.GraphColor = new Color[_GraphInfo.ChannelInfos.Count];
+                            _GraphModel.GraphLineSize = new double[_GraphInfo.ChannelInfos.Count];
+                            _GraphModel.GraphShow = new bool[_GraphInfo.ChannelInfos.Count];
+                            _GraphModel.ChannelNumber = new int[_GraphInfo.ChannelInfos.Count];
+                            for (int i = 0; i < _GraphInfo.ChannelInfos.Count; i++)
+                            {
+                                _GraphModel.ChannelNumber[i] = _GraphInfo.ChannelInfos[i].CHNo;
+                                _GraphModel.GraphColor[i] = _GraphInfo.ChannelInfos[i].CHColor;
+                                _GraphModel.GraphLineSize[i] = _GraphThickness;
+                                //_GraphModel.GraphLineSize[i] = _GraphInfo.ChannelInfos[i].CHLineSize;
+                                _GraphModel.GraphShow[i] = _GraphInfo.ChannelInfos[i].IsEnabled;
+                            }
+
+                            this.Dispatcher.BeginInvoke(new Action(CreateLegendPanel), System.Windows.Threading.DispatcherPriority.Normal, null);
                         }
                     }
                 }
@@ -1305,7 +1313,6 @@ namespace GraphLib
                     this.RefreshGraph();
                 }
 
-                this.Dispatcher.BeginInvoke(new Action(CreateLegendPanel), System.Windows.Threading.DispatcherPriority.Normal, null);
                 UpdateLabelValueY();
                 UpdateLabelValueX();
                 this.RedrawGraphUpdateGraphInfo(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
@@ -4674,10 +4681,10 @@ namespace GraphLib
         }
 
         /// <summary>
-        /// Create Legend Panel
+        /// Check Channel Info Is Same 
         /// </summary>
-        /// <param name="chInfo"></param>
-        private void CreateLegendPanel()
+        /// <returns></returns>
+        private bool CheckChannelInfoIsSame()
         {
             ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
             bool chksame = true;
@@ -4698,46 +4705,58 @@ namespace GraphLib
                 }
                 else
                     chksame = false;
+            }
 
-                if (!chksame)
+            return chksame;
+        }
+
+        /// <summary>
+        /// Create Legend Panel
+        /// </summary>
+        /// <param name="chInfo"></param>
+        private void CreateLegendPanel()
+        {
+            ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
+
+            if (chInfo != null && chInfo.Length > 0)
+            {
+
+                _CurrentChInfo = chInfo;
+                gridLegend.RowDefinitions.Clear();
+                gridLegend.Children.Clear();
+                this.ShowLegend = true;
+
+                for (int i = 0; i < chInfo.Length; i++)
                 {
-                    _CurrentChInfo = chInfo;
-                    gridLegend.RowDefinitions.Clear();
-                    gridLegend.Children.Clear();
-                    this.ShowLegend = true;
+                    RowDefinition r = new RowDefinition();
+                    r.Height = new GridLength(27, GridUnitType.Pixel);
 
-                    for (int i = 0; i < chInfo.Length; i++)
-                    {
-                        RowDefinition r = new RowDefinition();
-                        r.Height = new GridLength(27, GridUnitType.Pixel);
+                    gridLegend.RowDefinitions.Add(r);
 
-                        gridLegend.RowDefinitions.Add(r);
+                    Rectangle rect = new Rectangle();
+                    rect.Name = "rectLgLine" + i.ToString();
+                    rect.Width = 12;
+                    rect.Height = 12;
+                    rect.Stroke = new SolidColorBrush(Colors.Black);
+                    rect.Fill = new SolidColorBrush(chInfo[i].CHColor);
+                    rect.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                    rect.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                    rect.Margin = new Thickness(5, 0, 0, 3);
+                    Grid.SetColumn(rect, 0);
+                    Grid.SetRow(rect, i);
+                    gridLegend.Children.Add(rect);
 
-                        Rectangle rect = new Rectangle();
-                        rect.Name = "rectLgLine" + i.ToString();
-                        rect.Width = 12;
-                        rect.Height = 12;
-                        rect.Stroke = new SolidColorBrush(Colors.Black);
-                        rect.Fill = new SolidColorBrush(chInfo[i].CHColor);
-                        rect.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                        rect.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                        rect.Margin = new Thickness(5, 0, 0, 3);
-                        Grid.SetColumn(rect, 0);
-                        Grid.SetRow(rect, i);
-                        gridLegend.Children.Add(rect);
+                    Label label = new Label();
+                    label.Name = "lblLgName" + i.ToString();
+                    label.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                    label.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                    label.Margin = new Thickness(5, 0, 0, 3);
+                    label.Content = chInfo[i].CHName;
+                    label.FontSize = 12;
+                    Grid.SetColumn(label, 1);
+                    Grid.SetRow(label, i);
 
-                        Label label = new Label();
-                        label.Name = "lblLgName" + i.ToString();
-                        label.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                        label.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                        label.Margin = new Thickness(5, 0, 0, 3);
-                        label.Content = chInfo[i].CHName;
-                        label.FontSize = 12;
-                        Grid.SetColumn(label, 1);
-                        Grid.SetRow(label, i);
-
-                        gridLegend.Children.Add(label);
-                    }
+                    gridLegend.Children.Add(label);
                 }
             }
             else

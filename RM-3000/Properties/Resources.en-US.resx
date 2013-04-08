@@ -1065,11 +1065,11 @@ Please try restart agin.</comment>
     <comment>金型(プレス面)長さより大きい数字を入力してください。</comment>
   </data>
   <data name="MSG_PLEASE_ENTER_X" xml:space="preserve">
-    <value>Please enter position X</value>
+    <value>Please enter valid position X</value>
     <comment>X位置を入力してください。</comment>
   </data>
   <data name="MSG_PLEASE_ENTER_Z" xml:space="preserve">
-    <value>Please enter position Z</value>
+    <value>Please enter valid position Z</value>
     <comment>Z位置を入力してください。</comment>
   </data>
   <data name="MSG_PLEASE_INPUT" xml:space="preserve">

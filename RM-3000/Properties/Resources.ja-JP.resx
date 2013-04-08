@@ -1058,11 +1058,11 @@
     <comment>金型(プレス面)長さより大きい数字を入力してください。</comment>
   </data>
   <data name="MSG_PLEASE_ENTER_X" xml:space="preserve">
-    <value>X位置を入力してください。</value>
+    <value>適切なX位置を入力してください。</value>
     <comment>X位置を入力してください。</comment>
   </data>
   <data name="MSG_PLEASE_ENTER_Z" xml:space="preserve">
-    <value>Z位置を入力してください。</value>
+    <value>適切なZ位置を入力してください。</value>
     <comment>Z位置を入力してください。</comment>
   </data>
   <data name="MSG_PLEASE_INPUT" xml:space="preserve">

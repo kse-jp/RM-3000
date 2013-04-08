@@ -524,7 +524,13 @@ namespace RM_3000.Forms.Analyze
 
                     //通信監視の再開
                     Sequences.CommunicationMonitor.GetInstance().bStop = false;
+
+                    //Reload content in case change some setting after start
+                    LoadContent();
+                    ShowMeasSetting();
                 }
+
+                
             }
             catch (Exception ex)
             {

@@ -60,6 +60,14 @@ namespace DataCommon
 
         #region public member
         /// <summary>
+        /// X/Z位置最小値
+        /// </summary>
+        public static int MinXZ = -100;
+        /// <summary>
+        /// X/Z位置最大値
+        /// </summary>
+        public static int MaxXZ = 5000000;
+        /// <summary>
         /// チャンネルNo
         /// 1～10 , -1
         /// </summary>

@@ -50,6 +50,12 @@ namespace RM_3000.Forms.Measurement
         ///// ダーティフラグ
         ///// </summary>
         //private bool dirty = false;
+
+        /// <summary>
+        /// イメージリスト
+        /// </summary>
+        private List<Image> imageList1 = new List<Image>();
+
         #endregion
 
         #region constructor
@@ -87,7 +93,75 @@ namespace RM_3000.Forms.Measurement
         /// </remarks>
         private void ContentsLoad()
         {
+            System.IO.FileStream fs;
 
+            //Pattern Read Button
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\ReadFile_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\ReadFile_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            //Pattern Write Button
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\WriteFile_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\WriteFile_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            //Measure Setting Button
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\MeasureSetting_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\MeasureSetting_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            //Remove Graph Button
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            //Graph Axis Setting Button
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+        }
+
+        /// <summary>
+        /// ボタンイメージの初期化
+        /// </summary>
+        private void InitButtonImage()
+        {
+            picReadFile.Image = imageList1[0];
+            picReadFile.Tag = 0;
+
+            picWriteFile.Image = imageList1[2];
+            picWriteFile.Tag = 2;
+
+            picSetting.Image = imageList1[4];
+            picSetting.Tag = 4;
+
+            picRemoveGraph.Image = imageList1[6];
+            picRemoveGraph.Tag = 6;
+
+            picGraphAxisSetting.Image = imageList1[8];
+            picGraphAxisSetting.Tag = 8;
+        
         }
 
         /// <summary>
@@ -161,6 +235,13 @@ namespace RM_3000.Forms.Measurement
                 this.measSetting.IsUpdated = false;
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
+
+
+                //コンテンツのロード
+                ContentsLoad();
+
+                //ボタンイメージの設定
+                InitButtonImage();
 
             }
             catch (Exception ex)
@@ -878,6 +959,9 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
+                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag + 1];
+                Application.DoEvents();
+
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 if (this.measSetting != null && this.measSetting.GraphSettingList != null)
@@ -901,6 +985,11 @@ namespace RM_3000.Forms.Measurement
             {
                 ShowErrorMessage(ex);
             }
+            finally
+            {
+                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag];
+                Application.DoEvents();
+            }
         }
         /// <summary>
         /// 測定設定ボタンイベント
@@ -911,6 +1000,9 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
+                picSetting.Image = imageList1[(int)picSetting.Tag + 1];
+                Application.DoEvents();
+
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 using (var f = new frmMeasureSetting(this.log) { MeasSetting = this.measSetting })
@@ -926,6 +1018,11 @@ namespace RM_3000.Forms.Measurement
             {
                 ShowErrorMessage(ex);
             }
+            finally
+            {
+                picSetting.Image = imageList1[(int)picSetting.Tag];
+                Application.DoEvents();
+            }
         }
         /// <summary>
         /// 測定パターン読み込みボタンイベント
@@ -936,6 +1033,9 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
+                picReadFile.Image = imageList1[(int)picReadFile.Tag + 1];
+                Application.DoEvents();
+
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 using (var f = new frmMeasurePattern(this.log) { IsReadMode = true })
@@ -962,6 +1062,11 @@ namespace RM_3000.Forms.Measurement
             {
                 ShowErrorMessage(ex);
             }
+            finally
+            {
+                picReadFile.Image = imageList1[(int)picReadFile.Tag];
+                Application.DoEvents();
+            }
         }
         /// <summary>
         /// 測定パターン書き込みボタンイベント
@@ -972,6 +1077,9 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
+                picWriteFile.Image = imageList1[(int)picWriteFile.Tag + 1];
+                Application.DoEvents();
+
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 using (var f = new frmMeasurePattern(this.log))
@@ -986,6 +1094,11 @@ namespace RM_3000.Forms.Measurement
             catch (Exception ex)
             {
                 ShowErrorMessage(ex);
+            }
+            finally
+            {
+                picWriteFile.Image = imageList1[(int)picWriteFile.Tag];
+                Application.DoEvents();
             }
         }
         /// <summary>
@@ -1199,6 +1312,9 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
+                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag + 1];
+                Application.DoEvents();
+
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 if (this.measSetting != null && this.measSetting.GraphSettingList != null)
@@ -1259,6 +1375,11 @@ namespace RM_3000.Forms.Measurement
             {
                 ShowErrorMessage(ex);
             }
+            finally
+            {
+                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag];
+                Application.DoEvents();
+            }
         }
 
         private void dgvGraphDetail_RowLeave(object sender, DataGridViewCellEventArgs e)
@@ -1300,6 +1421,47 @@ namespace RM_3000.Forms.Measurement
             txtGraphTitle.Text = txtGraphTitle.Text.Trim();
         }
 
+        private void picReadFile_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnReadPattern.Enabled)
+                btnReadPattern.PerformClick();
+        }
+
+        private void picWriteFile_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnWritePattern.Enabled)
+                btnWritePattern.PerformClick();
+        }
+
+        private void picSetting_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnMeasSetting.Enabled)
+                btnMeasSetting.PerformClick();
+        }
+
+        private void picRemoveGraph_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnRemoveGraph.Enabled)
+                btnRemoveGraph.PerformClick();
+
+        }
+
+        private void picGraphAxisSetting_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnGraphAxisSetting.Enabled)
+                btnGraphAxisSetting.PerformClick();
+
+        }
 
         //Delete M.Ohno Not Use
         ///// <summary>

@@ -874,8 +874,60 @@ namespace RM_3000.Forms.Measurement
 
         #endregion
 
+        private void txt_Leave(object sender, EventArgs e)
+        {
+            if (((RM_3000.Controls.NumericTextBox)sender).Text == string.Empty)
+            {
+                ((RM_3000.Controls.NumericTextBox)sender).Text = "0";
+            }
+        }
 
+        private void numAverageCount_Leave(object sender, EventArgs e)
+        {
+            if (((RM_3000.Controls.NumericTextBox)sender).Text == string.Empty)
+            {
+                ((RM_3000.Controls.NumericTextBox)sender).Text = "1";
+            }
+        }
 
+        private void numIntervalCount_Leave(object sender, EventArgs e)
+        {
+            if (((RM_3000.Controls.NumericTextBox)sender).Text == string.Empty)
+            {
+                ((RM_3000.Controls.NumericTextBox)sender).Text = "1";
+            }
+        }
 
+        private void numTime2Shot_Shots_Leave(object sender, EventArgs e)
+        {
+            if (((RM_3000.Controls.NumericTextBox)sender).Text == string.Empty)
+            {
+                ((RM_3000.Controls.NumericTextBox)sender).Text = "1";
+            }
+        }
+
+        private void numTime2Shot_Time_Leave(object sender, EventArgs e)
+        {
+            if (((RM_3000.Controls.NumericTextBox)sender).Text == string.Empty)
+            {
+                ((RM_3000.Controls.NumericTextBox)sender).Text = "1";
+            }
+        }
+
+        private void numTime2Time_MeasTime_Leave(object sender, EventArgs e)
+        {
+            if (((RM_3000.Controls.NumericTextBox)sender).Text == string.Empty)
+            {
+                ((RM_3000.Controls.NumericTextBox)sender).Text = "1";
+            }
+        }
+
+        private void numTime2Time_StopTime_Leave(object sender, EventArgs e)
+        {
+            if (((RM_3000.Controls.NumericTextBox)sender).Text == string.Empty)
+            {
+                ((RM_3000.Controls.NumericTextBox)sender).Text = "1";
+            }
+        }
     }
 }

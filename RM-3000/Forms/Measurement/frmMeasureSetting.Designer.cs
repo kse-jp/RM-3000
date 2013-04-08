@@ -108,6 +108,7 @@
             this.txtSampling.TabIndex = 1;
             this.txtSampling.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSampling.TextChanged += new System.EventHandler(this.txtSampling_TextChanged);
+            this.txtSampling.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // txtMeasureTime
             // 
@@ -124,6 +125,7 @@
             this.txtMeasureTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMeasureTime.Visible = false;
             this.txtMeasureTime.TextChanged += new System.EventHandler(this.txtMeasureTime_TextChanged);
+            this.txtMeasureTime.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // lblUnitSecond
             // 
@@ -268,6 +270,7 @@
             this.numTime2Time_StopTime.TabIndex = 16;
             this.numTime2Time_StopTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Time_StopTime.TextChanged += new System.EventHandler(this.numTime2Time_StopTime_TextChanged);
+            this.numTime2Time_StopTime.Leave += new System.EventHandler(this.numTime2Time_StopTime_Leave);
             // 
             // rdoINT_Time2Time
             // 
@@ -296,6 +299,7 @@
             this.numTime2Time_MeasTime.TabIndex = 14;
             this.numTime2Time_MeasTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Time_MeasTime.TextChanged += new System.EventHandler(this.numTime2Time_MeasTime_TextChanged);
+            this.numTime2Time_MeasTime.Leave += new System.EventHandler(this.numTime2Time_MeasTime_Leave);
             // 
             // label6
             // 
@@ -385,6 +389,7 @@
             this.numTime2Shot_Shots.TabIndex = 12;
             this.numTime2Shot_Shots.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Shot_Shots.TextChanged += new System.EventHandler(this.numTime2Shot_Shots_TextChanged);
+            this.numTime2Shot_Shots.Leave += new System.EventHandler(this.numTime2Shot_Shots_Leave);
             // 
             // label4
             // 
@@ -411,6 +416,7 @@
             this.numTime2Shot_Time.TabIndex = 10;
             this.numTime2Shot_Time.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numTime2Shot_Time.TextChanged += new System.EventHandler(this.numTime2Shot_Time_TextChanged);
+            this.numTime2Shot_Time.Leave += new System.EventHandler(this.numTime2Shot_Time_Leave);
             // 
             // label3
             // 
@@ -448,6 +454,7 @@
             this.numAverageCount.TabIndex = 8;
             this.numAverageCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numAverageCount.TextChanged += new System.EventHandler(this.numAverageCount_TextChanged);
+            this.numAverageCount.Leave += new System.EventHandler(this.numAverageCount_Leave);
             // 
             // numIntervalCount
             // 
@@ -463,6 +470,7 @@
             this.numIntervalCount.TabIndex = 6;
             this.numIntervalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numIntervalCount.TextChanged += new System.EventHandler(this.numIntervalCount_TextChanged);
+            this.numIntervalCount.Leave += new System.EventHandler(this.numIntervalCount_Leave);
             // 
             // label1
             // 

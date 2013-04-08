@@ -559,10 +559,13 @@ namespace RM_3000
                 Graphics gc = Graphics.FromImage(image);
 
                 Graphics g = picStatusLED.CreateGraphics();
-                
-                gc.DrawString(SystemSetting.HardInfoStruct.RestTimeOFWarmingUp, new Font("Merio UI", 12f), Brushes.White, 30, picStatusLED.Height - 30);
-                //g.DrawString(AppResource.GetString("MSG_WARMINGUP"), new Font("Merio UI", 12f), Brushes.White, 10, picStatusLED.Height - 20);
 
+                //ウォームアップ中のみ、文字表示
+                if (SystemSetting.HardInfoStruct.IsWarmingUp)
+                {
+                    gc.DrawString(SystemSetting.HardInfoStruct.RestTimeOFWarmingUp, new Font("Merio UI", 12f), Brushes.White, 30, picStatusLED.Height - 30);
+                    //g.DrawString(AppResource.GetString("MSG_WARMINGUP"), new Font("Merio UI", 12f), Brushes.White, 10, picStatusLED.Height - 20);
+                }
                 g.DrawImage(image, 0, 0);
 
                 image.Dispose();

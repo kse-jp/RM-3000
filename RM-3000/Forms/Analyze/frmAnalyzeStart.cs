@@ -127,6 +127,25 @@ namespace RM_3000.Forms.Analyze
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
+            //Remove Graph Button
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            //Graph Axis Setting Button
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_OFF.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_ON.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+
         }
 
         /// <summary>
@@ -139,6 +158,12 @@ namespace RM_3000.Forms.Analyze
 
             picReadFile.Image = imageList1[2];
             picReadFile.Tag = 2;
+
+            picRemoveGraph.Image = imageList1[4];
+            picRemoveGraph.Tag = 4;
+
+            picGraphAxisSetting.Image = imageList1[6];
+            picGraphAxisSetting.Tag = 6;
         }
 
         #endregion
@@ -984,6 +1009,9 @@ namespace RM_3000.Forms.Analyze
         {
             try
             {
+                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag + 1];
+                Application.DoEvents();
+
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 if (this.measSetting != null && this.measSetting.GraphSettingList != null)
@@ -1007,6 +1035,11 @@ namespace RM_3000.Forms.Analyze
             catch (Exception ex)
             {
                 ShowErrorMessage(ex);
+            }
+            finally
+            {
+                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag];
+                Application.DoEvents();
             }
         }
         /// <summary>
@@ -1328,7 +1361,7 @@ namespace RM_3000.Forms.Analyze
                 if (mainForm != null)
                 {
                     mainForm.Enabled = true;
-                    mainForm.TopMost = true;
+                    mainForm.BringToFront();
                 }
                 Application.DoEvents();
             }
@@ -1399,6 +1432,9 @@ namespace RM_3000.Forms.Analyze
         {
             try
             {
+                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag + 1];
+                Application.DoEvents();
+
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 if (this.measSetting != null && this.measSetting.GraphSettingList != null)
@@ -1455,76 +1491,13 @@ namespace RM_3000.Forms.Analyze
             {
                 ShowErrorMessage(ex);
             }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // 入力値のチェック
-            var index = int.Parse(txtCsvStartIndex.Text);
-            if (index < 0)
+            finally
             {
-                ShowErrorMessage(AppResource.GetString("ERROR_INVALID_CSV_INDEX"));
-                return;
-            }
-            var count = int.Parse(txtCsvCount.Text);
-            if (count <= 0)
-            {
-                ShowErrorMessage(AppResource.GetString("ERROR_INVALID_CSV_LENGTH"));
-                return;
-            }
-
-            List<SampleData> sampleList = null;
-            List<CalcData> calcList = null;
-
-            if (this.analyzeData.MeasureSetting.Mode == (int)ModeType.MODE2)
-            {
-                this.analyzeData.MeasureData.GetRange(index, 1, out sampleList, out calcList);
-            }
-            else
-            {
-                this.analyzeData.MeasureData.GetRange(index, count, out sampleList, out calcList);
+                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag];
+                Application.DoEvents();
             }
         }
-        #endregion
-
-        /// <summary>
-        /// CSV出力アイコンクリック
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picOutputCSV_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnOutputCSV.Enabled)
-                btnOutputCSV.PerformClick();
-        }
-
-        private void frmAnalyzeStart_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Close Data
-            if (this.analyzeData != null)
-                this.analyzeData.CloseData();
-
-        }
-
-        /// <summary>
-        /// ReadFileアイコンクリック
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picReadFile_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnRead.Enabled)
-                btnRead.PerformClick();
-        }
-
+        
         private void dgvGraphDetail_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && this.dgvGraphDetail.CurrentCell.RowIndex != e.RowIndex)
@@ -1557,6 +1530,70 @@ namespace RM_3000.Forms.Analyze
         {
             this.txtGraphTitle.Text = this.txtGraphTitle.Text.Trim();
         }
+
+        private void frmAnalyzeStart_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Close Data
+            if (this.analyzeData != null)
+                this.analyzeData.CloseData();
+
+        }
+
+        /// <summary>
+        /// CSV出力アイコンクリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void picOutputCSV_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnOutputCSV.Enabled)
+                btnOutputCSV.PerformClick();
+        }
+
+        /// <summary>
+        /// ReadFileアイコンクリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void picReadFile_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnRead.Enabled)
+                btnRead.PerformClick();
+        }
+
+        /// <summary>
+        /// RemoveGraphアイコンクリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void picRemoveGraph_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnRemoveGraph.Enabled)
+                btnRemoveGraph.PerformClick();
+        }
+
+        /// <summary>
+        /// GraphAxisSettingアイコンクリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void picGraphAxisSetting_Click(object sender, EventArgs e)
+        {
+            if (cmbColor.Visible)
+            { cmbColor.Visible = false; }
+            if (btnGraphAxisSetting.Enabled)
+                btnGraphAxisSetting.PerformClick();
+        }
+
+        #endregion
+
+
 
     }
 }

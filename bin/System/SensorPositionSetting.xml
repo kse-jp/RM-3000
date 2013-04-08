@@ -19,11 +19,11 @@
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
-      <ChNo>2</ChNo>
-      <X>1885</X>
-      <Z>1175</Z>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
       <Way>INVAILED</Way>
-      <Target>UPPER_PRESS</Target>
+      <Target>INVAILED</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>

@@ -3,16 +3,16 @@
   <IsUpdated>false</IsUpdated>
   <Mode>1</Mode>
   <MeasTagList>
-    <int>-1</int>
+    <int>1</int>
     <int>2</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
+    <int>3</int>
+    <int>4</int>
+    <int>5</int>
+    <int>6</int>
+    <int>7</int>
+    <int>8</int>
+    <int>9</int>
+    <int>10</int>
   </MeasTagList>
   <GraphSettingList>
     <GraphSetting>
@@ -30,19 +30,19 @@
       <DistanceX_Mode2>10</DistanceX_Mode2>
       <DistanceX_Mode3>100</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
-      <MinimumY_Mode2>1000</MinimumY_Mode2>
+      <MinimumY_Mode2>0</MinimumY_Mode2>
       <MinimumY_Mode3>0</MinimumY_Mode3>
       <MaxY_Mode1>100000</MaxY_Mode1>
-      <MaxY_Mode2>3000</MaxY_Mode2>
+      <MaxY_Mode2>10000</MaxY_Mode2>
       <MaxY_Mode3>10000</MaxY_Mode3>
       <DistanceY_Mode1>1</DistanceY_Mode1>
-      <DistanceY_Mode2>200</DistanceY_Mode2>
+      <DistanceY_Mode2>5000</DistanceY_Mode2>
       <DistanceY_Mode3>2000</DistanceY_Mode3>
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>1</GraphTagNo>
-          <Color>HotPink</Color>
+          <GraphTagNo>2</GraphTagNo>
+          <Color>Red</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
@@ -114,7 +114,7 @@
       <MaxX_Mode2>240</MaxX_Mode2>
       <MaxX_Mode3>1000</MaxX_Mode3>
       <DistanceX_Mode1>512</DistanceX_Mode1>
-      <DistanceX_Mode2>24</DistanceX_Mode2>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
       <DistanceX_Mode3>100</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
@@ -201,7 +201,7 @@
       <MaxX_Mode2>240</MaxX_Mode2>
       <MaxX_Mode3>1000</MaxX_Mode3>
       <DistanceX_Mode1>512</DistanceX_Mode1>
-      <DistanceX_Mode2>24</DistanceX_Mode2>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
       <DistanceX_Mode3>100</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
@@ -288,7 +288,7 @@
       <MaxX_Mode2>240</MaxX_Mode2>
       <MaxX_Mode3>1000</MaxX_Mode3>
       <DistanceX_Mode1>512</DistanceX_Mode1>
-      <DistanceX_Mode2>24</DistanceX_Mode2>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
       <DistanceX_Mode3>100</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
@@ -375,7 +375,7 @@
       <MaxX_Mode2>240</MaxX_Mode2>
       <MaxX_Mode3>1000</MaxX_Mode3>
       <DistanceX_Mode1>512</DistanceX_Mode1>
-      <DistanceX_Mode2>24</DistanceX_Mode2>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
       <DistanceX_Mode3>100</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
@@ -462,7 +462,7 @@
       <MaxX_Mode2>240</MaxX_Mode2>
       <MaxX_Mode3>1000</MaxX_Mode3>
       <DistanceX_Mode1>512</DistanceX_Mode1>
-      <DistanceX_Mode2>24</DistanceX_Mode2>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
       <DistanceX_Mode3>100</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>

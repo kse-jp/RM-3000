@@ -413,7 +413,7 @@ namespace RM_3000.Forms.Settings
                                     }
                                 }
                             }
-                            this.chSetting = pt.ChannelsSetting;
+                            //this.chSetting = pt.ChannelsSetting;
                             LoadBoardDataByChannelType();
                         }
                         this.dirtyFlag = true;

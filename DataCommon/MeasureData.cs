@@ -596,7 +596,10 @@ namespace DataCommon
 
             //Mode2の場合、角度計算を行う。
             if (sampleDatas.HeaderData.Mode == ModeType.MODE2)
+            {
                 CalculateDegrees();
+                System.Threading.Thread.Sleep(200);
+            }
 
             //初回取得
             int tmpcount = 0;

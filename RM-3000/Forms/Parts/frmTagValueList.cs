@@ -166,9 +166,24 @@ namespace RM_3000.Forms.Parts
                     {
                         this.dataValueLabels[index].Text = ((Value_MaxMin)chData.DataValues).MaxValue.ToString(tagPoint[chData.Position]);
 
-                        Label val2_Lable = (Label)pnlMain.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
+                        if (isMeasure)
+                        {
+                            if (pnlMain.Controls.ContainsKey(this.dataValueLabels[index].Name + "-2"))
+                            {
+                                Label val2_Lable = (Label)pnlMain.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
 
-                        val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                                val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                            }
+                        }
+                        else
+                        {
+                            if (tabPage1.Controls.ContainsKey(this.dataValueLabels[index].Name + "-2"))
+                            {
+                                Label val2_Lable = (Label)tabPage1.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
+
+                                val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                            }
+                        }
                     }
                     else if (t == typeof(Value_Mode2))
                     {
@@ -245,9 +260,25 @@ namespace RM_3000.Forms.Parts
                     {
                         this.dataValueLabelsAnl[index].Text = ((Value_MaxMin)chData.DataValues).MaxValue.ToString(tagPoint[posPoint]);
 
-                        Label val2_Lable = (Label)pnlAnalysis.Controls.Find(this.dataValueLabelsAnl[index].Name + "-2", false)[0];
+                        if (isMeasure)
+                        {
+                            if (pnlAnalysis.Controls.ContainsKey(this.dataValueLabelsAnl[index].Name + "-2"))
+                            {
+                                Label val2_Lable = (Label)pnlAnalysis.Controls.Find(this.dataValueLabelsAnl[index].Name + "-2", false)[0];
 
-                        val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[posPoint]);
+                                val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[posPoint]);
+                            }
+                        }
+                        else
+                        {
+                            if (tabPage2.Controls.ContainsKey(this.dataValueLabelsAnl[index].Name + "-2"))
+                            {
+                                Label val2_Lable = (Label)tabPage2.Controls.Find(this.dataValueLabelsAnl[index].Name + "-2", false)[0];
+
+                                val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[posPoint]);
+                            }
+
+                        }
                     }
                     else if (t == typeof(Value_Mode2))
                     {

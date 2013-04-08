@@ -6,7 +6,7 @@
       <IsUpdated>true</IsUpdated>
       <TagNo>1</TagNo>
       <TagKind>0</TagKind>
-      <Point>3</Point>
+      <Point>1</Point>
       <Expression />
       <StaticZero>27452</StaticZero>
       <TagNameE>CH1</TagNameE>
@@ -20,7 +20,7 @@
       <IsUpdated>true</IsUpdated>
       <TagNo>2</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
       <StaticZero>1226.4009243212016175621028307</StaticZero>
       <TagNameE>CH2</TagNameE>
@@ -672,7 +672,7 @@
       <IsUpdated>true</IsUpdated>
       <TagNo>70</TagNo>
       <TagKind>2</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression>@1[CH1]-@3[CH3]</Expression>
       <StaticZero>0</StaticZero>
       <TagNameE>calc1</TagNameE>

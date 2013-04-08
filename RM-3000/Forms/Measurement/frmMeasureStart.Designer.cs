@@ -46,13 +46,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.picSetting = new System.Windows.Forms.PictureBox();
+            this.btnMeasSetting = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbMeasMode = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.grpGraph = new System.Windows.Forms.GroupBox();
+            this.picRemoveGraph = new System.Windows.Forms.PictureBox();
             this.pnlGraph = new System.Windows.Forms.Panel();
             this.dgvGraph = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.picGraphAxisSetting = new System.Windows.Forms.PictureBox();
             this.btnGraphAxisSetting = new System.Windows.Forms.Button();
             this.pnlGraphDetail = new System.Windows.Forms.Panel();
             this.cmbColor = new RM_3000.Classes.ColorComboBox();
@@ -60,12 +67,9 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRemoveGraph = new System.Windows.Forms.Button();
             this.txtGraphTitle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnMeasSetting = new System.Windows.Forms.Button();
-            this.cmbMeasMode = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnRemoveGraph = new System.Windows.Forms.Button();
             this.btnAddGraphTag = new System.Windows.Forms.Button();
             this.btnRemoveGraphTag = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -77,6 +81,8 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picWriteFile = new System.Windows.Forms.PictureBox();
+            this.picReadFile = new System.Windows.Forms.PictureBox();
             this.btnWritePattern = new System.Windows.Forms.Button();
             this.btnReadPattern = new System.Windows.Forms.Button();
             this.lblPatternFile = new System.Windows.Forms.Label();
@@ -86,25 +92,29 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSetting)).BeginInit();
             this.grpGraph.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picRemoveGraph)).BeginInit();
             this.pnlGraph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraphAxisSetting)).BeginInit();
             this.pnlGraphDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraphDetail)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMeasTagList)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picWriteFile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picReadFile)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.grpGraph);
-            this.panel2.Controls.Add(this.btnMeasSetting);
-            this.panel2.Controls.Add(this.cmbMeasMode);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btnAddGraphTag);
             this.panel2.Controls.Add(this.btnRemoveGraphTag);
             this.panel2.Controls.Add(this.groupBox3);
@@ -112,8 +122,70 @@
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1176, 483);
+            this.panel2.Size = new System.Drawing.Size(1176, 580);
             this.panel2.TabIndex = 7;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.picSetting);
+            this.groupBox2.Controls.Add(this.btnMeasSetting);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cmbMeasMode);
+            this.groupBox2.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.groupBox2.Location = new System.Drawing.Point(344, 38);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(315, 173);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "TXT_MEASURE_SETTING";
+            // 
+            // picSetting
+            // 
+            this.picSetting.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picSetting.Location = new System.Drawing.Point(214, 60);
+            this.picSetting.Name = "picSetting";
+            this.picSetting.Size = new System.Drawing.Size(95, 95);
+            this.picSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSetting.TabIndex = 28;
+            this.picSetting.TabStop = false;
+            this.picSetting.Click += new System.EventHandler(this.picSetting_Click);
+            // 
+            // btnMeasSetting
+            // 
+            this.btnMeasSetting.Location = new System.Drawing.Point(231, 91);
+            this.btnMeasSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMeasSetting.Name = "btnMeasSetting";
+            this.btnMeasSetting.Size = new System.Drawing.Size(64, 64);
+            this.btnMeasSetting.TabIndex = 3;
+            this.btnMeasSetting.Text = "TXT_MEASURE_SETTING";
+            this.btnMeasSetting.UseVisualStyleBackColor = true;
+            this.btnMeasSetting.Click += new System.EventHandler(this.btnMeasSetting_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.label2.Location = new System.Drawing.Point(19, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 23);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "TXT_MODE";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbMeasMode
+            // 
+            this.cmbMeasMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMeasMode.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            this.cmbMeasMode.FormattingEnabled = true;
+            this.cmbMeasMode.Items.AddRange(new object[] {
+            "モード１",
+            "モード２",
+            "モード３"});
+            this.cmbMeasMode.Location = new System.Drawing.Point(22, 60);
+            this.cmbMeasMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMeasMode.Name = "cmbMeasMode";
+            this.cmbMeasMode.Size = new System.Drawing.Size(186, 23);
+            this.cmbMeasMode.TabIndex = 13;
+            this.cmbMeasMode.SelectedIndexChanged += new System.EventHandler(this.cmbMeasMode_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -127,17 +199,30 @@
             // 
             // grpGraph
             // 
+            this.grpGraph.Controls.Add(this.picRemoveGraph);
             this.grpGraph.Controls.Add(this.pnlGraph);
             this.grpGraph.Controls.Add(this.groupBox4);
+            this.grpGraph.Controls.Add(this.btnRemoveGraph);
             this.grpGraph.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.grpGraph.Location = new System.Drawing.Point(739, 2);
+            this.grpGraph.Location = new System.Drawing.Point(735, 5);
             this.grpGraph.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpGraph.Name = "grpGraph";
             this.grpGraph.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpGraph.Size = new System.Drawing.Size(430, 474);
+            this.grpGraph.Size = new System.Drawing.Size(430, 569);
             this.grpGraph.TabIndex = 14;
             this.grpGraph.TabStop = false;
             this.grpGraph.Text = "TXT_GRAPH_SETTING";
+            // 
+            // picRemoveGraph
+            // 
+            this.picRemoveGraph.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picRemoveGraph.Location = new System.Drawing.Point(359, 113);
+            this.picRemoveGraph.Name = "picRemoveGraph";
+            this.picRemoveGraph.Size = new System.Drawing.Size(64, 64);
+            this.picRemoveGraph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRemoveGraph.TabIndex = 29;
+            this.picRemoveGraph.TabStop = false;
+            this.picRemoveGraph.Click += new System.EventHandler(this.picRemoveGraph_Click);
             // 
             // pnlGraph
             // 
@@ -146,7 +231,7 @@
             this.pnlGraph.Location = new System.Drawing.Point(13, 22);
             this.pnlGraph.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlGraph.Name = "pnlGraph";
-            this.pnlGraph.Size = new System.Drawing.Size(405, 130);
+            this.pnlGraph.Size = new System.Drawing.Size(341, 156);
             this.pnlGraph.TabIndex = 6;
             // 
             // dgvGraph
@@ -174,7 +259,7 @@
             this.dgvGraph.RowHeadersVisible = false;
             this.dgvGraph.RowTemplate.Height = 21;
             this.dgvGraph.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGraph.Size = new System.Drawing.Size(405, 130);
+            this.dgvGraph.Size = new System.Drawing.Size(341, 156);
             this.dgvGraph.TabIndex = 3;
             this.dgvGraph.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGraph_RowEnter);
             this.dgvGraph.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGraph_RowLeave);
@@ -184,7 +269,7 @@
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn1.FillWeight = 10F;
+            this.dataGridViewTextBoxColumn1.FillWeight = 15F;
             this.dataGridViewTextBoxColumn1.HeaderText = "No";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -194,34 +279,46 @@
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn2.FillWeight = 85F;
             this.dataGridViewTextBoxColumn2.HeaderText = "TXT_GRAPH_TITLE";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.picGraphAxisSetting);
             this.groupBox4.Controls.Add(this.btnGraphAxisSetting);
             this.groupBox4.Controls.Add(this.pnlGraphDetail);
-            this.groupBox4.Controls.Add(this.btnRemoveGraph);
             this.groupBox4.Controls.Add(this.txtGraphTitle);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.groupBox4.Location = new System.Drawing.Point(6, 158);
+            this.groupBox4.Location = new System.Drawing.Point(0, 190);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(418, 311);
+            this.groupBox4.Size = new System.Drawing.Size(431, 379);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "TXT_TAG_SETTING";
             // 
+            // picGraphAxisSetting
+            // 
+            this.picGraphAxisSetting.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picGraphAxisSetting.Location = new System.Drawing.Point(359, 12);
+            this.picGraphAxisSetting.Name = "picGraphAxisSetting";
+            this.picGraphAxisSetting.Size = new System.Drawing.Size(65, 64);
+            this.picGraphAxisSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGraphAxisSetting.TabIndex = 30;
+            this.picGraphAxisSetting.TabStop = false;
+            this.picGraphAxisSetting.Click += new System.EventHandler(this.picGraphAxisSetting_Click);
+            // 
             // btnGraphAxisSetting
             // 
             this.btnGraphAxisSetting.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnGraphAxisSetting.Location = new System.Drawing.Point(312, 33);
+            this.btnGraphAxisSetting.Location = new System.Drawing.Point(361, 11);
             this.btnGraphAxisSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraphAxisSetting.Name = "btnGraphAxisSetting";
-            this.btnGraphAxisSetting.Size = new System.Drawing.Size(100, 25);
+            this.btnGraphAxisSetting.Size = new System.Drawing.Size(64, 64);
             this.btnGraphAxisSetting.TabIndex = 10;
             this.btnGraphAxisSetting.Text = "TXT_GRAPH_SETTING";
             this.btnGraphAxisSetting.UseVisualStyleBackColor = true;
@@ -232,10 +329,10 @@
             this.pnlGraphDetail.Controls.Add(this.cmbColor);
             this.pnlGraphDetail.Controls.Add(this.dgvGraphDetail);
             this.pnlGraphDetail.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.pnlGraphDetail.Location = new System.Drawing.Point(7, 63);
+            this.pnlGraphDetail.Location = new System.Drawing.Point(7, 79);
             this.pnlGraphDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlGraphDetail.Name = "pnlGraphDetail";
-            this.pnlGraphDetail.Size = new System.Drawing.Size(405, 242);
+            this.pnlGraphDetail.Size = new System.Drawing.Size(418, 293);
             this.pnlGraphDetail.TabIndex = 9;
             // 
             // cmbColor
@@ -5921,7 +6018,7 @@
             this.dgvGraphDetail.RowHeadersVisible = false;
             this.dgvGraphDetail.RowTemplate.Height = 21;
             this.dgvGraphDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGraphDetail.Size = new System.Drawing.Size(405, 242);
+            this.dgvGraphDetail.Size = new System.Drawing.Size(418, 293);
             this.dgvGraphDetail.TabIndex = 4;
             this.dgvGraphDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGraphDetail_CellClick);
             this.dgvGraphDetail.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGraphDetail_CellMouseLeave);
@@ -5958,22 +6055,10 @@
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
-            // btnRemoveGraph
-            // 
-            this.btnRemoveGraph.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnRemoveGraph.Location = new System.Drawing.Point(214, 0);
-            this.btnRemoveGraph.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRemoveGraph.Name = "btnRemoveGraph";
-            this.btnRemoveGraph.Size = new System.Drawing.Size(132, 25);
-            this.btnRemoveGraph.TabIndex = 3;
-            this.btnRemoveGraph.Text = "TXT_GRAPH_DELETE";
-            this.btnRemoveGraph.UseVisualStyleBackColor = true;
-            this.btnRemoveGraph.Click += new System.EventHandler(this.btnRemoveGraph_Click);
-            // 
             // txtGraphTitle
             // 
             this.txtGraphTitle.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtGraphTitle.Location = new System.Drawing.Point(11, 36);
+            this.txtGraphTitle.Location = new System.Drawing.Point(11, 44);
             this.txtGraphTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGraphTitle.MaxLength = 100;
             this.txtGraphTitle.Name = "txtGraphTitle";
@@ -5986,53 +6071,30 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(8, 18);
+            this.label3.Location = new System.Drawing.Point(8, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "TXT_GRAPH_TITLE";
             // 
-            // btnMeasSetting
+            // btnRemoveGraph
             // 
-            this.btnMeasSetting.Location = new System.Drawing.Point(587, 56);
-            this.btnMeasSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMeasSetting.Name = "btnMeasSetting";
-            this.btnMeasSetting.Size = new System.Drawing.Size(75, 25);
-            this.btnMeasSetting.TabIndex = 3;
-            this.btnMeasSetting.Text = "TXT_MEASURE_SETTING";
-            this.btnMeasSetting.UseVisualStyleBackColor = true;
-            this.btnMeasSetting.Click += new System.EventHandler(this.btnMeasSetting_Click);
-            // 
-            // cmbMeasMode
-            // 
-            this.cmbMeasMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMeasMode.FormattingEnabled = true;
-            this.cmbMeasMode.Items.AddRange(new object[] {
-            "モード１",
-            "モード２",
-            "モード３"});
-            this.cmbMeasMode.Location = new System.Drawing.Point(432, 58);
-            this.cmbMeasMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbMeasMode.Name = "cmbMeasMode";
-            this.cmbMeasMode.Size = new System.Drawing.Size(149, 23);
-            this.cmbMeasMode.TabIndex = 13;
-            this.cmbMeasMode.SelectedIndexChanged += new System.EventHandler(this.cmbMeasMode_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(352, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 15);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "TXT_MODE";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemoveGraph.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnRemoveGraph.Location = new System.Drawing.Point(360, 114);
+            this.btnRemoveGraph.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRemoveGraph.Name = "btnRemoveGraph";
+            this.btnRemoveGraph.Size = new System.Drawing.Size(64, 64);
+            this.btnRemoveGraph.TabIndex = 3;
+            this.btnRemoveGraph.Text = "TXT_GRAPH_DELETE";
+            this.btnRemoveGraph.UseVisualStyleBackColor = true;
+            this.btnRemoveGraph.Click += new System.EventHandler(this.btnRemoveGraph_Click);
             // 
             // btnAddGraphTag
             // 
-            this.btnAddGraphTag.Location = new System.Drawing.Point(676, 311);
+            this.btnAddGraphTag.Location = new System.Drawing.Point(680, 387);
             this.btnAddGraphTag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddGraphTag.Name = "btnAddGraphTag";
-            this.btnAddGraphTag.Size = new System.Drawing.Size(45, 32);
+            this.btnAddGraphTag.Size = new System.Drawing.Size(50, 50);
             this.btnAddGraphTag.TabIndex = 10;
             this.btnAddGraphTag.Text = "＞＞";
             this.btnAddGraphTag.UseVisualStyleBackColor = true;
@@ -6040,10 +6102,10 @@
             // 
             // btnRemoveGraphTag
             // 
-            this.btnRemoveGraphTag.Location = new System.Drawing.Point(676, 363);
+            this.btnRemoveGraphTag.Location = new System.Drawing.Point(680, 301);
             this.btnRemoveGraphTag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveGraphTag.Name = "btnRemoveGraphTag";
-            this.btnRemoveGraphTag.Size = new System.Drawing.Size(45, 32);
+            this.btnRemoveGraphTag.Size = new System.Drawing.Size(50, 50);
             this.btnRemoveGraphTag.TabIndex = 11;
             this.btnRemoveGraphTag.Text = "＜＜";
             this.btnRemoveGraphTag.UseVisualStyleBackColor = true;
@@ -6053,11 +6115,11 @@
             // 
             this.groupBox3.Controls.Add(this.panel1);
             this.groupBox3.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 161);
+            this.groupBox3.Location = new System.Drawing.Point(7, 224);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(667, 316);
+            this.groupBox3.Size = new System.Drawing.Size(667, 343);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "TXT_TAG_SETTING";
@@ -6065,11 +6127,12 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvMeasTagList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.panel1.Location = new System.Drawing.Point(6, 18);
+            this.panel1.Location = new System.Drawing.Point(3, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 288);
+            this.panel1.Size = new System.Drawing.Size(661, 318);
             this.panel1.TabIndex = 3;
             // 
             // dgvMeasTagList
@@ -6092,14 +6155,15 @@
             this.Column2,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dgvMeasTagList.Location = new System.Drawing.Point(1, 0);
+            this.dgvMeasTagList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMeasTagList.Location = new System.Drawing.Point(0, 0);
             this.dgvMeasTagList.MultiSelect = false;
             this.dgvMeasTagList.Name = "dgvMeasTagList";
             this.dgvMeasTagList.ReadOnly = true;
             this.dgvMeasTagList.RowHeadersVisible = false;
             this.dgvMeasTagList.RowTemplate.Height = 21;
             this.dgvMeasTagList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMeasTagList.Size = new System.Drawing.Size(652, 288);
+            this.dgvMeasTagList.Size = new System.Drawing.Size(661, 318);
             this.dgvMeasTagList.TabIndex = 2;
             this.dgvMeasTagList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMeasTagList_CellContentClick);
             // 
@@ -6155,6 +6219,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picWriteFile);
+            this.groupBox1.Controls.Add(this.picReadFile);
             this.groupBox1.Controls.Add(this.btnWritePattern);
             this.groupBox1.Controls.Add(this.btnReadPattern);
             this.groupBox1.Controls.Add(this.lblPatternFile);
@@ -6163,18 +6229,40 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(334, 75);
+            this.groupBox1.Size = new System.Drawing.Size(334, 173);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TXT_PATTERN_FILE_NAME";
             // 
+            // picWriteFile
+            // 
+            this.picWriteFile.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picWriteFile.Location = new System.Drawing.Point(230, 60);
+            this.picWriteFile.Name = "picWriteFile";
+            this.picWriteFile.Size = new System.Drawing.Size(95, 95);
+            this.picWriteFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picWriteFile.TabIndex = 30;
+            this.picWriteFile.TabStop = false;
+            this.picWriteFile.Click += new System.EventHandler(this.picWriteFile_Click);
+            // 
+            // picReadFile
+            // 
+            this.picReadFile.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picReadFile.Location = new System.Drawing.Point(121, 60);
+            this.picReadFile.Name = "picReadFile";
+            this.picReadFile.Size = new System.Drawing.Size(95, 95);
+            this.picReadFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picReadFile.TabIndex = 29;
+            this.picReadFile.TabStop = false;
+            this.picReadFile.Click += new System.EventHandler(this.picReadFile_Click);
+            // 
             // btnWritePattern
             // 
             this.btnWritePattern.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnWritePattern.Location = new System.Drawing.Point(251, 45);
+            this.btnWritePattern.Location = new System.Drawing.Point(242, 79);
             this.btnWritePattern.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnWritePattern.Name = "btnWritePattern";
-            this.btnWritePattern.Size = new System.Drawing.Size(75, 25);
+            this.btnWritePattern.Size = new System.Drawing.Size(64, 64);
             this.btnWritePattern.TabIndex = 2;
             this.btnWritePattern.Text = "TXT_WRITE";
             this.btnWritePattern.UseVisualStyleBackColor = true;
@@ -6183,10 +6271,10 @@
             // btnReadPattern
             // 
             this.btnReadPattern.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnReadPattern.Location = new System.Drawing.Point(170, 45);
+            this.btnReadPattern.Location = new System.Drawing.Point(137, 91);
             this.btnReadPattern.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReadPattern.Name = "btnReadPattern";
-            this.btnReadPattern.Size = new System.Drawing.Size(75, 25);
+            this.btnReadPattern.Size = new System.Drawing.Size(64, 64);
             this.btnReadPattern.TabIndex = 1;
             this.btnReadPattern.Text = "TXT_READ";
             this.btnReadPattern.UseVisualStyleBackColor = true;
@@ -6196,7 +6284,7 @@
             // 
             this.lblPatternFile.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPatternFile.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblPatternFile.Location = new System.Drawing.Point(7, 22);
+            this.lblPatternFile.Location = new System.Drawing.Point(6, 35);
             this.lblPatternFile.Name = "lblPatternFile";
             this.lblPatternFile.Size = new System.Drawing.Size(319, 20);
             this.lblPatternFile.TabIndex = 0;
@@ -6204,7 +6292,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnStart.Location = new System.Drawing.Point(1036, 491);
+            this.btnStart.Location = new System.Drawing.Point(1036, 586);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(132, 33);
@@ -6261,9 +6349,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1180, 525);
-            this.Controls.Add(this.btnStart);
+            this.ClientSize = new System.Drawing.Size(1180, 630);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnStart);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMeasureStart";
@@ -6273,17 +6361,23 @@
             this.Shown += new System.EventHandler(this.frmMeasureStart_Shown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picSetting)).EndInit();
             this.grpGraph.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picRemoveGraph)).EndInit();
             this.pnlGraph.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraphAxisSetting)).EndInit();
             this.pnlGraphDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraphDetail)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMeasTagList)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picWriteFile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picReadFile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6325,11 +6419,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox picWriteFile;
+        private System.Windows.Forms.PictureBox picReadFile;
+        private System.Windows.Forms.PictureBox picSetting;
+        private System.Windows.Forms.PictureBox picRemoveGraph;
+        private System.Windows.Forms.PictureBox picGraphAxisSetting;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 
     }
 }

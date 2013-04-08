@@ -210,6 +210,8 @@ namespace RM_3000.Sequences
                 //レスポンスがなければ通信NGとして通信終了状態とする。
                 if (response_ST == null)
                 {
+                    SystemSetting.HardInfoStruct.IsWarmingUp = false;
+
                     bCommunicated = false;
                     bGetBoardInfo = false;
                     bGetCurve = false;

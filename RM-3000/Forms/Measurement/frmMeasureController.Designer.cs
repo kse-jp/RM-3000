@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblMeasureTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.picbtnExit = new System.Windows.Forms.PictureBox();
             this.picbtnStop = new System.Windows.Forms.PictureBox();
             this.picbtnStart = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbtnExit)).BeginInit();
@@ -103,7 +103,7 @@
             this.lblUnit.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUnit.Location = new System.Drawing.Point(628, 0);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(75, 27);
+            this.lblUnit.Size = new System.Drawing.Size(75, 22);
             this.lblUnit.TabIndex = 6;
             this.lblUnit.Text = "---";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,15 +153,27 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 67);
+            this.panel2.Size = new System.Drawing.Size(1000, 80);
             this.panel2.TabIndex = 2;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStatus.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblStatus.Location = new System.Drawing.Point(889, 30);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(98, 39);
+            this.lblStatus.TabIndex = 9;
+            this.lblStatus.Text = "TXT_STOP";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picbtnExit
             // 
-            this.picbtnExit.Location = new System.Drawing.Point(187, 23);
+            this.picbtnExit.Location = new System.Drawing.Point(188, 25);
             this.picbtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbtnExit.Name = "picbtnExit";
-            this.picbtnExit.Size = new System.Drawing.Size(48, 40);
+            this.picbtnExit.Size = new System.Drawing.Size(50, 50);
             this.picbtnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picbtnExit.TabIndex = 8;
             this.picbtnExit.TabStop = false;
@@ -169,10 +181,10 @@
             // 
             // picbtnStop
             // 
-            this.picbtnStop.Location = new System.Drawing.Point(118, 23);
+            this.picbtnStop.Location = new System.Drawing.Point(116, 25);
             this.picbtnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbtnStop.Name = "picbtnStop";
-            this.picbtnStop.Size = new System.Drawing.Size(48, 40);
+            this.picbtnStop.Size = new System.Drawing.Size(50, 50);
             this.picbtnStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picbtnStop.TabIndex = 7;
             this.picbtnStop.TabStop = false;
@@ -180,10 +192,10 @@
             // 
             // picbtnStart
             // 
-            this.picbtnStart.Location = new System.Drawing.Point(49, 23);
+            this.picbtnStart.Location = new System.Drawing.Point(38, 25);
             this.picbtnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbtnStart.Name = "picbtnStart";
-            this.picbtnStart.Size = new System.Drawing.Size(48, 40);
+            this.picbtnStart.Size = new System.Drawing.Size(50, 50);
             this.picbtnStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picbtnStart.TabIndex = 6;
             this.picbtnStart.TabStop = false;
@@ -196,7 +208,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMessage.BackColor = System.Drawing.Color.White;
             this.lblMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMessage.Location = new System.Drawing.Point(265, 32);
+            this.lblMessage.Location = new System.Drawing.Point(265, 30);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(617, 39);
             this.lblMessage.TabIndex = 5;
@@ -209,7 +221,7 @@
             this.btnExit.Location = new System.Drawing.Point(209, 28);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 27);
+            this.btnExit.Size = new System.Drawing.Size(75, 40);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "TXT_END";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -223,7 +235,7 @@
             this.btnStop.Location = new System.Drawing.Point(116, 28);
             this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 27);
+            this.btnStop.Size = new System.Drawing.Size(75, 40);
             this.btnStop.TabIndex = 3;
             this.btnStop.Text = "TXT_STOP";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -237,30 +249,18 @@
             this.btnStart.Location = new System.Drawing.Point(23, 28);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 27);
+            this.btnStart.Size = new System.Drawing.Size(75, 40);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "TXT_START";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // lblStatus
-            // 
-            this.lblStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStatus.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblStatus.Location = new System.Drawing.Point(889, 32);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(98, 39);
-            this.lblStatus.TabIndex = 9;
-            this.lblStatus.Text = "TXT_STOP";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmMeasureController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 67);
+            this.ClientSize = new System.Drawing.Size(1000, 80);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));

@@ -117,545 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="pnlMain.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblUnit1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDataValue1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblItem1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pnlHeader.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;lblUnit0.Name" xml:space="preserve">
-    <value>lblUnit0</value>
-  </data>
-  <data name="&gt;&gt;lblUnit0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit0.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit0.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblUnit10.Name" xml:space="preserve">
-    <value>lblUnit10</value>
-  </data>
-  <data name="&gt;&gt;lblUnit10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit10.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit10.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblUnit9.Name" xml:space="preserve">
-    <value>lblUnit9</value>
-  </data>
-  <data name="&gt;&gt;lblUnit9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit9.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit9.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblUnit8.Name" xml:space="preserve">
-    <value>lblUnit8</value>
-  </data>
-  <data name="&gt;&gt;lblUnit8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit8.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit8.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblUnit7.Name" xml:space="preserve">
-    <value>lblUnit7</value>
-  </data>
-  <data name="&gt;&gt;lblUnit7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit7.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblUnit6.Name" xml:space="preserve">
-    <value>lblUnit6</value>
-  </data>
-  <data name="&gt;&gt;lblUnit6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit6.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblUnit5.Name" xml:space="preserve">
-    <value>lblUnit5</value>
-  </data>
-  <data name="&gt;&gt;lblUnit5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit5.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblUnit4.Name" xml:space="preserve">
-    <value>lblUnit4</value>
-  </data>
-  <data name="&gt;&gt;lblUnit4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit4.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit4.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblUnit3.Name" xml:space="preserve">
-    <value>lblUnit3</value>
-  </data>
-  <data name="&gt;&gt;lblUnit3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit3.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblUnit2.Name" xml:space="preserve">
-    <value>lblUnit2</value>
-  </data>
-  <data name="&gt;&gt;lblUnit2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit2.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblUnit1.Name" xml:space="preserve">
-    <value>lblUnit1</value>
-  </data>
-  <data name="&gt;&gt;lblUnit1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblUnit1.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblUnit1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue0.Name" xml:space="preserve">
-    <value>lblDataValue0</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue0.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue0.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue0.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue10.Name" xml:space="preserve">
-    <value>lblDataValue10</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue10.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue10.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue9.Name" xml:space="preserve">
-    <value>lblDataValue9</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue9.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue9.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue8.Name" xml:space="preserve">
-    <value>lblDataValue8</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue8.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue8.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue7.Name" xml:space="preserve">
-    <value>lblDataValue7</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue7.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue7.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue6.Name" xml:space="preserve">
-    <value>lblDataValue6</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue6.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue6.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue5.Name" xml:space="preserve">
-    <value>lblDataValue5</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue5.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue5.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue4.Name" xml:space="preserve">
-    <value>lblDataValue4</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue4.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue4.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue3.Name" xml:space="preserve">
-    <value>lblDataValue3</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue3.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue3.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue2.Name" xml:space="preserve">
-    <value>lblDataValue2</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue2.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue2.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue1.Name" xml:space="preserve">
-    <value>lblDataValue1</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue1.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblDataValue1.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;lblItem0.Name" xml:space="preserve">
-    <value>lblItem0</value>
-  </data>
-  <data name="&gt;&gt;lblItem0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem0.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem0.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;lblItem10.Name" xml:space="preserve">
-    <value>lblItem10</value>
-  </data>
-  <data name="&gt;&gt;lblItem10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem10.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem10.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;lblItem9.Name" xml:space="preserve">
-    <value>lblItem9</value>
-  </data>
-  <data name="&gt;&gt;lblItem9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem9.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem9.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;lblItem8.Name" xml:space="preserve">
-    <value>lblItem8</value>
-  </data>
-  <data name="&gt;&gt;lblItem8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem8.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem8.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;lblItem7.Name" xml:space="preserve">
-    <value>lblItem7</value>
-  </data>
-  <data name="&gt;&gt;lblItem7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem7.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem7.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;lblItem6.Name" xml:space="preserve">
-    <value>lblItem6</value>
-  </data>
-  <data name="&gt;&gt;lblItem6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem6.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem6.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;lblItem5.Name" xml:space="preserve">
-    <value>lblItem5</value>
-  </data>
-  <data name="&gt;&gt;lblItem5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem5.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem5.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;lblItem4.Name" xml:space="preserve">
-    <value>lblItem4</value>
-  </data>
-  <data name="&gt;&gt;lblItem4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem4.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem4.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;lblItem3.Name" xml:space="preserve">
-    <value>lblItem3</value>
-  </data>
-  <data name="&gt;&gt;lblItem3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem3.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem3.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;lblItem2.Name" xml:space="preserve">
-    <value>lblItem2</value>
-  </data>
-  <data name="&gt;&gt;lblItem2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem2.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem2.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;lblItem1.Name" xml:space="preserve">
-    <value>lblItem1</value>
-  </data>
-  <data name="&gt;&gt;lblItem1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblItem1.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;lblItem1.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Name" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 392</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="lblUnit0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -669,6 +131,7 @@
   <data name="lblUnit0.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblUnit0.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
@@ -690,9 +153,6 @@
   <data name="&gt;&gt;lblUnit0.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="lblUnit10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -726,9 +186,6 @@
   <data name="&gt;&gt;lblUnit10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="lblUnit9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -762,9 +219,6 @@
   <data name="&gt;&gt;lblUnit9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="lblUnit8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -798,9 +252,6 @@
   <data name="&gt;&gt;lblUnit8.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="lblUnit7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -834,9 +285,6 @@
   <data name="&gt;&gt;lblUnit7.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="lblUnit6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -870,9 +318,6 @@
   <data name="&gt;&gt;lblUnit6.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="lblUnit5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -906,9 +351,6 @@
   <data name="&gt;&gt;lblUnit5.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="lblUnit4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -942,9 +384,6 @@
   <data name="&gt;&gt;lblUnit4.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="lblUnit3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -978,9 +417,6 @@
   <data name="&gt;&gt;lblUnit3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="lblUnit2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -1014,9 +450,6 @@
   <data name="&gt;&gt;lblUnit2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="lblUnit1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblUnit1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -1050,9 +483,6 @@
   <data name="&gt;&gt;lblUnit1.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="lblDataValue0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1083,9 +513,6 @@
   <data name="&gt;&gt;lblDataValue0.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="lblDataValue10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1116,9 +543,6 @@
   <data name="&gt;&gt;lblDataValue10.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="lblDataValue9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1149,9 +573,6 @@
   <data name="&gt;&gt;lblDataValue9.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="lblDataValue8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1182,9 +603,6 @@
   <data name="&gt;&gt;lblDataValue8.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <metadata name="lblDataValue7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1215,9 +633,6 @@
   <data name="&gt;&gt;lblDataValue7.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <metadata name="lblDataValue6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1248,9 +663,6 @@
   <data name="&gt;&gt;lblDataValue6.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <metadata name="lblDataValue5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1281,9 +693,6 @@
   <data name="&gt;&gt;lblDataValue5.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <metadata name="lblDataValue4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1314,9 +723,6 @@
   <data name="&gt;&gt;lblDataValue4.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="lblDataValue3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1347,9 +753,6 @@
   <data name="&gt;&gt;lblDataValue3.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <metadata name="lblDataValue2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1380,9 +783,6 @@
   <data name="&gt;&gt;lblDataValue2.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <metadata name="lblDataValue1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDataValue1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1413,9 +813,6 @@
   <data name="&gt;&gt;lblDataValue1.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <metadata name="lblItem0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 7pt</value>
   </data>
@@ -1449,9 +846,6 @@
   <data name="&gt;&gt;lblItem0.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <metadata name="lblItem10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1485,9 +879,6 @@
   <data name="&gt;&gt;lblItem10.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <metadata name="lblItem9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1521,9 +912,6 @@
   <data name="&gt;&gt;lblItem9.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <metadata name="lblItem8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1557,9 +945,6 @@
   <data name="&gt;&gt;lblItem8.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <metadata name="lblItem7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1593,9 +978,6 @@
   <data name="&gt;&gt;lblItem7.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <metadata name="lblItem6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1629,9 +1011,6 @@
   <data name="&gt;&gt;lblItem6.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <metadata name="lblItem5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1665,9 +1044,6 @@
   <data name="&gt;&gt;lblItem5.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <metadata name="lblItem4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1701,9 +1077,6 @@
   <data name="&gt;&gt;lblItem4.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <metadata name="lblItem3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1737,9 +1110,6 @@
   <data name="&gt;&gt;lblItem3.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
-  <metadata name="lblItem2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1773,9 +1143,6 @@
   <data name="&gt;&gt;lblItem2.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
-  <metadata name="lblItem1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -1809,69 +1176,6 @@
   <data name="&gt;&gt;lblItem1.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
-  <metadata name="pnlHeader.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnEnd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;btnEnd.Name" xml:space="preserve">
-    <value>btnEnd</value>
-  </data>
-  <data name="&gt;&gt;btnEnd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnEnd.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;btnEnd.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
-    <value>lblTitle</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="pnlHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="pnlHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Name" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <metadata name="btnEnd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnEnd.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -1879,7 +1183,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnEnd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 0</value>
+    <value>245, 0</value>
   </data>
   <data name="btnEnd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1908,9 +1212,6 @@
   <data name="&gt;&gt;btnEnd.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="lblTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1921,7 +1222,7 @@
     <value>0, 0</value>
   </data>
   <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+    <value>270, 22</value>
   </data>
   <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1944,114 +1245,78 @@
   <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="pnlAnalysis.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabControl1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPage1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasUnit1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlDataMeas1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlMeasItem1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="pnlHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="pnlHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 22</value>
+  </data>
+  <data name="pnlHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlHeader.Name" xml:space="preserve">
+    <value>pnlHeader</value>
+  </data>
+  <data name="&gt;&gt;pnlHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlHeader.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlHeader.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="pnlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 471</value>
+  </data>
+  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblAnlMeasUnit0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 345</value>
+  </data>
+  <data name="lblAnlMeasUnit0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit0.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="lblAnlMeasUnit0.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasUnit0.Name" xml:space="preserve">
     <value>lblAnlMeasUnit0</value>
   </data>
@@ -2063,6 +1328,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit0.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblAnlMeasUnit10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 312</value>
+  </data>
+  <data name="lblAnlMeasUnit10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit10.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="lblAnlMeasUnit10.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit10.Name" xml:space="preserve">
     <value>lblAnlMeasUnit10</value>
@@ -2076,6 +1362,27 @@
   <data name="&gt;&gt;lblAnlMeasUnit10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblAnlMeasUnit9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 279</value>
+  </data>
+  <data name="lblAnlMeasUnit9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit9.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="lblAnlMeasUnit9.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasUnit9.Name" xml:space="preserve">
     <value>lblAnlMeasUnit9</value>
   </data>
@@ -2087,6 +1394,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit9.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="lblAnlMeasUnit8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 245</value>
+  </data>
+  <data name="lblAnlMeasUnit8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit8.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="lblAnlMeasUnit8.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit8.Name" xml:space="preserve">
     <value>lblAnlMeasUnit8</value>
@@ -2100,6 +1428,27 @@
   <data name="&gt;&gt;lblAnlMeasUnit8.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="lblAnlMeasUnit7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 212</value>
+  </data>
+  <data name="lblAnlMeasUnit7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit7.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="lblAnlMeasUnit7.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasUnit7.Name" xml:space="preserve">
     <value>lblAnlMeasUnit7</value>
   </data>
@@ -2111,6 +1460,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit7.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="lblAnlMeasUnit6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 179</value>
+  </data>
+  <data name="lblAnlMeasUnit6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit6.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="lblAnlMeasUnit6.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit6.Name" xml:space="preserve">
     <value>lblAnlMeasUnit6</value>
@@ -2124,6 +1494,27 @@
   <data name="&gt;&gt;lblAnlMeasUnit6.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="lblAnlMeasUnit5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 145</value>
+  </data>
+  <data name="lblAnlMeasUnit5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit5.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="lblAnlMeasUnit5.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasUnit5.Name" xml:space="preserve">
     <value>lblAnlMeasUnit5</value>
   </data>
@@ -2135,6 +1526,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit5.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="lblAnlMeasUnit4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 112</value>
+  </data>
+  <data name="lblAnlMeasUnit4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit4.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="lblAnlMeasUnit4.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit4.Name" xml:space="preserve">
     <value>lblAnlMeasUnit4</value>
@@ -2148,6 +1560,27 @@
   <data name="&gt;&gt;lblAnlMeasUnit4.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="lblAnlMeasUnit3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 79</value>
+  </data>
+  <data name="lblAnlMeasUnit3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit3.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="lblAnlMeasUnit3.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasUnit3.Name" xml:space="preserve">
     <value>lblAnlMeasUnit3</value>
   </data>
@@ -2159,6 +1592,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit3.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="lblAnlMeasUnit2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 47</value>
+  </data>
+  <data name="lblAnlMeasUnit2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit2.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="lblAnlMeasUnit2.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit2.Name" xml:space="preserve">
     <value>lblAnlMeasUnit2</value>
@@ -2172,6 +1626,27 @@
   <data name="&gt;&gt;lblAnlMeasUnit2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="lblAnlMeasUnit1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 6pt</value>
+  </data>
+  <data name="lblAnlMeasUnit1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasUnit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 12</value>
+  </data>
+  <data name="lblAnlMeasUnit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="lblAnlMeasUnit1.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="lblAnlMeasUnit1.Text" xml:space="preserve">
+    <value>TXT_UNIT</value>
+  </data>
+  <data name="lblAnlMeasUnit1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasUnit1.Name" xml:space="preserve">
     <value>lblAnlMeasUnit1</value>
   </data>
@@ -2183,6 +1658,24 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit1.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="lblAnlDataMeas0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 343</value>
+  </data>
+  <data name="lblAnlDataMeas0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas0.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="lblAnlDataMeas0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lblAnlDataMeas0.Name" xml:space="preserve">
     <value>lblAnlDataMeas0</value>
@@ -2196,6 +1689,24 @@
   <data name="&gt;&gt;lblAnlDataMeas0.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="lblAnlDataMeas10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 310</value>
+  </data>
+  <data name="lblAnlDataMeas10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas10.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="lblAnlDataMeas10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;lblAnlDataMeas10.Name" xml:space="preserve">
     <value>lblAnlDataMeas10</value>
   </data>
@@ -2207,6 +1718,24 @@
   </data>
   <data name="&gt;&gt;lblAnlDataMeas10.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="lblAnlDataMeas9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 277</value>
+  </data>
+  <data name="lblAnlDataMeas9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas9.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="lblAnlDataMeas9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lblAnlDataMeas9.Name" xml:space="preserve">
     <value>lblAnlDataMeas9</value>
@@ -2220,6 +1749,24 @@
   <data name="&gt;&gt;lblAnlDataMeas9.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="lblAnlDataMeas8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 243</value>
+  </data>
+  <data name="lblAnlDataMeas8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas8.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="lblAnlDataMeas8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;lblAnlDataMeas8.Name" xml:space="preserve">
     <value>lblAnlDataMeas8</value>
   </data>
@@ -2231,6 +1778,24 @@
   </data>
   <data name="&gt;&gt;lblAnlDataMeas8.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="lblAnlDataMeas7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 210</value>
+  </data>
+  <data name="lblAnlDataMeas7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas7.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="lblAnlDataMeas7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lblAnlDataMeas7.Name" xml:space="preserve">
     <value>lblAnlDataMeas7</value>
@@ -2244,6 +1809,24 @@
   <data name="&gt;&gt;lblAnlDataMeas7.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="lblAnlDataMeas6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 177</value>
+  </data>
+  <data name="lblAnlDataMeas6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas6.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="lblAnlDataMeas6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;lblAnlDataMeas6.Name" xml:space="preserve">
     <value>lblAnlDataMeas6</value>
   </data>
@@ -2255,6 +1838,24 @@
   </data>
   <data name="&gt;&gt;lblAnlDataMeas6.ZOrder" xml:space="preserve">
     <value>16</value>
+  </data>
+  <data name="lblAnlDataMeas5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 143</value>
+  </data>
+  <data name="lblAnlDataMeas5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas5.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="lblAnlDataMeas5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lblAnlDataMeas5.Name" xml:space="preserve">
     <value>lblAnlDataMeas5</value>
@@ -2268,6 +1869,24 @@
   <data name="&gt;&gt;lblAnlDataMeas5.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <data name="lblAnlDataMeas4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 110</value>
+  </data>
+  <data name="lblAnlDataMeas4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas4.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="lblAnlDataMeas4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;lblAnlDataMeas4.Name" xml:space="preserve">
     <value>lblAnlDataMeas4</value>
   </data>
@@ -2279,6 +1898,24 @@
   </data>
   <data name="&gt;&gt;lblAnlDataMeas4.ZOrder" xml:space="preserve">
     <value>18</value>
+  </data>
+  <data name="lblAnlDataMeas3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 77</value>
+  </data>
+  <data name="lblAnlDataMeas3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas3.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="lblAnlDataMeas3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lblAnlDataMeas3.Name" xml:space="preserve">
     <value>lblAnlDataMeas3</value>
@@ -2292,6 +1929,24 @@
   <data name="&gt;&gt;lblAnlDataMeas3.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <data name="lblAnlDataMeas2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 45</value>
+  </data>
+  <data name="lblAnlDataMeas2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas2.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="lblAnlDataMeas2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;lblAnlDataMeas2.Name" xml:space="preserve">
     <value>lblAnlDataMeas2</value>
   </data>
@@ -2303,6 +1958,24 @@
   </data>
   <data name="&gt;&gt;lblAnlDataMeas2.ZOrder" xml:space="preserve">
     <value>20</value>
+  </data>
+  <data name="lblAnlDataMeas1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlDataMeas1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 10</value>
+  </data>
+  <data name="lblAnlDataMeas1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="lblAnlDataMeas1.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="lblAnlDataMeas1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lblAnlDataMeas1.Name" xml:space="preserve">
     <value>lblAnlDataMeas1</value>
@@ -2316,6 +1989,27 @@
   <data name="&gt;&gt;lblAnlDataMeas1.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="lblAnlMeasItem0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 7pt</value>
+  </data>
+  <data name="lblAnlMeasItem0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 343</value>
+  </data>
+  <data name="lblAnlMeasItem0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem0.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="lblAnlMeasItem0.Text" xml:space="preserve">
+    <value>TXT_ROTATION</value>
+  </data>
+  <data name="lblAnlMeasItem0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasItem0.Name" xml:space="preserve">
     <value>lblAnlMeasItem0</value>
   </data>
@@ -2327,6 +2021,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasItem0.ZOrder" xml:space="preserve">
     <value>22</value>
+  </data>
+  <data name="lblAnlMeasItem10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 310</value>
+  </data>
+  <data name="lblAnlMeasItem10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem10.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="lblAnlMeasItem10.Text" xml:space="preserve">
+    <value>項目１０</value>
+  </data>
+  <data name="lblAnlMeasItem10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem10.Name" xml:space="preserve">
     <value>lblAnlMeasItem10</value>
@@ -2340,6 +2055,27 @@
   <data name="&gt;&gt;lblAnlMeasItem10.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
+  <data name="lblAnlMeasItem9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 277</value>
+  </data>
+  <data name="lblAnlMeasItem9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem9.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="lblAnlMeasItem9.Text" xml:space="preserve">
+    <value>項目９</value>
+  </data>
+  <data name="lblAnlMeasItem9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasItem9.Name" xml:space="preserve">
     <value>lblAnlMeasItem9</value>
   </data>
@@ -2351,6 +2087,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasItem9.ZOrder" xml:space="preserve">
     <value>24</value>
+  </data>
+  <data name="lblAnlMeasItem8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 243</value>
+  </data>
+  <data name="lblAnlMeasItem8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem8.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="lblAnlMeasItem8.Text" xml:space="preserve">
+    <value>項目８</value>
+  </data>
+  <data name="lblAnlMeasItem8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem8.Name" xml:space="preserve">
     <value>lblAnlMeasItem8</value>
@@ -2364,6 +2121,27 @@
   <data name="&gt;&gt;lblAnlMeasItem8.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblAnlMeasItem7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 210</value>
+  </data>
+  <data name="lblAnlMeasItem7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem7.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="lblAnlMeasItem7.Text" xml:space="preserve">
+    <value>項目７</value>
+  </data>
+  <data name="lblAnlMeasItem7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasItem7.Name" xml:space="preserve">
     <value>lblAnlMeasItem7</value>
   </data>
@@ -2375,6 +2153,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasItem7.ZOrder" xml:space="preserve">
     <value>26</value>
+  </data>
+  <data name="lblAnlMeasItem6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="lblAnlMeasItem6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem6.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="lblAnlMeasItem6.Text" xml:space="preserve">
+    <value>項目６</value>
+  </data>
+  <data name="lblAnlMeasItem6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem6.Name" xml:space="preserve">
     <value>lblAnlMeasItem6</value>
@@ -2388,6 +2187,27 @@
   <data name="&gt;&gt;lblAnlMeasItem6.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
+  <data name="lblAnlMeasItem5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 143</value>
+  </data>
+  <data name="lblAnlMeasItem5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem5.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="lblAnlMeasItem5.Text" xml:space="preserve">
+    <value>項目５</value>
+  </data>
+  <data name="lblAnlMeasItem5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasItem5.Name" xml:space="preserve">
     <value>lblAnlMeasItem5</value>
   </data>
@@ -2399,6 +2219,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasItem5.ZOrder" xml:space="preserve">
     <value>28</value>
+  </data>
+  <data name="lblAnlMeasItem4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="lblAnlMeasItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem4.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="lblAnlMeasItem4.Text" xml:space="preserve">
+    <value>項目４</value>
+  </data>
+  <data name="lblAnlMeasItem4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem4.Name" xml:space="preserve">
     <value>lblAnlMeasItem4</value>
@@ -2412,6 +2253,27 @@
   <data name="&gt;&gt;lblAnlMeasItem4.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
+  <data name="lblAnlMeasItem3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 77</value>
+  </data>
+  <data name="lblAnlMeasItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem3.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="lblAnlMeasItem3.Text" xml:space="preserve">
+    <value>項目３</value>
+  </data>
+  <data name="lblAnlMeasItem3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasItem3.Name" xml:space="preserve">
     <value>lblAnlMeasItem3</value>
   </data>
@@ -2424,6 +2286,27 @@
   <data name="&gt;&gt;lblAnlMeasItem3.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
+  <data name="lblAnlMeasItem2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="lblAnlMeasItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem2.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="lblAnlMeasItem2.Text" xml:space="preserve">
+    <value>項目２</value>
+  </data>
+  <data name="lblAnlMeasItem2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblAnlMeasItem2.Name" xml:space="preserve">
     <value>lblAnlMeasItem2</value>
   </data>
@@ -2435,6 +2318,27 @@
   </data>
   <data name="&gt;&gt;lblAnlMeasItem2.ZOrder" xml:space="preserve">
     <value>31</value>
+  </data>
+  <data name="lblAnlMeasItem1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblAnlMeasItem1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlMeasItem1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 10</value>
+  </data>
+  <data name="lblAnlMeasItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblAnlMeasItem1.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="lblAnlMeasItem1.Text" xml:space="preserve">
+    <value>項目1</value>
+  </data>
+  <data name="lblAnlMeasItem1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem1.Name" xml:space="preserve">
     <value>lblAnlMeasItem1</value>
@@ -2475,12 +2379,6 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="tabPage2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAnlUnit0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2517,9 +2415,6 @@
   <data name="&gt;&gt;lblAnlUnit0.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="lblAnlUnit10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2553,9 +2448,6 @@
   <data name="&gt;&gt;lblAnlUnit10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="lblAnlUnit9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2589,9 +2481,6 @@
   <data name="&gt;&gt;lblAnlUnit9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="lblAnlUnit8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2625,9 +2514,6 @@
   <data name="&gt;&gt;lblAnlUnit8.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="lblAnlUnit7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2661,9 +2547,6 @@
   <data name="&gt;&gt;lblAnlUnit7.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="lblAnlUnit6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2697,9 +2580,6 @@
   <data name="&gt;&gt;lblAnlUnit6.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="lblAnlUnit5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2733,9 +2613,6 @@
   <data name="&gt;&gt;lblAnlUnit5.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="lblAnlUnit4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2769,9 +2646,6 @@
   <data name="&gt;&gt;lblAnlUnit4.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="lblAnlUnit3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2805,9 +2679,6 @@
   <data name="&gt;&gt;lblAnlUnit3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="lblAnlUnit2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2841,9 +2712,6 @@
   <data name="&gt;&gt;lblAnlUnit2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="lblAnlUnit1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlUnit1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 6pt</value>
   </data>
@@ -2877,9 +2745,6 @@
   <data name="&gt;&gt;lblAnlUnit1.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="lblAnlData0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -2913,9 +2778,6 @@
   <data name="&gt;&gt;lblAnlData0.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="lblAnlData10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -2946,9 +2808,6 @@
   <data name="&gt;&gt;lblAnlData10.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="lblAnlData9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -2979,9 +2838,6 @@
   <data name="&gt;&gt;lblAnlData9.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="lblAnlData8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3012,9 +2868,6 @@
   <data name="&gt;&gt;lblAnlData8.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <metadata name="lblAnlData7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3045,9 +2898,6 @@
   <data name="&gt;&gt;lblAnlData7.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <metadata name="lblAnlData6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3078,9 +2928,6 @@
   <data name="&gt;&gt;lblAnlData6.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <metadata name="lblAnlData5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3111,9 +2958,6 @@
   <data name="&gt;&gt;lblAnlData5.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <metadata name="lblAnlData4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3144,9 +2988,6 @@
   <data name="&gt;&gt;lblAnlData4.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="lblAnlData3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3177,9 +3018,6 @@
   <data name="&gt;&gt;lblAnlData3.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <metadata name="lblAnlData2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3210,9 +3048,6 @@
   <data name="&gt;&gt;lblAnlData2.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <metadata name="lblAnlData1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlData1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3243,9 +3078,6 @@
   <data name="&gt;&gt;lblAnlData1.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <metadata name="lblAnlysisItem0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 7pt</value>
   </data>
@@ -3282,9 +3114,6 @@
   <data name="&gt;&gt;lblAnlysisItem0.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <metadata name="lblAnlysisItem10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3318,9 +3147,6 @@
   <data name="&gt;&gt;lblAnlysisItem10.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <metadata name="lblAnlysisItem9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3354,9 +3180,6 @@
   <data name="&gt;&gt;lblAnlysisItem9.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <metadata name="lblAnlysisItem8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3390,9 +3213,6 @@
   <data name="&gt;&gt;lblAnlysisItem8.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <metadata name="lblAnlysisItem7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3426,9 +3246,6 @@
   <data name="&gt;&gt;lblAnlysisItem7.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <metadata name="lblAnlysisItem6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3462,9 +3279,6 @@
   <data name="&gt;&gt;lblAnlysisItem6.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <metadata name="lblAnlysisItem5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3498,9 +3312,6 @@
   <data name="&gt;&gt;lblAnlysisItem5.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <metadata name="lblAnlysisItem4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3534,9 +3345,6 @@
   <data name="&gt;&gt;lblAnlysisItem4.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <metadata name="lblAnlysisItem3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3570,9 +3378,6 @@
   <data name="&gt;&gt;lblAnlysisItem3.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
-  <metadata name="lblAnlysisItem2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3606,9 +3411,6 @@
   <data name="&gt;&gt;lblAnlysisItem2.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
-  <metadata name="lblAnlysisItem1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAnlysisItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
   </data>
@@ -3690,15 +3492,30 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnTabClose.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label12.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="btnTabClose.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnTabClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnTabClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 0</value>
+  </data>
+  <data name="btnTabClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnTabClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 22</value>
+  </data>
+  <data name="btnTabClose.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnTabClose.Text" xml:space="preserve">
+    <value>×</value>
+  </data>
+  <data name="btnTabClose.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;btnTabClose.Name" xml:space="preserve">
     <value>btnTabClose</value>
   </data>
@@ -3710,6 +3527,27 @@
   </data>
   <data name="&gt;&gt;btnTabClose.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="label12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 22</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>TXT_CURRENT_VALUE_LIST</value>
+  </data>
+  <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
@@ -3774,1240 +3612,7 @@
   <data name="&gt;&gt;pnlAnalysis.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="lblAnlMeasUnit0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 345</value>
-  </data>
-  <data name="lblAnlMeasUnit0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit0.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="lblAnlMeasUnit0.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit0.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit0</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit0.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit0.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="lblAnlMeasUnit10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 312</value>
-  </data>
-  <data name="lblAnlMeasUnit10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit10.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="lblAnlMeasUnit10.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit10.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit10</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit10.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit10.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="lblAnlMeasUnit9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 279</value>
-  </data>
-  <data name="lblAnlMeasUnit9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit9.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="lblAnlMeasUnit9.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit9.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit9</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit9.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit9.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="lblAnlMeasUnit8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 245</value>
-  </data>
-  <data name="lblAnlMeasUnit8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit8.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="lblAnlMeasUnit8.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit8.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit8</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit8.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit8.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="lblAnlMeasUnit7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 212</value>
-  </data>
-  <data name="lblAnlMeasUnit7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit7.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="lblAnlMeasUnit7.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit7.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit7</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit7.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="lblAnlMeasUnit6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 179</value>
-  </data>
-  <data name="lblAnlMeasUnit6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit6.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="lblAnlMeasUnit6.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit6.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit6</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit6.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="lblAnlMeasUnit5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 145</value>
-  </data>
-  <data name="lblAnlMeasUnit5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit5.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="lblAnlMeasUnit5.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit5.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit5</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit5.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="lblAnlMeasUnit4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 112</value>
-  </data>
-  <data name="lblAnlMeasUnit4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit4.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="lblAnlMeasUnit4.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit4.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit4</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit4.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="lblAnlMeasUnit3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 79</value>
-  </data>
-  <data name="lblAnlMeasUnit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit3.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="lblAnlMeasUnit3.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit3.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit3</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit3.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <metadata name="lblAnlMeasUnit2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 47</value>
-  </data>
-  <data name="lblAnlMeasUnit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit2.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="lblAnlMeasUnit2.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit2.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit2</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <metadata name="lblAnlMeasUnit1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasUnit1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
-  </data>
-  <data name="lblAnlMeasUnit1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasUnit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 12</value>
-  </data>
-  <data name="lblAnlMeasUnit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="lblAnlMeasUnit1.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="lblAnlMeasUnit1.Text" xml:space="preserve">
-    <value>TXT_UNIT</value>
-  </data>
-  <data name="lblAnlMeasUnit1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit1.Name" xml:space="preserve">
-    <value>lblAnlMeasUnit1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasUnit1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <metadata name="lblAnlDataMeas0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 343</value>
-  </data>
-  <data name="lblAnlDataMeas0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas0.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
-  </data>
-  <data name="lblAnlDataMeas0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas0.Name" xml:space="preserve">
-    <value>lblAnlDataMeas0</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas0.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas0.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas0.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <metadata name="lblAnlDataMeas10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 310</value>
-  </data>
-  <data name="lblAnlDataMeas10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas10.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
-  </data>
-  <data name="lblAnlDataMeas10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas10.Name" xml:space="preserve">
-    <value>lblAnlDataMeas10</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas10.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas10.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <metadata name="lblAnlDataMeas9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 277</value>
-  </data>
-  <data name="lblAnlDataMeas9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas9.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="lblAnlDataMeas9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas9.Name" xml:space="preserve">
-    <value>lblAnlDataMeas9</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas9.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas9.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <metadata name="lblAnlDataMeas8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 243</value>
-  </data>
-  <data name="lblAnlDataMeas8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas8.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="lblAnlDataMeas8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas8.Name" xml:space="preserve">
-    <value>lblAnlDataMeas8</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas8.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas8.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <metadata name="lblAnlDataMeas7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 210</value>
-  </data>
-  <data name="lblAnlDataMeas7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas7.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="lblAnlDataMeas7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas7.Name" xml:space="preserve">
-    <value>lblAnlDataMeas7</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas7.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas7.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <metadata name="lblAnlDataMeas6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 177</value>
-  </data>
-  <data name="lblAnlDataMeas6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas6.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="lblAnlDataMeas6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas6.Name" xml:space="preserve">
-    <value>lblAnlDataMeas6</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas6.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas6.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <metadata name="lblAnlDataMeas5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 143</value>
-  </data>
-  <data name="lblAnlDataMeas5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas5.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="lblAnlDataMeas5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas5.Name" xml:space="preserve">
-    <value>lblAnlDataMeas5</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas5.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas5.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <metadata name="lblAnlDataMeas4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 110</value>
-  </data>
-  <data name="lblAnlDataMeas4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas4.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="lblAnlDataMeas4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas4.Name" xml:space="preserve">
-    <value>lblAnlDataMeas4</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas4.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <metadata name="lblAnlDataMeas3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 77</value>
-  </data>
-  <data name="lblAnlDataMeas3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas3.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="lblAnlDataMeas3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas3.Name" xml:space="preserve">
-    <value>lblAnlDataMeas3</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas3.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas3.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <metadata name="lblAnlDataMeas2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 45</value>
-  </data>
-  <data name="lblAnlDataMeas2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas2.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="lblAnlDataMeas2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas2.Name" xml:space="preserve">
-    <value>lblAnlDataMeas2</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas2.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <metadata name="lblAnlDataMeas1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlDataMeas1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlDataMeas1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlDataMeas1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 10</value>
-  </data>
-  <data name="lblAnlDataMeas1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
-  </data>
-  <data name="lblAnlDataMeas1.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="lblAnlDataMeas1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas1.Name" xml:space="preserve">
-    <value>lblAnlDataMeas1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlDataMeas1.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <metadata name="lblAnlMeasItem0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 7pt</value>
-  </data>
-  <data name="lblAnlMeasItem0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 343</value>
-  </data>
-  <data name="lblAnlMeasItem0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem0.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="lblAnlMeasItem0.Text" xml:space="preserve">
-    <value>TXT_ROTATION</value>
-  </data>
-  <data name="lblAnlMeasItem0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem0.Name" xml:space="preserve">
-    <value>lblAnlMeasItem0</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem0.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem0.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <metadata name="lblAnlMeasItem10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 310</value>
-  </data>
-  <data name="lblAnlMeasItem10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem10.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="lblAnlMeasItem10.Text" xml:space="preserve">
-    <value>項目１０</value>
-  </data>
-  <data name="lblAnlMeasItem10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem10.Name" xml:space="preserve">
-    <value>lblAnlMeasItem10</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem10.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem10.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <metadata name="lblAnlMeasItem9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 277</value>
-  </data>
-  <data name="lblAnlMeasItem9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem9.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="lblAnlMeasItem9.Text" xml:space="preserve">
-    <value>項目９</value>
-  </data>
-  <data name="lblAnlMeasItem9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem9.Name" xml:space="preserve">
-    <value>lblAnlMeasItem9</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem9.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem9.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <metadata name="lblAnlMeasItem8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 243</value>
-  </data>
-  <data name="lblAnlMeasItem8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem8.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="lblAnlMeasItem8.Text" xml:space="preserve">
-    <value>項目８</value>
-  </data>
-  <data name="lblAnlMeasItem8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem8.Name" xml:space="preserve">
-    <value>lblAnlMeasItem8</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem8.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem8.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <metadata name="lblAnlMeasItem7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 210</value>
-  </data>
-  <data name="lblAnlMeasItem7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem7.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="lblAnlMeasItem7.Text" xml:space="preserve">
-    <value>項目７</value>
-  </data>
-  <data name="lblAnlMeasItem7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem7.Name" xml:space="preserve">
-    <value>lblAnlMeasItem7</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem7.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem7.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <metadata name="lblAnlMeasItem6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 177</value>
-  </data>
-  <data name="lblAnlMeasItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem6.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="lblAnlMeasItem6.Text" xml:space="preserve">
-    <value>項目６</value>
-  </data>
-  <data name="lblAnlMeasItem6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem6.Name" xml:space="preserve">
-    <value>lblAnlMeasItem6</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem6.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem6.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <metadata name="lblAnlMeasItem5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 143</value>
-  </data>
-  <data name="lblAnlMeasItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem5.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="lblAnlMeasItem5.Text" xml:space="preserve">
-    <value>項目５</value>
-  </data>
-  <data name="lblAnlMeasItem5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem5.Name" xml:space="preserve">
-    <value>lblAnlMeasItem5</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem5.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem5.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <metadata name="lblAnlMeasItem4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 110</value>
-  </data>
-  <data name="lblAnlMeasItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem4.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="lblAnlMeasItem4.Text" xml:space="preserve">
-    <value>項目４</value>
-  </data>
-  <data name="lblAnlMeasItem4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem4.Name" xml:space="preserve">
-    <value>lblAnlMeasItem4</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem4.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <metadata name="lblAnlMeasItem3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 77</value>
-  </data>
-  <data name="lblAnlMeasItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem3.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="lblAnlMeasItem3.Text" xml:space="preserve">
-    <value>項目３</value>
-  </data>
-  <data name="lblAnlMeasItem3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem3.Name" xml:space="preserve">
-    <value>lblAnlMeasItem3</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem3.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem3.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <metadata name="lblAnlMeasItem2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 45</value>
-  </data>
-  <data name="lblAnlMeasItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem2.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="lblAnlMeasItem2.Text" xml:space="preserve">
-    <value>項目２</value>
-  </data>
-  <data name="lblAnlMeasItem2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem2.Name" xml:space="preserve">
-    <value>lblAnlMeasItem2</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem2.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <metadata name="lblAnlMeasItem1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAnlMeasItem1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="lblAnlMeasItem1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAnlMeasItem1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 10</value>
-  </data>
-  <data name="lblAnlMeasItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="lblAnlMeasItem1.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="lblAnlMeasItem1.Text" xml:space="preserve">
-    <value>項目1</value>
-  </data>
-  <data name="lblAnlMeasItem1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem1.Name" xml:space="preserve">
-    <value>lblAnlMeasItem1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lblAnlMeasItem1.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <metadata name="btnTabClose.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnTabClose.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="btnTabClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnTabClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 0</value>
-  </data>
-  <data name="btnTabClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnTabClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 22</value>
-  </data>
-  <data name="btnTabClose.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnTabClose.Text" xml:space="preserve">
-    <value>×</value>
-  </data>
-  <data name="btnTabClose.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnTabClose.Name" xml:space="preserve">
-    <value>btnTabClose</value>
-  </data>
-  <data name="&gt;&gt;btnTabClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTabClose.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;btnTabClose.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="label12.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>TXT_CURRENT_VALUE_LIST</value>
-  </data>
-  <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">

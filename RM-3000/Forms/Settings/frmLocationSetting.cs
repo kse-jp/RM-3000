@@ -46,6 +46,10 @@ namespace RM_3000
         /// 
         /// </summary>
 		public bool isClosing = false;
+        /// <summary>
+        /// グリッドデータ編集中
+        /// </summary>
+        public bool IsCurrentCellInEditMode { get { return this.gridSetting.IsCurrentCellInEditMode; } }
         #endregion
 
         #region constructor
@@ -446,37 +450,41 @@ namespace RM_3000
         {
             try
             {
-                bool isValid = true;
+                var isValid = true;
+                var dgv = (DataGridView)sender;
+                var errorMessage = string.Empty;
 
-                DataGridView dgv = (DataGridView)sender;
-
-                if (e.RowIndex == dgv.NewRowIndex || !dgv.IsCurrentCellDirty)
+                //if (e.RowIndex == dgv.NewRowIndex || !dgv.IsCurrentCellDirty)
+                if (e.RowIndex < 0 || dgv[e.ColumnIndex, e.RowIndex].ReadOnly)
                 {
                     return;
                 }
 
                 DataGridViewRow row = dgv.Rows[e.RowIndex];
-                if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointX" && e.FormattedValue.ToString() == "")
+                if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointX" && string.IsNullOrWhiteSpace(e.FormattedValue.ToString()))
                 {
-                    //MessageBox.Show("X位置を入力してください。", "入力エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //MSG_PLEASE_ENTER_X
-                    dgv.Rows[e.RowIndex].ErrorText = AppResource.GetString("MSG_PLEASE_ENTER_X");
+                    errorMessage = AppResource.GetString("MSG_PLEASE_ENTER_X");
                     isValid = false;
                 }
-                else if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointY" && e.FormattedValue.ToString() == "")
+                else if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointY" && string.IsNullOrWhiteSpace(e.FormattedValue.ToString()))
                 {
-                    //MessageBox.Show("Z位置を入力してください。", "入力エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    dgv.Rows[e.RowIndex].ErrorText = AppResource.GetString("MSG_PLEASE_ENTER_Z");
+                    errorMessage = AppResource.GetString("MSG_PLEASE_ENTER_Z");
                     isValid = false;
                 }
 
-                if (isValid == false)
+                if (isValid)
+                {
+                    if (this.TopMost)
+                    {
+                        this.TopMost = false;
+                    }
+                }
+                else
                 {
                     dgv.CancelEdit();
                     e.Cancel = true;
 
-                    showErrorMessage(dgv.Rows[e.RowIndex].ErrorText);
-                    dgv.Rows[e.RowIndex].ErrorText = string.Empty;
+                    showErrorMessage(errorMessage);
                 }
             }
             catch (Exception ex)
@@ -950,9 +958,13 @@ namespace RM_3000
         /// <param name="chIndex"></param>
 		public void setSelectSetting(int chIndex)
 		{
-			this.gridSetting.CurrentCell = this.gridSetting.Rows[chIndex].Cells[0];
+            if (this.gridSetting.IsCurrentCellInEditMode)
+            {
+                return;
+            }
 
-			//this.gridSetting.Rows[chIndex].Selected = true;
+            this.gridSetting.Rows[chIndex].Selected = true;
+            //this.gridSetting.CurrentCell = this.gridSetting.Rows[chIndex].Cells[0];
 		}
         /// <summary>
         /// 

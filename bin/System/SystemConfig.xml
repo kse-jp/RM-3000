@@ -1,5 +1,5 @@
 <?xml version="1.0"?><root>
-<SystemLanguage Language="Japanese" />
+<SystemLanguage Language="English" />
 <IsSimulationMode>True</IsSimulationMode>
 <IsDebugMode>False</IsDebugMode>
 <MaxSmallAxis>21</MaxSmallAxis>

@@ -72,6 +72,10 @@ namespace RM_3000
             if (System.IO.File.Exists(xmlFilePath))
             {
                 MeasureSetting = (MeasureSetting)MeasureSetting.Deserialize(xmlFilePath);
+                if (MeasureSetting.Mode1_MeasCondition != null)
+                {
+                    MeasureSetting.Mode1_MeasCondition.IsUpdated = false;
+                }
             }
             else
             {

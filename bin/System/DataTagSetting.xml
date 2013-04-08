@@ -257,14 +257,14 @@
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>19</TagNo>
-      <TagKind>0</TagKind>
+      <TagKind>2</TagKind>
       <Point>0</Point>
-      <Expression />
+      <Expression>@19[Calc1]</Expression>
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>Calc1</TagNameE>
       <TagNameJ />
       <TagNameC />
-      <UnitE />
+      <UnitE>um</UnitE>
       <UnitJ />
       <UnitC />
     </DataTag>

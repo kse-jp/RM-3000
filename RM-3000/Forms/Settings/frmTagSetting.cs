@@ -583,6 +583,7 @@ namespace RM_3000.Forms.Settings
             {
                 frmTagSettingSelect dialog = new frmTagSettingSelect();
                 dialog.SettingData = this.dataTagSetting;
+                dialog.EditingTag = this.currentTag;
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     DataTag dt = dialog.SelectedDataTag;

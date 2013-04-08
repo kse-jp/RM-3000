@@ -82,7 +82,7 @@ namespace RM_3000.Forms.Parts
         /// <summary>
         /// BackgroundWorker for 3D graph
         /// </summary>
-        private BackgroundWorker bw3Dgraph = new BackgroundWorker();
+        private BackgroundWorker bw3Dgraph = null;
         /// <summary>
         /// IsStartAnimation
         /// </summary>
@@ -788,18 +788,22 @@ namespace RM_3000.Forms.Parts
 
             try
             {
-                if (this.graph3DList.Count > 0)
+                if (this.graph3DList.Count > 0 && isSensorData3D)
                 {
                     if (this.graph3DList[0] != null)
                     {
                         this.graph3DList[0].OnAnimationCompleted -= frmGraph3D_OnAnimationCompleted;
                     }
                 }
-                if (bw3Dgraph.IsBusy)
-                    bw3Dgraph.CancelAsync();
-                bw3Dgraph.DoWork -= bw3DGraph_Animation;
-                bw3Dgraph.RunWorkerCompleted -= bw3DGraph_WorkerCompleted;
-                bw3Dgraph.Dispose();
+
+                if (bw3Dgraph != null)
+                {
+                    if (bw3Dgraph.IsBusy)
+                        bw3Dgraph.CancelAsync();
+                    bw3Dgraph.DoWork -= bw3DGraph_Animation;
+                    bw3Dgraph.RunWorkerCompleted -= bw3DGraph_WorkerCompleted;
+                    bw3Dgraph.Dispose();
+                }
                 this.MdiParent.Resize -= frmAnalyzeMain_Resize;
 
                 // 2Dグラフを終了する
@@ -1126,23 +1130,22 @@ namespace RM_3000.Forms.Parts
                 this.ChangeShot(this.trackMain.Value);
 
                 // 3Dグラフへデータセット
-                if (!this.isStartAnimation)
+                if (this.graph3DList.Count > 0 && isSensorData3D)
                 {
-                    Clear3DGraphData();
+                    if (!this.isStartAnimation)
+                    {
+                        Clear3DGraphData();
+                    }
+                    SetDataToGraph3D();
+                    if (!this.bw3Dgraph.IsBusy)
+                    {
+                        this.bw3Dgraph.RunWorkerAsync();
+                    }
+                    else
+                    {
+                        isWorkerRestart = true;
+                    }
                 }
-                SetDataToGraph3D();
-                if (!this.bw3Dgraph.IsBusy)
-                {
-                    this.bw3Dgraph.RunWorkerAsync();
-                }
-                else
-                {
-                    isWorkerRestart = true;
-                    this.bw3Dgraph.CancelAsync();
-                    //    this.bw3Dgraph.RunWorkerAsync();
-                }
-
-
             }
             catch (Exception ex)
             {
@@ -1561,12 +1564,21 @@ namespace RM_3000.Forms.Parts
                     return;
                 }
 
+
+                //Create Animation Loop
                 for (int i = 0; i < this.graph3DList.Count; i++)
                 {
-                    if (this.graph3DList[i] != null)
+                    if (this.graph3DList[i] != null && isSensorData3D)
                     {
                         this.graph3DList[i].CreateAnimation();
+                    }
+                }
 
+                //All 3D create then start
+                for (int i = 0; i < this.graph3DList.Count; i++)
+                {
+                    if (this.graph3DList[i] != null && isSensorData3D)
+                    {
                         if (this.isStartAnimation)
                             this.graph3DList[i].StartAnimation();
                     }
@@ -1586,31 +1598,33 @@ namespace RM_3000.Forms.Parts
         {
             try
             {
-                if (!this.isLoop3DOneShot)
+                if (this.graph3DList.Count > 0 && isSensorData3D)
                 {
-                    if (trackMain.Value != trackMain.Maximum)
+                    if (!this.isLoop3DOneShot)
                     {
-                        this.Clear3DGraphData();
-                        trackMain.Value++;
-                    }
-                    else if (this.isLoop3DAllShot)
-                    {
-                        this.Clear3DGraphData();
-                        trackMain.Value = 0;
-                    }
-                }
-                else
-                {
-                    Clear3DGraphData();
-                    SetDataToGraph3D();
-                    if (!this.bw3Dgraph.IsBusy)
-                    {
-                        this.bw3Dgraph.RunWorkerAsync();
+                        if (trackMain.Value != trackMain.Maximum)
+                        {
+                            this.Clear3DGraphData();
+                            trackMain.Value++;
+                        }
+                        else if (this.isLoop3DAllShot)
+                        {
+                            this.Clear3DGraphData();
+                            trackMain.Value = 0;
+                        }
                     }
                     else
                     {
-                        isWorkerRestart = true;
-                        this.bw3Dgraph.CancelAsync();
+                        Clear3DGraphData();
+                        SetDataToGraph3D();
+                        if (!this.bw3Dgraph.IsBusy)
+                        {
+                            this.bw3Dgraph.RunWorkerAsync();
+                        }
+                        else
+                        {
+                            isWorkerRestart = true;
+                        }
                     }
                 }
 

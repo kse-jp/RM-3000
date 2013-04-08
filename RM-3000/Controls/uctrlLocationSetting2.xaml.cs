@@ -1854,6 +1854,13 @@ namespace RM_3000
 		private void sensor_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{
 			Console.WriteLine("Sensor Mouse Down!!");
+
+            if (this.locationSetting.IsCurrentCellInEditMode)
+            {
+                this.locationSetting.TopMost = true;
+                return;
+            }
+
 			this.isDragging = true;
 			CanvasSensor clickedCanvasSensor = (CanvasSensor)sender;
 			this.activeSensorCanvas = (CanvasSensor)sender;
@@ -1884,7 +1891,14 @@ namespace RM_3000
 		private void sensor_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
 			//Console.WriteLine("Sensor Mouse Up!!");
-			if (this.isDragging == true)
+
+            if (this.locationSetting.IsCurrentCellInEditMode)
+            {
+                this.locationSetting.TopMost = true;
+                return;
+            }
+
+            if (this.isDragging == true)
 			{
 				this.isDragging = false;
 				this.dragSensorPaddingPointX = 0;
@@ -1936,8 +1950,6 @@ namespace RM_3000
 						this.locationSetting2.showTargetSetting(this.activeSensorCanvas);
 					}
 				}
-
-
 			}
 		}
 

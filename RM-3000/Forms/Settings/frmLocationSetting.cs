@@ -461,15 +461,26 @@ namespace RM_3000
                 }
 
                 DataGridViewRow row = dgv.Rows[e.RowIndex];
-                if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointX" && string.IsNullOrWhiteSpace(e.FormattedValue.ToString()))
+                int val;
+                if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointX")
                 {
-                    errorMessage = AppResource.GetString("MSG_PLEASE_ENTER_X");
-                    isValid = false;
+                    if (string.IsNullOrWhiteSpace(e.FormattedValue.ToString())
+                        || !int.TryParse(e.FormattedValue.ToString(), out val)
+                        || val < PositionSetting.MinXZ || val > PositionSetting.MaxXZ)
+                    {
+                        errorMessage = AppResource.GetString("MSG_PLEASE_ENTER_X");
+                        isValid = false;
+                    }
                 }
-                else if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointY" && string.IsNullOrWhiteSpace(e.FormattedValue.ToString()))
+                else if (dgv.Columns[e.ColumnIndex].Name == "ColumnPointY")
                 {
-                    errorMessage = AppResource.GetString("MSG_PLEASE_ENTER_Z");
-                    isValid = false;
+                    if (string.IsNullOrWhiteSpace(e.FormattedValue.ToString())
+                        || !int.TryParse(e.FormattedValue.ToString(), out val)
+                        || val < PositionSetting.MinXZ || val > PositionSetting.MaxXZ)
+                    {
+                        errorMessage = AppResource.GetString("MSG_PLEASE_ENTER_Z");
+                        isValid = false;
+                    }
                 }
 
                 if (isValid)

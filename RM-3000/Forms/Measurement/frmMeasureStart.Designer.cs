@@ -112,6 +112,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.grpGraph);
@@ -6291,6 +6292,7 @@
             // 
             // btnStart
             // 
+            this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStart.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnStart.Location = new System.Drawing.Point(1036, 586);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

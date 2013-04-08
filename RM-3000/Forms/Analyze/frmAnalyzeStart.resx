@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnTagSetting.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnTagSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -152,810 +155,6 @@
   </data>
   <data name="&gt;&gt;btnTagSetting.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;picOutputCSV.Name" xml:space="preserve">
-    <value>picOutputCSV</value>
-  </data>
-  <data name="&gt;&gt;picOutputCSV.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picOutputCSV.Parent" xml:space="preserve">
-    <value>grpCsv</value>
-  </data>
-  <data name="&gt;&gt;picOutputCSV.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>grpCsv</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>grpCsv</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnOutputCSV.Name" xml:space="preserve">
-    <value>btnOutputCSV</value>
-  </data>
-  <data name="&gt;&gt;btnOutputCSV.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnOutputCSV.Parent" xml:space="preserve">
-    <value>grpCsv</value>
-  </data>
-  <data name="&gt;&gt;btnOutputCSV.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtCsvCount.Name" xml:space="preserve">
-    <value>txtCsvCount</value>
-  </data>
-  <data name="&gt;&gt;txtCsvCount.Type" xml:space="preserve">
-    <value>RM_3000.Controls.NumericTextBox, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtCsvCount.Parent" xml:space="preserve">
-    <value>grpCsv</value>
-  </data>
-  <data name="&gt;&gt;txtCsvCount.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtCsvStartIndex.Name" xml:space="preserve">
-    <value>txtCsvStartIndex</value>
-  </data>
-  <data name="&gt;&gt;txtCsvStartIndex.Type" xml:space="preserve">
-    <value>RM_3000.Controls.NumericTextBox, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtCsvStartIndex.Parent" xml:space="preserve">
-    <value>grpCsv</value>
-  </data>
-  <data name="&gt;&gt;txtCsvStartIndex.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="grpCsv.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="grpCsv.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="grpCsv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 28</value>
-  </data>
-  <data name="grpCsv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 155</value>
-  </data>
-  <data name="grpCsv.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="grpCsv.Text" xml:space="preserve">
-    <value>TXT_OUTPUT_CSV</value>
-  </data>
-  <data name="&gt;&gt;grpCsv.Name" xml:space="preserve">
-    <value>grpCsv</value>
-  </data>
-  <data name="&gt;&gt;grpCsv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpCsv.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;grpCsv.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabItems</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabItems</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 206</value>
-  </data>
-  <data name="tabItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 323</value>
-  </data>
-  <data name="tabItems.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tabItems.Name" xml:space="preserve">
-    <value>tabItems</value>
-  </data>
-  <data name="&gt;&gt;tabItems.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabItems.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;tabItems.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="picRemoveGraph.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picRemoveGraph.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 114</value>
-  </data>
-  <data name="picRemoveGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
-  </data>
-  <data name="picRemoveGraph.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="picRemoveGraph.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;picRemoveGraph.Name" xml:space="preserve">
-    <value>picRemoveGraph</value>
-  </data>
-  <data name="&gt;&gt;picRemoveGraph.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picRemoveGraph.Parent" xml:space="preserve">
-    <value>grpGraph</value>
-  </data>
-  <data name="&gt;&gt;picRemoveGraph.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dgvGraph.Name" xml:space="preserve">
-    <value>dgvGraph</value>
-  </data>
-  <data name="&gt;&gt;dgvGraph.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvGraph.Parent" xml:space="preserve">
-    <value>pnlGraph</value>
-  </data>
-  <data name="&gt;&gt;dgvGraph.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pnlGraph.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="pnlGraph.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 22</value>
-  </data>
-  <data name="pnlGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="pnlGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 156</value>
-  </data>
-  <data name="pnlGraph.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pnlGraph.Name" xml:space="preserve">
-    <value>pnlGraph</value>
-  </data>
-  <data name="&gt;&gt;pnlGraph.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlGraph.Parent" xml:space="preserve">
-    <value>grpGraph</value>
-  </data>
-  <data name="&gt;&gt;pnlGraph.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnRemoveGraph.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="btnRemoveGraph.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnRemoveGraph.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 135</value>
-  </data>
-  <data name="btnRemoveGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnRemoveGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 25</value>
-  </data>
-  <data name="btnRemoveGraph.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btnRemoveGraph.Text" xml:space="preserve">
-    <value>TXT_GRAPH_DELETE</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraph.Name" xml:space="preserve">
-    <value>btnRemoveGraph</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraph.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraph.Parent" xml:space="preserve">
-    <value>grpGraph</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraph.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="picGraphAxisSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picGraphAxisSetting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 12</value>
-  </data>
-  <data name="picGraphAxisSetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 64</value>
-  </data>
-  <data name="picGraphAxisSetting.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="picGraphAxisSetting.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;picGraphAxisSetting.Name" xml:space="preserve">
-    <value>picGraphAxisSetting</value>
-  </data>
-  <data name="&gt;&gt;picGraphAxisSetting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picGraphAxisSetting.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;picGraphAxisSetting.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnGraphAxisSetting.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="btnGraphAxisSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnGraphAxisSetting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 39</value>
-  </data>
-  <data name="btnGraphAxisSetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 30</value>
-  </data>
-  <data name="btnGraphAxisSetting.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnGraphAxisSetting.Text" xml:space="preserve">
-    <value>TXT_GRAPH_SETTING</value>
-  </data>
-  <data name="&gt;&gt;btnGraphAxisSetting.Name" xml:space="preserve">
-    <value>btnGraphAxisSetting</value>
-  </data>
-  <data name="&gt;&gt;btnGraphAxisSetting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnGraphAxisSetting.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;btnGraphAxisSetting.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cmbColor.Name" xml:space="preserve">
-    <value>cmbColor</value>
-  </data>
-  <data name="&gt;&gt;cmbColor.Type" xml:space="preserve">
-    <value>RM_3000.Classes.ColorComboBox, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cmbColor.Parent" xml:space="preserve">
-    <value>pnlGraphDetail</value>
-  </data>
-  <data name="&gt;&gt;cmbColor.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dgvGraphDetail.Name" xml:space="preserve">
-    <value>dgvGraphDetail</value>
-  </data>
-  <data name="&gt;&gt;dgvGraphDetail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvGraphDetail.Parent" xml:space="preserve">
-    <value>pnlGraphDetail</value>
-  </data>
-  <data name="&gt;&gt;dgvGraphDetail.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlGraphDetail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="pnlGraphDetail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 79</value>
-  </data>
-  <data name="pnlGraphDetail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="pnlGraphDetail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 288</value>
-  </data>
-  <data name="pnlGraphDetail.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;pnlGraphDetail.Name" xml:space="preserve">
-    <value>pnlGraphDetail</value>
-  </data>
-  <data name="&gt;&gt;pnlGraphDetail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlGraphDetail.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;pnlGraphDetail.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txtGraphTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="txtGraphTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 44</value>
-  </data>
-  <data name="txtGraphTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="txtGraphTitle.MaxLength" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="txtGraphTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
-  </data>
-  <data name="txtGraphTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtGraphTitle.Name" xml:space="preserve">
-    <value>txtGraphTitle</value>
-  </data>
-  <data name="&gt;&gt;txtGraphTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtGraphTitle.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;txtGraphTitle.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 26</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 15</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>TXT_GRAPH_TITLE</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 190</value>
-  </data>
-  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>418, 373</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>TXT_TAG_SETTING</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>grpGraph</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="grpGraph.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="grpGraph.Location" type="System.Drawing.Point, System.Drawing">
-    <value>735, 5</value>
-  </data>
-  <data name="grpGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="grpGraph.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="grpGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 569</value>
-  </data>
-  <data name="grpGraph.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="grpGraph.Text" xml:space="preserve">
-    <value>TXT_GRAPH_SETTING</value>
-  </data>
-  <data name="&gt;&gt;grpGraph.Name" xml:space="preserve">
-    <value>grpGraph</value>
-  </data>
-  <data name="&gt;&gt;grpGraph.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpGraph.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;grpGraph.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnAddGraphTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAddGraphTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 301</value>
-  </data>
-  <data name="btnAddGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnAddGraphTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="btnAddGraphTag.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="btnAddGraphTag.Text" xml:space="preserve">
-    <value>＞＞</value>
-  </data>
-  <data name="&gt;&gt;btnAddGraphTag.Name" xml:space="preserve">
-    <value>btnAddGraphTag</value>
-  </data>
-  <data name="&gt;&gt;btnAddGraphTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddGraphTag.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;btnAddGraphTag.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnRemoveGraphTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnRemoveGraphTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 387</value>
-  </data>
-  <data name="btnRemoveGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnRemoveGraphTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="btnRemoveGraphTag.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="btnRemoveGraphTag.Text" xml:space="preserve">
-    <value>＜＜</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraphTag.Name" xml:space="preserve">
-    <value>btnRemoveGraphTag</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraphTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraphTag.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveGraphTag.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 5</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 20</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>TXT_ANALYSIS_SETTING</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblSampleTiming.Name" xml:space="preserve">
-    <value>lblSampleTiming</value>
-  </data>
-  <data name="&gt;&gt;lblSampleTiming.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSampleTiming.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;lblSampleTiming.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblSamplingTiming_Title.Name" xml:space="preserve">
-    <value>lblSamplingTiming_Title</value>
-  </data>
-  <data name="&gt;&gt;lblSamplingTiming_Title.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSamplingTiming_Title.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;lblSamplingTiming_Title.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblFileName.Name" xml:space="preserve">
-    <value>lblFileName</value>
-  </data>
-  <data name="&gt;&gt;lblFileName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFileName.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;lblFileName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblTotalShotCount.Name" xml:space="preserve">
-    <value>lblTotalShotCount</value>
-  </data>
-  <data name="&gt;&gt;lblTotalShotCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTotalShotCount.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;lblTotalShotCount.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblMode.Name" xml:space="preserve">
-    <value>lblMode</value>
-  </data>
-  <data name="&gt;&gt;lblMode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMode.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;lblMode.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblMeasEndDateTime.Name" xml:space="preserve">
-    <value>lblMeasEndDateTime</value>
-  </data>
-  <data name="&gt;&gt;lblMeasEndDateTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMeasEndDateTime.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;lblMeasEndDateTime.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblMeasStartDateTime.Name" xml:space="preserve">
-    <value>lblMeasStartDateTime</value>
-  </data>
-  <data name="&gt;&gt;lblMeasStartDateTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMeasStartDateTime.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;lblMeasStartDateTime.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;picReadFile.Name" xml:space="preserve">
-    <value>picReadFile</value>
-  </data>
-  <data name="&gt;&gt;picReadFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picReadFile.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;picReadFile.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;btnRead.Name" xml:space="preserve">
-    <value>btnRead</value>
-  </data>
-  <data name="&gt;&gt;btnRead.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRead.Parent" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;btnRead.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="grpAnalyzeFile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="grpAnalyzeFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 28</value>
-  </data>
-  <data name="grpAnalyzeFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="grpAnalyzeFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="grpAnalyzeFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 173</value>
-  </data>
-  <data name="grpAnalyzeFile.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="grpAnalyzeFile.Text" xml:space="preserve">
-    <value>TXT_ANALYSIS_FILE</value>
-  </data>
-  <data name="&gt;&gt;grpAnalyzeFile.Name" xml:space="preserve">
-    <value>grpAnalyzeFile</value>
-  </data>
-  <data name="&gt;&gt;grpAnalyzeFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpAnalyzeFile.Parent" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;grpAnalyzeFile.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="pnlMain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="pnlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1176, 580</value>
-  </data>
-  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="picOutputCSV.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1140,83 +339,35 @@
   <data name="&gt;&gt;txtCsvStartIndex.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;pnlMeasTagList.Name" xml:space="preserve">
-    <value>pnlMeasTagList</value>
+  <data name="grpCsv.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;pnlMeasTagList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="grpCsv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
   </data>
-  <data name="&gt;&gt;pnlMeasTagList.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="grpCsv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 28</value>
   </data>
-  <data name="&gt;&gt;pnlMeasTagList.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="grpCsv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 155</value>
   </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+  <data name="grpCsv.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="grpCsv.Text" xml:space="preserve">
+    <value>TXT_OUTPUT_CSV</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>666, 295</value>
+  <data name="&gt;&gt;grpCsv.Name" xml:space="preserve">
+    <value>grpCsv</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;grpCsv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>TXT_TAG_SETTING</value>
+  <data name="&gt;&gt;grpCsv.Parent" xml:space="preserve">
+    <value>pnlMain</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabItems</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dgvMeasTagList.Name" xml:space="preserve">
-    <value>dgvMeasTagList</value>
-  </data>
-  <data name="&gt;&gt;dgvMeasTagList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvMeasTagList.Parent" xml:space="preserve">
-    <value>pnlMeasTagList</value>
-  </data>
-  <data name="&gt;&gt;dgvMeasTagList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pnlMeasTagList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="pnlMeasTagList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 2</value>
-  </data>
-  <data name="pnlMeasTagList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="pnlMeasTagList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>663, 288</value>
-  </data>
-  <data name="pnlMeasTagList.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pnlMeasTagList.Name" xml:space="preserve">
-    <value>pnlMeasTagList</value>
-  </data>
-  <data name="&gt;&gt;pnlMeasTagList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlMeasTagList.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;pnlMeasTagList.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;grpCsv.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1278,86 +429,62 @@
   <data name="&gt;&gt;dgvMeasTagList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="pnlMeasTagList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="pnlMeasTagList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 2</value>
+  </data>
+  <data name="pnlMeasTagList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlMeasTagList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 288</value>
+  </data>
+  <data name="pnlMeasTagList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnlMeasTagList.Name" xml:space="preserve">
+    <value>pnlMeasTagList</value>
+  </data>
+  <data name="&gt;&gt;pnlMeasTagList.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;pnlMeasTagList.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnlMeasTagList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
   </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>666, 295</value>
   </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>TXT_CALC_ITEM_LIST</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>TXT_TAG_SETTING</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
     <value>tabItems</value>
   </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;dgvCalcList.Name" xml:space="preserve">
-    <value>dgvCalcList</value>
-  </data>
-  <data name="&gt;&gt;dgvCalcList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvCalcList.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;dgvCalcList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 2</value>
-  </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>663, 293</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1404,6 +531,108 @@
   <data name="&gt;&gt;dgvCalcList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="panel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>663, 293</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 295</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>TXT_CALC_ITEM_LIST</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabItems</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 206</value>
+  </data>
+  <data name="tabItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>674, 323</value>
+  </data>
+  <data name="tabItems.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabItems.Name" xml:space="preserve">
+    <value>tabItems</value>
+  </data>
+  <data name="&gt;&gt;tabItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabItems.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;tabItems.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="picRemoveGraph.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picRemoveGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 114</value>
+  </data>
+  <data name="picRemoveGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 64</value>
+  </data>
+  <data name="picRemoveGraph.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="picRemoveGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;picRemoveGraph.Name" xml:space="preserve">
+    <value>picRemoveGraph</value>
+  </data>
+  <data name="&gt;&gt;picRemoveGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picRemoveGraph.Parent" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;picRemoveGraph.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1439,6 +668,123 @@
   </data>
   <data name="&gt;&gt;dgvGraph.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="pnlGraph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="pnlGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 22</value>
+  </data>
+  <data name="pnlGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 156</value>
+  </data>
+  <data name="pnlGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.Name" xml:space="preserve">
+    <value>pnlGraph</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.Parent" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;pnlGraph.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnRemoveGraph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="btnRemoveGraph.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRemoveGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 135</value>
+  </data>
+  <data name="btnRemoveGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRemoveGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 25</value>
+  </data>
+  <data name="btnRemoveGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnRemoveGraph.Text" xml:space="preserve">
+    <value>TXT_GRAPH_DELETE</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.Name" xml:space="preserve">
+    <value>btnRemoveGraph</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.Parent" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraph.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="picGraphAxisSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picGraphAxisSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 12</value>
+  </data>
+  <data name="picGraphAxisSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 64</value>
+  </data>
+  <data name="picGraphAxisSetting.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="picGraphAxisSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;picGraphAxisSetting.Name" xml:space="preserve">
+    <value>picGraphAxisSetting</value>
+  </data>
+  <data name="&gt;&gt;picGraphAxisSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picGraphAxisSetting.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;picGraphAxisSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnGraphAxisSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="btnGraphAxisSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGraphAxisSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 39</value>
+  </data>
+  <data name="btnGraphAxisSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 30</value>
+  </data>
+  <data name="btnGraphAxisSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnGraphAxisSetting.Text" xml:space="preserve">
+    <value>TXT_GRAPH_SETTING</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.Name" xml:space="preserve">
+    <value>btnGraphAxisSetting</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;btnGraphAxisSetting.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="cmbColor.Items" xml:space="preserve">
     <value>Transparent</value>
@@ -5324,6 +4670,255 @@
   <data name="&gt;&gt;dgvGraphDetail.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="pnlGraphDetail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="pnlGraphDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 79</value>
+  </data>
+  <data name="pnlGraphDetail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlGraphDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 288</value>
+  </data>
+  <data name="pnlGraphDetail.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.Name" xml:space="preserve">
+    <value>pnlGraphDetail</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;pnlGraphDetail.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtGraphTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="txtGraphTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 44</value>
+  </data>
+  <data name="txtGraphTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtGraphTitle.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="txtGraphTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 23</value>
+  </data>
+  <data name="txtGraphTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.Name" xml:space="preserve">
+    <value>txtGraphTitle</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;txtGraphTitle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 26</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 15</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>TXT_GRAPH_TITLE</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 190</value>
+  </data>
+  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 373</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>TXT_TAG_SETTING</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="grpGraph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="grpGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 5</value>
+  </data>
+  <data name="grpGraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpGraph.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 569</value>
+  </data>
+  <data name="grpGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="grpGraph.Text" xml:space="preserve">
+    <value>TXT_GRAPH_SETTING</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.Name" xml:space="preserve">
+    <value>grpGraph</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;grpGraph.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnAddGraphTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddGraphTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 301</value>
+  </data>
+  <data name="btnAddGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnAddGraphTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnAddGraphTag.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnAddGraphTag.Text" xml:space="preserve">
+    <value>＞＞</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.Name" xml:space="preserve">
+    <value>btnAddGraphTag</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;btnAddGraphTag.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnRemoveGraphTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRemoveGraphTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 387</value>
+  </data>
+  <data name="btnRemoveGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRemoveGraphTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnRemoveGraphTag.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnRemoveGraphTag.Text" xml:space="preserve">
+    <value>＜＜</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.Name" xml:space="preserve">
+    <value>btnRemoveGraphTag</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveGraphTag.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 5</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>TXT_ANALYSIS_SETTING</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="lblSampleTiming.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
   </data>
@@ -5761,6 +5356,69 @@
   </data>
   <data name="&gt;&gt;btnRead.ZOrder" xml:space="preserve">
     <value>13</value>
+  </data>
+  <data name="grpAnalyzeFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="grpAnalyzeFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 28</value>
+  </data>
+  <data name="grpAnalyzeFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpAnalyzeFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="grpAnalyzeFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 173</value>
+  </data>
+  <data name="grpAnalyzeFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grpAnalyzeFile.Text" xml:space="preserve">
+    <value>TXT_ANALYSIS_FILE</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.Name" xml:space="preserve">
+    <value>grpAnalyzeFile</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;grpAnalyzeFile.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pnlMain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="pnlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 580</value>
+  </data>
+  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="btnStart.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>

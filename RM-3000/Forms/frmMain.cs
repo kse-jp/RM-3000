@@ -205,7 +205,7 @@ namespace RM_3000
             btn.BackgroundImage = imageList1[pos];
             btn.Tag = pos;
 
-            var f = new Forms.Analyze.frmAnalyzeStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.Manual, Top = 0, Left = 0, Dock = DockStyle.Fill };
+            var f = new Forms.Analyze.frmAnalyzeStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
             
             foreach (Control ctrl in pnlDrawArea.Controls)
             {
@@ -228,7 +228,7 @@ namespace RM_3000
             btn.Tag = pos;
 
 
-            var f = new Forms.Maintenance.frmSystemMainte() { TopLevel = false, StartPosition = FormStartPosition.Manual, Top = 0, Left = 0, Dock = DockStyle.Fill };
+            var f = new Forms.Maintenance.frmSystemMainte() { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
             foreach (Control ctrl in pnlDrawArea.Controls)
             {
                 if (ctrl is Form)
@@ -272,7 +272,7 @@ namespace RM_3000
                 }
             }
 
-            var f = new Forms.Measurement.frmMeasureStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.Manual, Top = 0, Left = 0, Dock = DockStyle.Fill };
+            var f = new Forms.Measurement.frmMeasureStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
 
             foreach (Control ctrl in pnlDrawArea.Controls)
             {

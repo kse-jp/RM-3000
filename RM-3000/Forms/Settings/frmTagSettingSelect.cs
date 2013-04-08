@@ -42,6 +42,10 @@ namespace RM_3000.Forms.Settings
         {
             set { this.setting = value; }
         }
+        /// <summary>
+        /// current editing tag
+        /// </summary>
+        public DataTag EditingTag { set; private get; }
         #endregion
 
         #region constructor
@@ -147,11 +151,23 @@ namespace RM_3000.Forms.Settings
         }
         private void frmTagSettingSelect_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.DialogResult == System.Windows.Forms.DialogResult.OK && this.currentData == null)
+            
+            if (this.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
-                e.Cancel = true;
-                MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (this.currentData == null || this.EditingTag == null)
+                {
+                    e.Cancel = true;
+                    MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (EditingTag != null && this.currentData.TagNo == EditingTag.TagNo)
+                {
+                    e.Cancel = true;
+                    MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }    
             }
+            
         }
         /// <summary>
         /// get this.currentData record

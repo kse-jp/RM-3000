@@ -577,6 +577,7 @@ namespace RM_3000.Forms.Settings
                 frmTagSettingSelect dialog = new frmTagSettingSelect();
                 dialog.SettingData = this.dataTagSetting;
                 dialog.EditingTag = this.currentTag;
+                dialog.IsMeasure = this.AnalyzeData == null ? true : false;
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     DataTag dt = dialog.SelectedDataTag;
@@ -684,8 +685,10 @@ namespace RM_3000.Forms.Settings
                     //call eval method
                     if (this.dataTagSetting != null && this.dataTagSetting.DataTagList != null)
                     {
+                        bool match = false;
                         for (index = 0; index < this.dataTagSetting.DataTagList.Length; index++)
                         {
+                            match = false;
                             //"@1[変位右上]"
                             variable = string.Format("@{0}[{1}]", index + 1, this.dataTagSetting.DataTagList[index].GetSystemTagName());
                             pos = temp.IndexOf(variable);
@@ -695,6 +698,27 @@ namespace RM_3000.Forms.Settings
                                 string tag = string.Format("TAG{0}", index + 1);
                                 string tempV = temp.Replace(variable, tag);
                                 temp = tempV;
+                                if (this.currentTag != null)
+                                {
+                                    if (this.currentTag.TagNo == this.dataTagSetting.DataTagList[index].TagNo)
+                                    {
+                                        match = true;
+                                    }
+                                    //check edition tag with other calc tag
+                                    else if (this.currentTag.TagKind == 2 || (!IsMeasure && this.currentTag.IsBlank))
+                                    {
+                                        if (this.dataTagSetting.DataTagList[index].TagKind == 2 || (!IsMeasure && this.dataTagSetting.DataTagList[index].IsBlank))
+                                        {
+                                            match = true;
+                                        }
+                                    }
+                                    if (match)
+                                    {
+                                        MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                                        CalcBtmEnabled(true);
+                                        return;
+                                    }
+                                }
                             }
                         }
                     }

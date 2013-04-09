@@ -131,7 +131,7 @@ namespace RM_3000
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_ON.png");
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
-
+            
             // Analyze Icon
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Analyze_OFF.png");
             imageList1.Add(Image.FromStream(fs, false, false));
@@ -186,6 +186,10 @@ namespace RM_3000
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Main\\POWER_on.png");
             imageList_PowerLED.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_Desabled.png");
+            imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
         }
@@ -333,6 +337,8 @@ namespace RM_3000
         private void toolStripButton_MouseEnter(object sender, EventArgs e)
         {
             ToolStripButton btn = (ToolStripButton)sender;
+            if (!btn.Enabled) return;
+
             int pos = (int)btn.Tag;
 
             if (pos % 3 == 2) return;
@@ -346,6 +352,8 @@ namespace RM_3000
         private void toolStripButton_MouseLeave(object sender, EventArgs e)
         {
             ToolStripButton btn = (ToolStripButton)sender;
+            if (!btn.Enabled) return;
+
             int pos = (int)btn.Tag;
 
             if (pos % 3 == 2) return;
@@ -425,17 +433,16 @@ namespace RM_3000
         {
             toolStripButton_Setting.BackgroundImage = imageList1[0];
             toolStripButton_Setting.Tag = 0;
-            toolStripButton_Measure.BackgroundImage = imageList1[3];
+
+            if (!toolStripButton_Measure.Enabled)
+                toolStripButton_Measure.BackgroundImage = imageList1[12];
+            else
+                toolStripButton_Measure.BackgroundImage = imageList1[3];
             toolStripButton_Measure.Tag = 3;
             toolStripButton_Anaryze.BackgroundImage = imageList1[6];
             toolStripButton_Anaryze.Tag = 6;
             toolStripButton_Mainte.BackgroundImage = imageList1[9];
             toolStripButton_Mainte.Tag = 9;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -538,6 +545,9 @@ namespace RM_3000
         /// <param name="e"></param>
         private void timStatusShow_Tick(object sender, EventArgs e)
         {
+            //測定可不可
+            toolStripButton_Measure.Enabled = (CommunicationMonitor.GetInstance().IsCanMeasure || SystemSetting.SystemConfig.IsSimulationMode);
+
             //オフライン
             if (!CommunicationMonitor.GetInstance().bUsbInited)
             {
@@ -581,6 +591,28 @@ namespace RM_3000
                 picStatusLED.Tag = 1;
             }
         }
-        
+
+        /// <summary>
+        /// 測定ボタンEnabledChange
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripButton_Measure_EnabledChanged(object sender, EventArgs e)
+        {
+            if (!toolStripButton_Measure.Enabled)
+                toolStripButton_Measure.BackgroundImage = imageList1[12];
+            else
+                if ((int)toolStripButton_Measure.Tag != 5)
+                {
+                    toolStripButton_Measure.BackgroundImage = imageList1[3];
+                    toolStripButton_Measure.Tag = 3;
+                }
+                else
+                {
+                    toolStripButton_Measure.BackgroundImage = imageList1[5];
+                    toolStripButton_Measure.Tag = 5;
+                }
+        }
+
     }
 }

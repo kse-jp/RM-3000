@@ -246,6 +246,8 @@ namespace RM_3000
         {
             bool ret = bMode1_Now_Record;
 
+            DateTime realdata_time = realdata.SampleTime;
+
             Mode1_MeasCondition cond = SystemSetting.MeasureSetting.Mode1_MeasCondition;
 
             switch (cond.MeasConditionType)
@@ -290,9 +292,13 @@ namespace RM_3000
 
                 case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS:
 
+                    if (realdata_time.Hour != Cond_StartTime_Mode1.Hour && realdata_time.Hour == 0)
+                        realdata_time.AddDays(1);
+
                     //測定時
                     if (bMode1_Now_Record)
                     {
+
                         if (Cond_ShotCount_Mode1 >= cond.Inverval_time2shot_shots)
                         {
                             Cond_ShotCount_Mode1 = 0;
@@ -300,7 +306,7 @@ namespace RM_3000
                             ret = false;
                         }
                         //測定ショット数よりも次回測定間隔が先に来てしまっている場合
-                        else if ((realdata.SampleTime - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
+                        else if ((realdata_time - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
                         {
                             //測定ショット数をクリアし測定のままとする。
                             Cond_ShotCount_Mode1 = 0;
@@ -317,7 +323,7 @@ namespace RM_3000
                     else
                     {
                         //時間経過をしていれば
-                        if ((realdata.SampleTime - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
+                        if ((realdata_time - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2shot_time)
                         {
                             Cond_StartTime_Mode1 = realdata.SampleTime;
 
@@ -332,8 +338,12 @@ namespace RM_3000
                     //測定時
                     if (bMode1_Now_Record)
                     {
+
+                        if (realdata_time.Hour != Cond_StartTime_Mode1.Hour && realdata_time.Hour == 0)
+                            realdata_time.AddDays(1);
+
                         //時間経過をしていれば
-                        if ((realdata.SampleTime - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2time_meastime)
+                        if ((realdata_time - Cond_StartTime_Mode1).TotalMinutes >= cond.Inverval_time2time_meastime)
                         {
                             Cond_ShotCount_Mode1 = 0;
                             Cond_StopTime_Mode1 = realdata.SampleTime;
@@ -349,8 +359,11 @@ namespace RM_3000
                     //未測定時
                     else
                     {
+                        if (realdata_time.Hour != Cond_StopTime_Mode1.Hour && realdata_time.Hour == 0)
+                            realdata_time.AddDays(1);
+
                         //時間経過をしていれば
-                        if ((realdata.SampleTime - Cond_StopTime_Mode1).TotalMinutes >= cond.Inverval_time2time_stoptime)
+                        if ((realdata_time - Cond_StopTime_Mode1).TotalMinutes >= cond.Inverval_time2time_stoptime)
                         {
                             Cond_StartTime_Mode1 = realdata.SampleTime;
                             Cond_ShotCount_Mode1++;

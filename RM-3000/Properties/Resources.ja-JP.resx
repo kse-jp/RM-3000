@@ -1328,4 +1328,36 @@
     <value>ボード設定のないチャンネルには項目を割り当てることはできません。</value>
     <comment>ボード設定のないチャンネルには項目を割り当てることはできません。</comment>
   </data>
+  <data name="TXT_MEAS_CONDITION" xml:space="preserve">
+    <value>測定条件</value>
+    <comment>測定条件</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_AVERAGE" xml:space="preserve">
+    <value>平均</value>
+    <comment>平均</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_SHOT" xml:space="preserve">
+    <value>間引</value>
+    <comment>間引</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_TIME2SHOT" xml:space="preserve">
+    <value>ショット数/分</value>
+    <comment>ショット数/定期時間</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_TIME2TIME" xml:space="preserve">
+    <value>測定(分)/停止(分)</value>
+    <comment>測定時間/停止時間</comment>
+  </data>
+  <data name="TXT_MEAS_TERM_LIMIT" xml:space="preserve">
+    <value>測定量指定</value>
+    <comment>測定量指定</comment>
+  </data>
+  <data name="TXT_NONE" xml:space="preserve">
+    <value>なし</value>
+    <comment>なし</comment>
+  </data>
+  <data name="TXT_UNIT_MINUTES" xml:space="preserve">
+    <value>分</value>
+    <comment>分</comment>
+  </data>
 </root>

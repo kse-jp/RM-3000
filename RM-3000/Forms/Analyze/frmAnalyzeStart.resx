@@ -4830,7 +4830,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnAddGraphTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 301</value>
+    <value>680, 387</value>
   </data>
   <data name="btnAddGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -4860,7 +4860,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnRemoveGraphTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 387</value>
+    <value>680, 301</value>
   </data>
   <data name="btnRemoveGraphTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>

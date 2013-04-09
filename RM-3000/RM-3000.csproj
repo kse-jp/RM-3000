@@ -809,6 +809,9 @@
     <Content Include="Resources\Images\Icons\MenuIcon_Mainte_ON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Icons\MenuIcon_Measure_Desabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Icons\MenuIcon_Measure_MouseON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

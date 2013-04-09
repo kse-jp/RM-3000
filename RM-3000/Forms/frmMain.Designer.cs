@@ -79,7 +79,7 @@
             this.toolStripButton_Setting.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.toolStripButton_Setting.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton_Setting.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Setting.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Setting.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Setting.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Setting.Name = "toolStripButton_Setting";
@@ -96,7 +96,7 @@
             this.toolStripButton_Measure.AutoSize = false;
             this.toolStripButton_Measure.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Measure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripButton_Measure.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Measure.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Measure.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Measure.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Measure.Name = "toolStripButton_Measure";
@@ -105,6 +105,7 @@
             this.toolStripButton_Measure.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton_Measure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton_Measure.Click += new System.EventHandler(this.toolStripButton_Measure_Click);
+            this.toolStripButton_Measure.EnabledChanged += new System.EventHandler(this.toolStripButton_Measure_EnabledChanged);
             this.toolStripButton_Measure.MouseEnter += new System.EventHandler(this.toolStripButton_MouseEnter);
             this.toolStripButton_Measure.MouseLeave += new System.EventHandler(this.toolStripButton_MouseLeave);
             // 
@@ -113,7 +114,7 @@
             this.toolStripButton_Anaryze.AutoSize = false;
             this.toolStripButton_Anaryze.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Anaryze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripButton_Anaryze.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Anaryze.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Anaryze.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Anaryze.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Anaryze.Name = "toolStripButton_Anaryze";
@@ -130,7 +131,7 @@
             this.toolStripButton_Mainte.AutoSize = false;
             this.toolStripButton_Mainte.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton_Mainte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripButton_Mainte.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.toolStripButton_Mainte.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.toolStripButton_Mainte.ForeColor = System.Drawing.Color.White;
             this.toolStripButton_Mainte.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Mainte.Name = "toolStripButton_Mainte";
@@ -164,7 +165,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 

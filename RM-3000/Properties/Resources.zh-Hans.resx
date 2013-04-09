@@ -1363,4 +1363,20 @@ Please try restart agin.</comment>
     <value>ボード設定のないチャンネルには項目を割り当てることはできません。</value>
     <comment>ボード設定のないチャンネルには項目を割り当てることはできません。</comment>
   </data>
+  <data name="TXT_MEAS_CONDITION" xml:space="preserve">
+    <value>測定条件</value>
+    <comment>測定条件</comment>
+  </data>
+  <data name="TXT_MEAS_TERM_LIMIT" xml:space="preserve">
+    <value>測定量指定</value>
+    <comment>測定量指定</comment>
+  </data>
+  <data name="TXT_NONE" xml:space="preserve">
+    <value>无</value>
+    <comment>None</comment>
+  </data>
+  <data name="TXT_UNIT_MINUTES" xml:space="preserve">
+    <value>分</value>
+    <comment>分</comment>
+  </data>
 </root>

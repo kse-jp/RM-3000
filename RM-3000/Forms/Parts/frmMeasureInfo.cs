@@ -81,19 +81,104 @@ namespace RM_3000.Forms.Parts
                 switch (this.MeasSetting.Mode)
                 {
                     case 1:
-                        this.lblSamplingRate.Text = "TXT_SAMPLING_COUNT";
-                        this.lblUnit.Text = "TXT_NUMBER_OF_TIMES";
-                        this.lblSamplingPeriod.Text = this.MeasSetting.SamplingCountLimit.ToString();
+                        //測定周期の非表示
+                        pnlSamplingPeriod.Visible = false;
+
+                        if (this.MeasSetting.SamplingCountLimit != 0)
+                        {
+                            //this.lblSamplingRate.Text = "TXT_SAMPLING_COUNT";
+                            this.lblUnit2.Text = "TXT_NUMBER_OF_TIMES";
+                            this.lblTermLimit.Text = this.MeasSetting.SamplingCountLimit.ToString();
+                        }
+                        else
+                        {
+                            this.lblTermLimit.Text = AppResource.GetString("TXT_NONE");
+                        }
+
+                        //測定条件
+                        pnlCondition.Visible = true;
+
+                        switch (this.MeasSetting.Mode1_MeasCondition.MeasConditionType)
+                        {
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS:
+                                this.lblCondition.Text = AppResource.GetString("TXT_MEAS_EVERY_SHOT");
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS:
+                                this.lblCondition.Text = AppResource.GetString(AppResource.GetString("TXT_MEAS_SHORT_AVERAGE"));
+                                this.lblConditionValue.Text = 
+                                    string.Format("[1/{0}{1}]"
+                                    , this.MeasSetting.Mode1_MeasCondition.Average_count
+                                    , AppResource.GetString("TXT_SHOT_UNIT")
+                                    );
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS:
+                                this.lblCondition.Text = AppResource.GetString(AppResource.GetString("TXT_MEAS_SHORT_INT_SHOT"));
+                                this.lblConditionValue.Text =
+                                    string.Format("[1/{0}{1}]"
+                                    , this.MeasSetting.Mode1_MeasCondition.Interval_count
+                                    , AppResource.GetString("TXT_SHOT_UNIT")
+                                    );
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS:
+                                this.lblCondition.Text = AppResource.GetString("TXT_MEAS_SHORT_INT_TIME2SHOT");
+                                this.lblConditionValue.Text =
+                                    string.Format("[{0}/{1}]"
+                                    , this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_shots
+                                    , this.MeasSetting.Mode1_MeasCondition.Inverval_time2shot_time
+                                    );
+                                break;
+                            case Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME:
+                                this.lblCondition.Text = AppResource.GetString("TXT_MEAS_SHORT_INT_TIME2TIME");
+                                this.lblConditionValue.Text =
+                                    string.Format("[{0}/{1}]"
+                                    , this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_meastime
+                                    , this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_stoptime
+                                    );
+
+                                break;
+                        }
+
                         break;
                     case 2:
+                        pnlSamplingPeriod.Visible = true;
+
                         this.lblSamplingRate.Text = "TXT_SAMPLING_PERIOD";
                         this.lblUnit.Text = "TXT_UNIT_MICROSECOND";
                         this.lblSamplingPeriod.Text = this.MeasSetting.SamplingTiming_Mode2.ToString();
+
+                        if (this.MeasSetting.MeasureTime_Mode2 != 0)
+                        {
+                            this.lblUnit2.Text = "TXT_UNIT_SECOND";
+                            this.lblTermLimit.Text = this.MeasSetting.MeasureTime_Mode2.ToString();
+                        }
+                        else
+                        {
+                            this.lblTermLimit.Text = AppResource.GetString("TXT_NONE");
+                        }
+
+                        pnlCondition.Visible = false;
+                        
                         break;
                     case 3:
+
+                        pnlSamplingPeriod.Visible = true;
+                        
                         this.lblSamplingRate.Text = "TXT_SAMPLING_PERIOD";
                         this.lblUnit.Text = "TXT_UNIT_MICROSECOND";
                         this.lblSamplingPeriod.Text = this.MeasSetting.SamplingTiming_Mode3.ToString();
+
+                        if (this.MeasSetting.MeasureTime_Mode3 != 0)
+                        {
+                            this.lblUnit2.Text = "TXT_UNIT_SECOND";
+                            this.lblTermLimit.Text = this.MeasSetting.MeasureTime_Mode3.ToString();
+                        }
+                        else
+                        {
+                            this.lblTermLimit.Text = AppResource.GetString("TXT_NONE");
+                        }
+                        
+                        pnlCondition.Visible = false;
+
                         break;
                 }
 
@@ -110,5 +195,10 @@ namespace RM_3000.Forms.Parts
 
         
         #endregion
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

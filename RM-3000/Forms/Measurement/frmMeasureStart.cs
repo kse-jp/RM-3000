@@ -1131,9 +1131,14 @@ namespace RM_3000.Forms.Measurement
                         var r = dgvGraphDetail.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
                         var y = r.Location.Y;
 
-                        this.cmbColor.Top = r.Location.Y + r.Height / 2;
-                        this.cmbColor.Left = r.Location.X + r.Width / 2 - this.cmbColor.Width;
+                        this.cmbColor.Width = r.Width;
+                        this.cmbColor.Top = r.Location.Y;
+                        this.cmbColor.Left = r.Location.X;
+                        this.cmbColor.DropDownClosed += new EventHandler(cmbColor_DropDownClosed);
+                        this.cmbColor.VisibleChanged += new EventHandler(cmbColor_VisibleChanged);
+                        this.cmbColor.MouseLeave += new EventHandler(cmbColor_MouseLeave);
                         this.cmbColor.Visible = true;
+                        this.cmbColor.DroppedDown = true;
                     }
                 }
             }
@@ -1142,6 +1147,40 @@ namespace RM_3000.Forms.Measurement
                 ShowErrorMessage(ex);
             }
         }
+
+
+        /// <summary>
+        /// カラーコンボ マウスLeave
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void cmbColor_MouseLeave(object sender, EventArgs e)
+        {
+            this.cmbColor.DroppedDown = false;
+        }
+
+        /// <summary>
+        /// カラーコンボ VisibleChanged
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void cmbColor_VisibleChanged(object sender, EventArgs e)
+        {
+            this.cmbColor.DropDownClosed -= cmbColor_DropDownClosed;
+            this.cmbColor.VisibleChanged -= cmbColor_VisibleChanged;
+            this.cmbColor.MouseLeave -= cmbColor_MouseLeave;
+        }
+
+        /// <summary>
+        /// カラーコンボ DropDownClosed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void cmbColor_DropDownClosed(object sender, EventArgs e)
+        {
+            this.cmbColor.Visible = false;
+        }
+
         /// <summary>
         /// グラフ色選択イベント
         /// </summary>
@@ -1402,7 +1441,7 @@ namespace RM_3000.Forms.Measurement
 
         private void dgvGraphDetail_MouseLeave(object sender, EventArgs e)
         {
-            //if (cmbColor.Focused)
+            if (cmbColor.Focused)
             {
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }

@@ -259,13 +259,13 @@
       <TagNo>19</TagNo>
       <TagKind>2</TagKind>
       <Point>0</Point>
-      <Expression>@19[Calc1]</Expression>
+      <Expression>@19[Calc1]@17[L測定]</Expression>
       <StaticZero>0</StaticZero>
       <TagNameE>Calc1</TagNameE>
-      <TagNameJ />
+      <TagNameJ>Calc1</TagNameJ>
       <TagNameC />
       <UnitE>um</UnitE>
-      <UnitJ />
+      <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>

@@ -5,7 +5,11 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>1</ChNo>
-      <ChKind>N</ChKind>
+      <ChKind>R</ChKind>
+      <BoardSetting xsi:type="R_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Precision>false</Precision>
+      </BoardSetting>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
@@ -24,35 +28,55 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>3</ChNo>
-      <ChKind>N</ChKind>
+      <ChKind>R</ChKind>
+      <BoardSetting xsi:type="R_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Precision>true</Precision>
+      </BoardSetting>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>4</ChNo>
-      <ChKind>N</ChKind>
+      <ChKind>R</ChKind>
+      <BoardSetting xsi:type="R_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Precision>true</Precision>
+      </BoardSetting>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>5</ChNo>
-      <ChKind>N</ChKind>
+      <ChKind>R</ChKind>
+      <BoardSetting xsi:type="R_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Precision>true</Precision>
+      </BoardSetting>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>6</ChNo>
-      <ChKind>N</ChKind>
+      <ChKind>R</ChKind>
+      <BoardSetting xsi:type="R_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Precision>true</Precision>
+      </BoardSetting>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>7</ChNo>
-      <ChKind>N</ChKind>
+      <ChKind>R</ChKind>
+      <BoardSetting xsi:type="R_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Precision>true</Precision>
+      </BoardSetting>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>

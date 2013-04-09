@@ -421,7 +421,8 @@ namespace RM_3000
 			for (int i = 0; i < settingList.Count; i++)
 			{
 				SettingItem item = settingList[i];
-				if (item.x >= 0 && item.y >= 0){
+				if (item.x >= 0 && item.y >= 0)
+                {
 					x = item.x;
 					y = item.y;
 					direction = item.measureDirection;
@@ -439,6 +440,7 @@ namespace RM_3000
 						this.setSensorContextMenu(sensor);
 						//this.settingListSelectedRowChange(i, item.type);
 
+                        // set this sensor to Active Sensor.
 						this.activeSensorB(sensor);
 
 						sensor.UpdateLayout();
@@ -459,24 +461,18 @@ namespace RM_3000
 						CanvasSensor sensor = this.newSensorR(i);
 						sensor.isNew = false;
 						sensor.SnapsToDevicePixels = true;
+                        sensor.direction = direction;
 
 						Canvas.SetTop(sensor, 0);
 						Canvas.SetRight(sensor, 0);
 						this.cvsBase.Children.Add(sensor);
 						this.setSensorContextMenu(sensor);
 
-						this.activeSensorR(sensor);
-
-						sensor.UpdateLayout();
-
 						this.locationSetting.setSensorPositionX(i, -1);
 						this.locationSetting.setSensorPositionY(i, -1);
 
-						sensor.direction = direction;
-
 						int pressKanagataX = (int)System.Math.Floor(((double)this.settingStage.bolsterWidth - (double)this.settingStage.pressKanagataWidth) / 2);
 						int pressKanagataY = (int)System.Math.Floor(((double)this.settingStage.bolsterHeight - (double)this.settingStage.pressKanagataHeight) / 2);
-
 
 						if (x >= pressKanagataX &&
 							x <= pressKanagataX + this.settingStage.pressKanagataWidth &&
@@ -490,7 +486,11 @@ namespace RM_3000
 							sensor.target = SENSOR_TARGET_UNDER_KANAGATA;
 						}
 
-						this.setSensorPosition(i, x, y, true);
+                        this.activeSensorR(sensor);
+                        sensor.UpdateLayout();
+
+
+                        this.setSensorPosition(i, x, y, true);
 
 						this.changeMeasureTarget(i);
 
@@ -500,7 +500,6 @@ namespace RM_3000
 				}
 			}
 		}
-
         /// <summary>
         /// センサ描画の削除
         /// </summary>
@@ -511,7 +510,6 @@ namespace RM_3000
             this.cvsRoot.Children.Remove(sensor);
             this.cvsBase.Children.Remove(sensor);
             this.sensorList[chIndex] = null;
-
             this.locationSetting.removeSensor(chIndex);
         }
 

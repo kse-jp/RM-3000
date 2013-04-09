@@ -46,6 +46,10 @@ namespace RM_3000.Forms.Settings
         /// current editing tag
         /// </summary>
         public DataTag EditingTag { set; private get; }
+        /// <summary>
+        /// check mode
+        /// </summary>
+        public bool IsMeasure { set; get; }
         #endregion
 
         #region constructor
@@ -160,11 +164,25 @@ namespace RM_3000.Forms.Settings
                     MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                if (EditingTag != null && this.currentData.TagNo == EditingTag.TagNo)
+                if (EditingTag != null)
                 {
-                    e.Cancel = true;
-                    MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
+                    //check to not select the same tag as editing tag
+                    if (this.currentData.TagNo == EditingTag.TagNo)
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    else if (this.EditingTag.TagKind == 2 || (!this.IsMeasure && this.EditingTag.IsBlank))
+                    {
+                        //check not to select Calc Tag to Calc tag
+                        if (this.currentData.TagKind == 2 || (!this.IsMeasure && this.currentData.IsBlank))
+                        {
+                            e.Cancel = true;
+                            MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                    }
                 }    
             }
             

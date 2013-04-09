@@ -1281,10 +1281,9 @@ namespace GraphLib
                 //Update Channel
                 if (updateCH)
                 {
-                    bool chkinfosame = CheckChannelInfoIsSame();
-
                     if (_GraphInfo.ChannelInfos != null)
                     {
+                        bool chkinfosame = CheckChannelInfoIsSame();
                         if (!chkinfosame)
                         {
                             this.Dispatcher.BeginInvoke(new Action(ClearGraph), System.Windows.Threading.DispatcherPriority.Normal, null);
@@ -4685,7 +4684,7 @@ namespace GraphLib
         /// </summary>
         /// <returns></returns>
         private bool CheckChannelInfoIsSame()
-        {
+        {                        
             ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
             bool chksame = true;
 

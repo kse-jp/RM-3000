@@ -514,25 +514,25 @@ namespace Graph3DLib.Model
                 bottomplatepoint[6] = new Point3D(platewidth, platepos_y + 1, platedeep);
                 bottomplatepoint[7] = new Point3D(-platewidth, platepos_y + 1, platedeep);
 
-                labelfront[0] = new Point3D(-0.5, rampos_y + 1, ramdeep + .0001);
-                labelfront[1] = new Point3D(0.5, rampos_y + 1, ramdeep + .0001);
-                labelfront[2] = new Point3D(0.5, rampos_y, ramdeep + .0001);
-                labelfront[3] = new Point3D(-0.5, rampos_y, ramdeep + .0001);
+                labelfront[0] = new Point3D(-0.5, rampos_y + 1, ramdeep + .001);
+                labelfront[1] = new Point3D(0.5, rampos_y + 1, ramdeep + .001);
+                labelfront[2] = new Point3D(0.5, rampos_y, ramdeep + .001);
+                labelfront[3] = new Point3D(-0.5, rampos_y, ramdeep + .001);
 
-                labelback[1] = new Point3D(-0.5, 1 + rampos_y, -(ramdeep + .0001));
-                labelback[0] = new Point3D(0.5, 1 + rampos_y, -(ramdeep + .0001));
-                labelback[3] = new Point3D(0.5, rampos_y, -(ramdeep + .0001));
-                labelback[2] = new Point3D(-0.5, rampos_y, -(ramdeep + .0001));
+                labelback[1] = new Point3D(-0.5, 1 + rampos_y, -(ramdeep + .001));
+                labelback[0] = new Point3D(0.5, 1 + rampos_y, -(ramdeep + .001));
+                labelback[3] = new Point3D(0.5, rampos_y, -(ramdeep + .001));
+                labelback[2] = new Point3D(-0.5, rampos_y, -(ramdeep + .001));
 
-                labelleft[0] = new Point3D(-(ramwidth + .0001), 1 + rampos_y, -0.5);
-                labelleft[1] = new Point3D(-(ramwidth + .0001), 1 + rampos_y, 0.5);
-                labelleft[2] = new Point3D(-(ramwidth + .0001), rampos_y, 0.5);
-                labelleft[3] = new Point3D(-(ramwidth + .0001), rampos_y, -0.5);
+                labelleft[0] = new Point3D(-(ramwidth + .001), 1 + rampos_y, -0.5);
+                labelleft[1] = new Point3D(-(ramwidth + .001), 1 + rampos_y, 0.5);
+                labelleft[2] = new Point3D(-(ramwidth + .001), rampos_y, 0.5);
+                labelleft[3] = new Point3D(-(ramwidth + .001), rampos_y, -0.5);
 
-                labelright[1] = new Point3D(ramwidth + .0001, 1 + rampos_y, -0.5);
-                labelright[0] = new Point3D(ramwidth + .0001, 1 + rampos_y, 0.5);
-                labelright[3] = new Point3D(ramwidth + .0001, rampos_y, 0.5);
-                labelright[2] = new Point3D(ramwidth + .0001, rampos_y, -0.5);
+                labelright[1] = new Point3D(ramwidth + .001, 1 + rampos_y, -0.5);
+                labelright[0] = new Point3D(ramwidth + .001, 1 + rampos_y, 0.5);
+                labelright[3] = new Point3D(ramwidth + .001, rampos_y, 0.5);
+                labelright[2] = new Point3D(ramwidth + .001, rampos_y, -0.5);
 
 
                 //if (!_IsImageTexture)

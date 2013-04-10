@@ -34,6 +34,9 @@ namespace RM_3000.Controls
 		public uctrlLocationTargetSetting()
 		{
 			InitializeComponent();
+
+            AppResource.SetControlsText(this);
+
 		}
 
 		public void activeTarget(Canvas cvs, Rectangle rect)

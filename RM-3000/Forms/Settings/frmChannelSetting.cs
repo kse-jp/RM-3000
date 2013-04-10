@@ -324,7 +324,12 @@ namespace RM_3000.Forms.Settings
                             this.oldSetting[k] = this.setting.ChannelSettingList[k].ChKind;
 
                             //小数点桁数
-                            this.uctrlArray[k].NumPoint = this.setting.ChannelSettingList[k].NumPoint;
+                            this.uctrlArray[k].PointVisible = !SystemSetting.HardInfoStruct.IsExportMode;
+
+                            if (SystemSetting.HardInfoStruct.IsExportMode)
+                                this.uctrlArray[k].NumPoint = 0;
+                            else
+                                this.uctrlArray[k].NumPoint = this.setting.ChannelSettingList[k].NumPoint;
                         }
                         else
                         { 

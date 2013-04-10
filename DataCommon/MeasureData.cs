@@ -306,6 +306,9 @@ namespace DataCommon
         /// </summary>
         public void ClearMeasure()
         {
+            this.endTime = DateTime.MaxValue;
+            this.startTime = DateTime.MinValue;
+
             if(sampleDatas != null)
                 sampleDatas.Clear();
         }

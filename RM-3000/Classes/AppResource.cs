@@ -97,9 +97,9 @@ namespace RM_3000
 
         }
 
-        public static void SetControlsText(Control parent)
+        public static void SetControlsText(System.Windows.Forms.Control parent)
         {
-            Control c;
+            System.Windows.Forms.Control c;
             string s;
             parent.Text = GetString(parent.Text);
             for (int i = 0; i <= parent.Controls.Count - 1; i++)
@@ -160,6 +160,42 @@ namespace RM_3000
                 }
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="parent"></param>
+        public static void SetControlsText(System.Windows.DependencyObject parent)
+        {
+            foreach (var child in System.Windows.LogicalTreeHelper.GetChildren(parent))
+            {
+                switch (child.GetType().Name.ToLower())
+                {
+                    case "label":
+                        ((System.Windows.Controls.Label)child).Content = GetString(((System.Windows.Controls.Label)child).Content.ToString());
+                        break;
+                    case "button":
+                        ((System.Windows.Controls.Button)child).Content = GetString(((System.Windows.Controls.Button)child).Content.ToString());
+                        break;
+                    case "radiobutton":
+                        ((System.Windows.Controls.RadioButton)child).Content = GetString(((System.Windows.Controls.RadioButton)child).Content.ToString());
+                        break;
+                    case "textbox":
+                        ((System.Windows.Controls.TextBox)child).Text = GetString(((System.Windows.Controls.TextBox)child).Text);
+                        break;
+                    case "textblock":
+                        ((System.Windows.Controls.TextBlock)child).Text = GetString(((System.Windows.Controls.TextBlock)child).Text);
+                        break;
+                    default:
+                        if (child is System.Windows.DependencyObject)
+                        {
+                            SetControlsText((System.Windows.DependencyObject)child);
+                        }
+                        break;
+                }
+            }
+        }
+
         public void EnableControls(Control parent, bool bEnable)
         {
             if (bEnable)

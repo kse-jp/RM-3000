@@ -1379,4 +1379,28 @@ Please try restart agin.</comment>
     <value>分</value>
     <comment>分</comment>
   </data>
+  <data name="TXT_BOLSTER" xml:space="preserve">
+    <value>工作台</value>
+    <comment>ボルスター</comment>
+  </data>
+  <data name="TXT_LOWER_BACKING_PLATE" xml:space="preserve">
+    <value>垫板（下）</value>
+    <comment>バッキングプレート(下)</comment>
+  </data>
+  <data name="TXT_LOWER_MOLD" xml:space="preserve">
+    <value>下模</value>
+    <comment>下金型</comment>
+  </data>
+  <data name="TXT_RAM" xml:space="preserve">
+    <value>滑块</value>
+    <comment>ラム</comment>
+  </data>
+  <data name="TXT_UPPER_BACKING_PLATE" xml:space="preserve">
+    <value>垫板（上）</value>
+    <comment>バッキングプレート(上)</comment>
+  </data>
+  <data name="TXT_UPPER_MOLD" xml:space="preserve">
+    <value>上模</value>
+    <comment>上金型</comment>
+  </data>
 </root>

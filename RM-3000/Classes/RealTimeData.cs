@@ -122,7 +122,7 @@ namespace RM_3000
                     {
                         // 保存タイミング = 平均演算をする
                         if (bMode1_Now_Record)
-                        {
+                        {                           
                             for (int shotindex = 0 ; shotindex < TmpAverage_Samples.Count ; shotindex++)
                             {
                                 SampleData tmp = TmpAverage_Samples[shotindex];
@@ -133,23 +133,36 @@ namespace RM_3000
 
                                     if (realdata.ChannelDatas[i].DataValues is Value_Standard)
                                     {
-                                        ((Value_Standard)realdata.ChannelDatas[i].DataValues).Value += ((Value_Standard)tmp.ChannelDatas[i].DataValues).Value;
-
-                                        //全て足しこんだなら、平均演算
-                                        if (shotindex + 1 == TmpAverage_Samples.Count)
+                                        //初回はまず自分も平均しておく
+                                        if (shotindex == 0)
+                                        {
                                             ((Value_Standard)realdata.ChannelDatas[i].DataValues).Value /= TmpAverage_Samples.Count + 1;
+                                        }
+
+                                        ((Value_Standard)realdata.ChannelDatas[i].DataValues).Value += ((Value_Standard)tmp.ChannelDatas[i].DataValues).Value / (TmpAverage_Samples.Count + 1);
+
+                                        ////全て足しこんだなら、平均演算
+                                        //if (shotindex + 1 == TmpAverage_Samples.Count)
+                                        //    ((Value_Standard)realdata.ChannelDatas[i].DataValues).Value /= TmpAverage_Samples.Count + 1;
                                     }
                                     else if (realdata.ChannelDatas[i].DataValues is Value_MaxMin)
                                     {
-                                        ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MaxValue += ((Value_MaxMin)tmp.ChannelDatas[i].DataValues).MaxValue;
-                                        ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MinValue += ((Value_MaxMin)tmp.ChannelDatas[i].DataValues).MinValue;
-
-                                        //全て足しこんだなら、平均演算
-                                        if (shotindex + 1 == TmpAverage_Samples.Count)
+                                        //初回はまず自分も平均しておく
+                                        if (shotindex == 0)
                                         {
                                             ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MaxValue /= TmpAverage_Samples.Count + 1;
                                             ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MinValue /= TmpAverage_Samples.Count + 1;
                                         }
+
+                                        ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MaxValue += ((Value_MaxMin)tmp.ChannelDatas[i].DataValues).MaxValue / (TmpAverage_Samples.Count + 1);
+                                        ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MinValue += ((Value_MaxMin)tmp.ChannelDatas[i].DataValues).MinValue / (TmpAverage_Samples.Count + 1);
+
+                                        ////全て足しこんだなら、平均演算
+                                        //if (shotindex + 1 == TmpAverage_Samples.Count)
+                                        //{
+                                        //    ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MaxValue /= TmpAverage_Samples.Count + 1;
+                                        //    ((Value_MaxMin)realdata.ChannelDatas[i].DataValues).MinValue /= TmpAverage_Samples.Count + 1;
+                                        //}
                                     }
                                 }
                             }
@@ -417,10 +430,13 @@ namespace RM_3000
 
                     #region モード１時のオフセット対応
                     //モード１ で チャンネルがBかRならば
-                    bool bOffsetCalc = (SystemSetting.MeasureSetting.Mode == (int)ModeType.MODE1 && receiveCount != 0) &&
-                                        (SystemSetting.ChannelsSetting.ChannelSettingList[i - 1].ChKind == ChannelKindType.B
-                                            || SystemSetting.ChannelsSetting.ChannelSettingList[i - 1].ChKind == ChannelKindType.R);
+                    //bool bOffsetCalc = (SystemSetting.MeasureSetting.Mode == (int)ModeType.MODE1 && receiveCount != 0) &&
+                    //                    (SystemSetting.ChannelsSetting.ChannelSettingList[i - 1].ChKind == ChannelKindType.B
+                    //                        || SystemSetting.ChannelsSetting.ChannelSettingList[i - 1].ChKind == ChannelKindType.R);
 
+                    bool bOffsetCalc = (RM_3000.Sequences.TestSequence.GetInstance().Mode == Sequences.TestSequence.ModeType.Mode1 &&receiveCount != 0) &&
+                                        (SystemSetting.ChannelsSetting.ChannelSettingList[i - 1].ChKind == ChannelKindType.B
+                                        || SystemSetting.ChannelsSetting.ChannelSettingList[i - 1].ChKind == ChannelKindType.R);
                     #endregion
 
                     //TagNo1でチェック

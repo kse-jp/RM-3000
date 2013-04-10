@@ -133,6 +133,11 @@ namespace DataCommon
         private FileStream fs = null;
 
         /// <summary>
+        /// ファイル操作Lockオブジェクト
+        /// </summary>
+        private object FileLock = new object();
+
+        /// <summary>
         /// 自動書き込みフラグ
         /// </summary>
         private bool _AutoWriteFlag = false;
@@ -347,55 +352,58 @@ namespace DataCommon
         {
             List<SampleData> ret = null;
 
-            int readstartindex = 0;
-            int readCount = 0;
-
-            if (_startindex < SamplesCount)
+            lock (FileLock)
             {
-                //現在データ範囲内にない場合
-                if (_startindex < this.startIndex || _startindex + length > this.endIndex)
-                {
 
-                    if (length > MAX_DATA_READ_LENGTH)
+                int readstartindex = 0;
+                int readCount = 0;
+
+                if (_startindex < SamplesCount)
+                {
+                    //現在データ範囲内にない場合
+                    if (_startindex < this.startIndex || _startindex + length > this.endIndex)
                     {
-                        if (SamplesCount - _startindex < MAX_DATA_READ_LENGTH)
+
+                        if (length > MAX_DATA_READ_LENGTH)
                         {
-                            readstartindex = SamplesCount - MAX_DATA_READ_LENGTH;
+                            if (SamplesCount - _startindex < MAX_DATA_READ_LENGTH)
+                            {
+                                readstartindex = SamplesCount - MAX_DATA_READ_LENGTH;
+                            }
+                            else
+                            {
+                                readstartindex = _startindex;
+                            }
+
+                            readCount = MAX_DATA_READ_LENGTH;
                         }
                         else
                         {
                             readstartindex = _startindex;
+                            readCount = length;
                         }
 
-                        readCount = MAX_DATA_READ_LENGTH;
+                        //データ範囲読込
+                        DeserializeData(readstartindex, readCount);
                     }
-                    else
+
+                    if (_startindex + length > this.endIndex)
                     {
-                        readstartindex = _startindex;
-                        readCount = length;
+                        length = this.endIndex - _startindex;
                     }
 
-                    //データ範囲読込
-                    DeserializeData(readstartindex, readCount);
+                    ret = new List<SampleData>();
+
+                    foreach (SampleData sd in sampleDatas.GetRange(_startindex - this.startIndex, length))
+                    {
+                        if (sd != null)
+                            ret.Add((SampleData)sd.Clone());
+                        else
+                            ret.Add(null);
+                    }
                 }
 
-                if (_startindex + length > this.endIndex)
-                {
-                    length = this.endIndex - _startindex;
-                }
-
-                ret = new List<SampleData>();
-
-                foreach (SampleData sd in sampleDatas.GetRange(_startindex - this.startIndex, length))
-                {
-                    if (sd != null)
-                        ret.Add((SampleData)sd.Clone());
-                    else
-                        ret.Add(null);
-                }          
             }
-
-
             return ret;
         }
 
@@ -527,37 +535,40 @@ namespace DataCommon
 
             try
             {
-                //ファイルストリームのOPEN
-                if (fs != null)
+                lock (FileLock)
                 {
-                    fs.Close();
-                    fs = null;
+                    //ファイルストリームのOPEN
+                    if (fs != null)
+                    {
+                        fs.Close();
+                        fs = null;
+                    }
+
+                    if (File.Exists(filePath))
+                    {
+                        fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                    }
+                    else
+                    {
+                        //ファイル読み込みエラー
+                        throw new Exception(CommonResource.GetString("ERROR_FILE_NOT_FOUND"));
+                    }
+
+                    //ヘッダデータの読込
+                    if (HeaderData == null)
+                    {
+                        fs.Read(buffer, 0, SampleDataHeader.DATALENGTH);
+
+                        HeaderData = new SampleDataHeader();
+                        HeaderData.Data = (new List<byte>(buffer)).GetRange(0, SampleDataHeader.DATALENGTH).ToArray();
+                    }
+
+                    //レコードサイズ
+                    SizeofOneSample = HeaderData.SizeofOneSample;
+
+                    //チャンネル数
+                    channelcount = HeaderData.ChannelCount;
                 }
-
-                if (File.Exists(filePath))
-                {
-                    fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-                }
-                else
-                {
-                    //ファイル読み込みエラー
-                    throw new Exception(CommonResource.GetString("ERROR_FILE_NOT_FOUND"));
-                }
-
-                //ヘッダデータの読込
-                if (HeaderData == null)
-                {
-                    fs.Read(buffer, 0, SampleDataHeader.DATALENGTH);
-
-                    HeaderData = new SampleDataHeader();
-                    HeaderData.Data = (new List<byte>(buffer)).GetRange(0, SampleDataHeader.DATALENGTH).ToArray();
-                }
-
-                //レコードサイズ
-                SizeofOneSample = HeaderData.SizeofOneSample;
-
-                //チャンネル数
-                channelcount = HeaderData.ChannelCount;
             }
             finally
             {
@@ -577,6 +588,7 @@ namespace DataCommon
             byte[] tmpsizebuff = new byte[2];
             UInt16 samplecount = 0;
             int channelcount = 0;
+
 
             //ファイルストリームのOPEN
             if (fs == null)
@@ -606,7 +618,7 @@ namespace DataCommon
 
             //チャンネル数
             channelcount = HeaderData.ChannelCount;
-            
+
             //データのクリア
             sampleDatas.Clear();
 
@@ -678,11 +690,11 @@ namespace DataCommon
                             {
                                 case SampleDataHeader.CHANNELDATATYPE.NONE:
                                     continue;
-                                    
+
                                 case SampleDataHeader.CHANNELDATATYPE.SINGLEDATA:
                                     smp.ChannelDatas[channelNo] = new ChannelData();
                                     smp.ChannelDatas[channelNo].DataValues = new Value_Standard();
-                                    
+
                                     smp.ChannelDatas[channelNo].Position = buffer[offset];
                                     offset++;
 
@@ -692,7 +704,7 @@ namespace DataCommon
                                 case SampleDataHeader.CHANNELDATATYPE.DOUBLEDATA:
                                     smp.ChannelDatas[channelNo] = new ChannelData();
                                     smp.ChannelDatas[channelNo].DataValues = new Value_MaxMin();
-                                    
+
                                     smp.ChannelDatas[channelNo].Position = buffer[offset];
                                     offset++;
 
@@ -732,7 +744,7 @@ namespace DataCommon
                                         smp.ChannelDatas[channelNo].Position = tmpsizebuff[0];
 
                                         smp.ChannelDatas[channelNo].DataValues = new Value_Standard();
-                                        
+
                                         //回転数の取得
                                         fs.Read(buffer, 0, ONE_DATA_SIZE);
 
@@ -776,7 +788,8 @@ namespace DataCommon
 
             //オンメモリのデータのインデックス設定
             this.startIndex = startIndex;
-            this.endIndex = startIndex + length;           
+            this.endIndex = startIndex + length;
+
         }
         
         #endregion

@@ -462,6 +462,19 @@ namespace RM_3000.Controls
             }
         }
 
+        /// <summary>
+        /// Point Enabled
+        /// </summary>
+        public bool PointVisible
+        {
+            get { return cmbPoint.Visible; }
+            set
+            {
+                cmbPoint.Visible = value;
+                lblPoint.Visible = value;
+            }
+        }
+
         #endregion
 
         #region constructor

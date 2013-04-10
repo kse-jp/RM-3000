@@ -30,7 +30,7 @@
         {
             this.grpChannel = new System.Windows.Forms.GroupBox();
             this.cmbPoint = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPoint = new System.Windows.Forms.Label();
             this.pnlBoard_V = new System.Windows.Forms.Panel();
             this.ntbFullScale_V = new RM_3000.Controls.NumericTextBox();
             this.ntbZeroScale_V = new RM_3000.Controls.NumericTextBox();
@@ -81,7 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpChannel.Controls.Add(this.cmbPoint);
-            this.grpChannel.Controls.Add(this.label5);
+            this.grpChannel.Controls.Add(this.lblPoint);
             this.grpChannel.Controls.Add(this.pnlBoard_V);
             this.grpChannel.Controls.Add(this.pnlBoard_L);
             this.grpChannel.Controls.Add(this.cmbKindBoard);
@@ -107,17 +107,17 @@
             this.cmbPoint.TabIndex = 10;
             this.cmbPoint.SelectedIndexChanged += new System.EventHandler(this.cmbPoint_SelectedIndexChanged);
             // 
-            // label5
+            // lblPoint
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblPoint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(7, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 18);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "TXT_TAG_SETTING_POINT";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPoint.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblPoint.Location = new System.Drawing.Point(7, 65);
+            this.lblPoint.Name = "lblPoint";
+            this.lblPoint.Size = new System.Drawing.Size(135, 18);
+            this.lblPoint.TabIndex = 9;
+            this.lblPoint.Text = "TXT_TAG_SETTING_POINT";
+            this.lblPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnlBoard_V
             // 
@@ -207,7 +207,7 @@
             this.rdoRange4_V.Location = new System.Drawing.Point(10, 91);
             this.rdoRange4_V.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange4_V.Name = "rdoRange4_V";
-            this.rdoRange4_V.Size = new System.Drawing.Size(59, 19);
+            this.rdoRange4_V.Size = new System.Drawing.Size(52, 16);
             this.rdoRange4_V.TabIndex = 3;
             this.rdoRange4_V.TabStop = true;
             this.rdoRange4_V.Text = "20mA";
@@ -219,7 +219,7 @@
             this.rdoRange3_V.Location = new System.Drawing.Point(10, 67);
             this.rdoRange3_V.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange3_V.Name = "rdoRange3_V";
-            this.rdoRange3_V.Size = new System.Drawing.Size(51, 19);
+            this.rdoRange3_V.Size = new System.Drawing.Size(45, 16);
             this.rdoRange3_V.TabIndex = 2;
             this.rdoRange3_V.TabStop = true;
             this.rdoRange3_V.Text = "0.1V";
@@ -231,7 +231,7 @@
             this.rdoRange2_V.Location = new System.Drawing.Point(10, 44);
             this.rdoRange2_V.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange2_V.Name = "rdoRange2_V";
-            this.rdoRange2_V.Size = new System.Drawing.Size(45, 19);
+            this.rdoRange2_V.Size = new System.Drawing.Size(39, 16);
             this.rdoRange2_V.TabIndex = 1;
             this.rdoRange2_V.TabStop = true;
             this.rdoRange2_V.Text = "１V";
@@ -243,7 +243,7 @@
             this.rdoRange1_V.Location = new System.Drawing.Point(10, 21);
             this.rdoRange1_V.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange1_V.Name = "rdoRange1_V";
-            this.rdoRange1_V.Size = new System.Drawing.Size(47, 19);
+            this.rdoRange1_V.Size = new System.Drawing.Size(43, 16);
             this.rdoRange1_V.TabIndex = 0;
             this.rdoRange1_V.TabStop = true;
             this.rdoRange1_V.Text = "10V";
@@ -271,7 +271,7 @@
             this.rdoFilter3_V.Location = new System.Drawing.Point(10, 67);
             this.rdoFilter3_V.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoFilter3_V.Name = "rdoFilter3_V";
-            this.rdoFilter3_V.Size = new System.Drawing.Size(67, 19);
+            this.rdoFilter3_V.Size = new System.Drawing.Size(55, 16);
             this.rdoFilter3_V.TabIndex = 2;
             this.rdoFilter3_V.TabStop = true;
             this.rdoFilter3_V.Text = "100Hｚ";
@@ -283,7 +283,7 @@
             this.rdoFilter2_V.Location = new System.Drawing.Point(10, 44);
             this.rdoFilter2_V.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoFilter2_V.Name = "rdoFilter2_V";
-            this.rdoFilter2_V.Size = new System.Drawing.Size(61, 19);
+            this.rdoFilter2_V.Size = new System.Drawing.Size(50, 16);
             this.rdoFilter2_V.TabIndex = 1;
             this.rdoFilter2_V.TabStop = true;
             this.rdoFilter2_V.Text = "1KHｚ";
@@ -295,7 +295,7 @@
             this.rdoFilter1_V.Location = new System.Drawing.Point(10, 21);
             this.rdoFilter1_V.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoFilter1_V.Name = "rdoFilter1_V";
-            this.rdoFilter1_V.Size = new System.Drawing.Size(160, 19);
+            this.rdoFilter1_V.Size = new System.Drawing.Size(141, 16);
             this.rdoFilter1_V.TabIndex = 0;
             this.rdoFilter1_V.TabStop = true;
             this.rdoFilter1_V.Text = "TXT_NONE_HIRAKANA";
@@ -386,7 +386,7 @@
             this.rdoRange4_L.Location = new System.Drawing.Point(10, 91);
             this.rdoRange4_L.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange4_L.Name = "rdoRange4_L";
-            this.rdoRange4_L.Size = new System.Drawing.Size(76, 19);
+            this.rdoRange4_L.Size = new System.Drawing.Size(68, 16);
             this.rdoRange4_L.TabIndex = 3;
             this.rdoRange4_L.TabStop = true;
             this.rdoRange4_L.Text = "2.0mV/V";
@@ -398,7 +398,7 @@
             this.rdoRange3_L.Location = new System.Drawing.Point(10, 67);
             this.rdoRange3_L.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange3_L.Name = "rdoRange3_L";
-            this.rdoRange3_L.Size = new System.Drawing.Size(76, 19);
+            this.rdoRange3_L.Size = new System.Drawing.Size(68, 16);
             this.rdoRange3_L.TabIndex = 2;
             this.rdoRange3_L.TabStop = true;
             this.rdoRange3_L.Text = "1.5mV/V";
@@ -410,7 +410,7 @@
             this.rdoRange2_L.Location = new System.Drawing.Point(10, 44);
             this.rdoRange2_L.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange2_L.Name = "rdoRange2_L";
-            this.rdoRange2_L.Size = new System.Drawing.Size(76, 19);
+            this.rdoRange2_L.Size = new System.Drawing.Size(68, 16);
             this.rdoRange2_L.TabIndex = 1;
             this.rdoRange2_L.TabStop = true;
             this.rdoRange2_L.Text = "1.0mV/V";
@@ -422,7 +422,7 @@
             this.rdoRange1_L.Location = new System.Drawing.Point(10, 21);
             this.rdoRange1_L.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoRange1_L.Name = "rdoRange1_L";
-            this.rdoRange1_L.Size = new System.Drawing.Size(76, 19);
+            this.rdoRange1_L.Size = new System.Drawing.Size(68, 16);
             this.rdoRange1_L.TabIndex = 0;
             this.rdoRange1_L.TabStop = true;
             this.rdoRange1_L.Text = "0.5mV/V";
@@ -524,7 +524,7 @@
             this.rdoHold2_B.Location = new System.Drawing.Point(10, 44);
             this.rdoHold2_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoHold2_B.Name = "rdoHold2_B";
-            this.rdoHold2_B.Size = new System.Drawing.Size(108, 19);
+            this.rdoHold2_B.Size = new System.Drawing.Size(95, 16);
             this.rdoHold2_B.TabIndex = 1;
             this.rdoHold2_B.TabStop = true;
             this.rdoHold2_B.Text = "TXT_BOTTOM";
@@ -536,7 +536,7 @@
             this.rdoHold1_B.Location = new System.Drawing.Point(10, 21);
             this.rdoHold1_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoHold1_B.Name = "rdoHold1_B";
-            this.rdoHold1_B.Size = new System.Drawing.Size(43, 19);
+            this.rdoHold1_B.Size = new System.Drawing.Size(39, 16);
             this.rdoHold1_B.TabIndex = 0;
             this.rdoHold1_B.TabStop = true;
             this.rdoHold1_B.Text = "1st";
@@ -609,6 +609,6 @@
         private System.Windows.Forms.RadioButton rdoRange2_L;
         private System.Windows.Forms.RadioButton rdoRange1_L;
         private System.Windows.Forms.ComboBox cmbPoint;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPoint;
     }
 }

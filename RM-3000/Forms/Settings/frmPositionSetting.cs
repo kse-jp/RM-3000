@@ -102,6 +102,11 @@ namespace RM_3000.Forms.Settings
                     PositionUnits[i].ZeroSet = false;
                     PositionUnits[i].ZeroEnabled = false;
                     PositionUnits[i].Point = SystemSetting.ChannelsSetting.ChannelSettingList[i].NumPoint;
+
+                    if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.B ||
+                        SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.R)
+                        PositionUnits[i].Point = 0;
+
                     continue;
                 }
 
@@ -116,12 +121,16 @@ namespace RM_3000.Forms.Settings
                 if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.B ||
                     SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.R)
                 {
+                    //B/Rのみ設置画面は強制的に小数点なしとする。
+                    PositionUnits[i].Point = 0;
+
                     //B/Rボードのみゼロ設定可能
                     PositionUnits[i].ZeroValue = tag.StaticZero;
                     PositionUnits[i].ZeroSet = (PositionUnits[i].ZeroValue != 0);
                     PositionUnits[i].ZeroEnabled = true;
                     PositionUnits[i].ZeroToggle = true;
                     PositionUnits[i].ZeroValueEnabled = true;
+
 
                 }
                 else if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.L)
@@ -340,11 +349,16 @@ namespace RM_3000.Forms.Settings
                             //回転数は飛ばす
                             if (data.ChannelDatas[j].Position == 0) continue;
 
-                            ((Value_Standard)data.ChannelDatas[j].DataValues).Value += ((Value_Standard)datas[i].ChannelDatas[j].DataValues).Value;
+                            if (i == 1)
+                            {
+                                ((Value_Standard)data.ChannelDatas[j].DataValues).Value /= datas.Count;
+                            }
+
+                            ((Value_Standard)data.ChannelDatas[j].DataValues).Value += ((Value_Standard)datas[i].ChannelDatas[j].DataValues).Value / datas.Count;
 
                             if (i == datas.Count - 1)
                             {
-                                ((Value_Standard)data.ChannelDatas[j].DataValues).Value /= datas.Count;
+                            //    ((Value_Standard)data.ChannelDatas[j].DataValues).Value /= datas.Count;
                                 PositionUnits[data.ChannelDatas[j].Position - 1].NowValue = ((Value_Standard)data.ChannelDatas[j].DataValues).Value;
                             }
                         }

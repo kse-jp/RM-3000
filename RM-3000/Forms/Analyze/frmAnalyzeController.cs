@@ -1574,13 +1574,17 @@ namespace RM_3000.Forms.Parts
                     }
                 }
 
+                
                 //All 3D create then start
-                for (int i = 0; i < this.graph3DList.Count; i++)
+                if (this.isStartAnimation)
                 {
-                    if (this.graph3DList[i] != null && isSensorData3D)
+                    for (int i = 0; i < this.graph3DList.Count; i++)
                     {
-                        if (this.isStartAnimation)
+                        if (this.graph3DList[i] != null && isSensorData3D)
+                        {
+
                             this.graph3DList[i].StartAnimation();
+                        }
                     }
                 }
             }

@@ -1158,8 +1158,6 @@ namespace Graph3DLib
         {
             try
             {
-                //this.StopAnimation();
-
                 if (OnAnimationCompleted != null)
                     OnAnimationCompleted(duration);
             }
@@ -1545,18 +1543,21 @@ namespace Graph3DLib
                 {
                     if (_AnimationControl.Status == AnimationStatus.Stop)
                     {
+                        if (_AnimationSpeed != 1)
+                            _AnimationControl.SetSpeed(_AnimationSpeed);
 
                         bool ret = _AnimationControl.Start();
                         if (ret)
                         {
-                            _IsAnimationStart = true;
-                            if (_AnimationSpeed != 1)
+                            System.Threading.Thread.Sleep(100);
+                            if (_AnimationControl.CurrentState == ClockState.Stopped)
                             {
-                                _AnimationControl.SetSpeed(_AnimationSpeed);
-                                _AnimationControl.Resume();
+                                _Log4NetClass.ShowWarning("RestartAnimation", "StartAnimation");
+                                _AnimationControl.Start();
                             }
-                            Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
+                            _IsAnimationStart = true;
                             _MeterTimer.Start();
+                            Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
                         }
 
                     }
@@ -1882,11 +1883,22 @@ namespace Graph3DLib
         /// </summary>
         public void ClearGraphData()
         {
-            if (_GraphController != null)
-                _GraphController.ClearData();
+            try
+            {
+                if (_GraphController != null)
+                    _GraphController.ClearData();
 
-            if (_AnimationControl != null)
-                _AnimationControl.ClearClock();
+                if (_AnimationControl != null)
+                    _AnimationControl.ClearClock();
+
+                if (_MeterTimer != null)
+                    _MeterTimer.Stop();
+             
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "ClearGraphData");
+            }
 
         }
 
@@ -1978,14 +1990,28 @@ namespace Graph3DLib
         /// </summary>
         private void ShowTranparent()
         {
-            this.SetModelTransparent(_TransparentValue);
+            try
+            {
+                this.SetModelTransparent(_TransparentValue);
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "ShowTranparent");
+            }
         }
         /// <summary>
         /// Invoke call HideTranparent
         /// </summary>
         private void HideTransparent()
         {
-            this.SetModelTransparent(1);
+            try
+            {
+                this.SetModelTransparent(1);
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "HideTransparent");
+            }
         }
 
         /// <summary>
@@ -1993,7 +2019,16 @@ namespace Graph3DLib
         /// </summary>
         private void ResetArrow()
         {
-            circularMeter.DrawArraw(circularMeter.StartDegree, true);
+
+            try
+            {
+                circularMeter.DrawArraw(circularMeter.StartDegree, true);
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "ResetArrow");
+            }
+           
         }
 
         /// <summary>

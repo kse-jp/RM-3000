@@ -113,11 +113,11 @@ namespace RM_3000.Forms.Settings
 
                             if (this.setting.DataTagList[i] != null)
                             {
-                                dataGridView1.Rows.Add(new string[] { this.setting.DataTagList[i].TagNo.ToString(), this.setting.DataTagList[i].GetSystemTagName(), this.setting.DataTagList[i].GetSystemUnit() });
+                                dataGridView1.Rows.Add(new object[] { this.setting.DataTagList[i].TagNo, this.setting.DataTagList[i].GetSystemTagName(), this.setting.DataTagList[i].GetSystemUnit() });
                             }
                             else
                             {
-                                dataGridView1.Rows.Add(new string[] { "-1", "---", "---" });
+                                dataGridView1.Rows.Add(new object[] { "-1", "---", "---" });
                             }
                         }
                         this.currentData = this.list[0];
@@ -143,7 +143,7 @@ namespace RM_3000.Forms.Settings
         {
             try
             {
-                if (this.list.Count > 0)
+                if (this.list.Count > 0 && e.RowIndex >= 0)
                 {
                     this.currentData = this.list[e.RowIndex];
                 }
@@ -158,6 +158,11 @@ namespace RM_3000.Forms.Settings
             
             if (this.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
+                if (this.dataGridView1.CurrentCell.RowIndex >= 0)
+                {
+                    this.currentData = this.list[(int)this.dataGridView1.Rows[this.dataGridView1.CurrentCell.RowIndex].Cells[0].Value - 1];
+                    //this.currentData = this.list[this.dataGridView1.CurrentCell.RowIndex];
+                }
                 if (this.currentData == null || this.EditingTag == null)
                 {
                     e.Cancel = true;
@@ -196,7 +201,7 @@ namespace RM_3000.Forms.Settings
         {
             try
             {
-                if (this.list.Count > 0)
+                if (this.list.Count > 0 && e.RowIndex >= 0)
                 {
                     this.currentData = this.list[e.RowIndex];
                 }

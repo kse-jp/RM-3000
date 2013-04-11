@@ -175,6 +175,25 @@ namespace GraphLib
                 return GraphNo;
             }
         }
+
+        public bool IsEqual(GraphInfo graphinf)
+        {
+            bool ret = true;
+            if (graphinf.AxisNameX != this.AxisNameX || graphinf.AxisNameY != this.AxisNameY || graphinf.AxisPositionX != this.AxisPositionX
+                || graphinf.AxisPositionY != this.AxisPositionY || graphinf.DateTimeFormat != this.DateTimeFormat || graphinf.DecimalPointX != this.DecimalPointX
+                || graphinf.DecimalPointY != this.DecimalPointY || graphinf.DistanceX != this.DistanceX || graphinf.DistanceY != this.DistanceY || graphinf.GraphMode != this.GraphMode
+                || graphinf.GraphName != this.GraphName || graphinf.GraphNo != this.GraphNo || graphinf.IncrementX != this.IncrementX || graphinf.IsEnabled != this.IsEnabled
+                || graphinf.IsLineGraph != this.IsLineGraph || graphinf.MaxChannel != this.MaxChannel || graphinf.MaxDataSizeX != this.MaxDataSizeX || graphinf.MaxValueX != this.MaxValueX
+                || graphinf.MaxValueY != this.MaxValueY || graphinf.MeasureButtonShow != this.MeasureButtonShow || graphinf.MinMaxRangeX != this.MinMaxRangeX || graphinf.MinValueX != this.MinValueX
+                || graphinf.MinValueY != this.MinValueY || graphinf.PlotCountX != this.PlotCountX || graphinf.ShotCount != this.ShotCount || graphinf.ShowDateTimeAxisX != this.ShowDateTimeAxisX
+                || graphinf.ShowValueLabelX != this.ShowValueLabelX || graphinf.ShowValueLabelY != this.ShowValueLabelY)
+            {
+                ret = false;
+            }
+
+            return ret;
+        }
+
         /// <summary>
         /// Display Graph Name
         /// </summary>
@@ -834,10 +853,11 @@ namespace GraphLib
             {
                 if (_GraphModel != null)
                 {
-                    if (_GraphInfo.PlotCountX != value)
+                    //if (_GraphInfo.PlotCountX != value)
                     {
-                        _GraphInfo.PlotCountX = value;
-                        UpdateGraphInfo(this.GraphInfo, false);
+                        GraphInfo inf = _GraphInfo;
+                        inf.PlotCountX = value;
+                        UpdateGraphInfo(inf, false);
                     }
 
                 }
@@ -906,8 +926,9 @@ namespace GraphLib
                     double minval = Convert.ToDouble(value);
                     //if (_GraphInfo.MinValueX != minval)
                     {
-                        _GraphInfo.MinValueX = minval;
-                        UpdateGraphInfo(this.GraphInfo, false);
+                        GraphInfo inf = _GraphInfo;
+                        inf.MinValueX = minval;
+                        UpdateGraphInfo(inf, false);
                     }
 
                 }
@@ -1142,6 +1163,9 @@ namespace GraphLib
             {
                 _IsAxisYZoom = false;
                 _ZoomNumberAxisY = 0;
+                bool isequal = _GraphInfo.IsEqual(graphinfo);
+
+
                 _GraphInfo = graphinfo;
                 this.IsRealTime = false;
                 GraphLib.Model.GraphGridLine gridline = _GraphModel.GridLineData;
@@ -1275,8 +1299,14 @@ namespace GraphLib
 
                 _AxisZoomConstValueX = (double)(_GraphModel.PlotCountX * _ZoomPercent * 0.01);
 
-                UpdateLabelNameX();
-                UpdateLabelNameY();
+
+                if (_IsLoadedData && (!_IsRealTime || !_GraphModel.IsEnabled))
+                {
+                    _GraphController.GraphInfo = graphinfo;
+                    _GraphController.UpdatePlotData();
+                    this.RefreshGraph();
+                }
+
 
                 //Update Channel
                 if (updateCH)
@@ -1305,16 +1335,15 @@ namespace GraphLib
                     }
                 }
 
-                if (_IsLoadedData && (!_IsRealTime || !_GraphModel.IsEnabled))
+                if (!isequal)
                 {
-                    _GraphController.GraphInfo = graphinfo;
-                    _GraphController.UpdatePlotData();
-                    this.RefreshGraph();
-                }
+                    this.Dispatcher.BeginInvoke(new Action(UpdateLabelNameX), System.Windows.Threading.DispatcherPriority.Send, null);
+                    this.Dispatcher.BeginInvoke(new Action(UpdateLabelNameY), System.Windows.Threading.DispatcherPriority.Send, null);
 
-                UpdateLabelValueY();
-                UpdateLabelValueX();
-                this.RedrawGraphUpdateGraphInfo(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
+                    this.Dispatcher.BeginInvoke(new Action(UpdateLabelValueY), System.Windows.Threading.DispatcherPriority.Send, null);
+                    this.Dispatcher.BeginInvoke(new Action(UpdateLabelValueX), System.Windows.Threading.DispatcherPriority.Send, null);
+                    this.Dispatcher.BeginInvoke(new Action(this.RedrawGraphUpdateGraphInfo), System.Windows.Threading.DispatcherPriority.Send, null);
+                }
             }
             catch (Exception ex)
             {
@@ -1427,7 +1456,7 @@ namespace GraphLib
         /// </summary>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        public void RedrawGraphUpdateGraphInfo(double width, double height)
+        public void RedrawGraphUpdateGraphInfo()
         {
             try
             {
@@ -1441,10 +1470,10 @@ namespace GraphLib
                     if (_IsZoom)
                     {
                         ZoomReset();
-                        GraphGridLoad(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
                     }
-                    else
-                        GraphGridLoad(width, height);
+
+
+                    GraphGridLoad(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
 
                     RefreshMeasurePos();
                     UpdateButtonMeasureImage();
@@ -1458,7 +1487,7 @@ namespace GraphLib
             }
             catch (Exception ex)
             {
-                _Log4NetClass.ShowError(ex.ToString(), "ResizeGraph");
+                _Log4NetClass.ShowError(ex.ToString(), "RedrawGraphUpdateGraphInfo");
             }
         }
         /// <summary>
@@ -4684,7 +4713,7 @@ namespace GraphLib
         /// </summary>
         /// <returns></returns>
         private bool CheckChannelInfoIsSame()
-        {                        
+        {
             ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
             bool chksame = true;
 
@@ -4708,7 +4737,6 @@ namespace GraphLib
 
             return chksame;
         }
-
         /// <summary>
         /// Create Legend Panel
         /// </summary>

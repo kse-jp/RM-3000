@@ -261,7 +261,7 @@ namespace GraphLib.Controller
 
                 _GraphModel.GridLineData.MaxGridValueY = _GraphModel.MaxPlotY - _GraphModel.AxisZoomY;
                 _GraphModel.GridLineData.MinGridValueY = _GraphModel.MinPlotY + _GraphModel.AxisZoomY;
-                _GraphModel.GraphPlotData.Clear();
+                //_GraphModel.GraphPlotData.Clear();
 
             }
             catch (Exception ex)

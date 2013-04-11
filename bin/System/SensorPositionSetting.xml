@@ -19,25 +19,25 @@
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
-      <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
+      <ChNo>2</ChNo>
+      <X>1195</X>
+      <Z>785</Z>
       <Way>INVAILED</Way>
-      <Target>INVAILED</Target>
+      <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>3</ChNo>
-      <X>2500</X>
-      <Z>890</Z>
-      <Way>LEFT</Way>
-      <Target>LOWER_PRESS</Target>
+      <X>2160</X>
+      <Z>1050</Z>
+      <Way>DOWN</Way>
+      <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>4</ChNo>
       <X>2825</X>
-      <Z>1110</Z>
+      <Z>1050</Z>
       <Way>LEFT</Way>
       <Target>UPPER</Target>
     </PositionSetting>

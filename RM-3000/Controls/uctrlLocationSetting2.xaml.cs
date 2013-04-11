@@ -40,6 +40,7 @@ namespace RM_3000
 
 		public frmLocationSetting locationSetting;
 		public frmLocationSetting2 locationSetting2;
+        public bool IsDragging { get { return isDragging; } }
 
 		private string[] sensorNumberLabelItems = { "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩" };
 
@@ -90,7 +91,9 @@ namespace RM_3000
         //Event関係
         public event EventHandler DoneInitailized = delegate { };
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
 		public uctrlLocationSetting2()
 		{
 			InitializeComponent();
@@ -103,7 +106,6 @@ namespace RM_3000
 		}
 
 		#region Public Method
-
         /// <summary>
         /// 与えられた設定にて初期表示
         /// </summary>
@@ -127,7 +129,6 @@ namespace RM_3000
 			};
 			timer.Start();
 		}
-
         /// <summary>
         /// 描画ステージのリサイズ
         /// </summary>
@@ -176,14 +177,11 @@ namespace RM_3000
                         }
             }
 
-
 			this.zoomCanvases(1);
 
 			this.cvsRoot.UpdateLayout();
 			this.sliderZoom.Value = 1;
-
 		}
-
         /// <summary>
         /// 金型の表示非表示
         /// </summary>
@@ -201,7 +199,6 @@ namespace RM_3000
 				this.cvsPressKanagata.Visibility = Visibility.Hidden;
 			}
 		}
-
         /// <summary>
         /// Bセンサの新規表示
         /// </summary>
@@ -220,7 +217,6 @@ namespace RM_3000
 			this.activeSensorB(sensor);
 
 		}
-
         /// <summary>
         /// Rセンサの新規表示
         /// </summary>
@@ -238,7 +234,6 @@ namespace RM_3000
 
 			this.activeSensorR(sensor);
 		}
-
         /// <summary>
         /// 新センサの削除
         /// </summary>
@@ -253,7 +248,6 @@ namespace RM_3000
 				}
 			}
 		}
-
         /// <summary>
         /// リスト上のセンサ行選択変更イベント
         /// </summary>
@@ -305,7 +299,6 @@ namespace RM_3000
 				}
 			}
 		}
-
         /// <summary>
         /// リスト上で選択された設定位置にセンサを置く
         /// </summary>
@@ -403,11 +396,7 @@ namespace RM_3000
 			catch (Exception ex)
 			{
 			}
-
-
-
 		}
-
         /// <summary>
         /// センサー初期位置設定
         /// </summary>
@@ -512,7 +501,37 @@ namespace RM_3000
             this.sensorList[chIndex] = null;
             this.locationSetting.removeSensor(chIndex);
         }
+        /// <summary>
+        /// マウスドラッグ中止
+        /// </summary>
+        public void ReleaseMouseDrag()
+        {
+            if (this.isDragging)
+			{
+				this.isDragging = false;
+				this.dragSensorPaddingPointX = 0;
+				this.dragSensorPaddingPointY = 0;
+				if (this.activeSensorCanvas.isNew == true)
+				{
+					this.activeSensorCanvas.isNew = false;
+					Point pointSensorAtBase = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.cvsBase);
 
+					this.cvsRoot.Children.Remove(this.activeSensorCanvas);
+					Canvas.SetLeft(this.activeSensorCanvas,pointSensorAtBase.X);
+					Canvas.SetTop(this.activeSensorCanvas,pointSensorAtBase.Y);
+					((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);
+					this.setSensorContextMenu(this.activeSensorCanvas);
+				}
+
+                if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_B)
+				{
+					this.removeSensor(this.activeSensorCanvas.chIndex);
+
+                    //新しいセンサとして表示
+                    this.setNewSensorB(this.activeSensorCanvas.chIndex);
+				}
+            }
+        }
 		#endregion
 
 		#region Private Method
@@ -1842,7 +1861,10 @@ namespace RM_3000
 			this.sliderZoom.ValueChanged += new RoutedPropertyChangedEventHandler<double>(sliderZoom_ValueChanged);
 
 			this.scrollViewer.Focus();
-		}
+
+            this.label1.Visibility = (SystemSetting.SystemConfig.IsDebugMode) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden;
+            this.label2.Visibility = (SystemSetting.SystemConfig.IsDebugMode) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden;
+        }
 
         /// <summary>
         /// センサ左マウスダウンイベント
@@ -1962,6 +1984,14 @@ namespace RM_3000
 			{
 				return;
 			}
+
+            if (e.LeftButton == MouseButtonState.Released)
+            {
+                // マウスUpしたものとして扱う
+                this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
+                return;
+            }
+
 			Point mousePoint;
 			if (this.activeSensorCanvas.isNew == true)
 			{
@@ -1973,9 +2003,20 @@ namespace RM_3000
 			}
 
 			this.moveSensor(mousePoint.X, mousePoint.Y);
-		
+
+            label1.Content = mousePoint.X.ToString();
+            label2.Content = mousePoint.Y.ToString();
+
 			//this.draggingCanvas
-		}
+
+            // キャンバス範囲境界付近にドラッグされた場合
+            if (cvsRoot.ActualWidth < mousePoint.X + 20 || mousePoint.X - 10 < 0 ||
+                cvsRoot.ActualHeight < mousePoint.Y + 20 || mousePoint.Y - 10 < 0)
+            {
+                //マウスUpしたものとして扱う
+                this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
+            }
+        }
 
         /// <summary>
         /// キャンバス上のマウス移動時

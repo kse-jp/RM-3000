@@ -103,7 +103,7 @@ namespace RM_3000
                 this.readSettingData();
                 this.setGridData();
 
-                frmLocationSetting2 win2 = new frmLocationSetting2();
+                frmLocationSetting2 win2 = new frmLocationSetting2(this.log);
                 this.locationSetting2 = win2;
 
                 win2.locationSetting = this;

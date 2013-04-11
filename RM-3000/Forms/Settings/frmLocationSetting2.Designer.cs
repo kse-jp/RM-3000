@@ -38,9 +38,9 @@
             this.elementHost1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.elementHost1.Location = new System.Drawing.Point(1, 0);
+            this.elementHost1.Location = new System.Drawing.Point(10, 10);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(1214, 851);
+            this.elementHost1.Size = new System.Drawing.Size(1195, 728);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.canvasLocationSetting2;
@@ -59,6 +59,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocationSetting2_FormClosing);
             this.Load += new System.EventHandler(this.frmLocationSetting2_Load);
             this.Shown += new System.EventHandler(this.frmLocationSetting2_Shown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmLocationSetting2_MouseMove);
             this.ResumeLayout(false);
 
 		}

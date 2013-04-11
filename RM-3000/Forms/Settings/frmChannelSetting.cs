@@ -72,7 +72,7 @@ namespace RM_3000.Forms.Settings
         /// <param name="ex"></param>
         private void ShowErrorMessage(string message)
         {
-            if (this.log != null) this.log.PutErrorLog(message); 
+            if (this.log != null) this.log.PutErrorLog(message);
             MessageBox.Show(message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace RM_3000.Forms.Settings
         private void PutLog(string message)
         {
             if (this.log != null) log.PutLog(message);
-            
+
         }
         /// <summary>
         /// get this.setting value from controls
@@ -132,7 +132,7 @@ namespace RM_3000.Forms.Settings
                     if (this.uctrlArray[i].SensorOutput_L < tmp - 0.5m || this.uctrlArray[i].SensorOutput_L > tmp + 0.5m)
                     {
                         ShowWarningMessage(string.Format("ch{0} {1} {2} {3}～{4}",
-                            i + 1 , CommonResource.GetString("TXT_SENSOROUTPUT"), CommonResource.GetString("ERROR_VALUE_OUT_OF_RANGE"), tmp - 0.5m, tmp + 0.5m));
+                            i + 1, CommonResource.GetString("TXT_SENSOROUTPUT"), CommonResource.GetString("ERROR_VALUE_OUT_OF_RANGE"), tmp - 0.5m, tmp + 0.5m));
                         this.uctrlArray[i].FocusOnTextBox(3);
                         return false;
                     }
@@ -182,14 +182,14 @@ namespace RM_3000.Forms.Settings
                 {
                     if (this.uctrlArray[i].ZeroScale_V < -9999.999m || this.uctrlArray[i].ZeroScale_V > 9999.999m)
                     {
-                        ShowWarningMessage(string.Format("ch{0} {1} {2} {3}", 
+                        ShowWarningMessage(string.Format("ch{0} {1} {2} {3}",
                             i + 1, CommonResource.GetString("TXT_ZERO"), CommonResource.GetString("ERROR_VALUE_OUT_OF_RANGE"), "-9999.999～9999.999"));
                         this.uctrlArray[i].FocusOnTextBox(1);
                         return false;
                     }
                     if (this.uctrlArray[i].FullScale_V < -9999.999m || this.uctrlArray[i].FullScale_V > 9999.999m)
                     {
-                        ShowWarningMessage(string.Format("ch{0} {1} {2} {3}", 
+                        ShowWarningMessage(string.Format("ch{0} {1} {2} {3}",
                             i + 1, CommonResource.GetString("TXT_FULLSCALE"), CommonResource.GetString("ERROR_VALUE_OUT_OF_RANGE"), "-9999.999～9999.999"));
                         this.uctrlArray[i].FocusOnTextBox(2);
                         return false;
@@ -261,9 +261,9 @@ namespace RM_3000.Forms.Settings
                 this.MinimumSize = new Size(this.Width, this.Height);
                 this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
                 this.setting = SystemSetting.ChannelsSetting;
-                
+
                 //set value to user control
-                if(this.setting.ChannelSettingList != null)
+                if (this.setting.ChannelSettingList != null)
                 {
                     for (int k = 0; k < this.uctrlArray.Length; k++)
                     {
@@ -332,12 +332,12 @@ namespace RM_3000.Forms.Settings
                                 this.uctrlArray[k].NumPoint = this.setting.ChannelSettingList[k].NumPoint;
                         }
                         else
-                        { 
+                        {
                             this.setting.ChannelSettingList[k] = new ChannelSetting();
                             this.setting.ChannelSettingList[k].ChNo = k + 1;
 
                             this.setting.ChannelSettingList[k].NumPoint = 0;
-                        
+
                         }
                         this.uctrlArray[k].DirtyFlag = false;
 
@@ -356,7 +356,23 @@ namespace RM_3000.Forms.Settings
                 ShowErrorMessage(ex);
             }
         }
+        /// <summary>
+        /// フォーム稼働開始
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmChannelSetting_Shown(object sender, EventArgs e)
+        {
+            //シミュレータモードまたは通信準備不足ならば抜ける
+            if (SystemSetting.SystemConfig.IsSimulationMode &&
+                !Sequences.CommunicationMonitor.GetInstance().IsCanMeasure)
+            {
+                return;
+            }
 
+            //自動的にボードデータ取得
+            btnBoardType.PerformClick();
+        }
         /// <summary>
         /// ボードタイプの変更イベント
         /// </summary>
@@ -370,7 +386,6 @@ namespace RM_3000.Forms.Settings
             //変更をタイミング設定の通知
             ucTimingSetting1.ChangeBoardType(channelNo);
         }
-
         /// <summary>
         /// 
         /// </summary>
@@ -400,7 +415,7 @@ namespace RM_3000.Forms.Settings
                     }
                     else
                     {
-                        this.setting.Revert();
+                        Revert();
                     }
                 }
             }
@@ -409,7 +424,7 @@ namespace RM_3000.Forms.Settings
                 ShowErrorMessage(ex);
             }
 
-            this.Close();            
+            this.Close();
         }
         /// <summary>
         /// show Channel Measure
@@ -439,7 +454,7 @@ namespace RM_3000.Forms.Settings
                     }
                     if (this.setting.ChannelSettingList != null)
                     {
-                        
+
                         for (int i = 0; i < 10; i++)
                         {
                             if (this.setting.ChannelSettingList[i] != null)
@@ -470,16 +485,6 @@ namespace RM_3000.Forms.Settings
             {
                 ShowErrorMessage(ex);
             }
-        }
-        /// <summary>
-        /// Validate data
-        /// </summary>
-        /// <returns></returns>
-        private bool ValidateData()
-        {
-            if (!ucTimingSetting1.ValidateValue())
-            { return false; }
-            return true;
         }
         /// <summary>
         /// Save data
@@ -525,7 +530,7 @@ namespace RM_3000.Forms.Settings
                                     SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_1 = -1;
                                     SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_2 = -1;
                                     SystemSetting.RelationSetting.IsUpdated = true;
-                                
+
                                     //チャンネル設置設定を解除
                                     SystemSetting.PositionSetting.PositionList[channelIndex].ChNo = -1;
                                     SystemSetting.PositionSetting.PositionList[channelIndex].X = -1;
@@ -533,7 +538,7 @@ namespace RM_3000.Forms.Settings
                                     SystemSetting.PositionSetting.PositionList[channelIndex].Way = PositionSetting.WayType.INVAILED;
                                     SystemSetting.PositionSetting.PositionList[channelIndex].Target = PositionSetting.TargetType.INVAILED;
                                     SystemSetting.PositionSetting.IsUpdated = true;
-                                
+
                                 }
 
                                 //桁数変更の場合反映
@@ -551,7 +556,7 @@ namespace RM_3000.Forms.Settings
                                     SystemSetting.DataTagSetting.IsUpdated = true;
                                 }
                             }
-                        
+
 
                             //チャンネル結び付け情報を更新
                             if (SystemSetting.RelationSetting.IsUpdated && SystemSetting.PositionSetting.IsUpdated)
@@ -567,7 +572,7 @@ namespace RM_3000.Forms.Settings
                             }
 
                             //チャンネル設定の整合性OK確認
-                            for (int channelIndex = 0; channelIndex < DataCommon.Constants.MAX_CHANNELCOUNT ; channelIndex++)
+                            for (int channelIndex = 0; channelIndex < DataCommon.Constants.MAX_CHANNELCOUNT; channelIndex++)
                             {
                                 Sequences.CommunicationMonitor.GetInstance().IsBoardSettingCorrected =
                                     (SystemSetting.HardInfoStruct.BoardInfos[channelIndex].ChannelKind ==
@@ -579,21 +584,10 @@ namespace RM_3000.Forms.Settings
                                     break;
                             }
 
-                        }
-                        else
-                        {
-                            this.setting.Revert();
-                        }
-                        this.dirtyFlag = false;
-                    }
-                    for (int i = 0; i < this.uctrlArray.Length; i++)
-                    {
-                        if (this.uctrlArray[i].DirtyFlag)
-                        {
-                            this.uctrlArray[i].DirtyFlag = false;
+                            ClearDirtyFlag();
+                            this.Close();
                         }
                     }
-                    Close();
                 }
             }
             catch (Exception ex)
@@ -602,26 +596,16 @@ namespace RM_3000.Forms.Settings
             }
         }
         /// <summary>
-        /// check modified data flag before close
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void frmChannelSetting_FormClosing(object sender, FormClosingEventArgs e)
-        {
-        }
-        /// <summary>
         /// ボードタイプの取得
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnBoardType_Click(object sender, EventArgs e)
         {
-
             //シミュレータモードでは処理しない
             if (SystemSetting.SystemConfig.IsSimulationMode) return;
 
             SetEnabledControls(false);
-
 
             //通信確認一時停止
             Sequences.CommunicationMonitor.GetInstance().bStop = true;
@@ -768,26 +752,42 @@ namespace RM_3000.Forms.Settings
             btnTiming.Enabled = value;
             btnUpdate.Enabled = value;
         }
-        
-        #endregion
-
         /// <summary>
-        /// フォーム稼働開始
+        /// Validate data
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void frmChannelSetting_Shown(object sender, EventArgs e)
+        /// <returns></returns>
+        private bool ValidateData()
         {
-            //シミュレータモードまたは通信準備不足ならば抜ける
-            if (SystemSetting.SystemConfig.IsSimulationMode &&
-                !Sequences.CommunicationMonitor.GetInstance().IsCanMeasure)
-            {
-                return;
-            }
-
-            //自動的にボードデータ取得
-            btnBoardType.PerformClick();
+            if (!ucTimingSetting1.ValidateValue())
+            { return false; }
+            return true;
         }
+        /// <summary>
+        /// 変更された値を元に戻す
+        /// </summary>
+        private void Revert()
+        {
+            if (this.setting != null)
+            {
+                this.setting.Revert();
+                ClearDirtyFlag();
+            }
+        }
+        /// <summary>
+        /// ダーティフラグを初期化する
+        /// </summary>
+        private void ClearDirtyFlag()
+        {
+            this.dirtyFlag = false;
+            for (int i = 0; i < this.uctrlArray.Length; i++)
+            {
+                if (this.uctrlArray[i].DirtyFlag)
+                {
+                    this.uctrlArray[i].DirtyFlag = false;
+                }
+            }
+        }
+        #endregion
 
     }
 }

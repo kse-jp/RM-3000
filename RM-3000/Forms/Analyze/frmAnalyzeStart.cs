@@ -224,7 +224,50 @@ namespace RM_3000.Forms.Analyze
 
             if (this.log != null) this.log.PutLog("frmAnalyzeStart.frmAnalyzeStart_Load() - 解析開始画面のロードを終了しました。");
         }
+        private void frmAnalyzeStart_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.log != null) this.log.PutLog("frmAnalyzeStart.frmAnalyzeStart_FormClosing() - in");
 
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+
+            try
+            {
+                if (this.cmbColor.Visible) { this.cmbColor.Visible = false; }
+                if (this.dirty)
+                {
+                    if (MessageBox.Show(AppResource.GetString("MSG_CONFIRM_DISCARD"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+                    this.measSetting.Revert();
+                    this.dirty = false;
+                }
+
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+
+            if (this.log != null) this.log.PutLog("frmAnalyzeStart.frmAnalyzeStart_FormClosing() - out");
+        }
+        private void frmAnalyzeStart_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                // Close Data
+                if (this.analyzeData != null)
+                {
+                    this.analyzeData.CloseData();
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+        }
         /// <summary>
         /// Add analyzed tag [TagKind = 2] to grid
         /// </summary>
@@ -507,7 +550,6 @@ namespace RM_3000.Forms.Analyze
                 if (this.dirty)
                 {
                     this.analyzeData.MeasureSetting.Serialize();
-
                     this.dirty = false;
                 }
 
@@ -529,8 +571,6 @@ namespace RM_3000.Forms.Analyze
                     LoadContent();
                     ShowMeasSetting();
                 }
-
-                
             }
             catch (Exception ex)
             {
@@ -1529,8 +1569,7 @@ namespace RM_3000.Forms.Analyze
                                 }
                             }
 
-                            this.analyzeData.MeasureSetting.Serialize();
-                            this.dirty = false;
+                            this.dirty = true;
                         }
                     }
                 }
@@ -1545,7 +1584,7 @@ namespace RM_3000.Forms.Analyze
                 Application.DoEvents();
             }
         }
-        
+
         private void dgvGraphDetail_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && this.dgvGraphDetail.CurrentCell.RowIndex != e.RowIndex)
@@ -1577,14 +1616,6 @@ namespace RM_3000.Forms.Analyze
         private void txtGraphTitle_Leave(object sender, EventArgs e)
         {
             this.txtGraphTitle.Text = this.txtGraphTitle.Text.Trim();
-        }
-
-        private void frmAnalyzeStart_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Close Data
-            if (this.analyzeData != null)
-                this.analyzeData.CloseData();
-
         }
 
         /// <summary>
@@ -1640,7 +1671,6 @@ namespace RM_3000.Forms.Analyze
         }
 
         #endregion
-
 
 
     }

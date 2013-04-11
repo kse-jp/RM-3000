@@ -542,7 +542,9 @@ namespace RM_3000.Forms.Settings
                             this.DialogResult = System.Windows.Forms.DialogResult.OK;
                         }
                         else
-                        { return; }
+                        { 
+                            return; 
+                        }
                     }
                     this.Close();
                 }

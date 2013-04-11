@@ -107,6 +107,7 @@
             this.uctrlChannelSetting1.Hold_B = 0;
             this.uctrlChannelSetting1.Name = "uctrlChannelSetting1";
             this.uctrlChannelSetting1.NumPoint = 0;
+            this.uctrlChannelSetting1.PointVisible = true;
             this.uctrlChannelSetting1.Precision_B = false;
             this.uctrlChannelSetting1.Precision_R = false;
             this.uctrlChannelSetting1.Range_L = 0;
@@ -135,7 +136,6 @@
             this.Controls.Add(this.btnTiming);
             this.Controls.Add(this.uctrlChannelSetting1);
             this.Name = "frmChannelSetting";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChannelSetting_FormClosing);
             this.Load += new System.EventHandler(this.frmChannelSetting_Load);
             this.Shown += new System.EventHandler(this.frmChannelSetting_Shown);
             this.ResumeLayout(false);

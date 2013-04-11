@@ -304,7 +304,6 @@
             this.Name = "frmSettingMenu";
             this.Text = "frmSettingMenu";
             this.Load += new System.EventHandler(this.frmSettingMenu_Load);
-            this.Resize += new System.EventHandler(this.frmSettingMenu_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChannelSettingButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTagSettingButton)).EndInit();

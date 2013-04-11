@@ -12,9 +12,9 @@
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>1</ChNo>
-      <X>1970</X>
-      <Z>450</Z>
-      <Way>UP</Way>
+      <X>2500</X>
+      <Z>750</Z>
+      <Way>LEFT</Way>
       <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
@@ -28,26 +28,26 @@
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>3</ChNo>
-      <X>2160</X>
-      <Z>1050</Z>
-      <Way>DOWN</Way>
-      <Target>UPPER_PRESS</Target>
+      <X>1560</X>
+      <Z>800</Z>
+      <Way>INVAILED</Way>
+      <Target>STRIPPER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>4</ChNo>
-      <X>2825</X>
-      <Z>1050</Z>
-      <Way>LEFT</Way>
-      <Target>UPPER</Target>
+      <X>2055</X>
+      <Z>1190</Z>
+      <Way>INVAILED</Way>
+      <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>5</ChNo>
-      <X>815</X>
-      <Z>450</Z>
-      <Way>UP</Way>
-      <Target>UPPER_PRESS</Target>
+      <X>1950</X>
+      <Z>655</Z>
+      <Way>INVAILED</Way>
+      <Target>STRIPPER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
@@ -61,31 +61,31 @@
       <IsUpdated>false</IsUpdated>
       <ChNo>7</ChNo>
       <X>2825</X>
-      <Z>190</Z>
+      <Z>675</Z>
       <Way>LEFT</Way>
       <Target>LOWER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
-      <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
-      <Way>INVAILED</Way>
-      <Target>INVAILED</Target>
+      <ChNo>8</ChNo>
+      <X>2825</X>
+      <Z>560</Z>
+      <Way>LEFT</Way>
+      <Target>LOWER</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>9</ChNo>
+      <X>2825</X>
+      <Z>620</Z>
+      <Way>LEFT</Way>
+      <Target>UPPER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
-      <Way>INVAILED</Way>
-      <Target>INVAILED</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
+      <X>-100</X>
+      <Z>-100</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
     </PositionSetting>

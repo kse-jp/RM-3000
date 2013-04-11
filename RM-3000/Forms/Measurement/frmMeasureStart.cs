@@ -260,6 +260,8 @@ namespace RM_3000.Forms.Measurement
         {
             if (this.log != null) this.log.PutLog("frmMeasureStart.frmMeasureStart_FormClosing() - in");
 
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+
             try
             {
                 if (cmbColor.Visible)
@@ -274,6 +276,8 @@ namespace RM_3000.Forms.Measurement
                     this.measSetting.Revert();
                     SystemSetting.MeasureSetting.Revert();
                 }
+
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
             }
             catch (Exception ex)
             {

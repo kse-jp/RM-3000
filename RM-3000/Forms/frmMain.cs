@@ -188,7 +188,7 @@ namespace RM_3000
             imageList_PowerLED.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
-            fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_Desabled.png");
+            fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_Disabled.png");
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 

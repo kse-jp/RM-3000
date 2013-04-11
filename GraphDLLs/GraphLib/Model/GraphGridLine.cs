@@ -784,9 +784,7 @@ namespace GraphLib.Model
 
                 double calcx = 0;
                 if (_MaxGridValueX - _MinGridValueX != 0)
-                    calcx = (_GraphSize.Width - _Margin.Left - Margin.Right) * ((axisposx - _MinGridValueX) / (_MaxGridValueX - _MinGridValueX));
-                else
-                    calcx = (_GraphSize.Width - _Margin.Left - Margin.Right);
+                    calcx = (_GraphSize.Width - _Margin.Left - Margin.Right) * ((axisposx - _MinGridValueX) / (_MaxGridValueX - _MinGridValueX));                
 
                 LineGeometry axis_y = new LineGeometry();
                 axis_y.StartPoint = new Point(_Margin.Left + calcx, _GraphSize.Height - _Margin.Bottom);

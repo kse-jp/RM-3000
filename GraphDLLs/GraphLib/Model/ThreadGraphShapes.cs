@@ -173,7 +173,7 @@ namespace GraphLib.Model
                 {
                     if (countline < _GraphModel.PlotCountX)
                     {
-                        startpos = plotvaluex - (countline * _GraphModel.IncrementX);
+                        startpos = plotvaluex - ((countline-1) * _GraphModel.IncrementX);
                     }
                 }
 

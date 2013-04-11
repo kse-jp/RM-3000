@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 using CommonLib;
 using DataCommon;
@@ -525,6 +526,22 @@ namespace RM_3000.Forms.Settings
                     //validate value
                     if (ValidateValue() == false)
                     { return; }
+                    for (int i = 0; i < this.dataTagSetting.DataTagList.Length; i++)
+                    {
+                        if (this.dataTagSetting.DataTagList[i].TagKind == 2)
+                        {
+                            if (!string.IsNullOrEmpty(this.dataTagSetting.DataTagList[i].Expression))
+                            {
+                                if (!EvaluateExpression(this.dataTagSetting.DataTagList[i].Expression))
+                                {
+                                    this.dgvTagList.CurrentCell = this.dgvTagList.Rows[i].Cells[0];
+                                    
+                                    return; 
+                                }
+                            }
+                        }
+                    }
+                    
                     if (this.dirtyFlag)
                     {
                         if (MessageBox.Show(AppResource.GetString("MSG_CONFIRM_SAVE"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
@@ -668,14 +685,9 @@ namespace RM_3000.Forms.Settings
         /// <param name="e"></param>
         private void btnEvalExpression_Click(object sender, EventArgs e)
         {
+            string temp = string.Empty;
             try
             {
-                bool eval = false;
-                int index = 0;
-                int pos = -1;
-                string temp = string.Empty;
-                string variable = string.Empty;
-                CalcBtmEnabled(false);
                 if (Convert.ToInt32(cboTagKind.SelectedValue) == 0 && (!string.IsNullOrEmpty(txtCalc1_1.Text) && !string.IsNullOrEmpty(txtCalc1_2.Text)))
                 {
                     //temp = txtCalc1_1.Text + cmbOperators.SelectedItem.ToString() + txtCalc1_2.Text;
@@ -684,8 +696,47 @@ namespace RM_3000.Forms.Settings
                 else if (Convert.ToInt32(cboTagKind.SelectedValue) == 2 && !string.IsNullOrEmpty(txtCalc2.Text))
                 {
                     temp = txtCalc2.Text;
-                    eval = true;
+                    if (EvaluateExpression(temp))
+                    { MessageBox.Show(AppResource.GetString("MSG_TAGSETTING_OK_EXPRESSION"), this.Text); }
                 }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+                return;
+            }
+            
+        }
+        /// <summary>
+        /// evaluate expression
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool EvaluateExpression(string input)
+        {
+            bool retResult = false;
+            bool eval = false;
+            int index = 0;
+            int pos = -1;
+            string temp = string.Empty;
+            string variable = string.Empty;
+            List<string> tagList = new List<string>();
+            List<int> tagIndexList = new List<int>();
+            try
+            {
+                CalcBtmEnabled(false);
+                //if (Convert.ToInt32(cboTagKind.SelectedValue) == 0 && (!string.IsNullOrEmpty(txtCalc1_1.Text) && !string.IsNullOrEmpty(txtCalc1_2.Text)))
+                //{
+                //    //temp = txtCalc1_1.Text + cmbOperators.SelectedItem.ToString() + txtCalc1_2.Text;
+                //    //eval = true;
+                //}
+                //else if (Convert.ToInt32(cboTagKind.SelectedValue) == 2 && !string.IsNullOrEmpty(txtCalc2.Text))
+                //{
+                //    temp = txtCalc2.Text;
+                //    eval = true;
+                //}
+                temp = input;
+                eval = true;
                 if (eval)
                 {
 
@@ -693,41 +744,113 @@ namespace RM_3000.Forms.Settings
                     if (this.dataTagSetting != null && this.dataTagSetting.DataTagList != null)
                     {
                         bool match = false;
-                        for (index = 0; index < this.dataTagSetting.DataTagList.Length; index++)
+                        int foundIndex = 0;
+                        string varName = string.Empty;
+                        char[] delimiters = { '+', '-', '*', '/', '(', ')' };
+                        string[] data = temp.Split(delimiters, StringSplitOptions.None);
+                        int indexOfHardBracket = -1;
+                        int indexOfAmps = -1;
+                        int strLength = 0;
+                        string evalData = string.Empty;
+                        for (int k = 0; k < data.Length; k++)
                         {
+                            varName = string.Empty;
                             match = false;
-                            //"@1[変位右上]"
-                            variable = string.Format("@{0}[{1}]", index + 1, this.dataTagSetting.DataTagList[index].GetSystemTagName());
-                            pos = temp.IndexOf(variable);
-                            if (pos >= 0)
+                            foundIndex = -1;
+                            if (data[k].Length > 1)
                             {
-                                //temp.Replace(variable, this.dataTagSetting.DataTagList[index].
-                                string tag = string.Format("TAG{0}", index + 1);
-                                string tempV = temp.Replace(variable, tag);
-                                temp = tempV;
-                                if (this.currentTag != null)
+
+                                foreach (Match mt in Regex.Matches(data[k], @"@([0-9]{1,3})"))
                                 {
-                                    if (this.currentTag.TagNo == this.dataTagSetting.DataTagList[index].TagNo)
+                                    if (mt.Success)
                                     {
-                                        match = true;
-                                    }
-                                    //check edition tag with other calc tag
-                                    else if (this.currentTag.TagKind == 2 || (!IsMeasure && this.currentTag.IsBlank))
-                                    {
-                                        if (this.dataTagSetting.DataTagList[index].TagKind == 2 || (!IsMeasure && this.dataTagSetting.DataTagList[index].IsBlank))
+                                        //check tag No that over than 300
+                                        varName = mt.Value.Substring(1);
+                                        if (Convert.ToInt32(varName) > 300)
                                         {
-                                            match = true;
+                                            MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                                            CalcBtmEnabled(true);
+                                            return false;
                                         }
-                                    }
-                                    if (match)
-                                    {
-                                        MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                                        CalcBtmEnabled(true);
-                                        return;
+                                        //get index of close bracket & next '@'
+                                        indexOfHardBracket = data[k].IndexOf(']', mt.Index + 1);
+                                        indexOfAmps = data[k].IndexOf('@', mt.Index + 1);
+                                        for (int m = 0; m < this.dataTagSetting.DataTagList.Length; m++)
+                                        {
+                                            variable = string.Format("@{0}", m + 1);
+                                            if (mt.Value.Equals(variable))
+                                            {
+                                                //keep tag info and tag index to list 
+                                                if (indexOfHardBracket > 0)
+                                                {
+                                                    if (indexOfAmps > 0)
+                                                    {
+                                                        strLength = (indexOfAmps > indexOfHardBracket ? indexOfHardBracket : indexOfAmps) - mt.Index + 1;
+                                                    }
+                                                    else
+                                                    {
+                                                        strLength = indexOfHardBracket - mt.Index + 1;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (indexOfAmps > 0)
+                                                    {
+                                                        strLength = indexOfAmps - mt.Index + 1;
+                                                    }
+                                                    else
+                                                    {
+                                                        strLength = -1;
+                                                    }
+                                                }
+                                                if (strLength > 0)
+                                                {
+                                                    tagList.Add(data[k].Substring(mt.Index, strLength));
+                                                }
+                                                else
+                                                {
+                                                    tagList.Add(data[k].Substring(mt.Index));
+                                                }
+                                                tagIndexList.Add(m);
+                                                match = true;
+                                                varName = mt.Value;
+                                                foundIndex = m;
+
+                                                if (match)
+                                                {
+                                                    match = false;
+                                                    if (this.currentTag != null)
+                                                    {
+                                                        if (this.currentTag.TagNo == this.dataTagSetting.DataTagList[foundIndex].TagNo)
+                                                        {
+                                                            match = true;
+                                                        }
+                                                        //check edition tag with other calc tag
+                                                        else if (this.currentTag.TagKind == 2 || (!IsMeasure && this.currentTag.IsBlank))
+                                                        {
+                                                            if (this.dataTagSetting.DataTagList[foundIndex].TagKind == 2 || (!IsMeasure && this.dataTagSetting.DataTagList[foundIndex].IsBlank))
+                                                            {
+                                                                match = true;
+                                                            }
+                                                        }
+                                                        if (match)
+                                                        {
+                                                            MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                                                            CalcBtmEnabled(true);
+                                                            return false;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
+                    }
+                    for (int n = 0; n < tagList.Count; n++)
+                    {
+                        temp = temp.Replace(tagList[n], string.Format("TAG{0}", tagIndexList[n] + 1));
                     }
                     if (this.constantSetting != null && this.constantSetting.ConstantList != null)
                     {
@@ -773,19 +896,23 @@ namespace RM_3000.Forms.Settings
                     if (calc.CalcFormulaJudge(strCalcName, strExpression, ref strErrorMessage) == false)
                     {
                         MessageBox.Show(strErrorMessage + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        retResult = false;
                     }
                     else
                     {
-                        MessageBox.Show(AppResource.GetString("MSG_TAGSETTING_OK_EXPRESSION"), this.Text);
+                        //MessageBox.Show(AppResource.GetString("MSG_TAGSETTING_OK_EXPRESSION"), this.Text);
+                        retResult = true;
                     }
                 }
             }
             catch (Exception ex)
             {
                 ShowErrorMessage(ex);
+                retResult = false;
             }
 
             CalcBtmEnabled(true);
+            return retResult;
         }
         /// <summary>
         /// 

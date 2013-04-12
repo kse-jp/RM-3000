@@ -881,7 +881,10 @@ namespace RM_3000.Forms.Measurement
                     if (this.graph2DList[i].PlotCount / 2 < info.MaxDataSizeX * 0.05)
                         this.graph2DList[i].PlotCount = Convert.ToInt32(info.MaxDataSizeX * 0.05);
                     else
+                    {
                         this.graph2DList[i].PlotCount = this.graph2DList[i].PlotCount / 2;
+                        this.graph2DList[i].ZoomXCounter++;
+                    }
                 }
             }
         }
@@ -900,10 +903,18 @@ namespace RM_3000.Forms.Measurement
                     if (this.measSetting.Mode == 3 && maxdatasize > 0)
                         maxdatasize--;
 
-                    if (this.graph2DList[i].PlotCount * 2 > maxdatasize)
-                        this.graph2DList[i].PlotCount = maxdatasize;
+                    if (this.graph2DList[i].PlotCount * 2 > maxdatasize-1)
+                    {
+                        this.graph2DList[i].ZoomXCounter = 0;
+                        this.graph2DList[i].PlotCount = maxdatasize-1;                        
+                    }
                     else
+                    {
                         this.graph2DList[i].PlotCount = this.graph2DList[i].PlotCount * 2;
+                        this.graph2DList[i].ZoomXCounter--;
+                    }
+
+
                 }
             }
         }

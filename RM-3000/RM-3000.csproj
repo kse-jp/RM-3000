@@ -136,6 +136,12 @@
     <Compile Include="Controls\NumericTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\PictureButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PictureButton.Designer.cs">
+      <DependentUpon>PictureButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\uctrlChannelSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,12 @@
       <DependentUpon>uctrlPositionUnit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\DataGenerator.cs" />
+    <Compile Include="Controls\PictureToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PictureToolStripButton.Designer.cs">
+      <DependentUpon>PictureToolStripButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Analyze\frmAnalyzeMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,8 +385,14 @@
     <EmbeddedResource Include="Controls\NumericTextbox.resx">
       <DependentUpon>NumericTextbox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PictureButton.resx">
+      <DependentUpon>PictureButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\uctrlChannelSetting.resx">
       <DependentUpon>uctrlChannelSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PictureToolStripButton.resx">
+      <DependentUpon>PictureToolStripButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Analyze\frmAnalyzeController.resx">
       <DependentUpon>frmAnalyzeController.cs</DependentUpon>
@@ -608,6 +626,12 @@
     <Content Include="Resources\Images\Buttons\Analyze\1Loop_ON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\CSV_Disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Analyze\CSV_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Buttons\Analyze\CSV_OFF.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -620,10 +644,10 @@
     <Content Include="Resources\Images\Buttons\Analyze\LoopAll_ON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Buttons\Analyze\ReadFile_OFF.png">
+    <Content Include="Resources\Images\Buttons\Common\ReadFile_OFF.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Buttons\Analyze\ReadFile_ON.png">
+    <Content Include="Resources\Images\Buttons\Common\ReadFile_ON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Buttons\Analyze\PrintScreen_OFF.png">
@@ -632,19 +656,49 @@
     <Content Include="Resources\Images\Buttons\Analyze\PrintScreen_ON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Buttons\Common\GraphAxitSetting_OFF.png">
+    <Content Include="Resources\Images\Buttons\Common\ReadFile_Disabled.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Buttons\Common\GraphAxitSetting_ON.png">
+    <Content Include="Resources\Images\Buttons\Common\ReadFile_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\GraphAxisSetting_Disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\GraphAxisSetting_MouseON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\GraphAxisSetting_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\GraphAxisSetting_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\MeasureSetting_Disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\MeasureSetting_MouseON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Buttons\Common\MeasureSetting_OFF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\RemoveGraph_Disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\RemoveGraph_MouseON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Buttons\Common\RemoveGraph_OFF.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Buttons\Common\RemoveGraph_ON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\WriteFile_Disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Buttons\Common\WriteFile_MouseON.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Buttons\Common\WriteFile_OFF.png">

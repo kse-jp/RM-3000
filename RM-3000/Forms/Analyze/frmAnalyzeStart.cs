@@ -112,38 +112,104 @@ namespace RM_3000.Forms.Analyze
             // CSV Icon
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\CSV_OFF.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnOutputCSV.OFF_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\CSV_ON.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnOutputCSV.ON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\CSV_MouseON.png");
+            pbtnOutputCSV.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\CSV_Disabled.png");
+            pbtnOutputCSV.Disabled_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
             // Read Icon
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\ReadFile_OFF.png");
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_OFF.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnReadFile.OFF_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\ReadFile_ON.png");
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_ON.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnReadFile.ON_Image = Image.FromStream(fs, false, false);
             fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_MouseON.png");
+            pbtnReadFile.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_Disabled.png");
+            pbtnReadFile.Disabled_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            //fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_OFF.png");
+            //imageList1.Add(Image.FromStream(fs, false, false));
+            //fs.Close();
+
+            //fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_ON.png");
+            //imageList1.Add(Image.FromStream(fs, false, false));
+            //fs.Close();
+
 
             //Remove Graph Button
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_OFF.png");
+            pbtnRemoveGraph.OFF_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_ON.png");
+            pbtnRemoveGraph.ON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_MouseON.png");
+            pbtnRemoveGraph.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_Disabled.png");
+            pbtnRemoveGraph.Disabled_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
 
             //Graph Axis Setting Button
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_OFF.png");
-            imageList1.Add(Image.FromStream(fs, false, false));
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_OFF.png");
+            pbtnGraphAxisSetting.OFF_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_ON.png");
-            imageList1.Add(Image.FromStream(fs, false, false));
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_ON.png");
+            pbtnGraphAxisSetting.ON_Image = Image.FromStream(fs, false, false);
             fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_MouseON.png");
+            pbtnGraphAxisSetting.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_Disabled.png");
+            pbtnGraphAxisSetting.Disabled_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            ////Remove Graph Button
+            //fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_OFF.png");
+            //imageList1.Add(Image.FromStream(fs, false, false));
+            //fs.Close();
+
+            //fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_ON.png");
+            //imageList1.Add(Image.FromStream(fs, false, false));
+            //fs.Close();
+
+            ////Graph Axis Setting Button
+            //fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_OFF.png");
+            //imageList1.Add(Image.FromStream(fs, false, false));
+            //fs.Close();
+
+            //fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_ON.png");
+            //imageList1.Add(Image.FromStream(fs, false, false));
+            //fs.Close();
 
 
         }
@@ -151,20 +217,20 @@ namespace RM_3000.Forms.Analyze
         /// <summary>
         /// 
         /// </summary>
-        private void ButtonImageInit()
-        {
-            picOutputCSV.Image = imageList1[0];
-            picOutputCSV.Tag = 0;
+        //private void ButtonImageInit()
+        //{
+        //    picOutputCSV.Image = imageList1[0];
+        //    picOutputCSV.Tag = 0;
 
-            picReadFile.Image = imageList1[2];
-            picReadFile.Tag = 2;
+        //    picReadFile.Image = imageList1[2];
+        //    picReadFile.Tag = 2;
 
-            picRemoveGraph.Image = imageList1[4];
-            picRemoveGraph.Tag = 4;
+        //    picRemoveGraph.Image = imageList1[4];
+        //    picRemoveGraph.Tag = 4;
 
-            picGraphAxisSetting.Image = imageList1[6];
-            picGraphAxisSetting.Tag = 6;
-        }
+        //    picGraphAxisSetting.Image = imageList1[6];
+        //    picGraphAxisSetting.Tag = 6;
+        //}
 
         #endregion
 
@@ -219,8 +285,8 @@ namespace RM_3000.Forms.Analyze
                 ShowErrorMessage(ex);
             }
 
-            //ボタンアイコンの初期化
-            ButtonImageInit();
+            ////ボタンアイコンの初期化
+            //ButtonImageInit();
 
             if (this.log != null) this.log.PutLog("frmAnalyzeStart.frmAnalyzeStart_Load() - 解析開始画面のロードを終了しました。");
         }
@@ -414,8 +480,8 @@ namespace RM_3000.Forms.Analyze
         {
             try
             {
-                picReadFile.Image = imageList1[(int)picReadFile.Tag + 1];
-                Application.DoEvents();
+                //picReadFile.Image = imageList1[(int)picReadFile.Tag + 1];
+                //Application.DoEvents();
 
                 var directory = string.Empty;
                 //var dialog = new FolderBrowserDialog();
@@ -492,8 +558,8 @@ namespace RM_3000.Forms.Analyze
             }
             finally
             {
-                picReadFile.Image = imageList1[(int)picReadFile.Tag];
-                Application.DoEvents();
+                //picReadFile.Image = imageList1[(int)picReadFile.Tag];
+                //Application.DoEvents();
             }
         }
         /// <summary>
@@ -1055,8 +1121,8 @@ namespace RM_3000.Forms.Analyze
         {
             try
             {
-                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag + 1];
-                Application.DoEvents();
+                //picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag + 1];
+                //Application.DoEvents();
 
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
@@ -1084,8 +1150,8 @@ namespace RM_3000.Forms.Analyze
             }
             finally
             {
-                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag];
-                Application.DoEvents();
+                //picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag];
+                //Application.DoEvents();
             }
         }
         /// <summary>
@@ -1330,8 +1396,8 @@ namespace RM_3000.Forms.Analyze
             {
                 mainForm = (frmMain)this.Parent.Parent;
 
-                picOutputCSV.Image = imageList1[(int)picOutputCSV.Tag + 1];
-                Application.DoEvents();
+                //picOutputCSV.Image = imageList1[(int)picOutputCSV.Tag + 1];
+                //Application.DoEvents();
 
                 // 入力値のチェック
                 var startindex = int.Parse(txtCsvStartIndex.Text);
@@ -1445,7 +1511,7 @@ namespace RM_3000.Forms.Analyze
             }
             finally
             {
-                picOutputCSV.Image = imageList1[(int)picOutputCSV.Tag];
+                //picOutputCSV.Image = imageList1[(int)picOutputCSV.Tag];
                 if (mainForm != null)
                 {
                     mainForm.Enabled = true;
@@ -1520,8 +1586,8 @@ namespace RM_3000.Forms.Analyze
         {
             try
             {
-                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag + 1];
-                Application.DoEvents();
+                //picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag + 1];
+                //Application.DoEvents();
 
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
@@ -1580,8 +1646,8 @@ namespace RM_3000.Forms.Analyze
             }
             finally
             {
-                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag];
-                Application.DoEvents();
+                //picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag];
+                //Application.DoEvents();
             }
         }
 
@@ -1618,59 +1684,370 @@ namespace RM_3000.Forms.Analyze
             this.txtGraphTitle.Text = this.txtGraphTitle.Text.Trim();
         }
 
-        /// <summary>
-        /// CSV出力アイコンクリック
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picOutputCSV_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnOutputCSV.Enabled)
-                btnOutputCSV.PerformClick();
-        }
+        ///// <summary>
+        ///// CSV出力アイコンクリック
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void picOutputCSV_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnOutputCSV.Enabled)
+        //        btnOutputCSV.PerformClick();
+        //}
 
-        /// <summary>
-        /// ReadFileアイコンクリック
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picReadFile_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnRead.Enabled)
-                btnRead.PerformClick();
-        }
+        ///// <summary>
+        ///// ReadFileアイコンクリック
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void picReadFile_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnRead.Enabled)
+        //        btnRead.PerformClick();
+        //}
 
-        /// <summary>
-        /// RemoveGraphアイコンクリック
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picRemoveGraph_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnRemoveGraph.Enabled)
-                btnRemoveGraph.PerformClick();
-        }
+        ///// <summary>
+        ///// RemoveGraphアイコンクリック
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void picRemoveGraph_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnRemoveGraph.Enabled)
+        //        btnRemoveGraph.PerformClick();
+        //}
 
-        /// <summary>
-        /// GraphAxisSettingアイコンクリック
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picGraphAxisSetting_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnGraphAxisSetting.Enabled)
-                btnGraphAxisSetting.PerformClick();
-        }
+        ///// <summary>
+        ///// GraphAxisSettingアイコンクリック
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void picGraphAxisSetting_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnGraphAxisSetting.Enabled)
+        //        btnGraphAxisSetting.PerformClick();
+        //}
 
         #endregion
+
+        private void pbtnReadFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var directory = string.Empty;
+                //var dialog = new FolderBrowserDialog();
+                frmAnalyzeDataSelector dialog = new frmAnalyzeDataSelector();
+
+                if (!string.IsNullOrEmpty(this.analyzeData.DirectoryPath))
+                    dialog.SelectAnalyzeDataFolder = this.analyzeData.DirectoryPath;
+                else
+                    dialog.SelectFolderName = CommonLib.SystemDirectoryPath.MeasureData;
+
+                //dialog.SelectedPath = string.IsNullOrEmpty(this.analyzeData.DirectoryPath) ? CommonLib.SystemDirectoryPath.MeasureData : this.analyzeData.DirectoryPath;
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //Close Data
+                    if (this.analyzeData != null)
+                        this.analyzeData.CloseData();
+
+                    this.analyzeData.DirectoryPath = dialog.SelectAnalyzeDataFolder;
+                    LoadContent();
+                    ShowMeasSetting();
+                    LoadCalcTag();
+                    if (this.analyzeData.MeasureData != null)
+                    {
+                        this.lblFileName.Text = System.IO.Path.GetFileName(this.analyzeData.DirectoryPath.Substring(0, this.analyzeData.DirectoryPath.Length - 1));
+                        this.lblMeasStartDateTime.Text = this.analyzeData.MeasureData.StartTime.ToString("yyyy/M/d HH:mm:ss");
+                        this.lblMeasEndDateTime.Text = this.analyzeData.MeasureData.EndTime.ToString("yyyy/M/d HH:mm:ss");
+                        this.lblTotalShotCount.Text = this.analyzeData.MeasureData.SamplesCount.ToString();
+                        this.txtCsvCount.Text = (this.analyzeData.MeasureData.SamplesCount).ToString();
+                    }
+                    else
+                    {
+                        this.lblFileName.Text = string.Empty;
+                        this.lblMeasStartDateTime.Text = string.Empty;
+                        this.lblMeasEndDateTime.Text = string.Empty;
+                        this.lblTotalShotCount.Text = string.Empty;
+
+                        grpCsv.Enabled = false;
+                    }
+                    switch (this.measSetting.Mode)
+                    {
+                        case 1:
+                            this.lblMode.Text = AppResource.GetString("TXT_MODE1");
+                            lblSampleTiming.Enabled = false;
+                            this.lblSampleTiming.Text = "----";
+                            break;
+                        case 2:
+                            this.lblMode.Text = AppResource.GetString("TXT_MODE2");
+                            lblSampleTiming.Enabled = true;
+                            this.lblSampleTiming.Text = CommonLib.CommonMethod.GetSamplingTimingString(this.analyzeData.MeasureSetting.SamplingTiming_Mode2);
+                            break;
+                        case 3:
+                            this.lblMode.Text = AppResource.GetString("TXT_MODE3");
+                            lblSampleTiming.Enabled = true;
+                            this.lblSampleTiming.Text = CommonLib.CommonMethod.GetSamplingTimingString(this.analyzeData.MeasureSetting.SamplingTiming_Mode3);
+                            break;
+                        default:
+                            this.lblMode.Text = string.Empty;
+                            break;
+                    }
+
+                    // Enable controls
+                    EnableControls(true);
+                    if (this.measSetting.Mode == 3 && this.dgvMeasTagList.RowCount > 0)
+                    {
+                        dgvMeasTagList.Rows[dgvMeasTagList.RowCount - 1].Visible = false;
+                    }
+                    if (this.log != null) this.log.PutLog(string.Format("frmAnalyzeStart.btnRead_Click() - 測定フォルダ[{0}]を読み込みました。", directory));
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
+        }
+
+        private void pbtnOutputCSV_Click(object sender, EventArgs e)
+        {
+            frmMain mainForm = null;
+
+            try
+            {
+                mainForm = (frmMain)this.Parent.Parent;
+
+                // 入力値のチェック
+                var startindex = int.Parse(txtCsvStartIndex.Text);
+                if (startindex < 1)
+                {
+                    ShowErrorMessage(AppResource.GetString("ERROR_INVALID_CSV_STARTINDEX"));
+                    return;
+                }
+                var endindex = int.Parse(txtCsvCount.Text);
+                if (endindex < 1)
+                {
+                    ShowErrorMessage(AppResource.GetString("ERROR_INVALID_CSV_ENDINDEX"));
+                    return;
+                }
+
+                if (endindex < startindex)
+                {
+                    ShowErrorMessage(AppResource.GetString("ERROR_INVALID_CSV_OVERINDEX"));
+                    return;
+                }
+
+                if (endindex > analyzeData.MeasureData.SamplesCount)
+                {
+                    ShowErrorMessage(AppResource.GetString("ERROR_INVALID_CSV_OVERSAMPLECOUNT"));
+                    return;
+                }
+
+
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "csv|*.csv";
+                sfd.FileName = System.IO.Path.GetFileName(this.analyzeData.DirectoryPath.Substring(0, this.analyzeData.DirectoryPath.Length - 2)) + ".csv";
+
+                //ファイル保存名
+                if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
+                    return;
+
+                //using (var f = new FolderBrowserDialog() { SelectedPath = CommonLib.SystemDirectoryPath.MeasureData, ShowNewFolderButton = false })
+                //{
+                //    if (f.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                //    {
+                //        return;
+                //    }
+
+                //    var data = new DataCommon.AnalyzeData() { DirectoryPath = f.SelectedPath + @"\" };
+                //    data.Deserialize();
+
+                string tmpFileName = CommonLib.SystemDirectoryPath.TempPath + "Output.csv";
+
+                //一時フォルダを作成
+                if (!System.IO.Directory.Exists(CommonLib.SystemDirectoryPath.TempPath))
+                    System.IO.Directory.CreateDirectory(CommonLib.SystemDirectoryPath.TempPath);
+
+                //ダイアログのOPEN
+                dlgprogress =
+                    RM_3000.Forms.Common.dlgProgress.ShowProgress(
+                        AppResource.GetString("MSG_CSV_OUTPUT_TITLE"),
+                        AppResource.GetString("MSG_CSV_OUTPUT_MSG"),
+                        "",
+                        ProgressBarStyle.Marquee,
+                        this);
+
+                dlgprogress.CancelEvent += new EventHandler(dlgprogress_CancelEvent);
+                analyzeData.OutputProgressMessageEvent += new AnalyzeData.OutputProgressMessageHandler(analyzeData_OutputProgressMessageEvent);
+
+                analyzeData.bCancelCSVOutput = false;
+
+                mainForm.Enabled = false;
+
+                //出力処理
+                if (this.analyzeData.OutputCSV(tmpFileName, startindex - 1, endindex - startindex + 1))
+                {
+                    //出力フォルダの有無により、出力フォルダ作成
+                    if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(sfd.FileName)))
+                    {
+                        System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(sfd.FileName));
+                    }
+
+                    //既にファイルがある場合は削除
+                    System.IO.File.Delete(sfd.FileName);
+                    //ファイルの移動
+                    System.IO.File.Move(tmpFileName, sfd.FileName);
+
+                    MessageBox.Show(AppResource.GetString("MSG_CSV_OUTPUT_COMPLETE"));
+                }
+                else
+                {
+                    //キャンセル？
+                    if (analyzeData.bCancelCSVOutput)
+                        ShowErrorMessage(AppResource.GetString("MSG_CANCEL"));
+                    else
+                        ShowErrorMessage(AppResource.GetString("ERROR_CSV_OUTPUT"));
+
+                    //一時ファイルの削除
+                    System.IO.File.Delete(tmpFileName);
+                }
+                //}
+
+                dlgprogress.CancelEvent -= dlgprogress_CancelEvent;
+                analyzeData.OutputProgressMessageEvent -= analyzeData_OutputProgressMessageEvent;
+
+                dlgprogress.Close();
+
+                dlgprogress = null;
+
+                analyzeData.bCancelCSVOutput = false;
+
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+                if (mainForm != null)
+                {
+                    mainForm.Enabled = true;
+                    mainForm.BringToFront();
+                }
+                Application.DoEvents();
+            }
+
+        }
+
+        private void pbtnRemoveGraph_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColor.Visible)
+                { cmbColor.Visible = false; }
+                if (this.measSetting != null && this.measSetting.GraphSettingList != null)
+                {
+                    var graph = this.measSetting.GraphSettingList[this.dgvGraph.SelectedRows[0].Index];
+
+                    if (MessageBox.Show(AppResource.GetString("MSG_GRAPH_CONFIRM_REMOVE"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        graph.Title = string.Empty;
+                        graph.ClearCenterScale();
+                        graph.ClearScale();
+                        graph.ClearGraphTagList();
+                        this.dirty = true;
+
+                        this.dgvGraph.Rows[this.dgvGraph.SelectedRows[0].Index].Cells[1].Value = graph.Title;
+                        ShowGraphDetail(this.dgvGraph.SelectedRows[0].Index);
+                        //set OFF ch
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
+
+        }
+
+        private void pbtnGraphAxisSetting_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColor.Visible)
+                { cmbColor.Visible = false; }
+                if (this.measSetting != null && this.measSetting.GraphSettingList != null)
+                {
+                    var graphIndex = this.dgvGraph.SelectedRows[0].Index;
+                    var graph = this.analyzeData.MeasureSetting.GraphSettingList[graphIndex];
+
+                    using (var f = new RM_3000.Forms.Graph.frmGraphAxisSetting(this.log) { MeasSetting = this.analyzeData.MeasureSetting, AnalyzeData = this.analyzeData, Graph = graph })
+                    {
+                        if (f.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                        {
+                            this.analyzeData.MeasureSetting.IsUpdated = true;
+                            this.analyzeData.MeasureSetting.GraphSettingList[graphIndex] = f.Graph;
+                            if (f.IsModXAxis)
+                            {
+                                for (int i = 0; i < this.analyzeData.MeasureSetting.GraphSettingList.Length; i++)
+                                {
+                                    if (i == graphIndex)
+                                    {
+                                        continue;
+                                    }
+                                    //this.analyzeData.MeasureSetting.GraphSettingList[i].MaxX = f.Graph.MaxX;
+                                    // this.analyzeData.MeasureSetting.GraphSettingList[i].MinimumX = f.Graph.MinimumX;
+                                    //this.analyzeData.MeasureSetting.GraphSettingList[i].DistanceX = f.Graph.DistanceX;
+                                    if (this.analyzeData.MeasureSetting.Mode == 1)
+                                    {
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].MaxX_Mode1 = f.Graph.MaxX_Mode1;
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].MinimumX_Mode1 = f.Graph.MinimumX_Mode1;
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].DistanceX_Mode1 = f.Graph.DistanceX_Mode1;
+                                    }
+                                    else if (this.analyzeData.MeasureSetting.Mode == 2)
+                                    {
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].MaxX_Mode2 = f.Graph.MaxX_Mode2;
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].MinimumX_Mode2 = f.Graph.MinimumX_Mode2;
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].DistanceX_Mode2 = f.Graph.DistanceX_Mode2;
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].NumbeOfShotMode2 = f.Graph.NumbeOfShotMode2;
+                                    }
+                                    else
+                                    {
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].MaxX_Mode3 = f.Graph.MaxX_Mode3;
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].MinimumX_Mode3 = f.Graph.MinimumX_Mode3;
+                                        this.analyzeData.MeasureSetting.GraphSettingList[i].DistanceX_Mode3 = f.Graph.DistanceX_Mode3;
+                                    }
+                                }
+                            }
+
+                            this.dirty = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
+
+        }
 
 
     }

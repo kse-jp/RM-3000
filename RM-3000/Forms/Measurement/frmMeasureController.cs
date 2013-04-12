@@ -108,7 +108,10 @@ namespace RM_3000.Forms.Parts
             }
         }
 
-
+        /// <summary>
+        /// ハード時間を表示する
+        /// </summary>
+        /// <param name="time">ハード時間</param>
         public void SetHardTime(string time)
         {
             try

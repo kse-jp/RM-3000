@@ -237,6 +237,9 @@ namespace RM_3000.Forms.Measurement
         /// <param name="bCond_MeasurePause"></param>
         private void GotCondition(bool bCond_MeasurePause)
         {
+
+            this.controllerForm.SetHardTime(RealTimeData.LastDataReceiveTime.ToString("HH:mm:ss"));
+
             var time = DateTime.Now - RealTimeData.GetStartTime();
             this.controllerForm.SetMeasureTime(time.ToString("hh\\:mm\\:ss\\.fff"));
 

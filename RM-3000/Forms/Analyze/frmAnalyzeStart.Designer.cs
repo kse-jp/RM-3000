@@ -29,29 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnalyzeStart));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.btnTagSetting = new System.Windows.Forms.Button();
             this.grpCsv = new System.Windows.Forms.GroupBox();
-            this.picOutputCSV = new System.Windows.Forms.PictureBox();
+            this.pbtnOutputCSV = new RM_3000.Controls.PictureButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnOutputCSV = new System.Windows.Forms.Button();
             this.txtCsvCount = new RM_3000.Controls.NumericTextBox();
             this.txtCsvStartIndex = new RM_3000.Controls.NumericTextBox();
             this.tabItems = new System.Windows.Forms.TabControl();
@@ -70,15 +69,13 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpGraph = new System.Windows.Forms.GroupBox();
-            this.picRemoveGraph = new System.Windows.Forms.PictureBox();
+            this.pbtnRemoveGraph = new RM_3000.Controls.PictureButton();
             this.pnlGraph = new System.Windows.Forms.Panel();
             this.dgvGraph = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRemoveGraph = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.picGraphAxisSetting = new System.Windows.Forms.PictureBox();
-            this.btnGraphAxisSetting = new System.Windows.Forms.Button();
+            this.pbtnGraphAxisSetting = new RM_3000.Controls.PictureButton();
             this.pnlGraphDetail = new System.Windows.Forms.Panel();
             this.cmbColor = new RM_3000.Classes.ColorComboBox();
             this.dgvGraphDetail = new System.Windows.Forms.DataGridView();
@@ -91,6 +88,7 @@
             this.btnRemoveGraphTag = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.grpAnalyzeFile = new System.Windows.Forms.GroupBox();
+            this.pbtnReadFile = new RM_3000.Controls.PictureButton();
             this.lblSampleTiming = new System.Windows.Forms.Label();
             this.lblSamplingTiming_Title = new System.Windows.Forms.Label();
             this.lblFileName = new System.Windows.Forms.Label();
@@ -103,13 +101,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblMeasStartDateTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picReadFile = new System.Windows.Forms.PictureBox();
-            this.btnRead = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.grpCsv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picOutputCSV)).BeginInit();
             this.tabItems.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pnlMeasTagList.SuspendLayout();
@@ -118,15 +113,12 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalcList)).BeginInit();
             this.grpGraph.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRemoveGraph)).BeginInit();
             this.pnlGraph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGraphAxisSetting)).BeginInit();
             this.pnlGraphDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraphDetail)).BeginInit();
             this.grpAnalyzeFile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picReadFile)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -151,22 +143,27 @@
             // 
             // grpCsv
             // 
-            this.grpCsv.Controls.Add(this.picOutputCSV);
+            this.grpCsv.Controls.Add(this.pbtnOutputCSV);
             this.grpCsv.Controls.Add(this.label5);
             this.grpCsv.Controls.Add(this.label4);
-            this.grpCsv.Controls.Add(this.btnOutputCSV);
             this.grpCsv.Controls.Add(this.txtCsvCount);
             this.grpCsv.Controls.Add(this.txtCsvStartIndex);
             resources.ApplyResources(this.grpCsv, "grpCsv");
             this.grpCsv.Name = "grpCsv";
             this.grpCsv.TabStop = false;
             // 
-            // picOutputCSV
+            // pbtnOutputCSV
             // 
-            resources.ApplyResources(this.picOutputCSV, "picOutputCSV");
-            this.picOutputCSV.Name = "picOutputCSV";
-            this.picOutputCSV.TabStop = false;
-            this.picOutputCSV.Click += new System.EventHandler(this.picOutputCSV_Click);
+            this.pbtnOutputCSV.BackColor = System.Drawing.Color.Transparent;
+            this.pbtnOutputCSV.Disabled_Image = null;
+            resources.ApplyResources(this.pbtnOutputCSV, "pbtnOutputCSV");
+            this.pbtnOutputCSV.MouseON_Image = null;
+            this.pbtnOutputCSV.Name = "pbtnOutputCSV";
+            this.pbtnOutputCSV.OFF_Image = null;
+            this.pbtnOutputCSV.ON_Image = null;
+            this.pbtnOutputCSV.status = RM_3000.Controls.PictureButton.StatusType.OFF;
+            this.pbtnOutputCSV.UseVisualStyleBackColor = false;
+            this.pbtnOutputCSV.Click += new System.EventHandler(this.pbtnOutputCSV_Click);
             // 
             // label5
             // 
@@ -177,13 +174,6 @@
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // btnOutputCSV
-            // 
-            resources.ApplyResources(this.btnOutputCSV, "btnOutputCSV");
-            this.btnOutputCSV.Name = "btnOutputCSV";
-            this.btnOutputCSV.UseVisualStyleBackColor = true;
-            this.btnOutputCSV.Click += new System.EventHandler(this.btnOutputCSV_Click);
             // 
             // txtCsvCount
             // 
@@ -229,14 +219,14 @@
             this.dgvMeasTagList.AllowUserToAddRows = false;
             this.dgvMeasTagList.AllowUserToDeleteRows = false;
             this.dgvMeasTagList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMeasTagList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMeasTagList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMeasTagList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMeasTagList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -261,8 +251,8 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -271,8 +261,8 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Column2, "Column2");
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -281,8 +271,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -290,8 +280,8 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -314,14 +304,14 @@
             // 
             this.dgvCalcList.AllowUserToAddRows = false;
             this.dgvCalcList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCalcList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCalcList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCalcList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCalcList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
@@ -338,8 +328,8 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn10.FillWeight = 81.96722F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -349,8 +339,8 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewTextBoxColumn11.FillWeight = 118.0328F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -359,8 +349,8 @@
             // 
             // dataGridViewTextBoxColumn12
             // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle9;
             resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
@@ -368,20 +358,25 @@
             // 
             // grpGraph
             // 
-            this.grpGraph.Controls.Add(this.picRemoveGraph);
+            this.grpGraph.Controls.Add(this.pbtnRemoveGraph);
             this.grpGraph.Controls.Add(this.pnlGraph);
-            this.grpGraph.Controls.Add(this.btnRemoveGraph);
             this.grpGraph.Controls.Add(this.groupBox4);
             resources.ApplyResources(this.grpGraph, "grpGraph");
             this.grpGraph.Name = "grpGraph";
             this.grpGraph.TabStop = false;
             // 
-            // picRemoveGraph
+            // pbtnRemoveGraph
             // 
-            resources.ApplyResources(this.picRemoveGraph, "picRemoveGraph");
-            this.picRemoveGraph.Name = "picRemoveGraph";
-            this.picRemoveGraph.TabStop = false;
-            this.picRemoveGraph.Click += new System.EventHandler(this.picRemoveGraph_Click);
+            this.pbtnRemoveGraph.BackColor = System.Drawing.Color.Transparent;
+            this.pbtnRemoveGraph.Disabled_Image = null;
+            resources.ApplyResources(this.pbtnRemoveGraph, "pbtnRemoveGraph");
+            this.pbtnRemoveGraph.MouseON_Image = null;
+            this.pbtnRemoveGraph.Name = "pbtnRemoveGraph";
+            this.pbtnRemoveGraph.OFF_Image = null;
+            this.pbtnRemoveGraph.ON_Image = null;
+            this.pbtnRemoveGraph.status = RM_3000.Controls.PictureButton.StatusType.OFF;
+            this.pbtnRemoveGraph.UseVisualStyleBackColor = false;
+            this.pbtnRemoveGraph.Click += new System.EventHandler(this.pbtnRemoveGraph_Click);
             // 
             // pnlGraph
             // 
@@ -394,14 +389,14 @@
             this.dgvGraph.AllowUserToAddRows = false;
             this.dgvGraph.AllowUserToDeleteRows = false;
             this.dgvGraph.AllowUserToResizeRows = false;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGraph.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGraph.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvGraph.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGraph.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -419,8 +414,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn1.FillWeight = 15F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -429,24 +424,16 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn2.FillWeight = 85F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // btnRemoveGraph
-            // 
-            resources.ApplyResources(this.btnRemoveGraph, "btnRemoveGraph");
-            this.btnRemoveGraph.Name = "btnRemoveGraph";
-            this.btnRemoveGraph.UseVisualStyleBackColor = true;
-            this.btnRemoveGraph.Click += new System.EventHandler(this.btnRemoveGraph_Click);
-            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.picGraphAxisSetting);
-            this.groupBox4.Controls.Add(this.btnGraphAxisSetting);
+            this.groupBox4.Controls.Add(this.pbtnGraphAxisSetting);
             this.groupBox4.Controls.Add(this.pnlGraphDetail);
             this.groupBox4.Controls.Add(this.txtGraphTitle);
             this.groupBox4.Controls.Add(this.label3);
@@ -454,19 +441,18 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // picGraphAxisSetting
+            // pbtnGraphAxisSetting
             // 
-            resources.ApplyResources(this.picGraphAxisSetting, "picGraphAxisSetting");
-            this.picGraphAxisSetting.Name = "picGraphAxisSetting";
-            this.picGraphAxisSetting.TabStop = false;
-            this.picGraphAxisSetting.Click += new System.EventHandler(this.picGraphAxisSetting_Click);
-            // 
-            // btnGraphAxisSetting
-            // 
-            resources.ApplyResources(this.btnGraphAxisSetting, "btnGraphAxisSetting");
-            this.btnGraphAxisSetting.Name = "btnGraphAxisSetting";
-            this.btnGraphAxisSetting.UseVisualStyleBackColor = true;
-            this.btnGraphAxisSetting.Click += new System.EventHandler(this.btnGraphAxisSetting_Click);
+            this.pbtnGraphAxisSetting.BackColor = System.Drawing.Color.Transparent;
+            this.pbtnGraphAxisSetting.Disabled_Image = null;
+            resources.ApplyResources(this.pbtnGraphAxisSetting, "pbtnGraphAxisSetting");
+            this.pbtnGraphAxisSetting.MouseON_Image = null;
+            this.pbtnGraphAxisSetting.Name = "pbtnGraphAxisSetting";
+            this.pbtnGraphAxisSetting.OFF_Image = null;
+            this.pbtnGraphAxisSetting.ON_Image = null;
+            this.pbtnGraphAxisSetting.status = RM_3000.Controls.PictureButton.StatusType.OFF;
+            this.pbtnGraphAxisSetting.UseVisualStyleBackColor = false;
+            this.pbtnGraphAxisSetting.Click += new System.EventHandler(this.pbtnGraphAxisSetting_Click);
             // 
             // pnlGraphDetail
             // 
@@ -1760,14 +1746,14 @@
             this.dgvGraphDetail.AllowUserToAddRows = false;
             this.dgvGraphDetail.AllowUserToDeleteRows = false;
             this.dgvGraphDetail.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Meiryo UI", 9F);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGraphDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Meiryo UI", 9F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGraphDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvGraphDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGraphDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -1788,8 +1774,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTextBoxColumn3.FillWeight = 10F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -1799,8 +1785,8 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewTextBoxColumn7.FillWeight = 40F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
@@ -1810,8 +1796,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewTextBoxColumn8.FillWeight = 30F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -1851,6 +1837,7 @@
             // 
             // grpAnalyzeFile
             // 
+            this.grpAnalyzeFile.Controls.Add(this.pbtnReadFile);
             this.grpAnalyzeFile.Controls.Add(this.lblSampleTiming);
             this.grpAnalyzeFile.Controls.Add(this.lblSamplingTiming_Title);
             this.grpAnalyzeFile.Controls.Add(this.lblFileName);
@@ -1863,11 +1850,22 @@
             this.grpAnalyzeFile.Controls.Add(this.label2);
             this.grpAnalyzeFile.Controls.Add(this.lblMeasStartDateTime);
             this.grpAnalyzeFile.Controls.Add(this.label1);
-            this.grpAnalyzeFile.Controls.Add(this.picReadFile);
-            this.grpAnalyzeFile.Controls.Add(this.btnRead);
             resources.ApplyResources(this.grpAnalyzeFile, "grpAnalyzeFile");
             this.grpAnalyzeFile.Name = "grpAnalyzeFile";
             this.grpAnalyzeFile.TabStop = false;
+            // 
+            // pbtnReadFile
+            // 
+            this.pbtnReadFile.BackColor = System.Drawing.Color.Transparent;
+            this.pbtnReadFile.Disabled_Image = null;
+            resources.ApplyResources(this.pbtnReadFile, "pbtnReadFile");
+            this.pbtnReadFile.MouseON_Image = null;
+            this.pbtnReadFile.Name = "pbtnReadFile";
+            this.pbtnReadFile.OFF_Image = null;
+            this.pbtnReadFile.ON_Image = null;
+            this.pbtnReadFile.status = RM_3000.Controls.PictureButton.StatusType.OFF;
+            this.pbtnReadFile.UseVisualStyleBackColor = false;
+            this.pbtnReadFile.Click += new System.EventHandler(this.pbtnReadFile_Click);
             // 
             // lblSampleTiming
             // 
@@ -1935,20 +1933,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // picReadFile
-            // 
-            resources.ApplyResources(this.picReadFile, "picReadFile");
-            this.picReadFile.Name = "picReadFile";
-            this.picReadFile.TabStop = false;
-            this.picReadFile.Click += new System.EventHandler(this.picReadFile_Click);
-            // 
-            // btnRead
-            // 
-            resources.ApplyResources(this.btnRead, "btnRead");
-            this.btnRead.Name = "btnRead";
-            this.btnRead.UseVisualStyleBackColor = true;
-            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-            // 
             // btnStart
             // 
             resources.ApplyResources(this.btnStart, "btnStart");
@@ -1978,7 +1962,6 @@
             this.pnlMain.PerformLayout();
             this.grpCsv.ResumeLayout(false);
             this.grpCsv.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picOutputCSV)).EndInit();
             this.tabItems.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.pnlMeasTagList.ResumeLayout(false);
@@ -1987,16 +1970,13 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalcList)).EndInit();
             this.grpGraph.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picRemoveGraph)).EndInit();
             this.pnlGraph.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGraphAxisSetting)).EndInit();
             this.pnlGraphDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraphDetail)).EndInit();
             this.grpAnalyzeFile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picReadFile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2007,7 +1987,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox grpAnalyzeFile;
-        private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotalShotCount;
         private System.Windows.Forms.Label label12;
@@ -2025,7 +2004,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel pnlGraphDetail;
         private System.Windows.Forms.DataGridView dgvGraphDetail;
-        private System.Windows.Forms.Button btnRemoveGraph;
         private System.Windows.Forms.TextBox txtGraphTitle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabControl tabItems;
@@ -2039,8 +2017,6 @@
         private Controls.NumericTextBox txtCsvCount;
         private Controls.NumericTextBox txtCsvStartIndex;
         private System.Windows.Forms.Button btnTagSetting;
-        private System.Windows.Forms.Button btnOutputCSV;
-        private System.Windows.Forms.Button btnGraphAxisSetting;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -2049,8 +2025,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox picOutputCSV;
-        private System.Windows.Forms.PictureBox picReadFile;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
@@ -2063,7 +2037,9 @@
         private System.Windows.Forms.Label lblSamplingTiming_Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.PictureBox picRemoveGraph;
-        private System.Windows.Forms.PictureBox picGraphAxisSetting;
+        private Controls.PictureButton pbtnReadFile;
+        private Controls.PictureButton pbtnOutputCSV;
+        private Controls.PictureButton pbtnRemoveGraph;
+        private Controls.PictureButton pbtnGraphAxisSetting;
     }
 }

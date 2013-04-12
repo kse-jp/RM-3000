@@ -96,49 +96,99 @@ namespace RM_3000.Forms.Measurement
             System.IO.FileStream fs;
 
             //Pattern Read Button
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\ReadFile_OFF.png");
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_OFF.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnReadFile.OFF_Image = Image.FromStream(fs, false, false);            
             fs.Close();
 
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Analyze\\ReadFile_ON.png");
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_ON.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnReadFile.ON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_MouseON.png");
+            pbtnReadFile.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_Disabled.png");
+            pbtnReadFile.Disabled_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
             //Pattern Write Button
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\WriteFile_OFF.png");
+            pbtnWriteFile.OFF_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\WriteFile_ON.png");
+            pbtnWriteFile.ON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\WriteFile_MouseON.png");
+            pbtnWriteFile.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\WriteFile_Disabled.png");
+            pbtnWriteFile.Disabled_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
             //Measure Setting Button
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\MeasureSetting_OFF.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnMeasureSetting.OFF_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\MeasureSetting_ON.png");
             imageList1.Add(Image.FromStream(fs, false, false));
+            pbtnMeasureSetting.ON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\MeasureSetting_MouseON.png");
+            pbtnMeasureSetting.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\MeasureSetting_Disabled.png");
+            pbtnMeasureSetting.Disabled_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
             //Remove Graph Button
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_OFF.png");
+            pbtnRemoveGraph.OFF_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_ON.png");
+            pbtnRemoveGraph.ON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_MouseON.png");
+            pbtnRemoveGraph.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\RemoveGraph_Disabled.png");
+            pbtnRemoveGraph.Disabled_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
 
             //Graph Axis Setting Button
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_OFF.png");
-            imageList1.Add(Image.FromStream(fs, false, false));
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_OFF.png");
+            pbtnGraphAxisSetting.OFF_Image = Image.FromStream(fs, false, false);
             fs.Close();
 
-            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxitSetting_ON.png");
-            imageList1.Add(Image.FromStream(fs, false, false));
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_ON.png");
+            pbtnGraphAxisSetting.ON_Image = Image.FromStream(fs, false, false);
             fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_MouseON.png");
+            pbtnGraphAxisSetting.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\GraphAxisSetting_Disabled.png");
+            pbtnGraphAxisSetting.Disabled_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
 
         }
 
@@ -147,20 +197,6 @@ namespace RM_3000.Forms.Measurement
         /// </summary>
         private void InitButtonImage()
         {
-            picReadFile.Image = imageList1[0];
-            picReadFile.Tag = 0;
-
-            picWriteFile.Image = imageList1[2];
-            picWriteFile.Tag = 2;
-
-            picSetting.Image = imageList1[4];
-            picSetting.Tag = 4;
-
-            picRemoveGraph.Image = imageList1[6];
-            picRemoveGraph.Tag = 6;
-
-            picGraphAxisSetting.Image = imageList1[8];
-            picGraphAxisSetting.Tag = 8;
         
         }
 
@@ -963,8 +999,6 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag + 1];
-                Application.DoEvents();
 
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
@@ -991,8 +1025,6 @@ namespace RM_3000.Forms.Measurement
             }
             finally
             {
-                picRemoveGraph.Image = imageList1[(int)picRemoveGraph.Tag];
-                Application.DoEvents();
             }
         }
         /// <summary>
@@ -1004,8 +1036,6 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                picSetting.Image = imageList1[(int)picSetting.Tag + 1];
-                Application.DoEvents();
 
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
@@ -1024,8 +1054,6 @@ namespace RM_3000.Forms.Measurement
             }
             finally
             {
-                picSetting.Image = imageList1[(int)picSetting.Tag];
-                Application.DoEvents();
             }
         }
         /// <summary>
@@ -1037,9 +1065,6 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                picReadFile.Image = imageList1[(int)picReadFile.Tag + 1];
-                Application.DoEvents();
-
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 using (var f = new frmMeasurePattern(this.log) { IsReadMode = true })
@@ -1068,8 +1093,6 @@ namespace RM_3000.Forms.Measurement
             }
             finally
             {
-                picReadFile.Image = imageList1[(int)picReadFile.Tag];
-                Application.DoEvents();
             }
         }
         /// <summary>
@@ -1081,9 +1104,6 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                picWriteFile.Image = imageList1[(int)picWriteFile.Tag + 1];
-                Application.DoEvents();
-
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 using (var f = new frmMeasurePattern(this.log))
@@ -1101,8 +1121,7 @@ namespace RM_3000.Forms.Measurement
             }
             finally
             {
-                picWriteFile.Image = imageList1[(int)picWriteFile.Tag];
-                Application.DoEvents();
+
             }
         }
         /// <summary>
@@ -1355,9 +1374,6 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag + 1];
-                Application.DoEvents();
-
                 if (cmbColor.Visible)
                 { cmbColor.Visible = false; }
                 if (this.measSetting != null && this.measSetting.GraphSettingList != null)
@@ -1420,8 +1436,7 @@ namespace RM_3000.Forms.Measurement
             }
             finally
             {
-                picGraphAxisSetting.Image = imageList1[(int)picGraphAxisSetting.Tag];
-                Application.DoEvents();
+
             }
         }
 
@@ -1503,6 +1518,192 @@ namespace RM_3000.Forms.Measurement
             { cmbColor.Visible = false; }
             if (btnGraphAxisSetting.Enabled)
                 btnGraphAxisSetting.PerformClick();
+
+        }
+
+        private void pbtnMeasureSetting_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColor.Visible)
+                { cmbColor.Visible = false; }
+                using (var f = new frmMeasureSetting(this.log) { MeasSetting = this.measSetting })
+                {
+                    if (f.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        //this.dirty = true;
+                        this.measSetting.IsUpdated = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
+        }
+
+        private void pbtnGraphAxisSetting_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColor.Visible)
+                { cmbColor.Visible = false; }
+                if (this.measSetting != null && this.measSetting.GraphSettingList != null)
+                {
+                    var graph = this.measSetting.GraphSettingList[this.dgvGraph.SelectedRows[0].Index];
+
+                    using (var f = new RM_3000.Forms.Graph.frmGraphAxisSetting(this.log) { MeasSetting = this.measSetting, Graph = graph })
+                    {
+                        if (f.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                        {
+                            this.measSetting.IsUpdated = true;
+                            this.measSetting.GraphSettingList[this.dgvGraph.SelectedRows[0].Index] = f.Graph;
+                            if (f.IsModXAxis)
+                            {
+                                for (int i = 0; i < this.measSetting.GraphSettingList.Length; i++)
+                                {
+                                    if (this.measSetting.Mode == 1)
+                                    {
+                                        //if (f.Graph.MinimumX_Mode1 > this.measSetting.GraphSettingList[i].MaxX_Mode1)
+                                        //{
+                                        //    this.measSetting.GraphSettingList[i].MaxX_Mode1 = f.Graph.MaxX_Mode1;
+                                        //    this.measSetting.GraphSettingList[i].MinimumX_Mode1 = f.Graph.MinimumX_Mode1;
+                                        //}
+
+                                        this.measSetting.GraphSettingList[i].MinimumX_Mode1 = f.Graph.MinimumX_Mode1;
+                                        this.measSetting.GraphSettingList[i].MaxX_Mode1 = f.Graph.MaxX_Mode1;
+                                        this.measSetting.GraphSettingList[i].DistanceX_Mode1 = f.Graph.DistanceX_Mode1;
+                                    }
+                                    else if (this.measSetting.Mode == 2)
+                                    {
+                                        //if (f.Graph.MinimumX_Mode2 > this.measSetting.GraphSettingList[i].MaxX_Mode2)
+                                        //{
+                                        //    this.measSetting.GraphSettingList[i].MaxX_Mode2 = f.Graph.MaxX_Mode2;
+                                        //    this.measSetting.GraphSettingList[i].MinimumX_Mode2 = f.Graph.MinimumX_Mode2;
+                                        //}                                       
+                                        this.measSetting.GraphSettingList[i].MinimumX_Mode2 = f.Graph.MinimumX_Mode2;
+                                        this.measSetting.GraphSettingList[i].MaxX_Mode2 = f.Graph.MaxX_Mode2;
+                                        this.measSetting.GraphSettingList[i].DistanceX_Mode2 = f.Graph.DistanceX_Mode2;
+                                    }
+                                    else
+                                    {
+                                        //if (f.Graph.MinimumX_Mode3 > this.measSetting.GraphSettingList[i].MaxX_Mode3)
+                                        //{
+                                        //    this.measSetting.GraphSettingList[i].MaxX_Mode3 = f.Graph.MaxX_Mode3;
+                                        //    this.measSetting.GraphSettingList[i].MinimumX_Mode3 = f.Graph.MinimumX_Mode3;
+                                        //}                                        
+                                        this.measSetting.GraphSettingList[i].MinimumX_Mode3 = f.Graph.MinimumX_Mode3;
+                                        this.measSetting.GraphSettingList[i].MaxX_Mode3 = f.Graph.MaxX_Mode3;
+                                        this.measSetting.GraphSettingList[i].DistanceX_Mode3 = f.Graph.DistanceX_Mode3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
+
+        }
+
+        private void pbtnReadFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColor.Visible)
+                { cmbColor.Visible = false; }
+                using (var f = new frmMeasurePattern(this.log) { IsReadMode = true })
+                {
+                    if (f.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        // Update Measure setting.
+                        this.measSetting.GraphSettingList = f.Pattern.MeasureSetting.GraphSettingList;
+                        this.measSetting.MeasTagList = f.Pattern.MeasureSetting.MeasTagList;
+                        this.measSetting.MeasureTime_Mode2 = f.Pattern.MeasureSetting.MeasureTime_Mode2;
+                        this.measSetting.MeasureTime_Mode3 = f.Pattern.MeasureSetting.MeasureTime_Mode3;
+                        this.measSetting.Mode = f.Pattern.MeasureSetting.Mode;
+                        this.measSetting.SamplingCountLimit = f.Pattern.MeasureSetting.SamplingCountLimit;
+                        this.measSetting.SamplingTiming_Mode2 = f.Pattern.MeasureSetting.SamplingTiming_Mode2;
+                        this.measSetting.SamplingTiming_Mode3 = f.Pattern.MeasureSetting.SamplingTiming_Mode3;
+                        this.lblPatternFile.Text = f.CurrentFileName;
+
+                        // 測定設定を表示
+                        ShowMeasSetting();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
+        }
+
+        private void pbtnWriteFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColor.Visible)
+                { cmbColor.Visible = false; }
+                using (var f = new frmMeasurePattern(this.log))
+                {
+                    f.Pattern = new MeasurePattern();
+                    f.Pattern.MeasureSetting = this.measSetting;
+                    f.Pattern.RelationSetting = SystemSetting.RelationSetting;
+                    f.IsReadMode = false;
+                    f.ShowDialog(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
+        }
+
+        private void pbtnRemoveGraph_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColor.Visible)
+                { cmbColor.Visible = false; }
+                if (this.measSetting != null && this.measSetting.GraphSettingList != null)
+                {
+                    var graph = this.measSetting.GraphSettingList[this.dgvGraph.SelectedRows[0].Index];
+
+                    if (MessageBox.Show(AppResource.GetString("MSG_GRAPH_CONFIRM_REMOVE"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        graph.Title = string.Empty;
+                        graph.ClearCenterScale();
+                        graph.ClearScale();
+                        graph.ClearAxisSetting(false);
+                        graph.ClearGraphTagList();
+                        this.measSetting.IsUpdated = true;
+                        this.dgvGraph.Rows[this.dgvGraph.SelectedRows[0].Index].Cells[1].Value = graph.Title;
+                        ShowGraphDetail(this.dgvGraph.SelectedRows[0].Index);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+            }
 
         }
 

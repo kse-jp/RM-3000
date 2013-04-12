@@ -32,6 +32,8 @@ namespace DataCommon
             SampleData ret = new SampleData();
             List<ChannelData> tmpChList = new List<ChannelData>();
 
+            ret.SampleTime = this.SampleTime;
+
             foreach( ChannelData ch in ChannelDatas)
             {
                 if (ch != null)

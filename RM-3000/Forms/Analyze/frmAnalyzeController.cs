@@ -82,7 +82,7 @@ namespace RM_3000.Forms.Parts
         /// <summary>
         /// BackgroundWorker for 3D graph
         /// </summary>
-        private BackgroundWorker bw3Dgraph = null;
+        //private BackgroundWorker bw3Dgraph = null;
         /// <summary>
         /// IsStartAnimation
         /// </summary>
@@ -133,6 +133,8 @@ namespace RM_3000.Forms.Parts
         /// check restart animation
         /// </summary>
         private bool isWorkerRestart = false;
+
+        private Thread threadCreateAnimation = null;
 
         /// <summary>
         /// Constructor
@@ -384,8 +386,10 @@ namespace RM_3000.Forms.Parts
         public void Start3DAnimation()
         {
             // 自動アニメーション用スレッド起動 
-            EnabledButton(false);
-            bw3Dgraph.RunWorkerAsync();
+            EnabledButton(false);          
+            //bw3Dgraph.RunWorkerAsync();
+            threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
+            threadCreateAnimation.Start();
             isStartAnimation = true;
         }
 
@@ -394,18 +398,27 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         public void Stop3DAnimation()
         {
-            // 自動アニメーション用スレッド停止
-            for (int i = 0; i < this.graph3DList.Count; i++)
+            try
             {
-                if (this.graph3DList[i] != null)
+                threadCreateAnimation.Abort();
+                // 自動アニメーション用スレッド停止
+                for (int i = 0; i < this.graph3DList.Count; i++)
                 {
-                    this.graph3DList[i].StopAnimation();
+                    if (this.graph3DList[i] != null)
+                    {
+                        this.graph3DList[i].StopAnimation();
+                    }
                 }
-            }
 
-            bw3Dgraph.CancelAsync();
-            isStartAnimation = false;
-            EnabledButton(true);
+                //bw3Dgraph.CancelAsync();
+
+                isStartAnimation = false;
+                EnabledButton(true);
+            }
+            catch (ThreadAbortException ex)
+            {
+                ex.ToString();
+            }
 
         }
 
@@ -692,12 +705,12 @@ namespace RM_3000.Forms.Parts
                         if (this.graph3DList.Count > 0)
                         {
                             this.graph3DList[0].OnAnimationCompleted += new frmGraph3D.AnimationCompletedEventHandler(this.frmGraph3D_OnAnimationCompleted);
-                        }
-                        this.bw3Dgraph = new BackgroundWorker();
-                        this.bw3Dgraph.WorkerSupportsCancellation = true;
-                        this.bw3Dgraph.WorkerReportsProgress = false;
-                        this.bw3Dgraph.DoWork += new DoWorkEventHandler(this.bw3DGraph_Animation);
-                        this.bw3Dgraph.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw3DGraph_WorkerCompleted);
+                        }                        
+                        //this.bw3Dgraph = new BackgroundWorker();
+                        //this.bw3Dgraph.WorkerSupportsCancellation = true;
+                        //this.bw3Dgraph.WorkerReportsProgress = false;
+                        //this.bw3Dgraph.DoWork += new DoWorkEventHandler(this.bw3DGraph_Animation);
+                        //this.bw3Dgraph.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw3DGraph_WorkerCompleted);
 
                         // 3Dグラフへデータセット
                         if (this.dataList != null && this.dataList.Count > 0 && this.dataList[0] != null)
@@ -796,14 +809,14 @@ namespace RM_3000.Forms.Parts
                     }
                 }
 
-                if (bw3Dgraph != null)
-                {
-                    if (bw3Dgraph.IsBusy)
-                        bw3Dgraph.CancelAsync();
-                    bw3Dgraph.DoWork -= bw3DGraph_Animation;
-                    bw3Dgraph.RunWorkerCompleted -= bw3DGraph_WorkerCompleted;
-                    bw3Dgraph.Dispose();
-                }
+                //if (bw3Dgraph != null)
+                //{
+                //    if (bw3Dgraph.IsBusy)
+                //        bw3Dgraph.CancelAsync();
+                //    bw3Dgraph.DoWork -= bw3DGraph_Animation;
+                //    bw3Dgraph.RunWorkerCompleted -= bw3DGraph_WorkerCompleted;
+                //    bw3Dgraph.Dispose();
+                //}
                 this.MdiParent.Resize -= frmAnalyzeMain_Resize;
 
                 // 2Dグラフを終了する
@@ -1137,14 +1150,26 @@ namespace RM_3000.Forms.Parts
                         Clear3DGraphData();
                     }
                     SetDataToGraph3D();
-                    if (!this.bw3Dgraph.IsBusy)
+                   
+
+                    threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
+                    threadCreateAnimation.Start();
+
+                    for (int i = 0; i < this.graph3DList.Count; i++)
                     {
-                        this.bw3Dgraph.RunWorkerAsync();
+                        if (this.graph3DList[i] != null && isSensorData3D)
+                        {
+                            this.graph3DList[i].Refresh();
+                        }
                     }
-                    else
-                    {
-                        isWorkerRestart = true;
-                    }
+                    //if (!this.bw3Dgraph.IsBusy)
+                    //{
+                    //    this.bw3Dgraph.RunWorkerAsync();
+                    //}
+                    //else
+                    //{
+                    //    isWorkerRestart = true;
+                    //}
                 }
             }
             catch (Exception ex)
@@ -1541,11 +1566,11 @@ namespace RM_3000.Forms.Parts
         /// <param name="e"></param>
         private void bw3DGraph_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (isWorkerRestart)
-            {
-                isWorkerRestart = false;
-                bw3Dgraph.RunWorkerAsync();
-            }
+            //if (isWorkerRestart)
+            //{
+            //    isWorkerRestart = false;
+            //    bw3Dgraph.RunWorkerAsync();
+            //}
         }
 
         /// <summary>
@@ -1553,17 +1578,10 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void bw3DGraph_Animation(object sender, DoWorkEventArgs e)
+        private void Thread_CreateAnimation()
         {
             try
-            {
-                BackgroundWorker worker = sender as BackgroundWorker;
-                if ((worker.CancellationPending == true))
-                {
-                    e.Cancel = true;
-                    return;
-                }
-
+            {              
 
                 //Create Animation Loop
                 for (int i = 0; i < this.graph3DList.Count; i++)
@@ -1581,12 +1599,11 @@ namespace RM_3000.Forms.Parts
                     for (int i = 0; i < this.graph3DList.Count; i++)
                     {
                         if (this.graph3DList[i] != null && isSensorData3D)
-                        {
-
-                            this.graph3DList[i].StartAnimation();
+                        {                            
+                            this.graph3DList[i].StartAnimation();                            
                         }
                     }
-                }
+                }              
             }
             catch (Exception ex)
             {
@@ -1620,15 +1637,18 @@ namespace RM_3000.Forms.Parts
                     else
                     {
                         Clear3DGraphData();
-                        SetDataToGraph3D();
-                        if (!this.bw3Dgraph.IsBusy)
-                        {
-                            this.bw3Dgraph.RunWorkerAsync();
-                        }
-                        else
-                        {
-                            isWorkerRestart = true;
-                        }
+                        SetDataToGraph3D();                      
+                        
+                        threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
+                        threadCreateAnimation.Start();
+                        //if (!this.bw3Dgraph.IsBusy)
+                        //{
+                        //    this.bw3Dgraph.RunWorkerAsync();
+                        //}
+                        //else
+                        //{
+                        //    isWorkerRestart = true;
+                        //}
                     }
                 }
 

@@ -1003,11 +1003,11 @@ namespace GraphLib.Model
                 {
                     this._ThreadGraphShape.IsRefresh = isRefresh;
 
-                    //if (isRefresh && this._CalculatThreadOperation != null)
-                    //{
-                    //    if (this._CalculatThreadOperation.Status != DispatcherOperationStatus.Completed)
-                    //        return;
-                    //}
+                    if (isRefresh && this._CalculatThreadOperation != null)
+                    {
+                        if (this._CalculatThreadOperation.Status != DispatcherOperationStatus.Completed)
+                            return;
+                    }
 
                     if (this.ShotCount > 1)
                     {

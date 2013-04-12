@@ -24,6 +24,7 @@ namespace RM_3000.Forms.Settings
             InitializeComponent();
 
             ContentsLoad();
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
         /// <summary>
         /// ログ
@@ -41,15 +42,15 @@ namespace RM_3000.Forms.Settings
         {
             InitializeComponent();
 
-           this.SetStyle(ControlStyles.UserPaint, true);
-           this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-           this.SetStyle(ControlStyles.DoubleBuffer, true);
-           this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
- 
+            this.SetStyle(ControlStyles.UserPaint, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.DoubleBuffer, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
             this.log = log;
 
             AppResource.SetControlsText(this);
- 
+
             ContentsLoad();
 
             InitButtonImage();
@@ -58,25 +59,8 @@ namespace RM_3000.Forms.Settings
 
             this.LanguageChanged += new EventHandler(frmSettingMenu_LanguageChanged);
 
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
-
-
-        ///// <summary>
-        ///// Override OnPaint of Form for write backgound
-        ///// </summary>
-        ///// <param name="e"></param>
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    if (bmBackgound != null)
-        //    {
-        //        Graphics dc = e.Graphics;
-
-        //        dc.DrawImage(bmBackgound, 0, 0);
-        //        dc.Dispose();
-        //    }
-
-        //    base.OnPaint(e);
-        //}
 
         /// <summary>
         /// コンテンツ画像等のロード
@@ -190,7 +174,7 @@ namespace RM_3000.Forms.Settings
             fs = System.IO.File.OpenRead("Resources\\Images\\Backgrounds\\Back_Bis.png");
             var btmp = Image.FromStream(fs, false, false);
             fs.Close();
-            bmBackgoundBase = new Bitmap(btmp, btmp.Width, btmp.Height); 
+            bmBackgoundBase = new Bitmap(btmp, btmp.Width, btmp.Height);
 
         }
 
@@ -210,7 +194,6 @@ namespace RM_3000.Forms.Settings
 
             picSensorPositiontButton.Image = imageList1[12];
             picSensorPositiontButton.Tag = 12;
-
         }
 
         private void InitLanguageButtonImage()
@@ -264,7 +247,7 @@ namespace RM_3000.Forms.Settings
             PictureBox pic = (PictureBox)sender;
 
             SetEnabled(false);
-            
+
             //設置画面の場合通信可能確認
             if (pic.Name == "picSensorPositiontButton" && !Sequences.CommunicationMonitor.GetInstance().IsCanMeasure && !SystemSetting.SystemConfig.IsSimulationMode)
             {
@@ -285,7 +268,7 @@ namespace RM_3000.Forms.Settings
 
                 pic.Tag = pos;
             }
-            
+
             Form frm = null;
 
             switch (pic.Name)
@@ -359,7 +342,7 @@ namespace RM_3000.Forms.Settings
                     if (systemconfig.SystemLanguage != DataCommon.CommonResource.LANGUAGE.Japanese)
                     {
                         systemconfig.SwitchLanguage(DataCommon.CommonResource.LANGUAGE.Japanese);
-                        systemconfig.SaveXmlFile();                        
+                        systemconfig.SaveXmlFile();
                     }
                     break;
                 case "picChanese":
@@ -382,7 +365,6 @@ namespace RM_3000.Forms.Settings
 
             //変更イベント
             LanguageChanged(this, new EventArgs());
-        
         }
 
         private void frmSettingMenu_Load(object sender, EventArgs e)
@@ -393,7 +375,7 @@ namespace RM_3000.Forms.Settings
             switch (systemconfig.SystemLanguage)
             {
                 case DataCommon.CommonResource.LANGUAGE.Chinese:
-                    picLanguageButton_Click(picChanese,new EventArgs());
+                    picLanguageButton_Click(picChanese, new EventArgs());
                     break;
                 case DataCommon.CommonResource.LANGUAGE.Japanese:
                     picLanguageButton_Click(picJapanese, new EventArgs());
@@ -403,28 +385,6 @@ namespace RM_3000.Forms.Settings
                     break;
             }
         }
-        /// <summary>
-        /// frmSettingMenu_Resize for set new background size
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void frmSettingMenu_Resize(object sender, EventArgs e)
-        {
-            //if (this.WindowState == FormWindowState.Minimized) return;
-
-            //if (this.bmBackgound != null)
-            //{
-            //    this.bmBackgound.Dispose();
-            //    this.bmBackgound = null;
-            //}
-
-            //if (this.bmBackgoundBase != null && this.ClientRectangle.Width != 0 && this.ClientRectangle.Height != 0)
-            //{
-            //    this.bmBackgound = new Bitmap(this.bmBackgoundBase, this.ClientRectangle.Width, this.ClientRectangle.Height);
-            //}
-
-        }
-
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

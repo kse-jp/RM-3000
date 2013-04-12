@@ -16,6 +16,7 @@ namespace RM_3000.Forms.Maintenance
             InitializeComponent();
 
             pictureBox2.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
     }
 }

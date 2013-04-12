@@ -191,10 +191,7 @@ namespace RM_3000
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_Disabled.png");
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
-
         }
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -209,19 +206,24 @@ namespace RM_3000
             btn.BackgroundImage = imageList1[pos];
             btn.Tag = pos;
 
-            var f = new Forms.Analyze.frmAnalyzeStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
-            
+            // close all forms
             foreach (Control ctrl in pnlDrawArea.Controls)
             {
                 if (ctrl is Form)
+                {
                     ((Form)ctrl).Close();
+                    if (((Form)ctrl).DialogResult != System.Windows.Forms.DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
             }
             
+            var f = new Forms.Analyze.frmAnalyzeStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
             pnlDrawArea.Controls.Clear();
             pnlDrawArea.Controls.Add(f);
             f.Show();
         }
-
         private void toolStripButton_Maintenance_Click(object sender, EventArgs e)
         {
             toolStripButtonImageInit();
@@ -231,19 +233,24 @@ namespace RM_3000
             btn.BackgroundImage = imageList1[pos];
             btn.Tag = pos;
 
-
-            var f = new Forms.Maintenance.frmSystemMainte() { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
+            // close all forms
             foreach (Control ctrl in pnlDrawArea.Controls)
             {
                 if (ctrl is Form)
+                {
                     ((Form)ctrl).Close();
+                    if (((Form)ctrl).DialogResult != System.Windows.Forms.DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
             }
+
+            var f = new Forms.Maintenance.frmSystemMainte() { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
             pnlDrawArea.Controls.Clear();
             pnlDrawArea.Controls.Add(f);
             f.Show();
-
         }
-
         private void toolStripButton_Measure_Click(object sender, EventArgs e)
         {
             toolStripButtonImageInit();
@@ -276,16 +283,22 @@ namespace RM_3000
                 }
             }
 
-            var f = new Forms.Measurement.frmMeasureStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
-
+            // close all forms
             foreach (Control ctrl in pnlDrawArea.Controls)
             {
                 if (ctrl is Form)
+                {
                     ((Form)ctrl).Close();
+                    if (((Form)ctrl).DialogResult != System.Windows.Forms.DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
             }
 
+            var f = new Forms.Measurement.frmMeasureStart(this.log) { TopLevel = false, StartPosition = FormStartPosition.CenterParent, Top = 0, Left = 0, Dock = DockStyle.Fill };
+
             pnlDrawArea.Controls.Clear();
-            
             pnlDrawArea.Controls.Add(f);
             f.Show();
         }
@@ -299,15 +312,23 @@ namespace RM_3000
             btn.BackgroundImage = imageList1[pos];
             btn.Tag = pos;
 
-            var f = new Forms.Settings.frmSettingMenu(this.log);
-            f.Dock = DockStyle.Fill;
-            f.TopLevel = false;
-            
+            // close all forms
             foreach (Control ctrl in pnlDrawArea.Controls)
             {
                 if (ctrl is Form)
+                {
                     ((Form)ctrl).Close();
+                    if (((Form)ctrl).DialogResult != System.Windows.Forms.DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
             }
+
+            var f = new Forms.Settings.frmSettingMenu(this.log);
+            f.Dock = DockStyle.Fill;
+            f.TopLevel = false;
+
             pnlDrawArea.Controls.Clear();
             pnlDrawArea.Controls.Add(f);
             f.StartPosition = FormStartPosition.Manual;

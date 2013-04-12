@@ -107,6 +107,27 @@ namespace RM_3000.Forms.Parts
                 ShowErrorMessage(ex);
             }
         }
+
+
+        public void SetHardTime(string time)
+        {
+            try
+            {
+                if (this.InvokeRequired)
+                {
+                    this.BeginInvoke((MethodInvoker)delegate() { SetHardTime(time); });
+                    return;
+                }
+
+                this.lblHardTime.Text = time;
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage(ex);
+            }
+            
+        }
+
         /// <summary>
         /// 測定中メッセージを表示する
         /// </summary>

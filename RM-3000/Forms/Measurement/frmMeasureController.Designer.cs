@@ -45,6 +45,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
+            this.lblHardTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbtnExit)).BeginInit();
@@ -65,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.Controls.Add(this.lblHardTime);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblMeasureCount);
             this.panel1.Controls.Add(this.lblUnit);
@@ -256,6 +258,15 @@
             this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // lblHardTime
+            // 
+            this.lblHardTime.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHardTime.Location = new System.Drawing.Point(213, 0);
+            this.lblHardTime.Name = "lblHardTime";
+            this.lblHardTime.Size = new System.Drawing.Size(71, 22);
+            this.lblHardTime.TabIndex = 7;
+            this.lblHardTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmMeasureController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -298,5 +309,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMeasureCount;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblHardTime;
     }
 }

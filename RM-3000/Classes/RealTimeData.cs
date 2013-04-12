@@ -360,7 +360,6 @@ namespace RM_3000
                         {
                             Cond_ShotCount_Mode1 = 0;
                             Cond_StopTime_Mode1 = realdata.SampleTime;
-
                             ret = false;
                         }
                         else

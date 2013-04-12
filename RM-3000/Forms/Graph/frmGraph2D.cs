@@ -1259,6 +1259,7 @@ namespace RM_3000.Forms.Graph
             graphinfo.MaxChannel = graphinfo.ChannelInfos.Count;
 
             this.GraphInfo = graphinfo;
+            if (this.log != null) this.log.PutLog("CreateGraphInfo2" + graphinfo.ToString());
         }
         /// <summary>
         /// Mode3のグラフを設定する

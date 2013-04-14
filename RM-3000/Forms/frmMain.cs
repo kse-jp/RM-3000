@@ -108,53 +108,69 @@ namespace RM_3000
 
             // Setting Icon
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Setting_OFF.png");
+            toolStripButton_Setting.OFF_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Setting_MouseON.png");
+            toolStripButton_Setting.MouseON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Setting_ON.png");
+            toolStripButton_Setting.ON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             // Measure Icon
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_OFF.png");
+            toolStripButton_Measure.OFF_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_MouseON.png");
+            toolStripButton_Measure.MouseON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_ON.png");
+            toolStripButton_Measure.ON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Measure_Disabled.png");
+            toolStripButton_Measure.Disabled_Image = Image.FromStream(fs, false, false);
             fs.Close();
             
             // Analyze Icon
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Analyze_OFF.png");
+            toolStripButton_Anaryze.OFF_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Analyze_MouseON.png");
+            toolStripButton_Anaryze.MouseON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Analyze_ON.png");
+            toolStripButton_Anaryze.ON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             // Maintenance Icon
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Mainte_OFF.png");
+            toolStripButton_Mainte.OFF_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Mainte_MouseON.png");
+            toolStripButton_Mainte.MouseON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 
             fs = System.IO.File.OpenRead("Resources\\Images\\Icons\\MenuIcon_Mainte_ON.png");
+            toolStripButton_Mainte.ON_Image = Image.FromStream(fs, false, false);
             imageList1.Add(Image.FromStream(fs, false, false));
             fs.Close();
 

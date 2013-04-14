@@ -92,7 +92,7 @@ namespace RM_3000.Controls
         {
             base.OnClick(e);
 
-            if (bKeepOn)
+            if (!bKeepOn)
             {
                 status = StatusType.OFF;
                 this.Invalidate();

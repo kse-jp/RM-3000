@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton_Setting = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton_Measure = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton_Anaryze = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton_Mainte = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Setting = new RM_3000.Controls.PictureToolStripButton();
+            this.toolStripButton_Measure = new RM_3000.Controls.PictureToolStripButton();
+            this.toolStripButton_Anaryze = new RM_3000.Controls.PictureToolStripButton();
+            this.toolStripButton_Mainte = new RM_3000.Controls.PictureToolStripButton();
             this.pnlDrawArea = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -302,11 +302,11 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton_Setting;
-        private System.Windows.Forms.ToolStripButton toolStripButton_Anaryze;
-        private System.Windows.Forms.ToolStripButton toolStripButton_Mainte;
+        private RM_3000.Controls.PictureToolStripButton toolStripButton_Setting;
+        private RM_3000.Controls.PictureToolStripButton toolStripButton_Anaryze;
+        private RM_3000.Controls.PictureToolStripButton toolStripButton_Mainte;
         private System.Windows.Forms.Panel pnlDrawArea;
-        private System.Windows.Forms.ToolStripButton toolStripButton_Measure;
+        private RM_3000.Controls.PictureToolStripButton toolStripButton_Measure;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;

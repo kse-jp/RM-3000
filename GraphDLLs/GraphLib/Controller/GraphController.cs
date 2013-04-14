@@ -212,7 +212,7 @@ namespace GraphLib.Controller
 
                     _GraphModel.GridLineData.MaxGridValueY = _GraphModel.MaxPlotY - _GraphModel.AxisZoomY;
                     _GraphModel.GridLineData.MinGridValueY = _GraphModel.MinPlotY + _GraphModel.AxisZoomY;
-
+                    _Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "ReadData");
                     ret = true;
                 }
 
@@ -261,6 +261,8 @@ namespace GraphLib.Controller
 
                 _GraphModel.GridLineData.MaxGridValueY = _GraphModel.MaxPlotY - _GraphModel.AxisZoomY;
                 _GraphModel.GridLineData.MinGridValueY = _GraphModel.MinPlotY + _GraphModel.AxisZoomY;
+
+                _Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "UpdatePlotData");
                 //_GraphModel.GraphPlotData.Clear();
 
             }

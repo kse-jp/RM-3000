@@ -41,6 +41,7 @@ namespace RM_3000.Forms.Graph
         /// if form is clicked then triger event
         /// </summary>
         public event EventHandler FormGraphClick;
+
         /// <summary>
         /// CHインデックス定義
         /// </summary>
@@ -101,6 +102,11 @@ namespace RM_3000.Forms.Graph
         /// Over shot Data List
         /// </summary>
         private List<List<double[]>> overShotDataList = null;
+        /// <summary>
+        /// counter for zoom X measure
+        /// </summary>
+        private int zoomXCounter = 0;
+
         #endregion
 
         /// <summary>
@@ -143,9 +149,9 @@ namespace RM_3000.Forms.Graph
         {
             set { this.graphViewer.IsRealTime = value; }
         }
-        /// <summary>
-        /// グラフ情報
-        /// </summary>
+        ///// <summary>
+        ///// グラフ情報 Setting graphinfo (redraw grid)
+        ///// </summary>
         public GraphLib.GraphInfo GraphInfo
         {
             set
@@ -161,11 +167,19 @@ namespace RM_3000.Forms.Graph
                 //}
                 //else
                 {
-                    this.graphViewer.UpdateGraphInfo(value, true);
+                    this.graphViewer.UpdateGraphInfo(value, true, true);
                 }
                 if (this.log != null) this.log.PutLog("frmGraph2D.GraphInfo - out");
             }
             get { return this.graphViewer.GraphInfo; }
+        }
+        /// <summary>
+        /// Set Data To GraphInfo with out redraw grid
+        /// </summary>
+        /// <param name="graphInfo"></param>
+        public void SetDataToGraphInfo(GraphLib.GraphInfo graphInfo)
+        {
+            this.graphViewer.UpdateGraphInfo(graphInfo, false, false);
         }
         /// <summary>
         /// グラフインデックス [0-4]
@@ -175,6 +189,20 @@ namespace RM_3000.Forms.Graph
         /// 解析データ
         /// </summary>
         public AnalyzeData AnalyzeData { set; get; }
+        /// <summary>
+        /// counter for zoom X measure
+        /// </summary>
+        public int ZoomXCounter
+        {
+            set
+            {
+                if (value < 0)
+                    zoomXCounter = 0;
+                else
+                    zoomXCounter = value;
+            }
+            get { return zoomXCounter; }
+        }
         /// <summary>
         /// プロット数
         /// </summary>
@@ -1104,7 +1132,9 @@ namespace RM_3000.Forms.Graph
                 if (graphinfo.MaxDataSizeX != countVal || graphinfo.ShotCount != shotCount)
                 {
                     graphinfo.MaxDataSizeX = countVal;
-                    graphinfo.PlotCountX = (countVal != 1 ? countVal - 1 : 1);
+                    if ((this.zoomXCounter == 0 && this.IsMeasure) || (!this.IsMeasure))
+                        graphinfo.PlotCountX = (countVal != 1 ? countVal - 1 : 1);
+
                     graphinfo.ShotCount = shotCount;
                     var chSetting = (this.IsMeasure) ? SystemSetting.ChannelsSetting : this.AnalyzeData.ChannelsSetting;
 
@@ -1112,7 +1142,8 @@ namespace RM_3000.Forms.Graph
                     {
                         graphinfo.IncrementX = Convert.ToDouble(chSetting.ChannelMeasSetting.Degree2 - chSetting.ChannelMeasSetting.Degree1) / (countVal != 1 ? countVal - 1 : 1);
                     }
-                    this.GraphInfo = graphinfo;
+                    this.SetDataToGraphInfo(graphinfo);
+                    //this.GraphInfo = graphinfo;
                 }
 
             }

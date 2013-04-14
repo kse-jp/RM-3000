@@ -194,6 +194,51 @@ namespace GraphLib
             return ret;
         }
 
+        public override string ToString()
+        {
+            string axisposx = "null";
+            string axisposy = "null";
+            string count = "0";
+            if (this.AxisPositionX != null)
+                axisposx = this.AxisPositionX.ToString();
+            if (this.AxisPositionY != null)
+                axisposy = this.AxisPositionY.ToString();
+
+            if (this.ChannelInfos != null)
+                count = this.ChannelInfos.Count.ToString();
+
+
+            string str = this.AxisNameX.ToString() + "," +
+            this.AxisNameY.ToString() + "," +
+            axisposx + "," +
+            axisposx + "," +
+            count + "," +
+            this.DecimalPointX.ToString() + "," +
+            this.DecimalPointY.ToString() + "," +
+            this.DistanceX.ToString() + "," +
+            this.DistanceY.ToString() + "," +
+            this.GraphMode.ToString() + "," +
+            this.GraphName.ToString() + "," +
+            this.GraphNo.ToString() + "," +
+            this.IncrementX.ToString() + "," +
+            this.IsEnabled.ToString() + "," +
+            this.IsLineGraph.ToString() + "," +
+            this.MaxChannel.ToString() + "," +
+            this.MaxDataSizeX.ToString() + "," +
+            this.MaxValueX.ToString() + "," +
+            this.MaxValueY.ToString() + "," +
+            this.MeasureButtonShow.ToString() + "," +
+            this.MinMaxRangeX.ToString() + "," +
+            this.MinValueX.ToString() + "," +
+            this.MinValueY.ToString() + "," +
+            this.PlotCountX.ToString() + "," +
+            this.ShotCount.ToString() + "," +
+            this.ShowDateTimeAxisX.ToString() + "," +
+            this.ShowValueLabelX.ToString() + "," +
+            this.ShowValueLabelY.ToString() + ",";
+            return str;
+        }
+
         /// <summary>
         /// Display Graph Name
         /// </summary>
@@ -552,7 +597,7 @@ namespace GraphLib
         /// <summary>
         /// current chinfo
         /// </summary>
-        private ChannelInfo[] _CurrentChInfo = null;
+        private ChannelInfo[] _CurrentChInfo = null;       
         #endregion
 
         #region Delegate
@@ -751,11 +796,11 @@ namespace GraphLib
                         lock (this._LockObj)
                         {
                             _GraphModel.CurrentShot = 0;
-                            _GraphModel.AxisZoomX = 0;
-                            _GraphModel.AxisZoomY = 0;
+                            //_GraphModel.AxisZoomX = 0;
+                            //_GraphModel.AxisZoomY = 0;
                             _ZoomValueX = 0;
                             _ZoomValueY = 0;
-                            _ZoomNumberAxisY = 0;
+                            //_ZoomNumberAxisY = 0;
                             _GraphDataCounter = 0;
                             _IsLoadedData = false;
                             if (_GraphModel != null)
@@ -856,8 +901,8 @@ namespace GraphLib
                     //if (_GraphInfo.PlotCountX != value)
                     {
                         GraphInfo inf = _GraphInfo;
-                        inf.PlotCountX = value;
-                        UpdateGraphInfo(inf, false);
+                        inf.PlotCountX = value;                       
+                        UpdateGraphInfo(inf, false, true);
                     }
 
                 }
@@ -928,7 +973,7 @@ namespace GraphLib
                     {
                         GraphInfo inf = _GraphInfo;
                         inf.MinValueX = minval;
-                        UpdateGraphInfo(inf, false);
+                        UpdateGraphInfo(inf, false, true);
                     }
 
                 }
@@ -1157,14 +1202,15 @@ namespace GraphLib
         /// </summary>
         /// <param name="graphinfo"></param>
         /// <param name="updateCH"></param>
-        public void UpdateGraphInfo(GraphInfo graphinfo, bool updateCH)
+        public void UpdateGraphInfo(GraphInfo graphinfo, bool updateCH, bool redrawGrid)
         {
             try
             {
                 _IsAxisYZoom = false;
-                _ZoomNumberAxisY = 0;
-                bool isequal = _GraphInfo.IsEqual(graphinfo);
 
+                bool isequal = _GraphInfo.IsEqual(graphinfo);
+                _Log4NetClass.ShowInfo("isequal", isequal.ToString());
+                _Log4NetClass.ShowInfo("graphinfo", graphinfo.ToString());
 
                 _GraphInfo = graphinfo;
                 this.IsRealTime = false;
@@ -1228,8 +1274,6 @@ namespace GraphLib
                 _GraphModel.GridLineData.DecimalPointX = _GraphInfo.DecimalPointX;
                 _GraphModel.GridLineData.DecimalPointY = _GraphInfo.DecimalPointY;
                 _GraphModel.GraphMode = _GraphInfo.GraphMode;
-                _GraphModel.AxisZoomX = 0;
-                _GraphModel.AxisZoomY = 0;
                 _IsShowValueLabelX = _GraphInfo.ShowValueLabelX;
                 _IsShowValueLabelY = _GraphInfo.ShowValueLabelY;
                 _GraphModel.PlotCountX = _GraphInfo.PlotCountX;
@@ -1305,6 +1349,8 @@ namespace GraphLib
                     _GraphController.GraphInfo = graphinfo;
                     _GraphController.UpdatePlotData();
                     this.RefreshGraph();
+
+                    _Log4NetClass.ShowInfo("RefreshGraph", "UpdateGraphInfo");
                 }
 
 
@@ -1331,18 +1377,23 @@ namespace GraphLib
                             }
 
                             this.Dispatcher.BeginInvoke(new Action(CreateLegendPanel), System.Windows.Threading.DispatcherPriority.Normal, null);
+                            _Log4NetClass.ShowInfo("chkinfosame False", "UpdateGraphInfo");
                         }
                     }
                 }
 
-                if (!isequal)
-                {
+                if (!isequal && redrawGrid)
+                {                    
+                    _ZoomNumberAxisY = 0;
+                    _GraphModel.AxisZoomX = 0;
+                    _GraphModel.AxisZoomY = 0;
                     this.Dispatcher.BeginInvoke(new Action(UpdateLabelNameX), System.Windows.Threading.DispatcherPriority.Send, null);
                     this.Dispatcher.BeginInvoke(new Action(UpdateLabelNameY), System.Windows.Threading.DispatcherPriority.Send, null);
 
                     this.Dispatcher.BeginInvoke(new Action(UpdateLabelValueY), System.Windows.Threading.DispatcherPriority.Send, null);
                     this.Dispatcher.BeginInvoke(new Action(UpdateLabelValueX), System.Windows.Threading.DispatcherPriority.Send, null);
                     this.Dispatcher.BeginInvoke(new Action(this.RedrawGraphUpdateGraphInfo), System.Windows.Threading.DispatcherPriority.Send, null);
+                    _Log4NetClass.ShowInfo("isequal False", "UpdateGraphInfo");
                 }
             }
             catch (Exception ex)
@@ -2624,23 +2675,33 @@ namespace GraphLib
                         zoomno++;
                     }
 
+
                     double zoomsize = (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) * _GraphModel.AxisZoomPercentY / (2 * zoomno);
                     _IsAxisYZoom = true;
 
-                    if ((_GraphModel.AxisZoomY * 2) + zoomsize < _GraphModel.MaxPlotY - _GraphModel.MinPlotY && zoomsize >= 1)
+                    if ((_GraphModel.AxisZoomY * 2) + zoomsize < _GraphModel.MaxPlotY - _GraphModel.MinPlotY && zoomsize >= 1
+                        && _GraphModel.AxisZoomY + zoomsize <= (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) / 2)
                     {
                         _GraphModel.AxisZoomY += zoomsize;
                         _ZoomNumberAxisY++;
                     }
 
+                    _Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "BtnZoomInY_Click");
+
                     if (!_IsLoadedData)
+                    {
                         UpdateLabelValueY();
+                        _Log4NetClass.ShowInfo("UpdateLabelValueY", "BtnZoomInY_Click");
+                    }
                     else
                     {
                         if (_IsZoom)
                             ZoomReset();
 
+                        _Log4NetClass.ShowInfo("ZoomReset", "BtnZoomInY_Click");
+
                         _GraphController.UpdatePlotData();
+                        _Log4NetClass.ShowInfo("UpdatePlotData", "BtnZoomInY_Click");
                         if (_GraphInfo.DistanceY != 0)
                         {
                             double maxgrid = Math.Abs((_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / Convert.ToDouble(_DistanceY));
@@ -2650,6 +2711,9 @@ namespace GraphLib
                             if (_GraphModel.GridLineData.MaxGridNoY > _MaxGridNumber)
                                 _GraphModel.GridLineData.MaxGridNoY = _MaxGridNumber;
                         }
+                        _Log4NetClass.ShowInfo("DistanceY " + _GraphInfo.DistanceY.ToString(), "BtnZoomInY_Click");
+
+
                         //Check Y is need show Decimal point
                         double diffvalgrid = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / _GraphModel.GridLineData.MaxGridNoY;
                         if (diffvalgrid < 3 && _GraphInfo.DecimalPointY == 0)
@@ -2657,10 +2721,15 @@ namespace GraphLib
                         else
                             _GraphModel.GridLineData.DecimalPointY = 0;
 
+                        _Log4NetClass.ShowInfo("DecimalPointY" + _GraphModel.GridLineData.DecimalPointY.ToString(), "BtnZoomInY_Click");
+
                         this.GraphGridLoad(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
+                        _Log4NetClass.ShowInfo("GraphGridLoad", "BtnZoomInY_Click");
                         this.SetCurrentLinePos(_CurrentLine);
                         this.RefreshGraph();
+                        _Log4NetClass.ShowInfo("RefreshGraph", "BtnZoomInY_Click");
                         this.UpdateAxisZoomValue(new Point(0, 0), _GraphModel.GraphSize, _GraphModel.GraphSize);
+                        _Log4NetClass.ShowInfo("UpdateAxisZoomValue", "BtnZoomInY_Click");
                         this.RefreshMeasurePos();
                     }
 
@@ -2675,6 +2744,7 @@ namespace GraphLib
                             OnOverShotAxisYZoom();
                     }
 
+                    _Log4NetClass.ShowInfo("DoneZoom", "BtnZoomInY_Click");
                 }
             }
             catch (Exception ex)
@@ -2717,8 +2787,11 @@ namespace GraphLib
                     else
                     {
                         _GraphModel.AxisZoomY = 0;
+                        _ZoomNumberAxisY = 0;
                         _IsAxisYZoom = false;
                     }
+
+                    _Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "BtnZoomOutY_Click");
 
                     if (!_IsLoadedData)
                         UpdateLabelValueY();
@@ -2746,9 +2819,12 @@ namespace GraphLib
                             _GraphModel.GridLineData.DecimalPointY = 0;
 
                         this.GraphGridLoad(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
+                        _Log4NetClass.ShowInfo("GraphGridLoad", "BtnZoomOutY_Click");
                         this.SetCurrentLinePos(_CurrentLine);
                         this.UpdateAxisZoomValue(new Point(0, 0), _GraphModel.GraphSize, _GraphModel.GraphSize);
+                        _Log4NetClass.ShowInfo("UpdateAxisZoomValue", "BtnZoomOutY_Click");
                         this.RefreshGraph();
+                        _Log4NetClass.ShowInfo("RefreshGraph", "BtnZoomOutY_Click");
                         RefreshMeasurePos();
                     }
                     UpdateMeasureLabelY();
@@ -3543,7 +3619,7 @@ namespace GraphLib
                             _GraphInfo.AxisNameY = dialog.Unit;
                             _GraphInfo.MaxValueY = dialog.MaxValue;
                             _GraphInfo.MinValueY = dialog.MinValue;
-                            UpdateGraphInfo(_GraphInfo, false);
+                            UpdateGraphInfo(_GraphInfo, false, false);
                         }
                     }
                 }
@@ -3578,7 +3654,7 @@ namespace GraphLib
                             _GraphInfo.MaxValueX = dialog.MaxValue;
                             _GraphInfo.MinValueX = dialog.MinValue;
                             //_GraphInfo.MaxDataSizeX = dialog.MaxPlot;
-                            UpdateGraphInfo(_GraphInfo, false);
+                            UpdateGraphInfo(_GraphInfo, false, false);
                         }
                     }
                 }
@@ -4456,7 +4532,7 @@ namespace GraphLib
                 _GraphModel.AxisZoomY = 0;
                 _GraphInfo.MaxValueY = Convert.ToDouble(_CenterScale + _Scale);
                 _GraphInfo.MinValueY = Convert.ToDouble(_CenterScale - _Scale);
-                UpdateGraphInfo(_GraphInfo, false);
+                UpdateGraphInfo(_GraphInfo, false, false);
             }
         }
 

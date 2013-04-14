@@ -140,7 +140,7 @@ namespace RM_3000
 
         public void CreateData()
         {
-
+            Random randdata = new Random(_MaxLoop);
             for (int loop = 0; loop < _MaxLoop; loop++)
             {
 
@@ -149,11 +149,13 @@ namespace RM_3000
                 {
                     _DataOutput = new List<double[]>();
 
-                    for (int i = 0; i < _MaxDataPerLoop; i++)
+                    int maxdata = _MaxDataPerLoop + randdata.Next(-1, 1);
+
+                    for (int i = 0; i < maxdata; i++)
                     {
                         double[] datas = new double[_MaxChannel + 1];
 
-                        datas[0] =starval+ i;
+                        datas[0] = starval + i;
                         for (int j = 1; j < _MaxChannel + 1; j++)
                         {
 
@@ -391,7 +393,7 @@ namespace RM_3000
                         dataval = valstd;
                     else
                         dataval = valmode2;
-                    
+
                     chdata.DataValues = dataval;
                     chdatas[i] = chdata;
                 }

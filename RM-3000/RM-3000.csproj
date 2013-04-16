@@ -546,7 +546,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Libraries\WeifenLuo.WinFormsUI.Docking.dll" />
+    <None Include="Libraries\WeifenLuo.WinFormsUI.Docking.dll" />
     <Content Include="Resources\Images\3DGraph\B.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -607,7 +607,6 @@
     <Content Include="Resources\Images\Backgrounds\Back_Non.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Backgrounds\ロゴ入りサンプル.png" />
     <Content Include="Resources\Images\Buttons\3DGraphController\Display_OFF.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

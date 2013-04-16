@@ -88,7 +88,7 @@ namespace RM_3000.Forms.Measurement
 
             // グラフ詳細グリッドにグラフ色列を追加
             var cellStyle = new System.Windows.Forms.DataGridViewCellStyle() { Alignment = DataGridViewContentAlignment.MiddleLeft };
-            var c = new RM_3000.Classes.DataGridViewColorTextBoxColumn() { DefaultCellStyle = cellStyle, HeaderText = "TXT_GRAPH_COLOR", Name = "Column4", ReadOnly = true, Width = 155 };
+            var c = new RM_3000.Classes.DataGridViewColorTextBoxColumn() { DefaultCellStyle = cellStyle, HeaderText = "TXT_GRAPH_COLOR", Name = "Column4", ReadOnly = true, AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, FillWeight = 30, SortMode = DataGridViewColumnSortMode.NotSortable };
             this.dgvGraphDetail.Columns.Add(c);
 
         }

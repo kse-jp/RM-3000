@@ -303,6 +303,8 @@ namespace RM_3000.Forms.Measurement
                         this.numTime2Time_MeasTime.Text = this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_meastime.ToString();
                         this.numTime2Time_StopTime.Text = this.MeasSetting.Mode1_MeasCondition.Inverval_time2time_stoptime.ToString();
 
+                        this.sampling = this.MeasSetting.SamplingCountLimit;
+
                         break;
 
                     case ModeType.MODE2:
@@ -327,7 +329,9 @@ namespace RM_3000.Forms.Measurement
 
                         chDetailMode1.Checked = false;
                         chDetailMode1.Visible = false;
-                        
+
+                        this.sampling = this.MeasSetting.SamplingTiming_Mode2;
+
                         break;
                     case ModeType.MODE3:
                         grpMain.Text = "TXT_MODE3";
@@ -351,11 +355,13 @@ namespace RM_3000.Forms.Measurement
 
                         chDetailMode1.Checked = false;
                         chDetailMode1.Visible = false;
-                        
+
+                        this.sampling = this.MeasSetting.SamplingTiming_Mode3;
+
                         break;
                 }
                 this.txtSampling.Text = this.MeasSetting.SamplingCountLimit.ToString();
-                this.sampling = this.MeasSetting.SamplingCountLimit;
+//                this.sampling = this.MeasSetting.SamplingCountLimit;
 
                 this.mode1_MeasCondition = (Mode1_MeasCondition)this.MeasSetting.Mode1_MeasCondition.Clone();
 

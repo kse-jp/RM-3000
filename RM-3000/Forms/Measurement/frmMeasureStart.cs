@@ -71,7 +71,7 @@ namespace RM_3000.Forms.Measurement
 
             // グラフ詳細グリッドにグラフ色列を追加
             var cellStyle = new System.Windows.Forms.DataGridViewCellStyle() { Alignment = DataGridViewContentAlignment.MiddleLeft };
-            var c = new RM_3000.Classes.DataGridViewColorTextBoxColumn() { DefaultCellStyle = cellStyle, HeaderText = "TXT_GRAPH_COLOR", Name = "Column4", ReadOnly = true, FillWeight = 30, AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill };
+            var c = new RM_3000.Classes.DataGridViewColorTextBoxColumn() { DefaultCellStyle = cellStyle, HeaderText = "TXT_GRAPH_COLOR", Name = "Column4", ReadOnly = true, FillWeight = 30, AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, SortMode = DataGridViewColumnSortMode.NotSortable };
             this.dgvGraphDetail.Columns.Add(c);
 
             //コンテンツ画像のロード
@@ -1479,47 +1479,47 @@ namespace RM_3000.Forms.Measurement
             txtGraphTitle.Text = txtGraphTitle.Text.Trim();
         }
 
-        private void picReadFile_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnReadPattern.Enabled)
-                btnReadPattern.PerformClick();
-        }
+        //private void picReadFile_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnReadPattern.Enabled)
+        //        btnReadPattern.PerformClick();
+        //}
 
-        private void picWriteFile_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnWritePattern.Enabled)
-                btnWritePattern.PerformClick();
-        }
+        //private void picWriteFile_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnWritePattern.Enabled)
+        //        btnWritePattern.PerformClick();
+        //}
 
-        private void picSetting_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnMeasSetting.Enabled)
-                btnMeasSetting.PerformClick();
-        }
+        //private void picSetting_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnMeasSetting.Enabled)
+        //        btnMeasSetting.PerformClick();
+        //}
 
-        private void picRemoveGraph_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnRemoveGraph.Enabled)
-                btnRemoveGraph.PerformClick();
+        //private void picRemoveGraph_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnRemoveGraph.Enabled)
+        //        btnRemoveGraph.PerformClick();
 
-        }
+        //}
 
-        private void picGraphAxisSetting_Click(object sender, EventArgs e)
-        {
-            if (cmbColor.Visible)
-            { cmbColor.Visible = false; }
-            if (btnGraphAxisSetting.Enabled)
-                btnGraphAxisSetting.PerformClick();
+        //private void picGraphAxisSetting_Click(object sender, EventArgs e)
+        //{
+        //    if (cmbColor.Visible)
+        //    { cmbColor.Visible = false; }
+        //    if (btnGraphAxisSetting.Enabled)
+        //        btnGraphAxisSetting.PerformClick();
 
-        }
+        //}
 
         private void pbtnMeasureSetting_Click(object sender, EventArgs e)
         {

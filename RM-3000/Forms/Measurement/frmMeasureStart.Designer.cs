@@ -29,26 +29,25 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeasureStart));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pbtnMeasureSetting = new RM_3000.Controls.PictureButton();
-            this.btnMeasSetting = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbMeasMode = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,11 +55,8 @@
             this.pbtnRemoveGraph = new RM_3000.Controls.PictureButton();
             this.pnlGraph = new System.Windows.Forms.Panel();
             this.dgvGraph = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pbtnGraphAxisSetting = new RM_3000.Controls.PictureButton();
-            this.btnGraphAxisSetting = new System.Windows.Forms.Button();
             this.pnlGraphDetail = new System.Windows.Forms.Panel();
             this.cmbColor = new RM_3000.Classes.ColorComboBox();
             this.dgvGraphDetail = new System.Windows.Forms.DataGridView();
@@ -69,28 +65,27 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtGraphTitle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnRemoveGraph = new System.Windows.Forms.Button();
             this.btnAddGraphTag = new System.Windows.Forms.Button();
             this.btnRemoveGraphTag = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvMeasTagList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pbtnWriteFile = new RM_3000.Controls.PictureButton();
             this.pbtnReadFile = new RM_3000.Controls.PictureButton();
-            this.btnWritePattern = new System.Windows.Forms.Button();
-            this.btnReadPattern = new System.Windows.Forms.Button();
             this.lblPatternFile = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grpGraph.SuspendLayout();
@@ -124,7 +119,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.pbtnMeasureSetting);
-            this.groupBox2.Controls.Add(this.btnMeasSetting);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cmbMeasMode);
             this.groupBox2.Font = new System.Drawing.Font("Meiryo UI", 12F);
@@ -152,17 +146,6 @@
             this.pbtnMeasureSetting.Text = "TXT_MEASURE_SETTING";
             this.pbtnMeasureSetting.UseVisualStyleBackColor = false;
             this.pbtnMeasureSetting.Click += new System.EventHandler(this.pbtnMeasureSetting_Click);
-            // 
-            // btnMeasSetting
-            // 
-            this.btnMeasSetting.Location = new System.Drawing.Point(231, 91);
-            this.btnMeasSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMeasSetting.Name = "btnMeasSetting";
-            this.btnMeasSetting.Size = new System.Drawing.Size(64, 64);
-            this.btnMeasSetting.TabIndex = 3;
-            this.btnMeasSetting.Text = "TXT_MEASURE_SETTING";
-            this.btnMeasSetting.UseVisualStyleBackColor = true;
-            this.btnMeasSetting.Click += new System.EventHandler(this.btnMeasSetting_Click);
             // 
             // label2
             // 
@@ -205,7 +188,6 @@
             this.grpGraph.Controls.Add(this.pbtnRemoveGraph);
             this.grpGraph.Controls.Add(this.pnlGraph);
             this.grpGraph.Controls.Add(this.groupBox4);
-            this.grpGraph.Controls.Add(this.btnRemoveGraph);
             this.grpGraph.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.grpGraph.Location = new System.Drawing.Point(735, 5);
             this.grpGraph.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -222,7 +204,7 @@
             this.pbtnRemoveGraph.bKeepOn = false;
             this.pbtnRemoveGraph.Disabled_Image = null;
             this.pbtnRemoveGraph.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.pbtnRemoveGraph.Location = new System.Drawing.Point(359, 114);
+            this.pbtnRemoveGraph.Location = new System.Drawing.Point(359, 22);
             this.pbtnRemoveGraph.MouseON_Image = null;
             this.pbtnRemoveGraph.Name = "pbtnRemoveGraph";
             this.pbtnRemoveGraph.OFF_Image = null;
@@ -274,30 +256,9 @@
             this.dgvGraph.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGraph_RowEnter);
             this.dgvGraph.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGraph_RowLeave);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn1.FillWeight = 15F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn2.FillWeight = 85F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "TXT_GRAPH_TITLE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pbtnGraphAxisSetting);
-            this.groupBox4.Controls.Add(this.btnGraphAxisSetting);
             this.groupBox4.Controls.Add(this.pnlGraphDetail);
             this.groupBox4.Controls.Add(this.txtGraphTitle);
             this.groupBox4.Controls.Add(this.label3);
@@ -317,7 +278,7 @@
             this.pbtnGraphAxisSetting.bKeepOn = false;
             this.pbtnGraphAxisSetting.Disabled_Image = null;
             this.pbtnGraphAxisSetting.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.pbtnGraphAxisSetting.Location = new System.Drawing.Point(359, 11);
+            this.pbtnGraphAxisSetting.Location = new System.Drawing.Point(360, 9);
             this.pbtnGraphAxisSetting.MouseON_Image = null;
             this.pbtnGraphAxisSetting.Name = "pbtnGraphAxisSetting";
             this.pbtnGraphAxisSetting.OFF_Image = null;
@@ -328,18 +289,6 @@
             this.pbtnGraphAxisSetting.Text = "TXT_GRAPH_SETTING";
             this.pbtnGraphAxisSetting.UseVisualStyleBackColor = false;
             this.pbtnGraphAxisSetting.Click += new System.EventHandler(this.pbtnGraphAxisSetting_Click);
-            // 
-            // btnGraphAxisSetting
-            // 
-            this.btnGraphAxisSetting.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnGraphAxisSetting.Location = new System.Drawing.Point(361, 11);
-            this.btnGraphAxisSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGraphAxisSetting.Name = "btnGraphAxisSetting";
-            this.btnGraphAxisSetting.Size = new System.Drawing.Size(64, 64);
-            this.btnGraphAxisSetting.TabIndex = 10;
-            this.btnGraphAxisSetting.Text = "TXT_GRAPH_SETTING";
-            this.btnGraphAxisSetting.UseVisualStyleBackColor = true;
-            this.btnGraphAxisSetting.Click += new System.EventHandler(this.btnGraphAxisSetting_Click);
             // 
             // pnlGraphDetail
             // 
@@ -6094,18 +6043,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "TXT_GRAPH_TITLE";
             // 
-            // btnRemoveGraph
-            // 
-            this.btnRemoveGraph.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnRemoveGraph.Location = new System.Drawing.Point(360, 114);
-            this.btnRemoveGraph.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRemoveGraph.Name = "btnRemoveGraph";
-            this.btnRemoveGraph.Size = new System.Drawing.Size(64, 64);
-            this.btnRemoveGraph.TabIndex = 3;
-            this.btnRemoveGraph.Text = "TXT_GRAPH_DELETE";
-            this.btnRemoveGraph.UseVisualStyleBackColor = true;
-            this.btnRemoveGraph.Click += new System.EventHandler(this.btnRemoveGraph_Click);
-            // 
             // btnAddGraphTag
             // 
             this.btnAddGraphTag.Location = new System.Drawing.Point(680, 387);
@@ -6184,12 +6121,61 @@
             this.dgvMeasTagList.TabIndex = 2;
             this.dgvMeasTagList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMeasTagList_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn4.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "ch";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Column2.FillWeight = 20F;
+            this.Column2.HeaderText = "TXT_BOARD_SPEC";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewTextBoxColumn5.FillWeight = 110F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "TXT_TAG_MEAS_ITEM";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewTextBoxColumn6.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "TXT_UNIT";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pbtnWriteFile);
             this.groupBox1.Controls.Add(this.pbtnReadFile);
-            this.groupBox1.Controls.Add(this.btnWritePattern);
-            this.groupBox1.Controls.Add(this.btnReadPattern);
             this.groupBox1.Controls.Add(this.lblPatternFile);
             this.groupBox1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox1.Location = new System.Drawing.Point(4, 38);
@@ -6236,30 +6222,6 @@
             this.pbtnReadFile.Text = "TXT_READ";
             this.pbtnReadFile.UseVisualStyleBackColor = false;
             this.pbtnReadFile.Click += new System.EventHandler(this.pbtnReadFile_Click);
-            // 
-            // btnWritePattern
-            // 
-            this.btnWritePattern.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnWritePattern.Location = new System.Drawing.Point(242, 79);
-            this.btnWritePattern.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnWritePattern.Name = "btnWritePattern";
-            this.btnWritePattern.Size = new System.Drawing.Size(64, 64);
-            this.btnWritePattern.TabIndex = 2;
-            this.btnWritePattern.Text = "TXT_WRITE";
-            this.btnWritePattern.UseVisualStyleBackColor = true;
-            this.btnWritePattern.Click += new System.EventHandler(this.btnWritePattern_Click);
-            // 
-            // btnReadPattern
-            // 
-            this.btnReadPattern.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnReadPattern.Location = new System.Drawing.Point(137, 91);
-            this.btnReadPattern.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReadPattern.Name = "btnReadPattern";
-            this.btnReadPattern.Size = new System.Drawing.Size(64, 64);
-            this.btnReadPattern.TabIndex = 1;
-            this.btnReadPattern.Text = "TXT_READ";
-            this.btnReadPattern.UseVisualStyleBackColor = true;
-            this.btnReadPattern.Click += new System.EventHandler(this.btnReadPattern_Click);
             // 
             // lblPatternFile
             // 
@@ -6326,56 +6288,27 @@
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column1
+            // dataGridViewTextBoxColumn1
             // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.FillWeight = 15F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "No";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewTextBoxColumn4.FillWeight = 40F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "ch";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Column2.FillWeight = 20F;
-            this.Column2.HeaderText = "TXT_BOARD_SPEC";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridViewTextBoxColumn5.FillWeight = 110F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "TXT_TAG_MEAS_ITEM";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridViewTextBoxColumn6.FillWeight = 40F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "TXT_UNIT";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn2.FillWeight = 85F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "TXT_GRAPH_TITLE";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // frmMeasureStart
             // 
@@ -6419,7 +6352,6 @@
         private System.Windows.Forms.TextBox txtGraphTitle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvGraph;
-        private System.Windows.Forms.Button btnMeasSetting;
         private System.Windows.Forms.ComboBox cmbMeasMode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddGraphTag;
@@ -6427,12 +6359,10 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvMeasTagList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnReadPattern;
         private System.Windows.Forms.Label lblPatternFile;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Panel pnlGraph;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnWritePattern;
         private System.Windows.Forms.Panel pnlGraphDetail;
         private Classes.ColorComboBox cmbColor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -6444,20 +6374,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private Controls.PictureButton pbtnMeasureSetting;
         private Controls.PictureButton pbtnGraphAxisSetting;
         private Controls.PictureButton pbtnRemoveGraph;
         private Controls.PictureButton pbtnWriteFile;
         private Controls.PictureButton pbtnReadFile;
-        private System.Windows.Forms.Button btnGraphAxisSetting;
-        private System.Windows.Forms.Button btnRemoveGraph;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 
     }
 }

@@ -384,6 +384,9 @@ namespace RM_3000.Sequences
                     }
                 }
                 #endregion
+
+                //情報を保存する。
+                SystemSetting.HardInfoStruct.SaveXmlFile();
             }
             catch (Exception ex)
             {

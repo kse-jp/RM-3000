@@ -136,6 +136,7 @@
             this.Controls.Add(this.btnTiming);
             this.Controls.Add(this.uctrlChannelSetting1);
             this.Name = "frmChannelSetting";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmChannelSetting_FormClosed);
             this.Load += new System.EventHandler(this.frmChannelSetting_Load);
             this.Shown += new System.EventHandler(this.frmChannelSetting_Shown);
             this.ResumeLayout(false);

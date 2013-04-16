@@ -73,8 +73,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{0DC083
 		External\3DGraph\Images\R.gif = External\3DGraph\Images\R.gif
 	EndProjectSection
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RM-3000 SetUp", "RM-3000_Setup\RM-3000_SetUp.vdproj", "{51B84AA8-9834-490F-80C4-9115D9764A27}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rmusb_Wrapper", "Rmusb_Wrapper\Rmusb_Wrapper.vcxproj", "{757AC8DA-7647-4C7B-A599-953D2BB879E0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OKD_Calc", "OKD_Calc\OKD_Calc.vcxproj", "{B96E9E6F-1BB5-45C9-BCF6-0E44FFEF9CC3}"
@@ -85,6 +83,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3DGraph", "3DGraph", "{AB9A
 	ProjectSection(SolutionItems) = preProject
 		External\3DGraph\Graph3DLib.dll.config = External\3DGraph\Graph3DLib.dll.config
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RM3000_SetUp", "RM3000_SetUp\RM3000_SetUp.vdproj", "{DA40302E-DBA8-4302-92F8-B8485F9CC915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -205,17 +205,6 @@ Global
 		{967DC0F0-5BAC-44DA-AA3D-47F920B576C4}.Release|x64.Build.0 = Release|x64
 		{967DC0F0-5BAC-44DA-AA3D-47F920B576C4}.Release|x86.ActiveCfg = Release|x86
 		{967DC0F0-5BAC-44DA-AA3D-47F920B576C4}.Release|x86.Build.0 = Release|x86
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Debug|Any CPU.ActiveCfg = Debug
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Debug|Win32.ActiveCfg = Debug
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Debug|x64.ActiveCfg = Debug
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Debug|x64.Build.0 = Debug
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Debug|x86.ActiveCfg = Debug
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Release|Any CPU.ActiveCfg = Release
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Release|Mixed Platforms.ActiveCfg = Release
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Release|Win32.ActiveCfg = Release
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Release|x64.ActiveCfg = Release
-		{51B84AA8-9834-490F-80C4-9115D9764A27}.Release|x86.ActiveCfg = Release
 		{757AC8DA-7647-4C7B-A599-953D2BB879E0}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{757AC8DA-7647-4C7B-A599-953D2BB879E0}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{757AC8DA-7647-4C7B-A599-953D2BB879E0}.Debug|Mixed Platforms.Build.0 = Debug|Win32
@@ -267,6 +256,16 @@ Global
 		{4998DFD0-43D6-4AEE-BCAE-070875299632}.Release|x64.Build.0 = Release|x64
 		{4998DFD0-43D6-4AEE-BCAE-070875299632}.Release|x86.ActiveCfg = Release|Win32
 		{4998DFD0-43D6-4AEE-BCAE-070875299632}.Release|x86.Build.0 = Release|Win32
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Debug|Any CPU.ActiveCfg = Debug
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Debug|Win32.ActiveCfg = Debug
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Debug|x64.ActiveCfg = Debug
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Debug|x86.ActiveCfg = Debug
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Release|Any CPU.ActiveCfg = Release
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Release|Mixed Platforms.ActiveCfg = Release
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Release|Win32.ActiveCfg = Release
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Release|x64.ActiveCfg = Release
+		{DA40302E-DBA8-4302-92F8-B8485F9CC915}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

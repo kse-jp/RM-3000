@@ -255,6 +255,9 @@ namespace RM_3000.Forms.Parts
                 {
                     this.cmbGraph.SelectedIndex = 0;
                 }
+
+                //画像データの取得・設定
+                ContentsLoad();
             }
             catch (Exception ex)
             {
@@ -263,6 +266,59 @@ namespace RM_3000.Forms.Parts
 
             if (this.log != null) this.log.PutLog("frmGraphController.frmGraphController_Load() - グラフ設定画面のロードを終了しました。");
         }
+
+        /// <summary>
+        /// コンテンツ画像等のロード
+        /// </summary>
+        /// <remarks>
+        /// リソースに入れると大量データとなるため、
+        /// 逐次ロードするようにする。
+        /// </remarks>
+        private void ContentsLoad()
+        {
+            System.IO.FileStream fs;
+
+            // ZoomIn Icon
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\ZoomIn_ON.png");
+            pbtnZoomIn.ON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\ZoomIn_OFF.png");
+            pbtnZoomIn.OFF_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\ZoomIn_MouseON.png");
+            pbtnZoomIn.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            // ZoomOut Icon
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\ZoomOut_ON.png");
+            pbtnZoomOut.ON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\ZoomOut_OFF.png");
+            pbtnZoomOut.OFF_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\ZoomOut_MouseON.png");
+            pbtnZoomOut.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            // Arrange Icon
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\Arrange_ON.png");
+            pbtnArrange.ON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\Arrange_OFF.png");
+            pbtnArrange.OFF_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+            fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\GraphController\\Arrange_MouseON.png");
+            pbtnArrange.MouseON_Image = Image.FromStream(fs, false, false);
+            fs.Close();
+
+        }
+
         /// <summary>
         /// グラフリスト選択イベント
         /// </summary>
@@ -439,12 +495,13 @@ namespace RM_3000.Forms.Parts
 
             if (this.log != null) this.log.PutLog("frmGraphController.frmGraphController_FormClosing() - out");
         }
+
         /// <summary>
         /// 拡大表示ボタンイベント
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void picZoomIn_Click(object sender, EventArgs e)
+        private void pbtnZoomIn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -457,17 +514,14 @@ namespace RM_3000.Forms.Parts
             {
                 ShowErrorMessage(ex);
             }
-            finally
-            {
-                SetButtonImage(this.picZoomIn, false);
-            }
         }
+
         /// <summary>
         /// 縮小表示ボタンイベント
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void picZoomOut_Click(object sender, EventArgs e)
+        private void pbtnZoomOut_Click(object sender, EventArgs e)
         {
             try
             {
@@ -480,17 +534,14 @@ namespace RM_3000.Forms.Parts
             {
                 ShowErrorMessage(ex);
             }
-            finally
-            {
-                SetButtonImage(this.picZoomOut, false);
-            }
         }
+
         /// <summary>
         /// グラフウィンドウの位置調整イベント
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void pctArrange_Click(object sender, EventArgs e)
+        private void pbtnArrange_Click(object sender, EventArgs e)
         {
             try
             {
@@ -503,77 +554,133 @@ namespace RM_3000.Forms.Parts
             {
                 ShowErrorMessage(ex);
             }
-            finally
-            {
-                SetButtonImage(this.pctArrange, false);
-            }
         }
-        /// <summary>
-        /// PictureBoxマウスダウンイベント
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pic_MouseDown(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                var p = sender as PictureBox;
-                if (p != null)
-                {
-                    SetButtonImage(p, true);
-                }
-            }
-            catch (Exception ex)
-            {
-                ShowErrorMessage(ex);
-            }
-        }
-        /// <summary>
-        /// PictureBoxマウスリーブイベント
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pic_MouseLeave(object sender, EventArgs e)
-        {
-            try
-            {
-                var p = sender as PictureBox;
-                if (p != null)
-                {
-                    SetButtonImage(p, false);
-                }
-            }
-            catch (Exception ex)
-            {
-                ShowErrorMessage(ex);
-            }
-        }
-        /// <summary>
-        /// PictureBoxの画像を変更する
-        /// </summary>
-        /// <param name="pictureBox">PictureBox</param>
-        /// <param name="mode">true:ON / false:OFF</param>
-        private void SetButtonImage(PictureBox pictureBox, bool mode)
-        {
-            ButtonImage image = ButtonImage.ZoomIn_OFF;
-            switch (pictureBox.Name)
-            {
-                case "picZoomIn":
-                    image = (mode) ? ButtonImage.ZoomIn_ON : ButtonImage.ZoomIn_OFF;
-                    break;
-                case "picZoomOut":
-                    image = (mode) ? ButtonImage.ZoomOut_ON : ButtonImage.ZoomOut_OFF;
-                    break;
-                case "pctArrange":
-                    image = (mode) ? ButtonImage.Arrange_ON : ButtonImage.Arrange_OFF;
-                    break;
-                default:
-                    return;
-            }
 
-            pictureBox.Image = this.buttonImageList[(int)image];
-        }
+        //private void picZoomIn_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (this.GraphZoomInOccurred != null)
+        //        {
+        //            this.GraphZoomInOccurred();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ShowErrorMessage(ex);
+        //    }
+        //    finally
+        //    {
+        //        SetButtonImage(this.picZoomIn, false);
+        //    }
+        //}
+
+        //private void picZoomOut_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (this.GraphZoomOutOccurred != null)
+        //        {
+        //            this.GraphZoomOutOccurred();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ShowErrorMessage(ex);
+        //    }
+        //    finally
+        //    {
+        //        SetButtonImage(this.picZoomOut, false);
+        //    }
+        //}
+
+        //private void pctArrange_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (this.GraphArrangeOccurred != null)
+        //        {
+        //            this.GraphArrangeOccurred();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ShowErrorMessage(ex);
+        //    }
+        //    finally
+        //    {
+        //        SetButtonImage(this.pctArrange, false);
+        //    }
+        //}
+
+        ///// <summary>
+        ///// PictureBoxマウスダウンイベント
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void pic_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    try
+        //    {
+        //        var p = sender as PictureBox;
+        //        if (p != null)
+        //        {
+        //            SetButtonImage(p, true);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ShowErrorMessage(ex);
+        //    }
+        //}
+        ///// <summary>
+        ///// PictureBoxマウスリーブイベント
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void pic_MouseLeave(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        var p = sender as PictureBox;
+        //        if (p != null)
+        //        {
+        //            SetButtonImage(p, false);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ShowErrorMessage(ex);
+        //    }
+        //}
+        ///// <summary>
+        ///// PictureBoxの画像を変更する
+        ///// </summary>
+        ///// <param name="pictureBox">PictureBox</param>
+        ///// <param name="mode">true:ON / false:OFF</param>
+        //private void SetButtonImage(PictureBox pictureBox, bool mode)
+        //{
+        //    ButtonImage image = ButtonImage.ZoomIn_OFF;
+        //    switch (pictureBox.Name)
+        //    {
+        //        case "picZoomIn":
+        //            image = (mode) ? ButtonImage.ZoomIn_ON : ButtonImage.ZoomIn_OFF;
+        //            break;
+        //        case "picZoomOut":
+        //            image = (mode) ? ButtonImage.ZoomOut_ON : ButtonImage.ZoomOut_OFF;
+        //            break;
+        //        case "pctArrange":
+        //            image = (mode) ? ButtonImage.Arrange_ON : ButtonImage.Arrange_OFF;
+        //            break;
+        //        default:
+        //            return;
+        //    }
+
+        //    pictureBox.Image = this.buttonImageList[(int)image];
+        //}
 
         #endregion
+
+
     }
 }

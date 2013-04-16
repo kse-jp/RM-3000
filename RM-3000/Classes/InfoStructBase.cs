@@ -7,6 +7,7 @@ namespace RM_3000
 {
     public class InfoStructBase
     {
+        [System.Xml.Serialization.XmlIgnore]
         public string VerNo { get { return _VerNo; } set { _VerNo = value; } }
 
         private string _VerNo = string.Empty;

@@ -498,6 +498,7 @@ namespace RM_3000.Sequences
             //測定開始時間をリセット
             RealTimeData.SetStartTime(DateTime.Now);
             RealTimeData.Cond_StartTime_Mode1 = RealTimeData.GetStartTime();
+            RealTimeData.Cond_StopTime_Mode1 = RealTimeData.GetStartTime();
             RealTimeData.bMode1_Now_Record = true;
 
             //ステータスの変更

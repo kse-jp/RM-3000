@@ -232,14 +232,16 @@ namespace RM_3000.Forms.Analyze
                     if (MessageBox.Show(AppResource.GetString("MSG_DELETE_MEASUREDATA"), AppResource.GetString("MSG_DELETE_MEASUREDATA_TITLE"), MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     {
                         System.IO.Directory.Delete(this.SelectAnalyzeData.DirectoryPath, true);
+
+                        dgvDataList.Rows.Remove(dgvDataList.SelectedRows[0]);
+
+                        AnalyzeDataList.Remove(this.SelectAnalyzeData);
+
+                        this.SelectAnalyzeData = null;
+
                     }
                 }
 
-                dgvDataList.Rows.Remove(dgvDataList.SelectedRows[0]);
-
-                AnalyzeDataList.Remove(this.SelectAnalyzeData);
-
-                this.SelectAnalyzeData = null;
             }
         }
 

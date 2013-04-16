@@ -70,6 +70,8 @@ namespace RM_3000
 			canvasLocationTargetSetting.locationSetting2 = this.locationSetting2;
 			canvasLocationTargetSetting.locationTargetSetting = this;
 
+            AppResource.SetControlsText(this);
+
 		}
 
 		private void frmLocationTargetSetting_FormClosing(object sender, FormClosingEventArgs e)

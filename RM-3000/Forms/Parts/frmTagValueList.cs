@@ -74,6 +74,11 @@ namespace RM_3000.Forms.Parts
         /// 現在値ラベルリスト
         /// </summary>
         private Label[] dataValueLabelsAnl;
+
+        /// <summary>
+        /// 割り当て演算タグNoリスト
+        /// </summary>
+        private int[] calcAssignedTagNo;
         #endregion
 
         /// <summary>
@@ -214,14 +219,14 @@ namespace RM_3000.Forms.Parts
             //show calculate value
             try
             {
-                if (data == null)
-                {
+                //if (data == null)
+                //{
                     for (int i = 0; i < this.dataValueLabelsAnl.Length; i++)
                     {
                         this.dataValueLabelsAnl[i].Text = string.Empty;
                     }
-                    return;
-                }
+                //    return;
+                //}
                 int posPoint = 0;
                 int chPos = 1;
                 //data.TagDatas[0].DataValues
@@ -235,20 +240,30 @@ namespace RM_3000.Forms.Parts
                     if (chData.DataValues == null) continue;
 
                     var index = -1;
-                    for (int i = 1; i < this.dataValueLabelsAnl.Length; i++)
+                    //for (int i = 1; i < this.dataValueLabelsAnl.Length; i++)
+                    //{
+                    //    if (this.dataValueLabelsAnl[i].Name.Equals("lblAnlData" + chPos.ToString()))
+                    //    {
+                    //        index = i;
+                    //        chPos++;
+                    //        break;
+                    //    }
+
+                    //}
+
+                    for (int i = 1; i < this.calcAssignedTagNo.Length; i++)
                     {
-                        if (this.dataValueLabelsAnl[i].Name.Equals("lblAnlData" + chPos.ToString()))
+                        if (this.calcAssignedTagNo[i] == chData.TagNo)
                         {
                             index = i;
-                            chPos++;
-                            break;
                         }
-
                     }
+
                     if (index < 0)
                     {
                         continue;
                     }
+
                     DataTag tag = this.analyzeData.DataTagSetting.GetTag(chData.TagNo);
                     position = tag.Point;
                     var t = chData.DataValues.GetType();
@@ -391,6 +406,8 @@ namespace RM_3000.Forms.Parts
                 this.tagLabelsAnl = new Label[] { lblAnlysisItem0, lblAnlysisItem1, lblAnlysisItem2, lblAnlysisItem3, lblAnlysisItem4, lblAnlysisItem5, lblAnlysisItem6, lblAnlysisItem7, lblAnlysisItem8, lblAnlysisItem9, lblAnlysisItem10 };
                 this.unitLabelsAnl = new Label[] { lblAnlUnit0, lblAnlUnit1, lblAnlUnit2, lblAnlUnit3, lblAnlUnit4, lblAnlUnit5, lblAnlUnit6, lblAnlUnit7, lblAnlUnit8, lblAnlUnit9, lblAnlUnit10 };
                 this.dataValueLabelsAnl = new Label[] { lblAnlData0, lblAnlData1, lblAnlData2, lblAnlData3, lblAnlData4, lblAnlData5, lblAnlData6, lblAnlData7, lblAnlData8, lblAnlData9, lblAnlData10 };
+
+                this.calcAssignedTagNo = new int[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
             }
 
             // 各種設定読み込み
@@ -619,6 +636,9 @@ namespace RM_3000.Forms.Parts
                 tagLabelList.Add(this.tagLabelsAnl[i + 1]);
                 dataValueLabelList.Add(this.dataValueLabelsAnl[i + 1]);
                 unitLabelList.Add(this.unitLabelsAnl[i + 1]);
+
+                //割り当てタグNoの記憶
+                calcAssignedTagNo[i + 1] = calcTagList[i];
             }
         }
         /// <summary>

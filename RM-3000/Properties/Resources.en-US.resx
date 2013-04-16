@@ -504,10 +504,6 @@
     <value>Unit of selected tag is difference from tags in the graph.</value>
     <comment>Unit of selected tag is difference from tags in the graph.</comment>
   </data>
-  <data name="TXT_DISPLAY" xml:space="preserve">
-    <value>Display</value>
-    <comment>Display</comment>
-  </data>
   <data name="TXT_DISPLAY_METHOD" xml:space="preserve">
     <value>Line Type</value>
     <comment>Line Type</comment>
@@ -1363,5 +1359,36 @@ Emergency shutdown.</value>
   <data name="TXT_UPPER_MOLD" xml:space="preserve">
     <value>Mold(upper)</value>
     <comment>上金型</comment>
+  </data>
+  <data name="MSG_TEMPSENSOR_NOT_EXIST" xml:space="preserve">
+    <value>測定対象センサに温度センサが取り付けられていません。
+測定結果は0℃の時の結果となります。
+正確に測定するには、温度センサの取り付けを再度確認してください。
+
+[0]</value>
+  </data>
+  <data name="TXT_INPUT_FILENAME" xml:space="preserve">
+    <value>Input name of DataFile.</value>
+    <comment>Input name of DataFile.</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_AVERAGE" xml:space="preserve">
+    <value>平均</value>
+    <comment>平均</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_SHOT" xml:space="preserve">
+    <value>間引</value>
+    <comment>間引</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_TIME2SHOT" xml:space="preserve">
+    <value>ショット数/分</value>
+    <comment>ショット数/定期時間</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_TIME2TIME" xml:space="preserve">
+    <value>測定(分)/停止(分)</value>
+    <comment>測定時間/停止時間</comment>
+  </data>
+  <data name="TXT_MEASURE_TARGET_SETTING" xml:space="preserve">
+    <value>Measure Target Setting</value>
+    <comment>Measure Target Setting</comment>
   </data>
 </root>

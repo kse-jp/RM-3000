@@ -139,6 +139,11 @@ namespace RM_3000
 
             SystemConfig = new SystemConfig();
             SystemConfig.LoadXmlFile();
+
+            HardInfoStruct = new HardInfoStruct();
+            HardInfoStruct.LoadXmlFile();
+
+
         }
         #endregion
     }

@@ -163,6 +163,57 @@ namespace RM_3000.Controls
                 g.DrawString(this.Text, new Font(this.Font, this.Font.Style), Brushes.Black, 0, 0);
             }
 
+            #region 文字列描画
+            SizeF z = g.MeasureString(this.Text, this.Font);
+            PointF strPoint = new PointF(0, 0);
+
+            switch (TextAlign)
+            {
+                case ContentAlignment.BottomCenter:
+                    strPoint.Y = this.Height - z.Height - this.Margin.Bottom;
+                    strPoint.X = Margin.Left + (this.Width - this.Margin.Left - this.Margin.Right - z.Width) / 2;
+                    break;
+                case ContentAlignment.BottomLeft:
+                    strPoint.Y = this.Height - z.Height - this.Margin.Bottom;
+                    strPoint.X = this.Margin.Left;
+                    break;
+                case ContentAlignment.BottomRight:
+                    strPoint.Y = this.Height - z.Height - this.Margin.Bottom;
+                    strPoint.X = this.Width - this.Margin.Right - z.Width;
+                    break;
+                case ContentAlignment.MiddleCenter:
+                    strPoint.Y = Margin.Top + (this.Height - this.Margin.Top - this.Margin.Bottom - z.Height) / 2;
+                    strPoint.X = Margin.Left + (this.Width - this.Margin.Left - this.Margin.Right - z.Width) / 2;
+                    break;
+                case ContentAlignment.MiddleLeft:
+                    strPoint.Y = Margin.Top + (this.Height - this.Margin.Top - this.Margin.Bottom - z.Height) / 2;
+                    strPoint.X = this.Margin.Left;
+                    break;
+                case ContentAlignment.MiddleRight:
+                    strPoint.Y = Margin.Top + (this.Height - this.Margin.Top - this.Margin.Bottom - z.Height) / 2;
+                    strPoint.X = this.Width - this.Margin.Right - z.Width;
+                    break;
+                case ContentAlignment.TopCenter:
+                    strPoint.Y = this.Margin.Top;
+                    strPoint.X = this.Margin.Left + (this.Width - this.Margin.Left - this.Margin.Right - z.Width) / 2;
+                    break;
+                case ContentAlignment.TopLeft:
+                    strPoint.Y = this.Margin.Top;
+                    strPoint.X = this.Margin.Left;
+                    break;
+                case ContentAlignment.TopRight:
+                    strPoint.Y = this.Margin.Top;
+                    strPoint.X = this.Width - this.Margin.Right - z.Width;
+                    break;
+            }
+
+            if(this.Enabled)
+                g.DrawString(this.Text, this.Font, new SolidBrush(this.ForeColor), strPoint);
+            else
+                g.DrawString(this.Text, this.Font, new SolidBrush(SystemColors.ControlDark), strPoint);
+
+            #endregion
+
             if (this.DesignMode)
             {
                 // デザイン時の処理

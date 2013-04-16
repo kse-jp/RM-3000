@@ -215,6 +215,9 @@ namespace RM_3000
         /// <param name="e"></param>
         private void toolStripButton_Analyze_Click(object sender, EventArgs e)
         {
+            //他のボタンのONを解除する
+            StatusOFF_Other_ToolStripButton(sender);
+
             toolStripButtonImageInit();
 
             var btn = (ToolStripButton)sender;
@@ -242,6 +245,9 @@ namespace RM_3000
         }
         private void toolStripButton_Maintenance_Click(object sender, EventArgs e)
         {
+            //他のボタンのONを解除する
+            StatusOFF_Other_ToolStripButton(sender);
+
             toolStripButtonImageInit();
 
             ToolStripButton btn = (ToolStripButton)sender;
@@ -269,6 +275,9 @@ namespace RM_3000
         }
         private void toolStripButton_Measure_Click(object sender, EventArgs e)
         {
+            //他のボタンのONを解除する
+            StatusOFF_Other_ToolStripButton(sender);
+
             toolStripButtonImageInit();
 
             var btn = (ToolStripButton)sender;
@@ -321,6 +330,10 @@ namespace RM_3000
 
         private void toolStripButton_Setting_Click(object sender, EventArgs e)
         {
+            //他のボタンのONを解除する
+            StatusOFF_Other_ToolStripButton(sender);
+
+
             toolStripButtonImageInit();
 
             var btn = (ToolStripButton)sender;
@@ -355,6 +368,37 @@ namespace RM_3000
             f.FormClosed += new FormClosedEventHandler(frmSettingMenu_FormClosed);
 
             f.Show();
+        }
+
+        /// <summary>
+        /// クリックされたものとは別のToolStripButton
+        /// をOFFにする。
+        /// </summary>
+        /// <param name="sender"></param>
+        private void StatusOFF_Other_ToolStripButton(object sender)
+        {
+            RM_3000.Controls.PictureToolStripButton target = (RM_3000.Controls.PictureToolStripButton)sender;
+
+            if (toolStripButton_Anaryze.Name != target.Name)
+            {
+                toolStripButton_Anaryze.status = RM_3000.Controls.PictureToolStripButton.StatusType.OFF;
+            }
+
+            if (toolStripButton_Mainte.Name != target.Name)
+            {
+                toolStripButton_Mainte.status = RM_3000.Controls.PictureToolStripButton.StatusType.OFF;
+            }
+
+            if (toolStripButton_Measure.Name != target.Name)
+            {
+                toolStripButton_Measure.status = RM_3000.Controls.PictureToolStripButton.StatusType.OFF;
+            }
+
+            if (toolStripButton_Setting.Name != target.Name)
+            {
+                toolStripButton_Setting.status = RM_3000.Controls.PictureToolStripButton.StatusType.OFF;
+            }
+
         }
 
         void frmSettingMenu_FormClosed(object sender, FormClosedEventArgs e)

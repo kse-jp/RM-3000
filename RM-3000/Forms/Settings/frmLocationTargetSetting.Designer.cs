@@ -55,7 +55,7 @@
             this.Name = "frmLocationTargetSetting";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "測定対象設定";
+            this.Text = "TXT_MEASURE_TARGET_SETTING";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocationTargetSetting_FormClosing);
             this.Load += new System.EventHandler(this.frmLocationTargetSetting_Load);
             this.ResumeLayout(false);

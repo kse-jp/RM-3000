@@ -2180,6 +2180,9 @@ namespace RM_3000.Forms.Parts
         /// <param name="index">グラフインデックス</param>
         private void Graph2SSettingChanged(int index)
         {
+            //演算パラメータ初期化
+            this.AnalyzeData.Reset_CalcParameters();
+
             if (this.graph2DList[index] != null)
             {
                 decimal minValueX = 0;
@@ -2234,6 +2237,16 @@ namespace RM_3000.Forms.Parts
                     SetScaleX((int)countval);
                 else
                     UpdateGraph2D();
+
+                //演算項目の数値更新（Tag順が入れ替わっている可能性があるため
+                if (this.mode == (int)ModeType.MODE2)
+                {
+                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][0], (int)this.currentIndex - 1);
+                }
+                else
+                {
+                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][(int)this.currentIndex - 1], 0);
+                }
 
                 //if (this.maxOverShotCountForMode2 > 1 && this.mode == 2)
                 //{

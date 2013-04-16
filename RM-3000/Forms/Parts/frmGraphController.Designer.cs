@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGraphController));
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbGraph = new System.Windows.Forms.ComboBox();
@@ -38,19 +37,16 @@
             this.rdoLine = new System.Windows.Forms.RadioButton();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.grpOperation = new System.Windows.Forms.GroupBox();
-            this.pctArrange = new System.Windows.Forms.PictureBox();
-            this.picZoomOut = new System.Windows.Forms.PictureBox();
-            this.picZoomIn = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblGraphMenu = new System.Windows.Forms.Label();
+            this.pbtnArrange = new RM_3000.Controls.PictureButton();
+            this.pbtnZoomOut = new RM_3000.Controls.PictureButton();
+            this.pbtnZoomIn = new RM_3000.Controls.PictureButton();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpLineType.SuspendLayout();
             this.grpOperation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctArrange)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZoomOut)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZoomIn)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,9 +148,9 @@
             // 
             // grpOperation
             // 
-            this.grpOperation.Controls.Add(this.pctArrange);
-            this.grpOperation.Controls.Add(this.picZoomOut);
-            this.grpOperation.Controls.Add(this.picZoomIn);
+            this.grpOperation.Controls.Add(this.pbtnArrange);
+            this.grpOperation.Controls.Add(this.pbtnZoomOut);
+            this.grpOperation.Controls.Add(this.pbtnZoomIn);
             this.grpOperation.Location = new System.Drawing.Point(11, 137);
             this.grpOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpOperation.Name = "grpOperation";
@@ -163,48 +159,6 @@
             this.grpOperation.TabIndex = 6;
             this.grpOperation.TabStop = false;
             this.grpOperation.Text = "TXT_OPERATION";
-            // 
-            // pctArrange
-            // 
-            this.pctArrange.Image = ((System.Drawing.Image)(resources.GetObject("pctArrange.Image")));
-            this.pctArrange.Location = new System.Drawing.Point(104, 21);
-            this.pctArrange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pctArrange.Name = "pctArrange";
-            this.pctArrange.Size = new System.Drawing.Size(33, 29);
-            this.pctArrange.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctArrange.TabIndex = 2;
-            this.pctArrange.TabStop = false;
-            this.pctArrange.Click += new System.EventHandler(this.pctArrange_Click);
-            this.pctArrange.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
-            this.pctArrange.MouseLeave += new System.EventHandler(this.pic_MouseLeave);
-            // 
-            // picZoomOut
-            // 
-            this.picZoomOut.Image = ((System.Drawing.Image)(resources.GetObject("picZoomOut.Image")));
-            this.picZoomOut.Location = new System.Drawing.Point(59, 21);
-            this.picZoomOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picZoomOut.Name = "picZoomOut";
-            this.picZoomOut.Size = new System.Drawing.Size(33, 29);
-            this.picZoomOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picZoomOut.TabIndex = 1;
-            this.picZoomOut.TabStop = false;
-            this.picZoomOut.Click += new System.EventHandler(this.picZoomOut_Click);
-            this.picZoomOut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
-            this.picZoomOut.MouseLeave += new System.EventHandler(this.pic_MouseLeave);
-            // 
-            // picZoomIn
-            // 
-            this.picZoomIn.Image = ((System.Drawing.Image)(resources.GetObject("picZoomIn.Image")));
-            this.picZoomIn.Location = new System.Drawing.Point(11, 21);
-            this.picZoomIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picZoomIn.Name = "picZoomIn";
-            this.picZoomIn.Size = new System.Drawing.Size(33, 29);
-            this.picZoomIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picZoomIn.TabIndex = 0;
-            this.picZoomIn.TabStop = false;
-            this.picZoomIn.Click += new System.EventHandler(this.picZoomIn_Click);
-            this.picZoomIn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
-            this.picZoomIn.MouseLeave += new System.EventHandler(this.pic_MouseLeave);
             // 
             // panel1
             // 
@@ -240,6 +194,54 @@
             this.lblGraphMenu.Text = "TXT_GRAPH_MENU";
             this.lblGraphMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pbtnArrange
+            // 
+            this.pbtnArrange.bKeepOn = false;
+            this.pbtnArrange.Disabled_Image = null;
+            this.pbtnArrange.Location = new System.Drawing.Point(103, 22);
+            this.pbtnArrange.MouseON_Image = null;
+            this.pbtnArrange.Name = "pbtnArrange";
+            this.pbtnArrange.OFF_Image = null;
+            this.pbtnArrange.ON_Image = null;
+            this.pbtnArrange.Size = new System.Drawing.Size(32, 32);
+            this.pbtnArrange.status = RM_3000.Controls.PictureButton.StatusType.OFF;
+            this.pbtnArrange.TabIndex = 5;
+            this.pbtnArrange.Text = "pbtnArrange";
+            this.pbtnArrange.UseVisualStyleBackColor = true;
+            this.pbtnArrange.Click += new System.EventHandler(this.pbtnArrange_Click);
+            // 
+            // pbtnZoomOut
+            // 
+            this.pbtnZoomOut.bKeepOn = false;
+            this.pbtnZoomOut.Disabled_Image = null;
+            this.pbtnZoomOut.Location = new System.Drawing.Point(58, 22);
+            this.pbtnZoomOut.MouseON_Image = null;
+            this.pbtnZoomOut.Name = "pbtnZoomOut";
+            this.pbtnZoomOut.OFF_Image = null;
+            this.pbtnZoomOut.ON_Image = null;
+            this.pbtnZoomOut.Size = new System.Drawing.Size(32, 32);
+            this.pbtnZoomOut.status = RM_3000.Controls.PictureButton.StatusType.OFF;
+            this.pbtnZoomOut.TabIndex = 4;
+            this.pbtnZoomOut.Text = "pbtnZoomOut";
+            this.pbtnZoomOut.UseVisualStyleBackColor = true;
+            this.pbtnZoomOut.Click += new System.EventHandler(this.pbtnZoomOut_Click);
+            // 
+            // pbtnZoomIn
+            // 
+            this.pbtnZoomIn.bKeepOn = false;
+            this.pbtnZoomIn.Disabled_Image = null;
+            this.pbtnZoomIn.Location = new System.Drawing.Point(10, 22);
+            this.pbtnZoomIn.MouseON_Image = null;
+            this.pbtnZoomIn.Name = "pbtnZoomIn";
+            this.pbtnZoomIn.OFF_Image = null;
+            this.pbtnZoomIn.ON_Image = null;
+            this.pbtnZoomIn.Size = new System.Drawing.Size(32, 32);
+            this.pbtnZoomIn.status = RM_3000.Controls.PictureButton.StatusType.OFF;
+            this.pbtnZoomIn.TabIndex = 3;
+            this.pbtnZoomIn.Text = "pbtnZoomIn";
+            this.pbtnZoomIn.UseVisualStyleBackColor = true;
+            this.pbtnZoomIn.Click += new System.EventHandler(this.pbtnZoomIn_Click);
+            // 
             // frmGraphController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -258,9 +260,6 @@
             this.grpLineType.ResumeLayout(false);
             this.grpLineType.PerformLayout();
             this.grpOperation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctArrange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZoomOut)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZoomIn)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -279,9 +278,9 @@
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.ComboBox cmbGraph;
-        private System.Windows.Forms.PictureBox picZoomIn;
-        private System.Windows.Forms.PictureBox pctArrange;
-        private System.Windows.Forms.PictureBox picZoomOut;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Controls.PictureButton pbtnArrange;
+        private Controls.PictureButton pbtnZoomOut;
+        private Controls.PictureButton pbtnZoomIn;
     }
 }

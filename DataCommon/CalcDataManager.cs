@@ -456,6 +456,10 @@ namespace DataCommon
                     {
                         if (dataTagSetting.DataTagList[index].TagKind == 2)
                         {
+                            // 演算タグがグラフに割り当てられていれば対象。
+                            if (!IsAssignedGraph(dataTagSetting.DataTagList[index].TagNo))
+                                continue;
+
                             //演算2
                             calcCount++;
                         }
@@ -509,6 +513,10 @@ namespace DataCommon
                     {
                         if (dataTagSetting.DataTagList[index].TagKind == 2)
                         {
+                            // 演算タグがグラフに割り当てられていれば対象。
+                            if (!IsAssignedGraph(dataTagSetting.DataTagList[index].TagNo))
+                                continue;
+
                             //演算2
                             temp = dataTagSetting.DataTagList[index].Expression;
 
@@ -582,6 +590,25 @@ namespace DataCommon
                 ShowErrorMessage(ex);
             }
             return bRet;
+        }
+
+        /// <summary>
+        /// グラフに設定されているかを判定する
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        private bool IsAssignedGraph(int tagNo)
+        {
+            foreach (GraphSetting graph in this.measureSetting.GraphSettingList)
+            {
+                foreach (GraphTag graphTag in graph.GraphTagList)
+                {
+                    if (graphTag.GraphTagNo == tagNo)
+                        return true;
+                }
+            }
+
+            return false;
         }
 
         internal List<CalcData> GetRange(int _startindex, int length, List<SampleData> sampleDatas)

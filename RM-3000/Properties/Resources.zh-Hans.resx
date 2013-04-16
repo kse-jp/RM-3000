@@ -501,10 +501,6 @@
     <value>写入</value>
     <comment>Write</comment>
   </data>
-  <data name="TXT_DISPLAY" xml:space="preserve">
-    <value>显示</value>
-    <comment>表示</comment>
-  </data>
   <data name="TXT_DISPLAY_METHOD" xml:space="preserve">
     <value>显示方法</value>
     <comment>表示方法</comment>
@@ -538,7 +534,7 @@
     <comment>測定時間</comment>
   </data>
   <data name="TXT_OPERATION" xml:space="preserve">
-    <value>输出</value>
+    <value>操作</value>
     <comment>操作</comment>
   </data>
   <data name="TXT_START" xml:space="preserve">
@@ -861,42 +857,6 @@
     <value>°</value>
     <comment>°</comment>
   </data>
-  <data name="TXT_3D1" xml:space="preserve">
-    <value>3D表示</value>
-    <comment>3D表示</comment>
-  </data>
-  <data name="TXT_BACK1" xml:space="preserve">
-    <value>返回</value>
-    <comment>戻る</comment>
-  </data>
-  <data name="TXT_END1" xml:space="preserve">
-    <value>終了</value>
-    <comment>終了</comment>
-  </data>
-  <data name="TXT_GAIN1" xml:space="preserve">
-    <value>進む</value>
-    <comment>進む</comment>
-  </data>
-  <data name="TXT_HIDE1" xml:space="preserve">
-    <value>非显示</value>
-    <comment>非表示</comment>
-  </data>
-  <data name="TXT_MODE4" xml:space="preserve">
-    <value>測定モード</value>
-    <comment>計測モード</comment>
-  </data>
-  <data name="TXT_NONE_HIRAKANA1" xml:space="preserve">
-    <value>(无)</value>
-    <comment>(なし)</comment>
-  </data>
-  <data name="TXT_NUMBER_OF_TIMES1" xml:space="preserve">
-    <value>次数</value>
-    <comment>回</comment>
-  </data>
-  <data name="TXT_SETTING1" xml:space="preserve">
-    <value>设定</value>
-    <comment>設定</comment>
-  </data>
   <data name="TXT_UNIT_MICROSECOND" xml:space="preserve">
     <value>μｓ</value>
     <comment>μｓ</comment>
@@ -1048,7 +1008,7 @@ Please try restart agin.</comment>
     <comment>開始位置</comment>
   </data>
   <data name="TXT_OUTPUT" xml:space="preserve">
-    <value>Output</value>
+    <value>输出</value>
     <comment>Output</comment>
   </data>
   <data name="ERROR_INVALID_CSV_OVERINDEX" xml:space="preserve">
@@ -1324,7 +1284,7 @@ Please try restart agin.</comment>
     <comment>任意時間ごとの任意時間測定</comment>
   </data>
   <data name="TXT_SHOT_COUNT" xml:space="preserve">
-    <value>ショット数</value>
+    <value>冲程数</value>
     <comment>ショット数</comment>
   </data>
   <data name="TXT_STOPTIME_MIN" xml:space="preserve">
@@ -1402,5 +1362,37 @@ Please try restart agin.</comment>
   <data name="TXT_UPPER_MOLD" xml:space="preserve">
     <value>上模</value>
     <comment>上金型</comment>
+  </data>
+  <data name="MSG_TEMPSENSOR_NOT_EXIST" xml:space="preserve">
+    <value>測定対象センサに温度センサが取り付けられていません。
+測定結果は0℃の時の結果となります。
+正確に測定するには、温度センサの取り付けを再度確認してください。
+
+[0]</value>
+    <comment>測定対象センサに温度センサが取り付けられていません。
+測定結果は0℃の時の結果となります。
+正確に測定するには、温度センサの取り付けを再度確認してください。
+
+[0]</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_AVERAGE" xml:space="preserve">
+    <value>平均</value>
+    <comment>平均</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_SHOT" xml:space="preserve">
+    <value>間引</value>
+    <comment>間引</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_TIME2SHOT" xml:space="preserve">
+    <value>ショット数/分</value>
+    <comment>ショット数/定期時間</comment>
+  </data>
+  <data name="TXT_MEAS_SHORT_INT_TIME2TIME" xml:space="preserve">
+    <value>測定(分)/停止(分)</value>
+    <comment>測定時間/停止時間</comment>
+  </data>
+  <data name="TXT_MEASURE_TARGET_SETTING" xml:space="preserve">
+    <value>測定対象設定</value>
+    <comment>測定対象設定</comment>
   </data>
 </root>

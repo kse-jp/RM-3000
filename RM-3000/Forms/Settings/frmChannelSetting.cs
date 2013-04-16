@@ -350,12 +350,40 @@ namespace RM_3000.Forms.Settings
 
 
                 AppResource.SetControlsText(this);
+
+                //海外モードの変更イベント
+                SystemSetting.HardInfoStruct.ChangeExportMode += new HardInfoStruct.ChangeExportModeEventHander(HardInfoStruct_ChangeExportMode);
+
             }
             catch (Exception ex)
             {
                 ShowErrorMessage(ex);
             }
         }
+
+        /// <summary>
+        /// 海外モードの変更イベント
+        /// </summary>
+        void HardInfoStruct_ChangeExportMode()
+        {
+            if (InvokeRequired)
+            {
+                this.Invoke((MethodInvoker)delegate { HardInfoStruct_ChangeExportMode(); });
+                return;
+            }
+
+            for (int k = 0; k < this.uctrlArray.Length; k++)
+            {
+                //小数点桁数
+                this.uctrlArray[k].PointVisible = !SystemSetting.HardInfoStruct.IsExportMode;
+
+                if (SystemSetting.HardInfoStruct.IsExportMode)
+                    this.uctrlArray[k].NumPoint = 0;
+                else
+                    this.uctrlArray[k].NumPoint = this.setting.ChannelSettingList[k].NumPoint;
+            }
+        }
+
         /// <summary>
         /// フォーム稼働開始
         /// </summary>
@@ -588,6 +616,10 @@ namespace RM_3000.Forms.Settings
                             this.Close();
                         }
                     }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
             }
             catch (Exception ex)
@@ -788,6 +820,12 @@ namespace RM_3000.Forms.Settings
             }
         }
         #endregion
+
+        private void frmChannelSetting_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //海外モードの変更イベント
+            SystemSetting.HardInfoStruct.ChangeExportMode -= HardInfoStruct_ChangeExportMode;
+        }
 
     }
 }

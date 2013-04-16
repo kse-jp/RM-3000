@@ -1084,8 +1084,8 @@
 チャンネル設定を再度行ってください。</comment>
   </data>
   <data name="MSG_CANT_ASSIGN_REVOLUTION" xml:space="preserve">
-    <value>回転タグは登録できません。</value>
-    <comment>回転タグは登録できません。</comment>
+    <value>回転項目は登録できません。</value>
+    <comment>回転項目は登録できません。</comment>
   </data>
   <data name="MSG_REVOLUTION_REMOVE_FIRST" xml:space="preserve">
     <value>回転タグがグラフに割り当てられています。モードの変更時には、一度本項目を解除してください。</value>
@@ -1383,5 +1383,9 @@
   <data name="TXT_UPPER_MOLD" xml:space="preserve">
     <value>上金型</value>
     <comment>上金型</comment>
+  </data>
+  <data name="TXT_MEASURE_TARGET_SETTING" xml:space="preserve">
+    <value>測定対象設定</value>
+    <comment>測定対象設定</comment>
   </data>
 </root>

@@ -35,8 +35,10 @@
                 </Canvas>
             </ScrollViewer>
             <Slider Name="sliderZoom" Width="30" Height="250" Minimum="1" Maximum="30" Canvas.Top="149" Canvas.Right="76" Orientation="Vertical" IsTabStop="False" SmallChange="1" IsSnapToTickEnabled="True" KeyUp="sliderZoom_KeyUp" />
-            <Label Canvas.Right="62" Canvas.Top="413" Content="Label" Height="28" Name="label1" Width="68" Target="{Binding}" />
-            <Label Canvas.Right="62" Canvas.Top="447" Content="Label" Height="28" Name="label2" Width="68" />
+            <Label Canvas.Right="61" Canvas.Top="418" Content="Label" Height="22" Name="label1" Width="69" Target="{Binding}" FontSize="10" VerticalAlignment="Center" />
+            <Label Canvas.Right="61" Canvas.Top="438" Content="Label" Height="22" Name="label2" Width="69" FontSize="10" VerticalAlignment="Center" />
+            <Label Canvas.Right="61" Canvas.Top="458" Content="Label" Height="22" Name="label3" Width="69" FontSize="10" VerticalAlignment="Center" />
+            <Label Canvas.Right="61" Canvas.Top="478" Content="Label" Height="22" Name="label4" Width="69" FontSize="10" VerticalAlignment="Center" />
         </Canvas>
 
     </Grid>

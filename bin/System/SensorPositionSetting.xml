@@ -13,39 +13,39 @@
       <IsUpdated>false</IsUpdated>
       <ChNo>1</ChNo>
       <X>2500</X>
-      <Z>750</Z>
+      <Z>820</Z>
       <Way>LEFT</Way>
       <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>2</ChNo>
-      <X>1195</X>
-      <Z>785</Z>
+      <X>2137</X>
+      <Z>911</Z>
       <Way>INVAILED</Way>
       <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>3</ChNo>
-      <X>1560</X>
-      <Z>800</Z>
+      <X>2503</X>
+      <Z>695</Z>
       <Way>INVAILED</Way>
       <Target>STRIPPER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>4</ChNo>
-      <X>2055</X>
-      <Z>1190</Z>
+      <X>2725</X>
+      <Z>290</Z>
       <Way>INVAILED</Way>
-      <Target>UPPER_PRESS</Target>
+      <Target>UPPER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>5</ChNo>
-      <X>1950</X>
-      <Z>655</Z>
+      <X>2500</X>
+      <Z>450</Z>
       <Way>INVAILED</Way>
       <Target>STRIPPER</Target>
     </PositionSetting>
@@ -61,16 +61,16 @@
       <IsUpdated>false</IsUpdated>
       <ChNo>7</ChNo>
       <X>2825</X>
-      <Z>675</Z>
+      <Z>990</Z>
       <Way>LEFT</Way>
       <Target>LOWER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>8</ChNo>
-      <X>2825</X>
-      <Z>560</Z>
-      <Way>LEFT</Way>
+      <X>2795</X>
+      <Z>50</Z>
+      <Way>UP</Way>
       <Target>LOWER</Target>
     </PositionSetting>
     <PositionSetting>

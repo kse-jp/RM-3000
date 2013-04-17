@@ -51,18 +51,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_48C0CDAAEE534CFEBFE82C20D4982FC7"
-        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_48C0CDAAEE534CFEBFE82C20D4982FC7"
-        "OwnerKey" = "8:_C8EC4DA9B4794B209936B11BB2E54C5D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_59D57ED525027CF759748705BB62C4A1"
         "OwnerKey" = "8:_C022583AA4D04BEA9509719951DB75C4"
         "MsmSig" = "8:_UNDEFINED"
@@ -77,6 +65,12 @@
         {
         "MsmKey" = "8:_62410EE2720AF274CF240051BCC3B6B7"
         "OwnerKey" = "8:_C022583AA4D04BEA9509719951DB75C4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_660EE47FECBC4E0FA96BAFD93B08EF39"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -201,6 +195,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CCE9115A10494738962B59DCF53846C0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F2B141E1B8EF68703F1F0111016829B8"
         "OwnerKey" = "8:_6DE2BDDF1F9CE21D3B379AA23BDBD388"
         "MsmSig" = "8:_UNDEFINED"
@@ -209,6 +209,18 @@
         {
         "MsmKey" = "8:_F2B141E1B8EF68703F1F0111016829B8"
         "OwnerKey" = "8:_C022583AA4D04BEA9509719951DB75C4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F6A462E2DE3E4145AB9632487D98A2E0"
+        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F6A462E2DE3E4145AB9632487D98A2E0"
+        "OwnerKey" = "8:_C8EC4DA9B4794B209936B11BB2E54C5D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -479,7 +491,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4855.19332, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4855.29550, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_59D57ED525027CF759748705BB62C4A1"
@@ -535,6 +547,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_660EE47FECBC4E0FA96BAFD93B08EF39"
+            {
+            "SourcePath" = "8:..\\External\\2DGraph\\GraphLib.dll.config"
+            "TargetName" = "8:GraphLib.dll.config"
+            "Tag" = "8:"
+            "Folder" = "8:_B7CBA003003040F3868C761C12D8ED40"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6AACCF327A394972ACB8FDF46C19A235"
@@ -825,7 +857,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4855.19332, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4855.29549, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_C398BF5B24F294F6761AE6732FCA4D0B"
@@ -858,6 +890,26 @@
             "TargetName" = "8:HardInfoStruct.xml"
             "Tag" = "8:"
             "Folder" = "8:_B780D8FE5D0E4FBC9094BFDF23669474"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CCE9115A10494738962B59DCF53846C0"
+            {
+            "SourcePath" = "8:..\\External\\3DGraph\\Graph3DLib.dll.config"
+            "TargetName" = "8:Graph3DLib.dll.config"
+            "Tag" = "8:"
+            "Folder" = "8:_B7CBA003003040F3868C761C12D8ED40"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1548,7 +1600,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_48C0CDAAEE534CFEBFE82C20D4982FC7"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F6A462E2DE3E4145AB9632487D98A2E0"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"

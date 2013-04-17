@@ -161,22 +161,22 @@ namespace RM_3000.Forms.Measurement
             {
                 if (!this.IsReadMode)
                 {
-                    if (!string.IsNullOrEmpty(this.CurrentFileName))
-                    {
-                        if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
-                        {
-                            return;
-                        }
-                        this.dirtyFlag = false;
-                    }
-                    else if (this.dirtyFlag)
-                    {
-                        if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
-                        {
-                            return;
-                        }
-                        this.dirtyFlag = false;
-                    }
+                    //if (!string.IsNullOrEmpty(this.CurrentFileName))
+                    //{
+                    //    if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
+                    //    {
+                    //        return;
+                    //    }
+                    //    this.dirtyFlag = false;
+                    //}
+                    //else if (this.dirtyFlag)
+                    //{
+                    //    if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
+                    //    {
+                    //        return;
+                    //    }
+                    //    this.dirtyFlag = false;
+                    //}
                 }
                 else
                 {
@@ -313,13 +313,13 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                if (this.dirtyFlag && !IsReadMode)
-                {
-                    if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
-                    {
-                        e.Cancel = true;
-                    }
-                }
+                //if (this.dirtyFlag && !IsReadMode)
+                //{
+                //    if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
+                //    {
+                //        e.Cancel = true;
+                //    }
+                //}
             }
             catch (Exception ex)
             {

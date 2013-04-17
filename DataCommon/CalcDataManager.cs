@@ -350,13 +350,13 @@ namespace DataCommon
                                     if (chdata.Position == 0)
                                     {
                                         if (tagNo1 != -1)
-                                            valVariable[tagNo1] = (double)((Value_Standard)chdata.DataValues).Value;
+                                            valVariable[tagNo1 - 1] = (double)((Value_Standard)chdata.DataValues).Value;
                                     }
                                     //それ以外は対象サンプルの値を取得。
                                     else
                                     {
                                         if (tagNo1 != -1)
-                                            valVariable[tagNo1] = (double)((Value_Mode2)chdata.DataValues).Values[sampleindex];
+                                            valVariable[tagNo1 - 1] = (double)((Value_Mode2)chdata.DataValues).Values[sampleindex];
                                     }
                                 }
 

@@ -1522,8 +1522,12 @@ namespace Graph3DLib
                     _ThreadAnimation.MachineModel = _MachineModel;
                     _ThreadAnimation.TranslateData = _GraphController.TranslateData;
                     _ThreadAnimation.Tranform3DGroups = _GraphController.Tranform3DGroups;
-                    this.Dispatcher.Invoke(new ThreadAnimationDelegate(_ThreadAnimation.Create));
+                    this.Dispatcher.Invoke(new ThreadAnimationDelegate(_ThreadAnimation.Create), DispatcherPriority.Send);
                 }
+            }
+            catch (System.Threading.ThreadAbortException tabort)
+            {
+                _Log4NetClass.ShowWarning(tabort.ToString(), "CreateAnimation");
             }
             catch (Exception ex)
             {
@@ -1543,9 +1547,6 @@ namespace Graph3DLib
                 {
                     if (_AnimationControl.Status == AnimationStatus.Stop)
                     {
-                        if (_AnimationSpeed != 1)
-                            _AnimationControl.SetSpeed(_AnimationSpeed);
-
                         bool ret = _AnimationControl.Start();
                         if (ret)
                         {
@@ -1553,8 +1554,12 @@ namespace Graph3DLib
                             if (_AnimationControl.CurrentState == ClockState.Stopped)
                             {
                                 _Log4NetClass.ShowWarning("RestartAnimation", "StartAnimation");
-                                _AnimationControl.Start();
+                                _AnimationControl.Start();                                
                             }
+
+                            if (_AnimationSpeed != 1)
+                                _AnimationControl.SetSpeed(_AnimationSpeed);                                
+
                             _IsAnimationStart = true;
                             _MeterTimer.Start();
                             Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
@@ -1575,18 +1580,22 @@ namespace Graph3DLib
                     }
 
 
-                    if (this.Duration != 0)
-                        if (this.CurrentPos / this.Duration == 1)
-                        {
-                            _AnimationControl.Stop();
-                            _AnimationControl.Start();
-                            _MeterTimer.Start();
-                            Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
-                        }
+                    //if (this.Duration != 0)
+                    //    if (this.CurrentPos / this.Duration == 1)
+                    //    {
+                    //        _AnimationControl.Stop();
+                    //        _AnimationControl.Start();
+                    //        _MeterTimer.Start();
+                    //        Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
+                    //    }
 
                     if (AnimationStatusChanged != null)
                         AnimationStatusChanged(_AnimationControl.Status);
                 }
+            }
+            catch (System.Threading.ThreadAbortException tabort)
+            {
+                _Log4NetClass.ShowWarning(tabort.ToString(), "StartAnimation");
             }
             catch (Exception ex)
             {
@@ -1888,12 +1897,15 @@ namespace Graph3DLib
                 if (_GraphController != null)
                     _GraphController.ClearData();
 
+                if (_ThreadAnimation != null)
+                    Dispatcher.Invoke(new Action(_ThreadAnimation.ClearAnimation), DispatcherPriority.Send);
+
                 if (_AnimationControl != null)
-                    _AnimationControl.ClearClock();
+                    Dispatcher.Invoke(new Action(_AnimationControl.ClearClock), DispatcherPriority.Send);
 
                 if (_MeterTimer != null)
                     _MeterTimer.Stop();
-             
+
             }
             catch (Exception ex)
             {
@@ -2028,7 +2040,7 @@ namespace Graph3DLib
             {
                 _Log4NetClass.ShowError(ex.ToString(), "ResetArrow");
             }
-           
+
         }
 
         /// <summary>

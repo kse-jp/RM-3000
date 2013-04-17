@@ -250,6 +250,29 @@ namespace GraphLib.Model
         }
 
         /// <summary>
+        /// Update Label Value
+        /// </summary>
+        /// <param name="value"></param>
+        public void UpdateLabelValue(double value,string decimalPoint)
+        {
+            try
+            {
+                if (_Model != null)
+                {
+                    if (_Model.Children.Count > 0)
+                    {
+                        Label label0 = _Model.Children[3] as Label;
+                        label0.Content = value.ToString(decimalPoint);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Change Label Height
         /// </summary>
         /// <param name="height"></param>

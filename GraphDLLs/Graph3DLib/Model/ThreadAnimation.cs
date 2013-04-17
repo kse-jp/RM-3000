@@ -128,6 +128,53 @@ namespace Graph3DLib.Model
 
         #region Public Function
         /// <summary>
+        /// Clear animation
+        /// </summary>        
+        public void ClearAnimation()
+        {
+            try
+            {
+                if (_Tranform3DGroups == null)
+                    return;
+
+                for (int i = 0; i < _Tranform3DGroups.Length; i++)
+                {
+                    if (_Tranform3DGroups[i] != null && _Tranform3DGroups[i].Children != null)
+                    {
+                        for (int j = 0; j < _Tranform3DGroups[i].Children.Count; j++)
+                        {
+                            if (_Tranform3DGroups[i].Children[j] != null)
+                            {
+                                System.Windows.DependencyProperty propertie = null;
+                                if (j == (int)AnimationKeyFrame.OffsetX)
+                                    propertie = TranslateTransform3D.OffsetXProperty;
+                                else if (j == (int)AnimationKeyFrame.OffsetY)
+                                    propertie = TranslateTransform3D.OffsetYProperty;
+                                else if (j == (int)AnimationKeyFrame.OffsetZ)
+                                    propertie = TranslateTransform3D.OffsetZProperty;
+                                else if (j == (int)AnimationKeyFrame.RotationX ||
+                                    j == (int)AnimationKeyFrame.RotationZ ||
+                                    j == (int)AnimationKeyFrame.RotationY)
+                                    propertie = AxisAngleRotation3D.AngleProperty;
+                                else if (j == (int)AnimationKeyFrame.ScaleX)
+                                    propertie = ScaleTransform3D.ScaleXProperty;
+                                else if (j == (int)AnimationKeyFrame.ScaleZ)
+                                    propertie = ScaleTransform3D.ScaleZProperty;
+
+                                if (propertie != null)
+                                    _Tranform3DGroups[i].Children[j].ApplyAnimationClock(propertie, null);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "ClearAnimation");
+            }
+        }
+
+        /// <summary>
         /// Create Animation
         /// </summary>
         public void Create()
@@ -745,6 +792,8 @@ namespace Graph3DLib.Model
                 _Log4NetClass.ShowError(ex.ToString(), "CreateAnimation");
             }
         }
+
+
         #endregion
 
     }

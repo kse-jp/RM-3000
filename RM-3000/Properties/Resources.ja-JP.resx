@@ -422,8 +422,8 @@
     <comment>計測項目種別</comment>
   </data>
   <data name="TXT_TAG_SETTING_TAG_KIND_LIST" xml:space="preserve">
-    <value>計測,演算２（解析）</value>
-    <comment>計測,演算２（解析）</comment>
+    <value>計測,演算(解析用）</value>
+    <comment>計測,演算(解析用）</comment>
   </data>
   <data name="TXT_TAG_NAME" xml:space="preserve">
     <value>名称</value>

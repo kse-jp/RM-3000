@@ -109,6 +109,13 @@ namespace RM_3000.Forms.Measurement
         void testSquence_StatusChanged(Sequences.TestSequence.TestStatusType status)
         {
 
+            if (this.InvokeRequired)
+            {
+                this.Invoke((MethodInvoker) delegate{ testSquence_StatusChanged(status); });
+                return;
+            }
+
+
             switch (status)
             {
                 case Sequences.TestSequence.TestStatusType.Run:

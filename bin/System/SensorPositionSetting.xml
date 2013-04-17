@@ -4,19 +4,11 @@
   <BolsterWidth>3000</BolsterWidth>
   <BolsterDepth>1500</BolsterDepth>
   <UsedMold>true</UsedMold>
-  <MoldWidth>2600</MoldWidth>
+  <MoldWidth>2650</MoldWidth>
   <MoldDepth>1400</MoldDepth>
   <MoldPressWidth>2000</MoldPressWidth>
   <MoldPressDepth>600</MoldPressDepth>
   <PositionList>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>1</ChNo>
-      <X>0</X>
-      <Z>595</Z>
-      <Way>INVAILED</Way>
-      <Target>UPPER</Target>
-    </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
@@ -24,6 +16,14 @@
       <Z>-1</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>2</ChNo>
+      <X>1970</X>
+      <Z>1050</Z>
+      <Way>DOWN</Way>
+      <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>

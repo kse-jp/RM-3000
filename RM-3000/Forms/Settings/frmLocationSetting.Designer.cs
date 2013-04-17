@@ -357,6 +357,7 @@
             this.ColumnPointX.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnPointX.HeaderText = "TXT_X_POSITION";
             this.ColumnPointX.Name = "ColumnPointX";
+            this.ColumnPointX.ReadOnly = true;
             this.ColumnPointX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnPointY
@@ -365,6 +366,7 @@
             this.ColumnPointY.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnPointY.HeaderText = "TXT_Z_POSITION";
             this.ColumnPointY.Name = "ColumnPointY";
+            this.ColumnPointY.ReadOnly = true;
             this.ColumnPointY.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnSensorNumber

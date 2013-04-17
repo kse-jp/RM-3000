@@ -402,7 +402,7 @@ namespace RM_3000.Forms.Graph
                                 for (int j = 0; j < relation.RelationList.Length; j++)
                                 {
                                     if (graph.GraphTagList[i].GraphTagNo == relation.RelationList[j].TagNo_1
-                                        || graph.GraphTagList[i].GraphTagNo == relation.RelationList[j].TagNo_2)
+                                        || (this.measSetting.Mode == 1 && graph.GraphTagList[i].GraphTagNo == relation.RelationList[j].TagNo_2))
                                     {
                                         this.chIndexList[i].Index = j;
                                         this.chIndexList[i].IsMaxCh = (graph.GraphTagList[i].GraphTagNo == relation.RelationList[j].TagNo_1);

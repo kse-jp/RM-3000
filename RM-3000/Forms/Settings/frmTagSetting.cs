@@ -259,8 +259,8 @@ namespace RM_3000.Forms.Settings
                 //check the last edit row
                 if (!decimal.TryParse(ntbZeroStatic.Text.Trim(), out val))
                 {
-                    ShowWarningMessage(AppResource.GetString("ERROR_INVALID_VALUE"));
                     ShowInfo(this.currentTag);
+                    ShowWarningMessage(AppResource.GetString("ERROR_INVALID_VALUE"));
                     ntbZeroStatic.Focus();
                     return false;
                 }
@@ -271,10 +271,11 @@ namespace RM_3000.Forms.Settings
                     {
                         if (!string.IsNullOrEmpty(this.currentTag.GetSystemUnit()) && string.IsNullOrEmpty(this.currentTag.GetSystemTagName()))
                         {
-                            ShowWarningMessage(AppResource.GetString("ERROR_INVALID_VALUE"));
                             dgvTagList.Rows[i].Selected = true;
                             dgvTagList.CurrentCell = dgvTagList[0, i];
                             ShowInfo(this.currentTag);
+                            
+                            ShowWarningMessage(AppResource.GetString("ERROR_INVALID_VALUE"));
                             txtTagName.Focus();
                             return false;
                         }
@@ -526,6 +527,7 @@ namespace RM_3000.Forms.Settings
                     //validate value
                     if (ValidateValue() == false)
                     { return; }
+                    string retString = string.Empty;
                     for (int i = 0; i < this.dataTagSetting.DataTagList.Length; i++)
                     {
                         if (this.dataTagSetting.DataTagList[i].TagKind == 2)
@@ -533,10 +535,11 @@ namespace RM_3000.Forms.Settings
                             if (!string.IsNullOrEmpty(this.dataTagSetting.DataTagList[i].Expression))
                             {
                                 this.currentTag = this.list[i];
-                                if (!EvaluateExpression(this.dataTagSetting.DataTagList[i].Expression))
+                                retString = EvaluateExpression(this.dataTagSetting.DataTagList[i].Expression);
+                                if (!string.IsNullOrEmpty(retString))
                                 {
                                     this.dgvTagList.CurrentCell = this.dgvTagList.Rows[i].Cells[0];
-                                    
+                                    ShowWarningMessage(retString);
                                     return; 
                                 }
                             }
@@ -699,8 +702,12 @@ namespace RM_3000.Forms.Settings
                 else if (Convert.ToInt32(cboTagKind.SelectedValue) == 2 && !string.IsNullOrEmpty(txtCalc2.Text))
                 {
                     temp = txtCalc2.Text;
-                    if (EvaluateExpression(temp))
+                    string retString = string.Empty;
+                    retString = EvaluateExpression(temp);
+                    if (string.IsNullOrEmpty(retString))
                     { MessageBox.Show(AppResource.GetString("MSG_TAGSETTING_OK_EXPRESSION"), this.Text); }
+                    else
+                    { ShowWarningMessage(retString); }
                 }
             }
             catch (Exception ex)
@@ -715,9 +722,9 @@ namespace RM_3000.Forms.Settings
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        private bool EvaluateExpression(string input)
+        private string EvaluateExpression(string input)
         {
-            bool retResult = false;
+            string retString = string.Empty;
             bool eval = false;
             int index = 0;
             int pos = -1;
@@ -728,16 +735,7 @@ namespace RM_3000.Forms.Settings
             try
             {
                 CalcBtmEnabled(false);
-                //if (Convert.ToInt32(cboTagKind.SelectedValue) == 0 && (!string.IsNullOrEmpty(txtCalc1_1.Text) && !string.IsNullOrEmpty(txtCalc1_2.Text)))
-                //{
-                //    //temp = txtCalc1_1.Text + cmbOperators.SelectedItem.ToString() + txtCalc1_2.Text;
-                //    //eval = true;
-                //}
-                //else if (Convert.ToInt32(cboTagKind.SelectedValue) == 2 && !string.IsNullOrEmpty(txtCalc2.Text))
-                //{
-                //    temp = txtCalc2.Text;
-                //    eval = true;
-                //}
+                
                 temp = input;
                 eval = true;
                 if (eval)
@@ -771,9 +769,8 @@ namespace RM_3000.Forms.Settings
                                         varName = mt.Value.Substring(1);
                                         if (Convert.ToInt32(varName) > 300)
                                         {
-                                            MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                                             CalcBtmEnabled(true);
-                                            return false;
+                                            return AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                                         }
                                         //get index of close bracket & next '@'
                                         indexOfHardBracket = data[k].IndexOf(']', mt.Index + 1);
@@ -838,9 +835,8 @@ namespace RM_3000.Forms.Settings
                                                         }
                                                         if (match)
                                                         {
-                                                            MessageBox.Show(AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                                                             CalcBtmEnabled(true);
-                                                            return false;
+                                                            return AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                                                         }
                                                     }
                                                 }
@@ -898,24 +894,22 @@ namespace RM_3000.Forms.Settings
                     calc.SetVariableVal(strVariableName, 1.0F);
                     if (calc.CalcFormulaJudge(strCalcName, strExpression, ref strErrorMessage) == false)
                     {
-                        MessageBox.Show(strErrorMessage + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                        retResult = false;
+                        retString = strErrorMessage + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                     }
                     else
                     {
-                        //MessageBox.Show(AppResource.GetString("MSG_TAGSETTING_OK_EXPRESSION"), this.Text);
-                        retResult = true;
+                        // expression is OK - AppResource.GetString("MSG_TAGSETTING_OK_EXPRESSION")
+                        retString = string.Empty;
                     }
                 }
             }
             catch (Exception ex)
             {
-                ShowErrorMessage(ex);
-                retResult = false;
+                retString = ex.Message;
             }
 
             CalcBtmEnabled(true);
-            return retResult;
+            return retString;
         }
         /// <summary>
         /// 

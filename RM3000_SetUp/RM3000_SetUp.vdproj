@@ -15,18 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_11E49815D4574F26AF2ADFD59A496699"
-        "OwnerKey" = "8:_C8EC4DA9B4794B209936B11BB2E54C5D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_11E49815D4574F26AF2ADFD59A496699"
-        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1E0731340A8B4F2B9DA290EE4E508DB5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -59,6 +47,18 @@
         {
         "MsmKey" = "8:_3D302E08CF605112F0F4ADEC37913445"
         "OwnerKey" = "8:_B6652A9488FE47B85BF262C39C51E436"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_48C0CDAAEE534CFEBFE82C20D4982FC7"
+        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_48C0CDAAEE534CFEBFE82C20D4982FC7"
+        "OwnerKey" = "8:_C8EC4DA9B4794B209936B11BB2E54C5D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -135,6 +135,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9964439E33244634A6B95C53EDDEC66C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -196,25 +202,19 @@
         "Entry"
         {
         "MsmKey" = "8:_F2B141E1B8EF68703F1F0111016829B8"
-        "OwnerKey" = "8:_C022583AA4D04BEA9509719951DB75C4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F2B141E1B8EF68703F1F0111016829B8"
         "OwnerKey" = "8:_6DE2BDDF1F9CE21D3B379AA23BDBD388"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_F2B141E1B8EF68703F1F0111016829B8"
         "OwnerKey" = "8:_C022583AA4D04BEA9509719951DB75C4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
+        "OwnerKey" = "8:_C022583AA4D04BEA9509719951DB75C4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -277,6 +277,12 @@
         "OwnerKey" = "8:_F2B141E1B8EF68703F1F0111016829B8"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -302,6 +308,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -460,7 +479,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4853.34876, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4855.19332, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_59D57ED525027CF759748705BB62C4A1"
@@ -633,7 +652,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rmusb_Wrapper, Version=1.0.4853.34871, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Rmusb_Wrapper, Version=1.0.4855.19328, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_96B4C100304FAE2748B1319A112962BA"
@@ -666,6 +685,26 @@
             "TargetName" = "8:ConstantSetting.xml"
             "Tag" = "8:"
             "Folder" = "8:_B780D8FE5D0E4FBC9094BFDF23669474"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9964439E33244634A6B95C53EDDEC66C"
+            {
+            "SourcePath" = "8:..\\RM-3000\\rmusb001.dll"
+            "TargetName" = "8:rmusb001.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_B7CBA003003040F3868C761C12D8ED40"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -786,7 +825,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4853.34876, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4855.19332, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_C398BF5B24F294F6761AE6732FCA4D0B"
@@ -837,7 +876,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:OKD_Calc_Wrapper, Version=1.0.4853.34875, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:OKD_Calc_Wrapper, Version=1.0.4855.19331, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_F2B141E1B8EF68703F1F0111016829B8"
@@ -965,7 +1004,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RM-3000"
         "ProductCode" = "8:{E71BC58D-616E-441C-8072-C20DB2BE8FB9}"
-        "PackageCode" = "8:{7EFBFE93-6AAF-4E27-B5B7-BDCD01E4B911}"
+        "PackageCode" = "8:{5773845E-4687-4948-99AF-ED7AB286120C}"
         "UpgradeCode" = "8:{FE1B347F-2373-4DFF-92D2-20B87EF23D13}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1509,7 +1548,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_11E49815D4574F26AF2ADFD59A496699"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_48C0CDAAEE534CFEBFE82C20D4982FC7"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -1526,34 +1565,6 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_22FE58E1A2574544ABBAF46B24CE2F7C"
-            {
-            "SourcePath" = "8:"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B7CBA003003040F3868C761C12D8ED40"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:ContentFiles"
-            "OutputProjectGuid" = "8:{A0A73FAD-9CDC-44B0-8B0F-C9D1AD582F34}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_29215ED1A3BE4F7E9395BB1F2B3A929F"
             {
             "SourcePath" = "8:"
@@ -1592,7 +1603,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"

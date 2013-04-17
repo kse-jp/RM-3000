@@ -132,6 +132,13 @@ namespace RM_3000.Forms.Measurement
                             catch
                             { }
                         }
+
+                        if (this.IsReadMode)
+                        {
+                            txtFileName.Text = dgvPattern.Rows[dgvPattern.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                            this.dirtyFlag = true;
+                            this.CurrentFileName = txtFileName.Text;
+                        }
                     }
                 }
                 catch { }
@@ -154,7 +161,7 @@ namespace RM_3000.Forms.Measurement
             {
                 if (!this.IsReadMode)
                 {
-                    if (string.IsNullOrEmpty(this.CurrentFileName))
+                    if (!string.IsNullOrEmpty(this.CurrentFileName))
                     {
                         if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
                         {
@@ -173,14 +180,14 @@ namespace RM_3000.Forms.Measurement
                 }
                 else
                 {
-                    if (this.dirtyFlag)
-                    {
-                        if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
-                        {
-                            return;
-                        }
-                        this.dirtyFlag = false;
-                    }
+                    //if (this.dirtyFlag)
+                    //{
+                    //    if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
+                    //    {
+                    //        return;
+                    //    }
+                    //    this.dirtyFlag = false;
+                    //}
                 }
                 this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
                 Close();
@@ -306,7 +313,7 @@ namespace RM_3000.Forms.Measurement
         {
             try
             {
-                if (this.dirtyFlag)
+                if (this.dirtyFlag && !IsReadMode)
                 {
                     if (MessageBox.Show(AppResource.GetString("MSG_DATA_MODIFIED_CONFIRM_EXIT"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Cancel)
                     {

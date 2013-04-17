@@ -48,9 +48,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{47CA7C8B-A2A6-4C4B-88F6-E2A283DB1FAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{60DFD087-BBE9-4211-B3C7-D859BDF1E4D4}"
-	ProjectSection(SolutionItems) = preProject
-		bin\System\ConstantSetting.xml = bin\System\ConstantSetting.xml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calc", "Calc", "{78A2065E-8016-47F2-B7C3-62296760A1D6}"
 	ProjectSection(SolutionItems) = preProject

@@ -535,7 +535,14 @@ namespace RM_3000.Forms.Settings
                             if (!string.IsNullOrEmpty(this.dataTagSetting.DataTagList[i].Expression))
                             {
                                 this.currentTag = this.list[i];
-                                retString = EvaluateExpression(this.dataTagSetting.DataTagList[i].Expression);
+
+                                retString = EvaluateExpression(
+                                    System.Text.RegularExpressions.Regex.Replace(
+                                         this.dataTagSetting.DataTagList[i].Expression
+                                        , @"(\[(\w*[-+/*\[\]\(\)]*)*\])+" 
+                                        , ""
+                                        ));
+
                                 if (!string.IsNullOrEmpty(retString))
                                 {
                                     this.dgvTagList.CurrentCell = this.dgvTagList.Rows[i].Cells[0];
@@ -703,6 +710,13 @@ namespace RM_3000.Forms.Settings
                 {
                     temp = txtCalc2.Text;
                     string retString = string.Empty;
+
+                    temp = System.Text.RegularExpressions.Regex.Replace(
+                        temp,
+                        @"(\[(\w*[-+/*\[\]\(\)]*)*\])+",
+                        ""
+                        );
+
                     retString = EvaluateExpression(temp);
                     if (string.IsNullOrEmpty(retString))
                     { MessageBox.Show(AppResource.GetString("MSG_TAGSETTING_OK_EXPRESSION"), this.Text); }

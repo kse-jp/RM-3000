@@ -597,7 +597,7 @@ namespace GraphLib
         /// <summary>
         /// current chinfo
         /// </summary>
-        private ChannelInfo[] _CurrentChInfo = null;       
+        private ChannelInfo[] _CurrentChInfo = null;
         #endregion
 
         #region Delegate
@@ -901,7 +901,7 @@ namespace GraphLib
                     //if (_GraphInfo.PlotCountX != value)
                     {
                         GraphInfo inf = _GraphInfo;
-                        inf.PlotCountX = value;                       
+                        inf.PlotCountX = value;
                         UpdateGraphInfo(inf, false, true);
                     }
 
@@ -1383,7 +1383,7 @@ namespace GraphLib
                 }
 
                 if (!isequal && redrawGrid)
-                {                    
+                {
                     _ZoomNumberAxisY = 0;
                     _GraphModel.AxisZoomX = 0;
                     _GraphModel.AxisZoomY = 0;
@@ -4491,6 +4491,20 @@ namespace GraphLib
                     //Measure Label X
                     Thickness labelthick = _GraphModel.MeasureLabelX.Model.Margin;
 
+                    double minpos = 0;
+                    double maxpos = 0;
+
+                    if (_CurrentMeasureDrag == null)
+                    {
+                        minpos = _GraphModel.GridLineData.Margin.Left;
+                        maxpos = _GraphModel.GridLineData.Margin.Left + graphwidth - _ScrollBarMargin;
+                    }
+                    else
+                    {
+                        minpos = _GraphModel.GridLineData.Margin.Left - (_CurrentMeasureDrag.Width / 2);
+                        maxpos = _GraphModel.GridLineData.Margin.Left + graphwidth - (_CurrentMeasureDrag.Width / 2) - _ScrollBarMargin;
+                    }
+
                     if (_GraphModel.UpperMeasureModelX.Margin.Left <= _GraphModel.LowerMeasureModelX.Margin.Left)
                     {
                         labelthick.Left = _GraphModel.UpperMeasureModelX.Margin.Left + (_GraphModel.UpperMeasureModelX.Width / 2);
@@ -4505,11 +4519,11 @@ namespace GraphLib
                     double valueperpoint = 0;
                     if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
                     {
-                        valueperpoint = _ZoomValueX / graphwidth;
+                        valueperpoint = _ZoomValueX / (maxpos - minpos);
                     }
                     else
                     {
-                        valueperpoint = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / graphwidth;
+                        valueperpoint = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxpos - minpos);
                     }
 
                     double width = Math.Abs(_GraphModel.UpperMeasureModelX.Margin.Left - _GraphModel.LowerMeasureModelX.Margin.Left);

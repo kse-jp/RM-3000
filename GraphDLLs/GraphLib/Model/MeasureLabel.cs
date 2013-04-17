@@ -22,7 +22,7 @@ namespace GraphLib.Model
             Vertical = 0,
             Horizontal = 1
         }
-        #endregion 
+        #endregion
 
         #region Private Const
         /// <summary>
@@ -57,7 +57,7 @@ namespace GraphLib.Model
         /// Label Backgound Opacity
         /// </summary>
         private const double _Opacity = 0.8;
-        #endregion 
+        #endregion
 
         #region Private Variable
         /// <summary>
@@ -207,8 +207,8 @@ namespace GraphLib.Model
                         Line line = _Model.Children[2] as Line;
                         Label label0 = _Model.Children[3] as Label;
 
-                        arrowtail.Margin = new Thickness(_Width - _ArrowHeadWidth, 30, 0, 0);
-                        arrowhead.Margin = new Thickness(0, 28.5, 0, 0);
+                        arrowtail.Margin = new Thickness(_Width - _ArrowHeadWidth - 2, 30, 0, 0);
+                        arrowhead.Margin = new Thickness(1, 28.5, 0, 0);
 
                         line.Margin = new Thickness(0, 30, 0, 0);
                         line.X1 = 0;
@@ -267,7 +267,7 @@ namespace GraphLib.Model
                         Line line = _Model.Children[2] as Line;
                         Label label0 = _Model.Children[3] as Label;
 
-                        arrowtail.Margin = new Thickness(-1.5, _Height - _ArrowHeadWidth, 0, 0);
+                        arrowtail.Margin = new Thickness(-1.5, _Height - _ArrowHeadWidth - 2, 0, 0);                        
 
                         line.X1 = _ArrowHeadWidth / 2;
                         line.Y1 = 0;

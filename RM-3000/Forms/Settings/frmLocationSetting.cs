@@ -845,8 +845,11 @@ namespace RM_3000
 			row.Cells["ColumnSensorNumber"].Value = chIndex + 1;
 			this.settingList[chIndex].channel = chIndex + 1;
 			this.settingList[chIndex].sensorNumber = chIndex + 1;
+#if LOCATION_SETTING_DEBUG
+#else
 			row.Cells["ColumnPointX"].ReadOnly = false;
 			row.Cells["ColumnPointY"].ReadOnly = false;
+#endif
 
 		}
         /// <summary>

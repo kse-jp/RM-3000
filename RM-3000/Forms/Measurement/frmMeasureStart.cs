@@ -477,6 +477,33 @@ namespace RM_3000.Forms.Measurement
                     }
                 }
 
+                // グラフのタグの有効性を確認
+                for (int i = 0; i < this.measSetting.GraphSettingList.Length; i++)
+                {
+                    var graph = this.measSetting.GraphSettingList[i];
+
+                    for (int j = 0; j < graph.GraphTagList.Length; j++)
+                    {
+                        if (graph.GraphTagList[j].GraphTagNo != -1)
+                        {
+                            var found = false;
+                            for (int k = 0; k < this.relationSetting.RelationList.Length; k++)
+                            {
+                                if (graph.GraphTagList[j].GraphTagNo == this.relationSetting.RelationList[k].TagNo_1
+                                    || (this.measSetting.Mode == 1 && graph.GraphTagList[j].GraphTagNo == this.relationSetting.RelationList[k].TagNo_2))
+                                {
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (!found)
+                            {
+                                // 有効なタグではないので測定設定から削除する
+                                graph.GraphTagList[j].GraphTagNo = -1;
+                            }
+                        }
+                    }
+                }
 
                 // 測定設定ファイル保存
                 SystemSetting.MeasureSetting.Serialize();

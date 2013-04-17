@@ -4,7 +4,7 @@
   <BolsterWidth>3000</BolsterWidth>
   <BolsterDepth>1500</BolsterDepth>
   <UsedMold>true</UsedMold>
-  <MoldWidth>2650</MoldWidth>
+  <MoldWidth>2600</MoldWidth>
   <MoldDepth>1400</MoldDepth>
   <MoldPressWidth>2000</MoldPressWidth>
   <MoldPressDepth>600</MoldPressDepth>
@@ -12,80 +12,80 @@
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>1</ChNo>
-      <X>2500</X>
-      <Z>820</Z>
-      <Way>LEFT</Way>
-      <Target>UPPER_PRESS</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>2</ChNo>
-      <X>2137</X>
-      <Z>911</Z>
+      <X>0</X>
+      <Z>595</Z>
       <Way>INVAILED</Way>
-      <Target>UPPER_PRESS</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>3</ChNo>
-      <X>2503</X>
-      <Z>695</Z>
-      <Way>INVAILED</Way>
-      <Target>STRIPPER</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>4</ChNo>
-      <X>2725</X>
-      <Z>290</Z>
-      <Way>INVAILED</Way>
-      <Target>UPPER</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>5</ChNo>
-      <X>2500</X>
-      <Z>450</Z>
-      <Way>INVAILED</Way>
-      <Target>STRIPPER</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>6</ChNo>
-      <X>500</X>
-      <Z>810</Z>
-      <Way>RIGHT</Way>
-      <Target>UPPER_PRESS</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>7</ChNo>
-      <X>2825</X>
-      <Z>990</Z>
-      <Way>LEFT</Way>
-      <Target>LOWER</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>8</ChNo>
-      <X>2795</X>
-      <Z>50</Z>
-      <Way>UP</Way>
-      <Target>LOWER</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>9</ChNo>
-      <X>2825</X>
-      <Z>620</Z>
-      <Way>LEFT</Way>
       <Target>UPPER</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
-      <X>-100</X>
-      <Z>-100</Z>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
     </PositionSetting>

@@ -1945,7 +1945,14 @@ namespace RM_3000
 
                     // 新しいセンサとして表示
                     this.removeSensor(this.activeSensorCanvas.chIndex);
-                    this.setNewSensorB(this.activeSensorCanvas.chIndex);
+                    if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_B)
+                    {
+                        this.setNewSensorB(this.activeSensorCanvas.chIndex);
+                    }
+                    else if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_R)
+                    {
+                        this.setNewSensorR(this.activeSensorCanvas.chIndex);
+                    }
                 }
                 // Bセンサの場合はセンサは位置から判定
                 else if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_B
@@ -2175,6 +2182,7 @@ namespace RM_3000
                     this.activeSensorCanvas.isNew = false;
                     Point pointSensorAtScrollView = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.scrollViewer);
                     this.cvsRoot.Children.Remove(this.activeSensorCanvas);
+                    this.cvsBase.Children.Remove(this.activeSensorCanvas);
                     Canvas.SetLeft(this.activeSensorCanvas, this.scrollViewer.ContentHorizontalOffset + pointSensorAtScrollView.X);
                     Canvas.SetTop(this.activeSensorCanvas, this.scrollViewer.ContentVerticalOffset + pointSensorAtScrollView.Y);
                     ((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);

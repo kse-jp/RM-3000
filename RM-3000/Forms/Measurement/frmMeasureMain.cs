@@ -196,7 +196,7 @@ namespace RM_3000.Forms.Measurement
                 case Sequences.TestSequence.TestStatusType.EmergencyStop:
                     if (this.InvokeRequired)
                     {
-                        this.BeginInvoke((MethodInvoker)delegate() 
+                        this.BeginInvoke((MethodInvoker)delegate()
                             {
                                 this.measureTask.Pause();
 
@@ -881,8 +881,11 @@ namespace RM_3000.Forms.Measurement
                 {
                     var info = this.graph2DList[i].GraphInfo;
 
-                    if (this.graph2DList[i].PlotCount / 2 < info.MaxDataSizeX * 0.05)
-                        this.graph2DList[i].PlotCount = Convert.ToInt32(info.MaxDataSizeX * 0.05);
+                    if (this.graph2DList[i].PlotCount / 2 < info.MaxDataSizeX * 0.05 || this.graph2DList[i].PlotCount / 2 <= 0)
+                    {
+                        if (Convert.ToInt32(info.MaxDataSizeX * 0.05) > 0)
+                            this.graph2DList[i].PlotCount = Convert.ToInt32(info.MaxDataSizeX * 0.05);                      
+                    }
                     else
                     {
                         this.graph2DList[i].PlotCount = this.graph2DList[i].PlotCount / 2;
@@ -903,13 +906,13 @@ namespace RM_3000.Forms.Measurement
                     var info = this.graph2DList[i].GraphInfo;
                     int maxdatasize = info.MaxDataSizeX;
 
-                    if (this.measSetting.Mode == 3 && maxdatasize > 0)
+                    if (this.measSetting.Mode == 3 && maxdatasize > 1)
                         maxdatasize--;
 
-                    if (this.graph2DList[i].PlotCount * 2 > maxdatasize-1)
+                    if (this.graph2DList[i].PlotCount * 2 > maxdatasize )
                     {
                         this.graph2DList[i].ZoomXCounter = 0;
-                        this.graph2DList[i].PlotCount = maxdatasize-1;                        
+                        this.graph2DList[i].PlotCount = maxdatasize;
                     }
                     else
                     {

@@ -532,6 +532,7 @@ namespace RM_3000.Forms.Settings
                         {
                             if (!string.IsNullOrEmpty(this.dataTagSetting.DataTagList[i].Expression))
                             {
+                                this.currentTag = this.list[i];
                                 if (!EvaluateExpression(this.dataTagSetting.DataTagList[i].Expression))
                                 {
                                     this.dgvTagList.CurrentCell = this.dgvTagList.Rows[i].Cells[0];

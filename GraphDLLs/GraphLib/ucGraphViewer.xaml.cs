@@ -4317,7 +4317,11 @@ namespace GraphLib
 
 
                     double height = Math.Abs(_GraphModel.UpperMeasureModelY.Margin.Top - _GraphModel.LowerMeasureModelY.Margin.Top);
-                    _GraphModel.MeasureLabelY.UpdateLabelValue(valueperpoint * height);
+                    string decpointstr = _GraphModel.GridLineData.DecimalPointYStr;
+                    if (_IsZoom)
+                        decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
+
+                    _GraphModel.MeasureLabelY.UpdateLabelValue(valueperpoint * height, decpointstr);
                     _GraphModel.MeasureLabelY.ChangeHeight(height);
                 }
             }
@@ -4354,8 +4358,12 @@ namespace GraphLib
                         valueperpoint = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / graphheight;
 
 
+                    string decpointstr = _GraphModel.GridLineData.DecimalPointYStr;
+                    if (_IsZoom)
+                        decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
+
                     double height = Math.Abs(_GraphModel.UpperMeasureModelY2.Margin.Top - _GraphModel.LowerMeasureModelY2.Margin.Top);
-                    _GraphModel.MeasureLabelY2.UpdateLabelValue(valueperpoint * height);
+                    _GraphModel.MeasureLabelY2.UpdateLabelValue(valueperpoint * height, decpointstr);
                     _GraphModel.MeasureLabelY2.ChangeHeight(height);
 
                 }
@@ -4526,8 +4534,12 @@ namespace GraphLib
                         valueperpoint = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxpos - minpos);
                     }
 
+                    string decpointstr = _GraphModel.GridLineData.DecimalPointXStr;
+                    if (_IsZoom)
+                        decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
+
                     double width = Math.Abs(_GraphModel.UpperMeasureModelX.Margin.Left - _GraphModel.LowerMeasureModelX.Margin.Left);
-                    _GraphModel.MeasureLabelX.UpdateLabelValue(valueperpoint * width);
+                    _GraphModel.MeasureLabelX.UpdateLabelValue(valueperpoint * width, decpointstr);
                     _GraphModel.MeasureLabelX.ChangeWidth(width);
                 }
             }

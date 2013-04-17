@@ -156,12 +156,12 @@ namespace Graph3DLib.Controller
                 double duration = 0;
                 try
                 {
-
-                    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration != null
-                       && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan != null)
-                    {
-                        duration = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan.TotalMilliseconds;
-                    }
+                    if (_AnimationClock != null && _AnimationClock[(int)_TargetBase] != null)
+                        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration != null
+                           && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan != null)
+                        {
+                            duration = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan.TotalMilliseconds;
+                        }
                     return duration;
                 }
                 catch (Exception ex)
@@ -236,7 +236,7 @@ namespace Graph3DLib.Controller
         /// <param name="machineModel">machine model</param>
         /// <param name="keyFrames">animation keyframe</param>
         public AnimationCtrl(MachineModel machineModel, AnimationClock[][] animationClock)
-        {            
+        {
             try
             {
                 bool searchfound = false;
@@ -531,12 +531,12 @@ namespace Graph3DLib.Controller
                         _IsPause = false;
                         _AnimationStatus = AnimationStatus.Start;
                     }
-                }                
+                }
                 return checkbegin;
             }
             catch (Exception ex)
             {
-                throw ex;                
+                throw ex;
             }
         }
 
@@ -583,7 +583,7 @@ namespace Graph3DLib.Controller
             }
             catch (Exception ex)
             {
-                throw ex;                
+                throw ex;
             }
         }
 
@@ -604,7 +604,7 @@ namespace Graph3DLib.Controller
                             if (_AnimationClock[i][j] != null && _AnimationClock[i][j].Controller != null)
                             {
                                 _AnimationClock[i][j].Controller.Stop();
-                                _AnimationClock[i][j].Controller.Remove();                                                                
+                                _AnimationClock[i][j].Controller.Remove();
                             }
                             _AnimationClock[i][j] = null;
                         }

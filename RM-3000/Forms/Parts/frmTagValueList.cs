@@ -265,7 +265,7 @@ namespace RM_3000.Forms.Parts
                     }
 
                     DataTag tag = this.analyzeData.DataTagSetting.GetTag(chData.TagNo);
-                    position = tag.Point;
+                    posPoint = tag.Point;
                     var t = chData.DataValues.GetType();
                     if (t == typeof(Value_Standard))
                     {

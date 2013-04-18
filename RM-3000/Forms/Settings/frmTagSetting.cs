@@ -850,7 +850,7 @@ namespace RM_3000.Forms.Settings
                                                         if (match)
                                                         {
                                                             CalcBtmEnabled(true);
-                                                            return AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                                            return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                                                         }
                                                     }
                                                 }

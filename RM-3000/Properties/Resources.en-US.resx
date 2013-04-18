@@ -1391,4 +1391,12 @@ Emergency shutdown.</value>
     <value>Measure Target Setting</value>
     <comment>Measure Target Setting</comment>
   </data>
+  <data name="TXT_LAST_COMM_TIME" xml:space="preserve">
+    <value>Last Comm Time</value>
+    <comment>最新通信時間</comment>
+  </data>
+  <data name="MSG_TAG_CALC_SELECTED_INCALC" xml:space="preserve">
+    <value>Can't select calculation tag in expression. </value>
+    <comment>Can't select calculation tag in expression.</comment>
+  </data>
 </root>

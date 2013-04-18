@@ -485,10 +485,10 @@ namespace RM_3000
 
                 if (isValid)
                 {
-                    if (this.TopMost)
-                    {
-                        this.TopMost = false;
-                    }
+                    //if (this.TopMost)
+                    //{
+                    //    this.TopMost = false;
+                    //}
                 }
                 else
                 {
@@ -1114,7 +1114,7 @@ namespace RM_3000
         public void win2_DoneInitailized(object sender, EventArgs e)
         {
             this.sensorPositionSetting.IsUpdated = false;
-            this.TopMost = true;
+            this.BringToFront();
         }
 
 		#endregion

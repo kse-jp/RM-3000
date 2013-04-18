@@ -1877,7 +1877,7 @@ namespace RM_3000
 
             if (this.locationSetting.IsCurrentCellInEditMode)
             {
-                this.locationSetting.TopMost = true;
+                this.locationSetting.BringToFront();
                 return;
             }
 
@@ -1914,7 +1914,7 @@ namespace RM_3000
 
             if (this.locationSetting.IsCurrentCellInEditMode)
             {
-                this.locationSetting.TopMost = true;
+                this.locationSetting.BringToFront();
                 return;
             }
 

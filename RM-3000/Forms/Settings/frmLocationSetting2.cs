@@ -164,18 +164,6 @@ namespace RM_3000
             }
         }
 
-        private void frmLocationSetting2_Shown(object sender, EventArgs e)
-        {
-            try
-            {
-                this.locationSetting.BringToFront();
-            }
-            catch (Exception ex)
-            {
-                ShowErrorMessage(ex);
-            }
-        }
-
         private void frmLocationSetting2_MouseMove(object sender, MouseEventArgs e)
         {
             try

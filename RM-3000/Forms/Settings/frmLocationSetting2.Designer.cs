@@ -58,7 +58,6 @@
             this.Text = "TXT_TITLE_LOCATION_CANVAS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocationSetting2_FormClosing);
             this.Load += new System.EventHandler(this.frmLocationSetting2_Load);
-            this.Shown += new System.EventHandler(this.frmLocationSetting2_Shown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmLocationSetting2_MouseMove);
             this.ResumeLayout(false);
 

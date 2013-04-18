@@ -520,6 +520,7 @@ namespace RM_3000
                     Point pointSensorAtBase = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.cvsBase);
 
                     this.cvsRoot.Children.Remove(this.activeSensorCanvas);
+                    this.cvsBase.Children.Remove(this.activeSensorCanvas);
                     Canvas.SetLeft(this.activeSensorCanvas, pointSensorAtBase.X);
                     Canvas.SetTop(this.activeSensorCanvas, pointSensorAtBase.Y);
                     ((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);

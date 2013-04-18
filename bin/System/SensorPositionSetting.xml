@@ -11,11 +11,11 @@
   <PositionList>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
-      <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
+      <ChNo>1</ChNo>
+      <X>1925</X>
+      <Z>745</Z>
       <Way>INVAILED</Way>
-      <Target>INVAILED</Target>
+      <Target>UPPER_PRESS</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
@@ -44,8 +44,8 @@
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
+      <X>-100</X>
+      <Z>-100</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
     </PositionSetting>
@@ -68,8 +68,8 @@
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
+      <X>-100</X>
+      <Z>-100</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
     </PositionSetting>
@@ -84,8 +84,8 @@
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
-      <X>-1</X>
-      <Z>-1</Z>
+      <X>-100</X>
+      <Z>-100</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
     </PositionSetting>

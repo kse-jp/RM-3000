@@ -833,26 +833,35 @@ namespace RM_3000.Forms.Settings
                                                 if (match)
                                                 {
                                                     match = false;
-                                                    if (this.currentTag != null)
+
+                                                    DataTag tmptag = this.dataTagSetting.DataTagList[foundIndex];
+
+                                                    if (tmptag.TagKind == 2)
                                                     {
-                                                        if (this.currentTag.TagNo == this.dataTagSetting.DataTagList[foundIndex].TagNo)
-                                                        {
-                                                            match = true;
-                                                        }
-                                                        //check edition tag with other calc tag
-                                                        else if (this.currentTag.TagKind == 2 || (!IsMeasure && this.currentTag.IsBlank))
-                                                        {
-                                                            if (this.dataTagSetting.DataTagList[foundIndex].TagKind == 2 || (!IsMeasure && this.dataTagSetting.DataTagList[foundIndex].IsBlank))
-                                                            {
-                                                                match = true;
-                                                            }
-                                                        }
-                                                        if (match)
-                                                        {
-                                                            CalcBtmEnabled(true);
-                                                            return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
-                                                        }
+                                                        CalcBtmEnabled(true);
+                                                        return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                                                     }
+
+                                                    //if (this.currentTag != null)
+                                                    //{
+                                                    //    if (this.currentTag.TagNo == this.dataTagSetting.DataTagList[foundIndex].TagNo)
+                                                    //    {
+                                                    //        match = true;
+                                                    //    }
+                                                    //    //check edition tag with other calc tag
+                                                    //    else if (this.currentTag.TagKind == 2 || (!IsMeasure && this.currentTag.IsBlank))
+                                                    //    {
+                                                    //        if (this.dataTagSetting.DataTagList[foundIndex].TagKind == 2 || (!IsMeasure && this.dataTagSetting.DataTagList[foundIndex].IsBlank))
+                                                    //        {
+                                                    //            match = true;
+                                                    //        }
+                                                    //    }
+                                                        //if (match)
+                                                        //{
+                                                            //CalcBtmEnabled(true);
+                                                            //return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                                        //}
+                                                    //}
                                                 }
                                             }
                                         }

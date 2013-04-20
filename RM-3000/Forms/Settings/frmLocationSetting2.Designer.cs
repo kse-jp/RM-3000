@@ -30,7 +30,7 @@
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocationSetting2));
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.canvasLocationSetting2 = new RM_3000.uctrlLocationSetting2();
+            this.canvasLocationSetting2 = new RM_3000.uctrlLocationSetting2(this.log);
             this.SuspendLayout();
             // 
             // elementHost1

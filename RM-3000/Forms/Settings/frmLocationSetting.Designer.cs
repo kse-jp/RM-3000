@@ -29,6 +29,12 @@
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,19 +47,25 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkDispKanagata = new System.Windows.Forms.CheckBox();
-            this.txtPressKanagataHeight = new RM_3000.Controls.NumericTextBox();
-            this.txtUnderKanagataHeight = new RM_3000.Controls.NumericTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPressKanagataWidth = new RM_3000.Controls.NumericTextBox();
-            this.txtUnderKanagataWidth = new RM_3000.Controls.NumericTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtBolsterHeight = new RM_3000.Controls.NumericTextBox();
-            this.txtBolsterWidth = new RM_3000.Controls.NumericTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridSetting = new RM_3000.CustomDataGridView();
+            this.gridSetting = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPressKanagataHeight = new RM_3000.Controls.NumericTextBox();
+            this.txtUnderKanagataHeight = new RM_3000.Controls.NumericTextBox();
+            this.txtPressKanagataWidth = new RM_3000.Controls.NumericTextBox();
+            this.txtUnderKanagataWidth = new RM_3000.Controls.NumericTextBox();
+            this.txtBolsterHeight = new RM_3000.Controls.NumericTextBox();
+            this.txtBolsterWidth = new RM_3000.Controls.NumericTextBox();
             this.ColumnChannel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPointX = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,38 +155,6 @@
             this.chkDispKanagata.UseVisualStyleBackColor = true;
             this.chkDispKanagata.CheckedChanged += new System.EventHandler(this.chkDispKanagata_CheckedChanged);
             // 
-            // txtPressKanagataHeight
-            // 
-            this.txtPressKanagataHeight.AllowMinus = true;
-            this.txtPressKanagataHeight.AllowSpace = false;
-            this.txtPressKanagataHeight.AllowString = false;
-            this.txtPressKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtPressKanagataHeight.IsInteger = true;
-            this.txtPressKanagataHeight.Location = new System.Drawing.Point(217, 77);
-            this.txtPressKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPressKanagataHeight.MaxLength = 7;
-            this.txtPressKanagataHeight.Name = "txtPressKanagataHeight";
-            this.txtPressKanagataHeight.Size = new System.Drawing.Size(142, 23);
-            this.txtPressKanagataHeight.TabIndex = 7;
-            this.txtPressKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPressKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtUnderKanagataHeight
-            // 
-            this.txtUnderKanagataHeight.AllowMinus = true;
-            this.txtUnderKanagataHeight.AllowSpace = false;
-            this.txtUnderKanagataHeight.AllowString = false;
-            this.txtUnderKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtUnderKanagataHeight.IsInteger = true;
-            this.txtUnderKanagataHeight.Location = new System.Drawing.Point(11, 77);
-            this.txtUnderKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUnderKanagataHeight.MaxLength = 7;
-            this.txtUnderKanagataHeight.Name = "txtUnderKanagataHeight";
-            this.txtUnderKanagataHeight.Size = new System.Drawing.Size(142, 23);
-            this.txtUnderKanagataHeight.TabIndex = 5;
-            this.txtUnderKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUnderKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -193,38 +173,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "TXT_BACKINGPLATE_DEPTH";
             // 
-            // txtPressKanagataWidth
-            // 
-            this.txtPressKanagataWidth.AllowMinus = true;
-            this.txtPressKanagataWidth.AllowSpace = false;
-            this.txtPressKanagataWidth.AllowString = false;
-            this.txtPressKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtPressKanagataWidth.IsInteger = true;
-            this.txtPressKanagataWidth.Location = new System.Drawing.Point(217, 35);
-            this.txtPressKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPressKanagataWidth.MaxLength = 7;
-            this.txtPressKanagataWidth.Name = "txtPressKanagataWidth";
-            this.txtPressKanagataWidth.Size = new System.Drawing.Size(142, 23);
-            this.txtPressKanagataWidth.TabIndex = 6;
-            this.txtPressKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPressKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtUnderKanagataWidth
-            // 
-            this.txtUnderKanagataWidth.AllowMinus = true;
-            this.txtUnderKanagataWidth.AllowSpace = false;
-            this.txtUnderKanagataWidth.AllowString = false;
-            this.txtUnderKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtUnderKanagataWidth.IsInteger = true;
-            this.txtUnderKanagataWidth.Location = new System.Drawing.Point(12, 36);
-            this.txtUnderKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUnderKanagataWidth.MaxLength = 7;
-            this.txtUnderKanagataWidth.Name = "txtUnderKanagataWidth";
-            this.txtUnderKanagataWidth.Size = new System.Drawing.Size(142, 23);
-            this.txtUnderKanagataWidth.TabIndex = 4;
-            this.txtUnderKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUnderKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -242,38 +190,6 @@
             this.label4.Size = new System.Drawing.Size(185, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "TXT_BACKINGPLATE_LENGTH";
-            // 
-            // txtBolsterHeight
-            // 
-            this.txtBolsterHeight.AllowMinus = true;
-            this.txtBolsterHeight.AllowSpace = false;
-            this.txtBolsterHeight.AllowString = false;
-            this.txtBolsterHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtBolsterHeight.IsInteger = true;
-            this.txtBolsterHeight.Location = new System.Drawing.Point(25, 97);
-            this.txtBolsterHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBolsterHeight.MaxLength = 7;
-            this.txtBolsterHeight.Name = "txtBolsterHeight";
-            this.txtBolsterHeight.Size = new System.Drawing.Size(142, 23);
-            this.txtBolsterHeight.TabIndex = 2;
-            this.txtBolsterHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtBolsterHeight.Leave += new System.EventHandler(this.txt_Leave);
-            // 
-            // txtBolsterWidth
-            // 
-            this.txtBolsterWidth.AllowMinus = true;
-            this.txtBolsterWidth.AllowSpace = false;
-            this.txtBolsterWidth.AllowString = false;
-            this.txtBolsterWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtBolsterWidth.IsInteger = true;
-            this.txtBolsterWidth.Location = new System.Drawing.Point(25, 56);
-            this.txtBolsterWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBolsterWidth.MaxLength = 7;
-            this.txtBolsterWidth.Name = "txtBolsterWidth";
-            this.txtBolsterWidth.Size = new System.Drawing.Size(142, 23);
-            this.txtBolsterWidth.TabIndex = 1;
-            this.txtBolsterWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtBolsterWidth.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // label2
             // 
@@ -330,6 +246,159 @@
             this.gridSetting.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gridSetting_CellValidating);
             this.gridSetting.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.gridSetting_EditingControlShowing);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn1.HeaderText = "TXT_CHANNEL";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 2;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn2.HeaderText = "TXT_BOARD_SPEC";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewTextBoxColumn3.HeaderText = "TXT_X_POSITION";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewTextBoxColumn4.HeaderText = "TXT_Z_POSITION";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridViewTextBoxColumn5.HeaderText = "TXT_POSITION";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewTextBoxColumn6.HeaderText = "TXT_WAY";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // txtPressKanagataHeight
+            // 
+            this.txtPressKanagataHeight.AllowMinus = true;
+            this.txtPressKanagataHeight.AllowSpace = false;
+            this.txtPressKanagataHeight.AllowString = false;
+            this.txtPressKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtPressKanagataHeight.IsInteger = true;
+            this.txtPressKanagataHeight.Location = new System.Drawing.Point(217, 77);
+            this.txtPressKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPressKanagataHeight.MaxLength = 7;
+            this.txtPressKanagataHeight.Name = "txtPressKanagataHeight";
+            this.txtPressKanagataHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtPressKanagataHeight.TabIndex = 7;
+            this.txtPressKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPressKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtUnderKanagataHeight
+            // 
+            this.txtUnderKanagataHeight.AllowMinus = true;
+            this.txtUnderKanagataHeight.AllowSpace = false;
+            this.txtUnderKanagataHeight.AllowString = false;
+            this.txtUnderKanagataHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtUnderKanagataHeight.IsInteger = true;
+            this.txtUnderKanagataHeight.Location = new System.Drawing.Point(11, 77);
+            this.txtUnderKanagataHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnderKanagataHeight.MaxLength = 7;
+            this.txtUnderKanagataHeight.Name = "txtUnderKanagataHeight";
+            this.txtUnderKanagataHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtUnderKanagataHeight.TabIndex = 5;
+            this.txtUnderKanagataHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUnderKanagataHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtPressKanagataWidth
+            // 
+            this.txtPressKanagataWidth.AllowMinus = true;
+            this.txtPressKanagataWidth.AllowSpace = false;
+            this.txtPressKanagataWidth.AllowString = false;
+            this.txtPressKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtPressKanagataWidth.IsInteger = true;
+            this.txtPressKanagataWidth.Location = new System.Drawing.Point(217, 35);
+            this.txtPressKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPressKanagataWidth.MaxLength = 7;
+            this.txtPressKanagataWidth.Name = "txtPressKanagataWidth";
+            this.txtPressKanagataWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtPressKanagataWidth.TabIndex = 6;
+            this.txtPressKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPressKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtUnderKanagataWidth
+            // 
+            this.txtUnderKanagataWidth.AllowMinus = true;
+            this.txtUnderKanagataWidth.AllowSpace = false;
+            this.txtUnderKanagataWidth.AllowString = false;
+            this.txtUnderKanagataWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtUnderKanagataWidth.IsInteger = true;
+            this.txtUnderKanagataWidth.Location = new System.Drawing.Point(12, 36);
+            this.txtUnderKanagataWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnderKanagataWidth.MaxLength = 7;
+            this.txtUnderKanagataWidth.Name = "txtUnderKanagataWidth";
+            this.txtUnderKanagataWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtUnderKanagataWidth.TabIndex = 4;
+            this.txtUnderKanagataWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUnderKanagataWidth.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtBolsterHeight
+            // 
+            this.txtBolsterHeight.AllowMinus = true;
+            this.txtBolsterHeight.AllowSpace = false;
+            this.txtBolsterHeight.AllowString = false;
+            this.txtBolsterHeight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtBolsterHeight.IsInteger = true;
+            this.txtBolsterHeight.Location = new System.Drawing.Point(25, 97);
+            this.txtBolsterHeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBolsterHeight.MaxLength = 7;
+            this.txtBolsterHeight.Name = "txtBolsterHeight";
+            this.txtBolsterHeight.Size = new System.Drawing.Size(142, 23);
+            this.txtBolsterHeight.TabIndex = 2;
+            this.txtBolsterHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBolsterHeight.Leave += new System.EventHandler(this.txt_Leave);
+            // 
+            // txtBolsterWidth
+            // 
+            this.txtBolsterWidth.AllowMinus = true;
+            this.txtBolsterWidth.AllowSpace = false;
+            this.txtBolsterWidth.AllowString = false;
+            this.txtBolsterWidth.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.txtBolsterWidth.IsInteger = true;
+            this.txtBolsterWidth.Location = new System.Drawing.Point(25, 56);
+            this.txtBolsterWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBolsterWidth.MaxLength = 7;
+            this.txtBolsterWidth.Name = "txtBolsterWidth";
+            this.txtBolsterWidth.Size = new System.Drawing.Size(142, 23);
+            this.txtBolsterWidth.TabIndex = 1;
+            this.txtBolsterWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBolsterWidth.Leave += new System.EventHandler(this.txt_Leave);
+            // 
             // ColumnChannel
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -357,7 +426,6 @@
             this.ColumnPointX.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnPointX.HeaderText = "TXT_X_POSITION";
             this.ColumnPointX.Name = "ColumnPointX";
-            this.ColumnPointX.ReadOnly = true;
             this.ColumnPointX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnPointY
@@ -366,7 +434,6 @@
             this.ColumnPointY.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnPointY.HeaderText = "TXT_Z_POSITION";
             this.ColumnPointY.Name = "ColumnPointY";
-            this.ColumnPointY.ReadOnly = true;
             this.ColumnPointY.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnSensorNumber
@@ -428,7 +495,7 @@
 
 		#endregion
 
-		private CustomDataGridView gridSetting;
+        private System.Windows.Forms.DataGridView gridSetting;
 		private System.Windows.Forms.Button btnUpdate;
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.GroupBox groupBox1;
@@ -453,6 +520,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSensorNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeasureDirection;
         private System.Windows.Forms.DataGridViewComboBoxColumn ColumnMeasureTarget;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
 
 	}
 }

@@ -30,6 +30,7 @@
         {
             this.lblDuringMeasurementMode = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHardTime = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMeasureCount = new System.Windows.Forms.Label();
             this.lblUnit = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
-            this.lblHardTime = new System.Windows.Forms.Label();
+            this.lblLastCommTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbtnExit)).BeginInit();
@@ -67,6 +68,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.lblHardTime);
+            this.panel1.Controls.Add(this.lblLastCommTime);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblMeasureCount);
             this.panel1.Controls.Add(this.lblUnit);
@@ -79,6 +81,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(998, 22);
             this.panel1.TabIndex = 1;
+            // 
+            // lblHardTime
+            // 
+            this.lblHardTime.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHardTime.Location = new System.Drawing.Point(251, 0);
+            this.lblHardTime.Name = "lblHardTime";
+            this.lblHardTime.Size = new System.Drawing.Size(71, 22);
+            this.lblHardTime.TabIndex = 7;
+            this.lblHardTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -115,7 +126,7 @@
             this.lblMode.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblMode.Location = new System.Drawing.Point(68, 0);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(145, 22);
+            this.lblMode.Size = new System.Drawing.Size(69, 22);
             this.lblMode.TabIndex = 3;
             this.lblMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -258,14 +269,15 @@
             this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // lblHardTime
+            // lblLastCommTime
             // 
-            this.lblHardTime.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHardTime.Location = new System.Drawing.Point(213, 0);
-            this.lblHardTime.Name = "lblHardTime";
-            this.lblHardTime.Size = new System.Drawing.Size(71, 22);
-            this.lblHardTime.TabIndex = 7;
-            this.lblHardTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLastCommTime.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblLastCommTime.Location = new System.Drawing.Point(137, 0);
+            this.lblLastCommTime.Name = "lblLastCommTime";
+            this.lblLastCommTime.Size = new System.Drawing.Size(114, 22);
+            this.lblLastCommTime.TabIndex = 8;
+            this.lblLastCommTime.Text = "TXT_LAST_COMM_TIME";
+            this.lblLastCommTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMeasureController
             // 
@@ -310,5 +322,6 @@
         private System.Windows.Forms.Label lblMeasureCount;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblHardTime;
+        private System.Windows.Forms.Label lblLastCommTime;
     }
 }

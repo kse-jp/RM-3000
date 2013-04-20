@@ -105,7 +105,27 @@ namespace RM_3000
         {
             this.canvasLocationSetting2.setDefaultSensors(settingList);
         }
+        /// <summary>
+        /// アクティブセンサの測定対象を変更する
+        /// </summary>
+        public void ChangeMeasureTargetOfActiveSensor()
+        {
+            var active = this.canvasLocationSetting2.ActiceSensor;
 
+            if (active == null)
+            {
+                return;
+            }
+
+            var oldMeasureTarget = active.measureTarget;
+            this.canvasLocationSetting2.changeMeasureTarget(active.chIndex);
+
+            if (oldMeasureTarget != active.measureTarget)
+            {
+                this.locationSetting.setMeasureTargetItems(active.chIndex, active.measureTarget);
+                this.showTargetSetting(active);
+            }
+        }
         public void showTargetSetting(CanvasSensor sensor)
         {
             frmLocationTargetSetting win = new frmLocationTargetSetting();
@@ -116,6 +136,22 @@ namespace RM_3000
             win.setData();
             win.ShowDialog(this);
 
+        }
+        public void showTargetSetting()
+        {
+            if (this.canvasLocationSetting2.ActiceSensor == null)
+            {
+                return;
+            }
+
+            using (var f = new frmLocationTargetSetting())
+            {
+                f.sensor = this.canvasLocationSetting2.ActiceSensor;
+                f.locationSetting = this.locationSetting;
+                f.locationSetting2 = this;
+                f.setData();
+                f.ShowDialog(this);
+            }
         }
 
         /// <summary>
@@ -157,18 +193,6 @@ namespace RM_3000
                         e.Cancel = true;
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                ShowErrorMessage(ex);
-            }
-        }
-
-        private void frmLocationSetting2_Shown(object sender, EventArgs e)
-        {
-            try
-            {
-                this.locationSetting.BringToFront();
             }
             catch (Exception ex)
             {

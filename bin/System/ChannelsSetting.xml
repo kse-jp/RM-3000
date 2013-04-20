@@ -5,8 +5,13 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>1</ChNo>
-      <ChKind>N</ChKind>
-      <Mode1_Trigger>MAIN</Mode1_Trigger>
+      <ChKind>B</ChKind>
+      <BoardSetting xsi:type="B_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Hold>0</Hold>
+        <Precision>false</Precision>
+      </BoardSetting>
+      <Mode1_Trigger>SELF</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
@@ -37,7 +42,11 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>5</ChNo>
-      <ChKind>N</ChKind>
+      <ChKind>R</ChKind>
+      <BoardSetting xsi:type="R_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Precision>true</Precision>
+      </BoardSetting>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
@@ -58,8 +67,13 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>8</ChNo>
-      <ChKind>N</ChKind>
-      <Mode1_Trigger>MAIN</Mode1_Trigger>
+      <ChKind>B</ChKind>
+      <BoardSetting xsi:type="B_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Hold>1</Hold>
+        <Precision>true</Precision>
+      </BoardSetting>
+      <Mode1_Trigger>SELF</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
@@ -72,14 +86,19 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>10</ChNo>
-      <ChKind>N</ChKind>
-      <Mode1_Trigger>MAIN</Mode1_Trigger>
+      <ChKind>B</ChKind>
+      <BoardSetting xsi:type="B_BoardSetting">
+        <IsUpdated>false</IsUpdated>
+        <Hold>1</Hold>
+        <Precision>true</Precision>
+      </BoardSetting>
+      <Mode1_Trigger>SELF</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
   </ChannelSettingList>
   <ChannelMeasSetting>
     <IsUpdated>true</IsUpdated>
-    <MainTrigger>-1</MainTrigger>
+    <MainTrigger>1</MainTrigger>
     <Mode2_Trigger>EXTERN</Mode2_Trigger>
     <Degree1>120</Degree1>
     <Degree2>240</Degree2>

@@ -11,6 +11,9 @@ using CommonLib;
 
 namespace RM_3000
 {
+    /// <summary>
+    /// センサー位置設置画面
+    /// </summary>
 	public partial class frmLocationSetting : Form
     {
         #region private member
@@ -393,12 +396,20 @@ namespace RM_3000
 
                         if (editPointX <= bolsterWidth && editPointY <= bolsterHeight)
                         {
-                            this.locationSetting2.setSensorPosition(e.RowIndex, editPointX, editPointY, false);
-                            this.settingList[e.RowIndex].x = editPointX;
-                            this.settingList[e.RowIndex].y = editPointY;
-                            if (this.sensorPositionSetting.PositionList[e.RowIndex].X != editPointX || this.sensorPositionSetting.PositionList[e.RowIndex].Z != editPointY)
+                            this.locationSetting2.setSensorPosition(e.RowIndex, editPointX, editPointY, true);
+
+                            // 以下は locationSetting2 が位置を自動調整後に再設定するので不要
+                            //this.settingList[e.RowIndex].x = editPointX;
+                            //this.settingList[e.RowIndex].y = editPointY;
+                            //if (this.sensorPositionSetting.PositionList[e.RowIndex].X != editPointX || this.sensorPositionSetting.PositionList[e.RowIndex].Z != editPointY)
+                            //{
+                            //    this.sensorPositionSetting.IsUpdated = true;
+                            //}
+
+                            // Bセンサーの場合は自動位置調整機能が無いので測定対象を変更する
+                            if (this.settingList[e.RowIndex].type.Equals("B"))
                             {
-                                this.sensorPositionSetting.IsUpdated = true;
+                                this.locationSetting2.ChangeMeasureTargetOfActiveSensor();
                             }
                         }
                         else
@@ -409,7 +420,6 @@ namespace RM_3000
                             {
                                 //センサの削除実行
                                 locationSetting2.removeSensor(e.RowIndex);
-
                             }
                         }
                     }
@@ -485,10 +495,10 @@ namespace RM_3000
 
                 if (isValid)
                 {
-                    if (this.TopMost)
-                    {
-                        this.TopMost = false;
-                    }
+                    //if (this.TopMost)
+                    //{
+                    //    this.TopMost = false;
+                    //}
                 }
                 else
                 {
@@ -548,7 +558,6 @@ namespace RM_3000
         {
             try
             {
-                bool isValid = true;
                 SettingItem item;
                 SettingStage settingStage = this.getSettingStage();
                 int underKanagataX = (int)System.Math.Floor(((double)settingStage.bolsterWidth - (double)settingStage.underKanagataWidth) / 2);
@@ -565,10 +574,7 @@ namespace RM_3000
                     if (item.sensorNumber > 0 && (row.Cells["ColumnMeasureTarget"].Value == null || row.Cells["ColumnMeasureTarget"].Value.ToString() == ""))
                     {
                         this.gridSetting.CurrentCell = row.Cells["ColumnMeasureTarget"];
-                        //this.showErrorMessage("測定対象を設定してください。");
                         ShowWarningMessage(AppResource.GetString("MSG_SET_MEASURE_OBJECT"));
-                        isValid = false;
-                        //break;
                         return;
                     }
                     else if (item.sensorNumber > 0)
@@ -584,8 +590,7 @@ namespace RM_3000
                     }
                 }
 
-                //if (isValid == true)
-                if (this.sensorPositionSetting.IsUpdated || isValid)
+                if (this.sensorPositionSetting.IsUpdated)
                 {
                     if (MessageBox.Show(AppResource.GetString("MSG_CONFIRM_SAVE"), this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
                     {
@@ -625,13 +630,20 @@ namespace RM_3000
                                 }
                             }
                         }
+
+                        // save to file
                         this.sensorPositionSetting.Serialize();
-                        //PutLog("Save SensorPositionSetting.xml");
-                        this.locationSetting2.isClosing = true;
-                        this.locationSetting2.Close();
-                        this.Close();
+                    }
+                    else
+                    {
+                        return;
                     }
                 }
+
+                // close 2 forms.
+                this.locationSetting2.isClosing = true;
+                this.locationSetting2.Close();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -861,8 +873,7 @@ namespace RM_3000
 		{
 			DataGridViewRow row = this.gridSetting.Rows[chIndex];
 
-            if (x != -1.0 && 
-                this.settingList[chIndex].x != (int)System.Math.Floor(x))
+            if (x != -1.0 && this.settingList[chIndex].x != (int)System.Math.Floor(x))
             {
                 row.Cells["ColumnPointX"].Value = System.Math.Floor(x);
                 this.settingList[chIndex].x = (int)System.Math.Floor(x);
@@ -884,8 +895,7 @@ namespace RM_3000
 		{
 			DataGridViewRow row = this.gridSetting.Rows[chIndex];
 
-            if (y != -1.0 && 
-                this.settingList[chIndex].y != (int)System.Math.Floor(y))
+            if (y != -1.0 && this.settingList[chIndex].y != (int)System.Math.Floor(y))
             {
                 row.Cells["ColumnPointY"].Value = System.Math.Floor(y);
                 this.settingList[chIndex].y = (int)System.Math.Floor(y);
@@ -941,9 +951,14 @@ namespace RM_3000
 		{
 			if (this.settingList[chIndex].type == "R")
 			{
-				DataGridViewRow row = this.gridSetting.Rows[chIndex];
-				this.settingList[chIndex].measureDirection = direction;
-				switch (direction)
+                if (this.settingList[chIndex].measureDirection != direction)
+                {
+                    this.settingList[chIndex].measureDirection = direction;
+                    this.sensorPositionSetting.IsUpdated = true;
+                }
+
+                var row = this.gridSetting.Rows[chIndex];
+                switch (direction)
 				{
 					case (0)://上
                         row.Cells["ColumnMeasureDirection"].Value = AppResource.GetString("TXT_SENSOR_UP");
@@ -962,9 +977,6 @@ namespace RM_3000
 						break;
 				}
 			}
-
-            this.sensorPositionSetting.IsUpdated = true;
-
 		}
         /// <summary>
         /// 
@@ -1013,7 +1025,6 @@ namespace RM_3000
 			}
 
             this.sensorPositionSetting.IsUpdated = true;
-
 		}
         /// <summary>
         /// 
@@ -1113,44 +1124,11 @@ namespace RM_3000
         public void win2_DoneInitailized(object sender, EventArgs e)
         {
             this.sensorPositionSetting.IsUpdated = false;
-
+            this.BringToFront();
         }
 
 		#endregion
 
     }
-    /// <summary>
-    /// 
-    /// </summary>
-	public class CustomDataGridView : DataGridView
-	{
-		//protected override bool ProcessDialogKey(Keys keyData)
-		//{
-		//    if (keyData == Keys.Enter)
-		//    {
-		//        this.CurrentCell = this[this.CurrentCellAddress.X, this.CurrentCellAddress.Y];
-		//    }
-		//    else
-		//    {
-		//        return base.ProcessDialogKey(keyData);
-		//    }
-
-		//    return false;
-		//}
-
-		//protected override bool ProcessDataGridViewKey(KeyEventArgs e)
-		//{
-		//    if (e.KeyCode == Keys.Enter)
-		//    {
-		//        this.ProcessDialogKey(e.KeyCode);
-		//    }
-		//    else
-		//    {
-		//        return base.ProcessDataGridViewKey(e);
-		//    }
-
-		//    return false;
-		//}
-	}
 
 }

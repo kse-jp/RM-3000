@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using System.Windows.Threading;
+using CommonLib;
 
 namespace RM_3000
 {
@@ -21,18 +22,23 @@ namespace RM_3000
     /// </summary>
     public partial class uctrlLocationSetting2 : UserControl
     {
-        const int FONT_SIZE = 12;
+        private const int FONT_SIZE = 12;
 
         public const int SENSOR_TYPE_B = 1;
         public const int SENSOR_TYPE_R = 2;
 
-        const int SENSOR_DIRECTION_TOP = 0;
-        const int SENSOR_DIRECTION_BOTTOM = 1;
-        const int SENSOR_DIRECTION_LEFT = 2;
-        const int SENSOR_DIRECTION_RIGHT = 3;
+        private const int SENSOR_DIRECTION_TOP = 0;
+        private const int SENSOR_DIRECTION_BOTTOM = 1;
+        private const int SENSOR_DIRECTION_LEFT = 2;
+        private const int SENSOR_DIRECTION_RIGHT = 3;
 
-        const int SENSOR_TARGET_UNDER_KANAGATA = 0;
-        const int SENSOR_TARGET_PRESS_KANAGATA = 1;
+        private const int SENSOR_TARGET_UNDER_KANAGATA = 0;
+        private const int SENSOR_TARGET_PRESS_KANAGATA = 1;
+
+        /// <summary>
+        /// センサー方向判定時のマージン
+        /// </summary>
+        private const int SENSOR_JUDGE_MARGIN = 5;
 
         public const int SENSOR_MEASURE_TARGET_PRESS_KANAGATA = 0;
         public const int SENSOR_MEASURE_TARGET_UNDER_KANAGATA = 1;
@@ -42,8 +48,12 @@ namespace RM_3000
         public frmLocationSetting2 locationSetting2;
         public bool IsDragging { get { return isDragging; } }
 
-        private string[] sensorNumberLabelItems = { "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩" };
 
+        /// <summary>
+        /// ログ
+        /// </summary>
+        private readonly LogManager log;
+        private string[] sensorNumberLabelItems = { "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩" };
         private int defaultWidth = 700;
         private int defaultHeight = 500;
 
@@ -73,9 +83,7 @@ namespace RM_3000
         private Canvas postRightBottom;
 
         private SettingStage settingStage;
-
         private List<SettingItem> settingItemList = new List<SettingItem>();
-
         private List<CanvasSensor> sensorList = new List<CanvasSensor>();
 
         //ドラッグ&ドロップ関係
@@ -96,17 +104,24 @@ namespace RM_3000
         public event EventHandler DoneInitailized = delegate { };
 
         /// <summary>
-        /// Constructor
+        /// アクティブセンサ
         /// </summary>
-        public uctrlLocationSetting2()
+        public CanvasSensor ActiceSensor { get { return activeSensorCanvas; } }
+
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="log">ログ</param>
+        public uctrlLocationSetting2(LogManager log)
         {
             InitializeComponent();
+
+            this.log = log;
 
             for (int i = 0; i < 10; i++)
             {
                 this.sensorList.Add(null);
             }
-
         }
 
         #region Public Method
@@ -380,16 +395,16 @@ namespace RM_3000
                     switch (this.activeSensorCanvas.direction)
                     {
                         case (SENSOR_DIRECTION_BOTTOM):
-                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value - 16), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value - 31), setGridSetting);
+                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value - 16), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value - 31), setGridSetting, false);
                             break;
                         case (SENSOR_DIRECTION_TOP):
-                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value - 16), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value), setGridSetting);
+                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value - 16), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value), setGridSetting, false);
                             break;
                         case (SENSOR_DIRECTION_LEFT):
-                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value - 16), setGridSetting);
+                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value - 16), setGridSetting, false);
                             break;
                         case (SENSOR_DIRECTION_RIGHT):
-                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value - 31), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value - 16), setGridSetting);
+                            this.moveSensor(System.Math.Floor(pointOfBolster.X + toX * this.rawZoomLevel * this.sliderZoom.Value - 31), System.Math.Floor(pointOfBolster.Y + toY * this.rawZoomLevel * this.sliderZoom.Value - 16), setGridSetting, false);
                             break;
                     }
 
@@ -398,6 +413,7 @@ namespace RM_3000
             }
             catch (Exception ex)
             {
+                ShowErrorMessage(ex);
             }
         }
         /// <summary>
@@ -482,7 +498,7 @@ namespace RM_3000
                         sensor.UpdateLayout();
 
 
-                        this.setSensorPosition(i, x, y, true);
+                        this.setSensorPosition(i, x, y, true);  // ここでRセンサーの向きが変わった！！
 
                         this.changeMeasureTarget(i);
 
@@ -520,6 +536,7 @@ namespace RM_3000
                     Point pointSensorAtBase = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.cvsBase);
 
                     this.cvsRoot.Children.Remove(this.activeSensorCanvas);
+                    this.cvsBase.Children.Remove(this.activeSensorCanvas);
                     Canvas.SetLeft(this.activeSensorCanvas, pointSensorAtBase.X);
                     Canvas.SetTop(this.activeSensorCanvas, pointSensorAtBase.Y);
                     ((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);
@@ -538,6 +555,16 @@ namespace RM_3000
         #endregion
 
         #region Private Method
+        /// <summary>
+        /// Error Message
+        /// </summary>
+        /// <param name="ex"></param>
+        private void ShowErrorMessage(Exception ex)
+        {
+            var message = string.Format("{0}\n{1}", ex.Message, ex.StackTrace);
+            if (this.log != null) this.log.PutErrorLog(message);
+            MessageBox.Show(message, this.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+        }
 
         #region Bセンサ描画関連
         /// <summary>
@@ -1117,13 +1144,11 @@ namespace RM_3000
                     Canvas.SetTop(ellipse2, this.defaultInnerPostMargin * this.sliderZoom.Value);
                     cvs.Children.Add(ellipse2);
                 }
-
             }
             catch (Exception ex)
             {
-
+                ShowErrorMessage(ex);
             }
-
         }
 
         /// <summary>
@@ -1247,7 +1272,8 @@ namespace RM_3000
         /// <param name="toX"></param>
         /// <param name="toY"></param>
         /// <param name="setGridSetting"></param>
-        private void moveSensor(double toX, double toY, bool setGridSetting = true)
+        /// <param name="autoAdjust">Rセンサー自動位置調整</param>
+        private void moveSensor(double toX, double toY, bool setGridSetting = true, bool autoAdjust = true)
         {
             int pointX;
             int pointY;
@@ -1287,21 +1313,23 @@ namespace RM_3000
                     }
                 }
             }
-            //Rセンサ移動時
+            //
+            // Rセンサ移動時
+            //
             else if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_R)
             {
-                #region Rセンサ移動時
-
-                bool isMoveX = true;
-                bool isMoveY = true;
+                var isMoveX = true;
+                var isMoveY = true;
                 double x = 0;
                 double y = 0;
+
+                #region Rセンサ自動位置調整
                 //金型の座標(金型の左上角)
                 Point pointOfUnderKanagata;
                 //プレス金型の座標(プレス金型の左上角)
                 Point pointOfPressKanagata;
 
-                if (this.activeSensorCanvas.isNew == true)
+                if (this.activeSensorCanvas.isNew)
                 {
                     pointOfUnderKanagata = this.cvsUnderKanagata.TranslatePoint(new Point(0, 0), this.cvsRoot);
                     pointOfPressKanagata = this.cvsPressKanagata.TranslatePoint(new Point(0, 0), this.cvsRoot);
@@ -1312,7 +1340,7 @@ namespace RM_3000
                     pointOfPressKanagata = this.cvsPressKanagata.TranslatePoint(new Point(0, 0), this.cvsBase);
                 }
 
-
+                // ターゲットの枠外判定
                 if (this.activeSensorCanvas.target == SENSOR_TARGET_UNDER_KANAGATA)
                 {
                     //今の操作対象が金型で、プレス金型の枠内に収まっている場合
@@ -1339,37 +1367,40 @@ namespace RM_3000
                 //Console.WriteLine(this.activeSensorCanvas.target);
                 if (this.activeSensorCanvas.target == SENSOR_TARGET_UNDER_KANAGATA)
                 {
-                    if (toX >= pointOfUnderKanagata.X + this.cvsUnderKanagata.ActualWidth &&
-                        toY >= pointOfUnderKanagata.Y &&
-                        toY <= pointOfUnderKanagata.Y + this.cvsUnderKanagata.ActualHeight)
+                    if (autoAdjust)
                     {
-                        //金型の右側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_LEFT;
-                        this.activeSensorR(this.activeSensorCanvas);
-                    }
-                    else if (toX <= pointOfUnderKanagata.X &&
-                        toY >= pointOfUnderKanagata.Y &&
-                        toY <= pointOfUnderKanagata.Y + this.cvsUnderKanagata.ActualHeight)
-                    {
-                        //金型の左側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_RIGHT;
-                        this.activeSensorR(this.activeSensorCanvas);
-                    }
-                    else if (toY <= pointOfUnderKanagata.Y &&
-                        toX >= pointOfUnderKanagata.X &&
-                        toX <= pointOfUnderKanagata.X + this.cvsUnderKanagata.ActualWidth)
-                    {
-                        //金型の上側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_BOTTOM;
-                        this.activeSensorR(this.activeSensorCanvas);
-                    }
-                    else if (toY >= pointOfUnderKanagata.Y + this.cvsUnderKanagata.ActualHeight &&
-                        toX >= pointOfUnderKanagata.X &&
-                        toX <= pointOfUnderKanagata.X + this.cvsUnderKanagata.ActualWidth)
-                    {
-                        //金型の下側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_TOP;
-                        this.activeSensorR(this.activeSensorCanvas);
+                        if (toX >= pointOfUnderKanagata.X + this.cvsUnderKanagata.ActualWidth &&
+                            toY >= pointOfUnderKanagata.Y &&
+                            toY <= pointOfUnderKanagata.Y + this.cvsUnderKanagata.ActualHeight)
+                        {
+                            //金型の右側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_LEFT;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
+                        else if (toX <= pointOfUnderKanagata.X &&
+                            toY >= pointOfUnderKanagata.Y &&
+                            toY <= pointOfUnderKanagata.Y + this.cvsUnderKanagata.ActualHeight)
+                        {
+                            //金型の左側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_RIGHT;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
+                        else if (toY <= pointOfUnderKanagata.Y &&
+                            toX >= pointOfUnderKanagata.X &&
+                            toX <= pointOfUnderKanagata.X + this.cvsUnderKanagata.ActualWidth)
+                        {
+                            //金型の上側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_BOTTOM;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
+                        else if (toY >= pointOfUnderKanagata.Y + this.cvsUnderKanagata.ActualHeight &&
+                            toX >= pointOfUnderKanagata.X &&
+                            toX <= pointOfUnderKanagata.X + this.cvsUnderKanagata.ActualWidth)
+                        {
+                            //金型の下側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_TOP;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
                     }
 
                     switch (this.activeSensorCanvas.direction)
@@ -1451,37 +1482,40 @@ namespace RM_3000
                 }
                 else if (this.activeSensorCanvas.target == SENSOR_TARGET_PRESS_KANAGATA)
                 {
-                    if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth &&
-                        toY >= pointOfPressKanagata.Y &&
-                        toY <= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight)
+                    if (autoAdjust)
                     {
-                        //プレス金型の右側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_LEFT;
-                        this.activeSensorR(this.activeSensorCanvas);
-                    }
-                    else if (toX <= pointOfPressKanagata.X &&
-                        toY >= pointOfPressKanagata.Y &&
-                        toY <= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight)
-                    {
-                        //プレス金型の左側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_RIGHT;
-                        this.activeSensorR(this.activeSensorCanvas);
-                    }
-                    else if (toY <= pointOfPressKanagata.Y &&
-                        toX >= pointOfPressKanagata.X &&
-                        toX <= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth)
-                    {
-                        //プレス金型の上側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_BOTTOM;
-                        this.activeSensorR(this.activeSensorCanvas);
-                    }
-                    else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight &&
-                        toX >= pointOfPressKanagata.X &&
-                        toX <= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth)
-                    {
-                        //プレス金型の下側にいる場合
-                        this.activeSensorCanvas.direction = SENSOR_DIRECTION_TOP;
-                        this.activeSensorR(this.activeSensorCanvas);
+                        if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - SENSOR_JUDGE_MARGIN
+                            && toY >= pointOfPressKanagata.Y
+                            && toY <= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight + SENSOR_JUDGE_MARGIN)
+                        {
+                            //プレス金型の右側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_LEFT;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
+                        else if (toX <= pointOfPressKanagata.X
+                            && toY >= pointOfPressKanagata.Y
+                            && toY <= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight + SENSOR_JUDGE_MARGIN)
+                        {
+                            //プレス金型の左側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_RIGHT;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
+                        else if (toY <= pointOfPressKanagata.Y
+                            && toX >= pointOfPressKanagata.X
+                            && toX <= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth + SENSOR_JUDGE_MARGIN)
+                        {
+                            //プレス金型の上側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_BOTTOM;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
+                        else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - SENSOR_JUDGE_MARGIN
+                            && toX >= pointOfPressKanagata.X
+                            && toX <= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth + SENSOR_JUDGE_MARGIN)
+                        {
+                            //プレス金型の下側にいる場合
+                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_TOP;
+                            this.activeSensorR(this.activeSensorCanvas);
+                        }
                     }
 
                     switch (this.activeSensorCanvas.direction)
@@ -1582,9 +1616,6 @@ namespace RM_3000
                 {
                     pointOfBolster = this.cvsBolster.TranslatePoint(new Point(0, 0), this.cvsBase);
                 }
-
-                //Canvas.SetLeft(this.activeSensorCanvas, x);
-                //Canvas.SetTop(this.activeSensorCanvas, y);
 
                 int settingX;
                 int settingY;
@@ -1742,7 +1773,7 @@ namespace RM_3000
         /// 測定対象の変更イベント
         /// </summary>
         /// <param name="chIndex"></param>
-        private void changeMeasureTarget(int chIndex)
+        public void changeMeasureTarget(int chIndex)
         {
             //金型の左上の実際の座標
             int underKanagataX = (int)System.Math.Floor(((double)this.settingStage.bolsterWidth - (double)this.settingStage.underKanagataWidth) / 2);
@@ -1876,7 +1907,7 @@ namespace RM_3000
 
             if (this.locationSetting.IsCurrentCellInEditMode)
             {
-                this.locationSetting.TopMost = true;
+                this.locationSetting.BringToFront();
                 return;
             }
 
@@ -1913,7 +1944,7 @@ namespace RM_3000
 
             if (this.locationSetting.IsCurrentCellInEditMode)
             {
-                this.locationSetting.TopMost = true;
+                this.locationSetting.BringToFront();
                 return;
             }
 
@@ -2042,7 +2073,7 @@ namespace RM_3000
 
             // センサー移動
             this.moveSensor(mousePoint.X, mousePoint.Y);
-            
+
             // キャンバス範囲境界付近にドラッグされた場合
             if (this.activeSensorCanvas.isNew)
             {

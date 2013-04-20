@@ -1395,4 +1395,12 @@ Please try restart agin.</comment>
     <value>測定対象設定</value>
     <comment>測定対象設定</comment>
   </data>
+  <data name="TXT_LAST_COMM_TIME" xml:space="preserve">
+    <value>最新通信时间</value>
+    <comment>最新通信时间</comment>
+  </data>
+  <data name="MSG_TAG_CALC_SELECTED_INCALC" xml:space="preserve">
+    <value>演算式に演算項目を指定できません。</value>
+    <comment>No Tag selected.</comment>
+  </data>
 </root>

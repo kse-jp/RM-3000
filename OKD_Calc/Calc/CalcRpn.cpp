@@ -941,7 +941,8 @@ string  CalcRpn::errMsg( void )
     string  err ;
     char    temp[1024] ;
 
-    sprintf( temp, "#%04d %s %s", eRpn.code, _errMsg( eRpn.code ), eRpn.term.c_str() ) ;
+    //sprintf( temp, "#%04d %s %s", eRpn.code, _errMsg( eRpn.code ), eRpn.term.c_str() ) ;
+    sprintf( temp, "#%04d %s", eRpn.code, eRpn.term.c_str() ) ;
 
     return( err = temp ) ;
 }

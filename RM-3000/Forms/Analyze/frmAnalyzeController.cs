@@ -135,7 +135,10 @@ namespace RM_3000.Forms.Parts
         private bool isWorkerRestart = false;
 
         private Thread threadCreateAnimation = null;
-
+        private AutoResetEvent threadEvent = new AutoResetEvent(false);
+        private AutoResetEvent threadLoopEvent = new AutoResetEvent(false);
+        private AutoResetEvent threadExitEvent = new AutoResetEvent(false);
+        private readonly SynchronizationContext syncContext;
         /// <summary>
         /// Constructor
         /// </summary>
@@ -158,6 +161,7 @@ namespace RM_3000.Forms.Parts
             this.AnalyzeData = data;
 
             ContentsLoad();
+            syncContext = AsyncOperationManager.SynchronizationContext;
         }
 
         /// <summary>
@@ -388,9 +392,18 @@ namespace RM_3000.Forms.Parts
             // 自動アニメーション用スレッド起動 
             EnabledButton(false);          
             //bw3Dgraph.RunWorkerAsync();
+
+            if (threadCreateAnimation != null)
+            {
+                threadCreateAnimation = null;
+            }
             threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
             threadCreateAnimation.Start();
-            isStartAnimation = true;
+
+            this.isStartAnimation = true;
+            threadEvent.Set();
+            //this.trackMain.Value++;
+            
         }
 
         /// <summary>
@@ -400,7 +413,11 @@ namespace RM_3000.Forms.Parts
         {
             try
             {
-                threadCreateAnimation.Abort();
+                if (this.threadCreateAnimation != null)
+                {
+                    this.threadExitEvent.Set();
+                }
+                //threadCreateAnimation.Abort();
                 // 自動アニメーション用スレッド停止
                 for (int i = 0; i < this.graph3DList.Count; i++)
                 {
@@ -828,6 +845,17 @@ namespace RM_3000.Forms.Parts
                     }
                 }
 
+                this.threadExitEvent.Set();
+                if (this.threadCreateAnimation != null)
+                {
+                    this.threadCreateAnimation.Join(1000);
+                    this.threadCreateAnimation.Abort();
+                }
+                this.threadCreateAnimation = null;
+
+                this.threadEvent.Dispose();
+                this.threadLoopEvent.Dispose();
+                this.threadExitEvent.Dispose();
             }
             catch (Exception ex)
             {
@@ -1128,6 +1156,7 @@ namespace RM_3000.Forms.Parts
                 Application.DoEvents();
             }
         }
+
         /// <summary>
         /// モード2用ショット番号スライダーイベント
         /// </summary>
@@ -1150,18 +1179,21 @@ namespace RM_3000.Forms.Parts
                         Clear3DGraphData();
                     }
                     SetDataToGraph3D();
-                   
 
-                    threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
-                    threadCreateAnimation.Start();
-
-                    for (int i = 0; i < this.graph3DList.Count; i++)
-                    {
-                        if (this.graph3DList[i] != null && isSensorData3D)
-                        {
-                            this.graph3DList[i].Refresh();
-                        }
-                    }
+                    this.threadEvent.Set();
+                    //threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
+                    //threadCreateAnimation.Start();
+                    ////Thread t = new Thread(new ThreadStart(Thread_CreateAnimation));
+                    ////t.Start();
+                    //this.threadEvent.WaitOne(2000);
+                    //for (int i = 0; i < this.graph3DList.Count; i++)
+                    //{
+                    //    if (this.graph3DList[i] != null && isSensorData3D)
+                    //    {
+                    //        this.graph3DList[i].Refresh();
+                    //    }
+                    //}
+                    
                     //if (!this.bw3Dgraph.IsBusy)
                     //{
                     //    this.bw3Dgraph.RunWorkerAsync();
@@ -1572,7 +1604,36 @@ namespace RM_3000.Forms.Parts
             //    bw3Dgraph.RunWorkerAsync();
             //}
         }
+        private void UpdateGraph(object obj)
+        {
+            for (int i = 0; i < this.graph3DList.Count; i++)
+            {
+                if (this.graph3DList[i] != null && isSensorData3D)
+                {
+                    this.graph3DList[i].CreateAnimation();
+                }
+            }
 
+            //All 3D create then start
+            if (this.isStartAnimation)
+            {
+                for (int i = 0; i < this.graph3DList.Count; i++)
+                {
+                    if (this.graph3DList[i] != null && isSensorData3D)
+                    {
+                        this.graph3DList[i].StartAnimation();
+                    }
+                }
+            }
+
+            //for (int i = 0; i < this.graph3DList.Count; i++)
+            //{
+            //    if (this.graph3DList[i] != null && isSensorData3D)
+            //    {
+            //        this.graph3DList[i].Refresh();
+            //    }
+            //}
+        }
         /// <summary>
         /// backgound worker 3D Graph Animation
         /// </summary>
@@ -1581,34 +1642,77 @@ namespace RM_3000.Forms.Parts
         private void Thread_CreateAnimation()
         {
             try
-            {              
-
-                //Create Animation Loop
-                for (int i = 0; i < this.graph3DList.Count; i++)
+            {
+                WaitHandle[] handles = new WaitHandle[] { this.threadEvent, this.threadExitEvent };
+                while (WaitHandle.WaitAny(handles) == 0)
                 {
-                    if (this.graph3DList[i] != null && isSensorData3D)
-                    {
-                        this.graph3DList[i].CreateAnimation();
-                    }
-                }
-
-                
-                //All 3D create then start
-                if (this.isStartAnimation)
-                {
+                    //syncContext.Post(UpdateGraph, null);
+                    //Create Animation Loop
                     for (int i = 0; i < this.graph3DList.Count; i++)
                     {
                         if (this.graph3DList[i] != null && isSensorData3D)
-                        {                            
-                            this.graph3DList[i].StartAnimation();                            
+                        {
+                            this.graph3DList[i].CreateAnimation();
                         }
                     }
-                }              
+
+                    //All 3D create then start
+                    if (this.isStartAnimation)
+                    {
+                        for (int i = 0; i < this.graph3DList.Count; i++)
+                        {
+                            if (this.graph3DList[i] != null && isSensorData3D)
+                            {
+                                this.graph3DList[i].StartAnimation();
+                            }
+                        }
+                    }
+                    //for (int i = 0; i < this.graph3DList.Count; i++)
+                    //{
+                    //    if (this.graph3DList[i] != null && isSensorData3D)
+                    //    {
+                    //        this.graph3DList[i].Refresh();
+                    //    }
+                    //}
+                    this.threadLoopEvent.WaitOne(500);
+                }
+                
+                //syncContext.Post(UpdateGraph, null);
+                ////Create Animation Loop
+                //for (int i = 0; i < this.graph3DList.Count; i++)
+                //{
+                //    if (this.graph3DList[i] != null && isSensorData3D)
+                //    {
+                //        this.graph3DList[i].CreateAnimation();
+                //    }
+                //}
+
+
+                ////All 3D create then start
+                //if (this.isStartAnimation)
+                //{
+                //    for (int i = 0; i < this.graph3DList.Count; i++)
+                //    {
+                //        if (this.graph3DList[i] != null && isSensorData3D)
+                //        {
+                //            this.graph3DList[i].StartAnimation();
+                //        }
+                //    }
+                //}
+            }
+            catch (ThreadAbortException ab)
+            {
+                ab.ToString();
+                return;
             }
             catch (Exception ex)
             {
                 ShowErrorMessage(ex);
             }
+            //finally
+            //{
+            //    this.threadEvent.Set();
+            //}
         }
 
         /// <summary>
@@ -1626,32 +1730,37 @@ namespace RM_3000.Forms.Parts
                         if (trackMain.Value != trackMain.Maximum)
                         {
                             this.Clear3DGraphData();
+                            this.threadLoopEvent.Set();
                             trackMain.Value++;
                         }
                         else if (this.isLoop3DAllShot)
                         {
                             this.Clear3DGraphData();
+                            this.threadLoopEvent.Set();
                             trackMain.Value = 0;
                         }
+                        
                     }
                     else
                     {
                         Clear3DGraphData();
-                        SetDataToGraph3D();                      
-                        
-                        threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
-                        threadCreateAnimation.Start();
-                        //if (!this.bw3Dgraph.IsBusy)
-                        //{
-                        //    this.bw3Dgraph.RunWorkerAsync();
-                        //}
-                        //else
-                        //{
-                        //    isWorkerRestart = true;
-                        //}
+                        SetDataToGraph3D();
+                        this.threadLoopEvent.Set();
+                        this.threadEvent.Set();
+
+                        //threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
+                        //threadCreateAnimation.Start();
+                        ////if (!this.bw3Dgraph.IsBusy)
+                        ////{
+                        ////    this.bw3Dgraph.RunWorkerAsync();
+                        ////}
+                        ////else
+                        ////{
+                        ////    isWorkerRestart = true;
+                        ////}
                     }
                 }
-
+                
             }
             catch (Exception ex)
             {

@@ -11,6 +11,9 @@ using CommonLib;
 
 namespace RM_3000
 {
+    /// <summary>
+    /// センサー位置設置画面
+    /// </summary>
 	public partial class frmLocationSetting : Form
     {
         #region private member
@@ -393,12 +396,20 @@ namespace RM_3000
 
                         if (editPointX <= bolsterWidth && editPointY <= bolsterHeight)
                         {
-                            this.locationSetting2.setSensorPosition(e.RowIndex, editPointX, editPointY, false);
-                            this.settingList[e.RowIndex].x = editPointX;
-                            this.settingList[e.RowIndex].y = editPointY;
-                            if (this.sensorPositionSetting.PositionList[e.RowIndex].X != editPointX || this.sensorPositionSetting.PositionList[e.RowIndex].Z != editPointY)
+                            this.locationSetting2.setSensorPosition(e.RowIndex, editPointX, editPointY, true);
+
+                            // 以下は locationSetting2 が位置を自動調整後に再設定するので不要
+                            //this.settingList[e.RowIndex].x = editPointX;
+                            //this.settingList[e.RowIndex].y = editPointY;
+                            //if (this.sensorPositionSetting.PositionList[e.RowIndex].X != editPointX || this.sensorPositionSetting.PositionList[e.RowIndex].Z != editPointY)
+                            //{
+                            //    this.sensorPositionSetting.IsUpdated = true;
+                            //}
+
+                            // Bセンサーの場合は自動位置調整機能が無いので測定対象を変更する
+                            if (this.settingList[e.RowIndex].type.Equals("B"))
                             {
-                                this.sensorPositionSetting.IsUpdated = true;
+                                this.locationSetting2.ChangeMeasureTargetOfActiveSensor();
                             }
                         }
                         else
@@ -409,7 +420,6 @@ namespace RM_3000
                             {
                                 //センサの削除実行
                                 locationSetting2.removeSensor(e.RowIndex);
-
                             }
                         }
                     }
@@ -1120,38 +1130,5 @@ namespace RM_3000
 		#endregion
 
     }
-    /// <summary>
-    /// 
-    /// </summary>
-	public class CustomDataGridView : DataGridView
-	{
-		//protected override bool ProcessDialogKey(Keys keyData)
-		//{
-		//    if (keyData == Keys.Enter)
-		//    {
-		//        this.CurrentCell = this[this.CurrentCellAddress.X, this.CurrentCellAddress.Y];
-		//    }
-		//    else
-		//    {
-		//        return base.ProcessDialogKey(keyData);
-		//    }
-
-		//    return false;
-		//}
-
-		//protected override bool ProcessDataGridViewKey(KeyEventArgs e)
-		//{
-		//    if (e.KeyCode == Keys.Enter)
-		//    {
-		//        this.ProcessDialogKey(e.KeyCode);
-		//    }
-		//    else
-		//    {
-		//        return base.ProcessDataGridViewKey(e);
-		//    }
-
-		//    return false;
-		//}
-	}
 
 }

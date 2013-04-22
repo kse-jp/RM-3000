@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MeasureSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <IsUpdated>false</IsUpdated>
-  <Mode>2</Mode>
+  <Mode>1</Mode>
   <MeasTagList>
     <int>1</int>
     <int>-1</int>
+    <int>3</int>
+    <int>4</int>
     <int>-1</int>
     <int>-1</int>
     <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
-    <int>-1</int>
+    <int>11</int>
+    <int>13</int>
     <int>-1</int>
   </MeasTagList>
   <GraphSettingList>
@@ -19,7 +19,7 @@
       <IsUpdated>false</IsUpdated>
       <Title>Graph1</Title>
       <CenterScale>0</CenterScale>
-      <Scale>10</Scale>
+      <Scale>200</Scale>
       <MinimumX_Mode1>0</MinimumX_Mode1>
       <MinimumX_Mode2>120</MinimumX_Mode2>
       <MinimumX_Mode3>0</MinimumX_Mode3>
@@ -35,14 +35,32 @@
       <MaxY_Mode1>10000</MaxY_Mode1>
       <MaxY_Mode2>10000</MaxY_Mode2>
       <MaxY_Mode3>10000</MaxY_Mode3>
-      <DistanceY_Mode1>1</DistanceY_Mode1>
+      <DistanceY_Mode1>100</DistanceY_Mode1>
       <DistanceY_Mode2>1000</DistanceY_Mode2>
       <DistanceY_Mode3>1000</DistanceY_Mode3>
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
           <GraphTagNo>1</GraphTagNo>
-          <Color>Red</Color>
+          <Color>Cyan</Color>
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>3</GraphTagNo>
+          <Color>Purple</Color>
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>4</GraphTagNo>
+          <Color>Yellow</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
@@ -59,44 +77,26 @@
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
-          <Color />
+          <GraphTagNo>11</GraphTagNo>
+          <Color>Cyan</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
-          <Color />
+          <GraphTagNo>12</GraphTagNo>
+          <Color>Green</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
-          <Color />
+          <GraphTagNo>13</GraphTagNo>
+          <Color>GreenYellow</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
-          <Color />
-          <BaseScale>false</BaseScale>
-        </GraphTag>
-        <GraphTag>
-          <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
-          <Color />
-          <BaseScale>false</BaseScale>
-        </GraphTag>
-        <GraphTag>
-          <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
-          <Color />
-          <BaseScale>false</BaseScale>
-        </GraphTag>
-        <GraphTag>
-          <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
-          <Color />
+          <GraphTagNo>14</GraphTagNo>
+          <Color>Orange</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
       </GraphTagList>
@@ -128,7 +128,7 @@
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>6</GraphTagNo>
+          <GraphTagNo>-1</GraphTagNo>
           <Color>Red</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
@@ -215,7 +215,7 @@
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>3</GraphTagNo>
+          <GraphTagNo>-1</GraphTagNo>
           <Color>Red</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
@@ -302,7 +302,7 @@
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>4</GraphTagNo>
+          <GraphTagNo>-1</GraphTagNo>
           <Color>Red</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
@@ -389,7 +389,7 @@
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>9</GraphTagNo>
+          <GraphTagNo>-1</GraphTagNo>
           <Color>Red</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
@@ -451,19 +451,19 @@
       <NumbeOfShotMode2>1</NumbeOfShotMode2>
     </GraphSetting>
   </GraphSettingList>
-  <SamplingCountLimit>1</SamplingCountLimit>
+  <SamplingCountLimit>0</SamplingCountLimit>
   <SamplingTiming_Mode2>100</SamplingTiming_Mode2>
   <SamplingTiming_Mode3>500000</SamplingTiming_Mode3>
   <MeasureTime_Mode2>0</MeasureTime_Mode2>
   <MeasureTime_Mode3>0</MeasureTime_Mode3>
   <Mode1_MeasCondition>
     <IsUpdated>false</IsUpdated>
-    <MeasConditionType>MEAS_AVG_SHOTS</MeasConditionType>
+    <MeasConditionType>MEAS_INT_TIME2SHOTS</MeasConditionType>
     <Interval_count>1</Interval_count>
     <Average_count>1</Average_count>
-    <Inverval_time2shot_time>1</Inverval_time2shot_time>
-    <Inverval_time2shot_shots>1</Inverval_time2shot_shots>
-    <Inverval_time2time_meastime>1</Inverval_time2time_meastime>
-    <Inverval_time2time_stoptime>1</Inverval_time2time_stoptime>
+    <Inverval_time2shot_time>2</Inverval_time2shot_time>
+    <Inverval_time2shot_shots>1200</Inverval_time2shot_shots>
+    <Inverval_time2time_meastime>2</Inverval_time2time_meastime>
+    <Inverval_time2time_stoptime>2</Inverval_time2time_stoptime>
   </Mode1_MeasCondition>
 </MeasureSetting>

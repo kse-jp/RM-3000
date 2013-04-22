@@ -196,47 +196,66 @@ namespace GraphLib
 
         public override string ToString()
         {
-            string axisposx = "null";
-            string axisposy = "null";
-            string count = "0";
-            if (this.AxisPositionX != null)
-                axisposx = this.AxisPositionX.ToString();
-            if (this.AxisPositionY != null)
-                axisposy = this.AxisPositionY.ToString();
+            try
+            {
+                string axisposx = "null";
+                string axisposy = "null";
+                string axisnamex = "null";
+                string axisnamey = "null";
+                string graphname = "null";
+                string count = "0";
+                if (this.AxisPositionX != null)
+                    axisposx = this.AxisPositionX.ToString();
+                if (this.AxisPositionY != null)
+                    axisposy = this.AxisPositionY.ToString();
 
-            if (this.ChannelInfos != null)
-                count = this.ChannelInfos.Count.ToString();
+                if (this.ChannelInfos != null)
+                    count = this.ChannelInfos.Count.ToString();
 
+                if (this.AxisNameX != null)
+                    axisnamex = this.AxisNameX.ToString();
 
-            string str = this.AxisNameX.ToString() + "," +
-            this.AxisNameY.ToString() + "," +
-            axisposx + "," +
-            axisposx + "," +
-            count + "," +
-            this.DecimalPointX.ToString() + "," +
-            this.DecimalPointY.ToString() + "," +
-            this.DistanceX.ToString() + "," +
-            this.DistanceY.ToString() + "," +
-            this.GraphMode.ToString() + "," +
-            this.GraphName.ToString() + "," +
-            this.GraphNo.ToString() + "," +
-            this.IncrementX.ToString() + "," +
-            this.IsEnabled.ToString() + "," +
-            this.IsLineGraph.ToString() + "," +
-            this.MaxChannel.ToString() + "," +
-            this.MaxDataSizeX.ToString() + "," +
-            this.MaxValueX.ToString() + "," +
-            this.MaxValueY.ToString() + "," +
-            this.MeasureButtonShow.ToString() + "," +
-            this.MinMaxRangeX.ToString() + "," +
-            this.MinValueX.ToString() + "," +
-            this.MinValueY.ToString() + "," +
-            this.PlotCountX.ToString() + "," +
-            this.ShotCount.ToString() + "," +
-            this.ShowDateTimeAxisX.ToString() + "," +
-            this.ShowValueLabelX.ToString() + "," +
-            this.ShowValueLabelY.ToString() + ",";
-            return str;
+                if (this.AxisNameY != null)
+                    axisnamey = this.AxisNameY.ToString();
+
+                if (this.GraphName != null)
+                    axisnamey = this.AxisNameY.ToString();
+
+                string str = axisnamex + "," +
+                axisnamey + "," +
+                axisposx + "," +
+                axisposx + "," +
+                count + "," +
+                this.DecimalPointX.ToString() + "," +
+                this.DecimalPointY.ToString() + "," +
+                this.DistanceX.ToString() + "," +
+                this.DistanceY.ToString() + "," +
+                this.GraphMode.ToString() + "," +
+                graphname + "," +
+                this.GraphNo.ToString() + "," +
+                this.IncrementX.ToString() + "," +
+                this.IsEnabled.ToString() + "," +
+                this.IsLineGraph.ToString() + "," +
+                this.MaxChannel.ToString() + "," +
+                this.MaxDataSizeX.ToString() + "," +
+                this.MaxValueX.ToString() + "," +
+                this.MaxValueY.ToString() + "," +
+                this.MeasureButtonShow.ToString() + "," +
+                this.MinMaxRangeX.ToString() + "," +
+                this.MinValueX.ToString() + "," +
+                this.MinValueY.ToString() + "," +
+                this.PlotCountX.ToString() + "," +
+                this.ShotCount.ToString() + "," +
+                this.ShowDateTimeAxisX.ToString() + "," +
+                this.ShowValueLabelX.ToString() + "," +
+                this.ShowValueLabelY.ToString() + ",";
+                return str;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                return "False";
+            }
         }
 
         /// <summary>
@@ -1209,7 +1228,7 @@ namespace GraphLib
                 _IsAxisYZoom = false;
 
                 bool isequal = _GraphInfo.IsEqual(graphinfo);
-                _Log4NetClass.ShowInfo("isequal", isequal.ToString());
+                _Log4NetClass.ShowInfo("isequal", isequal.ToString());                
                 _Log4NetClass.ShowInfo("graphinfo", graphinfo.ToString());
 
                 _GraphInfo = graphinfo;
@@ -1350,7 +1369,7 @@ namespace GraphLib
                     _GraphController.UpdatePlotData();
                     this.RefreshGraph();
 
-                    _Log4NetClass.ShowInfo("RefreshGraph", "UpdateGraphInfo");
+                    //_Log4NetClass.ShowInfo("RefreshGraph", "UpdateGraphInfo");
                 }
 
 
@@ -1377,7 +1396,7 @@ namespace GraphLib
                             }
 
                             this.Dispatcher.BeginInvoke(new Action(CreateLegendPanel), System.Windows.Threading.DispatcherPriority.Normal, null);
-                            _Log4NetClass.ShowInfo("chkinfosame False", "UpdateGraphInfo");
+                            //_Log4NetClass.ShowInfo("chkinfosame False", "UpdateGraphInfo");
                         }
                     }
                 }
@@ -1393,7 +1412,7 @@ namespace GraphLib
                     this.Dispatcher.BeginInvoke(new Action(UpdateLabelValueY), System.Windows.Threading.DispatcherPriority.Send, null);
                     this.Dispatcher.BeginInvoke(new Action(UpdateLabelValueX), System.Windows.Threading.DispatcherPriority.Send, null);
                     this.Dispatcher.BeginInvoke(new Action(this.RedrawGraphUpdateGraphInfo), System.Windows.Threading.DispatcherPriority.Send, null);
-                    _Log4NetClass.ShowInfo("isequal False", "UpdateGraphInfo");
+                    //_Log4NetClass.ShowInfo("isequal False", "UpdateGraphInfo");
                 }
             }
             catch (Exception ex)

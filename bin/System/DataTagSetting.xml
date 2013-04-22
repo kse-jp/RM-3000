@@ -8,11 +8,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>27452</StaticZero>
-      <TagNameE>CH1</TagNameE>
+      <StaticZero>1345</StaticZero>
+      <TagNameE />
       <TagNameJ>CH1</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -22,11 +22,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>1226.4009243212016175621028307</StaticZero>
-      <TagNameE>CH2</TagNameE>
+      <StaticZero>1352</StaticZero>
+      <TagNameE />
       <TagNameJ>CH2</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -36,11 +36,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>1234.0827114427860696517412935</StaticZero>
-      <TagNameE>CH3</TagNameE>
+      <StaticZero>1352</StaticZero>
+      <TagNameE />
       <TagNameJ>CH3</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -50,11 +50,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>1602.8358208955223880597014925</StaticZero>
-      <TagNameE>CH4</TagNameE>
+      <StaticZero>1223.2907170650361311839911062</StaticZero>
+      <TagNameE />
       <TagNameJ>CH4</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -64,11 +64,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>1602.8358208955223880597014925</StaticZero>
-      <TagNameE>CH5</TagNameE>
+      <StaticZero>0</StaticZero>
+      <TagNameE />
       <TagNameJ>CH5</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -78,11 +78,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>1602.8358208955223880597014925</StaticZero>
-      <TagNameE>CH6</TagNameE>
+      <StaticZero>0</StaticZero>
+      <TagNameE />
       <TagNameJ>CH6</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -92,11 +92,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>566.21266427718040621266427707</StaticZero>
-      <TagNameE>CH7</TagNameE>
+      <StaticZero>0</StaticZero>
+      <TagNameE />
       <TagNameJ>CH7</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -106,11 +106,11 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>566.21266427718040621266427707</StaticZero>
-      <TagNameE>CH8</TagNameE>
+      <StaticZero>0</StaticZero>
+      <TagNameE />
       <TagNameJ>CH8</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -121,10 +121,10 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE>CH9</TagNameE>
+      <TagNameE />
       <TagNameJ>CH9</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -135,10 +135,10 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE>CH10</TagNameE>
+      <TagNameE />
       <TagNameJ>CH10</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -149,10 +149,10 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE>testUse</TagNameE>
-      <TagNameJ>test用計測</TagNameJ>
+      <TagNameE />
+      <TagNameJ>R1-MAX</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
+      <UnitE />
       <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
@@ -162,12 +162,12 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
-      <TagNameE>Meas3</TagNameE>
-      <TagNameJ>測定3</TagNameJ>
+      <StaticZero>1300.6751918158567774936061381</StaticZero>
+      <TagNameE />
+      <TagNameJ>R1-MIN</TagNameJ>
       <TagNameC />
-      <UnitE>m</UnitE>
-      <UnitJ>m</UnitJ>
+      <UnitE />
+      <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>
@@ -176,9 +176,9 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
+      <StaticZero>1300.6751918158567774936061381</StaticZero>
       <TagNameE />
-      <TagNameJ>Test2</TagNameJ>
+      <TagNameJ>R2-MAX</TagNameJ>
       <TagNameC />
       <UnitE />
       <UnitJ>um</UnitJ>
@@ -188,14 +188,14 @@
       <IsUpdated>true</IsUpdated>
       <TagNo>14</TagNo>
       <TagKind>0</TagKind>
-      <Point>1</Point>
+      <Point>0</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
+      <StaticZero>1342.1818753933291378225298930</StaticZero>
       <TagNameE />
-      <TagNameJ />
+      <TagNameJ>R2-MIN</TagNameJ>
       <TagNameC />
       <UnitE />
-      <UnitJ />
+      <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>
@@ -204,26 +204,26 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
-      <TagNameE>Rotation</TagNameE>
-      <TagNameJ>回転数</TagNameJ>
+      <StaticZero>1342.1818753933291378225298930</StaticZero>
+      <TagNameE />
+      <TagNameJ>R3-MAX</TagNameJ>
       <TagNameC />
-      <UnitE>spm</UnitE>
-      <UnitJ>rpm</UnitJ>
+      <UnitE />
+      <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>16</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
-      <TagNameE>Temputure</TagNameE>
-      <TagNameJ>温度</TagNameJ>
+      <StaticZero>1166.3287086446104589114194237</StaticZero>
+      <TagNameE />
+      <TagNameJ>R3-MIN</TagNameJ>
       <TagNameC />
-      <UnitE>℃</UnitE>
-      <UnitJ>℃</UnitJ>
+      <UnitE />
+      <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>
@@ -232,40 +232,40 @@
       <TagKind>0</TagKind>
       <Point>1</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
-      <TagNameE>L-Meas</TagNameE>
-      <TagNameJ>L測定</TagNameJ>
+      <StaticZero>1217.3813607775871926815323042</StaticZero>
+      <TagNameE />
+      <TagNameJ>R4-MAX</TagNameJ>
       <TagNameC />
-      <UnitE>kN</UnitE>
-      <UnitJ>kN</UnitJ>
+      <UnitE />
+      <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>18</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
+      <StaticZero>1217.3813607775871926815323042</StaticZero>
       <TagNameE />
-      <TagNameJ />
+      <TagNameJ>R4-MIN</TagNameJ>
       <TagNameC />
       <UnitE />
-      <UnitJ />
+      <UnitJ>um</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>19</TagNo>
-      <TagKind>2</TagKind>
+      <TagKind>0</TagKind>
       <Point>0</Point>
-      <Expression>@19[Calc1]@17[L測定]</Expression>
+      <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE>Calc1</TagNameE>
-      <TagNameJ>Calc1</TagNameJ>
+      <TagNameE />
+      <TagNameJ>回転数</TagNameJ>
       <TagNameC />
-      <UnitE>um</UnitE>
-      <UnitJ>um</UnitJ>
+      <UnitE />
+      <UnitJ>spm</UnitJ>
       <UnitC />
     </DataTag>
     <DataTag>
@@ -275,6 +275,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ />
+      <TagNameC />
+      <UnitE />
+      <UnitJ />
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -283,6 +289,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ />
+      <TagNameC />
+      <UnitE />
+      <UnitJ />
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -291,6 +303,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ />
+      <TagNameC />
+      <UnitE />
+      <UnitJ />
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -299,6 +317,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ />
+      <TagNameC />
+      <UnitE />
+      <UnitJ />
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -355,14 +379,26 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ />
+      <TagNameC />
+      <UnitE />
+      <UnitJ />
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>31</TagNo>
-      <TagKind>0</TagKind>
+      <TagKind>2</TagKind>
       <Point>0</Point>
-      <Expression />
+      <Expression>(@1[CH1]+@2[CH2]+@3[CH3]+@4[CH4])/4</Expression>
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ>演算A</TagNameJ>
+      <TagNameC />
+      <UnitE />
+      <UnitJ>um</UnitJ>
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -671,14 +707,10 @@
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>70</TagNo>
-      <TagKind>2</TagKind>
-      <Point>1</Point>
-      <Expression>@1[CH1]-@3[CH3]</Expression>
+      <TagKind>0</TagKind>
+      <Point>0</Point>
+      <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE>calc1</TagNameE>
-      <TagNameJ>演算1</TagNameJ>
-      <UnitE>um</UnitE>
-      <UnitJ>um</UnitJ>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>

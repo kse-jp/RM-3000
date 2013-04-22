@@ -268,10 +268,8 @@
     <value>角度</value>
     <comment>角度</comment>
   </data>
-  <data name="MSG_CALC_ERR_NO_FILE" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MSG_CALC_ERR_SYSTEM" xml:space="preserve">
-    <value />
+  <data name="TITLE_CALC_OPERATE" xml:space="preserve">
+    <value>演算実行</value>
+    <comment>演算実行</comment>
   </data>
 </root>

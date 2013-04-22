@@ -76,7 +76,7 @@ namespace Riken.IO.Communication.RM.Data
             get 
             { 
                 return DateTime.Parse(
-                    string.Format("{0}:{1}:{2}",
+                    string.Format("1900/01/01 {0}:{1}:{2}",
                         _Time[0].ToString("X"), 
                         _Time[3].ToString("X"), 
                         _Time[2].ToString("X"))); 

@@ -812,7 +812,11 @@ namespace RM_3000.Sequences
         private void SetMode1Data(Mode1Record reserveData, ref SampleData sampleData)
         {
 
-            sampleData.SampleTime = ((Mode1Header)reserveData.HeaderData).Time;
+            if(((Mode1Header)reserveData.HeaderData).Time.Hour == 23 && DateTime.Now.Hour == 0)
+                sampleData.SampleTime = DateTime.Today.AddDays(-1).AddTicks(((Mode1Header)reserveData.HeaderData).Time.Ticks);
+            else
+                sampleData.SampleTime = DateTime.Today.AddTicks(((Mode1Header)reserveData.HeaderData).Time.Ticks);
+
 
             sampleData.ChannelDatas = new ChannelData[11];
             Value_Standard valuedata = null;
@@ -958,7 +962,10 @@ namespace RM_3000.Sequences
         /// <param name="sampleData"></param>
         private void SetMode2Data(Mode2Record reserveData, ref SampleData sampleData)
         {
-            sampleData.SampleTime = ((Mode2Header)reserveData.HeaderData).Time;
+            if (((Mode2Header)reserveData.HeaderData).Time.Hour == 23 && DateTime.Now.Hour == 0)
+                sampleData.SampleTime = DateTime.Today.AddDays(-1).AddTicks(((Mode2Header)reserveData.HeaderData).Time.Ticks);
+            else
+                sampleData.SampleTime = DateTime.Today.AddTicks(((Mode2Header)reserveData.HeaderData).Time.Ticks);
 
             sampleData.ChannelDatas = new ChannelData[11];
             Value_Standard valuedata = new Value_Standard();
@@ -1066,6 +1073,8 @@ namespace RM_3000.Sequences
         /// <param name="sampleData"></param>
         private void SetMode3Data(Mode3Record reserveData, ref SampleData sampleData)
         {
+            sampleData.SampleTime = DateTime.Now;
+
             sampleData.ChannelDatas = new ChannelData[11];
             Value_Standard valuedata = null;
 

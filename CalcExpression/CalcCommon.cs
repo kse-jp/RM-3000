@@ -4,10 +4,40 @@ using System.Linq;
 using System.Text;
 
 
-namespace Calc
+namespace CalcCommon
 {
-    public class CalcCommon
+    public class Calc
     {
+        private enum EnumErrCode
+        {
+            rErrSystem = 1,
+            iErrNoFile = 1000,
+            iErrRead,
+            iErrMeas,
+            iErrTest,
+            iErrExp,
+            mErrNoCh = 2000,
+            mErrCh,
+            tErrNoCh = 3000,
+            tErrCh,
+            eErrNoCh = 4000,
+            eErrLvalue,
+            eErrAssinmentOperator,
+            eErrNoExp,
+            eErrParenthesis,
+            eErrFunction,
+            eErrExtraParameter,
+            eErrTooFewParameter,
+            eErrRparenthesis,
+            eErrLparenthesis,
+            eErrValue,
+            eErrOVFvalue,
+            eErrUndefined,
+            eErrSyntax,
+            wErrForwardRef = 5000
+        }
+
+
         #region private member
         const int MAX_CONSTANT_NUM = 100;
         const int MAX_VARIABLE_NUM = 300;
@@ -32,7 +62,7 @@ namespace Calc
         #endregion
 
 
-        public CalcCommon()
+        public Calc()
         {
         }
 
@@ -234,6 +264,99 @@ namespace Calc
             int iErr = calc.Execute(ref strErrorMessage);
             strError = strErrorMessage;
             return iErr;
+        }
+
+        /// <summary>
+        /// エラー文字列の編集
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string GetErrString(string s)
+        {
+            string[] tmp = s.Split(' ');
+
+            string errstring = string.Empty;
+
+            switch (int.Parse(tmp[0].Substring(1)))
+            {
+                case (int)EnumErrCode.rErrSystem:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_SYSTEM");
+                    break;
+                case (int)EnumErrCode.iErrNoFile:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_NO_FILE");
+                    break;
+                case (int)EnumErrCode.iErrRead:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_READ");
+                    break;
+                case (int)EnumErrCode.iErrMeas:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_MEAS");
+                    break;
+                case (int)EnumErrCode.iErrTest:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_TEST");
+                    break;
+                case (int)EnumErrCode.iErrExp:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_EXP");
+                    break;
+                case (int)EnumErrCode.mErrNoCh:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_MEAS_NO_CH");
+                    break;
+                case (int)EnumErrCode.mErrCh:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_MEAS_CH");
+                    break;
+                case (int)EnumErrCode.tErrNoCh:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_TEST_ERR_NO_CH");
+                    break;
+                case (int)EnumErrCode.tErrCh:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_TEST_ERR_CH");
+                    break;
+                case (int)EnumErrCode.eErrNoCh:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_EXPRESSION_NO_CH");
+                    break;
+                case (int)EnumErrCode.eErrLvalue:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_L_VALUE");
+                    break;
+                case (int)EnumErrCode.eErrAssinmentOperator:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_ASSINMENT_OPERATOR");
+                    break;
+                case (int)EnumErrCode.eErrNoExp:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_NO_EXP");
+                    break;
+                case (int)EnumErrCode.eErrParenthesis:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_PARENTHESIS");
+                    break;
+                case (int)EnumErrCode.eErrFunction:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_FUNCTION");
+                    break;
+                case (int)EnumErrCode.eErrExtraParameter:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_EXTRA_PARAMETER");
+                    break;
+                case (int)EnumErrCode.eErrTooFewParameter:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_TOO_FEW_PARAMETER");
+                    break;
+                case (int)EnumErrCode.eErrRparenthesis:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_R_PARENTHESIS");
+                    break;
+                case (int)EnumErrCode.eErrLparenthesis:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_L_PARENTHESIS");
+                    break;
+                case (int)EnumErrCode.eErrValue:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_VALUE");
+                    break;
+                case (int)EnumErrCode.eErrOVFvalue:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_OVF_VALUE");
+                    break;
+                case (int)EnumErrCode.eErrUndefined:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_UNDEFINED");
+                    break;
+                case (int)EnumErrCode.eErrSyntax:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_SYNTAX");
+                    break;
+                case (int)EnumErrCode.wErrForwardRef:
+                    errstring = CommonResource.GetString("MSG_CALC_ERR_FORWARD_REF");
+                    break;
+            }
+
+            return errstring + " " + tmp[1];
         }
 
     }

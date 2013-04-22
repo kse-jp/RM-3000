@@ -8,13 +8,14 @@ using System.Windows.Forms;
 
 using System.Runtime.InteropServices;
 
-using Calc;
+using CalcCommon;
 
 
 namespace DataCommon
 {
     public class CalcDataManager : ICloneable
     {
+
         #region private member
         /// <summary>
         /// 
@@ -113,7 +114,7 @@ namespace DataCommon
         /// <summary>
         /// /
         /// </summary>
-        private CalcCommon calc = null;
+        private Calc calc = null;
 
         /// <summary>
         /// 演算処理ロック
@@ -270,7 +271,11 @@ namespace DataCommon
                             if (calc.Execute(ref strErrorMessage) < 0)
                             {
                                 //error
-                                MessageBox.Show(strErrorMessage + "\n", "演算実行", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                                MessageBox.Show(
+                                    CalcCommon.Calc.GetErrString(strErrorMessage) + "\n"
+                                    , CommonResource.GetString("TITLE_CALC_OPERATE")
+                                    , MessageBoxButtons.OKCancel
+                                    , MessageBoxIcon.Information);
                             }
 
 
@@ -364,7 +369,11 @@ namespace DataCommon
                                 if (calc.Execute(ref strErrorMessage) < 0)
                                 {
                                     //error
-                                    MessageBox.Show(strErrorMessage + "\n", "演算実行", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                                    MessageBox.Show(
+                                    CalcCommon.Calc.GetErrString(strErrorMessage) + "\n"
+                                    , CommonResource.GetString("TITLE_CALC_OPERATE")
+                                    , MessageBoxButtons.OKCancel
+                                    , MessageBoxIcon.Information);
                                 }
 
                                 //演算結果の格納
@@ -438,7 +447,7 @@ namespace DataCommon
                 string temp = string.Empty;
                 string variable = string.Empty;
 
-                calc = new CalcCommon();
+                calc = new Calc();
                 if (calc == null)
                 {
                     return bRet;
@@ -705,6 +714,7 @@ namespace DataCommon
             return s;
         }
 
+
         #endregion
 
 
@@ -770,7 +780,7 @@ namespace DataCommon
             ret.dataHandleCalc = this.dataHandleCalc;
 
             if(this.calc != null)
-                ret.calc = new CalcCommon();
+                ret.calc = new Calc();
     
             if(this.calclock != null)
                 ret.calclock = new object();

@@ -500,6 +500,8 @@ namespace RM_3000.Forms.Measurement
                             {
                                 // 有効なタグではないので測定設定から削除する
                                 graph.GraphTagList[j].GraphTagNo = -1;
+                                graph.GraphTagList[j].Color = null;
+                                graph.GraphTagList[j].BaseScale = false;
                             }
                         }
                     }

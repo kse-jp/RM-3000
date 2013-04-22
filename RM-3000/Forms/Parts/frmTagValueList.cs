@@ -464,11 +464,14 @@ namespace RM_3000.Forms.Parts
                     unitLabelList.Add(this.unitLabels[i + 1]);
 
                     // 測定項目No2の有無
-                    if (this.measSetting.Mode == 1 && this.chSetting.ChannelSettingList[i].ChKind == ChannelKindType.R && this.chSetting.ChannelSettingList[i].Mode1_Trigger == Mode1TriggerType.MAIN)
+                    if (this.measSetting.Mode == 1 
+                        && this.chSetting.ChannelSettingList[i].ChKind == ChannelKindType.R 
+                        && this.chSetting.ChannelSettingList[i].Mode1_Trigger == Mode1TriggerType.MAIN)
                     {
                         var tag = new Controls.AutoFontSizeLabel()
                         {
-                            Name = "lblItem" + (i + 1).ToString() + "-2"
+                            //Name = "lblItem" + (i + 1).ToString() + "-2"
+                            Name = tagLabelList.Last().Name + "-2"
                             ,
                             Top = tagLabelList.Last().Top + tagLabelList.Last().Height + heightMargin
                             ,
@@ -487,12 +490,18 @@ namespace RM_3000.Forms.Parts
                             MaxFontSize = ((Controls.AutoFontSizeLabel)this.tagLabels[i + 1]).MaxFontSize
                         };
                         tag.Text = (this.relationSetting.RelationList[i + 1].TagNo_2 > 0) ? this.tagSetting.GetTagNameFromTagNo(this.relationSetting.RelationList[i + 1].TagNo_2) : string.Empty;
-                        pnlMain.Controls.Add(tag);
+
+                        if (isMeasure)
+                            pnlMain.Controls.Add(tag);
+                        else
+                            tabPage1.Controls.Add(tag);
+
                         tagLabelList.Add(tag);
 
                         var val = new Label()
                         {
-                            Name = "lblDataValue" + (i + 1).ToString() + "-2"
+                            //Name = "lblDataValue" + (i + 1).ToString() + "-2"
+                            Name = dataValueLabelList.Last().Name + "-2"
                             ,
                             Top = dataValueLabelList.Last().Top + dataValueLabelList.Last().Height + heightMargin
                             ,
@@ -509,14 +518,21 @@ namespace RM_3000.Forms.Parts
                             BorderStyle = BorderStyle.Fixed3D
                             ,
                             BackColor = System.Drawing.Color.White
+
                         };
                         val.Text = string.Empty;
-                        pnlMain.Controls.Add(val);
+                        if (isMeasure)
+                            pnlMain.Controls.Add(val);
+                        else
+                            tabPage1.Controls.Add(val);
+
                         dataValueLabelList.Add(val);
+
 
                         var unit = new Controls.AutoFontSizeLabel()
                         {
-                            Name = "lblUnit" + (i + 1).ToString() + "-2"
+                            //Name = "lblUnit" + (i + 1).ToString() + "-2"
+                            Name = unitLabelList.Last().Name + "-2"
                             ,
                             Top = unitLabelList.Last().Top + unitLabelList.Last().Height + heightMargin
                             ,
@@ -533,9 +549,14 @@ namespace RM_3000.Forms.Parts
                             AutoFontSize = ((Controls.AutoFontSizeLabel)this.unitLabels[i + 1]).AutoFontSize
                             ,
                             MaxFontSize = ((Controls.AutoFontSizeLabel)this.unitLabels[i + 1]).MaxFontSize
+
                         };
                         unit.Text = (this.relationSetting.RelationList[i + 1].TagNo_2 > 0) ? this.tagSetting.GetUnitFromTagNo(this.relationSetting.RelationList[i + 1].TagNo_2) : string.Empty;
-                        pnlMain.Controls.Add(unit);
+                        if (isMeasure)
+                            pnlMain.Controls.Add(unit);
+                        else
+                            tabPage1.Controls.Add(unit);
+
                         unitLabelList.Add(unit);
                     }
                 }

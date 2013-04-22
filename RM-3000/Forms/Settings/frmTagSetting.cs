@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 
 using CommonLib;
 using DataCommon;
-using Calc;
+using CalcCommon;
 
 namespace RM_3000.Forms.Settings
 {
@@ -895,7 +895,7 @@ namespace RM_3000.Forms.Settings
                     string[] strVariableName = new string[this.dataTagSetting.DataTagList.Length];
                     string[] strCalcName = new string[1];
                     string[] strExpression = new string[1];
-                    CalcCommon calc = new CalcCommon();
+                    Calc calc = new Calc();
                     string Tag = string.Empty;
 
                     for (int i = 0; i < this.constantSetting.ConstantList.Length; i++)
@@ -917,7 +917,8 @@ namespace RM_3000.Forms.Settings
                     calc.SetVariableVal(strVariableName, 1.0F);
                     if (calc.CalcFormulaJudge(strCalcName, strExpression, ref strErrorMessage) == false)
                     {
-                        retString = strErrorMessage + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                        retString =
+                            CalcCommon.Calc.GetErrString(strErrorMessage) + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                     }
                     else
                     {

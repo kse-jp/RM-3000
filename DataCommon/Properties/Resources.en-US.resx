@@ -268,4 +268,8 @@
     <value>Degree</value>
     <comment>Degree</comment>
   </data>
+  <data name="TITLE_CALC_OPERATE" xml:space="preserve">
+    <value>演算実行</value>
+    <comment>演算実行</comment>
+  </data>
 </root>

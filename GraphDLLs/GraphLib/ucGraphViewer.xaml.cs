@@ -1228,7 +1228,7 @@ namespace GraphLib
                 _IsAxisYZoom = false;
 
                 bool isequal = _GraphInfo.IsEqual(graphinfo);
-                _Log4NetClass.ShowInfo("isequal", isequal.ToString());                
+                _Log4NetClass.ShowInfo("isequal", isequal.ToString());
                 _Log4NetClass.ShowInfo("graphinfo", graphinfo.ToString());
 
                 _GraphInfo = graphinfo;
@@ -4014,294 +4014,372 @@ namespace GraphLib
         }
         private void UpdateMeasurePosX()
         {
-            double width = scrollViewer.Width;
-            if (_IsMeasureXShown)
+            try
             {
-                double minmeasure = 0;
-                double maxmeasure = 0;
-
-                double minpos = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
-                double maxpos = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
-
-                if (_GraphModel.UpperMeasureModelX.Margin.Left <= _GraphModel.LowerMeasureModelX.Margin.Left)
+                double width = scrollViewer.Width;
+                if (_IsMeasureXShown)
                 {
-                    minmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
-                    maxmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
-                }
-                else
-                {
-                    minmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
-                    maxmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
-                }
+                    double minmeasure = 0;
+                    double maxmeasure = 0;
+                    Canvas mincanvas = null;
+                    Canvas maxcanvas = null;
 
-                double valforpos = 0;
-                double minval = 0;
-                if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
-                {
-                    valforpos = _ZoomValueX / (maxpos - minpos);
-                    minval = _ZoomMinValueX;
-                }
-                else
-                {
-                    valforpos = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxpos - minpos);
-                    minval = _GraphModel.GridLineData.MinGridValueX;
-                }
+                    double minpos = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
+                    double maxpos = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
 
-                if (minmeasure - minpos < 0)
-                    _MeasureXPos1 = 0;
-                else
-                    _MeasureXPos1 = ((minmeasure - minpos) * valforpos) + minval;
+                    if (_GraphModel.UpperMeasureModelX.Margin.Left <= _GraphModel.LowerMeasureModelX.Margin.Left)
+                    {
+                        minmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
+                        maxmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
+                        mincanvas = _GraphModel.UpperMeasureModelX;
+                        maxcanvas = _GraphModel.LowerMeasureModelX;
+                    }
+                    else
+                    {
+                        minmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
+                        maxmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
+                        mincanvas = _GraphModel.LowerMeasureModelX;
+                        maxcanvas = _GraphModel.UpperMeasureModelX;
+                    }
 
-                if (maxpos - maxmeasure < 0)
-                    _MeasureXPos2 = maxpos * valforpos;
-                else
-                    _MeasureXPos2 = ((maxmeasure - minpos) * valforpos) + minval;
+                    double valforpos = 0;
+                    double minval = 0;
+                    if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
+                    {
+                        valforpos = _ZoomValueX / (maxpos - minpos);
+                        minval = _ZoomMinValueX;
+                    }
+                    else
+                    {
+                        valforpos = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxpos - minpos);
+                        minval = _GraphModel.GridLineData.MinGridValueX;
+                    }
+
+                    if (minmeasure - minpos < 0)
+                        _MeasureXPos1 = 0;
+                    else
+                        _MeasureXPos1 = ((minmeasure - minpos) * valforpos) + minval;
+
+                    if (maxpos - maxmeasure < 0)
+                        _MeasureXPos2 = maxpos * valforpos;
+                    else
+                        _MeasureXPos2 = ((maxmeasure - minpos) * valforpos) + minval;
+
+
+                    if (_MeasureXPos1 != null && _MeasureXPos2 != null && mincanvas != null && maxcanvas != null)
+                    {
+                        _MeasureXPos1 = GetCorrectMeasureXPos(_MeasureXPos1);
+                        _MeasureXPos2 = GetCorrectMeasureXPos(_MeasureXPos2);
+
+                        SetMeasureXPos(mincanvas, maxcanvas, (double)_MeasureXPos1, (double)_MeasureXPos2);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "UpdateMeasurePosX");
+            }
+        }
+
+        private double? GetCorrectMeasureXPos(double? measurePosX)
+        {
+            try
+            {
+                double incx = _GraphModel.IncrementX;
+
+                if (incx <= 0)
+                    incx = 1;
+
+                int datapos = Convert.ToInt32((double)((double)measurePosX - _GraphModel.GridLineData.MinGridValueX) / incx);
+                datapos += _StartIndexRawDataPlot;
+                int curline = Convert.ToInt32((double)measurePosX / incx);
+                measurePosX = curline * incx;
+
+                if (datapos >= _GraphModel.GraphRawData.Count)
+                    datapos = _GraphModel.GraphRawData.Count - 1;
+                else if (datapos < 0)
+                    datapos = 0;
+
+                double[] dat = _GraphModel.GraphRawData[datapos];
+
+                if (measurePosX != dat[0])
+                    measurePosX = dat[0];
+
+                return measurePosX;
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "GetCorrectMeasureXPos");
+                return measurePosX;
             }
         }
 
         private void SetInitPointMeasurePosX()
         {
-            if ((_MeasureXPos1 == null || _MeasureXPos2 == null) && _IsMeasureXShown)
+            try
             {
-                double width = scrollViewer.Width;
-
-                double minmeasure = 0;
-                double maxmeasure = 0;
-
-                double minpos = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
-                double maxpos = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
-
-                double midpoint = _GraphModel.GridLineData.Margin.Left + (width / 2) - (_GraphModel.UpperMeasureModelX.Width / 2);
-
-                minmeasure = midpoint - 30;
-                maxmeasure = midpoint + 30;
-
-                double valforpos = 0;
-                double minval = 0;
-                if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
+                if ((_MeasureXPos1 == null || _MeasureXPos2 == null) && _IsMeasureXShown)
                 {
-                    valforpos = _ZoomValueX / (maxpos - minpos);
-                    minval = _ZoomMinValueX;
-                }
-                else
-                {
-                    valforpos = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxpos - minpos);
-                    minval = _GraphModel.GridLineData.MinGridValueX;
-                }
+                    double width = scrollViewer.Width;
 
-                if (minmeasure - minpos < 0)
-                    _MeasureXPos1 = 0;
-                else
-                    _MeasureXPos1 = ((minmeasure - minpos) * valforpos) + minval;
+                    double minmeasure = 0;
+                    double maxmeasure = 0;
 
-                if (maxpos - maxmeasure < 0)
-                    _MeasureXPos2 = maxpos * valforpos;
-                else
-                    _MeasureXPos2 = ((maxmeasure - minpos) * valforpos) + minval;
+                    double minpos = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
+                    double maxpos = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
+
+                    double midpoint = _GraphModel.GridLineData.Margin.Left + (width / 2) - (_GraphModel.UpperMeasureModelX.Width / 2);
+
+                    minmeasure = midpoint - 30;
+                    maxmeasure = midpoint + 30;
+
+                    double valforpos = 0;
+                    double minval = 0;
+                    if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
+                    {
+                        valforpos = _ZoomValueX / (maxpos - minpos);
+                        minval = _ZoomMinValueX;
+                    }
+                    else
+                    {
+                        valforpos = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxpos - minpos);
+                        minval = _GraphModel.GridLineData.MinGridValueX;
+                    }
+
+                    if (minmeasure - minpos < 0)
+                        _MeasureXPos1 = 0;
+                    else
+                        _MeasureXPos1 = ((minmeasure - minpos) * valforpos) + minval;
+
+                    if (maxpos - maxmeasure < 0)
+                        _MeasureXPos2 = maxpos * valforpos;
+                    else
+                        _MeasureXPos2 = ((maxmeasure - minpos) * valforpos) + minval;
+                }
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "SetInitPointMeasurePosX");
             }
 
         }
 
         private void UpdateMeasurePosY()
         {
-            double height = scrollViewer.ViewportHeight;
-            if (_IsMeasureYShown)
+            try
             {
-                double minmeasure = 0;
-                double maxmeasure = 0;
-
-                double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY.Height / 2);
-                double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY.Height / 2);
-
-                if (_GraphModel.UpperMeasureModelY.Margin.Top <= _GraphModel.LowerMeasureModelY.Margin.Top)
+                double height = scrollViewer.ViewportHeight;
+                if (_IsMeasureYShown)
                 {
-                    minmeasure = _GraphModel.UpperMeasureModelY.Margin.Top;
-                    maxmeasure = _GraphModel.LowerMeasureModelY.Margin.Top;
+                    double minmeasure = 0;
+                    double maxmeasure = 0;
+
+                    double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY.Height / 2);
+                    double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY.Height / 2);
+
+                    if (_GraphModel.UpperMeasureModelY.Margin.Top <= _GraphModel.LowerMeasureModelY.Margin.Top)
+                    {
+                        minmeasure = _GraphModel.UpperMeasureModelY.Margin.Top;
+                        maxmeasure = _GraphModel.LowerMeasureModelY.Margin.Top;
+                    }
+                    else
+                    {
+                        minmeasure = _GraphModel.LowerMeasureModelY.Margin.Top;
+                        maxmeasure = _GraphModel.UpperMeasureModelY.Margin.Top;
+                    }
+
+                    double valforpos = 0;
+                    if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
+                    {
+                        valforpos = _ZoomValueY / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY1Pos2 = _ZoomMinValueY;
+                        else
+                            _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY1Pos1 = _ZoomValueY + _ZoomMinValueY;
+                        else
+                            _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
+                    }
+                    else
+                    {
+                        valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY1Pos2 = _GraphModel.GridLineData.MinGridValueY;
+                        else
+                            _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY1Pos1 = _GraphModel.GridLineData.MaxGridValueY;
+                        else
+                            _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+                    }
+
+
                 }
-                else
+
+                if (_IsMeasureY2Shown)
                 {
-                    minmeasure = _GraphModel.LowerMeasureModelY.Margin.Top;
-                    maxmeasure = _GraphModel.UpperMeasureModelY.Margin.Top;
+                    double minmeasure = 0;
+                    double maxmeasure = 0;
+
+                    double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY2.Height / 2);
+                    double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY2.Height / 2);
+
+                    if (_GraphModel.UpperMeasureModelY2.Margin.Top <= _GraphModel.LowerMeasureModelY2.Margin.Top)
+                    {
+                        minmeasure = _GraphModel.UpperMeasureModelY2.Margin.Top;
+                        maxmeasure = _GraphModel.LowerMeasureModelY2.Margin.Top;
+                    }
+                    else
+                    {
+                        minmeasure = _GraphModel.LowerMeasureModelY2.Margin.Top;
+                        maxmeasure = _GraphModel.UpperMeasureModelY2.Margin.Top;
+                    }
+
+                    double valforpos = 0;
+                    if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
+                    {
+                        valforpos = _ZoomValueY / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY2Pos2 = _ZoomMinValueY;
+                        else
+                            _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY2Pos1 = _ZoomValueY + _ZoomMinValueY;
+                        else
+                            _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
+                    }
+                    else
+                    {
+                        valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY2Pos2 = _GraphModel.GridLineData.MinGridValueY;
+                        else
+                            _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY2Pos1 = _GraphModel.GridLineData.MaxGridValueY;
+                        else
+                            _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+                    }
                 }
-
-                double valforpos = 0;
-                if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
-                {
-                    valforpos = _ZoomValueY / (maxpos - minpos);
-
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY1Pos2 = _ZoomMinValueY;
-                    else
-                        _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
-
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY1Pos1 = _ZoomValueY + _ZoomMinValueY;
-                    else
-                        _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
-                }
-                else
-                {
-                    valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
-
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY1Pos2 = _GraphModel.GridLineData.MinGridValueY;
-                    else
-                        _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
-
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY1Pos1 = _GraphModel.GridLineData.MaxGridValueY;
-                    else
-                        _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
-                }
-
 
             }
-
-            if (_IsMeasureY2Shown)
+            catch (Exception ex)
             {
-                double minmeasure = 0;
-                double maxmeasure = 0;
-
-                double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY2.Height / 2);
-                double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY2.Height / 2);
-
-                if (_GraphModel.UpperMeasureModelY2.Margin.Top <= _GraphModel.LowerMeasureModelY2.Margin.Top)
-                {
-                    minmeasure = _GraphModel.UpperMeasureModelY2.Margin.Top;
-                    maxmeasure = _GraphModel.LowerMeasureModelY2.Margin.Top;
-                }
-                else
-                {
-                    minmeasure = _GraphModel.LowerMeasureModelY2.Margin.Top;
-                    maxmeasure = _GraphModel.UpperMeasureModelY2.Margin.Top;
-                }
-
-                double valforpos = 0;
-                if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
-                {
-                    valforpos = _ZoomValueY / (maxpos - minpos);
-
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY2Pos2 = _ZoomMinValueY;
-                    else
-                        _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
-
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY2Pos1 = _ZoomValueY + _ZoomMinValueY;
-                    else
-                        _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
-                }
-                else
-                {
-                    valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
-
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY2Pos2 = _GraphModel.GridLineData.MinGridValueY;
-                    else
-                        _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
-
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY2Pos1 = _GraphModel.GridLineData.MaxGridValueY;
-                    else
-                        _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
-                }
+                _Log4NetClass.ShowError(ex.ToString(), "UpdateMeasurePosY");
             }
 
         }
 
         private void SetInitPointMeasurePosY()
         {
-            double height = scrollViewer.ViewportHeight;
-
-            if ((_MeasureY1Pos1 == null || _MeasureY1Pos2 == null) && _IsMeasureYShown)
+            try
             {
+                double height = scrollViewer.ViewportHeight;
 
-                double minmeasure = 0;
-                double maxmeasure = 0;
-
-                double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY.Height / 2);
-                double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY.Height / 2);
-
-                double midpoint = _GraphModel.GridLineData.Margin.Top + (height / 2) - (_GraphModel.UpperMeasureModelY.Height / 2);
-
-                minmeasure = midpoint - 20;
-                maxmeasure = midpoint + 20;
-
-                double valforpos = 0;
-                if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
+                if ((_MeasureY1Pos1 == null || _MeasureY1Pos2 == null) && _IsMeasureYShown)
                 {
-                    valforpos = _ZoomValueY / (maxpos - minpos);
 
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY1Pos2 = _ZoomMinValueY;
-                    else
-                        _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
+                    double minmeasure = 0;
+                    double maxmeasure = 0;
 
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY1Pos1 = _ZoomValueY + _ZoomMinValueY;
+                    double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY.Height / 2);
+                    double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY.Height / 2);
+
+                    double midpoint = _GraphModel.GridLineData.Margin.Top + (height / 2) - (_GraphModel.UpperMeasureModelY.Height / 2);
+
+                    minmeasure = midpoint - 20;
+                    maxmeasure = midpoint + 20;
+
+                    double valforpos = 0;
+                    if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
+                    {
+                        valforpos = _ZoomValueY / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY1Pos2 = _ZoomMinValueY;
+                        else
+                            _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY1Pos1 = _ZoomValueY + _ZoomMinValueY;
+                        else
+                            _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
+                    }
                     else
-                        _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
+                    {
+                        valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY1Pos2 = _GraphModel.GridLineData.MinGridValueY;
+                        else
+                            _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY1Pos1 = _GraphModel.GridLineData.MaxGridValueY;
+                        else
+                            _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+                    }
+
+
                 }
-                else
+
+                if ((_MeasureY2Pos1 == null || _MeasureY2Pos2 == null) && _IsMeasureY2Shown)
                 {
-                    valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
+                    double minmeasure = 0;
+                    double maxmeasure = 0;
 
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY1Pos2 = _GraphModel.GridLineData.MinGridValueY;
-                    else
-                        _MeasureY1Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+                    double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY2.Height / 2);
+                    double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY2.Height / 2);
 
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY1Pos1 = _GraphModel.GridLineData.MaxGridValueY;
+                    double midpoint = _GraphModel.GridLineData.Margin.Top + (height / 2) - (_GraphModel.UpperMeasureModelY2.Height / 2);
+
+                    minmeasure = midpoint - 20;
+                    maxmeasure = midpoint + 20;
+
+                    double valforpos = 0;
+                    if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
+                    {
+                        valforpos = _ZoomValueY / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY2Pos2 = _ZoomMinValueY;
+                        else
+                            _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY2Pos1 = _ZoomValueY + _ZoomMinValueY;
+                        else
+                            _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
+                    }
                     else
-                        _MeasureY1Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+                    {
+                        valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
+
+                        if (maxpos - minmeasure < 0)
+                            _MeasureY2Pos2 = _GraphModel.GridLineData.MinGridValueY;
+                        else
+                            _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+
+                        if (maxpos - maxmeasure < 0)
+                            _MeasureY2Pos1 = _GraphModel.GridLineData.MaxGridValueY;
+                        else
+                            _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
+                    }
                 }
-
-
             }
-
-            if ((_MeasureY2Pos1 == null || _MeasureY2Pos2 == null) && _IsMeasureY2Shown)
+            catch (Exception ex)
             {
-                double minmeasure = 0;
-                double maxmeasure = 0;
-
-                double minpos = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY2.Height / 2);
-                double maxpos = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY2.Height / 2);
-
-                double midpoint = _GraphModel.GridLineData.Margin.Top + (height / 2) - (_GraphModel.UpperMeasureModelY2.Height / 2);
-
-                minmeasure = midpoint - 20;
-                maxmeasure = midpoint + 20;
-
-                double valforpos = 0;
-                if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
-                {
-                    valforpos = _ZoomValueY / (maxpos - minpos);
-
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY2Pos2 = _ZoomMinValueY;
-                    else
-                        _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _ZoomMinValueY;
-
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY2Pos1 = _ZoomValueY + _ZoomMinValueY;
-                    else
-                        _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _ZoomMinValueY;
-                }
-                else
-                {
-                    valforpos = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxpos - minpos);
-
-                    if (maxpos - minmeasure < 0)
-                        _MeasureY2Pos2 = _GraphModel.GridLineData.MinGridValueY;
-                    else
-                        _MeasureY2Pos2 = ((maxpos - minmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
-
-                    if (maxpos - maxmeasure < 0)
-                        _MeasureY2Pos1 = _GraphModel.GridLineData.MaxGridValueY;
-                    else
-                        _MeasureY2Pos1 = ((maxpos - maxmeasure) * valforpos) + _GraphModel.GridLineData.MinGridValueY;
-                }
+                _Log4NetClass.ShowError(ex.ToString(), "SetInitPointMeasurePosY");
             }
 
         }
@@ -4424,6 +4502,10 @@ namespace GraphLib
 
         }
 
+        /// <summary>
+        /// Set currentline position
+        /// </summary>
+        /// <param name="currentLineValue"></param>
         private void SetCurrentLinePos(decimal currentLineValue)
         {
             try
@@ -4498,6 +4580,100 @@ namespace GraphLib
                         lbl.Content = currentLineValue.ToString(_GraphModel.GridLineData.DecimalPointXStr);
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "SetCurrentLinePos");
+            }
+        }
+        /// <summary>
+        /// Set measure position
+        /// </summary>
+        /// <param name="currentLineValue"></param>
+        private void SetMeasureXPos(Canvas minCanvas, Canvas maxCanvas, double minValue, double maxValue)
+        {
+            try
+            {
+                double pointpervalue = 0;
+                double minvalue = 0;
+                double maxvalue = 0;
+                double cormin = 0;
+                double cormax = 0;
+
+                double graphwidth = scrollViewer.Width;
+
+                double minpos = _GraphModel.GridLineData.Margin.Left - (_CurrentMeasureDrag.Width / 2);
+                double maxpos = _GraphModel.GridLineData.Margin.Left + graphwidth - (_CurrentMeasureDrag.Width / 2) - _ScrollBarMargin;
+
+                if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
+                {
+
+                    pointpervalue = scrollViewer.ViewportWidth / _ZoomValueX;
+                    if (_GraphModel.GraphMode == GraphMode.Normal)
+                    {
+                        if (!_IsZoom)
+                        {
+                            minvalue = _GraphModel.GridLineData.MinGridValueX;
+                            maxvalue = _GraphModel.GridLineData.MaxGridValueX - (_GraphModel.AxisZoomX * _GraphModel.IncrementX);
+                        }
+                        else
+                        {
+                            minvalue = _ZoomMinValueX;
+                            maxvalue = _ZoomValueX + _ZoomMinValueX;
+                        }
+                    }
+                    else if (_GraphModel.GraphMode == GraphMode.Moving)
+                    {
+                        if (!_IsZoom)
+                        {
+                            minvalue = _GraphModel.GridLineData.MinGridValueX + (_GraphModel.AxisZoomX * _GraphModel.IncrementX);
+                            maxvalue = _GraphModel.GridLineData.MaxGridValueX;
+                        }
+                        else
+                        {
+                            minvalue = _ZoomMinValueX;
+                            maxvalue = _ZoomValueX + _ZoomMinValueX;
+                        }
+                    }
+                }
+                else
+                {
+                    maxvalue = _GraphModel.GridLineData.MaxGridValueX;
+                    minvalue = _GraphModel.GridLineData.MinGridValueX;
+                    pointpervalue = (maxpos - minpos) / (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX);
+                }
+
+                if (minValue >= minvalue && minValue <= maxvalue)
+                {
+                    cormin = ((minValue - minvalue) * pointpervalue) + minpos;
+                }
+                else
+                {
+                    if (minValue < minvalue)
+                        cormin = 0;
+                    else if (minValue > maxvalue)
+                        cormin = ((maxvalue - minvalue) * pointpervalue) + minpos;
+                }
+
+
+                if (maxValue >= minvalue && maxValue <= maxvalue)
+                {
+                    cormax = ((maxValue - minvalue) * pointpervalue) + minpos;
+                }
+                else
+                {
+                    if (maxValue < minvalue)
+                        cormax = 0;
+                    else if (maxValue > maxvalue)
+                        cormax = ((maxvalue - minvalue) * pointpervalue) + minpos;
+                }
+
+
+                Thickness thickmin = new Thickness(cormin, minCanvas.Margin.Top, 0, 0);
+                Thickness thickmax = new Thickness(cormax, maxCanvas.Margin.Top, 0, 0);
+                minCanvas.Margin = thickmin;
+                maxCanvas.Margin = thickmax;
+
             }
             catch (Exception ex)
             {
@@ -4583,142 +4759,149 @@ namespace GraphLib
 
         private void RefreshMeasurePos()
         {
-            double width = scrollViewer.Width;
-            double height = scrollViewer.ViewportHeight;
-
-            if (_MeasureXPos1 != null && _MeasureXPos2 != null)
+            try
             {
-                double minposx = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
-                double maxposx = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
+                double width = scrollViewer.Width;
+                double height = scrollViewer.ViewportHeight;
 
-                double valueperpointx = 0;
-                double currentmin = 0;
-                if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
+                if (_MeasureXPos1 != null && _MeasureXPos2 != null)
                 {
-                    valueperpointx = _ZoomValueX / (maxposx - minposx);
-                    currentmin = _ZoomMinValueX;
+                    double minposx = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
+                    double maxposx = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
+
+                    double valueperpointx = 0;
+                    double currentmin = 0;
+                    if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
+                    {
+                        valueperpointx = _ZoomValueX / (maxposx - minposx);
+                        currentmin = _ZoomMinValueX;
+                    }
+                    else
+                    {
+                        valueperpointx = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxposx - minposx);
+                        currentmin = _GraphModel.GridLineData.MinGridValueX;
+                    }
+
+                    Thickness marginup = _GraphModel.UpperMeasureModelX.Margin;
+                    marginup.Left = ((Convert.ToDouble(_MeasureXPos1) - currentmin) / valueperpointx) + minposx;
+
+                    Thickness margindown = _GraphModel.LowerMeasureModelX.Margin;
+                    margindown.Left = ((Convert.ToDouble(_MeasureXPos2) - currentmin) / valueperpointx) + minposx;
+
+                    if (marginup.Left < minposx || marginup.Left > maxposx || margindown.Left < minposx || margindown.Left > maxposx)
+                    {
+                        _IsMeasureXShown = false;
+                        if (marginup.Left < minposx)
+                            marginup.Left = minposx;
+                        else if (marginup.Left > maxposx)
+                            marginup.Left = maxposx;
+
+                        if (margindown.Left < minposx)
+                            margindown.Left = minposx;
+                        else if (margindown.Left > maxposx)
+                            margindown.Left = maxposx;
+                    }
+                    else
+                        _IsMeasureXShown = true;
+
+                    _GraphModel.UpperMeasureModelX.Margin = marginup;
+                    _GraphModel.LowerMeasureModelX.Margin = margindown;
+
                 }
-                else
+
+                if (_MeasureY1Pos1 != null && _MeasureY1Pos2 != null)
                 {
-                    valueperpointx = (_GraphModel.GridLineData.MaxGridValueX - _GraphModel.GridLineData.MinGridValueX) / (maxposx - minposx);
-                    currentmin = _GraphModel.GridLineData.MinGridValueX;
+
+                    double minposy = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY2.Height / 2);
+                    double maxposy = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY2.Height / 2);
+
+                    double valueperpointy = 0;
+                    double currentmin = 0;
+                    if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
+                    {
+                        valueperpointy = _ZoomValueY / (maxposy - minposy);
+                        currentmin = _ZoomMinValueY;
+                    }
+                    else
+                    {
+                        valueperpointy = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxposy - minposy);
+                        currentmin = _GraphModel.GridLineData.MinGridValueY;
+                    }
+
+                    Thickness marginup = _GraphModel.UpperMeasureModelY.Margin;
+                    marginup.Top = maxposy - ((Convert.ToDouble(_MeasureY1Pos1) - currentmin) / valueperpointy);
+
+                    Thickness margindown = _GraphModel.LowerMeasureModelY.Margin;
+                    margindown.Top = maxposy - ((Convert.ToDouble(_MeasureY1Pos2) - currentmin) / valueperpointy);
+
+                    if (marginup.Top < minposy || marginup.Top > maxposy || margindown.Top < minposy || margindown.Top > maxposy)
+                    {
+                        _IsMeasureYShown = false;
+                        if (marginup.Top < minposy)
+                            marginup.Top = minposy;
+                        else if (marginup.Top > maxposy)
+                            marginup.Top = maxposy;
+
+                        if (margindown.Top < minposy)
+                            margindown.Top = minposy;
+                        else if (margindown.Top > maxposy)
+                            margindown.Top = maxposy;
+                    }
+                    else
+                        _IsMeasureYShown = true;
+
+                    _GraphModel.UpperMeasureModelY.Margin = marginup;
+                    _GraphModel.LowerMeasureModelY.Margin = margindown;
                 }
 
-                Thickness marginup = _GraphModel.UpperMeasureModelX.Margin;
-                marginup.Left = ((Convert.ToDouble(_MeasureXPos1) - currentmin) / valueperpointx) + minposx;
-
-                Thickness margindown = _GraphModel.LowerMeasureModelX.Margin;
-                margindown.Left = ((Convert.ToDouble(_MeasureXPos2) - currentmin) / valueperpointx) + minposx;
-
-                if (marginup.Left < minposx || marginup.Left > maxposx || margindown.Left < minposx || margindown.Left > maxposx)
+                if (_MeasureY2Pos1 != null && _MeasureY2Pos2 != null)
                 {
-                    _IsMeasureXShown = false;
-                    if (marginup.Left < minposx)
-                        marginup.Left = minposx;
-                    else if (marginup.Left > maxposx)
-                        marginup.Left = maxposx;
+                    double minposy = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY.Height / 2);
+                    double maxposy = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY.Height / 2);
 
-                    if (margindown.Left < minposx)
-                        margindown.Left = minposx;
-                    else if (margindown.Left > maxposx)
-                        margindown.Left = maxposx;
+                    double valueperpointy = 0;
+                    double currentmin = 0;
+                    if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
+                    {
+                        valueperpointy = _ZoomValueY / (maxposy - minposy);
+                        currentmin = _ZoomMinValueY;
+                    }
+                    else
+                    {
+                        valueperpointy = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxposy - minposy);
+                        currentmin = _GraphModel.GridLineData.MinGridValueY;
+                    }
+
+                    Thickness marginup = _GraphModel.UpperMeasureModelY2.Margin;
+                    marginup.Top = maxposy - ((Convert.ToDouble(_MeasureY2Pos1) - currentmin) / valueperpointy);
+
+                    Thickness margindown = _GraphModel.LowerMeasureModelY2.Margin;
+                    margindown.Top = maxposy - ((Convert.ToDouble(_MeasureY2Pos2) - currentmin) / valueperpointy);
+
+                    if (marginup.Top < minposy || marginup.Top > maxposy || margindown.Top < minposy || margindown.Top > maxposy)
+                    {
+                        _IsMeasureY2Shown = false;
+                        if (marginup.Top < minposy)
+                            marginup.Top = minposy;
+                        else if (marginup.Top > maxposy)
+                            marginup.Top = maxposy;
+
+                        if (margindown.Top < minposy)
+                            margindown.Top = minposy;
+                        else if (margindown.Top > maxposy)
+                            margindown.Top = maxposy;
+                    }
+                    else
+                        _IsMeasureY2Shown = true;
+
+                    _GraphModel.UpperMeasureModelY2.Margin = marginup;
+                    _GraphModel.LowerMeasureModelY2.Margin = margindown;
+
                 }
-                else
-                    _IsMeasureXShown = true;
-
-                _GraphModel.UpperMeasureModelX.Margin = marginup;
-                _GraphModel.LowerMeasureModelX.Margin = margindown;
-
             }
-
-            if (_MeasureY1Pos1 != null && _MeasureY1Pos2 != null)
+            catch (Exception ex)
             {
-
-                double minposy = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY2.Height / 2);
-                double maxposy = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY2.Height / 2);
-
-                double valueperpointy = 0;
-                double currentmin = 0;
-                if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
-                {
-                    valueperpointy = _ZoomValueY / (maxposy - minposy);
-                    currentmin = _ZoomMinValueY;
-                }
-                else
-                {
-                    valueperpointy = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxposy - minposy);
-                    currentmin = _GraphModel.GridLineData.MinGridValueY;
-                }
-
-                Thickness marginup = _GraphModel.UpperMeasureModelY.Margin;
-                marginup.Top = maxposy - ((Convert.ToDouble(_MeasureY1Pos1) - currentmin) / valueperpointy);
-
-                Thickness margindown = _GraphModel.LowerMeasureModelY.Margin;
-                margindown.Top = maxposy - ((Convert.ToDouble(_MeasureY1Pos2) - currentmin) / valueperpointy);
-
-                if (marginup.Top < minposy || marginup.Top > maxposy || margindown.Top < minposy || margindown.Top > maxposy)
-                {
-                    _IsMeasureYShown = false;
-                    if (marginup.Top < minposy)
-                        marginup.Top = minposy;
-                    else if (marginup.Top > maxposy)
-                        marginup.Top = maxposy;
-
-                    if (margindown.Top < minposy)
-                        margindown.Top = minposy;
-                    else if (margindown.Top > maxposy)
-                        margindown.Top = maxposy;
-                }
-                else
-                    _IsMeasureYShown = true;
-
-                _GraphModel.UpperMeasureModelY.Margin = marginup;
-                _GraphModel.LowerMeasureModelY.Margin = margindown;
-            }
-
-            if (_MeasureY2Pos1 != null && _MeasureY2Pos2 != null)
-            {
-                double minposy = _GraphModel.GridLineData.Margin.Top - (_GraphModel.UpperMeasureModelY.Height / 2);
-                double maxposy = _GraphModel.GridLineData.Margin.Top + height - (_GraphModel.LowerMeasureModelY.Height / 2);
-
-                double valueperpointy = 0;
-                double currentmin = 0;
-                if (_IsZoom || _IsAxisYZoom && !_IsRealTime)
-                {
-                    valueperpointy = _ZoomValueY / (maxposy - minposy);
-                    currentmin = _ZoomMinValueY;
-                }
-                else
-                {
-                    valueperpointy = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / (maxposy - minposy);
-                    currentmin = _GraphModel.GridLineData.MinGridValueY;
-                }
-
-                Thickness marginup = _GraphModel.UpperMeasureModelY2.Margin;
-                marginup.Top = maxposy - ((Convert.ToDouble(_MeasureY2Pos1) - currentmin) / valueperpointy);
-
-                Thickness margindown = _GraphModel.LowerMeasureModelY2.Margin;
-                margindown.Top = maxposy - ((Convert.ToDouble(_MeasureY2Pos2) - currentmin) / valueperpointy);
-
-                if (marginup.Top < minposy || marginup.Top > maxposy || margindown.Top < minposy || margindown.Top > maxposy)
-                {
-                    _IsMeasureY2Shown = false;
-                    if (marginup.Top < minposy)
-                        marginup.Top = minposy;
-                    else if (marginup.Top > maxposy)
-                        marginup.Top = maxposy;
-
-                    if (margindown.Top < minposy)
-                        margindown.Top = minposy;
-                    else if (margindown.Top > maxposy)
-                        margindown.Top = maxposy;
-                }
-                else
-                    _IsMeasureY2Shown = true;
-
-                _GraphModel.UpperMeasureModelY2.Margin = marginup;
-                _GraphModel.LowerMeasureModelY2.Margin = margindown;
-
+                _Log4NetClass.ShowError(ex.ToString(), "RefreshMeasurePos");
             }
         }
 
@@ -4730,21 +4913,28 @@ namespace GraphLib
         /// <param name="isOn">if on or off</param>
         private void ShowButtonImageMeasure(Button button, string axis, bool isOn)
         {
-            string imgprefix = "Img";
-            string imgname = string.Empty;
-
-            if (button != null)
+            try
             {
-                ResourceDictionary resource = new ResourceDictionary();
-                resource.Source = new Uri("/GraphLib;component/Resource.xaml",
-                                     UriKind.RelativeOrAbsolute);
+                string imgprefix = "Img";
+                string imgname = string.Empty;
 
-                if (isOn)
-                    imgname = imgprefix + axis + "On";
-                else
-                    imgname = imgprefix + axis + "Off";
+                if (button != null)
+                {
+                    ResourceDictionary resource = new ResourceDictionary();
+                    resource.Source = new Uri("/GraphLib;component/Resource.xaml",
+                                         UriKind.RelativeOrAbsolute);
 
-                button.Background = new ImageBrush((ImageSource)resource[imgname]);
+                    if (isOn)
+                        imgname = imgprefix + axis + "On";
+                    else
+                        imgname = imgprefix + axis + "Off";
+
+                    button.Background = new ImageBrush((ImageSource)resource[imgname]);
+                }
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "ShowButtonImageMeasure");
             }
         }
 
@@ -4756,77 +4946,90 @@ namespace GraphLib
         /// <param name="isOn">if on or off</param>
         private void ShowButtonZoom(Button button, bool isZoomIn, bool isOn)
         {
-            string imgname = string.Empty;
-
-            if (button != null)
+            try
             {
-                ResourceDictionary resource = new ResourceDictionary();
-                resource.Source = new Uri("/GraphLib;component/Resource.xaml",
-                                     UriKind.RelativeOrAbsolute);
+                string imgname = string.Empty;
 
-                if (isZoomIn)
-                    imgname = "ImgZoomIn_";
-                else
-                    imgname = "ImgZoomOut_";
+                if (button != null)
+                {
+                    ResourceDictionary resource = new ResourceDictionary();
+                    resource.Source = new Uri("/GraphLib;component/Resource.xaml",
+                                         UriKind.RelativeOrAbsolute);
 
-                if (isOn)
-                    imgname = imgname + "ON";
-                else
-                    imgname = imgname + "OFF";
+                    if (isZoomIn)
+                        imgname = "ImgZoomIn_";
+                    else
+                        imgname = "ImgZoomOut_";
 
-                button.Background = new ImageBrush((ImageSource)resource[imgname]);
+                    if (isOn)
+                        imgname = imgname + "ON";
+                    else
+                        imgname = imgname + "OFF";
+
+                    button.Background = new ImageBrush((ImageSource)resource[imgname]);
+                }
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "ShowButtonZoom");
             }
         }
 
         private void AddMeasureModule(bool isMeasure, string measureName, Canvas measureContainer)
         {
-
-            Canvas upper = null;
-            Canvas lower = null;
-            Canvas lblcanvas = null;
-
-            if (measureName == "X")
+            try
             {
-                upper = _GraphModel.UpperMeasureModelX;
-                lower = _GraphModel.LowerMeasureModelX;
-                lblcanvas = _GraphModel.MeasureLabelX.Model;
-                upper.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelX_MouseDown);
-                lower.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelX_MouseDown);
-            }
-            else if (measureName == "Y")
-            {
-                upper = _GraphModel.UpperMeasureModelY;
-                lower = _GraphModel.LowerMeasureModelY;
-                lblcanvas = _GraphModel.MeasureLabelY.Model;
-                upper.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY_MouseDown);
-                lower.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY_MouseDown);
-            }
-            else if (measureName == "Y2")
-            {
-                upper = _GraphModel.UpperMeasureModelY2;
-                lower = _GraphModel.LowerMeasureModelY2;
-                lblcanvas = _GraphModel.MeasureLabelY2.Model;
-                upper.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY2_MouseDown);
-                lower.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY2_MouseDown);
-            }
+                Canvas upper = null;
+                Canvas lower = null;
+                Canvas lblcanvas = null;
+
+                if (measureName == "X")
+                {
+                    upper = _GraphModel.UpperMeasureModelX;
+                    lower = _GraphModel.LowerMeasureModelX;
+                    lblcanvas = _GraphModel.MeasureLabelX.Model;
+                    upper.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelX_MouseDown);
+                    lower.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelX_MouseDown);
+                }
+                else if (measureName == "Y")
+                {
+                    upper = _GraphModel.UpperMeasureModelY;
+                    lower = _GraphModel.LowerMeasureModelY;
+                    lblcanvas = _GraphModel.MeasureLabelY.Model;
+                    upper.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY_MouseDown);
+                    lower.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY_MouseDown);
+                }
+                else if (measureName == "Y2")
+                {
+                    upper = _GraphModel.UpperMeasureModelY2;
+                    lower = _GraphModel.LowerMeasureModelY2;
+                    lblcanvas = _GraphModel.MeasureLabelY2.Model;
+                    upper.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY2_MouseDown);
+                    lower.MouseDown += new MouseButtonEventHandler(this.UpperMeasureModelY2_MouseDown);
+                }
 
 
-            if (!isMeasure)
-            {
-                upper.Visibility = System.Windows.Visibility.Collapsed;
-                lower.Visibility = System.Windows.Visibility.Collapsed;
-                lblcanvas.Visibility = System.Windows.Visibility.Collapsed;
-            }
-            else
-            {
-                upper.Visibility = System.Windows.Visibility.Visible;
-                lower.Visibility = System.Windows.Visibility.Visible;
-                lblcanvas.Visibility = System.Windows.Visibility.Visible;
-            }
+                if (!isMeasure)
+                {
+                    upper.Visibility = System.Windows.Visibility.Collapsed;
+                    lower.Visibility = System.Windows.Visibility.Collapsed;
+                    lblcanvas.Visibility = System.Windows.Visibility.Collapsed;
+                }
+                else
+                {
+                    upper.Visibility = System.Windows.Visibility.Visible;
+                    lower.Visibility = System.Windows.Visibility.Visible;
+                    lblcanvas.Visibility = System.Windows.Visibility.Visible;
+                }
 
-            measureContainer.Children.Add(upper);
-            measureContainer.Children.Add(lower);
-            measureContainer.Children.Add(lblcanvas);
+                measureContainer.Children.Add(upper);
+                measureContainer.Children.Add(lower);
+                measureContainer.Children.Add(lblcanvas);
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "AddMeasureModule");
+            }
         }
 
         /// <summary>
@@ -4835,28 +5038,36 @@ namespace GraphLib
         /// <returns></returns>
         private bool CheckChannelInfoIsSame()
         {
-            ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
-            bool chksame = true;
-
-            if (chInfo != null && chInfo.Length > 0)
+            try
             {
-                if (_CurrentChInfo != null && _CurrentChInfo.Length == chInfo.Length)
+                ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
+                bool chksame = true;
+
+                if (chInfo != null && chInfo.Length > 0)
                 {
-                    for (int i = 0; i < chInfo.Length; i++)
+                    if (_CurrentChInfo != null && _CurrentChInfo.Length == chInfo.Length)
                     {
-                        if ((_CurrentChInfo[i].CHColor != chInfo[i].CHColor) || (_CurrentChInfo[i].CHNo != chInfo[i].CHNo) ||
-                            (_CurrentChInfo[i].IsEnabled != chInfo[i].IsEnabled) || (_CurrentChInfo[i].CHName != chInfo[i].CHName))
+                        for (int i = 0; i < chInfo.Length; i++)
                         {
-                            chksame = false;
-                            break;
+                            if ((_CurrentChInfo[i].CHColor != chInfo[i].CHColor) || (_CurrentChInfo[i].CHNo != chInfo[i].CHNo) ||
+                                (_CurrentChInfo[i].IsEnabled != chInfo[i].IsEnabled) || (_CurrentChInfo[i].CHName != chInfo[i].CHName))
+                            {
+                                chksame = false;
+                                break;
+                            }
                         }
                     }
+                    else
+                        chksame = false;
                 }
-                else
-                    chksame = false;
-            }
 
-            return chksame;
+                return chksame;
+            }
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "CheckChannelInfoIsSame");
+                return false;
+            }
         }
         /// <summary>
         /// Create Legend Panel
@@ -4864,51 +5075,58 @@ namespace GraphLib
         /// <param name="chInfo"></param>
         private void CreateLegendPanel()
         {
-            ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
-
-            if (chInfo != null && chInfo.Length > 0)
+            try
             {
+                ChannelInfo[] chInfo = _GraphInfo.ChannelInfos.ToArray();
 
-                _CurrentChInfo = chInfo;
-                gridLegend.RowDefinitions.Clear();
-                gridLegend.Children.Clear();
-                this.ShowLegend = true;
-
-                for (int i = 0; i < chInfo.Length; i++)
+                if (chInfo != null && chInfo.Length > 0)
                 {
-                    RowDefinition r = new RowDefinition();
-                    r.Height = new GridLength(27, GridUnitType.Pixel);
 
-                    gridLegend.RowDefinitions.Add(r);
+                    _CurrentChInfo = chInfo;
+                    gridLegend.RowDefinitions.Clear();
+                    gridLegend.Children.Clear();
+                    this.ShowLegend = true;
 
-                    Rectangle rect = new Rectangle();
-                    rect.Name = "rectLgLine" + i.ToString();
-                    rect.Width = 12;
-                    rect.Height = 12;
-                    rect.Stroke = new SolidColorBrush(Colors.Black);
-                    rect.Fill = new SolidColorBrush(chInfo[i].CHColor);
-                    rect.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                    rect.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                    rect.Margin = new Thickness(5, 0, 0, 3);
-                    Grid.SetColumn(rect, 0);
-                    Grid.SetRow(rect, i);
-                    gridLegend.Children.Add(rect);
+                    for (int i = 0; i < chInfo.Length; i++)
+                    {
+                        RowDefinition r = new RowDefinition();
+                        r.Height = new GridLength(27, GridUnitType.Pixel);
 
-                    Label label = new Label();
-                    label.Name = "lblLgName" + i.ToString();
-                    label.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                    label.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                    label.Margin = new Thickness(5, 0, 0, 3);
-                    label.Content = chInfo[i].CHName;
-                    label.FontSize = 12;
-                    Grid.SetColumn(label, 1);
-                    Grid.SetRow(label, i);
+                        gridLegend.RowDefinitions.Add(r);
 
-                    gridLegend.Children.Add(label);
+                        Rectangle rect = new Rectangle();
+                        rect.Name = "rectLgLine" + i.ToString();
+                        rect.Width = 12;
+                        rect.Height = 12;
+                        rect.Stroke = new SolidColorBrush(Colors.Black);
+                        rect.Fill = new SolidColorBrush(chInfo[i].CHColor);
+                        rect.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        rect.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                        rect.Margin = new Thickness(5, 0, 0, 3);
+                        Grid.SetColumn(rect, 0);
+                        Grid.SetRow(rect, i);
+                        gridLegend.Children.Add(rect);
+
+                        Label label = new Label();
+                        label.Name = "lblLgName" + i.ToString();
+                        label.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        label.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                        label.Margin = new Thickness(5, 0, 0, 3);
+                        label.Content = chInfo[i].CHName;
+                        label.FontSize = 12;
+                        Grid.SetColumn(label, 1);
+                        Grid.SetRow(label, i);
+
+                        gridLegend.Children.Add(label);
+                    }
                 }
+                else
+                    this.ShowLegend = false;
             }
-            else
-                this.ShowLegend = false;
+            catch (Exception ex)
+            {
+                _Log4NetClass.ShowError(ex.ToString(), "CreateLegendPanel");
+            }
         }
         #endregion
 

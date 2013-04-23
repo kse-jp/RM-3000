@@ -147,6 +147,8 @@ namespace Graph3DLib
         /// delegate ThreadGraphShapeDelegate
         /// </summary>
         private delegate void ThreadAnimationDelegate();
+
+        private ThreadAnimationDelegate _ThreadAnimationDelegate = null;
         /// <summary>
         /// Thread Animation
         /// </summary>
@@ -868,7 +870,7 @@ namespace Graph3DLib
         {
             try
             {
-                if (_AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
+                if (_AnimationControl != null && _AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
                     _MeterTimer.Start();
                 else
                     circularMeter.DrawArraw(circularMeter.StartDegree, true);
@@ -1131,22 +1133,18 @@ namespace Graph3DLib
         /// OnAnimation Created event
         /// </summary>
         /// <param name="animationClock"></param>
-        private void OnAnimationCreated(AnimationClock[][] animationClock)
+        private void OnAnimationCreated(ref AnimationCtrl animationCtrl)
         {
             try
             {
-                if (_AnimationControl != null)
-                {
-                    _AnimationControl.AnimationCompleted -= OnAnimationControlCompleted;
-                }
+                //_AnimationControl = new AnimationCtrl(_MachineModel, animationClock);
+                _AnimationControl = animationCtrl;
+                _AnimationControl.AnimationCompleted += new AnimationCtrl.AnimationCompletedEventHandler(this.OnAnimationControlCompleted);
 
-                _AnimationControl = new AnimationCtrl(_MachineModel, animationClock);
-                _AnimationControl.AnimationCompleted += OnAnimationControlCompleted;
             }
             catch (Exception ex)
             {
                 _Log4NetClass.ShowError(ex.ToString(), "OnAnimationCreated");
-                throw ex;
             }
         }
 
@@ -1519,10 +1517,20 @@ namespace Graph3DLib
                 if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
                 {
 
-                    _ThreadAnimation.MachineModel = _MachineModel;
+                    _ThreadAnimationDelegate = null;
+                    if (_ThreadAnimationDelegate == null)
+                    {
+                        _ThreadAnimationDelegate = new ThreadAnimationDelegate(_ThreadAnimation.Create);
+                    }
+
+                    if (_ThreadAnimation.MachineModel == null)
+                        _ThreadAnimation.MachineModel = _MachineModel;
+
+                    if (_ThreadAnimation.Tranform3DGroups == null)
+                        _ThreadAnimation.Tranform3DGroups = _GraphController.Tranform3DGroups;
+
                     _ThreadAnimation.TranslateData = _GraphController.TranslateData;
-                    _ThreadAnimation.Tranform3DGroups = _GraphController.Tranform3DGroups;
-                    this.Dispatcher.Invoke(new ThreadAnimationDelegate(_ThreadAnimation.Create), DispatcherPriority.Send);
+                    this.Dispatcher.Invoke(_ThreadAnimationDelegate, DispatcherPriority.Send);
                 }
             }
             catch (System.Threading.ThreadAbortException tabort)
@@ -1547,23 +1555,28 @@ namespace Graph3DLib
                 {
                     if (_AnimationControl.Status == AnimationStatus.Stop)
                     {
-                        bool ret = _AnimationControl.Start();
-                        if (ret)
-                        {
-                            System.Threading.Thread.Sleep(100);
-                            if (_AnimationControl.CurrentState == ClockState.Stopped)
-                            {
-                                _Log4NetClass.ShowWarning("RestartAnimation", "StartAnimation");
-                                _AnimationControl.Start();                                
-                            }
+                        if (_AnimationSpeed != 1)
+                            _AnimationControl.SetSpeed(_AnimationSpeed);
+                        //_AnimationControl.SetSpeed(3600);
 
-                            if (_AnimationSpeed != 1)
-                                _AnimationControl.SetSpeed(_AnimationSpeed);                                
+                        Dispatcher.BeginInvoke(new Action(_AnimationControl.StartInvoke), null);
+                        _IsAnimationStart = true;
+                        //bool ret = _AnimationControl.Start();
+                        //if (ret)
+                        //{
+                        //System.Threading.Thread.Sleep(10);
+                        //if (_AnimationControl.CurrentState == ClockState.Stopped)
+                        //{
+                        //    _Log4NetClass.ShowWarning("RestartAnimation", "StartAnimation");                               
+                        //    _AnimationControl.Start();
+                        //}
 
-                            _IsAnimationStart = true;
-                            _MeterTimer.Start();
-                            Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
-                        }
+
+
+                        //_IsAnimationStart = true;
+                        _MeterTimer.Start();
+                        Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
+                        //}
 
                     }
                     else if (_AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
@@ -1638,12 +1651,10 @@ namespace Graph3DLib
         {
             try
             {
-
+                _AnimationSpeed = speedRatio;
                 if (_AnimationControl != null)
                 {
                     _AnimationControl.SetSpeed(speedRatio);
-                    _AnimationSpeed = speedRatio;
-
                 }
 
             }
@@ -1898,14 +1909,19 @@ namespace Graph3DLib
                     _GraphController.ClearData();
 
                 if (_ThreadAnimation != null)
-                    Dispatcher.Invoke(new Action(_ThreadAnimation.ClearAnimation), DispatcherPriority.Send);
+                    _ThreadAnimation.ClearAnimation();
 
                 if (_AnimationControl != null)
-                    Dispatcher.Invoke(new Action(_AnimationControl.ClearClock), DispatcherPriority.Send);
+                {
+                    _AnimationControl.ClearClock();
+                    _AnimationControl.AnimationCompleted -= new AnimationCtrl.AnimationCompletedEventHandler(this.OnAnimationControlCompleted);
+                    _AnimationControl = null;
+                }
 
                 if (_MeterTimer != null)
                     _MeterTimer.Stop();
 
+                GC.Collect();
             }
             catch (Exception ex)
             {

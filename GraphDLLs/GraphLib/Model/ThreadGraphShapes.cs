@@ -213,6 +213,24 @@ namespace GraphLib.Model
                         if (this._GraphModel.GraphPlotData.Count == 1)
                             startline = i;
                     }
+                    else if (realpoint[0] > _GraphModel.GridLineData.MaxGridValueX)
+                    {
+                        double rawx = (realpoint[0] - _GraphModel.GridLineData.MinGridValueX + startpos) / (plotvaluex);
+                        realpoint[0] = (rawx * graphwidth);
+
+                        for (int gcount = 0; gcount < _GraphModel.MaxGraphNo; gcount++)
+                        {
+                            int chpos = _GraphModel.ChannelNumber[gcount];
+
+                            double rawy = (realpoint[chpos] - _GraphModel.GridLineData.MinGridValueY) / (plotvaluey);
+
+                            realpoint[chpos] = graphheight - (rawy * graphheight) - _GraphModel.GridLineData.LineThick;
+                        }
+
+                        this._GraphModel.GraphPlotData.Add(realpoint);
+                        break;
+                    }
+
                 }
 
                 return startline;

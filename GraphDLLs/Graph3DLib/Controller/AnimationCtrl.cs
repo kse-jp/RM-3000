@@ -28,11 +28,12 @@ namespace Graph3DLib.Controller
         /// <summary>
         /// animation clock 
         /// </summary>
-        private AnimationClock[][] _AnimationClock;
+        private AnimationClock[][] _AnimationClock = null;
+        private ClockGroup _ClockGroup = null;
         /// <summary>
         /// machine model class
         /// </summary>
-        private MachineModel _MachineModel;
+        //private MachineModel _MachineModel = null;
         /// <summary>
         /// check is pause
         /// </summary>
@@ -44,11 +45,11 @@ namespace Graph3DLib.Controller
         /// <summary>
         /// Initital TargetType
         /// </summary>
-        private TargetType _TargetBase;
+        //private TargetType _TargetBase;
         /// <summary>
         /// Initital Keyframe
         /// </summary>
-        private AnimationKeyFrame _KeyFrameTypeBase;
+        //private AnimationKeyFrame _KeyFrameTypeBase;
         #endregion
 
         #region Delegate
@@ -60,7 +61,7 @@ namespace Graph3DLib.Controller
         /// <summary>
         /// event Animation Completed 
         /// </summary>
-        public event AnimationCompletedEventHandler AnimationCompleted;
+        public event AnimationCompletedEventHandler AnimationCompleted = null;
         #endregion
 
         #region Public Properties
@@ -76,12 +77,17 @@ namespace Graph3DLib.Controller
                 try
                 {
 
-                    if (_AnimationClock != null)
-                        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
-                            if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime != null)
-                            {
-                                outp = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime;
-                            }
+                    //if (_AnimationClock != null)
+                    //    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
+                    //        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime != null)
+                    //        {
+                    //            outp = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime;
+                    //        }
+
+                    if (_ClockGroup != null && _ClockGroup.Controller != null && _ClockGroup.Controller.Clock != null)
+                    {
+                        outp = (TimeSpan)_ClockGroup.Controller.Clock.CurrentTime;
+                    }
                     return outp;
                 }
                 catch (Exception ex)
@@ -104,13 +110,20 @@ namespace Graph3DLib.Controller
                 try
                 {
 
-                    if (_AnimationClock != null)
-                        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
-                            if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime != null)
-                            {
-                                TimeSpan timespan = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime;
-                                outp = timespan.TotalMilliseconds;
-                            }
+                    //if (_AnimationClock != null)
+                    //    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
+                    //        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime != null)
+                    //        {
+                    //            TimeSpan timespan = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentTime;
+                    //            outp = timespan.TotalMilliseconds;
+                    //        }
+
+                    if (_ClockGroup != null && _ClockGroup.Controller != null && _ClockGroup.Controller.Clock != null && _ClockGroup.Controller.Clock.CurrentTime != null)
+                    {
+                        TimeSpan timespan = (TimeSpan)_ClockGroup.Controller.Clock.CurrentTime;
+                        outp = timespan.TotalMilliseconds;
+                    }
+
                     return outp;
                 }
                 catch (Exception ex)
@@ -132,12 +145,17 @@ namespace Graph3DLib.Controller
                 try
                 {
 
-                    if (_AnimationClock != null)
-                        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
-                            if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentState != null)
-                            {
-                                outp = (ClockState)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentState;
-                            }
+                    //if (_AnimationClock != null)
+                    //    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
+                    //        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentState != null)
+                    //        {
+                    //            outp = (ClockState)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Controller.Clock.CurrentState;
+                    //        }
+
+                    if (_ClockGroup != null && _ClockGroup.Controller != null && _ClockGroup.Controller.Clock != null && _ClockGroup.Controller.Clock.CurrentState != null)
+                        outp = (ClockState)_ClockGroup.Controller.Clock.CurrentState;
+
+
                     return outp;
                 }
                 catch (Exception ex)
@@ -156,12 +174,15 @@ namespace Graph3DLib.Controller
                 double duration = 0;
                 try
                 {
-                    if (_AnimationClock != null && _AnimationClock[(int)_TargetBase] != null)
-                        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration != null
-                           && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan != null)
-                        {
-                            duration = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan.TotalMilliseconds;
-                        }
+                    //if (_AnimationClock != null && _AnimationClock[(int)_TargetBase] != null)
+                    //    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration != null
+                    //       && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan != null)
+                    //    {
+                    //        duration = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan.TotalMilliseconds;
+                    //    }
+
+                    if (_ClockGroup != null && _ClockGroup.NaturalDuration != null)
+                        duration = _ClockGroup.NaturalDuration.TimeSpan.TotalMilliseconds;
                     return duration;
                 }
                 catch (Exception ex)
@@ -178,11 +199,14 @@ namespace Graph3DLib.Controller
                 TimeSpan duration = new TimeSpan();
                 try
                 {
-                    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration != null
-                        && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan != null)
-                    {
-                        duration = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan;
-                    }
+                    //if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration != null
+                    //    && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan != null)
+                    //{
+                    //    duration = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan;
+                    //}
+
+                    if (_ClockGroup != null && _ClockGroup.NaturalDuration != null)
+                        duration = _ClockGroup.NaturalDuration.TimeSpan;
                     return duration;
                 }
                 catch (Exception ex)
@@ -203,10 +227,13 @@ namespace Graph3DLib.Controller
                 double progress = 0;
                 try
                 {
-                    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentProgress != null)
-                    {
-                        progress = (double)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentProgress;
-                    }
+                    //if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null && _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentProgress != null)
+                    //{
+                    //    progress = (double)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentProgress;
+                    //}
+
+                    if (_ClockGroup != null && _ClockGroup.CurrentProgress != null)
+                        progress = (double)_ClockGroup.CurrentProgress;
                     return progress;
                 }
                 catch (Exception ex)
@@ -235,44 +262,52 @@ namespace Graph3DLib.Controller
         /// </summary>
         /// <param name="machineModel">machine model</param>
         /// <param name="keyFrames">animation keyframe</param>
-        public AnimationCtrl(MachineModel machineModel, AnimationClock[][] animationClock)
+        public AnimationCtrl(ref ClockGroup animationClock)
         {
             try
             {
-                bool searchfound = false;
-                _MachineModel = machineModel;
+                //bool searchfound = false;
+                //_MachineModel = machineModel;
                 if (animationClock == null)
-                    animationClock = new AnimationClock[6][];
+                    return;
 
-                _AnimationClock = animationClock;
+                _ClockGroup = animationClock;
 
-                for (int i = 0; i < _AnimationClock.Length; i++)
-                {
-                    for (int j = 0; j < _AnimationClock[i].Length; j++)
-                    {
-                        if (_AnimationClock[i][j] != null)
-                        {
-                            searchfound = true;
-                            _TargetBase = (TargetType)i;
-                            _KeyFrameTypeBase = (AnimationKeyFrame)j;
-                            break;
-                        }
-                    }
+                //for (int i = 0; i < _AnimationClock.Length; i++)
+                //{
+                //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                //    {
+                //        if (_AnimationClock[i][j] != null)
+                //        {
+                //            searchfound = true;
+                //            _TargetBase = (TargetType)i;
+                //            _KeyFrameTypeBase = (AnimationKeyFrame)j;
+                //            break;
+                //        }
+                //    }
 
-                    if (searchfound)
-                        break;
-                }
+                //    if (searchfound)
+                //        break;
+                //}
 
-                if (searchfound)
-                {
-                    _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Completed -= AnimationCtrl_Completed;
-                    _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Completed += new EventHandler(AnimationCtrl_Completed);
-                }
+                //if (searchfound)
+                //{
+                //    _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Completed -= new EventHandler(AnimationCtrl_Completed);
+                //    _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Completed += new EventHandler(this.AnimationCtrl_Completed);
+                //}
+                _ClockGroup.Completed -= new EventHandler(AnimationCtrl_Completed);
+                _ClockGroup.Completed += new EventHandler(this.AnimationCtrl_Completed);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        ~AnimationCtrl()
+        {
+            //_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Completed -= AnimationCtrl_Completed;
+            _ClockGroup = null;
         }
 
         #endregion
@@ -287,6 +322,8 @@ namespace Graph3DLib.Controller
         {
             try
             {
+                this.Stop();
+                //this.ClearClock();
                 if (AnimationCompleted != null)
                     AnimationCompleted(this.Duration);
             }
@@ -307,14 +344,23 @@ namespace Graph3DLib.Controller
         {
             try
             {
-                for (int i = 0; i < _AnimationClock.Length; i++)
+                if (_ClockGroup != null && _ClockGroup.Controller != null)
                 {
-                    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                    if (_ClockGroup.Controller.Clock.CurrentProgress != null && _ClockGroup.Controller.Clock.CurrentProgress == 1)
                     {
-                        if (_AnimationClock[i][j] != null)
-                            _AnimationClock[i][j].Controller.SpeedRatio = speedRatio;
+                        _ClockGroup.Controller.Begin();
                     }
+                    _ClockGroup.Controller.SpeedRatio = speedRatio;
+
                 }
+                //for (int i = 0; i < _AnimationClock.Length; i++)
+                //{
+                //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                //    {
+                //        if (_AnimationClock[i][j] != null)
+                //            _AnimationClock[i][j].Controller.SpeedRatio = speedRatio;
+                //    }
+                //}
 
             }
             catch (Exception ex)
@@ -331,14 +377,16 @@ namespace Graph3DLib.Controller
             try
             {
 
-                for (int i = 0; i < _AnimationClock.Length; i++)
-                {
-                    for (int j = 0; j < _AnimationClock[i].Length; j++)
-                    {
-                        if (_AnimationClock[i][j] != null)
-                            _AnimationClock[i][j].Controller.Resume();
-                    }
-                }
+                //for (int i = 0; i < _AnimationClock.Length; i++)
+                //{
+                //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                //    {
+                //        if (_AnimationClock[i][j] != null)
+                //            _AnimationClock[i][j].Controller.Resume();
+                //    }
+                //}
+                if (_ClockGroup != null)
+                    _ClockGroup.Controller.Resume();
                 _IsPause = false;
                 _AnimationStatus = AnimationStatus.Resume;
 
@@ -356,15 +404,16 @@ namespace Graph3DLib.Controller
         {
             try
             {
-                for (int i = 0; i < _AnimationClock.Length; i++)
-                {
-                    for (int j = 0; j < _AnimationClock[i].Length; j++)
-                    {
-                        if (_AnimationClock[i][j] != null)
-                            _AnimationClock[i][j].Controller.Pause();
-                    }
-                }
-
+                //for (int i = 0; i < _AnimationClock.Length; i++)
+                //{
+                //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                //    {
+                //        if (_AnimationClock[i][j] != null)
+                //            _AnimationClock[i][j].Controller.Pause();
+                //    }
+                //}
+                if (_ClockGroup != null)
+                    _ClockGroup.Controller.Pause();
                 _IsPause = true;
                 _AnimationStatus = AnimationStatus.Pause;
 
@@ -383,29 +432,44 @@ namespace Graph3DLib.Controller
         {
             try
             {
-                if (_AnimationClock != null)
+                if (_ClockGroup != null)
                 {
                     if (_IsPause)
                     {
+                        //TimeSpan current = new TimeSpan();
+                        //if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime != null)
+                        //    current = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime;
+
+                        //TimeSpan check = current + TimeSpan.FromMilliseconds(fwMillisec);
+
+                        //if (check.TotalMilliseconds >= _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan.TotalMilliseconds)
+                        //{
+                        //    check = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan - TimeSpan.FromMilliseconds(.5);
+                        //}
+
+
+                        //for (int i = 0; i < _AnimationClock.Length; i++)
+                        //{
+                        //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                        //    {
+                        //        if (_AnimationClock[i][j] != null)
+                        //            _AnimationClock[i][j].Controller.Seek(check, TimeSeekOrigin.BeginTime);
+                        //    }
+                        //}
+
                         TimeSpan current = new TimeSpan();
-                        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime != null)
-                            current = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime;
-
-                        TimeSpan check = current + TimeSpan.FromMilliseconds(fwMillisec);
-
-                        if (check.TotalMilliseconds >= _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan.TotalMilliseconds)
+                        if (_ClockGroup.CurrentTime != null)
                         {
-                            check = _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].NaturalDuration.TimeSpan - TimeSpan.FromMilliseconds(.5);
-                        }
+                            current = (TimeSpan)_ClockGroup.CurrentTime;
 
+                            TimeSpan check = current + TimeSpan.FromMilliseconds(fwMillisec);
 
-                        for (int i = 0; i < _AnimationClock.Length; i++)
-                        {
-                            for (int j = 0; j < _AnimationClock[i].Length; j++)
+                            if (check.TotalMilliseconds >= _ClockGroup.NaturalDuration.TimeSpan.TotalMilliseconds)
                             {
-                                if (_AnimationClock[i][j] != null)
-                                    _AnimationClock[i][j].Controller.Seek(check, TimeSeekOrigin.BeginTime);
+                                check = _ClockGroup.NaturalDuration.TimeSpan - TimeSpan.FromMilliseconds(.5);
                             }
+
+                            _ClockGroup.Controller.Seek(check, TimeSeekOrigin.BeginTime);
                         }
 
                     }
@@ -425,25 +489,38 @@ namespace Graph3DLib.Controller
         {
             try
             {
-                if (_AnimationClock != null)
+                if (_ClockGroup != null)
                 {
                     if (_IsPause)
                     {
+                        //TimeSpan current = new TimeSpan();
+                        //if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime != null)
+                        //    current = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime;
+
+                        //TimeSpan check = current - TimeSpan.FromMilliseconds(bkMillisec);
+                        //if (check.TotalMilliseconds < 0)
+                        //    bkMillisec = 0;
+
+                        //for (int i = 0; i < _AnimationClock.Length; i++)
+                        //{
+                        //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                        //    {
+                        //        if (_AnimationClock[i][j] != null)
+                        //            _AnimationClock[i][j].Controller.Seek(current - TimeSpan.FromMilliseconds(bkMillisec), TimeSeekOrigin.BeginTime);
+                        //    }
+                        //}
+
                         TimeSpan current = new TimeSpan();
-                        if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime != null)
-                            current = (TimeSpan)_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].CurrentTime;
-
-                        TimeSpan check = current - TimeSpan.FromMilliseconds(bkMillisec);
-                        if (check.TotalMilliseconds < 0)
-                            bkMillisec = 0;
-
-                        for (int i = 0; i < _AnimationClock.Length; i++)
+                        if (_ClockGroup.CurrentTime != null)
                         {
-                            for (int j = 0; j < _AnimationClock[i].Length; j++)
-                            {
-                                if (_AnimationClock[i][j] != null)
-                                    _AnimationClock[i][j].Controller.Seek(current - TimeSpan.FromMilliseconds(bkMillisec), TimeSeekOrigin.BeginTime);
-                            }
+                            current = (TimeSpan)_ClockGroup.CurrentTime;
+
+                            TimeSpan check = current - TimeSpan.FromMilliseconds(bkMillisec);
+                            if (check.TotalMilliseconds < 0)
+                                bkMillisec = 0;
+
+                            _ClockGroup.Controller.Seek(current - TimeSpan.FromMilliseconds(bkMillisec), TimeSeekOrigin.BeginTime);
+
                         }
                     }
                 }
@@ -512,27 +589,61 @@ namespace Graph3DLib.Controller
             try
             {
                 bool checkbegin = false;
-                if (_MachineModel != null)
-                {
-                    for (int i = 0; i < _AnimationClock.Length; i++)
-                    {
-                        for (int j = 0; j < _AnimationClock[i].Length; j++)
-                        {
-                            if (_AnimationClock[i][j] != null)
-                            {
-                                _AnimationClock[i][j].Controller.Begin();
-                                checkbegin = true;
-                            }
-                        }
-                    }
 
-                    if (checkbegin)
-                    {
-                        _IsPause = false;
-                        _AnimationStatus = AnimationStatus.Start;
-                    }
+                //for (int i = 0; i < _AnimationClock.Length; i++)
+                //{
+                //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                //    {
+                //        if (_AnimationClock[i][j] != null)
+                //        {
+                //            _AnimationClock[i][j].Controller.Begin();
+                //            checkbegin = true;
+                //        }
+                //    }
+                //}
+
+                if (_ClockGroup != null)
+                {
+                    _ClockGroup.Controller.Begin();
+                    _IsPause = false;
+                    _AnimationStatus = AnimationStatus.Start;
+                    checkbegin = true;
                 }
+                else
+                    checkbegin = false;
+
+
+                //if (checkbegin)
+                //{
+                //    _IsPause = false;
+                //    _AnimationStatus = AnimationStatus.Start;
+                //}
+
                 return checkbegin;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// start animation
+        /// </summary>
+        /// <returns></returns>
+        public void StartInvoke()
+        {
+            try
+            {
+                if (_ClockGroup != null)
+                {
+                    _ClockGroup.Controller.Begin();
+                    _IsPause = false;
+                    _AnimationStatus = AnimationStatus.Start;
+                }
+
             }
             catch (Exception ex)
             {
@@ -551,28 +662,38 @@ namespace Graph3DLib.Controller
 
                 if (_IsPause)
                 {
-                    for (int i = 0; i < _AnimationClock.Length; i++)
+                    //for (int i = 0; i < _AnimationClock.Length; i++)
+                    //{
+                    //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                    //    {
+                    //        if (_AnimationClock[i][j] != null)
+                    //        {
+                    //            _AnimationClock[i][j].Controller.Resume();
+                    //            _AnimationClock[i][j].Controller.Stop();
+                    //        }
+                    //    }
+                    //}
+
+                    if (_ClockGroup != null)
                     {
-                        for (int j = 0; j < _AnimationClock[i].Length; j++)
-                        {
-                            if (_AnimationClock[i][j] != null)
-                            {
-                                _AnimationClock[i][j].Controller.Resume();
-                                _AnimationClock[i][j].Controller.Stop();
-                            }
-                        }
+                        _ClockGroup.Controller.Resume();
+                        _ClockGroup.Controller.Stop();
                     }
                     _IsPause = false;
                 }
                 else
                 {
-                    for (int i = 0; i < _AnimationClock.Length; i++)
+                    //for (int i = 0; i < _AnimationClock.Length; i++)
+                    //{
+                    //    for (int j = 0; j < _AnimationClock[i].Length; j++)
+                    //    {
+                    //        if (_AnimationClock[i][j] != null)
+                    //            _AnimationClock[i][j].Controller.Stop();
+                    //    }
+                    //}
+                    if (_ClockGroup != null)
                     {
-                        for (int j = 0; j < _AnimationClock[i].Length; j++)
-                        {
-                            if (_AnimationClock[i][j] != null)
-                                _AnimationClock[i][j].Controller.Stop();
-                        }
+                        _ClockGroup.Controller.Stop();
                     }
                 }
                 _AnimationStatus = AnimationStatus.Stop;
@@ -591,26 +712,34 @@ namespace Graph3DLib.Controller
         {
             try
             {
-                if (_AnimationClock[(int)_TargetBase] != null)
-                    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
-                        _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Completed -= AnimationCtrl_Completed;
-
-                for (int i = 0; i < _AnimationClock.Length; i++)
+                if (_ClockGroup != null)
                 {
-                    if (_AnimationClock[i] != null)
-                    {
-                        for (int j = 0; j < _AnimationClock[i].Length; j++)
-                        {
-                            if (_AnimationClock[i][j] != null && _AnimationClock[i][j].Controller != null)
-                            {
-                                _AnimationClock[i][j].Controller.Stop();
-                                _AnimationClock[i][j].Controller.Remove();
-                            }
-                            _AnimationClock[i][j] = null;
-                        }
-                    }
-
+                    _ClockGroup.Completed -= new EventHandler(this.AnimationCtrl_Completed);
+                    if (_ClockGroup.Controller != null)
+                        _ClockGroup.Controller.Remove();
+                    _ClockGroup = null;
                 }
+
+                //if (_AnimationClock[(int)_TargetBase] != null)
+                //    if (_AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase] != null)
+                //        _AnimationClock[(int)_TargetBase][(int)_KeyFrameTypeBase].Completed -= new EventHandler(this.AnimationCtrl_Completed);               
+
+                //for (int i = 0; i < _AnimationClock.Length; i++)
+                //{
+                //    if (_AnimationClock[i] != null)
+                //    {
+                //        for (int j = 0; j < _AnimationClock[i].Length; j++)
+                //        {
+                //            if (_AnimationClock[i][j] != null && _AnimationClock[i][j].Controller != null)
+                //            {
+                //                //_AnimationClock[i][j].Controller.Stop();                                
+                //                _AnimationClock[i][j].Controller.Remove();
+                //            }
+                //            _AnimationClock[i][j] = null;
+                //        }
+                //    }
+
+                //}
             }
             catch (Exception ex)
             {

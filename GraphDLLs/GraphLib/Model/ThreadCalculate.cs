@@ -164,17 +164,33 @@ namespace GraphLib.Model
                             p1.Y = this._GraphPlotData[i][_GraphNo];
 
                             if (_IsLineGraph)
+                            {
+                                if (p1.X > _MaxGraphWidth)
+                                {
+                                    if (i - 1 >= 0 && i - 1 < this._GraphPlotData.Count)
+                                    {
+                                        //p1.X = _MaxGraphWidth;
+                                        p2.X = this._GraphPlotData[i - 1][0];
+                                        p2.Y = this._GraphPlotData[i - 1][_GraphNo];
+
+                                        p1 = CalcOverPlotPoint(p1, p2);
+                                    }
+                                }
                                 points.Add(p1);
+                            }
                             else
                             {
-                                p2.X = p1.X + dotwidth;
-                                p2.Y = p1.Y;
+                                if (p1.X <= _MaxGraphWidth)
+                                {
+                                    p2.X = p1.X + dotwidth;
+                                    p2.Y = p1.Y;
 
-                                if (p2.X > _MaxGraphWidth)
-                                    p2.X = _MaxGraphWidth;
+                                    if (p2.X > _MaxGraphWidth)
+                                        p2.X = _MaxGraphWidth;
 
-                                ctx.LineTo(new Point(p1.X - dotwidth, p1.Y), false, false);
-                                ctx.LineTo(p2, true, true);
+                                    ctx.LineTo(new Point(p1.X - dotwidth, p1.Y), false, false);
+                                    ctx.LineTo(p2, true, true);
+                                }
                             }
                         }
                     }
@@ -195,6 +211,52 @@ namespace GraphLib.Model
                 return steamgeo;
             }
 
+        }
+
+
+        #endregion
+
+        #region Private Function
+        /// <summary>
+        /// Calculate for plot when X is more than graph width.
+        /// </summary>
+        /// <param name="endPoint"></param>
+        /// <param name="startPoint"></param>
+        /// <returns></returns>
+        private Point CalcOverPlotPoint(Point endPoint, Point startPoint)
+        {
+            try
+            {
+                Vector basex = new Vector(1, 0);
+                Vector line = new Vector(endPoint.X - startPoint.X, endPoint.Y - startPoint.Y);
+                double angle = Vector.AngleBetween(basex, line);
+                double min = 0;
+                double max = 0;
+
+                if (endPoint.Y >= startPoint.Y)
+                {
+                    max = endPoint.Y;
+                    min = startPoint.Y;
+                }
+                else
+                {
+                    min = endPoint.Y;
+                    max = startPoint.Y;
+                }
+
+                double distance = _MaxGraphWidth - startPoint.X;
+
+                double y = startPoint.Y + (Math.Tan(angle * 0.0174532925) * distance);
+
+                if (!(y <= max && y >= min))
+                    y = endPoint.Y;
+
+                return new Point(_MaxGraphWidth, y);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         #endregion
     }

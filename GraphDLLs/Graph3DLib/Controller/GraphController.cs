@@ -461,28 +461,28 @@ namespace Graph3DLib.Controller
             try
             {
                 bool ret = false;
-                bool chkup = false;
-                int uppos = 0;
-                int downpos = 0;
+                //bool chkup = false;
+                //int uppos = 0;
+                //int downpos = 0;
 
                 for (int i = 0; i < inpData.Count; i++)
                 {
                     double[] rawdata = (double[])inpData[i].Clone();
 
-                    if (rawdata[_RamChannelPosition] > _HighValue && !chkup)
-                    {
-                        chkup = true;
-                        uppos = _GraphRawData.Count;
-                    }
+                    //if (rawdata[_RamChannelPosition] > _HighValue && !chkup)
+                    //{
+                    //    chkup = true;
+                    //    uppos = _GraphRawData.Count;
+                    //}
 
-                    if (rawdata[_RamChannelPosition] < _HighValue && chkup)
-                    {
-                        chkup = false;
-                        downpos = _GraphRawData.Count;
+                    //if (rawdata[_RamChannelPosition] < _HighValue && chkup)
+                    //{
+                    //    chkup = false;
+                    //    downpos = _GraphRawData.Count;
 
-                        System.Windows.Point point = new System.Windows.Point(uppos, downpos);
-                        _OverLimitPosition.Add(point);
-                    }
+                    //    System.Windows.Point point = new System.Windows.Point(uppos, downpos);
+                    //    _OverLimitPosition.Add(point);
+                    //}
 
 
 

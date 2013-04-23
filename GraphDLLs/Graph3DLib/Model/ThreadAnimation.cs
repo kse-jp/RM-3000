@@ -21,24 +21,23 @@ namespace Graph3DLib.Model
         /// <summary>
         /// Machine Model
         /// </summary>
-        private MachineModel _MachineModel;
+        private MachineModel _MachineModel = null;
         /// <summary>
         /// current key frame
         /// </summary>
-        private DoubleAnimationUsingKeyFrames[][] _AnimationKeyFrameData;
+        private DoubleAnimationUsingKeyFrames[][] _AnimationKeyFrameData = null;
         /// <summary>
         /// List of Translate Data
         /// </summary>
-        private List<TranslateData>[] _TranslateData;
+        private List<TranslateData>[] _TranslateData = null;
         /// <summary>
         /// animation clock 
         /// </summary>
-        private AnimationClock[][] _AnimationClock;
+        //private AnimationClock[][] _AnimationClock;
         /// <summary>
         /// delegate GraphCreatedEventHandler
         /// </summary>        
-        public delegate void AnimationCreated(AnimationClock[][] animationClock);
-        //public delegate void AnimationCreated(Storyboard storyBoard);
+        public delegate void AnimationCreated(ref AnimationCtrl animationCtrl);        
         /// <summary>   
         /// event GraphCreatedEventHandler
         /// </summary>
@@ -46,11 +45,20 @@ namespace Graph3DLib.Model
         /// <summary>
         /// Tranform 3D group of all model
         /// </summary>
-        private Transform3DGroup[] _Tranform3DGroups;
+        private Transform3DGroup[] _Tranform3DGroups = null;
         /// <summary>
         /// log class
         /// </summary>
-        private LogClass _Log4NetClass;
+        private LogClass _Log4NetClass = null;
+        /// <summary>
+        /// Animation Clock Group
+        /// </summary>
+        private ClockGroup _AnimationClockGroup = null;
+        /// <summary>
+        /// List for keep clock position
+        /// </summary>
+        private List<string> _ListClockPos = null;
+
         #endregion
 
         #region Public Properties
@@ -110,11 +118,11 @@ namespace Graph3DLib.Model
             try
             {
                 _AnimationKeyFrameData = new DoubleAnimationUsingKeyFrames[6][];
-                _AnimationClock = new AnimationClock[6][];
+                //_AnimationClock = new AnimationClock[6][];
 
                 for (int i = 0; i < 6; i++)
                 {
-                    _AnimationClock[i] = new AnimationClock[8];
+                    //_AnimationClock[i] = new AnimationClock[8];
                     _AnimationKeyFrameData[i] = new DoubleAnimationUsingKeyFrames[8];
                 }
             }
@@ -167,6 +175,17 @@ namespace Graph3DLib.Model
                         }
                     }
                 }
+
+                if (_AnimationKeyFrameData != null)
+                {
+                    for (int j = 0; j < _AnimationKeyFrameData.Length; j++)
+                    {
+                        for (int j1 = 0; j1 < _AnimationKeyFrameData[j].Length; j1++)
+                        {
+                            _AnimationKeyFrameData[j][j1] = null;
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -200,7 +219,20 @@ namespace Graph3DLib.Model
                     SetAnimationKeyframeFromUpperY(TargetType.UPPER);
                     SetAnimationKeyframeFromUpperY(TargetType.UPPER_PRESS);
 
-                    CreateAnimationClock();
+
+                    if (_ListClockPos != null)
+                        _ListClockPos.Clear();
+                    else
+                        _ListClockPos = new List<string>();
+
+                    ParallelTimeline pt = CreateAnimationClock();
+
+                    if (pt != null)
+                    {
+                        pt.Freeze();
+                        _AnimationClockGroup = pt.CreateClock();
+                    }
+
 
                     if (_Tranform3DGroups != null)
                     {
@@ -214,21 +246,27 @@ namespace Graph3DLib.Model
                         CreateAnimation(_Tranform3DGroups, AnimationKeyFrame.ScaleZ, ScaleTransform3D.ScaleZProperty);
                     }
 
-                    for (int i = 0; i < _AnimationKeyFrameData.Length; i++)
-                    {
-                        for (int j = 0; j < _AnimationKeyFrameData[i].Length; j++)
-                        {
-                            if (_AnimationClock[i][j] != null)
-                            {
 
-                                _AnimationClock[i][j].Controller.Stop();
-                            }
-                        }
-                    }
+                    //for (int i = 0; i < _AnimationKeyFrameData.Length; i++)
+                    //{
+                    //    for (int j = 0; j < _AnimationKeyFrameData[i].Length; j++)
+                    //    {
+                    //        if (_AnimationClock[i][j] != null)
+                    //        {
+                    //            _AnimationClock[i][j].Controller.Stop();
+                    //        }
+                    //    }
+                    //}
+
+                    //_AnimationClockGroup.Controller.Begin();
+
+
+                    AnimationCtrl animationctrl = new AnimationCtrl(ref _AnimationClockGroup);
+                    animationctrl.Stop();
 
                     if (OnAnimationCreated != null)
                     {
-                        OnAnimationCreated(_AnimationClock);
+                        OnAnimationCreated(ref animationctrl);
                     }
 
                 }
@@ -244,38 +282,47 @@ namespace Graph3DLib.Model
         /// <summary>
         /// Create Animation Clock
         /// </summary>
-        private void CreateAnimationClock()
+        private ParallelTimeline CreateAnimationClock()
         {
             try
             {
+                ParallelTimeline pt = new ParallelTimeline();
                 for (int i = 0; i < _AnimationKeyFrameData.Length; i++)
                 {
-                    if (_AnimationClock[i] != null)
+                    // if (_AnimationClock[i] != null)
+                    //{
+                    for (int j = 0; j < _AnimationKeyFrameData[i].Length; j++)
                     {
-                        for (int j = 0; j < _AnimationKeyFrameData[i].Length; j++)
+                        if (_AnimationKeyFrameData[i][j] != null)
                         {
-                            if (_AnimationKeyFrameData[i][j] != null)
-                            {
-                                if (_AnimationClock[i][j] != null)
-                                {
-                                    _AnimationClock[i][j].Controller.Stop();
-                                    _AnimationClock[i][j].Controller.Remove();
-                                    _AnimationClock[i][j] = null;
-                                }
+                            //if (_AnimationClock[i][j] != null)
+                            //{
+                            //    _AnimationClock[i][j].Controller.Stop();
+                            //    _AnimationClock[i][j].Controller.Remove();
 
-                                if (_AnimationClock[i][j] == null && _AnimationKeyFrameData[i][j].KeyFrames.Count > 0)
-                                {
-                                    _AnimationClock[i][j] = _AnimationKeyFrameData[i][j].CreateClock();
-                                }
+                            //    //_AnimationClock[i][j] = null;
+                            //}
+
+                            //if (_AnimationClock[i][j] == null && _AnimationKeyFrameData[i][j].KeyFrames.Count > 0)
+                            if (_AnimationKeyFrameData[i][j].KeyFrames.Count > 0)
+                            {
+                                _AnimationKeyFrameData[i][j].Freeze();
+                                pt.Children.Add(_AnimationKeyFrameData[i][j]);
+                                _ListClockPos.Add(i.ToString() + "," + j.ToString());
+                                //_AnimationClock[i][j] = _AnimationKeyFrameData[i][j].CreateClock();                                    
+
                             }
                         }
                     }
+                    // }
 
                 }
+                return pt;
             }
             catch (Exception ex)
             {
                 _Log4NetClass.ShowError(ex.ToString(), "CreateAnimationClock");
+                return null;
             }
         }
 
@@ -620,10 +667,16 @@ namespace Graph3DLib.Model
                 TranslateTransform3D translate = tranform as TranslateTransform3D;
                 RotateTransform3D rotate = tranform as RotateTransform3D;
                 ScaleTransform3D scale = tranform as ScaleTransform3D;
+                int idx = -1;
+                idx = _ListClockPos.FindIndex(delegate(string s) { return s == ((int)target).ToString() + "," + ((int)keyFramesType).ToString(); });
+
+                if (!(idx >= 0 && idx < _AnimationClockGroup.Children.Count))
+                    return;
 
                 if (translate != null)
                 {
-                    translate.ApplyAnimationClock(properties, _AnimationClock[(int)target][(int)keyFramesType], HandoffBehavior.SnapshotAndReplace);
+                    translate.ApplyAnimationClock(properties, (AnimationClock)_AnimationClockGroup.Children[idx], HandoffBehavior.SnapshotAndReplace);
+                    //translate.ApplyAnimationClock(properties, _AnimationClock[(int)target][(int)keyFramesType], HandoffBehavior.SnapshotAndReplace);                    
                 }
                 else if (rotate != null)
                 {
@@ -658,7 +711,9 @@ namespace Graph3DLib.Model
 
                     rotate.CenterY = center;
 
-                    axisrotate.ApplyAnimationClock(properties, _AnimationClock[(int)target][(int)keyFramesType], HandoffBehavior.SnapshotAndReplace);
+
+                    axisrotate.ApplyAnimationClock(properties, (AnimationClock)_AnimationClockGroup.Children[idx], HandoffBehavior.SnapshotAndReplace);
+                    //axisrotate.ApplyAnimationClock(properties, _AnimationClock[(int)target][(int)keyFramesType], HandoffBehavior.SnapshotAndReplace);
                 }
                 else if (scale != null)
                 {
@@ -701,8 +756,8 @@ namespace Graph3DLib.Model
 
                         scale.CenterZ = center;
                     }
-
-                    scale.ApplyAnimationClock(properties, _AnimationClock[(int)target][(int)keyFramesType], HandoffBehavior.SnapshotAndReplace);
+                    scale.ApplyAnimationClock(properties, (AnimationClock)_AnimationClockGroup.Children[idx], HandoffBehavior.SnapshotAndReplace);
+                    //scale.ApplyAnimationClock(properties, _AnimationClock[(int)target][(int)keyFramesType], HandoffBehavior.SnapshotAndReplace);
                 }
             }
             catch (Exception ex)
@@ -726,6 +781,7 @@ namespace Graph3DLib.Model
                 {
                     double data = Convert.ToDouble(dataInput);
                     doublekeyframe = new LinearDoubleKeyFrame(data, TimeSpan.FromSeconds(timePerPos));
+                    doublekeyframe.Freeze();
                 }
                 return doublekeyframe;
             }
@@ -747,15 +803,19 @@ namespace Graph3DLib.Model
                 for (int i = 0; i < _AnimationKeyFrameData[targetno].Length; i++)
                 {
 
-                    if (_AnimationKeyFrameData[targetno][i] == null)
-                    {
-                        _AnimationKeyFrameData[targetno][i] = new DoubleAnimationUsingKeyFrames();
-                        _AnimationKeyFrameData[targetno][i].KeyFrames = new DoubleKeyFrameCollection();
-                    }
-                    else
-                    {
-                        _AnimationKeyFrameData[targetno][i].KeyFrames.Clear();
-                    }
+                    //if (_AnimationKeyFrameData[targetno][i] == null)
+                    //{
+                    _AnimationKeyFrameData[targetno][i] = new DoubleAnimationUsingKeyFrames();
+                    _AnimationKeyFrameData[targetno][i].KeyFrames = new DoubleKeyFrameCollection();
+                    //}
+                    //else
+                    //{
+                    //    _AnimationKeyFrameData[targetno][i] = null;
+                    //    _AnimationKeyFrameData[targetno][i] = new DoubleAnimationUsingKeyFrames();
+                    //    _AnimationKeyFrameData[targetno][i].KeyFrames = new DoubleKeyFrameCollection();
+                    //    GC.Collect();
+                    //}
+
                 }
             }
             catch (Exception ex)
@@ -776,7 +836,7 @@ namespace Graph3DLib.Model
             {
                 for (int i = 0; i < _AnimationKeyFrameData.Length; i++)
                 {
-                    if (_AnimationKeyFrameData[i][(int)keyframe] != null)
+                    if (_AnimationKeyFrameData[i][(int)keyframe] != null && _AnimationKeyFrameData[i][(int)keyframe].KeyFrames.Count > 0)
                     {
                         TargetType target = (TargetType)i;
 

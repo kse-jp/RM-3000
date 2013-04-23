@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MSG_CSV_HEADER_OUTPUT" xml:space="preserve">
+    <value>Output header datas...　</value>
+    <comment>ヘッダー出力中</comment>
+  </data>
+  <data name="MSG_CSV_RECORD_OUTPUT" xml:space="preserve">
+    <value>Output measure datas...</value>
+    <comment>データ出力中</comment>
+  </data>
+  <data name="MSG_CALC_ERR_ASSINMENT_OPERATOR" xml:space="preserve">
+    <value>Not Found "="</value>
+    <comment>Not Found "="</comment>
+  </data>
+  <data name="MSG_CALC_ERR_EXP" xml:space="preserve">
+    <value>Expression-Field Error</value>
+    <comment>Expression-Field Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_EXPRESSION_NO_CH" xml:space="preserve">
+    <value>Not Found Expression-Chanel</value>
+    <comment>Not Found Expression-Chanel</comment>
+  </data>
+  <data name="MSG_CALC_ERR_EXTRA_PARAMETER" xml:space="preserve">
+    <value>Extra Parameter in function</value>
+    <comment>Extra Parameter in function</comment>
+  </data>
+  <data name="MSG_CALC_ERR_FORWARD_REF" xml:space="preserve">
+    <value>Warning-Forward Referencing</value>
+    <comment>Warning-Forward Referencing</comment>
+  </data>
+  <data name="MSG_CALC_ERR_FUNCTION" xml:space="preserve">
+    <value>Function Format Error</value>
+    <comment>Function Format Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_L_PARENTHESIS" xml:space="preserve">
+    <value>Required '('</value>
+    <comment>Required '('</comment>
+  </data>
+  <data name="MSG_CALC_ERR_L_VALUE" xml:space="preserve">
+    <value>L-Value Error</value>
+    <comment>L-Value Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_MEAS" xml:space="preserve">
+    <value>Measuring-Field Error</value>
+    <comment>Measuring-Field Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_MEAS_CH" xml:space="preserve">
+    <value>Measuring-Channel Error</value>
+    <comment>Measuring-Channel Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_MEAS_NO_CH" xml:space="preserve">
+    <value>Not Found Measuring Channel</value>
+    <comment>Not Found Measuring Channel</comment>
+  </data>
+  <data name="MSG_CALC_ERR_NO_EXP" xml:space="preserve">
+    <value>No Expression</value>
+    <comment>No Expression</comment>
+  </data>
+  <data name="MSG_CALC_ERR_NO_FILE" xml:space="preserve">
+    <value>Not Found Ini-File</value>
+    <comment>Not Found Ini-File</comment>
+  </data>
+  <data name="MSG_CALC_ERR_OVF_VALUE" xml:space="preserve">
+    <value>Value OverFlow</value>
+    <comment>Value OverFlow</comment>
+  </data>
+  <data name="MSG_CALC_ERR_PARENTHESIS" xml:space="preserve">
+    <value>Required '(' or ')'</value>
+    <comment>Required '(' or ')'</comment>
+  </data>
+  <data name="MSG_CALC_ERR_READ" xml:space="preserve">
+    <value>Ini-File Read Error</value>
+    <comment>Ini-File Read Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_R_PARENTHESIS" xml:space="preserve">
+    <value>Required ')'</value>
+    <comment>Required ')'</comment>
+  </data>
+  <data name="MSG_CALC_ERR_SYNTAX" xml:space="preserve">
+    <value>Expression Syntax Error</value>
+    <comment>Expression Syntax Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_SYSTEM" xml:space="preserve">
+    <value>System Error</value>
+    <comment>System Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_TEST" xml:space="preserve">
+    <value>Test-Files Error</value>
+    <comment>Test-Files Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_TEST_ERR_CH" xml:space="preserve">
+    <value>Test-Channel Error</value>
+    <comment>Test-Channel Error</comment>
+  </data>
+  <data name="MSG_CALC_ERR_TEST_ERR_NO_CH" xml:space="preserve">
+    <value>Not Found Test-Channel</value>
+    <comment>Not Found Test-Channel</comment>
+  </data>
+  <data name="MSG_CALC_ERR_TOO_FEW_PARAMETER" xml:space="preserve">
+    <value>Too Few Parameter in function</value>
+    <comment>Too Few Parameter in function</comment>
+  </data>
+  <data name="MSG_CALC_ERR_UNDEFINED" xml:space="preserve">
+    <value>Undeifned Symbol</value>
+    <comment>Undeifned Symbol</comment>
+  </data>
+  <data name="MSG_CALC_ERR_VALUE" xml:space="preserve">
+    <value>Numeric Value Error</value>
+    <comment>Numeric Value Error</comment>
+  </data>
+</root>

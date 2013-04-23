@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,7 +42,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,6 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridSetting = new System.Windows.Forms.DataGridView();
+            this.ColumnMeasureTarget = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,6 @@
             this.ColumnPointY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSensorNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMeasureDirection = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMeasureTarget = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSetting)).BeginInit();
@@ -245,6 +245,17 @@
             this.gridSetting.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSetting_CellEndEdit);
             this.gridSetting.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gridSetting_CellValidating);
             this.gridSetting.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.gridSetting_EditingControlShowing);
+            // 
+            // ColumnMeasureTarget
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnMeasureTarget.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ColumnMeasureTarget.DisplayStyleForCurrentCellOnly = true;
+            this.ColumnMeasureTarget.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ColumnMeasureTarget.HeaderText = "TXT_TARGET";
+            this.ColumnMeasureTarget.Name = "ColumnMeasureTarget";
+            this.ColumnMeasureTarget.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnMeasureTarget.Width = 180;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -454,17 +465,6 @@
             this.ColumnMeasureDirection.Name = "ColumnMeasureDirection";
             this.ColumnMeasureDirection.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // ColumnMeasureTarget
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnMeasureTarget.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ColumnMeasureTarget.DisplayStyleForCurrentCellOnly = true;
-            this.ColumnMeasureTarget.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ColumnMeasureTarget.HeaderText = "TXT_TARGET";
-            this.ColumnMeasureTarget.Name = "ColumnMeasureTarget";
-            this.ColumnMeasureTarget.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnMeasureTarget.Width = 180;
-            // 
             // frmLocationSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -477,6 +477,7 @@
             this.Controls.Add(this.gridSetting);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmLocationSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TXT_TITLE_SENSOR_LOCATION_SETTING";

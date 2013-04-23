@@ -171,22 +171,26 @@ namespace RM_3000.Forms.Parts
                     {
                         this.dataValueLabels[index].Text = ((Value_MaxMin)chData.DataValues).MaxValue.ToString(tagPoint[chData.Position]);
 
-                        if (isMeasure)
+                        //TagNo_2があるとき
+                        if (relationSetting.RelationList[chData.Position - 1].TagNo_2 != -1)
                         {
-                            if (pnlMain.Controls.ContainsKey(this.dataValueLabels[index].Name + "-2"))
+                            if (isMeasure)
                             {
-                                Label val2_Lable = (Label)pnlMain.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
+                                if (pnlMain.Controls.ContainsKey(this.dataValueLabels[index].Name + "-2"))
+                                {
+                                    Label val2_Lable = (Label)pnlMain.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
 
-                                val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                                    val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                                }
                             }
-                        }
-                        else
-                        {
-                            if (tabPage1.Controls.ContainsKey(this.dataValueLabels[index].Name + "-2"))
+                            else
                             {
-                                Label val2_Lable = (Label)tabPage1.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
+                                if (tabPage1.Controls.ContainsKey(this.dataValueLabels[index].Name + "-2"))
+                                {
+                                    Label val2_Lable = (Label)tabPage1.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
 
-                                val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                                    val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                                }
                             }
                         }
                     }

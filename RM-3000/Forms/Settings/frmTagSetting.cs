@@ -706,7 +706,7 @@ namespace RM_3000.Forms.Settings
                     //temp = txtCalc1_1.Text + cmbOperators.SelectedItem.ToString() + txtCalc1_2.Text;
                     //eval = true;
                 }
-                else if (Convert.ToInt32(cboTagKind.SelectedValue) == 2 && !string.IsNullOrEmpty(txtCalc2.Text))
+                else if (Convert.ToInt32(cboTagKind.SelectedValue) == 2 )//&& !string.IsNullOrEmpty(txtCalc2.Text))
                 {
                     temp = txtCalc2.Text;
                     string retString = string.Empty;
@@ -762,11 +762,18 @@ namespace RM_3000.Forms.Settings
                         int foundIndex = 0;
                         string varName = string.Empty;
                         char[] delimiters = { '+', '-', '*', '/', '(', ')' };
-                        string[] data = temp.Split(delimiters, StringSplitOptions.None);
+                        string[] data = temp.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
                         int indexOfHardBracket = -1;
                         int indexOfAmps = -1;
                         int strLength = 0;
                         string evalData = string.Empty;
+
+                        if (data.Length < 2)
+                        {
+                            CalcBtmEnabled(true);
+                            return AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                        }
+                        
                         for (int k = 0; k < data.Length; k++)
                         {
                             varName = string.Empty;

@@ -390,7 +390,7 @@ namespace RM_3000.Forms.Parts
         public void Start3DAnimation()
         {
             // 自動アニメーション用スレッド起動 
-            EnabledButton(false);          
+            EnabledButton(false);
             //bw3Dgraph.RunWorkerAsync();
 
             if (threadCreateAnimation != null)
@@ -403,7 +403,7 @@ namespace RM_3000.Forms.Parts
             this.isStartAnimation = true;
             threadEvent.Set();
             //this.trackMain.Value++;
-            
+
         }
 
         /// <summary>
@@ -722,7 +722,7 @@ namespace RM_3000.Forms.Parts
                         if (this.graph3DList.Count > 0)
                         {
                             this.graph3DList[0].OnAnimationCompleted += new frmGraph3D.AnimationCompletedEventHandler(this.frmGraph3D_OnAnimationCompleted);
-                        }                        
+                        }
                         //this.bw3Dgraph = new BackgroundWorker();
                         //this.bw3Dgraph.WorkerSupportsCancellation = true;
                         //this.bw3Dgraph.WorkerReportsProgress = false;
@@ -1193,7 +1193,7 @@ namespace RM_3000.Forms.Parts
                     //        this.graph3DList[i].Refresh();
                     //    }
                     //}
-                    
+
                     //if (!this.bw3Dgraph.IsBusy)
                     //{
                     //    this.bw3Dgraph.RunWorkerAsync();
@@ -1676,7 +1676,7 @@ namespace RM_3000.Forms.Parts
                     //}
                     this.threadLoopEvent.WaitOne(500);
                 }
-                
+
                 //syncContext.Post(UpdateGraph, null);
                 ////Create Animation Loop
                 //for (int i = 0; i < this.graph3DList.Count; i++)
@@ -1739,7 +1739,7 @@ namespace RM_3000.Forms.Parts
                             this.threadLoopEvent.Set();
                             trackMain.Value = 0;
                         }
-                        
+
                     }
                     else
                     {
@@ -1760,7 +1760,7 @@ namespace RM_3000.Forms.Parts
                         ////}
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -1919,9 +1919,9 @@ namespace RM_3000.Forms.Parts
                         index = 1;
 
                     // Mode1, 3は全データ数（スクロールバーの最大値）まで
-                    if (scale < minlimit)
+                    if (scale <= minlimit)
                     {
-                        scale = minlimit;
+                        scale = minlimit + index;
                     }
                     else if (scale > this.ScrollSub.Maximum)
                     {

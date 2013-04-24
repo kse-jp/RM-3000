@@ -1281,13 +1281,16 @@ namespace RM_3000.Forms.Parts
             this.scaleX = this.ScrollSub.Maximum;
             this.ScrollSub.Value = 0;
 
+            // 2Dグラフへデータセット            
+            this.minIndex = this.AnalyzeData.ChannelsSetting.ChannelMeasSetting.Degree1;
+
             //Reset Zoom
             foreach (var f in this.graph2DList)
             {
                 if (f != null)
                 {
                     var graphinfo = f.GraphInfo;
-
+                    
                     graphinfo.MaxDataSizeX = this.scaleX;
                     graphinfo.PlotCountX = (this.scaleX != 1 ? this.scaleX - 1 : 1);
                     graphinfo.ShotCount = this.maxOverShotCountForMode2;
@@ -1297,14 +1300,13 @@ namespace RM_3000.Forms.Parts
                     {
                         graphinfo.IncrementX = Convert.ToDouble(chSetting.ChannelMeasSetting.Degree2 - chSetting.ChannelMeasSetting.Degree1) / (count != 1 ? count - 1 : 1);
                     }
+                    graphinfo.MinValueX =Convert.ToDouble(this.minIndex);
                     f.GraphInfo = graphinfo;
 
                     //f.PlotCount = this.scaleX;                  
                 }
-            }
-
-            // 2Dグラフへデータセット            
-            this.minIndex = this.AnalyzeData.ChannelsSetting.ChannelMeasSetting.Degree1;
+            }           
+          
             SetDataToGraph2D(this.minIndex);
 
             // 初回表示時のみ現在位置をX軸最小値でクリア

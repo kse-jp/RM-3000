@@ -390,7 +390,7 @@ namespace RM_3000.Forms.Parts
         public void Start3DAnimation()
         {
             // 自動アニメーション用スレッド起動 
-            EnabledButton(false);          
+            EnabledButton(false);
             //bw3Dgraph.RunWorkerAsync();
 
             if (threadCreateAnimation != null)
@@ -403,7 +403,7 @@ namespace RM_3000.Forms.Parts
             this.isStartAnimation = true;
             threadEvent.Set();
             //this.trackMain.Value++;
-            
+
         }
 
         /// <summary>
@@ -722,7 +722,7 @@ namespace RM_3000.Forms.Parts
                         if (this.graph3DList.Count > 0)
                         {
                             this.graph3DList[0].OnAnimationCompleted += new frmGraph3D.AnimationCompletedEventHandler(this.frmGraph3D_OnAnimationCompleted);
-                        }                        
+                        }
                         //this.bw3Dgraph = new BackgroundWorker();
                         //this.bw3Dgraph.WorkerSupportsCancellation = true;
                         //this.bw3Dgraph.WorkerReportsProgress = false;
@@ -1193,7 +1193,7 @@ namespace RM_3000.Forms.Parts
                     //        this.graph3DList[i].Refresh();
                     //    }
                     //}
-                    
+
                     //if (!this.bw3Dgraph.IsBusy)
                     //{
                     //    this.bw3Dgraph.RunWorkerAsync();
@@ -1281,13 +1281,16 @@ namespace RM_3000.Forms.Parts
             this.scaleX = this.ScrollSub.Maximum;
             this.ScrollSub.Value = 0;
 
+            // 2Dグラフへデータセット            
+            this.minIndex = this.AnalyzeData.ChannelsSetting.ChannelMeasSetting.Degree1;
+
             //Reset Zoom
             foreach (var f in this.graph2DList)
             {
                 if (f != null)
                 {
                     var graphinfo = f.GraphInfo;
-
+                    
                     graphinfo.MaxDataSizeX = this.scaleX;
                     graphinfo.PlotCountX = (this.scaleX != 1 ? this.scaleX - 1 : 1);
                     graphinfo.ShotCount = this.maxOverShotCountForMode2;
@@ -1297,14 +1300,13 @@ namespace RM_3000.Forms.Parts
                     {
                         graphinfo.IncrementX = Convert.ToDouble(chSetting.ChannelMeasSetting.Degree2 - chSetting.ChannelMeasSetting.Degree1) / (count != 1 ? count - 1 : 1);
                     }
+                    graphinfo.MinValueX =Convert.ToDouble(this.minIndex);
                     f.GraphInfo = graphinfo;
 
                     //f.PlotCount = this.scaleX;                  
                 }
-            }
-
-            // 2Dグラフへデータセット            
-            this.minIndex = this.AnalyzeData.ChannelsSetting.ChannelMeasSetting.Degree1;
+            }           
+          
             SetDataToGraph2D(this.minIndex);
 
             // 初回表示時のみ現在位置をX軸最小値でクリア
@@ -1676,7 +1678,7 @@ namespace RM_3000.Forms.Parts
                     //}
                     this.threadLoopEvent.WaitOne(500);
                 }
-                
+
                 //syncContext.Post(UpdateGraph, null);
                 ////Create Animation Loop
                 //for (int i = 0; i < this.graph3DList.Count; i++)
@@ -1739,7 +1741,7 @@ namespace RM_3000.Forms.Parts
                             this.threadLoopEvent.Set();
                             trackMain.Value = 0;
                         }
-                        
+
                     }
                     else
                     {
@@ -1760,7 +1762,7 @@ namespace RM_3000.Forms.Parts
                         ////}
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -1919,9 +1921,9 @@ namespace RM_3000.Forms.Parts
                         index = 1;
 
                     // Mode1, 3は全データ数（スクロールバーの最大値）まで
-                    if (scale < minlimit)
+                    if (scale <= minlimit)
                     {
-                        scale = minlimit;
+                        scale = minlimit + index;
                     }
                     else if (scale > this.ScrollSub.Maximum)
                     {

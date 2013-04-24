@@ -1291,7 +1291,7 @@ namespace RM_3000
                 pointX = (int)System.Math.Floor((toX - this.dragSensorPaddingPointX - pointOfBolster.X + 16) / this.rawZoomLevel / this.sliderZoom.Value);
                 pointY = (int)System.Math.Floor((this.cvsBolster.ActualHeight - this.borderLineWidth - (toY - this.dragSensorPaddingPointY - pointOfBolster.Y + 16)) / this.rawZoomLevel / this.sliderZoom.Value);
 
-                label2.Content = pointX.ToString();   // FOR TEST
+                //label2.Content = pointX.ToString();   // FOR TEST
                 //label2.Content = this.dragSensorPaddingPointX.ToString();   // FOR TEST
 
                 if (locationSetting.getSensorPositionX(this.activeSensorCanvas.chIndex) != pointX)
@@ -1302,7 +1302,7 @@ namespace RM_3000
                     {
                         this.locationSetting.setSensorPositionX(this.activeSensorCanvas.chIndex, pointX);
                     }
-                    label3.Content = val.ToString();   // FOR TEST
+                    //label3.Content = val.ToString();   // FOR TEST
                 }
                 if (locationSetting.getSensorPositionY(this.activeSensorCanvas.chIndex) != pointY)
                 {
@@ -1969,6 +1969,9 @@ namespace RM_3000
                 int settingX = this.locationSetting.getSensorPositionX(this.activeSensorCanvas.chIndex);
                 int settingY = this.locationSetting.getSensorPositionY(this.activeSensorCanvas.chIndex);
 
+                label3.Content = e.GetPosition(this.cvsBolster).X.ToString();
+                label4.Content = e.GetPosition(this.cvsBolster).Y.ToString();
+
                 // 範囲外にある場合は、削除し新規設置とする
                 if (this.isOutOfCanvas)
                 {
@@ -1997,7 +2000,7 @@ namespace RM_3000
                 // Rセンサがここを通るときはボルスター上にあるかどうかで判定する。
                 else if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_R
                     && (e.GetPosition(this.cvsBolster).X < 0 || e.GetPosition(this.cvsBolster).X > this.cvsBolster.ActualWidth ||
-                    e.GetPosition(this.cvsBolster).Y < 0 || e.GetPosition(this.cvsBolster).Y > this.cvsBolster.ActualHeight))
+                    e.GetPosition(this.cvsBolster).Y < -20 || e.GetPosition(this.cvsBolster).Y > this.cvsBolster.ActualHeight))
                 {
                     this.removeSensor(this.activeSensorCanvas.chIndex);
                     //新しいセンサとして表示
@@ -2066,9 +2069,9 @@ namespace RM_3000
             }
 
             label1.Content = mousePoint.X.ToString();
-            //label2.Content = mousePoint.Y.ToString();
+            label2.Content = mousePoint.Y.ToString();
             //label3.Content = this.sliderZoom.Value.ToString();
-            label4.Content = cvsRoot.ActualWidth.ToString();
+            //label4.Content = cvsRoot.ActualWidth.ToString();
             //label4.Content = cvsBase.ActualWidth.ToString();
 
             // センサー移動

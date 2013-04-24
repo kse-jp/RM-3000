@@ -27,6 +27,10 @@ namespace RM_3000.Sequences
 
         public event ShowMessageRequestHandler ShowMessageRequestEvent = delegate { };
 
+        public delegate void ShowCommunicationCommentHandler(string comment);
+
+        public event ShowCommunicationCommentHandler ShowCommunicationCommentEvent = delegate { };
+
         /// <summary>
         /// 監視用スレッド
         /// </summary>
@@ -162,121 +166,129 @@ namespace RM_3000.Sequences
 
             while (!EndEvent.Wait(0))
             {
-                if (bStop)
-                {
-                    Thread.Sleep(1000);
-                    continue;
-                }
 
-                //接続確認
-                if (!comm.IsOpen)
+                try
                 {
-                    if (!comm.Start())
+                    if (bStop)
                     {
-                        Thread.Sleep(1000);
+                        //Thread.Sleep(1000);
                         continue;
                     }
 
-                    //通信クラスイベントのメソッド登録
-                    comm.ExecuteCommandMethod = new CommRM3000.ExecuteCommandHander(ExcuteCommand);
-                    comm.ReserveDataMethod = new CommRM3000.ReserveDataHander(ReserveData);
-
-                    //試験終了コマンドを初回に送っておく
-                    command_WA = (WA_Command)WA_Command.CreateSendData(WA_Command.SubCommandType.W);
-                    command_WA = (WA_Command)comm.SendAndWaitResponse(command_WA, CommRM3000.TIMEOUTDEFAULT);
-
-                    ////レスポンスなしで初期化やり直しへ
-                    //if (command_WA == null)
-                    //{
-                    //    comm.Close();
-
-                    //    bUsbInited = false;
-
-                    //    comm.ExecuteCommandMethod = null;
-                    //    comm.ReserveDataMethod = null;
-
-                    //    Thread.Sleep(1000);
-                    //    continue;
-                    //}
-
-                    bUsbInited = true;
-                }
-
-                //通信確認
-                command_ST = (ST_Command)ST_Command.CreateSendData(ST_Command.SubCommandType.R);
-
-                response_ST = (ST_Command)comm.SendAndWaitResponse(command_ST, CommRM3000.TIMEOUTDEFAULT);
-
-                //レスポンスがなければ通信NGとして通信終了状態とする。
-                if (response_ST == null)
-                {
-                    SystemSetting.HardInfoStruct.IsWarmingUp = false;
-
-                    bCommunicated = false;
-                    bGetBoardInfo = false;
-                    bGetCurve = false;
-
-                    comm.Close();
-
-                    bUsbInited = false;
-
-                    comm.ExecuteCommandMethod = null;
-                    comm.ReserveDataMethod = null;
-
-                    Thread.Sleep(1000);
-                    continue;
-                }
-
-                bCommunicated = true;
-
-                //ウォーミングUP
-                SystemSetting.HardInfoStruct.IsWarmingUp = response_ST.IsWarmingUp;
-                SystemSetting.HardInfoStruct.RestTimeOFWarmingUp = string.Format("{0}:{1}", response_ST.strRestMin, response_ST.strRestSec);
-                //this.IsWarmingUp = response_ST.IsWarmingUp;
-
-                ////本体バージョン
-                //string tmp = response_CS.VerString;
-
-                //ボード情報の取得
-                if (!bGetBoardInfo)
-                {
-                    bGetBoardInfo = GetBoardInfo();
-
-                    //ボード情報取得失敗で抜ける
-                    if (!bGetBoardInfo) continue;
-
-                    //ボード情報取得通知
-                    GotBoardInfoEvent(this, null);
-
-                    bool bcheck = true;
-
-                    //ボード種差異の確認
-                    for (int i = 0; i < SystemSetting.ChannelsSetting.ChannelSettingList.Length; i++)
+                    //接続確認
+                    if (!comm.IsOpen)
                     {
-                        //if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind != RealChannelKindList[i])
-                        if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind != SystemSetting.HardInfoStruct.BoardInfos[i].ChannelKind)
+                        if (!comm.Start())
                         {
-                            //メッセージ表示要求を画面に投げる
-                            this.ShowMessageRequestEvent(AppResource.GetString("MSG_DIFF_CHSETTING")
-                                , System.Windows.Forms.MessageBoxButtons.OK
-                                , System.Windows.Forms.MessageBoxIcon.Exclamation);
-                            //System.Windows.Forms.MessageBox.Show(AppResource.GetString("MSG_DIFF_CHSETTING"));
-                            bcheck = false;
-                            break;
+                            //Thread.Sleep(1000);
+                            continue;
                         }
+
+                        //通信クラスイベントのメソッド登録
+                        comm.ExecuteCommandMethod = new CommRM3000.ExecuteCommandHander(ExcuteCommand);
+                        comm.ReserveDataMethod = new CommRM3000.ReserveDataHander(ReserveData);
+
+                        //試験終了コマンドを初回に送っておく
+                        command_WA = (WA_Command)WA_Command.CreateSendData(WA_Command.SubCommandType.W);
+                        command_WA = (WA_Command)comm.SendAndWaitResponse(command_WA, CommRM3000.TIMEOUTDEFAULT);
+
+                        ////レスポンスなしで初期化やり直しへ
+                        //if (command_WA == null)
+                        //{
+                        //    comm.Close();
+
+                        //    bUsbInited = false;
+
+                        //    comm.ExecuteCommandMethod = null;
+                        //    comm.ReserveDataMethod = null;
+
+                        //    Thread.Sleep(1000);
+                        //    continue;
+                        //}
+
+                        bUsbInited = true;
                     }
 
-                    IsBoardSettingCorrected = bcheck;
+                    //通信確認
+                    command_ST = (ST_Command)ST_Command.CreateSendData(ST_Command.SubCommandType.R);
 
+                    response_ST = (ST_Command)comm.SendAndWaitResponse(command_ST, CommRM3000.TIMEOUTDEFAULT);
+
+                    //レスポンスがなければ通信NGとして通信終了状態とする。
+                    if (response_ST == null)
+                    {
+                        SystemSetting.HardInfoStruct.IsWarmingUp = false;
+
+                        bCommunicated = false;
+                        bGetBoardInfo = false;
+                        bGetCurve = false;
+
+                        comm.Close();
+
+                        bUsbInited = false;
+
+                        comm.ExecuteCommandMethod = null;
+                        comm.ReserveDataMethod = null;
+
+                        //Thread.Sleep(1000);
+                        continue;
+                    }
+
+                    bCommunicated = true;
+
+                    //ウォーミングUP
+                    SystemSetting.HardInfoStruct.IsWarmingUp = response_ST.IsWarmingUp;
+                    SystemSetting.HardInfoStruct.RestTimeOFWarmingUp = string.Format("{0}:{1}", response_ST.strRestMin, response_ST.strRestSec);
+                    //this.IsWarmingUp = response_ST.IsWarmingUp;
+
+                    ////本体バージョン
+                    //string tmp = response_CS.VerString;
+
+                    //ボード情報の取得
+                    if (!bGetBoardInfo)
+                    {
+                        bGetBoardInfo = GetBoardInfo();
+
+                        //ボード情報取得失敗で抜ける
+                        if (!bGetBoardInfo) continue;
+
+                        //ボード情報取得通知
+                        GotBoardInfoEvent(this, null);
+
+                        bool bcheck = true;
+
+                        //ボード種差異の確認
+                        for (int i = 0; i < SystemSetting.ChannelsSetting.ChannelSettingList.Length; i++)
+                        {
+                            //if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind != RealChannelKindList[i])
+                            if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind != SystemSetting.HardInfoStruct.BoardInfos[i].ChannelKind)
+                            {
+                                //メッセージ表示要求を画面に投げる
+                                this.ShowMessageRequestEvent(AppResource.GetString("MSG_DIFF_CHSETTING")
+                                    , System.Windows.Forms.MessageBoxButtons.OK
+                                    , System.Windows.Forms.MessageBoxIcon.Exclamation);
+                                //System.Windows.Forms.MessageBox.Show(AppResource.GetString("MSG_DIFF_CHSETTING"));
+                                bcheck = false;
+                                break;
+                            }
+                        }
+
+                        IsBoardSettingCorrected = bcheck;
+
+                    }
+
+                    if (!bGetCurve)
+                    {
+                        //検量線を取得
+                        bGetCurve = GetCalibrationCurve();
+                    }
                 }
-
-                if (!bGetCurve)
+                finally
                 {
-                    //検量線を取得
-                    bGetCurve = GetCalibrationCurve();
-                }
+                    this.ShowCommunicationCommentEvent("");
 
-                Thread.Sleep(1000);
+                    Thread.Sleep(1000);
+                }
             }
         }
 
@@ -421,6 +433,8 @@ namespace RM_3000.Sequences
                     continue;
                 }
 
+                this.ShowCommunicationCommentEvent(string.Format(AppResource.GetString("MSG_COMM_COMMENT_CALIBRATION"), chIndex));
+
                 command_KD = (KD_Command)KD_Command.CreateSendData(KD_Command.SubCommandType.R);
                 command_KD.Channel = (byte)chIndex;
 
@@ -461,6 +475,8 @@ namespace RM_3000.Sequences
                 if (SystemSetting.HardInfoStruct.BoardInfos[chIndex - 1].ChannelKind != DataCommon.ChannelKindType.B &&
                     SystemSetting.HardInfoStruct.BoardInfos[chIndex - 1].ChannelKind != DataCommon.ChannelKindType.R) 
                     continue;
+
+                this.ShowCommunicationCommentEvent(string.Format(AppResource.GetString("MSG_COMM_COMMENT_TEMP"), chIndex));
 
                 command_TD = (TD_Command)TD_Command.CreateSendData(TD_Command.SubCommandType.R);
                 command_TD.Channel = (byte)chIndex;

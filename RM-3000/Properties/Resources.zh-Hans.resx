@@ -1403,4 +1403,20 @@ Please try restart agin.</comment>
     <value>演算式に演算項目を指定できません。</value>
     <comment>No Tag selected.</comment>
   </data>
+  <data name="MSG_TAG_CALC_FINISHED_OPE" xml:space="preserve">
+    <value>演算子( +-*/^ )で終わっています。</value>
+    <comment>演算子( +-*/^ )で終わっています。</comment>
+  </data>
+  <data name="MSG_TAG_CALC_INVALID_CONST_TAGNAME" xml:space="preserve">
+    <value>定数項目の指定が不正です。[{0}]</value>
+    <comment>定数項目の指定が不正です。[{0}]</comment>
+  </data>
+  <data name="MSG_TAG_CALC_INVALID_MEAS_TAGNAME" xml:space="preserve">
+    <value>測定項目の指定が不正です。[{0}]</value>
+    <comment>測定項目の指定が不正です。[{0}]</comment>
+  </data>
+  <data name="MSG_TAG_CALC_PARENTHESIS_INVALID" xml:space="preserve">
+    <value>括弧が閉じられていません。</value>
+    <comment>括弧が閉じられていません。</comment>
+  </data>
 </root>

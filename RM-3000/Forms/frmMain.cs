@@ -46,6 +46,8 @@ namespace RM_3000
             //メッセージ要求
             CommunicationMonitor.GetInstance().ShowMessageRequestEvent += new CommunicationMonitor.ShowMessageRequestHandler(CommunicationMonitor_ShowMessageRequestEvent); 
           
+            //監視モニタコメント表示要求
+            CommunicationMonitor.GetInstance().ShowCommunicationCommentEvent += new CommunicationMonitor.ShowCommunicationCommentHandler(CommunicationMonitor_ShowCommunicationCommentEvent); 
             
             // ログ設定
             var logConfigPath = ConfigurationManager.AppSettings["LogConfigPathUi"];
@@ -82,6 +84,24 @@ namespace RM_3000
             MessageBox.Show(message, "", buttons, icon);
 
         }
+
+        /// <summary>
+        /// メッセージ表示要求
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="buttons"></param>
+        /// <param name="icon"></param>
+        void CommunicationMonitor_ShowCommunicationCommentEvent(string comment)
+        {
+            if (this.InvokeRequired)
+            {
+                this.BeginInvoke((MethodInvoker)delegate() { CommunicationMonitor_ShowCommunicationCommentEvent(comment); });
+                return;
+            }
+
+            lblCommComment.Text = comment;
+        }
+
 
         /// <summary>
         /// ボード情報の取得イベント
@@ -617,7 +637,6 @@ namespace RM_3000
             if (comm != null && comm.IsOpen)
                 comm.Close();
         }
-
 
         /// <summary>
         /// 本体状態表示

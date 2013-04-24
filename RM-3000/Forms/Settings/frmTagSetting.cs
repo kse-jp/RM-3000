@@ -761,17 +761,39 @@ namespace RM_3000.Forms.Settings
                         bool match = false;
                         int foundIndex = 0;
                         string varName = string.Empty;
-                        char[] delimiters = { '+', '-', '*', '/', '(', ')' };
+                        char[] delimiters = { '+', '-', '*', '/', '^', '(', ')' };
                         string[] data = temp.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
                         int indexOfHardBracket = -1;
                         int indexOfAmps = -1;
                         int strLength = 0;
                         string evalData = string.Empty;
 
+                        string trimTemp = temp.Trim();
+
+                        //項が2個以下の場合(四則演算としてはあり得ない)
                         if (data.Length < 2)
                         {
                             CalcBtmEnabled(true);
                             return AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                        }
+
+                        //最後が演算子で終わっている
+                        string tmpconpare = trimTemp.Substring(temp.Trim().Length - 1);
+
+                        if(tmpconpare == "+" || tmpconpare == "-" || tmpconpare == "*" || tmpconpare == "/" || tmpconpare == "^")
+                        {
+                            CalcBtmEnabled(true);
+                            return AppResource.GetString("MSG_TAG_CALC_FINISHED_OPE") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                        }
+
+                        //括弧が終わっていない
+                        int openCount = trimTemp.Count((x) => (x == '('));
+                        int closeCount = trimTemp.Count((x) => (x == ')'));
+
+                        if (openCount != closeCount)
+                        {
+                            CalcBtmEnabled(true);
+                            return AppResource.GetString("MSG_TAG_CALC_PARENTHESIS_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                         }
                         
                         for (int k = 0; k < data.Length; k++)
@@ -779,96 +801,136 @@ namespace RM_3000.Forms.Settings
                             varName = string.Empty;
                             match = false;
                             foundIndex = -1;
+
+                            if (data[k] == "@")
+                            {
+                                CalcBtmEnabled(true);
+                                return string.Format(AppResource.GetString("MSG_TAG_CALC_INVALID_MEAS_TAGNAME"), data[k]) + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                            }
+
                             if (data[k].Length > 1)
                             {
-
-                                foreach (Match mt in Regex.Matches(data[k], @"@([0-9]{1,3})"))
+                                if (data[k].Substring(0, 2) == "@C")
                                 {
-                                    if (mt.Success)
+                                    if (!Regex.IsMatch(data[k], @"@C([0-9]{1,3})"))
                                     {
-                                        //check tag No that over than 300
-                                        varName = mt.Value.Substring(1);
-                                        if (Convert.ToInt32(varName) > 300)
+                                        CalcBtmEnabled(true);
+                                        return string.Format(AppResource.GetString("MSG_TAG_CALC_INVALID_CONST_TAGNAME"), data[k]) + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                    }
+                                    else
+                                    {
+                                        if (Regex.Match(data[k], @"@C([0-9]{1,3})").Value.Length != data[k].Length)
                                         {
                                             CalcBtmEnabled(true);
-                                            return AppResource.GetString("MSG_TAG_SELECT_INVALID") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                            return string.Format(AppResource.GetString("MSG_TAG_CALC_INVALID_CONST_TAGNAME"), data[k]) + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                                         }
-                                        //get index of close bracket & next '@'
-                                        indexOfHardBracket = data[k].IndexOf(']', mt.Index + 1);
-                                        indexOfAmps = data[k].IndexOf('@', mt.Index + 1);
-                                        for (int m = 0; m < this.dataTagSetting.DataTagList.Length; m++)
+                                    }
+                                }
+                                else if (data[k].Substring(0, 1) == "@")
+                                {
+
+                                    if (!Regex.IsMatch(data[k], @"@([0-9]{1,3})"))
+                                    {
+                                        CalcBtmEnabled(true);
+                                        return string.Format(AppResource.GetString("MSG_TAG_CALC_INVALID_MEAS_TAGNAME"), data[k]) + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                    }
+                                    else
+                                    {
+                                        if (Regex.Match(data[k], @"@([0-9]{1,3})").Value.Length != data[k].Length)
                                         {
-                                            variable = string.Format("@{0}", m + 1);
-                                            if (mt.Value.Equals(variable))
+                                            CalcBtmEnabled(true);
+                                            return string.Format(AppResource.GetString("MSG_TAG_CALC_INVALID_MEAS_TAGNAME"), data[k]) + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                        }
+                                    }
+
+                                    foreach (Match mt in Regex.Matches(data[k], @"@([0-9]{1,3})"))
+                                    {
+                                        if (mt.Success)
+                                        {
+                                            //check tag No that over than 300
+                                            varName = mt.Value.Substring(1);
+                                            if (Convert.ToInt32(varName) > 300)
                                             {
-                                                //keep tag info and tag index to list 
-                                                if (indexOfHardBracket > 0)
+                                                CalcBtmEnabled(true);
+                                                return string.Format(AppResource.GetString("MSG_TAG_CALC_INVALID_MEAS_TAGNAME"), data[k]) + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                            }
+                                            //get index of close bracket & next '@'
+                                            indexOfHardBracket = data[k].IndexOf(']', mt.Index + 1);
+                                            indexOfAmps = data[k].IndexOf('@', mt.Index + 1);
+                                            for (int m = 0; m < this.dataTagSetting.DataTagList.Length; m++)
+                                            {
+                                                variable = string.Format("@{0}", m + 1);
+                                                if (mt.Value.Equals(variable))
                                                 {
-                                                    if (indexOfAmps > 0)
+                                                    //keep tag info and tag index to list 
+                                                    if (indexOfHardBracket > 0)
                                                     {
-                                                        strLength = (indexOfAmps > indexOfHardBracket ? indexOfHardBracket : indexOfAmps) - mt.Index + 1;
+                                                        if (indexOfAmps > 0)
+                                                        {
+                                                            strLength = (indexOfAmps > indexOfHardBracket ? indexOfHardBracket : indexOfAmps) - mt.Index + 1;
+                                                        }
+                                                        else
+                                                        {
+                                                            strLength = indexOfHardBracket - mt.Index + 1;
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        strLength = indexOfHardBracket - mt.Index + 1;
+                                                        if (indexOfAmps > 0)
+                                                        {
+                                                            strLength = indexOfAmps - mt.Index + 1;
+                                                        }
+                                                        else
+                                                        {
+                                                            strLength = -1;
+                                                        }
                                                     }
-                                                }
-                                                else
-                                                {
-                                                    if (indexOfAmps > 0)
+                                                    if (strLength > 0)
                                                     {
-                                                        strLength = indexOfAmps - mt.Index + 1;
+                                                        tagList.Add(data[k].Substring(mt.Index, strLength));
                                                     }
                                                     else
                                                     {
-                                                        strLength = -1;
+                                                        tagList.Add(data[k].Substring(mt.Index));
                                                     }
-                                                }
-                                                if (strLength > 0)
-                                                {
-                                                    tagList.Add(data[k].Substring(mt.Index, strLength));
-                                                }
-                                                else
-                                                {
-                                                    tagList.Add(data[k].Substring(mt.Index));
-                                                }
-                                                tagIndexList.Add(m);
-                                                match = true;
-                                                varName = mt.Value;
-                                                foundIndex = m;
+                                                    tagIndexList.Add(m);
+                                                    match = true;
+                                                    varName = mt.Value;
+                                                    foundIndex = m;
 
-                                                if (match)
-                                                {
-                                                    match = false;
-
-                                                    DataTag tmptag = this.dataTagSetting.DataTagList[foundIndex];
-
-                                                    if (tmptag.TagKind == 2)
+                                                    if (match)
                                                     {
-                                                        CalcBtmEnabled(true);
-                                                        return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
-                                                    }
+                                                        match = false;
 
-                                                    //if (this.currentTag != null)
-                                                    //{
-                                                    //    if (this.currentTag.TagNo == this.dataTagSetting.DataTagList[foundIndex].TagNo)
-                                                    //    {
-                                                    //        match = true;
-                                                    //    }
-                                                    //    //check edition tag with other calc tag
-                                                    //    else if (this.currentTag.TagKind == 2 || (!IsMeasure && this.currentTag.IsBlank))
-                                                    //    {
-                                                    //        if (this.dataTagSetting.DataTagList[foundIndex].TagKind == 2 || (!IsMeasure && this.dataTagSetting.DataTagList[foundIndex].IsBlank))
-                                                    //        {
-                                                    //            match = true;
-                                                    //        }
-                                                    //    }
+                                                        DataTag tmptag = this.dataTagSetting.DataTagList[foundIndex];
+
+                                                        if (tmptag.TagKind == 2)
+                                                        {
+                                                            CalcBtmEnabled(true);
+                                                            return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                                        }
+
+                                                        //if (this.currentTag != null)
+                                                        //{
+                                                        //    if (this.currentTag.TagNo == this.dataTagSetting.DataTagList[foundIndex].TagNo)
+                                                        //    {
+                                                        //        match = true;
+                                                        //    }
+                                                        //    //check edition tag with other calc tag
+                                                        //    else if (this.currentTag.TagKind == 2 || (!IsMeasure && this.currentTag.IsBlank))
+                                                        //    {
+                                                        //        if (this.dataTagSetting.DataTagList[foundIndex].TagKind == 2 || (!IsMeasure && this.dataTagSetting.DataTagList[foundIndex].IsBlank))
+                                                        //        {
+                                                        //            match = true;
+                                                        //        }
+                                                        //    }
                                                         //if (match)
                                                         //{
-                                                            //CalcBtmEnabled(true);
-                                                            //return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
+                                                        //CalcBtmEnabled(true);
+                                                        //return AppResource.GetString("MSG_TAG_CALC_SELECTED_INCALC") + "\n" + AppResource.GetString("MSG_TAGSETTING_NG_EXPRESSION");
                                                         //}
-                                                    //}
+                                                        //}
+                                                    }
                                                 }
                                             }
                                         }
@@ -891,6 +953,16 @@ namespace RM_3000.Forms.Settings
                             {
                                 string tempC = temp.Replace(variable, this.constantSetting.ConstantList[index].Value.ToString());
                                 temp = tempC;
+                            }
+                            else
+                            {
+                                variable = string.Format("@C{0}", index + 1);
+                                pos = temp.IndexOf(variable);
+                                if (pos > 0)
+                                {
+                                    string tempC = temp.Replace(variable, this.constantSetting.ConstantList[index].Value.ToString());
+                                    temp = tempC;
+                                }
                             }
                         }
                     }

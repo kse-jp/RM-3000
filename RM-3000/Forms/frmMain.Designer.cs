@@ -47,6 +47,7 @@
             this.timStatusShow = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblCommComment = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.pnlDrawArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -289,11 +290,24 @@
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
+            // lblCommComment
+            // 
+            this.lblCommComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCommComment.BackColor = System.Drawing.Color.MediumBlue;
+            this.lblCommComment.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblCommComment.ForeColor = System.Drawing.Color.White;
+            this.lblCommComment.Location = new System.Drawing.Point(824, 5);
+            this.lblCommComment.Name = "lblCommComment";
+            this.lblCommComment.Size = new System.Drawing.Size(313, 106);
+            this.lblCommComment.TabIndex = 11;
+            this.lblCommComment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 762);
+            this.Controls.Add(this.lblCommComment);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGetCalibrationCurve);
             this.Controls.Add(this.txtTest_GetCount);
@@ -342,6 +356,7 @@
         private System.Windows.Forms.Timer timStatusShow;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblCommComment;
     }
 }
 

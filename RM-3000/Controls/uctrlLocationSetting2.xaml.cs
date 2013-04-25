@@ -1553,7 +1553,7 @@ namespace RM_3000
                                 y = pointOfPressKanagata.Y - 16;
                                 isMoveY = false;
                             }
-                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight)
+                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16)
                             {
                                 y = pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16;
                                 isMoveY = false;
@@ -1571,7 +1571,7 @@ namespace RM_3000
                                 y = pointOfPressKanagata.Y - 16;
                                 isMoveY = false;
                             }
-                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight)
+                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16)
                             {
                                 y = pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16;
                                 isMoveY = false;
@@ -1589,7 +1589,7 @@ namespace RM_3000
                                 x = pointOfPressKanagata.X - 16;
                                 isMoveX = false;
                             }
-                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth)
+                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16)
                             {
                                 x = pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16;
                                 isMoveX = false;
@@ -1607,7 +1607,7 @@ namespace RM_3000
                                 x = pointOfPressKanagata.X - 16;
                                 isMoveX = false;
                             }
-                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - 16)
+                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16)
                             {
                                 x = pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16;
                                 isMoveX = false;

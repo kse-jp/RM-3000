@@ -346,12 +346,39 @@ namespace Graph3DLib.Controller
             {
                 if (_ClockGroup != null && _ClockGroup.Controller != null)
                 {
-                    if (_ClockGroup.Controller.Clock.CurrentProgress != null && _ClockGroup.Controller.Clock.CurrentProgress == 1)
+
+                    if (_ClockGroup.NaturalDuration != null)
                     {
-                        _ClockGroup.Controller.Begin();
+                        double totalms = _ClockGroup.NaturalDuration.TimeSpan.TotalMilliseconds;
+                        if (totalms <= 1000)
+                        {
+                            if (totalms > 400 && speedRatio > 4)
+                                speedRatio = 4;
+                            else if ((totalms > 200 && totalms <= 400) && speedRatio > 3)
+                                speedRatio = 3;
+                            else if ((totalms > 100 && totalms <= 200) && speedRatio > 2)
+                                speedRatio = 2;
+                            else if ((totalms >= 0 && totalms <= 100) && speedRatio > 1)
+                                speedRatio = 1;
+                        }
                     }
+
                     _ClockGroup.Controller.SpeedRatio = speedRatio;
 
+                    if (_ClockGroup.Controller.Clock.CurrentProgress != null && _ClockGroup.Controller.Clock.CurrentProgress == 1 && _ClockGroup.NaturalDuration != null)
+                    {
+                        TimeSpan current = (TimeSpan)_ClockGroup.CurrentTime;
+
+                        TimeSpan check = current + TimeSpan.FromMilliseconds(10);
+
+                        if (check.TotalMilliseconds >= _ClockGroup.NaturalDuration.TimeSpan.TotalMilliseconds)
+                        {
+                            check = _ClockGroup.NaturalDuration.TimeSpan - TimeSpan.FromMilliseconds(10);
+                        }
+
+
+                        _ClockGroup.Controller.Seek(check, TimeSeekOrigin.BeginTime);
+                    }
                 }
                 //for (int i = 0; i < _AnimationClock.Length; i++)
                 //{
@@ -360,8 +387,7 @@ namespace Graph3DLib.Controller
                 //        if (_AnimationClock[i][j] != null)
                 //            _AnimationClock[i][j].Controller.SpeedRatio = speedRatio;
                 //    }
-                //}
-
+                //}               
             }
             catch (Exception ex)
             {

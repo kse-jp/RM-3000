@@ -222,7 +222,7 @@ namespace RM3000.Controls
         /// <param name="ex"></param>
         private void ShowErrorMessage(Exception ex)
         {
-            Console.WriteLine(ex.Message + "\n" + ex.StackTrace);
+            throw ex;
         }
         /// <summary>
         /// initial value

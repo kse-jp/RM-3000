@@ -418,7 +418,7 @@ namespace RM_3000.Forms.Parts
                 {
                     this.threadExitEvent.Set();
                 }
-                
+
                 //threadCreateAnimation.Abort();
                 // 自動アニメーション用スレッド停止
                 for (int i = 0; i < this.graph3DList.Count; i++)
@@ -552,7 +552,7 @@ namespace RM_3000.Forms.Parts
                             incx = this.graph2DList[i].GraphInfo.IncrementX;
                             break;
                         }
-                    }
+                    }                    
 
                     if (incx == 0)
                     {
@@ -638,7 +638,8 @@ namespace RM_3000.Forms.Parts
                     if (this.AnalyzeData.MeasureSetting.GraphSettingList[i] != null && this.AnalyzeData.MeasureSetting.GraphSettingList[i].IsValid)
                     {
                         this.graph2DList[i] = new frmGraph2D(this.log, i) { MdiParent = (Form)this.MdiParent, AnalyzeData = this.AnalyzeData, CurrentValueLineChanged = Graph2DCurrentValueLineChanged, FormHidden = Graph2DFormHidden };
-                        this.graph2DList[i].Resize += new EventHandler(this.graph_Resize);
+                        this.graph2DList[i].OnAppIdleCallBack = this.graph_OnAppIdleCallBack;
+                        this.graph2DList[i].ResizeEnd += new EventHandler(this.graph_Resize);
                         this.graph2DList[i].VisibleChanged += new EventHandler(this.graph_Visible);
                         this.graph2DList[i].OnOverShotAxisYZoomed = this.OverShotAxisYZoomed;
                         this.graph2DList[i].OnOverShotMouseDragZoomed = this.OverShotMouseDragZoomed;
@@ -798,6 +799,7 @@ namespace RM_3000.Forms.Parts
                 //Set maximum size of graph form.
                 this.MdiParent.Resize += new EventHandler(this.frmAnalyzeMain_Resize);
                 SetMaximumGraphArea(null);
+
             }
             catch (Exception ex)
             {
@@ -1293,7 +1295,7 @@ namespace RM_3000.Forms.Parts
                 if (f != null)
                 {
                     var graphinfo = f.GraphInfo;
-                    
+
                     graphinfo.MaxDataSizeX = this.scaleX;
                     graphinfo.PlotCountX = (this.scaleX != 1 ? this.scaleX - 1 : 1);
                     graphinfo.ShotCount = this.maxOverShotCountForMode2;
@@ -1303,13 +1305,13 @@ namespace RM_3000.Forms.Parts
                     {
                         graphinfo.IncrementX = Convert.ToDouble(chSetting.ChannelMeasSetting.Degree2 - chSetting.ChannelMeasSetting.Degree1) / (count != 1 ? count - 1 : 1);
                     }
-                    graphinfo.MinValueX =Convert.ToDouble(this.minIndex);
+                    graphinfo.MinValueX = Convert.ToDouble(this.minIndex);
                     f.GraphInfo = graphinfo;
 
                     //f.PlotCount = this.scaleX;                  
                 }
-            }           
-          
+            }
+
             SetDataToGraph2D(this.minIndex);
 
             // 初回表示時のみ現在位置をX軸最小値でクリア
@@ -1387,7 +1389,7 @@ namespace RM_3000.Forms.Parts
                     if (f != null)
                     {
                         f.MinimumX = Convert.ToDecimal(this.minIndex);
-                        f.PlotCount = this.scaleX;
+                        f.PlotCount = (this.scaleX != 1 ? this.scaleX - 1 : 1);
                     }
                 }
 
@@ -1755,6 +1757,7 @@ namespace RM_3000.Forms.Parts
                     {
                         Clear3DGraphData();
                         SetDataToGraph3D();
+                        System.Threading.Thread.Sleep(15);
                         this.threadLoopEvent.Set();
                         this.threadEvent.Set();
 
@@ -2068,16 +2071,23 @@ namespace RM_3000.Forms.Parts
                 ShowErrorMessage(ex);
             }
         }
+
         /// <summary>
-        /// form graph2D and graph3D resize check maximum form area
+        /// form graph2D On Application Callback for refresh overshot when resize
+        /// </summary>
+        private void graph_OnAppIdleCallBack()
+        {
+            //refresh graph overshot when resize
+            if (this.maxOverShotCountForMode2 > 1 && this.mode == 2)
+                RefreshOverShot();
+        }
+        /// <summary>
+        /// form graph2D and graph3D resize check maximum form area 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void graph_Resize(object sender, EventArgs e)
         {
-            //refresh graph overshot when resize
-            if (this.maxOverShotCountForMode2 > 1 && this.mode == 2)
-                RefreshOverShot();
             // ショット番号を初期化して2Dグラフを更新する
             SetMaximumGraphArea(sender);
         }

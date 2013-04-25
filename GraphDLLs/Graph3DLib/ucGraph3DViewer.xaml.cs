@@ -870,10 +870,16 @@ namespace Graph3DLib
         {
             try
             {
-                if (_AnimationControl != null && _AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
-                    _MeterTimer.Start();
+                if (_AnimationControl != null && (_AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume))
+                {
+                    if (_MeterTimer != null)
+                        _MeterTimer.Start();
+                }
                 else
-                    circularMeter.DrawArraw(circularMeter.StartDegree, true);
+                {
+                    if (circularMeter != null)
+                        circularMeter.DrawArraw(circularMeter.StartDegree, true);
+                }
             }
             catch (Exception ex)
             {
@@ -1530,6 +1536,7 @@ namespace Graph3DLib
                         _ThreadAnimation.Tranform3DGroups = _GraphController.Tranform3DGroups;
 
                     _ThreadAnimation.TranslateData = _GraphController.TranslateData;
+                    _ThreadAnimation.Speed = _AnimationSpeed;
                     this.Dispatcher.Invoke(_ThreadAnimationDelegate, DispatcherPriority.Send);
                 }
             }
@@ -1555,11 +1562,11 @@ namespace Graph3DLib
                 {
                     if (_AnimationControl.Status == AnimationStatus.Stop)
                     {
-                        if (_AnimationSpeed != 1)
-                            _AnimationControl.SetSpeed(_AnimationSpeed);
+                        //if (_AnimationSpeed != 1)
+                        //    _AnimationControl.SetSpeed(_AnimationSpeed);
                         //_AnimationControl.SetSpeed(3600);
 
-                        Dispatcher.BeginInvoke(new Action(_AnimationControl.StartInvoke), null);
+                        Dispatcher.BeginInvoke(new Action(_AnimationControl.StartInvoke), DispatcherPriority.Send, null);
                         _IsAnimationStart = true;
                         //bool ret = _AnimationControl.Start();
                         //if (ret)

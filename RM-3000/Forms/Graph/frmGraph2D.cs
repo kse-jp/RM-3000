@@ -37,6 +37,11 @@ namespace RM_3000.Forms.Graph
         /// OverShotMouseDragZoom
         /// </summary>
         public delegate void OverShotMouseDragZoom();
+
+        /// <summary>
+        /// Application Idle Call back
+        /// </summary>
+        public delegate void ApplicationIdleCallBack();
         /// <summary>
         /// if form is clicked then triger event
         /// </summary>
@@ -293,6 +298,10 @@ namespace RM_3000.Forms.Graph
         /// On OverShot Mouse Drag Zoomed 
         /// </summary>
         public OverShotMouseDragZoom OnOverShotMouseDragZoomed = null;
+        /// <summary>
+        /// On Application Call back
+        /// </summary>
+        public ApplicationIdleCallBack OnAppIdleCallBack = null;
         #endregion
 
         #region public method
@@ -1035,6 +1044,9 @@ namespace RM_3000.Forms.Graph
             this.graphViewer.ResizeGraph(this.elHostGraph.Width, this.elHostGraph.Height);
 
             Application.Idle -= Application_Idle;
+
+            if (OnAppIdleCallBack != null)
+                OnAppIdleCallBack();
         }
 
         /// <summary>

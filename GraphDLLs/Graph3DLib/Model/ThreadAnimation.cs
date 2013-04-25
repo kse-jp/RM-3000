@@ -37,7 +37,7 @@ namespace Graph3DLib.Model
         /// <summary>
         /// delegate GraphCreatedEventHandler
         /// </summary>        
-        public delegate void AnimationCreated(ref AnimationCtrl animationCtrl);        
+        public delegate void AnimationCreated(ref AnimationCtrl animationCtrl);
         /// <summary>   
         /// event GraphCreatedEventHandler
         /// </summary>
@@ -58,6 +58,10 @@ namespace Graph3DLib.Model
         /// List for keep clock position
         /// </summary>
         private List<string> _ListClockPos = null;
+        /// <summary>
+        /// Animation Speed
+        /// </summary>
+        private double _AnimationSpeed = 1;
 
         #endregion
 
@@ -103,6 +107,18 @@ namespace Graph3DLib.Model
             set
             {
                 _Tranform3DGroups = value;
+            }
+        }
+
+        public double Speed
+        {
+            get
+            {
+                return _AnimationSpeed;
+            }
+            set
+            {
+                _AnimationSpeed = value;
             }
         }
         #endregion
@@ -261,8 +277,10 @@ namespace Graph3DLib.Model
                     //_AnimationClockGroup.Controller.Begin();
 
 
+
                     AnimationCtrl animationctrl = new AnimationCtrl(ref _AnimationClockGroup);
                     animationctrl.Stop();
+                    animationctrl.SetSpeed(_AnimationSpeed);
 
                     if (OnAnimationCreated != null)
                     {

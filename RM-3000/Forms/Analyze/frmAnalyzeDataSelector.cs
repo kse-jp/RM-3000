@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 using DataCommon;
 
@@ -30,13 +31,22 @@ namespace RM_3000.Forms.Analyze
 
                 _SelectFolderName =  System.IO.Path.GetDirectoryName(value);
 
-                //ファイルリストの更新
-                CreateList();
-
-                //ファイルリストの再表示
-                ShowList();
+                SetEnalbedControls(false);
 
                 txtFileName.Text = _SelectFolderName;
+
+                this.Cursor = Cursors.WaitCursor;
+
+                var t = Task.Factory.StartNew(() =>
+                {
+                    //ファイルリストの更新
+                    CreateList();
+                }
+                );
+
+                //コールバッグ
+                t.ContinueWith((x) => { if(x.IsCompleted) LoadListCompleted(); });
+
             }
         }
 
@@ -81,10 +91,10 @@ namespace RM_3000.Forms.Analyze
         {
             string[] Directroies = System.IO.Directory.GetDirectories(SelectFolderName);
 
-            Cursor.Current = Cursors.WaitCursor;
-
-
             AnalyzeDataList.Clear();
+            ShowList();
+
+            //Application.DoEvents();
 
             foreach (string tmpFolder in Directroies)
             {
@@ -101,10 +111,12 @@ namespace RM_3000.Forms.Analyze
                 catch
                 {
                 }
+                finally
+                {
+                    //Application.DoEvents();
+                }
             }
-
-            Cursor.Current = Cursors.Default;
-
+            
         }
 
         /// <summary>
@@ -112,6 +124,12 @@ namespace RM_3000.Forms.Analyze
         /// </summary>
         private void ShowList()
         {
+            if (this.InvokeRequired)
+            {
+                this.Invoke((MethodInvoker)delegate { ShowList(); });
+                return;
+            }
+
             //表示クリア
             dgvDataList.Rows.Clear();
 
@@ -148,6 +166,26 @@ namespace RM_3000.Forms.Analyze
                     , ana.MeasureSetting.MeasTagList[9] != -1 ? ana.ChannelsSetting.ChannelSettingList[9].ChKind.ToString() : ""
                 });
             }
+        }
+
+        /// <summary>
+        /// リストデータのロード完了コールバック
+        /// </summary>
+        private void LoadListCompleted()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke((MethodInvoker)delegate { LoadListCompleted(); });
+                return;
+            }
+
+            //ファイルリストの再表示
+            ShowList();
+
+            this.Cursor = Cursors.Default;
+
+            SetEnalbedControls(true);
+
         }
 
         /// <summary>
@@ -317,6 +355,26 @@ namespace RM_3000.Forms.Analyze
             AnalyzeDataList.Clear();
 
             GC.Collect();
+        }
+
+        /// <summary>
+        /// コントロールEnabled
+        /// </summary>
+        /// <param name="value"></param>
+        private void SetEnalbedControls(bool value)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke((MethodInvoker)delegate { SetEnalbedControls(value); });
+                return;
+            }
+
+            btnCancel.Enabled = value;
+            btnOK.Enabled = value;
+            dgvDataList.Enabled = value;
+            btnFolderSelector.Enabled = value;
+            btnDelete.Enabled = value;
+
         }
     }
 }

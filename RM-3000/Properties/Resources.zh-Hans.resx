@@ -422,7 +422,7 @@
     <comment>除算(/)</comment>
   </data>
   <data name="TXT_TAG_SETTING_EVAL_EXPRESSION" xml:space="preserve">
-    <value>演算式</value>
+    <value>确认演算公式</value>
     <comment>演算式</comment>
   </data>
   <data name="TXT_TAG_SETTING_FULL_SCALE" xml:space="preserve">
@@ -450,7 +450,7 @@
     <comment>計測項目種別</comment>
   </data>
   <data name="TXT_TAG_SETTING_TAG_KIND_LIST" xml:space="preserve">
-    <value>计量，演算2（分析）</value>
+    <value>计量，演算（分析）</value>
     <comment>計測,演算２（解析）</comment>
   </data>
   <data name="TXT_TAG_SETTING_TAG_SELECT" xml:space="preserve">
@@ -766,7 +766,7 @@
     <comment>Measurement save files</comment>
   </data>
   <data name="MSG_MEAS_START_TEST" xml:space="preserve">
-    <value>Measurement start test C</value>
+    <value />
     <comment>Measurement start test</comment>
   </data>
   <data name="MSG_MEAS_STOP_TEST" xml:space="preserve">
@@ -1086,15 +1086,15 @@ Please try restart agin.</comment>
 チャンネル設定を再度行ってください。</comment>
   </data>
   <data name="MSG_CANT_ASSIGN_REVOLUTION" xml:space="preserve">
-    <value>回転タグは登録できません。</value>
+    <value>不能登陆回转项目。</value>
     <comment>回転タグは登録できません。</comment>
   </data>
   <data name="MSG_REVOLUTION_REMOVE_FIRST" xml:space="preserve">
-    <value>回転タグがグラフに割り当てられています。モードの変更時には、一度本項目を解除してください。</value>
+    <value />
     <comment>回転タグがグラフに割り当てられています。モードの変更時には、一度本項目を解除してください。</comment>
   </data>
   <data name="TXT_ANALYSIS_START" xml:space="preserve">
-    <value>解析開始</value>
+    <value>开始分析</value>
     <comment>解析開始</comment>
   </data>
   <data name="TXT_ALLMODE" xml:space="preserve">
@@ -1102,49 +1102,49 @@ Please try restart agin.</comment>
     <comment>ALL</comment>
   </data>
   <data name="TXT_FILE_NAME" xml:space="preserve">
-    <value>File Name</value>
+    <value>文件名</value>
     <comment>File Name</comment>
   </data>
   <data name="TXT_SEARCH_ANALYSIS_FILE" xml:space="preserve">
-    <value>Search Analysis File</value>
+    <value>查找分析文件名</value>
     <comment>Search Analysis File</comment>
   </data>
   <data name="TXT_SEARCH_FOLDER_NAME" xml:space="preserve">
-    <value>Search Folder Name</value>
+    <value>查找本夹名</value>
     <comment>Search Folder Name</comment>
   </data>
   <data name="MSG_DUPLICATE_FILE_CHECK" xml:space="preserve">
-    <value>ファイルがすでに存在しています。上書き保存されますがよろしいですか？</value>
+    <value>文件已存在。是否覆盖此文件？</value>
     <comment>ファイルがすでに存在しています。上書き保存されますがよろしいですか？</comment>
   </data>
   <data name="MSG_FILENAME_EMPTY_CHECK" xml:space="preserve">
-    <value>ファイル名が入力されていません。</value>
+    <value>没有输入文件名称。</value>
     <comment>ファイル名が入力されていません。</comment>
   </data>
   <data name="TXT_WRITE_FOLDER_INPUT" xml:space="preserve">
-    <value>保存ファイル名入力</value>
+    <value>输入保存文件名</value>
     <comment>保存ファイル名入力</comment>
   </data>
   <data name="MSG_INPUT_FILENAME" xml:space="preserve">
-    <value>データファイルの名前を入力してください。</value>
+    <value>请输入数据文件的名称。</value>
     <comment>データファイルの名前を入力してください。</comment>
   </data>
   <data name="TXT_INPUT_FILENAME" xml:space="preserve">
-    <value>データファイル名入力</value>
+    <value>输入数据文件名</value>
     <comment>データファイル名入力</comment>
   </data>
   <data name="MSG_FILENAME_INVALID_CHECK" xml:space="preserve">
-    <value>A filename cannot contain any of the following characters: 
-\ / : * ? " &lt; &gt; |</value>
+    <value>文件名称无法使用以下文字。
+\ / : * ?  &lt; &gt; |"</value>
     <comment>A filename cannot contain any of the following characters: 
 \ / : * ? " &lt; &gt; |</comment>
   </data>
   <data name="MSG_MEASURE_DATA_CONFIRM_EXIT" xml:space="preserve">
-    <value>Are you sure to discard measurement data?</value>
+    <value>是否停止测量？</value>
     <comment>測定結果内容を破棄します。よろしいですか？</comment>
   </data>
   <data name="TXT_END_WITHOUT_SAVE" xml:space="preserve">
-    <value>Exit without save</value>
+    <value>结束，不保存</value>
     <comment>保存せずに終了</comment>
   </data>
   <data name="TXT_SAVE" xml:space="preserve">
@@ -1160,7 +1160,7 @@ Please try restart agin.</comment>
     <comment>Shot</comment>
   </data>
   <data name="MSG_NOTHING_MEAS_CHANNEL" xml:space="preserve">
-    <value>測定有効となっている項目(チャンネル)がありません。</value>
+    <value>没有有效的测量项目（频道）。</value>
     <comment>測定有効となっている項目(チャンネル)がありません。</comment>
   </data>
   <data name="MSG_DISTANCE_LESS_THAN_SAMPLING_RATE" xml:space="preserve">
@@ -1168,23 +1168,23 @@ Please try restart agin.</comment>
     <comment>Distance less than sampling rate</comment>
   </data>
   <data name="MSG_TAG_ASSIGN_MEAS_ONLY" xml:space="preserve">
-    <value>Only measurement tags can be assigned</value>
+    <value />
     <comment>Only measurement tags can be assigned</comment>
   </data>
   <data name="MSG_CSV_OUTPUT_MSG" xml:space="preserve">
-    <value>CSV出力中です。</value>
+    <value>正在输出CSV。</value>
     <comment>CSV出力中です。</comment>
   </data>
   <data name="MSG_CSV_OUTPUT_TITLE" xml:space="preserve">
-    <value>CSV出力</value>
+    <value>输出CSV</value>
     <comment>CSV出力</comment>
   </data>
   <data name="MSG_CANCEL" xml:space="preserve">
-    <value>Canceled.</value>
+    <value>取消。</value>
     <comment>Canceled.</comment>
   </data>
   <data name="MSG_WARMINGUP" xml:space="preserve">
-    <value>Warming Up</value>
+    <value>正在暖机</value>
     <comment>Warming Up</comment>
   </data>
   <data name="MSG_GRAPH_LIST_CANT_EMPTY" xml:space="preserve">
@@ -1192,35 +1192,35 @@ Please try restart agin.</comment>
     <comment>Graph list can't be blank</comment>
   </data>
   <data name="MSG_ANGLE_MUST_NOT_SAME" xml:space="preserve">
-    <value>Angle must not be same value</value>
+    <value>不能设定同样的角度。</value>
     <comment>Angle must not be same value</comment>
   </data>
   <data name="MSG_SHOTNUM_MAX_10" xml:space="preserve">
-    <value>Max shot number is 10</value>
+    <value />
     <comment>Max shot number is 10</comment>
   </data>
   <data name="TXT_X_AXIS" xml:space="preserve">
-    <value>X-Axis</value>
+    <value>X轴</value>
     <comment>X</comment>
   </data>
   <data name="TXT_Y_AXIS" xml:space="preserve">
-    <value>Y-Axis</value>
+    <value>Y轴</value>
     <comment>Y</comment>
   </data>
   <data name="TXT_TAG_SETTING_SENSOR_OUTPUT" xml:space="preserve">
-    <value>センサ出力設定</value>
+    <value>传感器输出设定</value>
     <comment>センサ出力設定</comment>
   </data>
   <data name="MSG_TEMPCHECK" xml:space="preserve">
-    <value>測定指定チャンネルに温度センサが取り付けられていないチャンネルがあります。
-設定を再確認してください。
+    <value>在测量指定频道存在没有温度传感器频道。
+请再次确认设定。
 [{0}]
 
-そのまま測定することも可能ですが、データが正確でない恐れがあります。</value>
+可以测量，数据有可能不正确。</value>
     <comment>測定指定チャンネルに温度センサが取り付けられていないチャンネルがあります。</comment>
   </data>
   <data name="MSG_TEMPCHECK_CAPTION" xml:space="preserve">
-    <value>温度センサ取り付け確認</value>
+    <value>确认温度传感器的安装。</value>
     <comment>温度センサ取り付け確認</comment>
   </data>
   <data name="MSG_TAGSETTING_NG_EXPRESSION" xml:space="preserve">
@@ -1232,7 +1232,7 @@ Please try restart agin.</comment>
     <comment>演算式を確認しました。</comment>
   </data>
   <data name="MSG_DELETE_MEASUREDATA" xml:space="preserve">
-    <value>指定された測定データを削除します。よろしいですか？</value>
+    <value>是否删除指定数据。</value>
     <comment>指定された測定データを削除します。よろしいですか？</comment>
   </data>
   <data name="MSG_DELETE_MEASUREDATA_TITLE" xml:space="preserve">
@@ -1240,15 +1240,15 @@ Please try restart agin.</comment>
     <comment>測定データ削除</comment>
   </data>
   <data name="MSG_MEAS_EMERGENCY_STOP" xml:space="preserve">
-    <value>バッファオーバーフローが発生しました。
-測定可能な条件を超えています。
-条件を見直して再測定してください。
+    <value>发生缓冲溢出。
+超出可以测量的条件。
+请从新确认条件。
 
-測定を緊急停止します。</value>
+紧急停止测量。</value>
     <comment>測定を緊急停止します。</comment>
   </data>
   <data name="TXT_R_FACTOR" xml:space="preserve">
-    <value>Rセンサー倍率</value>
+    <value>R传感器倍率</value>
     <comment>Rセンサー倍率</comment>
   </data>
   <data name="TXT_AVERAGE_COUNT" xml:space="preserve">
@@ -1264,23 +1264,23 @@ Please try restart agin.</comment>
     <comment>測定時間(min)</comment>
   </data>
   <data name="TXT_MEAS_AVERAGE" xml:space="preserve">
-    <value>平均測定</value>
+    <value>平均测量</value>
     <comment>平均測定</comment>
   </data>
   <data name="TXT_MEAS_EVERY_SHOT" xml:space="preserve">
-    <value>毎ショット測定</value>
+    <value>每冲程测量</value>
     <comment>毎ショット測定</comment>
   </data>
   <data name="TXT_MEAS_INT_SHOT" xml:space="preserve">
-    <value>任意回数毎の1ショットを測定</value>
+    <value>每任意次数的冲程测量</value>
     <comment>任意回数毎の1ショットを測定</comment>
   </data>
   <data name="TXT_MEAS_INT_TIME2SHOT" xml:space="preserve">
-    <value>任意時間毎の任意回数のショット測定</value>
+    <value>每任意时间的任意次数的冲程测量</value>
     <comment>任意時間毎の任意回数のショット測定</comment>
   </data>
   <data name="TXT_MEAS_INT_TIME2TIME" xml:space="preserve">
-    <value>任意時間ごとの任意時間測定</value>
+    <value>各个任意时间的任意时间测量</value>
     <comment>任意時間ごとの任意時間測定</comment>
   </data>
   <data name="TXT_SHOT_COUNT" xml:space="preserve">
@@ -1288,7 +1288,7 @@ Please try restart agin.</comment>
     <comment>ショット数</comment>
   </data>
   <data name="TXT_STOPTIME_MIN" xml:space="preserve">
-    <value>停止時間(min)</value>
+    <value>停止时间（min）</value>
     <comment>停止時間(min)</comment>
   </data>
   <data name="TXT_TIME_MIN" xml:space="preserve">
@@ -1296,19 +1296,19 @@ Please try restart agin.</comment>
     <comment>時間(min)</comment>
   </data>
   <data name="TXT_MEAS_CONDITION_MODE1" xml:space="preserve">
-    <value>モード１測定条件</value>
+    <value>模式1测量条件</value>
     <comment>モード１測定条件</comment>
   </data>
   <data name="TXT_MEAS_PAUSE" xml:space="preserve">
-    <value>一時停止</value>
+    <value>暂停</value>
     <comment>一時停止</comment>
   </data>
   <data name="TXT_MEAS_RECPAUSE" xml:space="preserve">
-    <value>記録停止中</value>
+    <value>记录停止</value>
     <comment>記録停止中</comment>
   </data>
   <data name="TXT_MEAS_RUN" xml:space="preserve">
-    <value>記録中</value>
+    <value>正在记录</value>
     <comment>記録中</comment>
   </data>
   <data name="TXT_MEAS_STOP" xml:space="preserve">
@@ -1316,15 +1316,15 @@ Please try restart agin.</comment>
     <comment>停止</comment>
   </data>
   <data name="ERROR_INVALID_CSV_OVERSAMPLECOUNT" xml:space="preserve">
-    <value>CSV出力の終了位置がデータ数をオーバーしています。</value>
+    <value>CSV输出结束位置数据数量过多。</value>
     <comment>CSV出力の終了位置がデータ数をオーバーしています。</comment>
   </data>
   <data name="MSG_CANT_ASSIGN_TAG" xml:space="preserve">
-    <value>ボード設定のないチャンネルには項目を割り当てることはできません。</value>
+    <value>不能在没有设定电路板的频道分配项目。</value>
     <comment>ボード設定のないチャンネルには項目を割り当てることはできません。</comment>
   </data>
   <data name="TXT_MEAS_CONDITION" xml:space="preserve">
-    <value>測定条件</value>
+    <value>测量条件</value>
     <comment>測定条件</comment>
   </data>
   <data name="TXT_MEAS_TERM_LIMIT" xml:space="preserve">
@@ -1364,31 +1364,31 @@ Please try restart agin.</comment>
     <comment>上金型</comment>
   </data>
   <data name="MSG_TEMPSENSOR_NOT_EXIST" xml:space="preserve">
-    <value>測定対象センサに温度センサが取り付けられていません。
-測定結果は0℃の時の結果となります。
-正確に測定するには、温度センサの取り付けを再度確認してください。
-
-[0]</value>
+    <value>测量对象传感器没有安装温度传感器。
+测量结果为0℃的结果。
+为了正确测量请再一次确认温度传感器的安装。
+
+[{0}]</value>
     <comment>測定対象センサに温度センサが取り付けられていません。
 測定結果は0℃の時の結果となります。
 正確に測定するには、温度センサの取り付けを再度確認してください。
 
-[0]</comment>
+[{0}]</comment>
   </data>
   <data name="TXT_MEAS_SHORT_AVERAGE" xml:space="preserve">
     <value>平均</value>
     <comment>平均</comment>
   </data>
   <data name="TXT_MEAS_SHORT_INT_SHOT" xml:space="preserve">
-    <value>間引</value>
+    <value>剔除</value>
     <comment>間引</comment>
   </data>
   <data name="TXT_MEAS_SHORT_INT_TIME2SHOT" xml:space="preserve">
-    <value>ショット数/分</value>
+    <value>冲程数/分</value>
     <comment>ショット数/定期時間</comment>
   </data>
   <data name="TXT_MEAS_SHORT_INT_TIME2TIME" xml:space="preserve">
-    <value>測定(分)/停止(分)</value>
+    <value>测量(分)/停止(分)</value>
     <comment>測定時間/停止時間</comment>
   </data>
   <data name="TXT_MEASURE_TARGET_SETTING" xml:space="preserve">

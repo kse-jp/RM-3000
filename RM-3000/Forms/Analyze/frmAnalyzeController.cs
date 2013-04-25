@@ -398,6 +398,7 @@ namespace RM_3000.Forms.Parts
                 threadCreateAnimation = null;
             }
             threadCreateAnimation = new Thread(new ThreadStart(Thread_CreateAnimation));
+            threadCreateAnimation.IsBackground = true;
             threadCreateAnimation.Start();
 
             this.isStartAnimation = true;
@@ -417,6 +418,7 @@ namespace RM_3000.Forms.Parts
                 {
                     this.threadExitEvent.Set();
                 }
+                
                 //threadCreateAnimation.Abort();
                 // 自動アニメーション用スレッド停止
                 for (int i = 0; i < this.graph3DList.Count; i++)
@@ -849,7 +851,8 @@ namespace RM_3000.Forms.Parts
                 if (this.threadCreateAnimation != null)
                 {
                     this.threadCreateAnimation.Join(1000);
-                    this.threadCreateAnimation.Abort();
+                    //this.threadCreateAnimation.Abort();
+                    this.threadCreateAnimation.Interrupt();
                 }
                 this.threadCreateAnimation = null;
 
@@ -1701,6 +1704,11 @@ namespace RM_3000.Forms.Parts
                 //        }
                 //    }
                 //}
+            }
+            catch (ThreadInterruptedException ix)
+            {
+                ix.ToString();
+                return;
             }
             catch (ThreadAbortException ab)
             {

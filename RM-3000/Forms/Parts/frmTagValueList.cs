@@ -172,7 +172,7 @@ namespace RM_3000.Forms.Parts
                         this.dataValueLabels[index].Text = ((Value_MaxMin)chData.DataValues).MaxValue.ToString(tagPoint[chData.Position]);
 
                         //TagNo_2があるとき
-                        if (relationSetting.RelationList[chData.Position - 1].TagNo_2 != -1)
+                        if (relationSetting.RelationList[chData.Position].TagNo_2 != -1)
                         {
                             if (isMeasure)
                             {

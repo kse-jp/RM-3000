@@ -2360,11 +2360,33 @@ namespace RM_3000.Forms.Parts
                 //演算項目の数値更新（Tag順が入れ替わっている可能性があるため
                 if (this.mode == (int)ModeType.MODE2)
                 {
-                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][0], (int)this.currentIndex - 1);
+                    var idx = 0;
+                    idx = Convert.ToInt32((Convert.ToDouble(this.currentIndex) - (double)this.AnalyzeData.ChannelsSetting.ChannelMeasSetting.Degree1) / incx);
+                    Value_Mode2 val = null;
+                    for (int i = 1; i < this.dataList[0][0].ChannelDatas.Length; i++)
+                    {
+                        if (this.dataList[0][0].ChannelDatas[i] != null)
+                        {
+                            val = this.dataList[0][0].ChannelDatas[i].DataValues as Value_Mode2;
+                            break;
+                        }
+                    }
+
+                    if (val != null)
+                    {
+                        if (idx > val.Values.Length - 1)
+                            idx = val.Values.Length - 1;
+                    }
+
+                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][0], idx);
                 }
                 else
                 {
-                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][(int)this.currentIndex - 1], 0);
+                    int idx = (int)this.currentIndex - 1;
+
+                    if (idx < 0) idx = 0;
+
+                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][idx], 0);
                 }
 
                 //if (this.maxOverShotCountForMode2 > 1 && this.mode == 2)

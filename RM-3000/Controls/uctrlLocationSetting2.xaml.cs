@@ -32,7 +32,13 @@ namespace RM_3000
         private const int SENSOR_DIRECTION_LEFT = 2;
         private const int SENSOR_DIRECTION_RIGHT = 3;
 
+        /// <summary>
+        /// ボルスター側
+        /// </summary>
         private const int SENSOR_TARGET_UNDER_KANAGATA = 0;
+        /// <summary>
+        /// 金型側
+        /// </summary>
         private const int SENSOR_TARGET_PRESS_KANAGATA = 1;
 
         /// <summary>
@@ -99,6 +105,10 @@ namespace RM_3000
         /// キャンパス外へドラッグされたか
         /// </summary>
         private bool isOutOfCanvas = false;
+        /// <summary>
+        /// マウスドラッグイベント中
+        /// </summary>
+        private bool inMouseMoveEvent = false;
 
         //Event関係
         public event EventHandler DoneInitailized = delegate { };
@@ -1360,13 +1370,16 @@ namespace RM_3000
                         (toY < pointOfUnderKanagata.Y ||
                         toY > pointOfUnderKanagata.Y + this.cvsUnderKanagata.ActualHeight))
                     {
+                        // ボルスター側に吸着
                         this.activeSensorCanvas.target = SENSOR_TARGET_UNDER_KANAGATA;
                     }
                 }
 
                 //Console.WriteLine(this.activeSensorCanvas.target);
+
                 if (this.activeSensorCanvas.target == SENSOR_TARGET_UNDER_KANAGATA)
                 {
+                    // ボルスター側に吸着
                     if (autoAdjust)
                     {
                         if (toX >= pointOfUnderKanagata.X + this.cvsUnderKanagata.ActualWidth &&
@@ -1489,7 +1502,10 @@ namespace RM_3000
                             && toY <= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight + SENSOR_JUDGE_MARGIN)
                         {
                             //プレス金型の右側にいる場合
-                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_LEFT;
+                            if (this.activeSensorCanvas.direction != SENSOR_DIRECTION_LEFT)
+                            {
+                                this.activeSensorCanvas.direction = SENSOR_DIRECTION_LEFT;
+                            }
                             this.activeSensorR(this.activeSensorCanvas);
                         }
                         else if (toX <= pointOfPressKanagata.X
@@ -1497,7 +1513,10 @@ namespace RM_3000
                             && toY <= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight + SENSOR_JUDGE_MARGIN)
                         {
                             //プレス金型の左側にいる場合
-                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_RIGHT;
+                            if (this.activeSensorCanvas.direction != SENSOR_DIRECTION_RIGHT)
+                            {
+                                this.activeSensorCanvas.direction = SENSOR_DIRECTION_RIGHT;
+                            }
                             this.activeSensorR(this.activeSensorCanvas);
                         }
                         else if (toY <= pointOfPressKanagata.Y
@@ -1505,7 +1524,10 @@ namespace RM_3000
                             && toX <= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth + SENSOR_JUDGE_MARGIN)
                         {
                             //プレス金型の上側にいる場合
-                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_BOTTOM;
+                            if (this.activeSensorCanvas.direction != SENSOR_DIRECTION_BOTTOM)
+                            {
+                                this.activeSensorCanvas.direction = SENSOR_DIRECTION_BOTTOM;
+                            }
                             this.activeSensorR(this.activeSensorCanvas);
                         }
                         else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - SENSOR_JUDGE_MARGIN
@@ -1513,7 +1535,10 @@ namespace RM_3000
                             && toX <= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth + SENSOR_JUDGE_MARGIN)
                         {
                             //プレス金型の下側にいる場合
-                            this.activeSensorCanvas.direction = SENSOR_DIRECTION_TOP;
+                            if (this.activeSensorCanvas.direction != SENSOR_DIRECTION_TOP)
+                            {
+                                this.activeSensorCanvas.direction = SENSOR_DIRECTION_TOP;
+                            }
                             this.activeSensorR(this.activeSensorCanvas);
                         }
                     }
@@ -1528,7 +1553,7 @@ namespace RM_3000
                                 y = pointOfPressKanagata.Y - 16;
                                 isMoveY = false;
                             }
-                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight)
+                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16)
                             {
                                 y = pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16;
                                 isMoveY = false;
@@ -1546,7 +1571,7 @@ namespace RM_3000
                                 y = pointOfPressKanagata.Y - 16;
                                 isMoveY = false;
                             }
-                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight)
+                            else if (toY >= pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16)
                             {
                                 y = pointOfPressKanagata.Y + this.cvsPressKanagata.ActualHeight - this.borderLineWidth - 16;
                                 isMoveY = false;
@@ -1564,7 +1589,7 @@ namespace RM_3000
                                 x = pointOfPressKanagata.X - 16;
                                 isMoveX = false;
                             }
-                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth)
+                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16)
                             {
                                 x = pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16;
                                 isMoveX = false;
@@ -1582,7 +1607,7 @@ namespace RM_3000
                                 x = pointOfPressKanagata.X - 16;
                                 isMoveX = false;
                             }
-                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth)
+                            else if (toX >= pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16)
                             {
                                 x = pointOfPressKanagata.X + this.cvsPressKanagata.ActualWidth - this.borderLineWidth - 16;
                                 isMoveX = false;
@@ -1617,8 +1642,8 @@ namespace RM_3000
                     pointOfBolster = this.cvsBolster.TranslatePoint(new Point(0, 0), this.cvsBase);
                 }
 
-                int settingX;
-                int settingY;
+                var settingX = -1;
+                var settingY = -1;
 
                 switch (this.activeSensorCanvas.direction)
                 {
@@ -1680,6 +1705,9 @@ namespace RM_3000
                         break;
                 }
 
+                // For Debug
+                label3.Content = settingX.ToString();
+                label4.Content = settingY.ToString();
             }
 
         }
@@ -1813,6 +1841,9 @@ namespace RM_3000
             }
             else if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_R)
             {
+                //label3.Content = pointX.ToString();
+                //label4.Content = pointY.ToString();
+
                 if (pointX >= pressKanagataX &&
                     pointX <= pressKanagataX + this.settingStage.pressKanagataWidth &&
                     pointY >= pressKanagataY &&
@@ -1927,8 +1958,8 @@ namespace RM_3000
             }
 
             this.currentMousePoint = e.GetPosition(this.cvsBase);
-            this.dragSensorPaddingPointX = e.GetPosition(this.activeSensorCanvas).X;
-            this.dragSensorPaddingPointY = e.GetPosition(this.activeSensorCanvas).Y;
+            //this.dragSensorPaddingPointX = e.GetPosition(this.activeSensorCanvas).X;
+            //this.dragSensorPaddingPointY = e.GetPosition(this.activeSensorCanvas).Y;
 
             this.locationSetting.setSensorNumber(clickedCanvasSensor.chIndex);
         }
@@ -1951,26 +1982,19 @@ namespace RM_3000
             if (this.isDragging == true)
             {
                 this.isDragging = false;
+
                 this.dragSensorPaddingPointX = 0;
                 this.dragSensorPaddingPointY = 0;
                 if (this.activeSensorCanvas.isNew == true)
                 {
                     this.activeSensorCanvas.isNew = false;
-                    //Point pointSensorAtCanvasRoot = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.cvsRoot);
-                    //////Point pointSensorAtBase = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.cvsBase);
-
-                    //////this.cvsRoot.Children.Remove(this.activeSensorCanvas);
-                    //////Canvas.SetLeft(this.activeSensorCanvas, pointSensorAtBase.X);
-                    //////Canvas.SetTop(this.activeSensorCanvas, pointSensorAtBase.Y);
-                    //////((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);
-                    //////this.setSensorContextMenu(this.activeSensorCanvas);
                 }
 
                 int settingX = this.locationSetting.getSensorPositionX(this.activeSensorCanvas.chIndex);
                 int settingY = this.locationSetting.getSensorPositionY(this.activeSensorCanvas.chIndex);
 
-                label3.Content = e.GetPosition(this.cvsBolster).X.ToString();
-                label4.Content = e.GetPosition(this.cvsBolster).Y.ToString();
+                //label3.Content = e.GetPosition(this.cvsBolster).X.ToString();
+                //label4.Content = e.GetPosition(this.cvsBolster).Y.ToString();
 
                 // 範囲外にある場合は、削除し新規設置とする
                 if (this.isOutOfCanvas)
@@ -2034,74 +2058,87 @@ namespace RM_3000
                 return;
             }
 
-            if (e.LeftButton == MouseButtonState.Released)
+            try
             {
-                // マウスUpしたものとして扱う
-                this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
-                return;
-            }
+                //this.inMouseMoveEvent = true;
 
-            Point mousePoint;
-            var inCanvas = false;
-            if (this.activeSensorCanvas.isNew)
-            {
-                mousePoint = e.GetPosition(null);
-
-                // 拡大時に対応する為，キャンバス内へドラッグされている時はキャンバス内座標を取得する
-                if (mousePoint.X <= (cvsRoot.ActualWidth - 170.0))
+                if (e.LeftButton == MouseButtonState.Released)
                 {
-                    inCanvas = true;
+                    // マウスUpしたものとして扱う
+                    this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
+                    return;
+                }
+
+                Point mousePoint;
+                var inCanvas = false;
+                if (this.activeSensorCanvas.isNew)
+                {
+                    mousePoint = e.GetPosition(null);
+
+                    // 拡大時に対応する為，キャンバス内へドラッグされている時はキャンバス内座標を取得する
+                    if (mousePoint.X <= (cvsRoot.ActualWidth - 170.0))
+                    {
+                        inCanvas = true;
+                        mousePoint = e.GetPosition(this.cvsBase);
+
+                        // CanvasをRootからBaseに切り替える
+                        Point pointSensorAtScrollView = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.scrollViewer);
+                        this.cvsRoot.Children.Remove(this.activeSensorCanvas);
+                        this.cvsBase.Children.Remove(this.activeSensorCanvas);
+                        Canvas.SetLeft(this.activeSensorCanvas, this.scrollViewer.ContentHorizontalOffset + pointSensorAtScrollView.X);
+                        Canvas.SetTop(this.activeSensorCanvas, this.scrollViewer.ContentVerticalOffset + pointSensorAtScrollView.Y);
+                        ((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);
+                        this.setSensorContextMenu(this.activeSensorCanvas);
+                    }
+                }
+                else
+                {
                     mousePoint = e.GetPosition(this.cvsBase);
-
-                    // CanvasをRootからBaseに切り替える
-                    Point pointSensorAtScrollView = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.scrollViewer);
-                    this.cvsRoot.Children.Remove(this.activeSensorCanvas);
-                    this.cvsBase.Children.Remove(this.activeSensorCanvas);
-                    Canvas.SetLeft(this.activeSensorCanvas, this.scrollViewer.ContentHorizontalOffset + pointSensorAtScrollView.X);
-                    Canvas.SetTop(this.activeSensorCanvas, this.scrollViewer.ContentVerticalOffset + pointSensorAtScrollView.Y);
-                    ((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);
-                    this.setSensorContextMenu(this.activeSensorCanvas);
                 }
-            }
-            else
-            {
-                mousePoint = e.GetPosition(this.cvsBase);
-            }
 
-            label1.Content = mousePoint.X.ToString();
-            label2.Content = mousePoint.Y.ToString();
-            //label3.Content = this.sliderZoom.Value.ToString();
-            //label4.Content = cvsRoot.ActualWidth.ToString();
-            //label4.Content = cvsBase.ActualWidth.ToString();
+                label1.Content = mousePoint.X.ToString();
+                label2.Content = mousePoint.Y.ToString();
+                //label3.Content = this.sliderZoom.Value.ToString();
+                //label4.Content = cvsRoot.ActualWidth.ToString();
+                //label4.Content = cvsBase.ActualWidth.ToString();
 
-            // センサー移動
-            this.moveSensor(mousePoint.X, mousePoint.Y);
+                // センサー移動
+                this.moveSensor(mousePoint.X, mousePoint.Y);
 
-            // キャンバス範囲境界付近にドラッグされた場合
-            if (this.activeSensorCanvas.isNew)
-            {
-                //if ((cvsRoot.ActualWidth * this.sliderZoom.Value) < mousePoint.X + 20
-                if (((inCanvas) ? cvsBase.ActualWidth + 20 : cvsRoot.ActualWidth) < mousePoint.X + 20
-                    || mousePoint.X - 10 < 0
-                    || ((inCanvas) ? cvsBase.ActualHeight : cvsRoot.ActualHeight) < mousePoint.Y + 20
-                    || mousePoint.Y - 10 < 0)
+                // キャンバス範囲境界付近にドラッグされた場合
+                if (this.activeSensorCanvas.isNew)
                 {
-                    //マウスUpしたものとして扱う
-                    this.isOutOfCanvas = true;
-                    this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
+                    //if ((cvsRoot.ActualWidth * this.sliderZoom.Value) < mousePoint.X + 20
+                    if (((inCanvas) ? cvsBase.ActualWidth + 20 : cvsRoot.ActualWidth) < mousePoint.X + 20
+                        || mousePoint.X - 10 < 0
+                        || ((inCanvas) ? cvsBase.ActualHeight : cvsRoot.ActualHeight) < mousePoint.Y + 20
+                        || mousePoint.Y - 10 < 0)
+                    {
+                        //マウスUpしたものとして扱う
+                        this.isOutOfCanvas = true;
+                        this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
+                    }
+                }
+                else
+                {
+                    if (cvsBase.ActualWidth < mousePoint.X + 20
+                        || mousePoint.X - 10 < 0
+                        || cvsBase.ActualHeight < mousePoint.Y + 20
+                        || mousePoint.Y - 10 < 0)
+                    {
+                        //マウスUpしたものとして扱う
+                        this.isOutOfCanvas = true;
+                        this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (cvsBase.ActualWidth < mousePoint.X + 20
-                    || mousePoint.X - 10 < 0
-                    || cvsBase.ActualHeight < mousePoint.Y + 20
-                    || mousePoint.Y - 10 < 0)
-                {
-                    //マウスUpしたものとして扱う
-                    this.isOutOfCanvas = true;
-                    this.sensor_MouseLeftButtonUp(this, new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left));
-                }
+                ShowErrorMessage(ex);
+            }
+            finally
+            {
+                //this.inMouseMoveEvent = false;
             }
         }
 
@@ -2209,18 +2246,12 @@ namespace RM_3000
             if (this.isDragging == true)
             {
                 this.isDragging = false;
+
                 this.dragSensorPaddingPointX = 0;
                 this.dragSensorPaddingPointY = 0;
                 if (this.activeSensorCanvas.isNew == true)
                 {
                     this.activeSensorCanvas.isNew = false;
-                    Point pointSensorAtScrollView = this.activeSensorCanvas.TranslatePoint(new Point(0, 0), this.scrollViewer);
-                    this.cvsRoot.Children.Remove(this.activeSensorCanvas);
-                    this.cvsBase.Children.Remove(this.activeSensorCanvas);
-                    Canvas.SetLeft(this.activeSensorCanvas, this.scrollViewer.ContentHorizontalOffset + pointSensorAtScrollView.X);
-                    Canvas.SetTop(this.activeSensorCanvas, this.scrollViewer.ContentVerticalOffset + pointSensorAtScrollView.Y);
-                    ((Canvas)this.scrollViewer.Content).Children.Add(this.activeSensorCanvas);
-                    this.setSensorContextMenu(this.activeSensorCanvas);
                 }
 
                 bool deleted = false;
@@ -2238,7 +2269,6 @@ namespace RM_3000
                         this.setNewSensorB(this.activeSensorCanvas.chIndex);
 
                         deleted = true;
-
                     }
                 }
                 else if (this.activeSensorCanvas.sensorType == SENSOR_TYPE_R)
@@ -2255,7 +2285,6 @@ namespace RM_3000
                         deleted = true;
                     }
                 }
-
 
                 if (deleted == false)
                 {

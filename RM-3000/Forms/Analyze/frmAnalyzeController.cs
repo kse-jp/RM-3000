@@ -2374,7 +2374,11 @@ namespace RM_3000.Forms.Parts
                 }
                 else
                 {
-                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][(int)this.currentIndex - 1], 0);
+                    int idx = (int)this.currentIndex - 1;
+
+                    if (idx < 0) idx = 0;
+
+                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][idx], 0);
                 }
 
                 //if (this.maxOverShotCountForMode2 > 1 && this.mode == 2)

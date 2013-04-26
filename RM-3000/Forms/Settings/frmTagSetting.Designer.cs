@@ -56,13 +56,13 @@
             this.lblTagName = new System.Windows.Forms.Label();
             this.lblTagKind = new System.Windows.Forms.Label();
             this.cboTagKind = new System.Windows.Forms.ComboBox();
-            this.ntbZeroStatic = new RM_3000.Controls.NumericTextBox();
             this.lblZeroStatic = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ntbZeroStatic = new RM_3000.Controls.NumericTextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -307,16 +307,6 @@
             this.cboTagKind.Name = "cboTagKind";
             this.cboTagKind.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // ntbZeroStatic
-            // 
-            this.ntbZeroStatic.AllowMinus = true;
-            this.ntbZeroStatic.AllowSpace = false;
-            this.ntbZeroStatic.AllowString = false;
-            this.ntbZeroStatic.IsInteger = false;
-            resources.ApplyResources(this.ntbZeroStatic, "ntbZeroStatic");
-            this.ntbZeroStatic.Name = "ntbZeroStatic";
-            this.ntbZeroStatic.Validated += new System.EventHandler(this.ntbZeroStatic_Validated);
-            // 
             // lblZeroStatic
             // 
             resources.ApplyResources(this.lblZeroStatic, "lblZeroStatic");
@@ -342,6 +332,7 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -349,12 +340,24 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn3
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ntbZeroStatic
+            // 
+            this.ntbZeroStatic.AllowMinus = true;
+            this.ntbZeroStatic.AllowSpace = false;
+            this.ntbZeroStatic.AllowString = false;
+            this.ntbZeroStatic.IsInteger = false;
+            resources.ApplyResources(this.ntbZeroStatic, "ntbZeroStatic");
+            this.ntbZeroStatic.Name = "ntbZeroStatic";
+            this.ntbZeroStatic.Validated += new System.EventHandler(this.ntbZeroStatic_Validated);
             // 
             // Column1
             // 

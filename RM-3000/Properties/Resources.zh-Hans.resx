@@ -582,7 +582,7 @@
     <comment>OK</comment>
   </data>
   <data name="TXT_NUMBER_OF_TIMES" xml:space="preserve">
-    <value>times</value>
+    <value>回</value>
     <comment>times</comment>
   </data>
   <data name="TXT_SAMPLING_COUNT" xml:space="preserve">
@@ -766,7 +766,7 @@
     <comment>Measurement save files</comment>
   </data>
   <data name="MSG_MEAS_START_TEST" xml:space="preserve">
-    <value />
+    <value>测量开始。</value>
     <comment>Measurement start test</comment>
   </data>
   <data name="MSG_MEAS_STOP_TEST" xml:space="preserve">
@@ -1090,7 +1090,7 @@ Please try restart agin.</comment>
     <comment>回転タグは登録できません。</comment>
   </data>
   <data name="MSG_REVOLUTION_REMOVE_FIRST" xml:space="preserve">
-    <value />
+    <value>回转标签在波形上被分配。更改模式时请将本项目解除。</value>
     <comment>回転タグがグラフに割り当てられています。モードの変更時には、一度本項目を解除してください。</comment>
   </data>
   <data name="TXT_ANALYSIS_START" xml:space="preserve">
@@ -1152,7 +1152,7 @@ Please try restart agin.</comment>
     <comment>保存</comment>
   </data>
   <data name="TXT_MEASUREMENT_COUNT" xml:space="preserve">
-    <value>測定数</value>
+    <value>测量数</value>
     <comment>測定数</comment>
   </data>
   <data name="TXT_SHOT_UNIT" xml:space="preserve">
@@ -1164,11 +1164,11 @@ Please try restart agin.</comment>
     <comment>測定有効となっている項目(チャンネル)がありません。</comment>
   </data>
   <data name="MSG_DISTANCE_LESS_THAN_SAMPLING_RATE" xml:space="preserve">
-    <value>Distance less than sampling rate</value>
+    <value>请使显示幅度的长度大于取样周期。</value>
     <comment>Distance less than sampling rate</comment>
   </data>
   <data name="MSG_TAG_ASSIGN_MEAS_ONLY" xml:space="preserve">
-    <value />
+    <value>在频道无法设定测量项目以外的项目。</value>
     <comment>Only measurement tags can be assigned</comment>
   </data>
   <data name="MSG_CSV_OUTPUT_MSG" xml:space="preserve">
@@ -1188,7 +1188,7 @@ Please try restart agin.</comment>
     <comment>Warming Up</comment>
   </data>
   <data name="MSG_GRAPH_LIST_CANT_EMPTY" xml:space="preserve">
-    <value>Graph list can't be blank</value>
+    <value>请在波形上最少设定1个以上的项目。</value>
     <comment>Graph list can't be blank</comment>
   </data>
   <data name="MSG_ANGLE_MUST_NOT_SAME" xml:space="preserve">
@@ -1196,7 +1196,7 @@ Please try restart agin.</comment>
     <comment>Angle must not be same value</comment>
   </data>
   <data name="MSG_SHOTNUM_MAX_10" xml:space="preserve">
-    <value />
+    <value>请将复写的冲程次数最大设定在10次以内。</value>
     <comment>Max shot number is 10</comment>
   </data>
   <data name="TXT_X_AXIS" xml:space="preserve">
@@ -1236,7 +1236,7 @@ Please try restart agin.</comment>
     <comment>指定された測定データを削除します。よろしいですか？</comment>
   </data>
   <data name="MSG_DELETE_MEASUREDATA_TITLE" xml:space="preserve">
-    <value>測定データ削除</value>
+    <value>删除测量数据</value>
     <comment>測定データ削除</comment>
   </data>
   <data name="MSG_MEAS_EMERGENCY_STOP" xml:space="preserve">
@@ -1260,7 +1260,7 @@ Please try restart agin.</comment>
     <comment>回数目</comment>
   </data>
   <data name="TXT_MEASTIME_MIN" xml:space="preserve">
-    <value>測定時間(min)</value>
+    <value>测量时间（min）</value>
     <comment>測定時間(min)</comment>
   </data>
   <data name="TXT_MEAS_AVERAGE" xml:space="preserve">
@@ -1328,7 +1328,7 @@ Please try restart agin.</comment>
     <comment>測定条件</comment>
   </data>
   <data name="TXT_MEAS_TERM_LIMIT" xml:space="preserve">
-    <value>測定量指定</value>
+    <value>指定测量量</value>
     <comment>測定量指定</comment>
   </data>
   <data name="TXT_NONE" xml:space="preserve">
@@ -1400,23 +1400,23 @@ Please try restart agin.</comment>
     <comment>最新通信时间</comment>
   </data>
   <data name="MSG_TAG_CALC_SELECTED_INCALC" xml:space="preserve">
-    <value>演算式に演算項目を指定できません。</value>
+    <value>在运算符上无法指定运算项目。</value>
     <comment>No Tag selected.</comment>
   </data>
   <data name="MSG_TAG_CALC_FINISHED_OPE" xml:space="preserve">
-    <value>演算子( +-*/^ )で終わっています。</value>
+    <value>运算符的最后为( +-*/^ )。</value>
     <comment>演算子( +-*/^ )で終わっています。</comment>
   </data>
   <data name="MSG_TAG_CALC_INVALID_CONST_TAGNAME" xml:space="preserve">
-    <value>定数項目の指定が不正です。[{0}]</value>
+    <value>定数项目的指定不正确。[{0}]</value>
     <comment>定数項目の指定が不正です。[{0}]</comment>
   </data>
   <data name="MSG_TAG_CALC_INVALID_MEAS_TAGNAME" xml:space="preserve">
-    <value>測定項目の指定が不正です。[{0}]</value>
+    <value>测量项目的指定不正确。[{0}]</value>
     <comment>測定項目の指定が不正です。[{0}]</comment>
   </data>
   <data name="MSG_TAG_CALC_PARENTHESIS_INVALID" xml:space="preserve">
-    <value>括弧が閉じられていません。</value>
+    <value>括号没有括回。</value>
     <comment>括弧が閉じられていません。</comment>
   </data>
 </root>

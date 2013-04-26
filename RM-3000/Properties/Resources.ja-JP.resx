@@ -1189,8 +1189,8 @@
     <comment>キャンセルしました。</comment>
   </data>
   <data name="MSG_WARMINGUP" xml:space="preserve">
-    <value>暖気中</value>
-    <comment>暖気中</comment>
+    <value>暖機中</value>
+    <comment>暖機中</comment>
   </data>
   <data name="MSG_GRAPH_LIST_CANT_EMPTY" xml:space="preserve">
     <value>グラフには少なくとも1つ以上の項目を設定してください。</value>

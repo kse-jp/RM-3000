@@ -510,6 +510,9 @@ namespace RM_3000.Forms.Measurement
                 // 測定設定ファイル保存
                 SystemSetting.MeasureSetting.Serialize();
 
+                //測定設定の再表示
+                ShowMeasSetting();
+
                 if (this.log != null) this.log.PutLog(string.Format("frmMeasureStart.btnStart_Click() - saved measure setting file to [{0}]", this.measSetting.FilePath));
 
                 // 測定中画面表示

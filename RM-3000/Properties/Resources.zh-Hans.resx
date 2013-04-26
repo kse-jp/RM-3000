@@ -450,7 +450,7 @@
     <comment>計測項目種別</comment>
   </data>
   <data name="TXT_TAG_SETTING_TAG_KIND_LIST" xml:space="preserve">
-    <value>计量，演算（分析）</value>
+    <value>计量,演算（分析）</value>
     <comment>計測,演算２（解析）</comment>
   </data>
   <data name="TXT_TAG_SETTING_TAG_SELECT" xml:space="preserve">
@@ -1144,7 +1144,7 @@ Please try restart agin.</comment>
     <comment>測定結果内容を破棄します。よろしいですか？</comment>
   </data>
   <data name="TXT_END_WITHOUT_SAVE" xml:space="preserve">
-    <value>结束，不保存</value>
+    <value>结束,不保存</value>
     <comment>保存せずに終了</comment>
   </data>
   <data name="TXT_SAVE" xml:space="preserve">

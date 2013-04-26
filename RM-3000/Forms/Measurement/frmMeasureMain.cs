@@ -201,18 +201,13 @@ namespace RM_3000.Forms.Measurement
 
                 //緊急停止
                 case Sequences.TestSequence.TestStatusType.EmergencyStop:
-                    if (this.InvokeRequired)
-                    {
-                        this.BeginInvoke((MethodInvoker)delegate()
-                            {
-                                this.measureTask.Pause();
 
-                                MessageBox.Show(AppResource.GetString("MSG_MEAS_EMERGENCY_STOP"), AppResource.GetString("TXT_MEASUREMENT"), MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                                //測定を停止する。
-                                testSquence.EndTest();
-                            }
-                            );
-                    }
+                    this.measureTask.Pause();
+                    //測定を停止する。
+                    testSquence.EndTest();
+
+                    MessageBox.Show(AppResource.GetString("MSG_MEAS_EMERGENCY_STOP"), AppResource.GetString("TXT_MEASUREMENT"), MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
                     break;
             }
         }

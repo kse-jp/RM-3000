@@ -214,7 +214,7 @@
     <comment>Graph Setting</comment>
   </data>
   <data name="TXT_ANALYSIS_MAIN" xml:space="preserve">
-    <value>frmAnalyzeMain</value>
+    <value>Analysis Main</value>
     <comment>frmAnalyzeMain</comment>
   </data>
   <data name="TXT_TAG_MEAS_ITEM" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>Reading Pattern File</comment>
   </data>
   <data name="TXT_MEASURE_PATTERN" xml:space="preserve">
-    <value>frmMeasurePattern</value>
+    <value>Measure Pattern</value>
     <comment>frmMeasurePattern</comment>
   </data>
   <data name="TXT_OK" xml:space="preserve">
@@ -809,7 +809,7 @@
     <comment>Language</comment>
   </data>
   <data name="TXT_ANALYSIS" xml:space="preserve">
-    <value>Analize</value>
+    <value>Analysis</value>
     <comment>Analysis</comment>
   </data>
   <data name="TXT_MEASUREMENT" xml:space="preserve">
@@ -1249,71 +1249,71 @@ Emergency shutdown.</value>
     <comment>R Factor</comment>
   </data>
   <data name="TXT_AVERAGE_COUNT" xml:space="preserve">
-    <value>平均回数</value>
+    <value>The number of times of average</value>
     <comment>平均回数</comment>
   </data>
   <data name="TXT_COUNT" xml:space="preserve">
-    <value>回数目</value>
+    <value>times</value>
     <comment>回数目</comment>
   </data>
   <data name="TXT_MEASTIME_MIN" xml:space="preserve">
-    <value>測定時間(min)</value>
+    <value>Measured Time</value>
     <comment>測定時間(min)</comment>
   </data>
   <data name="TXT_MEAS_AVERAGE" xml:space="preserve">
-    <value>平均測定</value>
+    <value>Average measurement</value>
     <comment>平均測定</comment>
   </data>
   <data name="TXT_MEAS_EVERY_SHOT" xml:space="preserve">
-    <value>毎ショット測定</value>
+    <value>Each shot measurement</value>
     <comment>毎ショット測定</comment>
   </data>
   <data name="TXT_MEAS_INT_SHOT" xml:space="preserve">
-    <value>任意回数毎の1ショットを測定</value>
+    <value>1 shot measurement at any frequency</value>
     <comment>任意回数毎の1ショットを測定</comment>
   </data>
   <data name="TXT_MEAS_INT_TIME2SHOT" xml:space="preserve">
-    <value>任意時間毎の任意回数のショット測定</value>
+    <value>Shot measurement at any time and at any frequency</value>
     <comment>任意時間毎の任意回数のショット測定</comment>
   </data>
   <data name="TXT_MEAS_INT_TIME2TIME" xml:space="preserve">
-    <value>任意時間ごとの任意時間測定</value>
+    <value>Any time measurement at any time</value>
     <comment>任意時間ごとの任意時間測定</comment>
   </data>
   <data name="TXT_SHOT_COUNT" xml:space="preserve">
-    <value>ショット数</value>
+    <value>Shot Number</value>
     <comment>ショット数</comment>
   </data>
   <data name="TXT_STOPTIME_MIN" xml:space="preserve">
-    <value>停止時間(min)</value>
+    <value>Stop time.</value>
     <comment>停止時間(min)</comment>
   </data>
   <data name="TXT_TIME_MIN" xml:space="preserve">
-    <value>時間(min)</value>
+    <value>min</value>
     <comment>時間(min)</comment>
   </data>
   <data name="TXT_MEAS_CONDITION_MODE1" xml:space="preserve">
-    <value>モード１測定条件</value>
+    <value>Measurement condition in mode1</value>
     <comment>モード１測定条件</comment>
   </data>
   <data name="TXT_MEAS_PAUSE" xml:space="preserve">
-    <value>一時停止</value>
+    <value>STOP</value>
     <comment>一時停止</comment>
   </data>
   <data name="TXT_MEAS_RECPAUSE" xml:space="preserve">
-    <value>記録停止中</value>
+    <value>Memory stop.</value>
     <comment>記録停止中</comment>
   </data>
   <data name="TXT_MEAS_RUN" xml:space="preserve">
-    <value>記録中</value>
+    <value>Memory</value>
     <comment>記録中</comment>
   </data>
   <data name="TXT_MEAS_STOP" xml:space="preserve">
-    <value>停止</value>
+    <value>Stop</value>
     <comment>停止</comment>
   </data>
   <data name="ERROR_INVALID_CSV_OVERSAMPLECOUNT" xml:space="preserve">
-    <value>CSV出力の終了位置がデータ数をオーバーしています。</value>
+    <value>The end position of a CSV output exceeds the number of data.</value>
     <comment>CSV出力の終了位置がデータ数をオーバーしています。</comment>
   </data>
   <data name="MSG_CANT_ASSIGN_TAG" xml:space="preserve">
@@ -1321,11 +1321,11 @@ Emergency shutdown.</value>
     <comment>Can't assign to board type None.</comment>
   </data>
   <data name="TXT_MEAS_CONDITION" xml:space="preserve">
-    <value>測定条件</value>
+    <value>Measurement condition</value>
     <comment>測定条件</comment>
   </data>
   <data name="TXT_MEAS_TERM_LIMIT" xml:space="preserve">
-    <value>測定量指定</value>
+    <value>Measurand specification</value>
     <comment>測定量指定</comment>
   </data>
   <data name="TXT_NONE" xml:space="preserve">
@@ -1361,9 +1361,9 @@ Emergency shutdown.</value>
     <comment>上金型</comment>
   </data>
   <data name="MSG_TEMPSENSOR_NOT_EXIST" xml:space="preserve">
-    <value>測定対象センサに温度センサが取り付けられていません。
-測定結果は0℃の時の結果となります。
-正確に測定するには、温度センサの取り付けを再度確認してください。
+    <value>The temperature sensor is not attached to the measuring object sensor. 
+A measurement result brings a result at the time of 0 ℃. 
+In order to measure correctly, please check attachment of a temperature sensor again. 
 
 [0]</value>
   </data>
@@ -1372,19 +1372,19 @@ Emergency shutdown.</value>
     <comment>Input name of DataFile.</comment>
   </data>
   <data name="TXT_MEAS_SHORT_AVERAGE" xml:space="preserve">
-    <value>平均</value>
+    <value>Average</value>
     <comment>平均</comment>
   </data>
   <data name="TXT_MEAS_SHORT_INT_SHOT" xml:space="preserve">
-    <value>間引</value>
+    <value>Infanticide</value>
     <comment>間引</comment>
   </data>
   <data name="TXT_MEAS_SHORT_INT_TIME2SHOT" xml:space="preserve">
-    <value>ショット数/分</value>
+    <value>Shot/Min</value>
     <comment>ショット数/定期時間</comment>
   </data>
   <data name="TXT_MEAS_SHORT_INT_TIME2TIME" xml:space="preserve">
-    <value>測定(分)/停止(分)</value>
+    <value>Measurement /Stop</value>
     <comment>測定時間/停止時間</comment>
   </data>
   <data name="TXT_MEASURE_TARGET_SETTING" xml:space="preserve">
@@ -1396,23 +1396,23 @@ Emergency shutdown.</value>
     <comment>最新通信時間</comment>
   </data>
   <data name="MSG_TAG_CALC_SELECTED_INCALC" xml:space="preserve">
-    <value>Can't select calculation tag in expression. </value>
+    <value>An operand eye cannot be specified as a computing equation.</value>
     <comment>Can't select calculation tag in expression.</comment>
   </data>
   <data name="MSG_TAG_CALC_FINISHED_OPE" xml:space="preserve">
-    <value>演算子( +-*/^ )で終わっています。</value>
-    <comment>演算子( +-*/^ )で終わっています。</comment>
+    <value>It has finished with the character of (+-*/^).</value>
+    <comment>It has finished with the character of (+-*/^).</comment>
   </data>
   <data name="MSG_TAG_CALC_INVALID_CONST_TAGNAME" xml:space="preserve">
-    <value>定数項目の指定が不正です。[{0}]</value>
+    <value>Specification of an absolute term eye is inaccurate. [{0}]</value>
     <comment>定数項目の指定が不正です。[{0}]</comment>
   </data>
   <data name="MSG_TAG_CALC_INVALID_MEAS_TAGNAME" xml:space="preserve">
-    <value>測定項目の指定が不正です。[{0}]</value>
+    <value>Specification of a measurement item is inaccurate. [{0}]</value>
     <comment>測定項目の指定が不正です。[{0}]</comment>
   </data>
   <data name="MSG_TAG_CALC_PARENTHESIS_INVALID" xml:space="preserve">
-    <value>括弧が閉じられていません。</value>
+    <value>The parenthesis is not closed.</value>
     <comment>括弧が閉じられていません。</comment>
   </data>
 </root>

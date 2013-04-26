@@ -118,158 +118,158 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CSV_HEADER_CHANNELSETTING" xml:space="preserve">
-    <value>ChNo,BoardKind,Timing,TagName１,Unit１,TagName2,Unit2</value>
+    <value>Ch号码，电路板种类，测量时间，项目名1，单位1，项目名2，单位2</value>
     <comment>ChNo,BoardKind,Timing,TagName１,Unit１,TagName2,Unit2</comment>
   </data>
   <data name="CSV_HEADER_MEASUREDATA" xml:space="preserve">
-    <value>Start Time,End Time,Sampling Count</value>
+    <value>开始时间，结束时间，取样数</value>
     <comment>Start Time,End Time,Sampling Count</comment>
   </data>
   <data name="CSV_HEADER_MEASURESETTING" xml:space="preserve">
-    <value>Mode,Sampling Timing</value>
+    <value>测量模式，取样周期</value>
     <comment>Mode,Sampling Timing</comment>
   </data>
   <data name="CSV_TITLE_CHANNELSETTING" xml:space="preserve">
-    <value>Channel Infomation</value>
+    <value>频道信息</value>
     <comment>Channel Infomation</comment>
   </data>
   <data name="CSV_TITLE_MEASUREDATA" xml:space="preserve">
-    <value>MeasureData</value>
+    <value>测量数据</value>
   </data>
   <data name="CSV_TITLE_MEASURESETTING" xml:space="preserve">
-    <value>Measurement Condition</value>
+    <value>测量条件信息</value>
     <comment>Measurement Condition</comment>
   </data>
   <data name="ERROR_END_TIME_MUST_MORE" xml:space="preserve">
-    <value>EndTime must more than StartTime</value>
+    <value>结束时间早于开始时间。</value>
     <comment>EndTime must more than StartTime</comment>
   </data>
   <data name="ERROR_FILE_NOT_FOUND" xml:space="preserve">
-    <value>File not found</value>
+    <value>没有文件。</value>
     <comment>File not found</comment>
   </data>
   <data name="ERROR_INVALID_ARRAY_SIZE" xml:space="preserve">
-    <value>Invalid array size</value>
+    <value>无效的排列大小。</value>
     <comment>Invalid array size</comment>
   </data>
   <data name="ERROR_INVALID_COLOR_VALUE" xml:space="preserve">
-    <value>Invalid color value (24bit)</value>
+    <value>无效的颜色设定（24bit）。</value>
     <comment>Invalid color value (24bit)</comment>
   </data>
   <data name="ERROR_INVALID_FILE_PATH" xml:space="preserve">
-    <value>Invalid folder path</value>
+    <value>无效的本夹。</value>
     <comment>Invalid folder path</comment>
   </data>
   <data name="ERROR_INVALID_FILTER_VALUE" xml:space="preserve">
-    <value>Invalid filter value</value>
+    <value>无效的滤波器设定值。</value>
     <comment>Invalid filter value</comment>
   </data>
   <data name="ERROR_INVALID_HOLD_VALUE" xml:space="preserve">
-    <value>Invalid hold value</value>
+    <value>无效的保持设定值。</value>
     <comment>Invalid hold value</comment>
   </data>
   <data name="ERROR_INVALID_PATH" xml:space="preserve">
-    <value>Invalid path</value>
+    <value>无效的通道。</value>
     <comment>Invalid path</comment>
   </data>
   <data name="ERROR_INVALID_RANGE_VALUE" xml:space="preserve">
-    <value>Invalid range value</value>
+    <value>无效的范围设定。</value>
     <comment>Invalid range value</comment>
   </data>
   <data name="ERROR_MIN_MORE_THAN_MAX" xml:space="preserve">
-    <value>Min value is more than Max value</value>
+    <value>最小值超过最大值。</value>
     <comment>Min value is more than Max value</comment>
   </data>
   <data name="ERROR_START_TIME_MUST_LESS" xml:space="preserve">
-    <value>StartTime must less than EndTime</value>
+    <value>开始时间超过结束时间。</value>
     <comment>StartTime must less than EndTime</comment>
   </data>
   <data name="ERROR_VALUE_OUT_OF_RANGE" xml:space="preserve">
-    <value>Value out of range</value>
+    <value>无效的范围设定。</value>
     <comment>Value out of range</comment>
   </data>
   <data name="ERROR_XML_CLASSTYPE_NOT_EXIST" xml:space="preserve">
-    <value>TypeOfClass XML Tag not found</value>
+    <value>无法找到TypeOfClass XML标签。</value>
     <comment>TypeOfClass XML Tag not found</comment>
   </data>
   <data name="TXT_ROTATIONAL_SPEED" xml:space="preserve">
-    <value>Rotational Speed</value>
+    <value>转数</value>
     <comment>回転数</comment>
   </data>
   <data name="TXT_NONE1" xml:space="preserve">
-    <value>None</value>
+    <value>无</value>
     <comment>ナシ</comment>
   </data>
   <data name="TXT_NONE2" xml:space="preserve">
-    <value>(None)</value>
+    <value>（无）</value>
     <comment>(なし)</comment>
   </data>
   <data name="TXT_TRIGGER_EXTERN" xml:space="preserve">
-    <value>External</value>
+    <value>外部</value>
     <comment>外部</comment>
   </data>
   <data name="TXT_TRIGGER_MAIN" xml:space="preserve">
-    <value>Reference</value>
+    <value>标准</value>
     <comment>基準</comment>
   </data>
   <data name="TXT_TRIGGER_SELF" xml:space="preserve">
-    <value>Self</value>
+    <value>自己</value>
     <comment>自己</comment>
   </data>
   <data name="TXT_TRIGGER_TYPE" xml:space="preserve">
-    <value>Self,Reference,External</value>
+    <value>自己，标准，外部</value>
     <comment>自己,基準,外部</comment>
   </data>
   <data name="TXT_ZERO_VALUE" xml:space="preserve">
-    <value>Zero</value>
+    <value>零点</value>
     <comment>ゼロ点</comment>
   </data>
   <data name="MSG_CSV_HEADER_OUTPUT" xml:space="preserve">
-    <value>Output header datas...　</value>
+    <value>正在输出标头</value>
     <comment>ヘッダー出力中</comment>
   </data>
   <data name="MSG_CSV_RECORD_OUTPUT" xml:space="preserve">
-    <value>Output measure datas...</value>
+    <value>正在输出数据</value>
     <comment>データ出力中</comment>
   </data>
   <data name="TXT_CENTERSCALE" xml:space="preserve">
-    <value>Center Scale</value>
+    <value>中心比例尺</value>
     <comment>Center Scale</comment>
   </data>
   <data name="TXT_DISTANCE" xml:space="preserve">
-    <value>Axis Distance</value>
+    <value>轴间隔</value>
     <comment>Axis Distance</comment>
   </data>
   <data name="TXT_MAX" xml:space="preserve">
-    <value>Maximum</value>
+    <value>最大值</value>
     <comment>Maximum</comment>
   </data>
   <data name="TXT_MIN" xml:space="preserve">
-    <value>Minimum</value>
+    <value>最小值</value>
     <comment>Minimum</comment>
   </data>
   <data name="TXT_OVERLAYSHOT_COUNT" xml:space="preserve">
-    <value>Overlay Shot Count</value>
+    <value>复写冲程数</value>
     <comment>Overlay Shot Count</comment>
   </data>
   <data name="TXT_RANGESCALE" xml:space="preserve">
-    <value>+- Scale</value>
+    <value>±比例尺</value>
     <comment>+- Scale</comment>
   </data>
   <data name="TXT_FULLSCALE" xml:space="preserve">
-    <value>Full Scale</value>
+    <value>全量程</value>
     <comment>フルスケール</comment>
   </data>
   <data name="TXT_SENSOROUTPUT" xml:space="preserve">
-    <value>Sensor Output</value>
+    <value>传感器输出设定</value>
     <comment>センサー出力設定</comment>
   </data>
   <data name="TXT_DEGREE" xml:space="preserve">
-    <value>Degree</value>
+    <value>角度</value>
     <comment>Degree</comment>
   </data>
   <data name="TITLE_CALC_OPERATE" xml:space="preserve">
-    <value>演算実行</value>
+    <value>执行运算</value>
     <comment>演算実行</comment>
   </data>
 </root>

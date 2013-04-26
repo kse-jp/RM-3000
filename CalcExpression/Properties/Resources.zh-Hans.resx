@@ -118,103 +118,103 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MSG_CALC_ERR_ASSINMENT_OPERATOR" xml:space="preserve">
-    <value>"=" が見つかりません。</value>
+    <value>查找不到等号。</value>
     <comment>Not Found "="</comment>
   </data>
   <data name="MSG_CALC_ERR_EXP" xml:space="preserve">
-    <value>演算式領域エラー</value>
+    <value>运算领域错误。</value>
     <comment>Expression-Field Error</comment>
   </data>
   <data name="MSG_CALC_ERR_EXPRESSION_NO_CH" xml:space="preserve">
-    <value>演算項目が見つかりません。</value>
+    <value>查找不到运算项目。</value>
     <comment>Not Found Expression-Chanel</comment>
   </data>
   <data name="MSG_CALC_ERR_EXTRA_PARAMETER" xml:space="preserve">
-    <value>関数拡張パラメータエラー</value>
+    <value>函数扩张参数错误。</value>
     <comment>Extra Parameter in function</comment>
   </data>
   <data name="MSG_CALC_ERR_FORWARD_REF" xml:space="preserve">
-    <value>参照エラー</value>
+    <value>参照错误</value>
     <comment>Warning-Forward Referencing</comment>
   </data>
   <data name="MSG_CALC_ERR_FUNCTION" xml:space="preserve">
-    <value>関数フォーマットエラー</value>
+    <value>函数格式错误。</value>
     <comment>Function Format Error</comment>
   </data>
   <data name="MSG_CALC_ERR_L_PARENTHESIS" xml:space="preserve">
-    <value>"(" が必要です。</value>
+    <value>需要（。</value>
     <comment>Required '('</comment>
   </data>
   <data name="MSG_CALC_ERR_L_VALUE" xml:space="preserve">
-    <value>L-Valueエラー</value>
+    <value>[L-Value]错误</value>
     <comment>L-Value Error</comment>
   </data>
   <data name="MSG_CALC_ERR_MEAS" xml:space="preserve">
-    <value>測定領域エラー</value>
+    <value>测量区域错误</value>
     <comment>Measuring-Field Error</comment>
   </data>
   <data name="MSG_CALC_ERR_MEAS_CH" xml:space="preserve">
-    <value>測定項目エラー</value>
+    <value>测量项目错误</value>
     <comment>Measuring-Channel Error</comment>
   </data>
   <data name="MSG_CALC_ERR_MEAS_NO_CH" xml:space="preserve">
-    <value>測定項目が見つかりません。</value>
+    <value>查找不到测量项目。</value>
     <comment>Not Found Measuring Channel</comment>
   </data>
   <data name="MSG_CALC_ERR_NO_EXP" xml:space="preserve">
-    <value>演算式がありません。</value>
+    <value>没有运算公式。</value>
     <comment>No Expression</comment>
   </data>
   <data name="MSG_CALC_ERR_NO_FILE" xml:space="preserve">
-    <value>IniFileが見つかりません。</value>
+    <value>查找不到IniFile。</value>
     <comment>Not Found Ini-File</comment>
   </data>
   <data name="MSG_CALC_ERR_OVF_VALUE" xml:space="preserve">
-    <value>数値オーバーフローエラー</value>
+    <value>数据溢出错误。</value>
     <comment>Value OverFlow</comment>
   </data>
   <data name="MSG_CALC_ERR_PARENTHESIS" xml:space="preserve">
-    <value>"(" または ")" が必要です。</value>
+    <value>需要( 或者")"。</value>
     <comment>Required '(' or ')'</comment>
   </data>
   <data name="MSG_CALC_ERR_READ" xml:space="preserve">
-    <value>IniFileの読込に失敗。</value>
+    <value>读取IniFile失败。</value>
     <comment>Ini-File Read Error</comment>
   </data>
   <data name="MSG_CALC_ERR_R_PARENTHESIS" xml:space="preserve">
-    <value>")" が必要です。</value>
+    <value>需要）。</value>
     <comment>Required ')'</comment>
   </data>
   <data name="MSG_CALC_ERR_SYNTAX" xml:space="preserve">
-    <value>演算式の文法エラー</value>
+    <value>运算共识文法错误。</value>
     <comment>Expression Syntax Error</comment>
   </data>
   <data name="MSG_CALC_ERR_SYSTEM" xml:space="preserve">
-    <value>システムエラー</value>
+    <value>系统错误。</value>
     <comment>System Error</comment>
   </data>
   <data name="MSG_CALC_ERR_TEST" xml:space="preserve">
-    <value>TestFile エラー</value>
+    <value>TestFile错误。</value>
     <comment>Test-Files Error</comment>
   </data>
   <data name="MSG_CALC_ERR_TEST_ERR_CH" xml:space="preserve">
-    <value>テスト項目エラー</value>
+    <value>测试项目错误。</value>
     <comment>Test-Channel Error</comment>
   </data>
   <data name="MSG_CALC_ERR_TEST_ERR_NO_CH" xml:space="preserve">
-    <value>テスト項目が見つかりません。</value>
+    <value>查找不到测试项目。</value>
     <comment>Not Found Test-Channel</comment>
   </data>
   <data name="MSG_CALC_ERR_TOO_FEW_PARAMETER" xml:space="preserve">
-    <value>関数のパラメータの数が多いです。</value>
+    <value>函数的参数数量多。</value>
     <comment>Too Few Parameter in function</comment>
   </data>
   <data name="MSG_CALC_ERR_UNDEFINED" xml:space="preserve">
-    <value>宣言されていないシンボルです。</value>
+    <value>没有声明的符号。</value>
     <comment>Undeifned Symbol</comment>
   </data>
   <data name="MSG_CALC_ERR_VALUE" xml:space="preserve">
-    <value>数値エラー</value>
+    <value>数值错误。</value>
     <comment>Numeric Value Error</comment>
   </data>
 </root>

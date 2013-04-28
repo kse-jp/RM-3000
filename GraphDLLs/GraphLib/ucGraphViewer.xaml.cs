@@ -2024,9 +2024,17 @@ namespace GraphLib
                         {
                             Path myPath = graphcanvas.Children[i] as Path;
                             myPath.Data = graphShapes[i];
-                            if (((SolidColorBrush)myPath.Stroke).Color != _GraphModel.GraphColor[i])
-                                myPath.Stroke = new SolidColorBrush(_GraphModel.GraphColor[i]);
+                            myPath.Data.Freeze();
+
+
+                            //if (((SolidColorBrush)myPath.Stroke).Color != _GraphModel.GraphColor[i])
+                            myPath.Stroke = new SolidColorBrush(_GraphModel.GraphColor[i]);
+                            myPath.Stroke.Freeze();
                             myPath.StrokeThickness = _GraphModel.GraphLineSize[i];
+                            this.Background = new SolidColorBrush(_GraphModel.GraphBackgroundColor);
+                            this.Background.Freeze();
+
+                            //GraphGridLoad(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
 
                         }
                     }
@@ -2064,8 +2072,10 @@ namespace GraphLib
                                 ////Display the PathGeometry. 
                                 Path myPath = new Path();
                                 myPath.Stroke = new SolidColorBrush(_GraphModel.GraphColor[i]);
+                                myPath.Stroke.Freeze();
                                 myPath.StrokeThickness = _GraphModel.GraphLineSize[i];
                                 myPath.Data = graphShapes[i];
+                                myPath.Data.Freeze();
 
                                 container.Children.Add(myPath);
 
@@ -2081,8 +2091,10 @@ namespace GraphLib
                                 ////Display the PathGeometry. 
                                 Path myPath = new Path();
                                 myPath.Stroke = new SolidColorBrush(_GraphModel.GraphColor[i]);
+                                myPath.Stroke.Freeze();
                                 myPath.StrokeThickness = _GraphModel.GraphLineSize[i];
                                 myPath.Data = graphShapes[i];
+                                myPath.Data.Freeze();
 
                                 graphcanvas.Children.Add(myPath);
 
@@ -2399,6 +2411,7 @@ namespace GraphLib
 
 
                 this.Background = new SolidColorBrush(_GraphModel.GraphBackgroundColor);
+                this.Background.Freeze();
                 _IsCreateGrid = true;
             }
             catch (Exception ex)
@@ -3694,6 +3707,7 @@ namespace GraphLib
                         _GraphModel.GridLineData.GridColor = colordlg.ForegoundColor;
                         _GraphModel.GraphBackgroundColor = colordlg.BackgroundColor;
                         this.Background = new SolidColorBrush(_GraphModel.GraphBackgroundColor);
+                        this.Background.Freeze();
                         _GraphController.CreateGrid();
 
                         if (_IsMeasureXShown)
@@ -4056,18 +4070,19 @@ namespace GraphLib
                     }
 
                     if (minmeasure - minpos < 0)
-                        _MeasureXPos1 = 0;
+                        _MeasureXPos1 = minval;
                     else
                         _MeasureXPos1 = ((minmeasure - minpos) * valforpos) + minval;
 
                     if (maxpos - maxmeasure < 0)
-                        _MeasureXPos2 = maxpos * valforpos;
+                        _MeasureXPos2 = ((maxpos - minpos) * valforpos) + minval;
                     else
                         _MeasureXPos2 = ((maxmeasure - minpos) * valforpos) + minval;
 
 
                     if (_MeasureXPos1 != null && _MeasureXPos2 != null && mincanvas != null && maxcanvas != null)
                     {
+
                         _MeasureXPos1 = GetCorrectMeasureXPos(_MeasureXPos1);
                         _MeasureXPos2 = GetCorrectMeasureXPos(_MeasureXPos2);
 
@@ -4087,11 +4102,31 @@ namespace GraphLib
             try
             {
                 double incx = _GraphModel.IncrementX;
+                double minval = 0;
+                double maxval = 0;
+
+                if (!_IsZoom)
+                {
+                    minval = _GraphModel.GridLineData.MinGridValueX;
+                    maxval = _GraphModel.GridLineData.MaxGridValueX - (_GraphModel.AxisZoomX * _GraphModel.IncrementX);
+                }
+                else
+                {
+                    minval = _ZoomMinValueX;
+                    maxval = _ZoomValueX + _ZoomMinValueX;
+                }
 
                 if (incx <= 0)
                     incx = 1;
 
-                int datapos = Convert.ToInt32((double)((double)measurePosX - _GraphModel.GridLineData.MinGridValueX) / incx);
+                double val = ((double)((double)measurePosX - _GraphModel.GridLineData.MinGridValueX) / incx);
+                double valfloor = Math.Floor((double)((double)measurePosX - _GraphModel.GridLineData.MinGridValueX) / incx);
+                int datapos = 0;
+                if (Math.Abs(val - valfloor) > 0.95)
+                    datapos = Convert.ToInt32(val);
+                else
+                    datapos = Convert.ToInt32(valfloor);
+
                 datapos += _StartIndexRawDataPlot;
                 int curline = Convert.ToInt32((double)measurePosX / incx);
                 measurePosX = curline * incx;
@@ -4105,6 +4140,23 @@ namespace GraphLib
 
                 if (measurePosX != dat[0])
                     measurePosX = dat[0];
+
+                if (measurePosX > maxval)
+                {
+                    if (datapos - 1 > 0)
+                    {
+                        dat = _GraphModel.GraphRawData[datapos - 1];
+                        measurePosX = dat[0];
+                    }
+                }
+                else if (measurePosX < minval)
+                {
+                    if (datapos + 1 < _GraphModel.GraphRawData.Count)
+                    {
+                        dat = _GraphModel.GraphRawData[datapos + 1];
+                        measurePosX = dat[0];
+                    }
+                }
 
                 return measurePosX;
             }
@@ -4415,8 +4467,8 @@ namespace GraphLib
 
                     double height = Math.Abs(_GraphModel.UpperMeasureModelY.Margin.Top - _GraphModel.LowerMeasureModelY.Margin.Top);
                     string decpointstr = _GraphModel.GridLineData.DecimalPointYStr;
-                    if (_IsZoom)
-                        decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
+                    //if (_IsZoom)
+                    //    decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
 
                     _GraphModel.MeasureLabelY.UpdateLabelValue(valueperpoint * height, decpointstr);
                     _GraphModel.MeasureLabelY.ChangeHeight(height);
@@ -4456,8 +4508,8 @@ namespace GraphLib
 
 
                     string decpointstr = _GraphModel.GridLineData.DecimalPointYStr;
-                    if (_IsZoom)
-                        decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
+                    //if (_IsZoom)
+                    //    decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
 
                     double height = Math.Abs(_GraphModel.UpperMeasureModelY2.Margin.Top - _GraphModel.LowerMeasureModelY2.Margin.Top);
                     _GraphModel.MeasureLabelY2.UpdateLabelValue(valueperpoint * height, decpointstr);
@@ -4650,7 +4702,7 @@ namespace GraphLib
                 else
                 {
                     if (minValue < minvalue)
-                        cormin = 0;
+                        cormin = minpos;
                     else if (minValue > maxvalue)
                         cormin = ((maxvalue - minvalue) * pointpervalue) + minpos;
                 }
@@ -4663,7 +4715,7 @@ namespace GraphLib
                 else
                 {
                     if (maxValue < minvalue)
-                        cormax = 0;
+                        cormax = minpos;
                     else if (maxValue > maxvalue)
                         cormax = ((maxvalue - minvalue) * pointpervalue) + minpos;
                 }
@@ -4730,8 +4782,8 @@ namespace GraphLib
                     }
 
                     string decpointstr = _GraphModel.GridLineData.DecimalPointXStr;
-                    if (_IsZoom)
-                        decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
+                    //if (_IsZoom)
+                    //    decpointstr = _GraphModel.GridLineData.DecimalPointString(2);
 
                     double width = Math.Abs(_GraphModel.UpperMeasureModelX.Margin.Left - _GraphModel.LowerMeasureModelX.Margin.Left);
                     _GraphModel.MeasureLabelX.UpdateLabelValue(valueperpoint * width, decpointstr);
@@ -4806,6 +4858,8 @@ namespace GraphLib
 
                     _GraphModel.UpperMeasureModelX.Margin = marginup;
                     _GraphModel.LowerMeasureModelX.Margin = margindown;
+
+
 
                 }
 

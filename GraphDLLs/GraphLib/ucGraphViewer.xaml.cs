@@ -3214,10 +3214,10 @@ namespace GraphLib
                     {
                         string decpoint = _GraphModel.GridLineData.DecimalPointXStr;
 
-                        if (_IsZoom)
-                        {
-                            decpoint = _GraphModel.GridLineData.DecimalPointString(2);
-                        }
+                        //if (_IsZoom)
+                        //{
+                        //    decpoint = _GraphModel.GridLineData.DecimalPointString(2);
+                        //}
 
 
                         for (int i = 0; i < lblcount; i++)
@@ -3271,10 +3271,10 @@ namespace GraphLib
 
                         string decpoint = _GraphModel.GridLineData.DecimalPointYStr;
 
-                        if (_IsZoom)
-                        {
-                            decpoint = _GraphModel.GridLineData.DecimalPointString(2);
-                        }
+                        //if (_IsZoom)
+                        //{
+                        //    decpoint = _GraphModel.GridLineData.DecimalPointString(2);
+                        //}
 
                         for (int i = 0; i < lblcount; i++)
                         {
@@ -3296,7 +3296,7 @@ namespace GraphLib
                         double graphheight = _GraphModel.GraphSize.Height - _GraphModel.GridLineData.Margin.Top - _GraphModel.GridLineData.Margin.Bottom;
                         if (_IsZoom)
                         {
-                            decpoint = _GraphModel.GridLineData.DecimalPointString(2);
+                            //decpoint = _GraphModel.GridLineData.DecimalPointString(2);
                             graphheight = _GraphSize.Height;
                         }
 

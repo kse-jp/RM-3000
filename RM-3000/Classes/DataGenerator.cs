@@ -354,7 +354,7 @@ namespace RM_3000
 
             if (isMode2)
             {
-                SampleData sample = new SampleData();
+                SampleData sample = new SampleData() { SampleTime = DateTime.Now };
                 ChannelData[] chdatas = new ChannelData[_MaxChannel];
 
                 for (int i = 0; i < _MaxChannel; i++)
@@ -405,7 +405,7 @@ namespace RM_3000
             {
                 for (int j = 0; j < inpData.Count; j++)
                 {
-                    SampleData sample = new SampleData();
+                    SampleData sample = new SampleData() { SampleTime = DateTime.Now };
                     ChannelData[] chdatas = new ChannelData[_MaxChannel];
 
                     for (int i = 0; i < _MaxChannel; i++)

@@ -785,21 +785,21 @@
     <value>測定終了</value>
     <comment>測定終了</comment>
   </data>
-  <data name="TXT_3D_BACK" xml:space="preserve">
-    <value>裏面</value>
-    <comment>裏面</comment>
+  <data name="TXT_3D_WIN2" xml:space="preserve">
+    <value>3D表示-2</value>
+    <comment>3D-2</comment>
   </data>
-  <data name="TXT_3D_FRONT" xml:space="preserve">
-    <value>正面</value>
-    <comment>正面</comment>
+  <data name="TXT_3D_WIN1" xml:space="preserve">
+    <value>3D表示-1</value>
+    <comment>3D-1</comment>
   </data>
-  <data name="TXT_3D_LEFT" xml:space="preserve">
-    <value>左側面</value>
-    <comment>左側面</comment>
+  <data name="TXT_3D_WIN3" xml:space="preserve">
+    <value>3D表示-3</value>
+    <comment>3D-3</comment>
   </data>
-  <data name="TXT_3D_RIGHT" xml:space="preserve">
-    <value>右側面</value>
-    <comment>右側面</comment>
+  <data name="TXT_3D_WIN4" xml:space="preserve">
+    <value>3D表示-4</value>
+    <comment>3D-4</comment>
   </data>
   <data name="TXT_GRAPH_MENU_3D" xml:space="preserve">
     <value>3D表示コントローラ</value>

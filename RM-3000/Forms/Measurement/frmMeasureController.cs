@@ -232,7 +232,10 @@ namespace RM_3000.Forms.Parts
                 return;
             }
 
-            if (bCond_MeasurePause)
+            if (bCond_MeasurePause && 
+                (SystemSetting.MeasureSetting.Mode1_MeasCondition.MeasConditionType != DataCommon.Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS) &&
+                (SystemSetting.MeasureSetting.Mode1_MeasCondition.MeasConditionType != DataCommon.Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS))
+
             {
                 lblStatus.Text = AppResource.GetString("TXT_MEAS_RECPAUSE");
                 lblStatus.BackColor = Color.Orange;

@@ -206,7 +206,7 @@ namespace RM_3000.Forms.Measurement
                         new System.Threading.Tasks.Task(
                             delegate
                             {
-                                this.measureTask.Pause();
+                                this.measureTask.Stop();
                                 //測定を停止する。
                                 testSquence.EndTest();
                             });
@@ -619,12 +619,23 @@ namespace RM_3000.Forms.Measurement
                         //Simulatorモードならば開始状態処理をここにいれる。
                         if (this.systemSetting.IsSimulationMode)
                         {
+                            if (!bAllReadyStart)
+                            {
+                                //時間設定
+                                RealTimeData.SetStartTime(DateTime.Now);
+                            }
+
+                            RealTimeData.Cond_StartTime_Mode1 = RealTimeData.GetStartTime();
+                            RealTimeData.Cond_StopTime_Mode1 = RealTimeData.GetStartTime();
+                            RealTimeData.bMode1_Now_Record = true;
+
                             bAllReadyStart = true;
 
                             this.measureTask.Start();
 
                             this.swMeasure.Reset();
                             this.swMeasure.Start();
+
                             ShowStatusMessage(AppResource.GetString("TXT_MEASURE_START"));
                         }
                         break;

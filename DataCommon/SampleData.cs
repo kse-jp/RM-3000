@@ -14,7 +14,7 @@ namespace DataCommon
     {
         /// <summary>
         /// 測定時間（時分秒まで）
-        /// Mode1,Mode2のみ
+        /// Mode1,Mode2は本体時間。Mode3は自己生成している。
         /// </summary>
         public DateTime SampleTime { get; set; }
 

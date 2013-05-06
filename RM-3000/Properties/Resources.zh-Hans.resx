@@ -1224,11 +1224,11 @@ Please try restart agin.</comment>
     <comment>温度センサ取り付け確認</comment>
   </data>
   <data name="MSG_TAGSETTING_NG_EXPRESSION" xml:space="preserve">
-    <value>演算式に誤りがあります。</value>
+    <value>运算公式有错误。</value>
     <comment>演算式に誤りがあります。</comment>
   </data>
   <data name="MSG_TAGSETTING_OK_EXPRESSION" xml:space="preserve">
-    <value>演算式を確認しました。</value>
+    <value>以确认运算公式。</value>
     <comment>演算式を確認しました。</comment>
   </data>
   <data name="MSG_DELETE_MEASUREDATA" xml:space="preserve">
@@ -1418,5 +1418,21 @@ Please try restart agin.</comment>
   <data name="MSG_TAG_CALC_PARENTHESIS_INVALID" xml:space="preserve">
     <value>括号没有括回。</value>
     <comment>括弧が閉じられていません。</comment>
+  </data>
+  <data name="TXT_3D_WIN1" xml:space="preserve">
+    <value>3D显示-1</value>
+    <comment>3D-1</comment>
+  </data>
+  <data name="TXT_3D_WIN2" xml:space="preserve">
+    <value>3D显示-2</value>
+    <comment>3D-2</comment>
+  </data>
+  <data name="TXT_3D_WIN3" xml:space="preserve">
+    <value>3D显示-3</value>
+    <comment>3D-3</comment>
+  </data>
+  <data name="TXT_3D_WIN4" xml:space="preserve">
+    <value>3D显示-4</value>
+    <comment>3D-4</comment>
   </data>
 </root>

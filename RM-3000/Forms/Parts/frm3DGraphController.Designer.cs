@@ -45,6 +45,8 @@
             this.btnHide = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlAnimation = new System.Windows.Forms.Panel();
+            this.picallloop = new System.Windows.Forms.PictureBox();
+            this.pic1loop = new System.Windows.Forms.PictureBox();
             this.chkLoopAll = new System.Windows.Forms.CheckBox();
             this.chkLoop = new System.Windows.Forms.CheckBox();
             this.picStart = new System.Windows.Forms.PictureBox();
@@ -68,14 +70,14 @@
             this.toolStripBtnBack = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnLeft = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRight = new System.Windows.Forms.ToolStripButton();
-            this.pic1loop = new System.Windows.Forms.PictureBox();
-            this.picallloop = new System.Windows.Forms.PictureBox();
             this.pnlMain.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).BeginInit();
             this.pnlAnimation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picallloop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1loop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
@@ -84,8 +86,6 @@
             this.pnlHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tstrip3DGraph.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1loop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picallloop)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -308,6 +308,28 @@
             this.pnlAnimation.Name = "pnlAnimation";
             this.pnlAnimation.Size = new System.Drawing.Size(273, 139);
             this.pnlAnimation.TabIndex = 3;
+            // 
+            // picallloop
+            // 
+            this.picallloop.Location = new System.Drawing.Point(192, 19);
+            this.picallloop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picallloop.Name = "picallloop";
+            this.picallloop.Size = new System.Drawing.Size(60, 50);
+            this.picallloop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picallloop.TabIndex = 21;
+            this.picallloop.TabStop = false;
+            this.picallloop.Click += new System.EventHandler(this.picallloop_Click);
+            // 
+            // pic1loop
+            // 
+            this.pic1loop.Location = new System.Drawing.Point(105, 19);
+            this.pic1loop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic1loop.Name = "pic1loop";
+            this.pic1loop.Size = new System.Drawing.Size(60, 50);
+            this.pic1loop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic1loop.TabIndex = 20;
+            this.pic1loop.TabStop = false;
+            this.pic1loop.Click += new System.EventHandler(this.pic1loop_Click);
             // 
             // chkLoopAll
             // 
@@ -538,7 +560,7 @@
             this.toolStripBtnFront.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnFront.Name = "toolStripBtnFront";
             this.toolStripBtnFront.Size = new System.Drawing.Size(240, 22);
-            this.toolStripBtnFront.Text = "TXT_3D_FRONT";
+            this.toolStripBtnFront.Text = "TXT_3D_WIN1";
             this.toolStripBtnFront.Click += new System.EventHandler(this.toolStripBtnFront_Click);
             // 
             // toolStripBtnBack
@@ -550,7 +572,7 @@
             this.toolStripBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnBack.Name = "toolStripBtnBack";
             this.toolStripBtnBack.Size = new System.Drawing.Size(240, 22);
-            this.toolStripBtnBack.Text = "TXT_3D_BACK";
+            this.toolStripBtnBack.Text = "TXT_3D_WIN2";
             this.toolStripBtnBack.Click += new System.EventHandler(this.toolStripBtnBack_Click);
             // 
             // toolStripBtnLeft
@@ -562,7 +584,7 @@
             this.toolStripBtnLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnLeft.Name = "toolStripBtnLeft";
             this.toolStripBtnLeft.Size = new System.Drawing.Size(240, 22);
-            this.toolStripBtnLeft.Text = "TXT_3D_LEFT";
+            this.toolStripBtnLeft.Text = "TXT_3D_WIN3";
             this.toolStripBtnLeft.Click += new System.EventHandler(this.toolStripBtnLeft_Click);
             // 
             // toolStripBtnRight
@@ -574,30 +596,8 @@
             this.toolStripBtnRight.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnRight.Name = "toolStripBtnRight";
             this.toolStripBtnRight.Size = new System.Drawing.Size(240, 22);
-            this.toolStripBtnRight.Text = "TXT_3D_RIGHT";
+            this.toolStripBtnRight.Text = "TXT_3D_WIN4";
             this.toolStripBtnRight.Click += new System.EventHandler(this.toolStripBtnRight_Click);
-            // 
-            // pic1loop
-            // 
-            this.pic1loop.Location = new System.Drawing.Point(105, 19);
-            this.pic1loop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic1loop.Name = "pic1loop";
-            this.pic1loop.Size = new System.Drawing.Size(60, 50);
-            this.pic1loop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic1loop.TabIndex = 20;
-            this.pic1loop.TabStop = false;
-            this.pic1loop.Click += new System.EventHandler(this.pic1loop_Click);
-            // 
-            // picallloop
-            // 
-            this.picallloop.Location = new System.Drawing.Point(192, 19);
-            this.picallloop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picallloop.Name = "picallloop";
-            this.picallloop.Size = new System.Drawing.Size(60, 50);
-            this.picallloop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picallloop.TabIndex = 21;
-            this.picallloop.TabStop = false;
-            this.picallloop.Click += new System.EventHandler(this.picallloop_Click);
             // 
             // frm3DGraphController
             // 
@@ -619,6 +619,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).EndInit();
             this.pnlAnimation.ResumeLayout(false);
             this.pnlAnimation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picallloop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1loop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
@@ -628,8 +630,6 @@
             this.panel2.ResumeLayout(false);
             this.tstrip3DGraph.ResumeLayout(false);
             this.tstrip3DGraph.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1loop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picallloop)).EndInit();
             this.ResumeLayout(false);
 
         }

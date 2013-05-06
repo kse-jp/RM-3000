@@ -1415,4 +1415,20 @@ In order to measure correctly, please check attachment of a temperature sensor a
     <value>The parenthesis is not closed.</value>
     <comment>括弧が閉じられていません。</comment>
   </data>
+  <data name="TXT_3D_WIN1" xml:space="preserve">
+    <value>3D-1</value>
+    <comment>3D-1</comment>
+  </data>
+  <data name="TXT_3D_WIN2" xml:space="preserve">
+    <value>3D-2</value>
+    <comment>3D-2</comment>
+  </data>
+  <data name="TXT_3D_WIN3" xml:space="preserve">
+    <value>3D-3</value>
+    <comment>3D-3</comment>
+  </data>
+  <data name="TXT_3D_WIN4" xml:space="preserve">
+    <value>3D-4</value>
+    <comment>3D-4</comment>
+  </data>
 </root>

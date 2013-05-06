@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 using System.Threading.Tasks;
 
 using DataCommon;
@@ -15,6 +16,16 @@ namespace RM_3000.Forms.Analyze
 {
     public partial class frmAnalyzeDataSelector : Form
     {
+        /// <summary>
+        /// タスクキャンセル
+        /// </summary>
+        CancellationTokenSource cts = null;
+
+        /// <summary>
+        /// タスクオブジェクト
+        /// </summary>
+        Task task = null;
+
         /// <summary>
         /// 選択フォルダ名
         /// </summary>
@@ -37,15 +48,16 @@ namespace RM_3000.Forms.Analyze
 
                 this.Cursor = Cursors.WaitCursor;
 
-                var t = Task.Factory.StartNew(() =>
+                cts = new System.Threading.CancellationTokenSource();
+
+                task = Task.Factory.StartNew(() =>
                 {
                     //ファイルリストの更新
                     CreateList();
-                }
-                );
+                }, cts.Token );
 
                 //コールバッグ
-                t.ContinueWith((x) => { if(x.IsCompleted) LoadListCompleted(); });
+                task.ContinueWith((x) => { if (x.IsCompleted) LoadListCompleted(); });
 
             }
         }
@@ -352,6 +364,12 @@ namespace RM_3000.Forms.Analyze
         /// <param name="e"></param>
         private void frmAnalyzeDataSelector_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (task != null && !task.IsCompleted)
+            {
+                cts.Cancel();
+
+            }
+
             AnalyzeDataList.Clear();
 
             GC.Collect();
@@ -369,6 +387,11 @@ namespace RM_3000.Forms.Analyze
                 return;
             }
 
+            txtFileName.Enabled = value;
+            rdoAll.Enabled = value;
+            rdoMode1.Enabled = value;
+            rdoMode2.Enabled = value;
+            rdoMode3.Enabled = value;
             btnCancel.Enabled = value;
             btnOK.Enabled = value;
             dgvDataList.Enabled = value;

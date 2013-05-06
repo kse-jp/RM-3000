@@ -108,7 +108,7 @@ namespace RM_3000
 
         #region public method
         /// <summary>
-        /// AddRealData
+    /// AddRealData
         /// </summary>
         /// <param name="realdata">NowRegistData</param>
         public static void AddRealData(SampleData realdata)

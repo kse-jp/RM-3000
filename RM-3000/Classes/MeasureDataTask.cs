@@ -85,6 +85,7 @@ namespace RM_3000.Classes
 
                 this.swTask.Reset();
                 this.swTask.Start();
+
                 ret = true;
             }
             catch (Exception ex)
@@ -110,6 +111,7 @@ namespace RM_3000.Classes
                 {
                     this.stopTaskEvent.Set();
                     this.task.Wait();
+
                 }
                 ret = true;
             }

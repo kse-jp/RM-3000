@@ -4015,6 +4015,8 @@ namespace GraphLib
                         _CurrentMeasureDrag.Margin = thick;
 
                         UpdateMeasurePosX();
+                        if (_MeasureXPos1 != null && _MeasureXPos2 != null)
+                            SetMeasureXPos(_CurrentMeasureDrag, (double)_MeasureXPos1, (double)_MeasureXPos2);
 
                         UpdateMeasureLabelX();
 
@@ -4034,9 +4036,7 @@ namespace GraphLib
                 if (_IsMeasureXShown)
                 {
                     double minmeasure = 0;
-                    double maxmeasure = 0;
-                    Canvas mincanvas = null;
-                    Canvas maxcanvas = null;
+                    double maxmeasure = 0;                   
 
                     double minpos = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
                     double maxpos = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
@@ -4044,16 +4044,12 @@ namespace GraphLib
                     if (_GraphModel.UpperMeasureModelX.Margin.Left <= _GraphModel.LowerMeasureModelX.Margin.Left)
                     {
                         minmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
-                        maxmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
-                        mincanvas = _GraphModel.UpperMeasureModelX;
-                        maxcanvas = _GraphModel.LowerMeasureModelX;
+                        maxmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;                        
                     }
                     else
                     {
                         minmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
-                        maxmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
-                        mincanvas = _GraphModel.LowerMeasureModelX;
-                        maxcanvas = _GraphModel.UpperMeasureModelX;
+                        maxmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;                        
                     }
 
                     double valforpos = 0;
@@ -4080,15 +4076,11 @@ namespace GraphLib
                         _MeasureXPos2 = ((maxmeasure - minpos) * valforpos) + minval;
 
 
-                    if (_MeasureXPos1 != null && _MeasureXPos2 != null && mincanvas != null && maxcanvas != null)
+                    if (_MeasureXPos1 != null && _MeasureXPos2 != null)
                     {
-
                         _MeasureXPos1 = GetCorrectMeasureXPos(_MeasureXPos1);
-                        _MeasureXPos2 = GetCorrectMeasureXPos(_MeasureXPos2);
-
-                        SetMeasureXPos(mincanvas, maxcanvas, (double)_MeasureXPos1, (double)_MeasureXPos2);
+                        _MeasureXPos2 = GetCorrectMeasureXPos(_MeasureXPos2);                       
                     }
-
                 }
             }
             catch (Exception ex)
@@ -4642,7 +4634,7 @@ namespace GraphLib
         /// Set measure position
         /// </summary>
         /// <param name="currentLineValue"></param>
-        private void SetMeasureXPos(Canvas minCanvas, Canvas maxCanvas, double minValue, double maxValue)
+        private void SetMeasureXPos(Canvas selCanvas, double minValue, double maxValue)
         {
             try
             {
@@ -4651,11 +4643,31 @@ namespace GraphLib
                 double maxvalue = 0;
                 double cormin = 0;
                 double cormax = 0;
-
+                Canvas mincanvas = null;
+                Canvas maxcanvas = null;
+                bool ismin = true;
+                Thickness thick;
                 double graphwidth = scrollViewer.Width;
-
                 double minpos = _GraphModel.GridLineData.Margin.Left - (_CurrentMeasureDrag.Width / 2);
                 double maxpos = _GraphModel.GridLineData.Margin.Left + graphwidth - (_CurrentMeasureDrag.Width / 2) - _ScrollBarMargin;
+
+
+                if (_GraphModel.UpperMeasureModelX.Margin.Left <= _GraphModel.LowerMeasureModelX.Margin.Left)
+                {
+                    mincanvas = _GraphModel.UpperMeasureModelX;
+                    maxcanvas = _GraphModel.LowerMeasureModelX;
+                }
+                else
+                {
+                    mincanvas = _GraphModel.LowerMeasureModelX;
+                    maxcanvas = _GraphModel.UpperMeasureModelX;
+                }
+
+                if (selCanvas.Margin.Left == mincanvas.Margin.Left)
+                    ismin = true;
+                else if (selCanvas.Margin.Left == maxcanvas.Margin.Left)
+                    ismin = false;
+
 
                 if (_IsZoom || _IsAxisXZoom && !_IsRealTime)
                 {
@@ -4720,11 +4732,13 @@ namespace GraphLib
                         cormax = ((maxvalue - minvalue) * pointpervalue) + minpos;
                 }
 
+                if (ismin)
+                    thick = new Thickness(cormin, selCanvas.Margin.Top, 0, 0);
+                else
+                    thick = new Thickness(cormax, selCanvas.Margin.Top, 0, 0);
 
-                Thickness thickmin = new Thickness(cormin, minCanvas.Margin.Top, 0, 0);
-                Thickness thickmax = new Thickness(cormax, maxCanvas.Margin.Top, 0, 0);
-                minCanvas.Margin = thickmin;
-                maxCanvas.Margin = thickmax;
+                selCanvas.Margin = thick;
+
 
             }
             catch (Exception ex)

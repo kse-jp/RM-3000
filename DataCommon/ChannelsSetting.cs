@@ -104,7 +104,7 @@ namespace DataCommon
 
             ret.ChannelMeasSetting = (ChannelMeasSetting)this.ChannelMeasSetting.Clone();
 
-            return null;
+            return ret;
         }
 
         #endregion

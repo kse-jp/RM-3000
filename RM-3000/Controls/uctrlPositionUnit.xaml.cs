@@ -312,7 +312,7 @@ namespace RM_3000.Controls
                 //最小値・最大値の描画
                 //最大値
                 dc.DrawText(
-                    new FormattedText(_MaxValue.ToString(),
+                    new FormattedText(CalcOperator.GetRoundDownString((double)_MaxValue, this.Point) ,
                     System.Globalization.CultureInfo.CurrentUICulture,
                     FlowDirection.LeftToRight,
                     new Typeface("Meirio"),
@@ -322,7 +322,7 @@ namespace RM_3000.Controls
 
                 //中間値
                 dc.DrawText(
-                    new FormattedText(CalcOperator.ToRoundDown((double)((_MaxValue + _MinValue) / 2) , 0).ToString(),
+                    new FormattedText(CalcOperator.GetRoundDownString((double)((_MaxValue + _MinValue) / 2), this.Point),
                     System.Globalization.CultureInfo.CurrentUICulture,
                     FlowDirection.LeftToRight,
                     new Typeface("Meirio"),
@@ -332,7 +332,7 @@ namespace RM_3000.Controls
 
                 //最小値
                 dc.DrawText(
-                    new FormattedText(_MinValue.ToString(),
+                    new FormattedText(CalcOperator.GetRoundDownString((double)_MinValue, this.Point),
                     System.Globalization.CultureInfo.CurrentUICulture,
                     FlowDirection.LeftToRight,
                     new Typeface("Meirio"),

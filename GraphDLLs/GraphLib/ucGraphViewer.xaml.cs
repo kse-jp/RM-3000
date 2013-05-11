@@ -2704,11 +2704,11 @@ namespace GraphLib
                     else
                     {
                         zoomno = _ZoomNumberAxisY;
-                        zoomno++;
+                        //zoomno++;
                     }
 
 
-                    double zoomsize = (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) * _GraphModel.AxisZoomPercentY / (2 * zoomno);
+                    double zoomsize = (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) * _GraphModel.AxisZoomPercentY / (Math.Pow(2, zoomno));
                     _IsAxisYZoom = true;
 
                     if ((_GraphModel.AxisZoomY * 2) + zoomsize < _GraphModel.MaxPlotY - _GraphModel.MinPlotY && zoomsize >= 1
@@ -2718,50 +2718,50 @@ namespace GraphLib
                         _ZoomNumberAxisY++;
                     }
 
-                    _Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "BtnZoomInY_Click");
+                    //_Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "BtnZoomInY_Click");
 
                     if (!_IsLoadedData)
                     {
                         UpdateLabelValueY();
-                        _Log4NetClass.ShowInfo("UpdateLabelValueY", "BtnZoomInY_Click");
+                        //_Log4NetClass.ShowInfo("UpdateLabelValueY", "BtnZoomInY_Click");
                     }
                     else
                     {
                         if (_IsZoom)
                             ZoomReset();
 
-                        _Log4NetClass.ShowInfo("ZoomReset", "BtnZoomInY_Click");
+                        //_Log4NetClass.ShowInfo("ZoomReset", "BtnZoomInY_Click");
 
                         _GraphController.UpdatePlotData();
-                        _Log4NetClass.ShowInfo("UpdatePlotData", "BtnZoomInY_Click");
-                        if (_GraphInfo.DistanceY != 0)
-                        {
-                            double maxgrid = Math.Abs((_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / Convert.ToDouble(_DistanceY));
-                            if (maxgrid != 0 && Math.Round(_GraphModel.GridLineData.MaxGridNoY, 4) != Math.Round(maxgrid, 4))
-                                _GraphModel.GridLineData.MaxGridNoY = maxgrid;
+                        //_Log4NetClass.ShowInfo("UpdatePlotData", "BtnZoomInY_Click");
+                        //if (_GraphInfo.DistanceY != 0)
+                        //{
+                        //    double maxgrid = Math.Abs((_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / Convert.ToDouble(_DistanceY));
+                        //    if (maxgrid != 0 && maxgrid >= 2 && Math.Round(_GraphModel.GridLineData.MaxGridNoY, 4) != Math.Round(maxgrid, 4))
+                        //        _GraphModel.GridLineData.MaxGridNoY = maxgrid;
 
-                            if (_GraphModel.GridLineData.MaxGridNoY > _MaxGridNumber)
-                                _GraphModel.GridLineData.MaxGridNoY = _MaxGridNumber;
-                        }
-                        _Log4NetClass.ShowInfo("DistanceY " + _GraphInfo.DistanceY.ToString(), "BtnZoomInY_Click");
+                        //    if (_GraphModel.GridLineData.MaxGridNoY > _MaxGridNumber)
+                        //        _GraphModel.GridLineData.MaxGridNoY = _MaxGridNumber;
+                        //}
+                        //_Log4NetClass.ShowInfo("DistanceY " + _GraphInfo.DistanceY.ToString(), "BtnZoomInY_Click");
 
 
                         //Check Y is need show Decimal point
-                        double diffvalgrid = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / _GraphModel.GridLineData.MaxGridNoY;
-                        if (diffvalgrid < 3 && _GraphInfo.DecimalPointY == 0)
-                            _GraphModel.GridLineData.DecimalPointY = 2;
-                        else
-                            _GraphModel.GridLineData.DecimalPointY = 0;
+                        //double diffvalgrid = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / _GraphModel.GridLineData.MaxGridNoY;
+                        //if (diffvalgrid < 3 && _GraphInfo.DecimalPointY == 0)
+                        //    _GraphModel.GridLineData.DecimalPointY = 2;
+                        //else
+                        //    _GraphModel.GridLineData.DecimalPointY = 0;
 
-                        _Log4NetClass.ShowInfo("DecimalPointY" + _GraphModel.GridLineData.DecimalPointY.ToString(), "BtnZoomInY_Click");
+                        //_Log4NetClass.ShowInfo("DecimalPointY" + _GraphModel.GridLineData.DecimalPointY.ToString(), "BtnZoomInY_Click");
 
                         this.GraphGridLoad(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
-                        _Log4NetClass.ShowInfo("GraphGridLoad", "BtnZoomInY_Click");
+                        //_Log4NetClass.ShowInfo("GraphGridLoad", "BtnZoomInY_Click");
                         this.SetCurrentLinePos(_CurrentLine);
                         this.RefreshGraph();
-                        _Log4NetClass.ShowInfo("RefreshGraph", "BtnZoomInY_Click");
+                        //_Log4NetClass.ShowInfo("RefreshGraph", "BtnZoomInY_Click");
                         this.UpdateAxisZoomValue(new Point(0, 0), _GraphModel.GraphSize, _GraphModel.GraphSize);
-                        _Log4NetClass.ShowInfo("UpdateAxisZoomValue", "BtnZoomInY_Click");
+                        //_Log4NetClass.ShowInfo("UpdateAxisZoomValue", "BtnZoomInY_Click");
                         this.RefreshMeasurePos();
                     }
 
@@ -2776,7 +2776,7 @@ namespace GraphLib
                             OnOverShotAxisYZoom();
                     }
 
-                    _Log4NetClass.ShowInfo("DoneZoom", "BtnZoomInY_Click");
+                    //_Log4NetClass.ShowInfo("DoneZoom", "BtnZoomInY_Click");
                 }
             }
             catch (Exception ex)
@@ -2806,7 +2806,7 @@ namespace GraphLib
                     }
                     else
                     {
-                        zoomsize = (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) * _GraphModel.AxisZoomPercentY / (2 * _ZoomNumberAxisY);
+                        zoomsize = (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) * _GraphModel.AxisZoomPercentY / Math.Pow(2, _ZoomNumberAxisY);
                     }
 
 
@@ -2823,7 +2823,7 @@ namespace GraphLib
                         _IsAxisYZoom = false;
                     }
 
-                    _Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "BtnZoomOutY_Click");
+                    //_Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "BtnZoomOutY_Click");
 
                     if (!_IsLoadedData)
                         UpdateLabelValueY();
@@ -2833,30 +2833,30 @@ namespace GraphLib
                             ZoomReset();
 
                         _GraphController.UpdatePlotData();
-                        if (_GraphInfo.DistanceY != 0)
-                        {
-                            double maxgrid = Math.Abs((_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / Convert.ToDouble(_DistanceY));
-                            if (maxgrid != 0 && Math.Round(_GraphModel.GridLineData.MaxGridNoY, 4) != Math.Round(maxgrid, 4))
-                                _GraphModel.GridLineData.MaxGridNoY = maxgrid;
+                        //if (_GraphInfo.DistanceY != 0)
+                        //{
+                        //    double maxgrid = Math.Abs((_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / Convert.ToDouble(_DistanceY));
+                        //    if (maxgrid != 0 && Math.Round(_GraphModel.GridLineData.MaxGridNoY, 4) != Math.Round(maxgrid, 4))
+                        //        _GraphModel.GridLineData.MaxGridNoY = maxgrid;
 
-                            if (_GraphModel.GridLineData.MaxGridNoY > _MaxGridNumber)
-                                _GraphModel.GridLineData.MaxGridNoY = _MaxGridNumber;
-                        }
+                        //    if (_GraphModel.GridLineData.MaxGridNoY > _MaxGridNumber)
+                        //        _GraphModel.GridLineData.MaxGridNoY = _MaxGridNumber;
+                        //}
 
                         //Check Y is need show Decimal point
-                        double diffvalgrid = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / _GraphModel.GridLineData.MaxGridNoY;
-                        if (diffvalgrid < 3 && _GraphInfo.DecimalPointY == 0 && _GraphModel.AxisZoomY != 0)
-                            _GraphModel.GridLineData.DecimalPointY = 2;
-                        else
-                            _GraphModel.GridLineData.DecimalPointY = 0;
+                        //double diffvalgrid = (_GraphModel.GridLineData.MaxGridValueY - _GraphModel.GridLineData.MinGridValueY) / _GraphModel.GridLineData.MaxGridNoY;
+                        //if (diffvalgrid < 3 && _GraphInfo.DecimalPointY == 0 && _GraphModel.AxisZoomY != 0)
+                        //    _GraphModel.GridLineData.DecimalPointY = 2;
+                        //else
+                        //    _GraphModel.GridLineData.DecimalPointY = 0;
 
                         this.GraphGridLoad(_GraphModel.GraphSize.Width, _GraphModel.GraphSize.Height);
-                        _Log4NetClass.ShowInfo("GraphGridLoad", "BtnZoomOutY_Click");
+                        //_Log4NetClass.ShowInfo("GraphGridLoad", "BtnZoomOutY_Click");
                         this.SetCurrentLinePos(_CurrentLine);
                         this.UpdateAxisZoomValue(new Point(0, 0), _GraphModel.GraphSize, _GraphModel.GraphSize);
-                        _Log4NetClass.ShowInfo("UpdateAxisZoomValue", "BtnZoomOutY_Click");
+                        //_Log4NetClass.ShowInfo("UpdateAxisZoomValue", "BtnZoomOutY_Click");
                         this.RefreshGraph();
-                        _Log4NetClass.ShowInfo("RefreshGraph", "BtnZoomOutY_Click");
+                        //_Log4NetClass.ShowInfo("RefreshGraph", "BtnZoomOutY_Click");
                         RefreshMeasurePos();
                     }
                     UpdateMeasureLabelY();
@@ -4036,7 +4036,7 @@ namespace GraphLib
                 if (_IsMeasureXShown)
                 {
                     double minmeasure = 0;
-                    double maxmeasure = 0;                   
+                    double maxmeasure = 0;
 
                     double minpos = _GraphModel.GridLineData.Margin.Left - (_GraphModel.UpperMeasureModelX.Width / 2);
                     double maxpos = _GraphModel.GridLineData.Margin.Left + width - (_GraphModel.LowerMeasureModelX.Width / 2) - _ScrollBarMargin;
@@ -4044,12 +4044,12 @@ namespace GraphLib
                     if (_GraphModel.UpperMeasureModelX.Margin.Left <= _GraphModel.LowerMeasureModelX.Margin.Left)
                     {
                         minmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
-                        maxmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;                        
+                        maxmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
                     }
                     else
                     {
                         minmeasure = _GraphModel.LowerMeasureModelX.Margin.Left;
-                        maxmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;                        
+                        maxmeasure = _GraphModel.UpperMeasureModelX.Margin.Left;
                     }
 
                     double valforpos = 0;
@@ -4079,7 +4079,7 @@ namespace GraphLib
                     if (_MeasureXPos1 != null && _MeasureXPos2 != null)
                     {
                         _MeasureXPos1 = GetCorrectMeasureXPos(_MeasureXPos1);
-                        _MeasureXPos2 = GetCorrectMeasureXPos(_MeasureXPos2);                       
+                        _MeasureXPos2 = GetCorrectMeasureXPos(_MeasureXPos2);
                     }
                 }
             }

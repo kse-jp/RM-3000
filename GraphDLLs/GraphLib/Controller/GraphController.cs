@@ -143,7 +143,7 @@ namespace GraphLib.Controller
                 {
                     int maxplot;
                     //when case maxplot > inputdata 
-                    if (_GraphModel.MaxDataSizeX > linecount)
+                    if (_GraphModel.MaxDataSizeX > linecount && _GraphModel.ShotCount == 1)
                     {
                         if (_GraphModel.GraphRawData.Count + linecount > _GraphModel.MaxDataSizeX)
                         {
@@ -164,7 +164,10 @@ namespace GraphLib.Controller
                     else
                     {
                         _GraphModel.GraphRawData.Clear();
-                        maxplot = _GraphModel.MaxDataSizeX;
+                        if (_GraphModel.ShotCount == 1)
+                            maxplot = _GraphModel.MaxDataSizeX;
+                        else
+                            maxplot = linecount;
                     }
 
                     for (int i = 0; i < maxplot; i++)
@@ -270,7 +273,7 @@ namespace GraphLib.Controller
             {
                 throw ex;
             }
-        }      
+        }
         #endregion
 
         #region Private Function

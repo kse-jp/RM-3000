@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:RM3000_SetUp"
-"LanguageId" = "3:1041"
-"CodePage" = "3:932"
-"UILanguageId" = "3:1041"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"UILanguageId" = "3:1033"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -71,6 +71,18 @@
         {
         "MsmKey" = "8:_660EE47FECBC4E0FA96BAFD93B08EF39"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_681D98373FD24F49884163F07D8FEB46"
+        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_681D98373FD24F49884163F07D8FEB46"
+        "OwnerKey" = "8:_C8EC4DA9B4794B209936B11BB2E54C5D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -209,18 +221,6 @@
         {
         "MsmKey" = "8:_F2B141E1B8EF68703F1F0111016829B8"
         "OwnerKey" = "8:_C022583AA4D04BEA9509719951DB75C4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F6A462E2DE3E4145AB9632487D98A2E0"
-        "OwnerKey" = "8:_A41CF2ED67104C7D81BCE88AB9BBCC84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F6A462E2DE3E4145AB9632487D98A2E0"
-        "OwnerKey" = "8:_C8EC4DA9B4794B209936B11BB2E54C5D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -429,7 +429,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Graph3DLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Graph3DLib, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_36483DC68F3F6B30A4E5DD361AE5DFD2"
@@ -491,7 +491,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4855.29550, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4878.24009, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_59D57ED525027CF759748705BB62C4A1"
@@ -684,7 +684,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rmusb_Wrapper, Version=1.0.4855.19328, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Rmusb_Wrapper, Version=1.0.4878.24005, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_96B4C100304FAE2748B1319A112962BA"
@@ -806,7 +806,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:GraphLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:GraphLib, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_B6652A9488FE47B85BF262C39C51E436"
@@ -857,7 +857,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4855.29549, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4878.24009, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_C398BF5B24F294F6761AE6732FCA4D0B"
@@ -928,7 +928,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:OKD_Calc_Wrapper, Version=1.0.4855.19331, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:OKD_Calc_Wrapper, Version=1.0.4878.24008, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_F2B141E1B8EF68703F1F0111016829B8"
@@ -1048,7 +1048,7 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:1041"
+        "LangId" = "3:1033"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
@@ -1056,7 +1056,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RM-3000"
         "ProductCode" = "8:{E71BC58D-616E-441C-8072-C20DB2BE8FB9}"
-        "PackageCode" = "8:{5773845E-4687-4948-99AF-ED7AB286120C}"
+        "PackageCode" = "8:{319D35BB-B9D7-484E-A397-B4DA1E145FA7}"
         "UpgradeCode" = "8:{FE1B347F-2373-4DFF-92D2-20B87EF23D13}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1600,7 +1600,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F6A462E2DE3E4145AB9632487D98A2E0"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_681D98373FD24F49884163F07D8FEB46"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"

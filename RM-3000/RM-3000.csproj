@@ -469,6 +469,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parts\frmTagValueList.resx">
       <DependentUpon>frmTagValueList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parts\frmGraphController.resx">
       <DependentUpon>frmGraphController.cs</DependentUpon>
@@ -535,13 +536,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Graph3DLib.dll.config">
+    <Content Include="Graph3DLib.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="GraphLib.dll.config">
+    </Content>
+    <Content Include="GraphLib.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
-    </None>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

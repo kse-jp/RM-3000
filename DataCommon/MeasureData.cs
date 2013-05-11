@@ -335,9 +335,8 @@ namespace DataCommon
         /// <returns>実際の取得サイズ</returns>
         public int GetRange(int _startindex, int length , out List<SampleData> sampleDatas , out List<CalcData> calcDatas )
         {
+            //データ取得
             sampleDatas = this.SampleDatas.GetRange(_startindex, length);
-
-            calcDatas = this.CalcDatas.GetRange(_startindex, length, sampleDatas);
 
             #region モード１時のオフセット設定
             ////モード１時のオフセット設定
@@ -381,7 +380,7 @@ namespace DataCommon
 
                         }
                         //MaxMinデータ
-                        else if(sdata.ChannelDatas[i].DataValues is Value_MaxMin)
+                        else if (sdata.ChannelDatas[i].DataValues is Value_MaxMin)
                         {
                             if (bOffsetCalc)
                             {
@@ -433,10 +432,14 @@ namespace DataCommon
                 }
             }
 
-                //}
+            //}
 
             //}
             #endregion
+
+            //演算処理
+            calcDatas = this.CalcDatas.GetRange(_startindex, length, sampleDatas);
+
 
             //次回データの取得を別スレッドで実施。
             //モード2のみ

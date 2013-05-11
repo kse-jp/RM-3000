@@ -213,8 +213,8 @@ namespace RM_3000.Forms.Settings
                     }
                     else if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.T)
                     {
-                        PositionUnits[i].MinValue = -200;
-                        PositionUnits[i].MaxValue = 1000;
+                        PositionUnits[i].MinValue = -5;
+                        PositionUnits[i].MaxValue = 300;
 
                     }
                     else if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.V)
@@ -248,18 +248,18 @@ namespace RM_3000.Forms.Settings
                 testSequence.Mode = Sequences.TestSequence.ModeType.Mode3;
 
                 //保存なしで計測初期設定
-                testSequence.InitPreMeasure(false);
+                testSequence.InitPreMeasure(false, true);
 
                 //全チャンネル計測するように上書き設定
                 //testSequence.ChannelEnables = new bool[] { true, true, true, true, true, true, true, true, true, true };
                 testSequence.ChannelEnables = channelsEnables;
 
-                //サンプリングを１sに設定
-                testSequence.SamplingTiming = 50000; // 50ms = 50,000 us
+                ////サンプリングを１sに設定
+                //testSequence.SamplingTiming = 50000; // 50ms = 50,000 us
 
-                //一時的にモード3の時間指定なしで動くようにSystemSettingを調整する。
-                SystemSetting.MeasureSetting.MeasureTime_Mode3 = 0;
-                SystemSetting.MeasureSetting.Serialize();
+                ////一時的にモード3の時間指定なしで動くようにSystemSettingを調整する。
+                //SystemSetting.MeasureSetting.MeasureTime_Mode3 = 0;
+                //SystemSetting.MeasureSetting.Serialize();
 
                 //モード3で通信開始
                 WorkThread = new System.Threading.Thread(new System.Threading.ThreadStart(StartMethod));

@@ -179,34 +179,37 @@ namespace RM_3000.Sequences
         /// <summary>
         /// 測定処理前の初期化
         /// </summary>
-        public void InitPreMeasure(bool RecordFlag , ModeType mode = ModeType.Non)
+        public void InitPreMeasure(bool RecordFlag , bool bForPositionSetting = false)
         {
             //チャンネル設定の取得
-            //this.channelsSetting = SystemSetting.ChannelsSetting;
+            this.channelsSetting = (ChannelsSetting)SystemSetting.ChannelsSetting.Clone();
             
-            //チャンネル設定のLoad
-            string channcelxmlFilePath = CommonLib.SystemDirectoryPath.SystemPath + ChannelsSetting.FileName;
-            if (System.IO.File.Exists(channcelxmlFilePath))
-            {
-                channelsSetting = SettingBase.DeserializeFromXml<ChannelsSetting>(channcelxmlFilePath);
-            }
+            ////チャンネル設定のLoad
+            //string channcelxmlFilePath = CommonLib.SystemDirectoryPath.SystemPath + ChannelsSetting.FileName;
+            //if (System.IO.File.Exists(channcelxmlFilePath))
+            //{
+            //    channelsSetting = SettingBase.DeserializeFromXml<ChannelsSetting>(channcelxmlFilePath);
+            //}
 
             //測定設定の取得
-            //this.measureSetting = SystemSetting.MeasureSetting;
+            this.measureSetting = (MeasureSetting)SystemSetting.MeasureSetting.Clone();
 
             //測定設定のLoad
-            string measurexmlFilePath = CommonLib.SystemDirectoryPath.SystemPath + MeasureSetting.FileName;
-            if (System.IO.File.Exists(measurexmlFilePath))
-            {
-                measureSetting = SettingBase.DeserializeFromXml<MeasureSetting>(measurexmlFilePath);
-            }
+            //string measurexmlFilePath = CommonLib.SystemDirectoryPath.SystemPath + MeasureSetting.FileName;
+            //if (System.IO.File.Exists(measurexmlFilePath))
+            //{
+            //    measureSetting = SettingBase.DeserializeFromXml<MeasureSetting>(measurexmlFilePath);
+            //}
 
             //リアルタイムデータの初期化
             RealTimeData.bRecord = RecordFlag;
 
-            if (this.Mode != ModeType.Non && measureSetting.Mode != (int)this.Mode)
+            //if (this.Mode != ModeType.Non && measureSetting.Mode != (int)this.Mode)
+            if (bForPositionSetting)
             {
-                measureSetting.Mode = (int)this.Mode;
+                measureSetting.Mode = (int)ModeType.Mode3;
+                measureSetting.SamplingTiming_Mode3 = 200000;
+                measureSetting.MeasureTime_Mode3 = 0;
             }
 
             RealTimeData.InitData(channelsSetting, measureSetting, CommonLib.SystemDirectoryPath.MeasureData + DateTime.Now.ToString("yyyyMMdd_HHmmss"));

@@ -119,17 +119,17 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblUnit0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblUnit0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 362</value>
+    <value>231, 362</value>
   </data>
   <data name="lblUnit0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblUnit0.TabIndex" type="System.Int32, mscorlib">
@@ -145,7 +145,7 @@
     <value>lblUnit0</value>
   </data>
   <data name="&gt;&gt;lblUnit0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit0.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -154,16 +154,16 @@
     <value>0</value>
   </data>
   <data name="lblUnit10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 329</value>
+    <value>231, 329</value>
   </data>
   <data name="lblUnit10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit10.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -178,7 +178,7 @@
     <value>lblUnit10</value>
   </data>
   <data name="&gt;&gt;lblUnit10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit10.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -187,16 +187,16 @@
     <value>1</value>
   </data>
   <data name="lblUnit9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 296</value>
+    <value>231, 296</value>
   </data>
   <data name="lblUnit9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit9.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -211,7 +211,7 @@
     <value>lblUnit9</value>
   </data>
   <data name="&gt;&gt;lblUnit9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit9.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -220,16 +220,16 @@
     <value>2</value>
   </data>
   <data name="lblUnit8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 262</value>
+    <value>231, 262</value>
   </data>
   <data name="lblUnit8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit8.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -244,7 +244,7 @@
     <value>lblUnit8</value>
   </data>
   <data name="&gt;&gt;lblUnit8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit8.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -253,16 +253,16 @@
     <value>3</value>
   </data>
   <data name="lblUnit7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 229</value>
+    <value>231, 229</value>
   </data>
   <data name="lblUnit7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit7.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -277,7 +277,7 @@
     <value>lblUnit7</value>
   </data>
   <data name="&gt;&gt;lblUnit7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit7.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -286,16 +286,16 @@
     <value>4</value>
   </data>
   <data name="lblUnit6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 196</value>
+    <value>231, 196</value>
   </data>
   <data name="lblUnit6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit6.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -310,7 +310,7 @@
     <value>lblUnit6</value>
   </data>
   <data name="&gt;&gt;lblUnit6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit6.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -319,16 +319,16 @@
     <value>5</value>
   </data>
   <data name="lblUnit5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 162</value>
+    <value>231, 162</value>
   </data>
   <data name="lblUnit5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit5.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -343,7 +343,7 @@
     <value>lblUnit5</value>
   </data>
   <data name="&gt;&gt;lblUnit5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit5.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -352,16 +352,16 @@
     <value>6</value>
   </data>
   <data name="lblUnit4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 129</value>
+    <value>231, 129</value>
   </data>
   <data name="lblUnit4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit4.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -376,7 +376,7 @@
     <value>lblUnit4</value>
   </data>
   <data name="&gt;&gt;lblUnit4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit4.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -385,16 +385,16 @@
     <value>7</value>
   </data>
   <data name="lblUnit3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 96</value>
+    <value>231, 96</value>
   </data>
   <data name="lblUnit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit3.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -409,7 +409,7 @@
     <value>lblUnit3</value>
   </data>
   <data name="&gt;&gt;lblUnit3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit3.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -418,16 +418,16 @@
     <value>8</value>
   </data>
   <data name="lblUnit2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 64</value>
+    <value>231, 64</value>
   </data>
   <data name="lblUnit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit2.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -442,7 +442,7 @@
     <value>lblUnit2</value>
   </data>
   <data name="&gt;&gt;lblUnit2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit2.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -451,16 +451,16 @@
     <value>9</value>
   </data>
   <data name="lblUnit1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblUnit1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUnit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 29</value>
+    <value>231, 29</value>
   </data>
   <data name="lblUnit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblUnit1.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -475,7 +475,7 @@
     <value>lblUnit1</value>
   </data>
   <data name="&gt;&gt;lblUnit1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblUnit1.Parent" xml:space="preserve">
     <value>pnlMain</value>
@@ -493,7 +493,7 @@
     <value>97, 360</value>
   </data>
   <data name="lblDataValue0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue0.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -523,7 +523,7 @@
     <value>97, 327</value>
   </data>
   <data name="lblDataValue10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue10.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -553,7 +553,7 @@
     <value>97, 294</value>
   </data>
   <data name="lblDataValue9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue9.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -583,7 +583,7 @@
     <value>97, 260</value>
   </data>
   <data name="lblDataValue8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue8.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -613,7 +613,7 @@
     <value>97, 227</value>
   </data>
   <data name="lblDataValue7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue7.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -643,7 +643,7 @@
     <value>97, 194</value>
   </data>
   <data name="lblDataValue6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue6.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -673,7 +673,7 @@
     <value>97, 160</value>
   </data>
   <data name="lblDataValue5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue5.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -703,7 +703,7 @@
     <value>97, 127</value>
   </data>
   <data name="lblDataValue4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue4.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -733,7 +733,7 @@
     <value>97, 94</value>
   </data>
   <data name="lblDataValue3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue3.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -763,7 +763,7 @@
     <value>97, 62</value>
   </data>
   <data name="lblDataValue2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue2.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -793,7 +793,7 @@
     <value>97, 27</value>
   </data>
   <data name="lblDataValue1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblDataValue1.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -813,8 +813,338 @@
   <data name="&gt;&gt;lblDataValue1.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="lblDataValue_Zero0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 360</value>
+  </data>
+  <data name="lblDataValue_Zero0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero0.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="lblDataValue_Zero0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero0.Name" xml:space="preserve">
+    <value>lblDataValue_Zero0</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero0.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero0.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero0.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="lblDataValue_Zero10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 327</value>
+  </data>
+  <data name="lblDataValue_Zero10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero10.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="lblDataValue_Zero10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero10.Name" xml:space="preserve">
+    <value>lblDataValue_Zero10</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero10.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero10.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero10.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="lblDataValue_Zero9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 294</value>
+  </data>
+  <data name="lblDataValue_Zero9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero9.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="lblDataValue_Zero9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero9.Name" xml:space="preserve">
+    <value>lblDataValue_Zero9</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero9.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero9.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero9.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="lblDataValue_Zero8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 260</value>
+  </data>
+  <data name="lblDataValue_Zero8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero8.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="lblDataValue_Zero8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero8.Name" xml:space="preserve">
+    <value>lblDataValue_Zero8</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero8.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero8.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero8.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="lblDataValue_Zero7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 227</value>
+  </data>
+  <data name="lblDataValue_Zero7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero7.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="lblDataValue_Zero7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero7.Name" xml:space="preserve">
+    <value>lblDataValue_Zero7</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero7.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero7.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero7.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="lblDataValue_Zero6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 194</value>
+  </data>
+  <data name="lblDataValue_Zero6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero6.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="lblDataValue_Zero6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero6.Name" xml:space="preserve">
+    <value>lblDataValue_Zero6</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero6.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero6.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero6.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lblDataValue_Zero5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 160</value>
+  </data>
+  <data name="lblDataValue_Zero5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero5.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="lblDataValue_Zero5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero5.Name" xml:space="preserve">
+    <value>lblDataValue_Zero5</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero5.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero5.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero5.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="lblDataValue_Zero4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 127</value>
+  </data>
+  <data name="lblDataValue_Zero4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero4.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="lblDataValue_Zero4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero4.Name" xml:space="preserve">
+    <value>lblDataValue_Zero4</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero4.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero4.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero4.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="lblDataValue_Zero3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 94</value>
+  </data>
+  <data name="lblDataValue_Zero3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero3.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="lblDataValue_Zero3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero3.Name" xml:space="preserve">
+    <value>lblDataValue_Zero3</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero3.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero3.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero3.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="lblDataValue_Zero2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 62</value>
+  </data>
+  <data name="lblDataValue_Zero2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero2.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="lblDataValue_Zero2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero2.Name" xml:space="preserve">
+    <value>lblDataValue_Zero2</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero2.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero2.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero2.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="lblDataValue_Zero1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="lblDataValue_Zero1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDataValue_Zero1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 27</value>
+  </data>
+  <data name="lblDataValue_Zero1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblDataValue_Zero1.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="lblDataValue_Zero1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero1.Name" xml:space="preserve">
+    <value>lblDataValue_Zero1</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero1.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero1.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblDataValue_Zero1.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
   <data name="lblItem0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 7pt</value>
+    <value>Meiryo UI, 6.49998665pt</value>
   </data>
   <data name="lblItem0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -838,13 +1168,13 @@
     <value>lblItem0</value>
   </data>
   <data name="&gt;&gt;lblItem0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem0.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem0.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>33</value>
   </data>
   <data name="lblItem10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -871,13 +1201,13 @@
     <value>lblItem10</value>
   </data>
   <data name="&gt;&gt;lblItem10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem10.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem10.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>34</value>
   </data>
   <data name="lblItem9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -904,13 +1234,13 @@
     <value>lblItem9</value>
   </data>
   <data name="&gt;&gt;lblItem9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem9.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem9.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>35</value>
   </data>
   <data name="lblItem8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -937,13 +1267,13 @@
     <value>lblItem8</value>
   </data>
   <data name="&gt;&gt;lblItem8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem8.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem8.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>36</value>
   </data>
   <data name="lblItem7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -970,13 +1300,13 @@
     <value>lblItem7</value>
   </data>
   <data name="&gt;&gt;lblItem7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem7.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem7.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>37</value>
   </data>
   <data name="lblItem6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -1003,13 +1333,13 @@
     <value>lblItem6</value>
   </data>
   <data name="&gt;&gt;lblItem6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem6.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem6.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>38</value>
   </data>
   <data name="lblItem5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -1036,13 +1366,13 @@
     <value>lblItem5</value>
   </data>
   <data name="&gt;&gt;lblItem5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem5.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem5.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>39</value>
   </data>
   <data name="lblItem4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -1069,13 +1399,13 @@
     <value>lblItem4</value>
   </data>
   <data name="&gt;&gt;lblItem4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem4.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem4.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>40</value>
   </data>
   <data name="lblItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -1102,13 +1432,13 @@
     <value>lblItem3</value>
   </data>
   <data name="&gt;&gt;lblItem3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem3.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem3.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>41</value>
   </data>
   <data name="lblItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -1135,13 +1465,13 @@
     <value>lblItem2</value>
   </data>
   <data name="&gt;&gt;lblItem2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem2.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem2.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>42</value>
   </data>
   <data name="lblItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -1168,13 +1498,13 @@
     <value>lblItem1</value>
   </data>
   <data name="&gt;&gt;lblItem1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblItem1.Parent" xml:space="preserve">
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblItem1.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>43</value>
   </data>
   <data name="btnEnd.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
@@ -1270,7 +1600,7 @@
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;pnlHeader.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>44</value>
   </data>
   <data name="pnlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1297,7 +1627,7 @@
     <value>1</value>
   </data>
   <data name="lblAnlMeasUnit0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1306,7 +1636,7 @@
     <value>213, 345</value>
   </data>
   <data name="lblAnlMeasUnit0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit0.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -1321,7 +1651,7 @@
     <value>lblAnlMeasUnit0</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit0.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1330,7 +1660,7 @@
     <value>0</value>
   </data>
   <data name="lblAnlMeasUnit10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1339,7 +1669,7 @@
     <value>213, 312</value>
   </data>
   <data name="lblAnlMeasUnit10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit10.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -1354,7 +1684,7 @@
     <value>lblAnlMeasUnit10</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit10.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1363,7 +1693,7 @@
     <value>1</value>
   </data>
   <data name="lblAnlMeasUnit9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1372,7 +1702,7 @@
     <value>213, 279</value>
   </data>
   <data name="lblAnlMeasUnit9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit9.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -1387,7 +1717,7 @@
     <value>lblAnlMeasUnit9</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit9.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1396,7 +1726,7 @@
     <value>2</value>
   </data>
   <data name="lblAnlMeasUnit8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1405,7 +1735,7 @@
     <value>213, 245</value>
   </data>
   <data name="lblAnlMeasUnit8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit8.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -1420,7 +1750,7 @@
     <value>lblAnlMeasUnit8</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit8.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1429,7 +1759,7 @@
     <value>3</value>
   </data>
   <data name="lblAnlMeasUnit7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1438,7 +1768,7 @@
     <value>213, 212</value>
   </data>
   <data name="lblAnlMeasUnit7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit7.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -1453,7 +1783,7 @@
     <value>lblAnlMeasUnit7</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit7.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1462,7 +1792,7 @@
     <value>4</value>
   </data>
   <data name="lblAnlMeasUnit6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1471,7 +1801,7 @@
     <value>213, 179</value>
   </data>
   <data name="lblAnlMeasUnit6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit6.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1486,7 +1816,7 @@
     <value>lblAnlMeasUnit6</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit6.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1495,7 +1825,7 @@
     <value>5</value>
   </data>
   <data name="lblAnlMeasUnit5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1504,7 +1834,7 @@
     <value>213, 145</value>
   </data>
   <data name="lblAnlMeasUnit5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit5.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -1519,7 +1849,7 @@
     <value>lblAnlMeasUnit5</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit5.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1528,7 +1858,7 @@
     <value>6</value>
   </data>
   <data name="lblAnlMeasUnit4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1537,7 +1867,7 @@
     <value>213, 112</value>
   </data>
   <data name="lblAnlMeasUnit4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit4.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -1552,7 +1882,7 @@
     <value>lblAnlMeasUnit4</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit4.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1561,7 +1891,7 @@
     <value>7</value>
   </data>
   <data name="lblAnlMeasUnit3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1570,7 +1900,7 @@
     <value>213, 79</value>
   </data>
   <data name="lblAnlMeasUnit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit3.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -1585,7 +1915,7 @@
     <value>lblAnlMeasUnit3</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit3.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1594,7 +1924,7 @@
     <value>8</value>
   </data>
   <data name="lblAnlMeasUnit2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1603,7 +1933,7 @@
     <value>213, 47</value>
   </data>
   <data name="lblAnlMeasUnit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit2.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -1618,7 +1948,7 @@
     <value>lblAnlMeasUnit2</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit2.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1627,7 +1957,7 @@
     <value>9</value>
   </data>
   <data name="lblAnlMeasUnit1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlMeasUnit1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1636,7 +1966,7 @@
     <value>213, 12</value>
   </data>
   <data name="lblAnlMeasUnit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlMeasUnit1.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -1651,7 +1981,7 @@
     <value>lblAnlMeasUnit1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasUnit1.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1666,10 +1996,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 343</value>
+    <value>86, 343</value>
   </data>
   <data name="lblAnlDataMeas0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas0.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -1696,10 +2026,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 310</value>
+    <value>86, 310</value>
   </data>
   <data name="lblAnlDataMeas10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas10.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -1726,10 +2056,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 277</value>
+    <value>86, 277</value>
   </data>
   <data name="lblAnlDataMeas9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas9.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -1756,10 +2086,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 243</value>
+    <value>86, 243</value>
   </data>
   <data name="lblAnlDataMeas8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas8.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -1786,10 +2116,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 210</value>
+    <value>86, 210</value>
   </data>
   <data name="lblAnlDataMeas7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas7.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -1816,10 +2146,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 177</value>
+    <value>86, 177</value>
   </data>
   <data name="lblAnlDataMeas6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas6.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -1846,10 +2176,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 143</value>
+    <value>86, 143</value>
   </data>
   <data name="lblAnlDataMeas5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas5.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -1876,10 +2206,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 110</value>
+    <value>86, 110</value>
   </data>
   <data name="lblAnlDataMeas4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas4.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -1906,10 +2236,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 77</value>
+    <value>86, 77</value>
   </data>
   <data name="lblAnlDataMeas3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas3.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -1936,10 +2266,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 45</value>
+    <value>86, 45</value>
   </data>
   <data name="lblAnlDataMeas2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas2.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1966,10 +2296,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAnlDataMeas1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 10</value>
+    <value>86, 10</value>
   </data>
   <data name="lblAnlDataMeas1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="lblAnlDataMeas1.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -1989,8 +2319,338 @@
   <data name="&gt;&gt;lblAnlDataMeas1.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="lblAnlDataMeas_Zero0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 343</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero0.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero0.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero0</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero0.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero0.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero0.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 310</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero10.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero10.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero10</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero10.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero10.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero10.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 277</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero9.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero9.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero9</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero9.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero9.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero9.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 243</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero8.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero8.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero8</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero8.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero8.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero8.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 210</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero7.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero7.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero7</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero7.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero7.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero7.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 177</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero6.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero6.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero6</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero6.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero6.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero6.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 143</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero5.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero5.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero5</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero5.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero5.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero5.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 110</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero4.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero4.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero4</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero4.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero4.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero4.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 77</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero3.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero3.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero3</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero3.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero3.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero3.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 45</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero2.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero2.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero2</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero2.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero2.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero2.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 10</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero1.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="lblAnlDataMeas_Zero1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero1.Name" xml:space="preserve">
+    <value>lblAnlDataMeas_Zero1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero1.Type" xml:space="preserve">
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblAnlDataMeas_Zero1.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
   <data name="lblAnlMeasItem0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 7pt</value>
+    <value>Meiryo UI, 6.49998665pt</value>
   </data>
   <data name="lblAnlMeasItem0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2014,13 +2674,13 @@
     <value>lblAnlMeasItem0</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem0.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem0.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>33</value>
   </data>
   <data name="lblAnlMeasItem10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2047,13 +2707,13 @@
     <value>lblAnlMeasItem10</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem10.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem10.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>34</value>
   </data>
   <data name="lblAnlMeasItem9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2080,13 +2740,13 @@
     <value>lblAnlMeasItem9</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem9.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem9.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>35</value>
   </data>
   <data name="lblAnlMeasItem8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2113,13 +2773,13 @@
     <value>lblAnlMeasItem8</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem8.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem8.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>36</value>
   </data>
   <data name="lblAnlMeasItem7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2146,13 +2806,13 @@
     <value>lblAnlMeasItem7</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem7.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem7.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>37</value>
   </data>
   <data name="lblAnlMeasItem6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2179,13 +2839,13 @@
     <value>lblAnlMeasItem6</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem6.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem6.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>38</value>
   </data>
   <data name="lblAnlMeasItem5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2212,13 +2872,13 @@
     <value>lblAnlMeasItem5</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem5.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem5.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>39</value>
   </data>
   <data name="lblAnlMeasItem4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2245,13 +2905,13 @@
     <value>lblAnlMeasItem4</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem4.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem4.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>40</value>
   </data>
   <data name="lblAnlMeasItem3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2278,13 +2938,13 @@
     <value>lblAnlMeasItem3</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem3.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem3.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>41</value>
   </data>
   <data name="lblAnlMeasItem2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2311,13 +2971,13 @@
     <value>lblAnlMeasItem2</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem2.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem2.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>42</value>
   </data>
   <data name="lblAnlMeasItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt</value>
@@ -2344,13 +3004,13 @@
     <value>lblAnlMeasItem1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem1.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;lblAnlMeasItem1.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>43</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
@@ -2380,16 +3040,16 @@
     <value>0</value>
   </data>
   <data name="lblAnlUnit0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 345</value>
+    <value>223, 345</value>
   </data>
   <data name="lblAnlUnit0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit0.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -2407,7 +3067,7 @@
     <value>lblAnlUnit0</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit0.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2416,16 +3076,16 @@
     <value>0</value>
   </data>
   <data name="lblAnlUnit10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 312</value>
+    <value>223, 312</value>
   </data>
   <data name="lblAnlUnit10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit10.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -2440,7 +3100,7 @@
     <value>lblAnlUnit10</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit10.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2449,16 +3109,16 @@
     <value>1</value>
   </data>
   <data name="lblAnlUnit9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 279</value>
+    <value>223, 279</value>
   </data>
   <data name="lblAnlUnit9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit9.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -2473,7 +3133,7 @@
     <value>lblAnlUnit9</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit9.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2482,16 +3142,16 @@
     <value>2</value>
   </data>
   <data name="lblAnlUnit8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 245</value>
+    <value>223, 245</value>
   </data>
   <data name="lblAnlUnit8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit8.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -2506,7 +3166,7 @@
     <value>lblAnlUnit8</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit8.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2515,16 +3175,16 @@
     <value>3</value>
   </data>
   <data name="lblAnlUnit7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 212</value>
+    <value>223, 212</value>
   </data>
   <data name="lblAnlUnit7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit7.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -2539,7 +3199,7 @@
     <value>lblAnlUnit7</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit7.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2548,16 +3208,16 @@
     <value>4</value>
   </data>
   <data name="lblAnlUnit6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 179</value>
+    <value>223, 179</value>
   </data>
   <data name="lblAnlUnit6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit6.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -2572,7 +3232,7 @@
     <value>lblAnlUnit6</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit6.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2581,16 +3241,16 @@
     <value>5</value>
   </data>
   <data name="lblAnlUnit5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 145</value>
+    <value>223, 145</value>
   </data>
   <data name="lblAnlUnit5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit5.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -2605,7 +3265,7 @@
     <value>lblAnlUnit5</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit5.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2614,16 +3274,16 @@
     <value>6</value>
   </data>
   <data name="lblAnlUnit4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 112</value>
+    <value>223, 112</value>
   </data>
   <data name="lblAnlUnit4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit4.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -2638,7 +3298,7 @@
     <value>lblAnlUnit4</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit4.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2647,16 +3307,16 @@
     <value>7</value>
   </data>
   <data name="lblAnlUnit3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 79</value>
+    <value>223, 79</value>
   </data>
   <data name="lblAnlUnit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit3.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -2671,7 +3331,7 @@
     <value>lblAnlUnit3</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit3.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2680,16 +3340,16 @@
     <value>8</value>
   </data>
   <data name="lblAnlUnit2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 47</value>
+    <value>223, 47</value>
   </data>
   <data name="lblAnlUnit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit2.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -2704,7 +3364,7 @@
     <value>lblAnlUnit2</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit2.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -2713,16 +3373,16 @@
     <value>9</value>
   </data>
   <data name="lblAnlUnit1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 6pt</value>
+    <value>Meiryo UI, 3.99999666pt</value>
   </data>
   <data name="lblAnlUnit1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAnlUnit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 12</value>
+    <value>223, 12</value>
   </data>
   <data name="lblAnlUnit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="lblAnlUnit1.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -2737,7 +3397,7 @@
     <value>lblAnlUnit1</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlUnit1.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3079,7 +3739,7 @@
     <value>21</value>
   </data>
   <data name="lblAnlysisItem0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 7pt</value>
+    <value>Meiryo UI, 6.49998665pt</value>
   </data>
   <data name="lblAnlysisItem0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3106,7 +3766,7 @@
     <value>lblAnlysisItem0</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem0.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem0.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3139,7 +3799,7 @@
     <value>lblAnlysisItem10</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem10.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem10.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3172,7 +3832,7 @@
     <value>lblAnlysisItem9</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem9.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem9.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3205,7 +3865,7 @@
     <value>lblAnlysisItem8</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem8.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem8.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3238,7 +3898,7 @@
     <value>lblAnlysisItem7</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem7.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem7.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3271,7 +3931,7 @@
     <value>lblAnlysisItem6</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem6.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem6.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3304,7 +3964,7 @@
     <value>lblAnlysisItem5</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem5.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem5.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3337,7 +3997,7 @@
     <value>lblAnlysisItem4</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem4.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem4.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3370,7 +4030,7 @@
     <value>lblAnlysisItem3</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem3.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem3.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3403,7 +4063,7 @@
     <value>lblAnlysisItem2</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem2.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem2.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -3436,7 +4096,7 @@
     <value>lblAnlysisItem1</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem1.Type" xml:space="preserve">
-    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>RM_3000.Controls.AutoFontSizeLabel, RM-3000, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lblAnlysisItem1.Parent" xml:space="preserve">
     <value>tabPage2</value>

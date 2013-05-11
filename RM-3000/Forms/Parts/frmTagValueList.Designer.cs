@@ -31,17 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTagValueList));
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblDataValue0 = new System.Windows.Forms.Label();
             this.lblDataValue10 = new System.Windows.Forms.Label();
             this.lblDataValue9 = new System.Windows.Forms.Label();
@@ -53,34 +42,12 @@
             this.lblDataValue3 = new System.Windows.Forms.Label();
             this.lblDataValue2 = new System.Windows.Forms.Label();
             this.lblDataValue1 = new System.Windows.Forms.Label();
-            this.lblItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnEnd = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlAnalysis = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblAnlMeasUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblAnlDataMeas0 = new System.Windows.Forms.Label();
             this.lblAnlDataMeas10 = new System.Windows.Forms.Label();
             this.lblAnlDataMeas9 = new System.Windows.Forms.Label();
@@ -92,29 +59,7 @@
             this.lblAnlDataMeas3 = new System.Windows.Forms.Label();
             this.lblAnlDataMeas2 = new System.Windows.Forms.Label();
             this.lblAnlDataMeas1 = new System.Windows.Forms.Label();
-            this.lblAnlMeasItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblAnlUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblAnlData0 = new System.Windows.Forms.Label();
             this.lblAnlData10 = new System.Windows.Forms.Label();
             this.lblAnlData9 = new System.Windows.Forms.Label();
@@ -126,6 +71,53 @@
             this.lblAnlData3 = new System.Windows.Forms.Label();
             this.lblAnlData2 = new System.Windows.Forms.Label();
             this.lblAnlData1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTabClose = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblAnlMeasUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblAnlysisItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblAnlysisItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblAnlysisItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
@@ -137,9 +129,39 @@
             this.lblAnlysisItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblAnlysisItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblAnlysisItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnTabClose = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue_Zero1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.pnlMain.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlAnalysis.SuspendLayout();
@@ -174,6 +196,17 @@
             this.pnlMain.Controls.Add(this.lblDataValue3);
             this.pnlMain.Controls.Add(this.lblDataValue2);
             this.pnlMain.Controls.Add(this.lblDataValue1);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero0);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero10);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero9);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero8);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero7);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero6);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero5);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero4);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero3);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero2);
+            this.pnlMain.Controls.Add(this.lblDataValue_Zero1);
             this.pnlMain.Controls.Add(this.lblItem0);
             this.pnlMain.Controls.Add(this.lblItem10);
             this.pnlMain.Controls.Add(this.lblItem9);
@@ -188,83 +221,6 @@
             this.pnlMain.Controls.Add(this.pnlHeader);
             resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.Name = "pnlMain";
-            // 
-            // lblUnit0
-            // 
-            this.lblUnit0.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit0, "lblUnit0");
-            this.lblUnit0.MaxFontSize = 10F;
-            this.lblUnit0.Name = "lblUnit0";
-            // 
-            // lblUnit10
-            // 
-            this.lblUnit10.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit10, "lblUnit10");
-            this.lblUnit10.MaxFontSize = 10F;
-            this.lblUnit10.Name = "lblUnit10";
-            // 
-            // lblUnit9
-            // 
-            this.lblUnit9.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit9, "lblUnit9");
-            this.lblUnit9.MaxFontSize = 10F;
-            this.lblUnit9.Name = "lblUnit9";
-            // 
-            // lblUnit8
-            // 
-            this.lblUnit8.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit8, "lblUnit8");
-            this.lblUnit8.MaxFontSize = 10F;
-            this.lblUnit8.Name = "lblUnit8";
-            // 
-            // lblUnit7
-            // 
-            this.lblUnit7.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit7, "lblUnit7");
-            this.lblUnit7.MaxFontSize = 10F;
-            this.lblUnit7.Name = "lblUnit7";
-            // 
-            // lblUnit6
-            // 
-            this.lblUnit6.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit6, "lblUnit6");
-            this.lblUnit6.MaxFontSize = 10F;
-            this.lblUnit6.Name = "lblUnit6";
-            // 
-            // lblUnit5
-            // 
-            this.lblUnit5.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit5, "lblUnit5");
-            this.lblUnit5.MaxFontSize = 10F;
-            this.lblUnit5.Name = "lblUnit5";
-            // 
-            // lblUnit4
-            // 
-            this.lblUnit4.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit4, "lblUnit4");
-            this.lblUnit4.MaxFontSize = 10F;
-            this.lblUnit4.Name = "lblUnit4";
-            // 
-            // lblUnit3
-            // 
-            this.lblUnit3.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit3, "lblUnit3");
-            this.lblUnit3.MaxFontSize = 10F;
-            this.lblUnit3.Name = "lblUnit3";
-            // 
-            // lblUnit2
-            // 
-            this.lblUnit2.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit2, "lblUnit2");
-            this.lblUnit2.MaxFontSize = 10F;
-            this.lblUnit2.Name = "lblUnit2";
-            // 
-            // lblUnit1
-            // 
-            this.lblUnit1.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit1, "lblUnit1");
-            this.lblUnit1.MaxFontSize = 10F;
-            this.lblUnit1.Name = "lblUnit1";
             // 
             // lblDataValue0
             // 
@@ -343,83 +299,6 @@
             resources.ApplyResources(this.lblDataValue1, "lblDataValue1");
             this.lblDataValue1.Name = "lblDataValue1";
             // 
-            // lblItem0
-            // 
-            this.lblItem0.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem0, "lblItem0");
-            this.lblItem0.MaxFontSize = 12F;
-            this.lblItem0.Name = "lblItem0";
-            // 
-            // lblItem10
-            // 
-            this.lblItem10.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem10, "lblItem10");
-            this.lblItem10.MaxFontSize = 12F;
-            this.lblItem10.Name = "lblItem10";
-            // 
-            // lblItem9
-            // 
-            this.lblItem9.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem9, "lblItem9");
-            this.lblItem9.MaxFontSize = 12F;
-            this.lblItem9.Name = "lblItem9";
-            // 
-            // lblItem8
-            // 
-            this.lblItem8.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem8, "lblItem8");
-            this.lblItem8.MaxFontSize = 12F;
-            this.lblItem8.Name = "lblItem8";
-            // 
-            // lblItem7
-            // 
-            this.lblItem7.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem7, "lblItem7");
-            this.lblItem7.MaxFontSize = 12F;
-            this.lblItem7.Name = "lblItem7";
-            // 
-            // lblItem6
-            // 
-            this.lblItem6.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem6, "lblItem6");
-            this.lblItem6.MaxFontSize = 12F;
-            this.lblItem6.Name = "lblItem6";
-            // 
-            // lblItem5
-            // 
-            this.lblItem5.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem5, "lblItem5");
-            this.lblItem5.MaxFontSize = 12F;
-            this.lblItem5.Name = "lblItem5";
-            // 
-            // lblItem4
-            // 
-            this.lblItem4.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem4, "lblItem4");
-            this.lblItem4.MaxFontSize = 12F;
-            this.lblItem4.Name = "lblItem4";
-            // 
-            // lblItem3
-            // 
-            this.lblItem3.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem3, "lblItem3");
-            this.lblItem3.MaxFontSize = 12F;
-            this.lblItem3.Name = "lblItem3";
-            // 
-            // lblItem2
-            // 
-            this.lblItem2.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem2, "lblItem2");
-            this.lblItem2.MaxFontSize = 12F;
-            this.lblItem2.Name = "lblItem2";
-            // 
-            // lblItem1
-            // 
-            this.lblItem1.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem1, "lblItem1");
-            this.lblItem1.MaxFontSize = 12F;
-            this.lblItem1.Name = "lblItem1";
-            // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -481,6 +360,17 @@
             this.tabPage1.Controls.Add(this.lblAnlDataMeas3);
             this.tabPage1.Controls.Add(this.lblAnlDataMeas2);
             this.tabPage1.Controls.Add(this.lblAnlDataMeas1);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero0);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero10);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero9);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero8);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero7);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero6);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero5);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero4);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero3);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero2);
+            this.tabPage1.Controls.Add(this.lblAnlDataMeas_Zero1);
             this.tabPage1.Controls.Add(this.lblAnlMeasItem0);
             this.tabPage1.Controls.Add(this.lblAnlMeasItem10);
             this.tabPage1.Controls.Add(this.lblAnlMeasItem9);
@@ -494,83 +384,6 @@
             this.tabPage1.Controls.Add(this.lblAnlMeasItem1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
-            // 
-            // lblAnlMeasUnit0
-            // 
-            this.lblAnlMeasUnit0.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit0, "lblAnlMeasUnit0");
-            this.lblAnlMeasUnit0.MaxFontSize = 10F;
-            this.lblAnlMeasUnit0.Name = "lblAnlMeasUnit0";
-            // 
-            // lblAnlMeasUnit10
-            // 
-            this.lblAnlMeasUnit10.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit10, "lblAnlMeasUnit10");
-            this.lblAnlMeasUnit10.MaxFontSize = 10F;
-            this.lblAnlMeasUnit10.Name = "lblAnlMeasUnit10";
-            // 
-            // lblAnlMeasUnit9
-            // 
-            this.lblAnlMeasUnit9.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit9, "lblAnlMeasUnit9");
-            this.lblAnlMeasUnit9.MaxFontSize = 10F;
-            this.lblAnlMeasUnit9.Name = "lblAnlMeasUnit9";
-            // 
-            // lblAnlMeasUnit8
-            // 
-            this.lblAnlMeasUnit8.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit8, "lblAnlMeasUnit8");
-            this.lblAnlMeasUnit8.MaxFontSize = 10F;
-            this.lblAnlMeasUnit8.Name = "lblAnlMeasUnit8";
-            // 
-            // lblAnlMeasUnit7
-            // 
-            this.lblAnlMeasUnit7.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit7, "lblAnlMeasUnit7");
-            this.lblAnlMeasUnit7.MaxFontSize = 10F;
-            this.lblAnlMeasUnit7.Name = "lblAnlMeasUnit7";
-            // 
-            // lblAnlMeasUnit6
-            // 
-            this.lblAnlMeasUnit6.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit6, "lblAnlMeasUnit6");
-            this.lblAnlMeasUnit6.MaxFontSize = 10F;
-            this.lblAnlMeasUnit6.Name = "lblAnlMeasUnit6";
-            // 
-            // lblAnlMeasUnit5
-            // 
-            this.lblAnlMeasUnit5.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit5, "lblAnlMeasUnit5");
-            this.lblAnlMeasUnit5.MaxFontSize = 10F;
-            this.lblAnlMeasUnit5.Name = "lblAnlMeasUnit5";
-            // 
-            // lblAnlMeasUnit4
-            // 
-            this.lblAnlMeasUnit4.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit4, "lblAnlMeasUnit4");
-            this.lblAnlMeasUnit4.MaxFontSize = 10F;
-            this.lblAnlMeasUnit4.Name = "lblAnlMeasUnit4";
-            // 
-            // lblAnlMeasUnit3
-            // 
-            this.lblAnlMeasUnit3.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit3, "lblAnlMeasUnit3");
-            this.lblAnlMeasUnit3.MaxFontSize = 10F;
-            this.lblAnlMeasUnit3.Name = "lblAnlMeasUnit3";
-            // 
-            // lblAnlMeasUnit2
-            // 
-            this.lblAnlMeasUnit2.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit2, "lblAnlMeasUnit2");
-            this.lblAnlMeasUnit2.MaxFontSize = 10F;
-            this.lblAnlMeasUnit2.Name = "lblAnlMeasUnit2";
-            // 
-            // lblAnlMeasUnit1
-            // 
-            this.lblAnlMeasUnit1.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasUnit1, "lblAnlMeasUnit1");
-            this.lblAnlMeasUnit1.MaxFontSize = 10F;
-            this.lblAnlMeasUnit1.Name = "lblAnlMeasUnit1";
             // 
             // lblAnlDataMeas0
             // 
@@ -649,83 +462,6 @@
             resources.ApplyResources(this.lblAnlDataMeas1, "lblAnlDataMeas1");
             this.lblAnlDataMeas1.Name = "lblAnlDataMeas1";
             // 
-            // lblAnlMeasItem0
-            // 
-            this.lblAnlMeasItem0.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem0, "lblAnlMeasItem0");
-            this.lblAnlMeasItem0.MaxFontSize = 12F;
-            this.lblAnlMeasItem0.Name = "lblAnlMeasItem0";
-            // 
-            // lblAnlMeasItem10
-            // 
-            this.lblAnlMeasItem10.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem10, "lblAnlMeasItem10");
-            this.lblAnlMeasItem10.MaxFontSize = 12F;
-            this.lblAnlMeasItem10.Name = "lblAnlMeasItem10";
-            // 
-            // lblAnlMeasItem9
-            // 
-            this.lblAnlMeasItem9.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem9, "lblAnlMeasItem9");
-            this.lblAnlMeasItem9.MaxFontSize = 12F;
-            this.lblAnlMeasItem9.Name = "lblAnlMeasItem9";
-            // 
-            // lblAnlMeasItem8
-            // 
-            this.lblAnlMeasItem8.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem8, "lblAnlMeasItem8");
-            this.lblAnlMeasItem8.MaxFontSize = 12F;
-            this.lblAnlMeasItem8.Name = "lblAnlMeasItem8";
-            // 
-            // lblAnlMeasItem7
-            // 
-            this.lblAnlMeasItem7.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem7, "lblAnlMeasItem7");
-            this.lblAnlMeasItem7.MaxFontSize = 12F;
-            this.lblAnlMeasItem7.Name = "lblAnlMeasItem7";
-            // 
-            // lblAnlMeasItem6
-            // 
-            this.lblAnlMeasItem6.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem6, "lblAnlMeasItem6");
-            this.lblAnlMeasItem6.MaxFontSize = 12F;
-            this.lblAnlMeasItem6.Name = "lblAnlMeasItem6";
-            // 
-            // lblAnlMeasItem5
-            // 
-            this.lblAnlMeasItem5.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem5, "lblAnlMeasItem5");
-            this.lblAnlMeasItem5.MaxFontSize = 12F;
-            this.lblAnlMeasItem5.Name = "lblAnlMeasItem5";
-            // 
-            // lblAnlMeasItem4
-            // 
-            this.lblAnlMeasItem4.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem4, "lblAnlMeasItem4");
-            this.lblAnlMeasItem4.MaxFontSize = 12F;
-            this.lblAnlMeasItem4.Name = "lblAnlMeasItem4";
-            // 
-            // lblAnlMeasItem3
-            // 
-            this.lblAnlMeasItem3.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem3, "lblAnlMeasItem3");
-            this.lblAnlMeasItem3.MaxFontSize = 12F;
-            this.lblAnlMeasItem3.Name = "lblAnlMeasItem3";
-            // 
-            // lblAnlMeasItem2
-            // 
-            this.lblAnlMeasItem2.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem2, "lblAnlMeasItem2");
-            this.lblAnlMeasItem2.MaxFontSize = 12F;
-            this.lblAnlMeasItem2.Name = "lblAnlMeasItem2";
-            // 
-            // lblAnlMeasItem1
-            // 
-            this.lblAnlMeasItem1.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlMeasItem1, "lblAnlMeasItem1");
-            this.lblAnlMeasItem1.MaxFontSize = 12F;
-            this.lblAnlMeasItem1.Name = "lblAnlMeasItem1";
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
@@ -764,83 +500,6 @@
             this.tabPage2.Controls.Add(this.lblAnlysisItem1);
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
-            // 
-            // lblAnlUnit0
-            // 
-            this.lblAnlUnit0.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit0, "lblAnlUnit0");
-            this.lblAnlUnit0.MaxFontSize = 10F;
-            this.lblAnlUnit0.Name = "lblAnlUnit0";
-            // 
-            // lblAnlUnit10
-            // 
-            this.lblAnlUnit10.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit10, "lblAnlUnit10");
-            this.lblAnlUnit10.MaxFontSize = 10F;
-            this.lblAnlUnit10.Name = "lblAnlUnit10";
-            // 
-            // lblAnlUnit9
-            // 
-            this.lblAnlUnit9.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit9, "lblAnlUnit9");
-            this.lblAnlUnit9.MaxFontSize = 10F;
-            this.lblAnlUnit9.Name = "lblAnlUnit9";
-            // 
-            // lblAnlUnit8
-            // 
-            this.lblAnlUnit8.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit8, "lblAnlUnit8");
-            this.lblAnlUnit8.MaxFontSize = 10F;
-            this.lblAnlUnit8.Name = "lblAnlUnit8";
-            // 
-            // lblAnlUnit7
-            // 
-            this.lblAnlUnit7.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit7, "lblAnlUnit7");
-            this.lblAnlUnit7.MaxFontSize = 10F;
-            this.lblAnlUnit7.Name = "lblAnlUnit7";
-            // 
-            // lblAnlUnit6
-            // 
-            this.lblAnlUnit6.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit6, "lblAnlUnit6");
-            this.lblAnlUnit6.MaxFontSize = 10F;
-            this.lblAnlUnit6.Name = "lblAnlUnit6";
-            // 
-            // lblAnlUnit5
-            // 
-            this.lblAnlUnit5.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit5, "lblAnlUnit5");
-            this.lblAnlUnit5.MaxFontSize = 10F;
-            this.lblAnlUnit5.Name = "lblAnlUnit5";
-            // 
-            // lblAnlUnit4
-            // 
-            this.lblAnlUnit4.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit4, "lblAnlUnit4");
-            this.lblAnlUnit4.MaxFontSize = 10F;
-            this.lblAnlUnit4.Name = "lblAnlUnit4";
-            // 
-            // lblAnlUnit3
-            // 
-            this.lblAnlUnit3.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit3, "lblAnlUnit3");
-            this.lblAnlUnit3.MaxFontSize = 10F;
-            this.lblAnlUnit3.Name = "lblAnlUnit3";
-            // 
-            // lblAnlUnit2
-            // 
-            this.lblAnlUnit2.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit2, "lblAnlUnit2");
-            this.lblAnlUnit2.MaxFontSize = 10F;
-            this.lblAnlUnit2.Name = "lblAnlUnit2";
-            // 
-            // lblAnlUnit1
-            // 
-            this.lblAnlUnit1.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlUnit1, "lblAnlUnit1");
-            this.lblAnlUnit1.MaxFontSize = 10F;
-            this.lblAnlUnit1.Name = "lblAnlUnit1";
             // 
             // lblAnlData0
             // 
@@ -919,83 +578,6 @@
             resources.ApplyResources(this.lblAnlData1, "lblAnlData1");
             this.lblAnlData1.Name = "lblAnlData1";
             // 
-            // lblAnlysisItem0
-            // 
-            this.lblAnlysisItem0.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem0, "lblAnlysisItem0");
-            this.lblAnlysisItem0.MaxFontSize = 12F;
-            this.lblAnlysisItem0.Name = "lblAnlysisItem0";
-            // 
-            // lblAnlysisItem10
-            // 
-            this.lblAnlysisItem10.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem10, "lblAnlysisItem10");
-            this.lblAnlysisItem10.MaxFontSize = 12F;
-            this.lblAnlysisItem10.Name = "lblAnlysisItem10";
-            // 
-            // lblAnlysisItem9
-            // 
-            this.lblAnlysisItem9.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem9, "lblAnlysisItem9");
-            this.lblAnlysisItem9.MaxFontSize = 12F;
-            this.lblAnlysisItem9.Name = "lblAnlysisItem9";
-            // 
-            // lblAnlysisItem8
-            // 
-            this.lblAnlysisItem8.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem8, "lblAnlysisItem8");
-            this.lblAnlysisItem8.MaxFontSize = 12F;
-            this.lblAnlysisItem8.Name = "lblAnlysisItem8";
-            // 
-            // lblAnlysisItem7
-            // 
-            this.lblAnlysisItem7.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem7, "lblAnlysisItem7");
-            this.lblAnlysisItem7.MaxFontSize = 12F;
-            this.lblAnlysisItem7.Name = "lblAnlysisItem7";
-            // 
-            // lblAnlysisItem6
-            // 
-            this.lblAnlysisItem6.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem6, "lblAnlysisItem6");
-            this.lblAnlysisItem6.MaxFontSize = 12F;
-            this.lblAnlysisItem6.Name = "lblAnlysisItem6";
-            // 
-            // lblAnlysisItem5
-            // 
-            this.lblAnlysisItem5.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem5, "lblAnlysisItem5");
-            this.lblAnlysisItem5.MaxFontSize = 12F;
-            this.lblAnlysisItem5.Name = "lblAnlysisItem5";
-            // 
-            // lblAnlysisItem4
-            // 
-            this.lblAnlysisItem4.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem4, "lblAnlysisItem4");
-            this.lblAnlysisItem4.MaxFontSize = 12F;
-            this.lblAnlysisItem4.Name = "lblAnlysisItem4";
-            // 
-            // lblAnlysisItem3
-            // 
-            this.lblAnlysisItem3.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem3, "lblAnlysisItem3");
-            this.lblAnlysisItem3.MaxFontSize = 12F;
-            this.lblAnlysisItem3.Name = "lblAnlysisItem3";
-            // 
-            // lblAnlysisItem2
-            // 
-            this.lblAnlysisItem2.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem2, "lblAnlysisItem2");
-            this.lblAnlysisItem2.MaxFontSize = 12F;
-            this.lblAnlysisItem2.Name = "lblAnlysisItem2";
-            // 
-            // lblAnlysisItem1
-            // 
-            this.lblAnlysisItem1.AutoFontSize = true;
-            resources.ApplyResources(this.lblAnlysisItem1, "lblAnlysisItem1");
-            this.lblAnlysisItem1.MaxFontSize = 12F;
-            this.lblAnlysisItem1.Name = "lblAnlysisItem1";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -1015,6 +597,754 @@
             // 
             resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
+            // 
+            // lblAnlMeasUnit0
+            // 
+            this.lblAnlMeasUnit0.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit0, "lblAnlMeasUnit0");
+            this.lblAnlMeasUnit0.MaxFontSize = 10F;
+            this.lblAnlMeasUnit0.MinFontSize = 4F;
+            this.lblAnlMeasUnit0.Name = "lblAnlMeasUnit0";
+            // 
+            // lblAnlMeasUnit10
+            // 
+            this.lblAnlMeasUnit10.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit10, "lblAnlMeasUnit10");
+            this.lblAnlMeasUnit10.MaxFontSize = 10F;
+            this.lblAnlMeasUnit10.MinFontSize = 4F;
+            this.lblAnlMeasUnit10.Name = "lblAnlMeasUnit10";
+            // 
+            // lblAnlMeasUnit9
+            // 
+            this.lblAnlMeasUnit9.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit9, "lblAnlMeasUnit9");
+            this.lblAnlMeasUnit9.MaxFontSize = 10F;
+            this.lblAnlMeasUnit9.MinFontSize = 4F;
+            this.lblAnlMeasUnit9.Name = "lblAnlMeasUnit9";
+            // 
+            // lblAnlMeasUnit8
+            // 
+            this.lblAnlMeasUnit8.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit8, "lblAnlMeasUnit8");
+            this.lblAnlMeasUnit8.MaxFontSize = 10F;
+            this.lblAnlMeasUnit8.MinFontSize = 4F;
+            this.lblAnlMeasUnit8.Name = "lblAnlMeasUnit8";
+            // 
+            // lblAnlMeasUnit7
+            // 
+            this.lblAnlMeasUnit7.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit7, "lblAnlMeasUnit7");
+            this.lblAnlMeasUnit7.MaxFontSize = 10F;
+            this.lblAnlMeasUnit7.MinFontSize = 4F;
+            this.lblAnlMeasUnit7.Name = "lblAnlMeasUnit7";
+            // 
+            // lblAnlMeasUnit6
+            // 
+            this.lblAnlMeasUnit6.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit6, "lblAnlMeasUnit6");
+            this.lblAnlMeasUnit6.MaxFontSize = 10F;
+            this.lblAnlMeasUnit6.MinFontSize = 4F;
+            this.lblAnlMeasUnit6.Name = "lblAnlMeasUnit6";
+            // 
+            // lblAnlMeasUnit5
+            // 
+            this.lblAnlMeasUnit5.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit5, "lblAnlMeasUnit5");
+            this.lblAnlMeasUnit5.MaxFontSize = 10F;
+            this.lblAnlMeasUnit5.MinFontSize = 4F;
+            this.lblAnlMeasUnit5.Name = "lblAnlMeasUnit5";
+            // 
+            // lblAnlMeasUnit4
+            // 
+            this.lblAnlMeasUnit4.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit4, "lblAnlMeasUnit4");
+            this.lblAnlMeasUnit4.MaxFontSize = 10F;
+            this.lblAnlMeasUnit4.MinFontSize = 4F;
+            this.lblAnlMeasUnit4.Name = "lblAnlMeasUnit4";
+            // 
+            // lblAnlMeasUnit3
+            // 
+            this.lblAnlMeasUnit3.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit3, "lblAnlMeasUnit3");
+            this.lblAnlMeasUnit3.MaxFontSize = 10F;
+            this.lblAnlMeasUnit3.MinFontSize = 4F;
+            this.lblAnlMeasUnit3.Name = "lblAnlMeasUnit3";
+            // 
+            // lblAnlMeasUnit2
+            // 
+            this.lblAnlMeasUnit2.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit2, "lblAnlMeasUnit2");
+            this.lblAnlMeasUnit2.MaxFontSize = 10F;
+            this.lblAnlMeasUnit2.MinFontSize = 4F;
+            this.lblAnlMeasUnit2.Name = "lblAnlMeasUnit2";
+            // 
+            // lblAnlMeasUnit1
+            // 
+            this.lblAnlMeasUnit1.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasUnit1, "lblAnlMeasUnit1");
+            this.lblAnlMeasUnit1.MaxFontSize = 10F;
+            this.lblAnlMeasUnit1.MinFontSize = 4F;
+            this.lblAnlMeasUnit1.Name = "lblAnlMeasUnit1";
+            // 
+            // lblAnlDataMeas_Zero0
+            // 
+            this.lblAnlDataMeas_Zero0.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero0.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero0, "lblAnlDataMeas_Zero0");
+            this.lblAnlDataMeas_Zero0.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero0.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero0.Name = "lblAnlDataMeas_Zero0";
+            // 
+            // lblAnlDataMeas_Zero10
+            // 
+            this.lblAnlDataMeas_Zero10.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero10.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero10, "lblAnlDataMeas_Zero10");
+            this.lblAnlDataMeas_Zero10.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero10.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero10.Name = "lblAnlDataMeas_Zero10";
+            // 
+            // lblAnlDataMeas_Zero9
+            // 
+            this.lblAnlDataMeas_Zero9.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero9.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero9, "lblAnlDataMeas_Zero9");
+            this.lblAnlDataMeas_Zero9.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero9.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero9.Name = "lblAnlDataMeas_Zero9";
+            // 
+            // lblAnlDataMeas_Zero8
+            // 
+            this.lblAnlDataMeas_Zero8.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero8.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero8, "lblAnlDataMeas_Zero8");
+            this.lblAnlDataMeas_Zero8.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero8.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero8.Name = "lblAnlDataMeas_Zero8";
+            // 
+            // lblAnlDataMeas_Zero7
+            // 
+            this.lblAnlDataMeas_Zero7.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero7.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero7, "lblAnlDataMeas_Zero7");
+            this.lblAnlDataMeas_Zero7.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero7.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero7.Name = "lblAnlDataMeas_Zero7";
+            // 
+            // lblAnlDataMeas_Zero6
+            // 
+            this.lblAnlDataMeas_Zero6.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero6.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero6, "lblAnlDataMeas_Zero6");
+            this.lblAnlDataMeas_Zero6.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero6.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero6.Name = "lblAnlDataMeas_Zero6";
+            // 
+            // lblAnlDataMeas_Zero5
+            // 
+            this.lblAnlDataMeas_Zero5.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero5.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero5, "lblAnlDataMeas_Zero5");
+            this.lblAnlDataMeas_Zero5.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero5.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero5.Name = "lblAnlDataMeas_Zero5";
+            // 
+            // lblAnlDataMeas_Zero4
+            // 
+            this.lblAnlDataMeas_Zero4.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero4.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero4, "lblAnlDataMeas_Zero4");
+            this.lblAnlDataMeas_Zero4.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero4.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero4.Name = "lblAnlDataMeas_Zero4";
+            // 
+            // lblAnlDataMeas_Zero3
+            // 
+            this.lblAnlDataMeas_Zero3.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero3.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero3, "lblAnlDataMeas_Zero3");
+            this.lblAnlDataMeas_Zero3.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero3.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero3.Name = "lblAnlDataMeas_Zero3";
+            // 
+            // lblAnlDataMeas_Zero2
+            // 
+            this.lblAnlDataMeas_Zero2.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero2.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero2, "lblAnlDataMeas_Zero2");
+            this.lblAnlDataMeas_Zero2.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero2.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero2.Name = "lblAnlDataMeas_Zero2";
+            // 
+            // lblAnlDataMeas_Zero1
+            // 
+            this.lblAnlDataMeas_Zero1.AutoFontSize = true;
+            this.lblAnlDataMeas_Zero1.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnlDataMeas_Zero1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas_Zero1, "lblAnlDataMeas_Zero1");
+            this.lblAnlDataMeas_Zero1.MaxFontSize = 10F;
+            this.lblAnlDataMeas_Zero1.MinFontSize = 4F;
+            this.lblAnlDataMeas_Zero1.Name = "lblAnlDataMeas_Zero1";
+            // 
+            // lblAnlMeasItem0
+            // 
+            this.lblAnlMeasItem0.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem0, "lblAnlMeasItem0");
+            this.lblAnlMeasItem0.MaxFontSize = 12F;
+            this.lblAnlMeasItem0.MinFontSize = 0F;
+            this.lblAnlMeasItem0.Name = "lblAnlMeasItem0";
+            // 
+            // lblAnlMeasItem10
+            // 
+            this.lblAnlMeasItem10.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem10, "lblAnlMeasItem10");
+            this.lblAnlMeasItem10.MaxFontSize = 12F;
+            this.lblAnlMeasItem10.MinFontSize = 0F;
+            this.lblAnlMeasItem10.Name = "lblAnlMeasItem10";
+            // 
+            // lblAnlMeasItem9
+            // 
+            this.lblAnlMeasItem9.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem9, "lblAnlMeasItem9");
+            this.lblAnlMeasItem9.MaxFontSize = 12F;
+            this.lblAnlMeasItem9.MinFontSize = 0F;
+            this.lblAnlMeasItem9.Name = "lblAnlMeasItem9";
+            // 
+            // lblAnlMeasItem8
+            // 
+            this.lblAnlMeasItem8.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem8, "lblAnlMeasItem8");
+            this.lblAnlMeasItem8.MaxFontSize = 12F;
+            this.lblAnlMeasItem8.MinFontSize = 0F;
+            this.lblAnlMeasItem8.Name = "lblAnlMeasItem8";
+            // 
+            // lblAnlMeasItem7
+            // 
+            this.lblAnlMeasItem7.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem7, "lblAnlMeasItem7");
+            this.lblAnlMeasItem7.MaxFontSize = 12F;
+            this.lblAnlMeasItem7.MinFontSize = 0F;
+            this.lblAnlMeasItem7.Name = "lblAnlMeasItem7";
+            // 
+            // lblAnlMeasItem6
+            // 
+            this.lblAnlMeasItem6.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem6, "lblAnlMeasItem6");
+            this.lblAnlMeasItem6.MaxFontSize = 12F;
+            this.lblAnlMeasItem6.MinFontSize = 0F;
+            this.lblAnlMeasItem6.Name = "lblAnlMeasItem6";
+            // 
+            // lblAnlMeasItem5
+            // 
+            this.lblAnlMeasItem5.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem5, "lblAnlMeasItem5");
+            this.lblAnlMeasItem5.MaxFontSize = 12F;
+            this.lblAnlMeasItem5.MinFontSize = 0F;
+            this.lblAnlMeasItem5.Name = "lblAnlMeasItem5";
+            // 
+            // lblAnlMeasItem4
+            // 
+            this.lblAnlMeasItem4.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem4, "lblAnlMeasItem4");
+            this.lblAnlMeasItem4.MaxFontSize = 12F;
+            this.lblAnlMeasItem4.MinFontSize = 0F;
+            this.lblAnlMeasItem4.Name = "lblAnlMeasItem4";
+            // 
+            // lblAnlMeasItem3
+            // 
+            this.lblAnlMeasItem3.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem3, "lblAnlMeasItem3");
+            this.lblAnlMeasItem3.MaxFontSize = 12F;
+            this.lblAnlMeasItem3.MinFontSize = 0F;
+            this.lblAnlMeasItem3.Name = "lblAnlMeasItem3";
+            // 
+            // lblAnlMeasItem2
+            // 
+            this.lblAnlMeasItem2.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem2, "lblAnlMeasItem2");
+            this.lblAnlMeasItem2.MaxFontSize = 12F;
+            this.lblAnlMeasItem2.MinFontSize = 0F;
+            this.lblAnlMeasItem2.Name = "lblAnlMeasItem2";
+            // 
+            // lblAnlMeasItem1
+            // 
+            this.lblAnlMeasItem1.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlMeasItem1, "lblAnlMeasItem1");
+            this.lblAnlMeasItem1.MaxFontSize = 12F;
+            this.lblAnlMeasItem1.MinFontSize = 0F;
+            this.lblAnlMeasItem1.Name = "lblAnlMeasItem1";
+            // 
+            // lblAnlUnit0
+            // 
+            this.lblAnlUnit0.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit0, "lblAnlUnit0");
+            this.lblAnlUnit0.MaxFontSize = 10F;
+            this.lblAnlUnit0.MinFontSize = 4F;
+            this.lblAnlUnit0.Name = "lblAnlUnit0";
+            // 
+            // lblAnlUnit10
+            // 
+            this.lblAnlUnit10.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit10, "lblAnlUnit10");
+            this.lblAnlUnit10.MaxFontSize = 10F;
+            this.lblAnlUnit10.MinFontSize = 4F;
+            this.lblAnlUnit10.Name = "lblAnlUnit10";
+            // 
+            // lblAnlUnit9
+            // 
+            this.lblAnlUnit9.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit9, "lblAnlUnit9");
+            this.lblAnlUnit9.MaxFontSize = 10F;
+            this.lblAnlUnit9.MinFontSize = 4F;
+            this.lblAnlUnit9.Name = "lblAnlUnit9";
+            // 
+            // lblAnlUnit8
+            // 
+            this.lblAnlUnit8.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit8, "lblAnlUnit8");
+            this.lblAnlUnit8.MaxFontSize = 10F;
+            this.lblAnlUnit8.MinFontSize = 4F;
+            this.lblAnlUnit8.Name = "lblAnlUnit8";
+            // 
+            // lblAnlUnit7
+            // 
+            this.lblAnlUnit7.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit7, "lblAnlUnit7");
+            this.lblAnlUnit7.MaxFontSize = 10F;
+            this.lblAnlUnit7.MinFontSize = 4F;
+            this.lblAnlUnit7.Name = "lblAnlUnit7";
+            // 
+            // lblAnlUnit6
+            // 
+            this.lblAnlUnit6.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit6, "lblAnlUnit6");
+            this.lblAnlUnit6.MaxFontSize = 10F;
+            this.lblAnlUnit6.MinFontSize = 4F;
+            this.lblAnlUnit6.Name = "lblAnlUnit6";
+            // 
+            // lblAnlUnit5
+            // 
+            this.lblAnlUnit5.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit5, "lblAnlUnit5");
+            this.lblAnlUnit5.MaxFontSize = 10F;
+            this.lblAnlUnit5.MinFontSize = 4F;
+            this.lblAnlUnit5.Name = "lblAnlUnit5";
+            // 
+            // lblAnlUnit4
+            // 
+            this.lblAnlUnit4.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit4, "lblAnlUnit4");
+            this.lblAnlUnit4.MaxFontSize = 10F;
+            this.lblAnlUnit4.MinFontSize = 4F;
+            this.lblAnlUnit4.Name = "lblAnlUnit4";
+            // 
+            // lblAnlUnit3
+            // 
+            this.lblAnlUnit3.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit3, "lblAnlUnit3");
+            this.lblAnlUnit3.MaxFontSize = 10F;
+            this.lblAnlUnit3.MinFontSize = 4F;
+            this.lblAnlUnit3.Name = "lblAnlUnit3";
+            // 
+            // lblAnlUnit2
+            // 
+            this.lblAnlUnit2.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit2, "lblAnlUnit2");
+            this.lblAnlUnit2.MaxFontSize = 10F;
+            this.lblAnlUnit2.MinFontSize = 4F;
+            this.lblAnlUnit2.Name = "lblAnlUnit2";
+            // 
+            // lblAnlUnit1
+            // 
+            this.lblAnlUnit1.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlUnit1, "lblAnlUnit1");
+            this.lblAnlUnit1.MaxFontSize = 10F;
+            this.lblAnlUnit1.MinFontSize = 4F;
+            this.lblAnlUnit1.Name = "lblAnlUnit1";
+            // 
+            // lblAnlysisItem0
+            // 
+            this.lblAnlysisItem0.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem0, "lblAnlysisItem0");
+            this.lblAnlysisItem0.MaxFontSize = 12F;
+            this.lblAnlysisItem0.MinFontSize = 0F;
+            this.lblAnlysisItem0.Name = "lblAnlysisItem0";
+            // 
+            // lblAnlysisItem10
+            // 
+            this.lblAnlysisItem10.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem10, "lblAnlysisItem10");
+            this.lblAnlysisItem10.MaxFontSize = 12F;
+            this.lblAnlysisItem10.MinFontSize = 0F;
+            this.lblAnlysisItem10.Name = "lblAnlysisItem10";
+            // 
+            // lblAnlysisItem9
+            // 
+            this.lblAnlysisItem9.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem9, "lblAnlysisItem9");
+            this.lblAnlysisItem9.MaxFontSize = 12F;
+            this.lblAnlysisItem9.MinFontSize = 0F;
+            this.lblAnlysisItem9.Name = "lblAnlysisItem9";
+            // 
+            // lblAnlysisItem8
+            // 
+            this.lblAnlysisItem8.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem8, "lblAnlysisItem8");
+            this.lblAnlysisItem8.MaxFontSize = 12F;
+            this.lblAnlysisItem8.MinFontSize = 0F;
+            this.lblAnlysisItem8.Name = "lblAnlysisItem8";
+            // 
+            // lblAnlysisItem7
+            // 
+            this.lblAnlysisItem7.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem7, "lblAnlysisItem7");
+            this.lblAnlysisItem7.MaxFontSize = 12F;
+            this.lblAnlysisItem7.MinFontSize = 0F;
+            this.lblAnlysisItem7.Name = "lblAnlysisItem7";
+            // 
+            // lblAnlysisItem6
+            // 
+            this.lblAnlysisItem6.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem6, "lblAnlysisItem6");
+            this.lblAnlysisItem6.MaxFontSize = 12F;
+            this.lblAnlysisItem6.MinFontSize = 0F;
+            this.lblAnlysisItem6.Name = "lblAnlysisItem6";
+            // 
+            // lblAnlysisItem5
+            // 
+            this.lblAnlysisItem5.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem5, "lblAnlysisItem5");
+            this.lblAnlysisItem5.MaxFontSize = 12F;
+            this.lblAnlysisItem5.MinFontSize = 0F;
+            this.lblAnlysisItem5.Name = "lblAnlysisItem5";
+            // 
+            // lblAnlysisItem4
+            // 
+            this.lblAnlysisItem4.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem4, "lblAnlysisItem4");
+            this.lblAnlysisItem4.MaxFontSize = 12F;
+            this.lblAnlysisItem4.MinFontSize = 0F;
+            this.lblAnlysisItem4.Name = "lblAnlysisItem4";
+            // 
+            // lblAnlysisItem3
+            // 
+            this.lblAnlysisItem3.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem3, "lblAnlysisItem3");
+            this.lblAnlysisItem3.MaxFontSize = 12F;
+            this.lblAnlysisItem3.MinFontSize = 0F;
+            this.lblAnlysisItem3.Name = "lblAnlysisItem3";
+            // 
+            // lblAnlysisItem2
+            // 
+            this.lblAnlysisItem2.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem2, "lblAnlysisItem2");
+            this.lblAnlysisItem2.MaxFontSize = 12F;
+            this.lblAnlysisItem2.MinFontSize = 0F;
+            this.lblAnlysisItem2.Name = "lblAnlysisItem2";
+            // 
+            // lblAnlysisItem1
+            // 
+            this.lblAnlysisItem1.AutoFontSize = true;
+            resources.ApplyResources(this.lblAnlysisItem1, "lblAnlysisItem1");
+            this.lblAnlysisItem1.MaxFontSize = 12F;
+            this.lblAnlysisItem1.MinFontSize = 0F;
+            this.lblAnlysisItem1.Name = "lblAnlysisItem1";
+            // 
+            // lblUnit0
+            // 
+            this.lblUnit0.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit0, "lblUnit0");
+            this.lblUnit0.MaxFontSize = 10F;
+            this.lblUnit0.MinFontSize = 4F;
+            this.lblUnit0.Name = "lblUnit0";
+            // 
+            // lblUnit10
+            // 
+            this.lblUnit10.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit10, "lblUnit10");
+            this.lblUnit10.MaxFontSize = 10F;
+            this.lblUnit10.MinFontSize = 4F;
+            this.lblUnit10.Name = "lblUnit10";
+            // 
+            // lblUnit9
+            // 
+            this.lblUnit9.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit9, "lblUnit9");
+            this.lblUnit9.MaxFontSize = 10F;
+            this.lblUnit9.MinFontSize = 4F;
+            this.lblUnit9.Name = "lblUnit9";
+            // 
+            // lblUnit8
+            // 
+            this.lblUnit8.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit8, "lblUnit8");
+            this.lblUnit8.MaxFontSize = 10F;
+            this.lblUnit8.MinFontSize = 4F;
+            this.lblUnit8.Name = "lblUnit8";
+            // 
+            // lblUnit7
+            // 
+            this.lblUnit7.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit7, "lblUnit7");
+            this.lblUnit7.MaxFontSize = 10F;
+            this.lblUnit7.MinFontSize = 4F;
+            this.lblUnit7.Name = "lblUnit7";
+            // 
+            // lblUnit6
+            // 
+            this.lblUnit6.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit6, "lblUnit6");
+            this.lblUnit6.MaxFontSize = 10F;
+            this.lblUnit6.MinFontSize = 4F;
+            this.lblUnit6.Name = "lblUnit6";
+            // 
+            // lblUnit5
+            // 
+            this.lblUnit5.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit5, "lblUnit5");
+            this.lblUnit5.MaxFontSize = 10F;
+            this.lblUnit5.MinFontSize = 4F;
+            this.lblUnit5.Name = "lblUnit5";
+            // 
+            // lblUnit4
+            // 
+            this.lblUnit4.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit4, "lblUnit4");
+            this.lblUnit4.MaxFontSize = 10F;
+            this.lblUnit4.MinFontSize = 4F;
+            this.lblUnit4.Name = "lblUnit4";
+            // 
+            // lblUnit3
+            // 
+            this.lblUnit3.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit3, "lblUnit3");
+            this.lblUnit3.MaxFontSize = 10F;
+            this.lblUnit3.MinFontSize = 4F;
+            this.lblUnit3.Name = "lblUnit3";
+            // 
+            // lblUnit2
+            // 
+            this.lblUnit2.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit2, "lblUnit2");
+            this.lblUnit2.MaxFontSize = 10F;
+            this.lblUnit2.MinFontSize = 4F;
+            this.lblUnit2.Name = "lblUnit2";
+            // 
+            // lblUnit1
+            // 
+            this.lblUnit1.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit1, "lblUnit1");
+            this.lblUnit1.MaxFontSize = 10F;
+            this.lblUnit1.MinFontSize = 4F;
+            this.lblUnit1.Name = "lblUnit1";
+            // 
+            // lblDataValue_Zero0
+            // 
+            this.lblDataValue_Zero0.AutoFontSize = true;
+            this.lblDataValue_Zero0.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero0, "lblDataValue_Zero0");
+            this.lblDataValue_Zero0.MaxFontSize = 10F;
+            this.lblDataValue_Zero0.MinFontSize = 4F;
+            this.lblDataValue_Zero0.Name = "lblDataValue_Zero0";
+            // 
+            // lblDataValue_Zero10
+            // 
+            this.lblDataValue_Zero10.AutoFontSize = true;
+            this.lblDataValue_Zero10.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero10, "lblDataValue_Zero10");
+            this.lblDataValue_Zero10.MaxFontSize = 10F;
+            this.lblDataValue_Zero10.MinFontSize = 4F;
+            this.lblDataValue_Zero10.Name = "lblDataValue_Zero10";
+            // 
+            // lblDataValue_Zero9
+            // 
+            this.lblDataValue_Zero9.AutoFontSize = true;
+            this.lblDataValue_Zero9.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero9, "lblDataValue_Zero9");
+            this.lblDataValue_Zero9.MaxFontSize = 0F;
+            this.lblDataValue_Zero9.MinFontSize = 0F;
+            this.lblDataValue_Zero9.Name = "lblDataValue_Zero9";
+            // 
+            // lblDataValue_Zero8
+            // 
+            this.lblDataValue_Zero8.AutoFontSize = true;
+            this.lblDataValue_Zero8.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero8, "lblDataValue_Zero8");
+            this.lblDataValue_Zero8.MaxFontSize = 0F;
+            this.lblDataValue_Zero8.MinFontSize = 0F;
+            this.lblDataValue_Zero8.Name = "lblDataValue_Zero8";
+            // 
+            // lblDataValue_Zero7
+            // 
+            this.lblDataValue_Zero7.AutoFontSize = true;
+            this.lblDataValue_Zero7.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero7, "lblDataValue_Zero7");
+            this.lblDataValue_Zero7.MaxFontSize = 0F;
+            this.lblDataValue_Zero7.MinFontSize = 0F;
+            this.lblDataValue_Zero7.Name = "lblDataValue_Zero7";
+            // 
+            // lblDataValue_Zero6
+            // 
+            this.lblDataValue_Zero6.AutoFontSize = true;
+            this.lblDataValue_Zero6.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero6, "lblDataValue_Zero6");
+            this.lblDataValue_Zero6.MaxFontSize = 0F;
+            this.lblDataValue_Zero6.MinFontSize = 0F;
+            this.lblDataValue_Zero6.Name = "lblDataValue_Zero6";
+            // 
+            // lblDataValue_Zero5
+            // 
+            this.lblDataValue_Zero5.AutoFontSize = true;
+            this.lblDataValue_Zero5.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero5, "lblDataValue_Zero5");
+            this.lblDataValue_Zero5.MaxFontSize = 10F;
+            this.lblDataValue_Zero5.MinFontSize = 4F;
+            this.lblDataValue_Zero5.Name = "lblDataValue_Zero5";
+            // 
+            // lblDataValue_Zero4
+            // 
+            this.lblDataValue_Zero4.AutoFontSize = true;
+            this.lblDataValue_Zero4.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero4, "lblDataValue_Zero4");
+            this.lblDataValue_Zero4.MaxFontSize = 10F;
+            this.lblDataValue_Zero4.MinFontSize = 4F;
+            this.lblDataValue_Zero4.Name = "lblDataValue_Zero4";
+            // 
+            // lblDataValue_Zero3
+            // 
+            this.lblDataValue_Zero3.AutoFontSize = true;
+            this.lblDataValue_Zero3.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero3, "lblDataValue_Zero3");
+            this.lblDataValue_Zero3.MaxFontSize = 10F;
+            this.lblDataValue_Zero3.MinFontSize = 4F;
+            this.lblDataValue_Zero3.Name = "lblDataValue_Zero3";
+            // 
+            // lblDataValue_Zero2
+            // 
+            this.lblDataValue_Zero2.AutoFontSize = true;
+            this.lblDataValue_Zero2.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero2, "lblDataValue_Zero2");
+            this.lblDataValue_Zero2.MaxFontSize = 10F;
+            this.lblDataValue_Zero2.MinFontSize = 4F;
+            this.lblDataValue_Zero2.Name = "lblDataValue_Zero2";
+            // 
+            // lblDataValue_Zero1
+            // 
+            this.lblDataValue_Zero1.AutoFontSize = true;
+            this.lblDataValue_Zero1.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero1, "lblDataValue_Zero1");
+            this.lblDataValue_Zero1.MaxFontSize = 10F;
+            this.lblDataValue_Zero1.MinFontSize = 4F;
+            this.lblDataValue_Zero1.Name = "lblDataValue_Zero1";
+            // 
+            // lblItem0
+            // 
+            this.lblItem0.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem0, "lblItem0");
+            this.lblItem0.MaxFontSize = 12F;
+            this.lblItem0.MinFontSize = 6F;
+            this.lblItem0.Name = "lblItem0";
+            // 
+            // lblItem10
+            // 
+            this.lblItem10.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem10, "lblItem10");
+            this.lblItem10.MaxFontSize = 12F;
+            this.lblItem10.MinFontSize = 6F;
+            this.lblItem10.Name = "lblItem10";
+            // 
+            // lblItem9
+            // 
+            this.lblItem9.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem9, "lblItem9");
+            this.lblItem9.MaxFontSize = 12F;
+            this.lblItem9.MinFontSize = 6F;
+            this.lblItem9.Name = "lblItem9";
+            // 
+            // lblItem8
+            // 
+            this.lblItem8.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem8, "lblItem8");
+            this.lblItem8.MaxFontSize = 12F;
+            this.lblItem8.MinFontSize = 6F;
+            this.lblItem8.Name = "lblItem8";
+            // 
+            // lblItem7
+            // 
+            this.lblItem7.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem7, "lblItem7");
+            this.lblItem7.MaxFontSize = 12F;
+            this.lblItem7.MinFontSize = 6F;
+            this.lblItem7.Name = "lblItem7";
+            // 
+            // lblItem6
+            // 
+            this.lblItem6.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem6, "lblItem6");
+            this.lblItem6.MaxFontSize = 12F;
+            this.lblItem6.MinFontSize = 6F;
+            this.lblItem6.Name = "lblItem6";
+            // 
+            // lblItem5
+            // 
+            this.lblItem5.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem5, "lblItem5");
+            this.lblItem5.MaxFontSize = 12F;
+            this.lblItem5.MinFontSize = 6F;
+            this.lblItem5.Name = "lblItem5";
+            // 
+            // lblItem4
+            // 
+            this.lblItem4.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem4, "lblItem4");
+            this.lblItem4.MaxFontSize = 12F;
+            this.lblItem4.MinFontSize = 6F;
+            this.lblItem4.Name = "lblItem4";
+            // 
+            // lblItem3
+            // 
+            this.lblItem3.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem3, "lblItem3");
+            this.lblItem3.MaxFontSize = 12F;
+            this.lblItem3.MinFontSize = 6F;
+            this.lblItem3.Name = "lblItem3";
+            // 
+            // lblItem2
+            // 
+            this.lblItem2.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem2, "lblItem2");
+            this.lblItem2.MaxFontSize = 12F;
+            this.lblItem2.MinFontSize = 6F;
+            this.lblItem2.Name = "lblItem2";
+            // 
+            // lblItem1
+            // 
+            this.lblItem1.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem1, "lblItem1");
+            this.lblItem1.MaxFontSize = 12F;
+            this.lblItem1.MinFontSize = 6F;
+            this.lblItem1.Name = "lblItem1";
             // 
             // frmTagValueList
             // 
@@ -1100,6 +1430,7 @@
         private System.Windows.Forms.Label lblAnlDataMeas3;
         private System.Windows.Forms.Label lblAnlDataMeas2;
         private System.Windows.Forms.Label lblAnlDataMeas1;
+
         private Controls.AutoFontSizeLabel lblAnlMeasItem0;
         private Controls.AutoFontSizeLabel lblAnlMeasItem10;
         private Controls.AutoFontSizeLabel lblAnlMeasItem9;
@@ -1148,6 +1479,28 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTabClose;
         private System.Windows.Forms.Label label12;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero0;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero10;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero9;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero8;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero7;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero6;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero5;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero4;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero3;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero2;
+        private Controls.AutoFontSizeLabel lblDataValue_Zero1;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero0;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero10;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero9;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero8;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero7;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero6;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero5;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero4;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero3;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero2;
+        private Controls.AutoFontSizeLabel lblAnlDataMeas_Zero1;
 
     }
 }

@@ -34,6 +34,10 @@ namespace RM_3000.Forms.Parts
         /// </summary>
         private Label[] dataValueLabels;
         /// <summary>
+        /// ゼロ点ラベルリスト
+        /// </summary>
+        private Label[] dataValueLabels_Zero;
+        /// <summary>
         /// タグ設定
         /// </summary>
         private DataTagSetting tagSetting = null;
@@ -166,6 +170,14 @@ namespace RM_3000.Forms.Parts
                     if (t == typeof(Value_Standard))
                     {
                         this.dataValueLabels[index].Text = ((Value_Standard)chData.DataValues).Value.ToString(tagPoint[chData.Position]);
+
+                        //Mode1の場合、ゼロ点を表示
+                        if (this.measSetting.Mode == (int)ModeType.MODE1)
+                        {
+                            if(relationSetting.RelationList[chData.Position].TagNo_1 != -1)
+                                this.dataValueLabels_Zero[index].Text =                               
+                                    tagSetting.GetTag(relationSetting.RelationList[chData.Position].TagNo_1).StaticZero.ToString(tagPoint[chData.Position]);
+                        }
                     }
                     else if (t == typeof(Value_MaxMin))
                     {
@@ -182,6 +194,16 @@ namespace RM_3000.Forms.Parts
 
                                     val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
                                 }
+
+                                //Mode1の場合、ゼロ点を表示
+                                if (this.measSetting.Mode == (int)ModeType.MODE1)
+                                {
+                                     Label val2_Lable_Zero = (Label)pnlMain.Controls.Find(this.dataValueLabels_Zero[index].Name + "-2", false)[0];
+
+                                     val2_Lable_Zero.Text =
+                                        tagSetting.GetTag(relationSetting.RelationList[chData.Position].TagNo_2).StaticZero.ToString(tagPoint[chData.Position]);
+                                }
+
                             }
                             else
                             {
@@ -190,6 +212,15 @@ namespace RM_3000.Forms.Parts
                                     Label val2_Lable = (Label)tabPage1.Controls.Find(this.dataValueLabels[index].Name + "-2", false)[0];
 
                                     val2_Lable.Text = ((Value_MaxMin)chData.DataValues).MinValue.ToString(tagPoint[chData.Position]);
+                                }
+
+                                //Mode1の場合、ゼロ点を表示
+                                if (this.measSetting.Mode == (int)ModeType.MODE1)
+                                {
+                                    Label val2_Lable_Zero = (Label)tabPage1.Controls.Find(this.dataValueLabels_Zero[index].Name + "-2", false)[0];
+
+                                    val2_Lable_Zero.Text =
+                                       tagSetting.GetTag(relationSetting.RelationList[chData.Position].TagNo_2).StaticZero.ToString(tagPoint[chData.Position]);
                                 }
                             }
                         }
@@ -396,12 +427,14 @@ namespace RM_3000.Forms.Parts
                 this.tagLabels = new Label[] { lblItem0, lblItem1, lblItem2, lblItem3, lblItem4, lblItem5, lblItem6, lblItem7, lblItem8, lblItem9, lblItem10 };
                 this.unitLabels = new Label[] { lblUnit0, lblUnit1, lblUnit2, lblUnit3, lblUnit4, lblUnit5, lblUnit6, lblUnit7, lblUnit8, lblUnit9, lblUnit10 };
                 this.dataValueLabels = new Label[] { lblDataValue0, lblDataValue1, lblDataValue2, lblDataValue3, lblDataValue4, lblDataValue5, lblDataValue6, lblDataValue7, lblDataValue8, lblDataValue9, lblDataValue10 };
+                this.dataValueLabels_Zero = new Label[] { lblDataValue_Zero0, lblDataValue_Zero1, lblDataValue_Zero2, lblDataValue_Zero3, lblDataValue_Zero4, lblDataValue_Zero5, lblDataValue_Zero6, lblDataValue_Zero7, lblDataValue_Zero8, lblDataValue_Zero9, lblDataValue_Zero10 };
             }
             else
             {
                 this.tagLabels = new Label[] { lblAnlMeasItem0, lblAnlMeasItem1, lblAnlMeasItem2, lblAnlMeasItem3, lblAnlMeasItem4, lblAnlMeasItem5, lblAnlMeasItem6, lblAnlMeasItem7, lblAnlMeasItem8, lblAnlMeasItem9, lblAnlMeasItem10 };
                 this.unitLabels = new Label[] { lblAnlMeasUnit0, lblAnlMeasUnit1, lblAnlMeasUnit2, lblAnlMeasUnit3, lblAnlMeasUnit4, lblAnlMeasUnit5, lblAnlMeasUnit6, lblAnlMeasUnit7, lblAnlMeasUnit8, lblAnlMeasUnit9, lblAnlMeasUnit10 };
                 this.dataValueLabels = new Label[] { lblAnlDataMeas0, lblAnlDataMeas1, lblAnlDataMeas2, lblAnlDataMeas3, lblAnlDataMeas4, lblAnlDataMeas5, lblAnlDataMeas6, lblAnlDataMeas7, lblAnlDataMeas8, lblAnlDataMeas9, lblAnlDataMeas10 };
+                this.dataValueLabels_Zero = new Label[] { lblAnlDataMeas_Zero0, lblAnlDataMeas_Zero1, lblAnlDataMeas_Zero2, lblAnlDataMeas_Zero3, lblAnlDataMeas_Zero4, lblAnlDataMeas_Zero5, lblAnlDataMeas_Zero6, lblAnlDataMeas_Zero7, lblAnlDataMeas_Zero8, lblAnlDataMeas_Zero9, lblAnlDataMeas_Zero10 };                
                 pnlAnalysis.Left = pnlMain.Left;
                 pnlAnalysis.Top = pnlMain.Top;
                 pnlMain.Visible = false;
@@ -418,7 +451,7 @@ namespace RM_3000.Forms.Parts
             if (this.isMeasure)
             {
                 // 測定中
-                this.tagSetting = SystemSetting.DataTagSetting;
+                this.tagSetting = RealTimeData.DataTagSetting;
                 this.measSetting = SystemSetting.MeasureSetting;
                 this.chSetting = SystemSetting.ChannelsSetting;
                 this.relationSetting = SystemSetting.RelationSetting;
@@ -437,15 +470,20 @@ namespace RM_3000.Forms.Parts
             {
                 var tagLabelList = new List<Label>();
                 var dataValueLabelList = new List<Label>();
+                var dataValueLabelZeroList = new List<Label>();
                 var unitLabelList = new List<Label>();
 
                 //回転数の測定項目を取得
                 this.tagLabels[0].Text = (this.relationSetting.RelationList[0].TagNo_1 > 0) ? this.tagSetting.GetTagNameFromTagNo(this.relationSetting.RelationList[0].TagNo_1) : string.Empty;
                 this.unitLabels[0].Text = (this.relationSetting.RelationList[0].TagNo_1 > 0) ? this.tagSetting.GetUnitFromTagNo(this.relationSetting.RelationList[0].TagNo_1) : string.Empty;
 
+                //回転数はゼロ点無
+                this.dataValueLabels_Zero[0].Visible = false;
+
                 // 回転数は追加しておく
                 tagLabelList.Add(this.tagLabels[0]);
                 dataValueLabelList.Add(this.dataValueLabels[0]);
+                dataValueLabelZeroList.Add(this.dataValueLabels_Zero[0]);
                 unitLabelList.Add(this.unitLabels[0]);
                 var heightMargin = 5;
 
@@ -460,113 +498,153 @@ namespace RM_3000.Forms.Parts
                     {
                         this.tagLabels[i + 1].Top = tagLabelList.Last().Top + tagLabelList.Last().Height + heightMargin;
                         this.dataValueLabels[i + 1].Top = dataValueLabelList.Last().Top + dataValueLabelList.Last().Height + heightMargin;
+                        this.dataValueLabels_Zero[i + 1].Top = this.dataValueLabels[i + 1].Top;
                         this.unitLabels[i + 1].Top = unitLabelList.Last().Top + unitLabelList.Last().Height + heightMargin;
                     }
 
                     tagLabelList.Add(this.tagLabels[i + 1]);
                     dataValueLabelList.Add(this.dataValueLabels[i + 1]);
+                    dataValueLabelZeroList.Add(this.dataValueLabels_Zero[i + 1]);
                     unitLabelList.Add(this.unitLabels[i + 1]);
 
                     // 測定項目No2の有無
-                    if (this.measSetting.Mode == 1 
-                        && this.chSetting.ChannelSettingList[i].ChKind == ChannelKindType.R 
-                        && this.chSetting.ChannelSettingList[i].Mode1_Trigger == Mode1TriggerType.MAIN)
+                    if (this.measSetting.Mode == 1)
                     {
-                        var tag = new Controls.AutoFontSizeLabel()
+                        //ゼロ設定を表示するため調整
+                        this.dataValueLabels[i + 1].Width -= this.dataValueLabels_Zero[i + 1].Width + 3;
+                        this.dataValueLabels[i + 1].Left += this.dataValueLabels_Zero[i + 1].Width + 3;
+
+                        // センサがRでかつ基準設定ならば
+                        if (this.chSetting.ChannelSettingList[i].ChKind == ChannelKindType.R
+                        && this.chSetting.ChannelSettingList[i].Mode1_Trigger == Mode1TriggerType.MAIN)
                         {
-                            //Name = "lblItem" + (i + 1).ToString() + "-2"
-                            Name = tagLabelList.Last().Name + "-2"
-                            ,
-                            Top = tagLabelList.Last().Top + tagLabelList.Last().Height + heightMargin
-                            ,
-                            Left = this.tagLabels[0].Left
-                            ,
-                            Width = this.tagLabels[0].Width
-                            ,
-                            Height = this.tagLabels[0].Height
-                            ,
-                            TextAlign = this.tagLabels[0].TextAlign
-                            ,
-                            Font = new Font(this.tagLabels[i + 1].Font, this.tagLabels[i + 1].Font.Style)
-                            ,
-                            AutoFontSize = ((Controls.AutoFontSizeLabel)this.tagLabels[i + 1]).AutoFontSize
-                            ,
-                            MaxFontSize = ((Controls.AutoFontSizeLabel)this.tagLabels[i + 1]).MaxFontSize
-                        };
-                        tag.Text = (this.relationSetting.RelationList[i + 1].TagNo_2 > 0) ? this.tagSetting.GetTagNameFromTagNo(this.relationSetting.RelationList[i + 1].TagNo_2) : string.Empty;
+                            var tag = new Controls.AutoFontSizeLabel()
+                            {
+                                //Name = "lblItem" + (i + 1).ToString() + "-2"
+                                Name = tagLabelList.Last().Name + "-2"
+                                ,
+                                Top = tagLabelList.Last().Top + tagLabelList.Last().Height + heightMargin
+                                ,
+                                Left = this.tagLabels[0].Left
+                                ,
+                                Width = this.tagLabels[0].Width
+                                ,
+                                Height = this.tagLabels[0].Height
+                                ,
+                                TextAlign = this.tagLabels[0].TextAlign
+                                ,
+                                Font = new Font(this.tagLabels[i + 1].Font, this.tagLabels[i + 1].Font.Style)
+                                ,
+                                AutoFontSize = ((Controls.AutoFontSizeLabel)this.tagLabels[i + 1]).AutoFontSize
+                                ,
+                                MaxFontSize = ((Controls.AutoFontSizeLabel)this.tagLabels[i + 1]).MaxFontSize
+                            };
+                            tag.Text = (this.relationSetting.RelationList[i + 1].TagNo_2 > 0) ? this.tagSetting.GetTagNameFromTagNo(this.relationSetting.RelationList[i + 1].TagNo_2) : string.Empty;
 
-                        if (isMeasure)
-                            pnlMain.Controls.Add(tag);
-                        else
-                            tabPage1.Controls.Add(tag);
+                            if (isMeasure)
+                                pnlMain.Controls.Add(tag);
+                            else
+                                tabPage1.Controls.Add(tag);
 
-                        tagLabelList.Add(tag);
+                            tagLabelList.Add(tag);
 
-                        var val = new Label()
-                        {
-                            //Name = "lblDataValue" + (i + 1).ToString() + "-2"
-                            Name = dataValueLabelList.Last().Name + "-2"
-                            ,
-                            Top = dataValueLabelList.Last().Top + dataValueLabelList.Last().Height + heightMargin
-                            ,
-                            Left = this.dataValueLabels[0].Left
-                            ,
-                            Width = this.dataValueLabels[0].Width
-                            ,
-                            Height = this.dataValueLabels[0].Height
-                            ,
-                            TextAlign = this.dataValueLabels[0].TextAlign
-                            ,
-                            Font = new Font(this.dataValueLabels[i + 1].Font, this.dataValueLabels[i + 1].Font.Style)
-                            ,
-                            BorderStyle = BorderStyle.Fixed3D
-                            ,
-                            BackColor = System.Drawing.Color.White
+                            var val = new Label()
+                            {
+                                //Name = "lblDataValue" + (i + 1).ToString() + "-2"
+                                Name = dataValueLabelList.Last().Name + "-2"
+                                ,
+                                Top = dataValueLabelList.Last().Top + dataValueLabelList.Last().Height + heightMargin
+                                ,
+                                Left = dataValueLabelList.Last().Left
+                                ,
+                                Width = dataValueLabelList.Last().Width
+                                ,
+                                Height = dataValueLabelList.Last().Height
+                                ,
+                                TextAlign = dataValueLabelList.Last().TextAlign
+                                ,
+                                Font = new Font(this.dataValueLabels[i + 1].Font, this.dataValueLabels[i + 1].Font.Style)
+                                ,
+                                BorderStyle = BorderStyle.Fixed3D
+                                ,
+                                BackColor = System.Drawing.Color.White
 
-                        };
-                        val.Text = string.Empty;
-                        if (isMeasure)
-                            pnlMain.Controls.Add(val);
-                        else
-                            tabPage1.Controls.Add(val);
+                            };
+                            val.Text = string.Empty;
+                            if (isMeasure)
+                                pnlMain.Controls.Add(val);
+                            else
+                                tabPage1.Controls.Add(val);
 
-                        dataValueLabelList.Add(val);
+                            dataValueLabelList.Add(val);
 
+                            var zero  = new Label()
+                            {
+                                Name = dataValueLabelZeroList.Last().Name + "-2"
+                                ,
+                                Top = dataValueLabelZeroList.Last().Top + dataValueLabelZeroList.Last().Height + heightMargin
+                                ,
+                                Left = dataValueLabelZeroList.Last().Left
+                                ,
+                                Width = dataValueLabelZeroList.Last().Width
+                                ,
+                                Height = dataValueLabelZeroList.Last().Height
+                                ,
+                                TextAlign = dataValueLabelZeroList.Last().TextAlign
+                                ,
+                                Font = new Font(this.dataValueLabels_Zero[i + 1].Font, this.dataValueLabels_Zero[i + 1].Font.Style)
+                                ,
+                                BorderStyle = BorderStyle.Fixed3D
+                                ,
+                                BackColor = System.Drawing.Color.Transparent
 
-                        var unit = new Controls.AutoFontSizeLabel()
-                        {
-                            //Name = "lblUnit" + (i + 1).ToString() + "-2"
-                            Name = unitLabelList.Last().Name + "-2"
-                            ,
-                            Top = unitLabelList.Last().Top + unitLabelList.Last().Height + heightMargin
-                            ,
-                            Left = this.unitLabels[0].Left
-                            ,
-                            Width = this.unitLabels[0].Width
-                            ,
-                            Height = this.unitLabels[0].Height
-                            ,
-                            TextAlign = this.unitLabels[0].TextAlign
-                            ,
-                            Font = new Font(this.unitLabels[i + 1].Font, this.unitLabels[i + 1].Font.Style)
-                            ,
-                            AutoFontSize = ((Controls.AutoFontSizeLabel)this.unitLabels[i + 1]).AutoFontSize
-                            ,
-                            MaxFontSize = ((Controls.AutoFontSizeLabel)this.unitLabels[i + 1]).MaxFontSize
+                            };
 
-                        };
-                        unit.Text = (this.relationSetting.RelationList[i + 1].TagNo_2 > 0) ? this.tagSetting.GetUnitFromTagNo(this.relationSetting.RelationList[i + 1].TagNo_2) : string.Empty;
-                        if (isMeasure)
-                            pnlMain.Controls.Add(unit);
-                        else
-                            tabPage1.Controls.Add(unit);
+                            zero.Text = string.Empty;
+                            if (isMeasure)
+                                pnlMain.Controls.Add(zero);
+                            else
+                                tabPage1.Controls.Add(zero);
 
-                        unitLabelList.Add(unit);
+                            dataValueLabelZeroList.Add(val);
+
+                            
+                            var unit = new Controls.AutoFontSizeLabel()
+                            {
+                                //Name = "lblUnit" + (i + 1).ToString() + "-2"
+                                Name = unitLabelList.Last().Name + "-2"
+                                ,
+                                Top = unitLabelList.Last().Top + unitLabelList.Last().Height + heightMargin
+                                ,
+                                Left = this.unitLabels[0].Left
+                                ,
+                                Width = this.unitLabels[0].Width
+                                ,
+                                Height = this.unitLabels[0].Height
+                                ,
+                                TextAlign = this.unitLabels[0].TextAlign
+                                ,
+                                Font = new Font(this.unitLabels[i + 1].Font, this.unitLabels[i + 1].Font.Style)
+                                ,
+                                AutoFontSize = ((Controls.AutoFontSizeLabel)this.unitLabels[i + 1]).AutoFontSize
+                                ,
+                                MaxFontSize = ((Controls.AutoFontSizeLabel)this.unitLabels[i + 1]).MaxFontSize
+
+                            };
+                            unit.Text = (this.relationSetting.RelationList[i + 1].TagNo_2 > 0) ? this.tagSetting.GetUnitFromTagNo(this.relationSetting.RelationList[i + 1].TagNo_2) : string.Empty;
+                            if (isMeasure)
+                                pnlMain.Controls.Add(unit);
+                            else
+                                tabPage1.Controls.Add(unit);
+
+                            unitLabelList.Add(unit);
+                        }
                     }
                 }
 
                 this.tagLabels = tagLabelList.ToArray();
                 this.dataValueLabels = dataValueLabelList.ToArray();
+                this.dataValueLabels_Zero = dataValueLabelZeroList.ToArray();
                 this.unitLabels = unitLabelList.ToArray();
 
                 // 回転タグ位置調整
@@ -575,28 +653,31 @@ namespace RM_3000.Forms.Parts
                     //Mode3は回転数をすべて消す
                     this.tagLabels[0].Visible = false;
                     this.dataValueLabels[0].Visible = false;
+                    this.dataValueLabels_Zero[0].Visible = false;
                     this.unitLabels[0].Visible = false;
 
                     //消すので最終タグのラベル位置に合わせる
                     this.tagLabels[0].Top = this.tagLabels.Last().Top;
                     this.dataValueLabels[0].Top = this.dataValueLabels.Last().Top;
+                    this.dataValueLabels_Zero[0].Top = this.dataValueLabels_Zero.Last().Top;
                     this.unitLabels[0].Top = this.unitLabels.Last().Top;
 
                 }
                 else if (this.measSetting.Mode == 2 && this.isMeasure)
                 {
                     // 測定中Mode2では回転タグのみ表示する
-                    this.tagLabels[0].Top = this.dataValueLabels[0].Top = this.lblTitle.Height + heightMargin;
+                    this.tagLabels[0].Top = this.dataValueLabels[0].Top = this.dataValueLabels_Zero[0].Top = this.lblTitle.Height + heightMargin;
                     this.unitLabels[0].Top = this.tagLabels[0].Top + 2;
                     for (int i = 1; i < tagLabels.Length; i++)
                     {
-                        this.tagLabels[i].Visible = this.dataValueLabels[i].Visible = this.unitLabels[i].Visible = false;
+                        this.tagLabels[i].Visible = this.dataValueLabels[i].Visible = this.dataValueLabels_Zero[i].Visible = this.unitLabels[i].Visible = false;
                     }
                 }
                 else
                 {
                     this.tagLabels[0].Top = this.tagLabels.Last().Top + this.tagLabels.Last().Height + heightMargin;
                     this.dataValueLabels[0].Top = this.dataValueLabels.Last().Top + this.dataValueLabels.Last().Height + heightMargin;
+                    this.dataValueLabels_Zero[0].Top = this.dataValueLabels_Zero.Last().Top + this.dataValueLabels_Zero.Last().Height + heightMargin;
                     this.unitLabels[0].Top = this.unitLabels.Last().Top + this.unitLabels.Last().Height + heightMargin;
                 }
 

@@ -456,7 +456,12 @@ namespace RM_3000
 
             lock (lockobj_samples)
             {
-                ret = new List<SampleData>(Samples);
+                ret = new List<SampleData>();
+
+                foreach (SampleData s in Samples)
+                {
+                    ret.Add((SampleData)s.Clone());
+                }
 
                 Samples.Clear();
 

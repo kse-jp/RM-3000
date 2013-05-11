@@ -18,6 +18,8 @@ namespace RM_3000.Controls
         public bool AutoFontSize { get; set; }
         [Category("Appearance")]
         public float MaxFontSize { get; set; }
+        [Category("Appearance")]
+        public float MinFontSize { get; set; }
 
         public AutoFontSizeLabel()
         {
@@ -42,11 +44,11 @@ namespace RM_3000.Controls
                 {
                     this.Font = new Font(this.Font.FontFamily, MaxFontSize, this.Font.Style);
 
-                    //フォントサイズ6まで、自動的に落とす。
-                    while (this.Width < g.MeasureString(this.Text, this.Font).Width)
+                    //最小フォントサイズまで、自動的に落とす。
+                    while (this.Width - (this.Margin.Left + this.Margin.Right) < g.MeasureString(this.Text, this.Font).Width)
                     {
-                        if (this.Font.Size > 6)
-                            this.Font = new System.Drawing.Font(this.Font.FontFamily, this.Font.Size - 1, this.Font.Style);
+                        if (this.Font.Size > MinFontSize)
+                            this.Font = new System.Drawing.Font(this.Font.FontFamily, this.Font.Size - 0.1f, this.Font.Style);
                         else
                             break;
                     }

@@ -1857,7 +1857,7 @@ namespace RM_3000.Forms.Analyze
 
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "csv|*.csv";
-                sfd.FileName = System.IO.Path.GetFileName(this.analyzeData.DirectoryPath.Substring(0, this.analyzeData.DirectoryPath.Length - 2)) + ".csv";
+                sfd.FileName = System.IO.Path.GetFileName(this.analyzeData.DirectoryPath.Substring(0, this.analyzeData.DirectoryPath.Length - 1)) + ".csv";
 
                 //ファイル保存名
                 if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)

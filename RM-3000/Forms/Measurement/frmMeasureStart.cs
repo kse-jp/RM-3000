@@ -513,6 +513,18 @@ namespace RM_3000.Forms.Measurement
                 //測定設定の再表示
                 ShowMeasSetting();
 
+                //海外モードの小数点桁数チェック
+                if (SystemSetting.HardInfoStruct.IsExportMode)
+                {
+                    foreach (RelationSetting rs in SystemSetting.RelationSetting.RelationList)
+                    {
+                        if (rs.TagNo_1 != -1)
+                            SystemSetting.DataTagSetting.GetTag(rs.TagNo_1).Point = 0;
+                        if (rs.TagNo_2 != -1)
+                            SystemSetting.DataTagSetting.GetTag(rs.TagNo_2).Point = 0;
+                    }
+                }
+
                 if (this.log != null) this.log.PutLog(string.Format("frmMeasureStart.btnStart_Click() - saved measure setting file to [{0}]", this.measSetting.FilePath));
 
                 // 測定中画面表示

@@ -177,6 +177,14 @@ namespace RM_3000.Forms.Analyze
                     , ana.MeasureSetting.MeasTagList[8] != -1 ? ana.ChannelsSetting.ChannelSettingList[8].ChKind.ToString() : ""
                     , ana.MeasureSetting.MeasTagList[9] != -1 ? ana.ChannelsSetting.ChannelSettingList[9].ChKind.ToString() : ""
                 });
+
+            }
+
+            if (dgvDataList.Rows.Count != 0)
+            {
+                dgvDataList.ScrollBars = ScrollBars.None;
+                dgvDataList.ScrollBars = ScrollBars.Both;
+                dgvDataList.FirstDisplayedScrollingRowIndex = 0;
             }
         }
 

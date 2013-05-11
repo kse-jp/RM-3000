@@ -224,6 +224,10 @@ namespace RM_3000.Forms.Parts
 
         }
 
+        /// <summary>
+        /// 状態情報を更新する。
+        /// </summary>
+        /// <param name="bCond_MeasurePause"></param>
         public void SetCondition(bool bCond_MeasurePause)
         {
             if (InvokeRequired)

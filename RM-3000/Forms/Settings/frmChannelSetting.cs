@@ -580,7 +580,7 @@ namespace RM_3000.Forms.Settings
                                 if (SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_2 != -1 &&
                                     this.setting.ChannelSettingList[channelIndex].NumPoint != SystemSetting.DataTagSetting.GetTag(SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_2).Point)
                                 {
-                                    SystemSetting.DataTagSetting.GetTag(SystemSetting.RelationSetting.RelationList[channelIndex + 2].TagNo_1).Point = this.setting.ChannelSettingList[channelIndex].NumPoint;
+                                    SystemSetting.DataTagSetting.GetTag(SystemSetting.RelationSetting.RelationList[channelIndex + 1].TagNo_2).Point = this.setting.ChannelSettingList[channelIndex].NumPoint;
                                     SystemSetting.DataTagSetting.IsUpdated = true;
                                 }
                             }

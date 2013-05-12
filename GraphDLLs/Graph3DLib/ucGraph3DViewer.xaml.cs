@@ -269,6 +269,12 @@ namespace Graph3DLib
         /// check is animation is start for Start/stop animation function
         /// </summary>
         private bool _IsAnimationStart = false;
+        /// <summary>
+        /// Check is meter is stop;
+        /// </summary>
+        private bool _IsMeterStop = false;
+
+
 
         #endregion
 
@@ -703,13 +709,16 @@ namespace Graph3DLib
                     double degreediff = circularMeter.EndDegree - circularMeter.StartDegree;
                     double angle = circularMeter.StartDegree + ((degreediff / (_GraphController.GraphRawData.Count - 1)) * datapos);
 
-                    if (angle >= (double)circularMeter.EndDegree - 3)
+                    if ((_AnimationSpeed >= 2 && angle >= (double)circularMeter.EndDegree - 3) ||
+                        (_AnimationSpeed <= 0.5 && angle >= (double)circularMeter.EndDegree - 0.5) ||
+                        (_AnimationSpeed > 0.5 && _AnimationSpeed <= 2 && angle >= (double)circularMeter.EndDegree - 3))
                     {
                         if (_AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
                         {
-                            if (_MeterTimer.Enabled)
+                            if (_MeterTimer.Enabled && !_IsMeterStop)
                             {
                                 _MeterTimer.Stop();
+                                _IsMeterStop = true;
                                 uint waittime = 100;
 
                                 if (waittime != 0)
@@ -724,88 +733,6 @@ namespace Graph3DLib
                         circularMeter.DrawArraw(angle, true);
 
 
-                    #region Remark
-                    //int chno = _GraphController.RamDataPosition;
-                    //bool isdown = false;
-                    //double mindata = _GraphController.GraphRawData[datapos][chno];
-                    //double chkdata = 0;
-                    //double degree = 0;
-
-                    //double angle = ((circularMeter.StartDegree + circularMeter.EndDegree) / 2) - circularMeter.StartDegree;
-                    //double datawidth = _GraphController.DataHighValue - _GraphController.DataLowValue;
-
-                    //if (datapos + 1 <= _GraphController.GraphRawData.Count - 1)
-                    //    chkdata = _GraphController.GraphRawData[datapos + 1][chno];
-                    //else
-                    //    chkdata = mindata;
-
-                    //if (chkdata > mindata)
-                    //    isdown = false;
-                    //else
-                    //{
-                    //    if (chkdata == mindata)
-                    //        isdown = !isdown;
-                    //    else
-                    //        isdown = true;
-                    //}
-
-
-                    //if (mindata <= 2000)
-                    //{
-                    //    if (mindata < 1200)
-                    //        mindata = 1200;
-
-                    //    degree = (angle / datawidth) * (_GraphController.DataHighValue - mindata);
-
-                    //    if (isdown)
-                    //    {
-                    //        degree += circularMeter.StartDegree;
-                    //    }
-                    //    else
-                    //    {
-                    //        degree = circularMeter.EndDegree - degree;
-                    //    }
-
-                    //    circularMeter.DrawArraw(degree, isdown);
-                    //}
-                    //else
-                    //{
-                    //    if (_AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
-                    //    {
-                    //        if (_MeterTimer.Enabled)
-                    //        {
-                    //            _MeterTimer.Stop();
-                    //            uint waittime = 100;
-                    //            double speedratio = 0;
-                    //            if (_AnimationSpeed != 0)
-                    //                speedratio = (3 / _AnimationSpeed);
-
-                    //            for (int i = 0; i < _GraphController.OverLimitPosition.Count; i++)
-                    //            {
-                    //                if (datapos >= _GraphController.OverLimitPosition[i].X - (10 + (2.5 * _AnimationSpeed)) && datapos <= _GraphController.OverLimitPosition[i].X + (10 + (2.5 * _AnimationSpeed)))
-                    //                {
-
-
-                    //                    waittime = Convert.ToUInt32((_GraphController.OverLimitPosition[i].Y - datapos) * speedratio);
-
-                    //                    break;
-                    //                }
-                    //            }
-
-                    //            if (waittime != 0)
-                    //            {
-                    //                circularMeter.OutOfRangeDuration = waittime;
-                    //                circularMeter.OutOfRangeDraw();
-                    //            }
-                    //            else
-                    //            {
-                    //                if (_AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
-                    //                    _MeterTimer.Start();
-                    //            }
-                    //        }
-                    //    }
-                    //}
-                    #endregion
                 }
             }
             catch (Exception ex)
@@ -1562,28 +1489,17 @@ namespace Graph3DLib
                 {
                     if (_AnimationControl.Status == AnimationStatus.Stop)
                     {
-                        //if (_AnimationSpeed != 1)
-                        //    _AnimationControl.SetSpeed(_AnimationSpeed);
-                        //_AnimationControl.SetSpeed(3600);
 
                         Dispatcher.BeginInvoke(new Action(_AnimationControl.StartInvoke), DispatcherPriority.Send, null);
                         _IsAnimationStart = true;
-                        //bool ret = _AnimationControl.Start();
-                        //if (ret)
-                        //{
-                        //System.Threading.Thread.Sleep(10);
-                        //if (_AnimationControl.CurrentState == ClockState.Stopped)
-                        //{
-                        //    _Log4NetClass.ShowWarning("RestartAnimation", "StartAnimation");                               
-                        //    _AnimationControl.Start();
-                        //}
 
+                        Dispatcher.Invoke(new Action(ShowStripper), null);
 
-
-                        //_IsAnimationStart = true;
+                        _IsMeterStop = false;
                         _MeterTimer.Start();
-                        Dispatcher.BeginInvoke(new Action(this.ShowTranparent), null);
-                        //}
+
+                        Dispatcher.Invoke(new Action(this.ShowTranparent), null);
+
 
                     }
                     else if (_AnimationControl.Status == AnimationStatus.Start || _AnimationControl.Status == AnimationStatus.Resume)
@@ -1912,6 +1828,9 @@ namespace Graph3DLib
         {
             try
             {
+                if (_IsAnimationStart && _AnimationControl.Duration < 5000)
+                    Dispatcher.Invoke(new Action(HiddenStripper), null);
+
                 if (_GraphController != null)
                     _GraphController.ClearData();
 
@@ -2143,6 +2062,28 @@ namespace Graph3DLib
                 btnReset.Content = _ResManager.GetString("BtnReset", _CultureInfo);
                 lblRotationCtrl.Content = _ResManager.GetString("LblRotationCtrl", _CultureInfo);
                 ExpPanel.Header = _ResManager.GetString("PanelName", _CultureInfo);
+            }
+        }
+
+        /// <summary>
+        /// Hidden stipper when clear data 
+        /// </summary>
+        private void HiddenStripper()
+        {
+            if (_MachineModel != null && !_IsStripperHide)
+            {
+                _MachineModel.ScaleStripperPlate(new Point3D(0, 0, 0));
+            }
+
+        }
+        /// <summary>
+        /// Show stipper when Start Animation
+        /// </summary>
+        private void ShowStripper()
+        {
+            if (_MachineModel != null && !_IsStripperHide)
+            {
+                _MachineModel.ScaleStripperPlate(new Point3D(1, 1, 1));
             }
         }
         #endregion

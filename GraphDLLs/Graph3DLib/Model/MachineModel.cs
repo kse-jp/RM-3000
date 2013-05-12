@@ -864,8 +864,11 @@ namespace Graph3DLib.Model
                     ScaleTransform3D scale3d = trans3dGroup.Children[i] as ScaleTransform3D;
                     if (scale3d != null)
                     {
-                        scale3d = new ScaleTransform3D(scale, position);
-                        trans3dGroup.Children[i] = scale3d;
+                        if (scale3d.ScaleX != scale.X || scale3d.ScaleY != scale.Y || scale3d.ScaleZ != scale.Z)
+                        {
+                            scale3d = new ScaleTransform3D(scale, position);
+                            trans3dGroup.Children[i] = scale3d;
+                        }
                         ret = true;
                         break;
                     }

@@ -552,7 +552,7 @@ namespace RM_3000.Forms.Parts
                             incx = this.graph2DList[i].GraphInfo.IncrementX;
                             break;
                         }
-                    }                    
+                    }
 
                     if (incx == 0)
                     {
@@ -1252,7 +1252,7 @@ namespace RM_3000.Forms.Parts
 
             if (this.maxOverShotCountForMode2 != 1)
             {
-                //Select smallest shot for set count when overshot !=1.
+                //Select 1st shot count when overshot >1.
                 for (int icount = 0; icount < this.maxOverShotCountForMode2; icount++)
                 {
                     if (icount <= dataList.Count - 1)
@@ -1261,8 +1261,11 @@ namespace RM_3000.Forms.Parts
                         {
                             if (ch != null && ch.Position != 0 && ch.DataValues != null)
                             {
-                                if (count == 0 || count > ((Value_Mode2)ch.DataValues).Values.Length)
+                                if (icount == 0)
                                     count = ((Value_Mode2)ch.DataValues).Values.Length;
+
+                                //if (count == 0 || count > ((Value_Mode2)ch.DataValues).Values.Length)
+                                //    count = ((Value_Mode2)ch.DataValues).Values.Length;
                                 break;
                             }
                         }

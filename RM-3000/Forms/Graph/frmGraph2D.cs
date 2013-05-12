@@ -717,16 +717,24 @@ namespace RM_3000.Forms.Graph
                     // Loop for over shot
                     var shotCount = dataList.Count;
                     var data = dataList[0].Last();
+                    int[] countarray = new int[shotCount]; ;
 
-                    //Select smallest shot for set count.
+
+                    //Select 1st shot count when overshot >1.
                     for (int icount = 0; icount < shotCount; icount++)
                     {
                         foreach (ChannelData ch in dataList[icount][0].ChannelDatas)
                         {
                             if (ch != null && ch.Position != 0 && ch.DataValues != null)
                             {
-                                if (count == 0 || count > ((Value_Mode2)ch.DataValues).Values.Length)
+                                if (icount == 0)
                                     count = ((Value_Mode2)ch.DataValues).Values.Length;
+
+                                //if (count == 0 || count > ((Value_Mode2)ch.DataValues).Values.Length)
+                                //    count = ((Value_Mode2)ch.DataValues).Values.Length;
+
+                                if (countarray != null)
+                                    countarray[icount] = ((Value_Mode2)ch.DataValues).Values.Length;
                                 break;
                             }
                         }
@@ -734,27 +742,47 @@ namespace RM_3000.Forms.Graph
 
                     SetMode2GraphInfo(count, shotCount);
                     var inc = this.GraphInfo.IncrementX;
-
                     this.overShotDataList = new List<List<double[]>>();
 
                     for (int s = 0; s < shotCount; s++)
                     {
+                        double scaleratio = 0;
                         // Check shot count between data and graph setting.
                         if (s >= this.GraphInfo.ShotCount)
                         {
                             break;
                         }
 
+                        if (shotCount > 1 && countarray != null)
+                        {
+                            double calcratio = (double)countarray[s] / (double)count;
+                            //scale plot
+                            if (calcratio != 1)
+                            {
+                                var chSetting = this.AnalyzeData.ChannelsSetting;
+
+                                if (chSetting != null && chSetting.ChannelMeasSetting != null)
+                                {
+                                    scaleratio = Convert.ToDouble(chSetting.ChannelMeasSetting.Degree2 - chSetting.ChannelMeasSetting.Degree1) / (countarray[s] - 1);
+                                }
+                            }
+                        }
+
                         data = dataList[s].Last();
                         var calc = (calcDataList != null && calcDataList[s].Count > 0) ? calcDataList[s].Last() : null;
                         graphData = new List<double[]>();
 
-                        for (int i = 0; i < count; i++)
+                        for (int i = 0; i < countarray[s]; i++)
                         {
                             var chData = new double[11];
 
                             // X Axis value
-                            chData[0] = (double)minValueX + (i * inc);
+                            if (scaleratio != 0)
+                            {
+                                chData[0] = (double)minValueX + (i * scaleratio);
+                            }
+                            else
+                                chData[0] = (double)minValueX + (i * inc);
 
                             // Y Axis values
                             for (int j = 0; j < 10; j++)
@@ -770,7 +798,8 @@ namespace RM_3000.Forms.Graph
                                     }
                                     else if (t == typeof(Value_Mode2))
                                     {
-                                        try { chData[j + 1] = (double)((Value_Mode2)data.ChannelDatas[this.chIndexList[j].Index].DataValues).Values[i]; }
+                                        try
+                                        { chData[j + 1] = (double)((Value_Mode2)data.ChannelDatas[this.chIndexList[j].Index].DataValues).Values[i]; }
                                         catch { break; }
                                     }
                                 }
@@ -797,9 +826,10 @@ namespace RM_3000.Forms.Graph
                     {
                         if (this.overShotDataList.Count > 0)
                         {
-                            this.graphViewer.ReadData(this.overShotDataList[0]);
+                            int lastidx = this.overShotDataList.Count - 1;
+                            this.graphViewer.ReadData(this.overShotDataList[lastidx]);
                             this.graphViewer.CreateGraph();
-                            this.overShotDataList.RemoveAt(0);
+                            this.overShotDataList.RemoveAt(lastidx);
 
                             if (this.overShotDataList.Count == 0)
                                 this.overShotDataList = null;
@@ -1078,10 +1108,11 @@ namespace RM_3000.Forms.Graph
             {
                 if (this.overShotDataList.Count > 0)
                 {
-                    this.graphViewer.ReadData(this.overShotDataList[0]);
+                    int lastidx = this.overShotDataList.Count - 1;
+                    this.graphViewer.ReadData(this.overShotDataList[lastidx]);
                     this.graphViewer.CreateGraph();
 
-                    this.overShotDataList.RemoveAt(0);
+                    this.overShotDataList.RemoveAt(lastidx);
 
                     if (this.overShotDataList.Count == 0)
                         this.overShotDataList = null;

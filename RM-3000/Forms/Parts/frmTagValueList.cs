@@ -687,6 +687,7 @@ namespace RM_3000.Forms.Parts
                 else
                 {
                     this.tabControl1.Height = this.unitLabels[0].Top + this.unitLabels[0].Height + lblTitle.Height + heightMargin * 2;
+                    this.pnlAnalysis.Height = this.tabControl1.Top + this.tabControl1.Height;
                     this.Height = this.tabControl1.Top + this.tabControl1.Height;
                 }
 

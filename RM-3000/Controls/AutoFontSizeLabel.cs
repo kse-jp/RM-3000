@@ -45,7 +45,7 @@ namespace RM_3000.Controls
                     this.Font = new Font(this.Font.FontFamily, MaxFontSize, this.Font.Style);
 
                     //最小フォントサイズまで、自動的に落とす。
-                    while (this.Width - (this.Margin.Left + this.Margin.Right) < g.MeasureString(this.Text, this.Font).Width)
+                    while (this.ClientRectangle.Width - (this.Margin.Left + this.Margin.Right) < g.MeasureString(this.Text, this.Font).Width)
                     {
                         if (this.Font.Size > MinFontSize)
                             this.Font = new System.Drawing.Font(this.Font.FontFamily, this.Font.Size - 0.1f, this.Font.Style);

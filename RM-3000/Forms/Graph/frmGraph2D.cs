@@ -1222,14 +1222,16 @@ namespace RM_3000.Forms.Graph
                 graphinfo.MinValueY = (double)(graphSetting.CenterScale - graphSetting.Scale);
                 graphinfo.MaxValueY = (double)(graphSetting.CenterScale + graphSetting.Scale);
                 graphinfo.AxisPositionY = (double)graphSetting.CenterScale;
+                graphinfo.DistanceY = graphSetting.DistanceY_CenterScale_Mode1;
             }
             else
             {
                 graphinfo.MinValueY = (double)graphSetting.MinimumY_Mode1;
                 graphinfo.MaxValueY = (double)graphSetting.MaxY_Mode1;
                 graphinfo.AxisPositionY = null;
+                graphinfo.DistanceY = graphSetting.DistanceY_Mode1;
+
             }
-            graphinfo.DistanceY = graphSetting.DistanceY_Mode1;
             graphinfo.AxisPositionX = null;
             graphinfo.MinMaxRangeX = graphinfo.MaxValueX - graphinfo.MinValueX;
             graphinfo.MaxDataSizeX = Convert.ToInt32(graphinfo.MaxValueX - graphinfo.MinValueX);

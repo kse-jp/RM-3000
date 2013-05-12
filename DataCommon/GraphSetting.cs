@@ -81,15 +81,19 @@ namespace DataCommon
         /// </summary>
         private decimal maxY_Mode3;
         /// <summary>
-        /// Y軸軸間隔
+        /// Y軸軸間隔センタースケールMode1時
+        /// </summary>
+        private decimal distanceY_CenterScale_Mode1;
+        /// <summary>
+        /// Y軸軸間隔Mode1時
         /// </summary>
         private decimal distanceY_Mode1;
         /// <summary>
-        /// Y軸軸間隔
+        /// Y軸軸間隔Mode2時
         /// </summary>
         private decimal distanceY_Mode2;
         /// <summary>
-        /// Y軸軸間隔
+        /// Y軸軸間隔Mode3時
         /// </summary>
         private decimal distanceY_Mode3;
         /// <summary>
@@ -361,6 +365,19 @@ namespace DataCommon
         /// <summary>
         /// Y軸軸間隔
         /// </summary>
+        public decimal DistanceY_CenterScale_Mode1
+        {
+            set
+            {
+                if (value <= 0 || value > 100000)
+                { throw new Exception(string.Format("Y {0} {1} {2}", CommonResource.GetString("TXT_DISTANCE"), CommonResource.GetString("ERROR_VALUE_OUT_OF_RANGE"), "1～100000")); }
+                this.distanceY_CenterScale_Mode1 = value;
+            }
+            get { return this.distanceY_CenterScale_Mode1; }
+        }        
+        /// <summary>
+        /// Y軸軸間隔
+        /// </summary>
         public decimal DistanceY_Mode1
         {
             set
@@ -487,7 +504,7 @@ namespace DataCommon
         /// </summary>
         public void ClearScale()
         {
-            this.scale = 10;
+            this.scale = 100;
         }
         /// <summary>
         /// 設定項目リストを初期化する
@@ -534,19 +551,21 @@ namespace DataCommon
                 this.minimumX_Mode3 = 0;
                 this.maxX_Mode1 = 1000;
                 this.maxX_Mode2 = 360;
-                this.maxX_Mode3 = 1000;
-            }
+                this.maxX_Mode3 = 0;
 
-            this.distanceX_Mode1 = Math.Floor((this.maxX_Mode1 - this.minimumX_Mode1 + 1) / 10);
-            this.distanceX_Mode2 = Math.Floor((this.maxX_Mode2 - this.minimumX_Mode2) / 10);
-            this.distanceX_Mode3 = Math.Floor((this.maxX_Mode3 - this.minimumX_Mode3) / 10);
+                this.distanceX_Mode1 = 500;
+                this.distanceX_Mode2 = 20;
+                this.distanceX_Mode3 = Math.Floor((this.maxX_Mode3 - this.minimumX_Mode3) / 2);
+
+            }
         }
 
         public void ClearYAxisSetting()
         {
             this.minimumY_Mode1 = this.minimumY_Mode2 = this.minimumY_Mode3 = 0;
-            this.maxY_Mode1 = this.maxY_Mode2 = this.maxY_Mode3 = 10000;
-            this.distanceY_Mode1 = 1;
+            this.maxY_Mode1 = this.maxY_Mode2 = this.maxY_Mode3 = 2000;
+            this.distanceY_CenterScale_Mode1 = 50;
+            this.distanceY_Mode1 = 1000;
             this.distanceY_Mode2 = 1000;
             this.distanceY_Mode3 = 1000;
         }
@@ -576,6 +595,7 @@ namespace DataCommon
             ret.MaxY_Mode1 = this.MaxY_Mode1;
             ret.MaxY_Mode2 = this.MaxY_Mode2;
             ret.MaxY_Mode3 = this.MaxY_Mode3;
+            ret.DistanceY_CenterScale_Mode1 = this.DistanceY_CenterScale_Mode1;
             ret.DistanceY_Mode1 = this.DistanceY_Mode1;
             ret.DistanceY_Mode2 = this.DistanceY_Mode2;
             ret.DistanceY_Mode3 = this.DistanceY_Mode3;

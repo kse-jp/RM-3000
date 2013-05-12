@@ -611,6 +611,19 @@ namespace RM_3000.Forms.Analyze
                     }
                 }
 
+                //Mode3のX軸値調整
+                for (int i = 0; i < this.measSetting.GraphSettingList.Length; i++)
+                {
+                    if (this.measSetting.GraphSettingList[i].MaxX_Mode3 == 0)
+                    {
+                        this.measSetting.GraphSettingList[i].MaxX_Mode3
+                                = (this.measSetting.SamplingTiming_Mode3 < 50000 ? this.measSetting.SamplingTiming_Mode3 : 50000);
+
+                        this.measSetting.GraphSettingList[i].DistanceX_Mode3
+                            = Math.Floor((this.measSetting.GraphSettingList[i].MaxX_Mode3 - this.measSetting.GraphSettingList[i].MinimumX_Mode3) / 2);
+                    }
+
+                }                    
 
                 // 測定設定ファイル保存
                 if (this.dirty)
@@ -1960,11 +1973,35 @@ namespace RM_3000.Forms.Analyze
                 {
                     var graph = this.measSetting.GraphSettingList[this.dgvGraph.SelectedRows[0].Index];
 
+                    //全て削除されたかどうかを判定
+                    bool bAllClear = true;
+
+                    for (int i = 0; i < this.measSetting.GraphSettingList.Length; i++)
+                    {
+                        //現在の削除対象は判定に含めない
+                        if (this.dgvGraph.SelectedRows[0].Index == i)
+                        {
+                            continue;
+                        }
+
+                        //タグが含まれいるか判定
+                        foreach (GraphTag t in this.measSetting.GraphSettingList[i].GraphTagList)
+                        {
+                            if (t.GraphTagNo != -1)
+                            {
+                                bAllClear = false;
+                                i = this.measSetting.GraphSettingList.Length;
+                                break;
+                            }
+                        }
+                    }
+
                     if (MessageBox.Show(AppResource.GetString("MSG_GRAPH_CONFIRM_REMOVE"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
                     {
                         graph.Title = string.Empty;
                         graph.ClearCenterScale();
                         graph.ClearScale();
+                        graph.ClearAxisSetting(bAllClear);
                         graph.ClearGraphTagList();
                         this.dirty = true;
 
@@ -1994,6 +2031,20 @@ namespace RM_3000.Forms.Analyze
                 {
                     var graphIndex = this.dgvGraph.SelectedRows[0].Index;
                     var graph = this.analyzeData.MeasureSetting.GraphSettingList[graphIndex];
+
+                    //Mode3の軸値調整
+                    if (graph.MaxX_Mode3 == 0)
+                    {
+
+                        for (int i = 0; i < this.measSetting.GraphSettingList.Length; i++)
+                        {
+                            this.measSetting.GraphSettingList[i].MaxX_Mode3
+                                = (this.measSetting.SamplingTiming_Mode3 < 50000 ? this.measSetting.SamplingTiming_Mode3 : 50000);
+
+                            this.measSetting.GraphSettingList[i].DistanceX_Mode3
+                                = Math.Floor((this.measSetting.GraphSettingList[i].MaxX_Mode3 - this.measSetting.GraphSettingList[i].MinimumX_Mode3) / 2);
+                        }
+                    }
 
                     using (var f = new RM_3000.Forms.Graph.frmGraphAxisSetting(this.log) { MeasSetting = this.analyzeData.MeasureSetting, AnalyzeData = this.analyzeData, Graph = graph })
                     {

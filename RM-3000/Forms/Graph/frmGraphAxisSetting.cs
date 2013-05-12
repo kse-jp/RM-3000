@@ -175,16 +175,17 @@ namespace RM_3000.Forms.Graph
                             this.ntbMaxY.Text = Graph.Scale.ToString();
                             this.ntbMinY.MaxLength = 9;
                             this.ntbMaxY.AllowMinus = false;
+                            this.ntbDistanceY.Text = Graph.DistanceY_CenterScale_Mode1.ToString();
                         }
                         else
                         {
                             this.ntbMinY.Text = Graph.MinimumY_Mode1.ToString();
                             this.ntbMaxY.Text = Graph.MaxY_Mode1.ToString();
                             this.ntbMaxY.AllowMinus = true;
+                            this.ntbDistanceY.Text = Graph.DistanceY_Mode1.ToString();
                         }
 
                         this.ntbMinY.AllowMinus = true;
-                        this.ntbDistanceY.Text = Graph.DistanceY_Mode1.ToString();
                     }
                     else if (this.MeasSetting.Mode == 2)
                     {
@@ -895,21 +896,43 @@ namespace RM_3000.Forms.Graph
                     }
                 }
 
-                if (this.currentGraphSetting.DistanceY_Mode1 != distanceY)
+                if (this.boardBR)
                 {
-                    try
+                    if (this.currentGraphSetting.DistanceY_CenterScale_Mode1 != distanceY)
                     {
-                        this.currentGraphSetting.DistanceY_Mode1 = distanceY;
-                    }
-                    catch (Exception ex1)
-                    {
-                        ShowWarningMessage(ex1.Message);
-                        this.ntbDistanceY.SelectAll();
-                        this.ntbDistanceY.Focus();
-                        return false;
-                    }
+                        try
+                        {
+                            this.currentGraphSetting.DistanceY_CenterScale_Mode1 = distanceY;
+                        }
+                        catch (Exception ex1)
+                        {
+                            ShowWarningMessage(ex1.Message);
+                            this.ntbDistanceY.SelectAll();
+                            this.ntbDistanceY.Focus();
+                            return false;
+                        }
 
-                    this.dirty = true;
+                        this.dirty = true;
+                    }
+                }
+                else
+                {
+                    if (this.currentGraphSetting.DistanceY_Mode1 != distanceY)
+                    {
+                        try
+                        {
+                            this.currentGraphSetting.DistanceY_Mode1 = distanceY;
+                        }
+                        catch (Exception ex1)
+                        {
+                            ShowWarningMessage(ex1.Message);
+                            this.ntbDistanceY.SelectAll();
+                            this.ntbDistanceY.Focus();
+                            return false;
+                        }
+
+                        this.dirty = true;
+                    }
                 }
             }
             else if (this.MeasSetting.Mode == 2)
@@ -1402,7 +1425,7 @@ namespace RM_3000.Forms.Graph
                     this.dirty = true;
                 }
 
-                decimal modeval = GetGraphSettingValue("DistanceY");
+                decimal modeval = this.boardBR ? GetGraphSettingValue("DistanceY_Center") : GetGraphSettingValue("DistanceY");
 
                 if (modeval != val)
                 {
@@ -1491,6 +1514,9 @@ namespace RM_3000.Forms.Graph
                         break;
                     case "DistanceY":
                         modeval = this.currentGraphSetting.DistanceY_Mode1;
+                        break;
+                    case "DistanceY_Center":
+                        modeval = this.currentGraphSetting.DistanceY_CenterScale_Mode1;
                         break;
                 }
             }

@@ -175,18 +175,23 @@ namespace RM_3000.Controls
                     {
                         case BoardType.Type_B:
                         case BoardType.Type_R:
+                            this.PointVisible = true;
                             NowPointLimit = SystemSetting.SystemConfig.NumPointLimit;
                             break;
 
                         case BoardType.Type_L:
+                            this.PointVisible = true;
                             NowPointLimit = 3;
                             break;
 
                         case BoardType.Type_T:
+                            this.PointVisible = false;
                             NowPointLimit = 0;
                             break;
 
                         case BoardType.Type_V:
+                            this.PointVisible = true;
+
                             //レンジによって切り替え
                             switch (Range_V)
                             {
@@ -207,6 +212,7 @@ namespace RM_3000.Controls
                             }
                             break;
                         default:
+                            this.PointVisible = false;
                             NowPointLimit = 0;
                             break;
                     }

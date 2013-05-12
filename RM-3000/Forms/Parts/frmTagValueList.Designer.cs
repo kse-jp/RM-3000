@@ -31,104 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTagValueList));
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblDataValue0 = new System.Windows.Forms.Label();
-            this.lblDataValue10 = new System.Windows.Forms.Label();
-            this.lblDataValue9 = new System.Windows.Forms.Label();
-            this.lblDataValue8 = new System.Windows.Forms.Label();
-            this.lblDataValue7 = new System.Windows.Forms.Label();
-            this.lblDataValue6 = new System.Windows.Forms.Label();
-            this.lblDataValue5 = new System.Windows.Forms.Label();
-            this.lblDataValue4 = new System.Windows.Forms.Label();
-            this.lblDataValue3 = new System.Windows.Forms.Label();
-            this.lblDataValue2 = new System.Windows.Forms.Label();
-            this.lblDataValue1 = new System.Windows.Forms.Label();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnEnd = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pnlAnalysis = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblAnlDataMeas0 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas10 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas9 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas8 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas7 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas6 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas5 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas4 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas3 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas2 = new System.Windows.Forms.Label();
-            this.lblAnlDataMeas1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblAnlData0 = new System.Windows.Forms.Label();
-            this.lblAnlData10 = new System.Windows.Forms.Label();
-            this.lblAnlData9 = new System.Windows.Forms.Label();
-            this.lblAnlData8 = new System.Windows.Forms.Label();
-            this.lblAnlData7 = new System.Windows.Forms.Label();
-            this.lblAnlData6 = new System.Windows.Forms.Label();
-            this.lblAnlData5 = new System.Windows.Forms.Label();
-            this.lblAnlData4 = new System.Windows.Forms.Label();
-            this.lblAnlData3 = new System.Windows.Forms.Label();
-            this.lblAnlData2 = new System.Windows.Forms.Label();
-            this.lblAnlData1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnTabClose = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblAnlMeasUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlDataMeas_Zero1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlMeasItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
-            this.lblAnlysisItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
@@ -140,6 +42,17 @@
             this.lblUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblDataValue0 = new System.Windows.Forms.Label();
+            this.lblDataValue10 = new System.Windows.Forms.Label();
+            this.lblDataValue9 = new System.Windows.Forms.Label();
+            this.lblDataValue8 = new System.Windows.Forms.Label();
+            this.lblDataValue7 = new System.Windows.Forms.Label();
+            this.lblDataValue6 = new System.Windows.Forms.Label();
+            this.lblDataValue5 = new System.Windows.Forms.Label();
+            this.lblDataValue4 = new System.Windows.Forms.Label();
+            this.lblDataValue3 = new System.Windows.Forms.Label();
+            this.lblDataValue2 = new System.Windows.Forms.Label();
+            this.lblDataValue1 = new System.Windows.Forms.Label();
             this.lblDataValue_Zero0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblDataValue_Zero10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblDataValue_Zero9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
@@ -162,6 +75,93 @@
             this.lblItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.lblItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnEnd = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pnlAnalysis = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblAnlMeasUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas0 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas10 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas9 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas8 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas7 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas6 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas5 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas4 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas3 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas2 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas1 = new System.Windows.Forms.Label();
+            this.lblAnlDataMeas_Zero0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlDataMeas_Zero1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlMeasItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblAnlUnit0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlUnit1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlData0 = new System.Windows.Forms.Label();
+            this.lblAnlData10 = new System.Windows.Forms.Label();
+            this.lblAnlData9 = new System.Windows.Forms.Label();
+            this.lblAnlData8 = new System.Windows.Forms.Label();
+            this.lblAnlData7 = new System.Windows.Forms.Label();
+            this.lblAnlData6 = new System.Windows.Forms.Label();
+            this.lblAnlData5 = new System.Windows.Forms.Label();
+            this.lblAnlData4 = new System.Windows.Forms.Label();
+            this.lblAnlData3 = new System.Windows.Forms.Label();
+            this.lblAnlData2 = new System.Windows.Forms.Label();
+            this.lblAnlData1 = new System.Windows.Forms.Label();
+            this.lblAnlysisItem0 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem10 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem9 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem8 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem7 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem6 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem5 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem4 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem3 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem2 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.lblAnlysisItem1 = new RM_3000.Controls.AutoFontSizeLabel(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTabClose = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlAnalysis.SuspendLayout();
@@ -221,6 +221,94 @@
             this.pnlMain.Controls.Add(this.pnlHeader);
             resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.Name = "pnlMain";
+            // 
+            // lblUnit0
+            // 
+            this.lblUnit0.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit0, "lblUnit0");
+            this.lblUnit0.MaxFontSize = 10F;
+            this.lblUnit0.MinFontSize = 4F;
+            this.lblUnit0.Name = "lblUnit0";
+            // 
+            // lblUnit10
+            // 
+            this.lblUnit10.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit10, "lblUnit10");
+            this.lblUnit10.MaxFontSize = 10F;
+            this.lblUnit10.MinFontSize = 4F;
+            this.lblUnit10.Name = "lblUnit10";
+            // 
+            // lblUnit9
+            // 
+            this.lblUnit9.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit9, "lblUnit9");
+            this.lblUnit9.MaxFontSize = 10F;
+            this.lblUnit9.MinFontSize = 4F;
+            this.lblUnit9.Name = "lblUnit9";
+            // 
+            // lblUnit8
+            // 
+            this.lblUnit8.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit8, "lblUnit8");
+            this.lblUnit8.MaxFontSize = 10F;
+            this.lblUnit8.MinFontSize = 4F;
+            this.lblUnit8.Name = "lblUnit8";
+            // 
+            // lblUnit7
+            // 
+            this.lblUnit7.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit7, "lblUnit7");
+            this.lblUnit7.MaxFontSize = 10F;
+            this.lblUnit7.MinFontSize = 4F;
+            this.lblUnit7.Name = "lblUnit7";
+            // 
+            // lblUnit6
+            // 
+            this.lblUnit6.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit6, "lblUnit6");
+            this.lblUnit6.MaxFontSize = 10F;
+            this.lblUnit6.MinFontSize = 4F;
+            this.lblUnit6.Name = "lblUnit6";
+            // 
+            // lblUnit5
+            // 
+            this.lblUnit5.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit5, "lblUnit5");
+            this.lblUnit5.MaxFontSize = 10F;
+            this.lblUnit5.MinFontSize = 4F;
+            this.lblUnit5.Name = "lblUnit5";
+            // 
+            // lblUnit4
+            // 
+            this.lblUnit4.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit4, "lblUnit4");
+            this.lblUnit4.MaxFontSize = 10F;
+            this.lblUnit4.MinFontSize = 4F;
+            this.lblUnit4.Name = "lblUnit4";
+            // 
+            // lblUnit3
+            // 
+            this.lblUnit3.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit3, "lblUnit3");
+            this.lblUnit3.MaxFontSize = 10F;
+            this.lblUnit3.MinFontSize = 4F;
+            this.lblUnit3.Name = "lblUnit3";
+            // 
+            // lblUnit2
+            // 
+            this.lblUnit2.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit2, "lblUnit2");
+            this.lblUnit2.MaxFontSize = 10F;
+            this.lblUnit2.MinFontSize = 4F;
+            this.lblUnit2.Name = "lblUnit2";
+            // 
+            // lblUnit1
+            // 
+            this.lblUnit1.AutoFontSize = true;
+            resources.ApplyResources(this.lblUnit1, "lblUnit1");
+            this.lblUnit1.MaxFontSize = 10F;
+            this.lblUnit1.MinFontSize = 4F;
+            this.lblUnit1.Name = "lblUnit1";
             // 
             // lblDataValue0
             // 
@@ -298,6 +386,204 @@
             this.lblDataValue1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.lblDataValue1, "lblDataValue1");
             this.lblDataValue1.Name = "lblDataValue1";
+            // 
+            // lblDataValue_Zero0
+            // 
+            this.lblDataValue_Zero0.AutoFontSize = true;
+            this.lblDataValue_Zero0.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero0, "lblDataValue_Zero0");
+            this.lblDataValue_Zero0.MaxFontSize = 10F;
+            this.lblDataValue_Zero0.MinFontSize = 4F;
+            this.lblDataValue_Zero0.Name = "lblDataValue_Zero0";
+            // 
+            // lblDataValue_Zero10
+            // 
+            this.lblDataValue_Zero10.AutoFontSize = true;
+            this.lblDataValue_Zero10.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero10, "lblDataValue_Zero10");
+            this.lblDataValue_Zero10.MaxFontSize = 10F;
+            this.lblDataValue_Zero10.MinFontSize = 4F;
+            this.lblDataValue_Zero10.Name = "lblDataValue_Zero10";
+            // 
+            // lblDataValue_Zero9
+            // 
+            this.lblDataValue_Zero9.AutoFontSize = true;
+            this.lblDataValue_Zero9.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero9, "lblDataValue_Zero9");
+            this.lblDataValue_Zero9.MaxFontSize = 10F;
+            this.lblDataValue_Zero9.MinFontSize = 4F;
+            this.lblDataValue_Zero9.Name = "lblDataValue_Zero9";
+            // 
+            // lblDataValue_Zero8
+            // 
+            this.lblDataValue_Zero8.AutoFontSize = true;
+            this.lblDataValue_Zero8.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero8, "lblDataValue_Zero8");
+            this.lblDataValue_Zero8.MaxFontSize = 10F;
+            this.lblDataValue_Zero8.MinFontSize = 4F;
+            this.lblDataValue_Zero8.Name = "lblDataValue_Zero8";
+            // 
+            // lblDataValue_Zero7
+            // 
+            this.lblDataValue_Zero7.AutoFontSize = true;
+            this.lblDataValue_Zero7.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero7, "lblDataValue_Zero7");
+            this.lblDataValue_Zero7.MaxFontSize = 10F;
+            this.lblDataValue_Zero7.MinFontSize = 4F;
+            this.lblDataValue_Zero7.Name = "lblDataValue_Zero7";
+            // 
+            // lblDataValue_Zero6
+            // 
+            this.lblDataValue_Zero6.AutoFontSize = true;
+            this.lblDataValue_Zero6.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero6, "lblDataValue_Zero6");
+            this.lblDataValue_Zero6.MaxFontSize = 10F;
+            this.lblDataValue_Zero6.MinFontSize = 4F;
+            this.lblDataValue_Zero6.Name = "lblDataValue_Zero6";
+            // 
+            // lblDataValue_Zero5
+            // 
+            this.lblDataValue_Zero5.AutoFontSize = true;
+            this.lblDataValue_Zero5.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero5, "lblDataValue_Zero5");
+            this.lblDataValue_Zero5.MaxFontSize = 10F;
+            this.lblDataValue_Zero5.MinFontSize = 4F;
+            this.lblDataValue_Zero5.Name = "lblDataValue_Zero5";
+            // 
+            // lblDataValue_Zero4
+            // 
+            this.lblDataValue_Zero4.AutoFontSize = true;
+            this.lblDataValue_Zero4.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero4, "lblDataValue_Zero4");
+            this.lblDataValue_Zero4.MaxFontSize = 10F;
+            this.lblDataValue_Zero4.MinFontSize = 4F;
+            this.lblDataValue_Zero4.Name = "lblDataValue_Zero4";
+            // 
+            // lblDataValue_Zero3
+            // 
+            this.lblDataValue_Zero3.AutoFontSize = true;
+            this.lblDataValue_Zero3.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero3, "lblDataValue_Zero3");
+            this.lblDataValue_Zero3.MaxFontSize = 10F;
+            this.lblDataValue_Zero3.MinFontSize = 4F;
+            this.lblDataValue_Zero3.Name = "lblDataValue_Zero3";
+            // 
+            // lblDataValue_Zero2
+            // 
+            this.lblDataValue_Zero2.AutoFontSize = true;
+            this.lblDataValue_Zero2.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero2, "lblDataValue_Zero2");
+            this.lblDataValue_Zero2.MaxFontSize = 10F;
+            this.lblDataValue_Zero2.MinFontSize = 4F;
+            this.lblDataValue_Zero2.Name = "lblDataValue_Zero2";
+            // 
+            // lblDataValue_Zero1
+            // 
+            this.lblDataValue_Zero1.AutoFontSize = true;
+            this.lblDataValue_Zero1.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataValue_Zero1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblDataValue_Zero1, "lblDataValue_Zero1");
+            this.lblDataValue_Zero1.MaxFontSize = 10F;
+            this.lblDataValue_Zero1.MinFontSize = 4F;
+            this.lblDataValue_Zero1.Name = "lblDataValue_Zero1";
+            // 
+            // lblItem0
+            // 
+            this.lblItem0.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem0, "lblItem0");
+            this.lblItem0.MaxFontSize = 12F;
+            this.lblItem0.MinFontSize = 6F;
+            this.lblItem0.Name = "lblItem0";
+            // 
+            // lblItem10
+            // 
+            this.lblItem10.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem10, "lblItem10");
+            this.lblItem10.MaxFontSize = 12F;
+            this.lblItem10.MinFontSize = 6F;
+            this.lblItem10.Name = "lblItem10";
+            // 
+            // lblItem9
+            // 
+            this.lblItem9.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem9, "lblItem9");
+            this.lblItem9.MaxFontSize = 12F;
+            this.lblItem9.MinFontSize = 6F;
+            this.lblItem9.Name = "lblItem9";
+            // 
+            // lblItem8
+            // 
+            this.lblItem8.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem8, "lblItem8");
+            this.lblItem8.MaxFontSize = 12F;
+            this.lblItem8.MinFontSize = 6F;
+            this.lblItem8.Name = "lblItem8";
+            // 
+            // lblItem7
+            // 
+            this.lblItem7.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem7, "lblItem7");
+            this.lblItem7.MaxFontSize = 12F;
+            this.lblItem7.MinFontSize = 6F;
+            this.lblItem7.Name = "lblItem7";
+            // 
+            // lblItem6
+            // 
+            this.lblItem6.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem6, "lblItem6");
+            this.lblItem6.MaxFontSize = 12F;
+            this.lblItem6.MinFontSize = 6F;
+            this.lblItem6.Name = "lblItem6";
+            // 
+            // lblItem5
+            // 
+            this.lblItem5.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem5, "lblItem5");
+            this.lblItem5.MaxFontSize = 12F;
+            this.lblItem5.MinFontSize = 6F;
+            this.lblItem5.Name = "lblItem5";
+            // 
+            // lblItem4
+            // 
+            this.lblItem4.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem4, "lblItem4");
+            this.lblItem4.MaxFontSize = 12F;
+            this.lblItem4.MinFontSize = 6F;
+            this.lblItem4.Name = "lblItem4";
+            // 
+            // lblItem3
+            // 
+            this.lblItem3.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem3, "lblItem3");
+            this.lblItem3.MaxFontSize = 12F;
+            this.lblItem3.MinFontSize = 6F;
+            this.lblItem3.Name = "lblItem3";
+            // 
+            // lblItem2
+            // 
+            this.lblItem2.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem2, "lblItem2");
+            this.lblItem2.MaxFontSize = 12F;
+            this.lblItem2.MinFontSize = 6F;
+            this.lblItem2.Name = "lblItem2";
+            // 
+            // lblItem1
+            // 
+            this.lblItem1.AutoFontSize = true;
+            resources.ApplyResources(this.lblItem1, "lblItem1");
+            this.lblItem1.MaxFontSize = 12F;
+            this.lblItem1.MinFontSize = 6F;
+            this.lblItem1.Name = "lblItem1";
             // 
             // pnlHeader
             // 
@@ -384,219 +670,6 @@
             this.tabPage1.Controls.Add(this.lblAnlMeasItem1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
-            // 
-            // lblAnlDataMeas0
-            // 
-            this.lblAnlDataMeas0.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas0, "lblAnlDataMeas0");
-            this.lblAnlDataMeas0.Name = "lblAnlDataMeas0";
-            // 
-            // lblAnlDataMeas10
-            // 
-            this.lblAnlDataMeas10.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas10, "lblAnlDataMeas10");
-            this.lblAnlDataMeas10.Name = "lblAnlDataMeas10";
-            // 
-            // lblAnlDataMeas9
-            // 
-            this.lblAnlDataMeas9.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas9, "lblAnlDataMeas9");
-            this.lblAnlDataMeas9.Name = "lblAnlDataMeas9";
-            // 
-            // lblAnlDataMeas8
-            // 
-            this.lblAnlDataMeas8.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas8, "lblAnlDataMeas8");
-            this.lblAnlDataMeas8.Name = "lblAnlDataMeas8";
-            // 
-            // lblAnlDataMeas7
-            // 
-            this.lblAnlDataMeas7.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas7, "lblAnlDataMeas7");
-            this.lblAnlDataMeas7.Name = "lblAnlDataMeas7";
-            // 
-            // lblAnlDataMeas6
-            // 
-            this.lblAnlDataMeas6.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas6, "lblAnlDataMeas6");
-            this.lblAnlDataMeas6.Name = "lblAnlDataMeas6";
-            // 
-            // lblAnlDataMeas5
-            // 
-            this.lblAnlDataMeas5.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas5, "lblAnlDataMeas5");
-            this.lblAnlDataMeas5.Name = "lblAnlDataMeas5";
-            // 
-            // lblAnlDataMeas4
-            // 
-            this.lblAnlDataMeas4.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas4, "lblAnlDataMeas4");
-            this.lblAnlDataMeas4.Name = "lblAnlDataMeas4";
-            // 
-            // lblAnlDataMeas3
-            // 
-            this.lblAnlDataMeas3.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas3, "lblAnlDataMeas3");
-            this.lblAnlDataMeas3.Name = "lblAnlDataMeas3";
-            // 
-            // lblAnlDataMeas2
-            // 
-            this.lblAnlDataMeas2.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas2, "lblAnlDataMeas2");
-            this.lblAnlDataMeas2.Name = "lblAnlDataMeas2";
-            // 
-            // lblAnlDataMeas1
-            // 
-            this.lblAnlDataMeas1.BackColor = System.Drawing.Color.White;
-            this.lblAnlDataMeas1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlDataMeas1, "lblAnlDataMeas1");
-            this.lblAnlDataMeas1.Name = "lblAnlDataMeas1";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.lblAnlUnit0);
-            this.tabPage2.Controls.Add(this.lblAnlUnit10);
-            this.tabPage2.Controls.Add(this.lblAnlUnit9);
-            this.tabPage2.Controls.Add(this.lblAnlUnit8);
-            this.tabPage2.Controls.Add(this.lblAnlUnit7);
-            this.tabPage2.Controls.Add(this.lblAnlUnit6);
-            this.tabPage2.Controls.Add(this.lblAnlUnit5);
-            this.tabPage2.Controls.Add(this.lblAnlUnit4);
-            this.tabPage2.Controls.Add(this.lblAnlUnit3);
-            this.tabPage2.Controls.Add(this.lblAnlUnit2);
-            this.tabPage2.Controls.Add(this.lblAnlUnit1);
-            this.tabPage2.Controls.Add(this.lblAnlData0);
-            this.tabPage2.Controls.Add(this.lblAnlData10);
-            this.tabPage2.Controls.Add(this.lblAnlData9);
-            this.tabPage2.Controls.Add(this.lblAnlData8);
-            this.tabPage2.Controls.Add(this.lblAnlData7);
-            this.tabPage2.Controls.Add(this.lblAnlData6);
-            this.tabPage2.Controls.Add(this.lblAnlData5);
-            this.tabPage2.Controls.Add(this.lblAnlData4);
-            this.tabPage2.Controls.Add(this.lblAnlData3);
-            this.tabPage2.Controls.Add(this.lblAnlData2);
-            this.tabPage2.Controls.Add(this.lblAnlData1);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem0);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem10);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem9);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem8);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem7);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem6);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem5);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem4);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem3);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem2);
-            this.tabPage2.Controls.Add(this.lblAnlysisItem1);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            // 
-            // lblAnlData0
-            // 
-            this.lblAnlData0.BackColor = System.Drawing.Color.White;
-            this.lblAnlData0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData0, "lblAnlData0");
-            this.lblAnlData0.Name = "lblAnlData0";
-            // 
-            // lblAnlData10
-            // 
-            this.lblAnlData10.BackColor = System.Drawing.Color.White;
-            this.lblAnlData10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData10, "lblAnlData10");
-            this.lblAnlData10.Name = "lblAnlData10";
-            // 
-            // lblAnlData9
-            // 
-            this.lblAnlData9.BackColor = System.Drawing.Color.White;
-            this.lblAnlData9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData9, "lblAnlData9");
-            this.lblAnlData9.Name = "lblAnlData9";
-            // 
-            // lblAnlData8
-            // 
-            this.lblAnlData8.BackColor = System.Drawing.Color.White;
-            this.lblAnlData8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData8, "lblAnlData8");
-            this.lblAnlData8.Name = "lblAnlData8";
-            // 
-            // lblAnlData7
-            // 
-            this.lblAnlData7.BackColor = System.Drawing.Color.White;
-            this.lblAnlData7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData7, "lblAnlData7");
-            this.lblAnlData7.Name = "lblAnlData7";
-            // 
-            // lblAnlData6
-            // 
-            this.lblAnlData6.BackColor = System.Drawing.Color.White;
-            this.lblAnlData6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData6, "lblAnlData6");
-            this.lblAnlData6.Name = "lblAnlData6";
-            // 
-            // lblAnlData5
-            // 
-            this.lblAnlData5.BackColor = System.Drawing.Color.White;
-            this.lblAnlData5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData5, "lblAnlData5");
-            this.lblAnlData5.Name = "lblAnlData5";
-            // 
-            // lblAnlData4
-            // 
-            this.lblAnlData4.BackColor = System.Drawing.Color.White;
-            this.lblAnlData4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData4, "lblAnlData4");
-            this.lblAnlData4.Name = "lblAnlData4";
-            // 
-            // lblAnlData3
-            // 
-            this.lblAnlData3.BackColor = System.Drawing.Color.White;
-            this.lblAnlData3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData3, "lblAnlData3");
-            this.lblAnlData3.Name = "lblAnlData3";
-            // 
-            // lblAnlData2
-            // 
-            this.lblAnlData2.BackColor = System.Drawing.Color.White;
-            this.lblAnlData2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData2, "lblAnlData2");
-            this.lblAnlData2.Name = "lblAnlData2";
-            // 
-            // lblAnlData1
-            // 
-            this.lblAnlData1.BackColor = System.Drawing.Color.White;
-            this.lblAnlData1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblAnlData1, "lblAnlData1");
-            this.lblAnlData1.Name = "lblAnlData1";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel2.Controls.Add(this.btnTabClose);
-            this.panel2.Controls.Add(this.label12);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // btnTabClose
-            // 
-            resources.ApplyResources(this.btnTabClose, "btnTabClose");
-            this.btnTabClose.Name = "btnTabClose";
-            this.btnTabClose.UseVisualStyleBackColor = true;
-            this.btnTabClose.Click += new System.EventHandler(this.btnTabClose_Click);
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
             // 
             // lblAnlMeasUnit0
             // 
@@ -685,6 +758,83 @@
             this.lblAnlMeasUnit1.MaxFontSize = 10F;
             this.lblAnlMeasUnit1.MinFontSize = 4F;
             this.lblAnlMeasUnit1.Name = "lblAnlMeasUnit1";
+            // 
+            // lblAnlDataMeas0
+            // 
+            this.lblAnlDataMeas0.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas0, "lblAnlDataMeas0");
+            this.lblAnlDataMeas0.Name = "lblAnlDataMeas0";
+            // 
+            // lblAnlDataMeas10
+            // 
+            this.lblAnlDataMeas10.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas10, "lblAnlDataMeas10");
+            this.lblAnlDataMeas10.Name = "lblAnlDataMeas10";
+            // 
+            // lblAnlDataMeas9
+            // 
+            this.lblAnlDataMeas9.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas9, "lblAnlDataMeas9");
+            this.lblAnlDataMeas9.Name = "lblAnlDataMeas9";
+            // 
+            // lblAnlDataMeas8
+            // 
+            this.lblAnlDataMeas8.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas8, "lblAnlDataMeas8");
+            this.lblAnlDataMeas8.Name = "lblAnlDataMeas8";
+            // 
+            // lblAnlDataMeas7
+            // 
+            this.lblAnlDataMeas7.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas7, "lblAnlDataMeas7");
+            this.lblAnlDataMeas7.Name = "lblAnlDataMeas7";
+            // 
+            // lblAnlDataMeas6
+            // 
+            this.lblAnlDataMeas6.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas6, "lblAnlDataMeas6");
+            this.lblAnlDataMeas6.Name = "lblAnlDataMeas6";
+            // 
+            // lblAnlDataMeas5
+            // 
+            this.lblAnlDataMeas5.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas5, "lblAnlDataMeas5");
+            this.lblAnlDataMeas5.Name = "lblAnlDataMeas5";
+            // 
+            // lblAnlDataMeas4
+            // 
+            this.lblAnlDataMeas4.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas4, "lblAnlDataMeas4");
+            this.lblAnlDataMeas4.Name = "lblAnlDataMeas4";
+            // 
+            // lblAnlDataMeas3
+            // 
+            this.lblAnlDataMeas3.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas3, "lblAnlDataMeas3");
+            this.lblAnlDataMeas3.Name = "lblAnlDataMeas3";
+            // 
+            // lblAnlDataMeas2
+            // 
+            this.lblAnlDataMeas2.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas2, "lblAnlDataMeas2");
+            this.lblAnlDataMeas2.Name = "lblAnlDataMeas2";
+            // 
+            // lblAnlDataMeas1
+            // 
+            this.lblAnlDataMeas1.BackColor = System.Drawing.Color.White;
+            this.lblAnlDataMeas1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlDataMeas1, "lblAnlDataMeas1");
+            this.lblAnlDataMeas1.Name = "lblAnlDataMeas1";
             // 
             // lblAnlDataMeas_Zero0
             // 
@@ -884,6 +1034,45 @@
             this.lblAnlMeasItem1.MinFontSize = 0F;
             this.lblAnlMeasItem1.Name = "lblAnlMeasItem1";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.lblAnlUnit0);
+            this.tabPage2.Controls.Add(this.lblAnlUnit10);
+            this.tabPage2.Controls.Add(this.lblAnlUnit9);
+            this.tabPage2.Controls.Add(this.lblAnlUnit8);
+            this.tabPage2.Controls.Add(this.lblAnlUnit7);
+            this.tabPage2.Controls.Add(this.lblAnlUnit6);
+            this.tabPage2.Controls.Add(this.lblAnlUnit5);
+            this.tabPage2.Controls.Add(this.lblAnlUnit4);
+            this.tabPage2.Controls.Add(this.lblAnlUnit3);
+            this.tabPage2.Controls.Add(this.lblAnlUnit2);
+            this.tabPage2.Controls.Add(this.lblAnlUnit1);
+            this.tabPage2.Controls.Add(this.lblAnlData0);
+            this.tabPage2.Controls.Add(this.lblAnlData10);
+            this.tabPage2.Controls.Add(this.lblAnlData9);
+            this.tabPage2.Controls.Add(this.lblAnlData8);
+            this.tabPage2.Controls.Add(this.lblAnlData7);
+            this.tabPage2.Controls.Add(this.lblAnlData6);
+            this.tabPage2.Controls.Add(this.lblAnlData5);
+            this.tabPage2.Controls.Add(this.lblAnlData4);
+            this.tabPage2.Controls.Add(this.lblAnlData3);
+            this.tabPage2.Controls.Add(this.lblAnlData2);
+            this.tabPage2.Controls.Add(this.lblAnlData1);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem0);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem10);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem9);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem8);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem7);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem6);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem5);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem4);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem3);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem2);
+            this.tabPage2.Controls.Add(this.lblAnlysisItem1);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            // 
             // lblAnlUnit0
             // 
             this.lblAnlUnit0.AutoFontSize = true;
@@ -971,6 +1160,83 @@
             this.lblAnlUnit1.MaxFontSize = 10F;
             this.lblAnlUnit1.MinFontSize = 4F;
             this.lblAnlUnit1.Name = "lblAnlUnit1";
+            // 
+            // lblAnlData0
+            // 
+            this.lblAnlData0.BackColor = System.Drawing.Color.White;
+            this.lblAnlData0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData0, "lblAnlData0");
+            this.lblAnlData0.Name = "lblAnlData0";
+            // 
+            // lblAnlData10
+            // 
+            this.lblAnlData10.BackColor = System.Drawing.Color.White;
+            this.lblAnlData10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData10, "lblAnlData10");
+            this.lblAnlData10.Name = "lblAnlData10";
+            // 
+            // lblAnlData9
+            // 
+            this.lblAnlData9.BackColor = System.Drawing.Color.White;
+            this.lblAnlData9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData9, "lblAnlData9");
+            this.lblAnlData9.Name = "lblAnlData9";
+            // 
+            // lblAnlData8
+            // 
+            this.lblAnlData8.BackColor = System.Drawing.Color.White;
+            this.lblAnlData8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData8, "lblAnlData8");
+            this.lblAnlData8.Name = "lblAnlData8";
+            // 
+            // lblAnlData7
+            // 
+            this.lblAnlData7.BackColor = System.Drawing.Color.White;
+            this.lblAnlData7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData7, "lblAnlData7");
+            this.lblAnlData7.Name = "lblAnlData7";
+            // 
+            // lblAnlData6
+            // 
+            this.lblAnlData6.BackColor = System.Drawing.Color.White;
+            this.lblAnlData6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData6, "lblAnlData6");
+            this.lblAnlData6.Name = "lblAnlData6";
+            // 
+            // lblAnlData5
+            // 
+            this.lblAnlData5.BackColor = System.Drawing.Color.White;
+            this.lblAnlData5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData5, "lblAnlData5");
+            this.lblAnlData5.Name = "lblAnlData5";
+            // 
+            // lblAnlData4
+            // 
+            this.lblAnlData4.BackColor = System.Drawing.Color.White;
+            this.lblAnlData4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData4, "lblAnlData4");
+            this.lblAnlData4.Name = "lblAnlData4";
+            // 
+            // lblAnlData3
+            // 
+            this.lblAnlData3.BackColor = System.Drawing.Color.White;
+            this.lblAnlData3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData3, "lblAnlData3");
+            this.lblAnlData3.Name = "lblAnlData3";
+            // 
+            // lblAnlData2
+            // 
+            this.lblAnlData2.BackColor = System.Drawing.Color.White;
+            this.lblAnlData2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData2, "lblAnlData2");
+            this.lblAnlData2.Name = "lblAnlData2";
+            // 
+            // lblAnlData1
+            // 
+            this.lblAnlData1.BackColor = System.Drawing.Color.White;
+            this.lblAnlData1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.lblAnlData1, "lblAnlData1");
+            this.lblAnlData1.Name = "lblAnlData1";
             // 
             // lblAnlysisItem0
             // 
@@ -1060,291 +1326,25 @@
             this.lblAnlysisItem1.MinFontSize = 0F;
             this.lblAnlysisItem1.Name = "lblAnlysisItem1";
             // 
-            // lblUnit0
+            // panel2
             // 
-            this.lblUnit0.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit0, "lblUnit0");
-            this.lblUnit0.MaxFontSize = 10F;
-            this.lblUnit0.MinFontSize = 4F;
-            this.lblUnit0.Name = "lblUnit0";
+            this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel2.Controls.Add(this.btnTabClose);
+            this.panel2.Controls.Add(this.label12);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
-            // lblUnit10
+            // btnTabClose
             // 
-            this.lblUnit10.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit10, "lblUnit10");
-            this.lblUnit10.MaxFontSize = 10F;
-            this.lblUnit10.MinFontSize = 4F;
-            this.lblUnit10.Name = "lblUnit10";
+            resources.ApplyResources(this.btnTabClose, "btnTabClose");
+            this.btnTabClose.Name = "btnTabClose";
+            this.btnTabClose.UseVisualStyleBackColor = true;
+            this.btnTabClose.Click += new System.EventHandler(this.btnTabClose_Click);
             // 
-            // lblUnit9
+            // label12
             // 
-            this.lblUnit9.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit9, "lblUnit9");
-            this.lblUnit9.MaxFontSize = 10F;
-            this.lblUnit9.MinFontSize = 4F;
-            this.lblUnit9.Name = "lblUnit9";
-            // 
-            // lblUnit8
-            // 
-            this.lblUnit8.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit8, "lblUnit8");
-            this.lblUnit8.MaxFontSize = 10F;
-            this.lblUnit8.MinFontSize = 4F;
-            this.lblUnit8.Name = "lblUnit8";
-            // 
-            // lblUnit7
-            // 
-            this.lblUnit7.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit7, "lblUnit7");
-            this.lblUnit7.MaxFontSize = 10F;
-            this.lblUnit7.MinFontSize = 4F;
-            this.lblUnit7.Name = "lblUnit7";
-            // 
-            // lblUnit6
-            // 
-            this.lblUnit6.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit6, "lblUnit6");
-            this.lblUnit6.MaxFontSize = 10F;
-            this.lblUnit6.MinFontSize = 4F;
-            this.lblUnit6.Name = "lblUnit6";
-            // 
-            // lblUnit5
-            // 
-            this.lblUnit5.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit5, "lblUnit5");
-            this.lblUnit5.MaxFontSize = 10F;
-            this.lblUnit5.MinFontSize = 4F;
-            this.lblUnit5.Name = "lblUnit5";
-            // 
-            // lblUnit4
-            // 
-            this.lblUnit4.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit4, "lblUnit4");
-            this.lblUnit4.MaxFontSize = 10F;
-            this.lblUnit4.MinFontSize = 4F;
-            this.lblUnit4.Name = "lblUnit4";
-            // 
-            // lblUnit3
-            // 
-            this.lblUnit3.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit3, "lblUnit3");
-            this.lblUnit3.MaxFontSize = 10F;
-            this.lblUnit3.MinFontSize = 4F;
-            this.lblUnit3.Name = "lblUnit3";
-            // 
-            // lblUnit2
-            // 
-            this.lblUnit2.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit2, "lblUnit2");
-            this.lblUnit2.MaxFontSize = 10F;
-            this.lblUnit2.MinFontSize = 4F;
-            this.lblUnit2.Name = "lblUnit2";
-            // 
-            // lblUnit1
-            // 
-            this.lblUnit1.AutoFontSize = true;
-            resources.ApplyResources(this.lblUnit1, "lblUnit1");
-            this.lblUnit1.MaxFontSize = 10F;
-            this.lblUnit1.MinFontSize = 4F;
-            this.lblUnit1.Name = "lblUnit1";
-            // 
-            // lblDataValue_Zero0
-            // 
-            this.lblDataValue_Zero0.AutoFontSize = true;
-            this.lblDataValue_Zero0.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero0, "lblDataValue_Zero0");
-            this.lblDataValue_Zero0.MaxFontSize = 10F;
-            this.lblDataValue_Zero0.MinFontSize = 4F;
-            this.lblDataValue_Zero0.Name = "lblDataValue_Zero0";
-            // 
-            // lblDataValue_Zero10
-            // 
-            this.lblDataValue_Zero10.AutoFontSize = true;
-            this.lblDataValue_Zero10.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero10, "lblDataValue_Zero10");
-            this.lblDataValue_Zero10.MaxFontSize = 10F;
-            this.lblDataValue_Zero10.MinFontSize = 4F;
-            this.lblDataValue_Zero10.Name = "lblDataValue_Zero10";
-            // 
-            // lblDataValue_Zero9
-            // 
-            this.lblDataValue_Zero9.AutoFontSize = true;
-            this.lblDataValue_Zero9.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero9, "lblDataValue_Zero9");
-            this.lblDataValue_Zero9.MaxFontSize = 0F;
-            this.lblDataValue_Zero9.MinFontSize = 0F;
-            this.lblDataValue_Zero9.Name = "lblDataValue_Zero9";
-            // 
-            // lblDataValue_Zero8
-            // 
-            this.lblDataValue_Zero8.AutoFontSize = true;
-            this.lblDataValue_Zero8.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero8, "lblDataValue_Zero8");
-            this.lblDataValue_Zero8.MaxFontSize = 0F;
-            this.lblDataValue_Zero8.MinFontSize = 0F;
-            this.lblDataValue_Zero8.Name = "lblDataValue_Zero8";
-            // 
-            // lblDataValue_Zero7
-            // 
-            this.lblDataValue_Zero7.AutoFontSize = true;
-            this.lblDataValue_Zero7.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero7, "lblDataValue_Zero7");
-            this.lblDataValue_Zero7.MaxFontSize = 0F;
-            this.lblDataValue_Zero7.MinFontSize = 0F;
-            this.lblDataValue_Zero7.Name = "lblDataValue_Zero7";
-            // 
-            // lblDataValue_Zero6
-            // 
-            this.lblDataValue_Zero6.AutoFontSize = true;
-            this.lblDataValue_Zero6.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero6, "lblDataValue_Zero6");
-            this.lblDataValue_Zero6.MaxFontSize = 0F;
-            this.lblDataValue_Zero6.MinFontSize = 0F;
-            this.lblDataValue_Zero6.Name = "lblDataValue_Zero6";
-            // 
-            // lblDataValue_Zero5
-            // 
-            this.lblDataValue_Zero5.AutoFontSize = true;
-            this.lblDataValue_Zero5.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero5, "lblDataValue_Zero5");
-            this.lblDataValue_Zero5.MaxFontSize = 10F;
-            this.lblDataValue_Zero5.MinFontSize = 4F;
-            this.lblDataValue_Zero5.Name = "lblDataValue_Zero5";
-            // 
-            // lblDataValue_Zero4
-            // 
-            this.lblDataValue_Zero4.AutoFontSize = true;
-            this.lblDataValue_Zero4.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero4, "lblDataValue_Zero4");
-            this.lblDataValue_Zero4.MaxFontSize = 10F;
-            this.lblDataValue_Zero4.MinFontSize = 4F;
-            this.lblDataValue_Zero4.Name = "lblDataValue_Zero4";
-            // 
-            // lblDataValue_Zero3
-            // 
-            this.lblDataValue_Zero3.AutoFontSize = true;
-            this.lblDataValue_Zero3.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero3, "lblDataValue_Zero3");
-            this.lblDataValue_Zero3.MaxFontSize = 10F;
-            this.lblDataValue_Zero3.MinFontSize = 4F;
-            this.lblDataValue_Zero3.Name = "lblDataValue_Zero3";
-            // 
-            // lblDataValue_Zero2
-            // 
-            this.lblDataValue_Zero2.AutoFontSize = true;
-            this.lblDataValue_Zero2.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero2, "lblDataValue_Zero2");
-            this.lblDataValue_Zero2.MaxFontSize = 10F;
-            this.lblDataValue_Zero2.MinFontSize = 4F;
-            this.lblDataValue_Zero2.Name = "lblDataValue_Zero2";
-            // 
-            // lblDataValue_Zero1
-            // 
-            this.lblDataValue_Zero1.AutoFontSize = true;
-            this.lblDataValue_Zero1.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValue_Zero1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.lblDataValue_Zero1, "lblDataValue_Zero1");
-            this.lblDataValue_Zero1.MaxFontSize = 10F;
-            this.lblDataValue_Zero1.MinFontSize = 4F;
-            this.lblDataValue_Zero1.Name = "lblDataValue_Zero1";
-            // 
-            // lblItem0
-            // 
-            this.lblItem0.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem0, "lblItem0");
-            this.lblItem0.MaxFontSize = 12F;
-            this.lblItem0.MinFontSize = 6F;
-            this.lblItem0.Name = "lblItem0";
-            // 
-            // lblItem10
-            // 
-            this.lblItem10.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem10, "lblItem10");
-            this.lblItem10.MaxFontSize = 12F;
-            this.lblItem10.MinFontSize = 6F;
-            this.lblItem10.Name = "lblItem10";
-            // 
-            // lblItem9
-            // 
-            this.lblItem9.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem9, "lblItem9");
-            this.lblItem9.MaxFontSize = 12F;
-            this.lblItem9.MinFontSize = 6F;
-            this.lblItem9.Name = "lblItem9";
-            // 
-            // lblItem8
-            // 
-            this.lblItem8.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem8, "lblItem8");
-            this.lblItem8.MaxFontSize = 12F;
-            this.lblItem8.MinFontSize = 6F;
-            this.lblItem8.Name = "lblItem8";
-            // 
-            // lblItem7
-            // 
-            this.lblItem7.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem7, "lblItem7");
-            this.lblItem7.MaxFontSize = 12F;
-            this.lblItem7.MinFontSize = 6F;
-            this.lblItem7.Name = "lblItem7";
-            // 
-            // lblItem6
-            // 
-            this.lblItem6.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem6, "lblItem6");
-            this.lblItem6.MaxFontSize = 12F;
-            this.lblItem6.MinFontSize = 6F;
-            this.lblItem6.Name = "lblItem6";
-            // 
-            // lblItem5
-            // 
-            this.lblItem5.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem5, "lblItem5");
-            this.lblItem5.MaxFontSize = 12F;
-            this.lblItem5.MinFontSize = 6F;
-            this.lblItem5.Name = "lblItem5";
-            // 
-            // lblItem4
-            // 
-            this.lblItem4.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem4, "lblItem4");
-            this.lblItem4.MaxFontSize = 12F;
-            this.lblItem4.MinFontSize = 6F;
-            this.lblItem4.Name = "lblItem4";
-            // 
-            // lblItem3
-            // 
-            this.lblItem3.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem3, "lblItem3");
-            this.lblItem3.MaxFontSize = 12F;
-            this.lblItem3.MinFontSize = 6F;
-            this.lblItem3.Name = "lblItem3";
-            // 
-            // lblItem2
-            // 
-            this.lblItem2.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem2, "lblItem2");
-            this.lblItem2.MaxFontSize = 12F;
-            this.lblItem2.MinFontSize = 6F;
-            this.lblItem2.Name = "lblItem2";
-            // 
-            // lblItem1
-            // 
-            this.lblItem1.AutoFontSize = true;
-            resources.ApplyResources(this.lblItem1, "lblItem1");
-            this.lblItem1.MaxFontSize = 12F;
-            this.lblItem1.MinFontSize = 6F;
-            this.lblItem1.Name = "lblItem1";
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
             // 
             // frmTagValueList
             // 

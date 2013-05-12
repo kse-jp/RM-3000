@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MeasureSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <IsUpdated>false</IsUpdated>
-  <Mode>1</Mode>
+  <Mode>3</Mode>
   <MeasTagList>
-    <int>1</int>
+    <int>22</int>
+    <int>2</int>
     <int>-1</int>
-    <int>3</int>
     <int>4</int>
     <int>-1</int>
     <int>-1</int>
     <int>-1</int>
-    <int>11</int>
-    <int>13</int>
+    <int>8</int>
+    <int>-1</int>
     <int>-1</int>
   </MeasTagList>
   <GraphSettingList>
@@ -19,48 +19,49 @@
       <IsUpdated>false</IsUpdated>
       <Title>Graph1</Title>
       <CenterScale>0</CenterScale>
-      <Scale>200</Scale>
-      <MinimumX_Mode1>0</MinimumX_Mode1>
-      <MinimumX_Mode2>120</MinimumX_Mode2>
+      <Scale>100</Scale>
+      <MinimumX_Mode1>1</MinimumX_Mode1>
+      <MinimumX_Mode2>0</MinimumX_Mode2>
       <MinimumX_Mode3>0</MinimumX_Mode3>
       <MaxX_Mode1>1000</MaxX_Mode1>
-      <MaxX_Mode2>240</MaxX_Mode2>
-      <MaxX_Mode3>10000</MaxX_Mode3>
-      <DistanceX_Mode1>100</DistanceX_Mode1>
-      <DistanceX_Mode2>12</DistanceX_Mode2>
-      <DistanceX_Mode3>1000</DistanceX_Mode3>
+      <MaxX_Mode2>360</MaxX_Mode2>
+      <MaxX_Mode3>50000</MaxX_Mode3>
+      <DistanceX_Mode1>500</DistanceX_Mode1>
+      <DistanceX_Mode2>20</DistanceX_Mode2>
+      <DistanceX_Mode3>25000</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
       <MinimumY_Mode3>0</MinimumY_Mode3>
-      <MaxY_Mode1>10000</MaxY_Mode1>
-      <MaxY_Mode2>10000</MaxY_Mode2>
-      <MaxY_Mode3>10000</MaxY_Mode3>
-      <DistanceY_Mode1>100</DistanceY_Mode1>
+      <MaxY_Mode1>2000</MaxY_Mode1>
+      <MaxY_Mode2>2000</MaxY_Mode2>
+      <MaxY_Mode3>2000</MaxY_Mode3>
+      <DistanceY_CenterScale_Mode1>50</DistanceY_CenterScale_Mode1>
+      <DistanceY_Mode1>1000</DistanceY_Mode1>
       <DistanceY_Mode2>1000</DistanceY_Mode2>
       <DistanceY_Mode3>1000</DistanceY_Mode3>
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>1</GraphTagNo>
-          <Color>Cyan</Color>
-          <BaseScale>false</BaseScale>
-        </GraphTag>
-        <GraphTag>
-          <IsUpdated>false</IsUpdated>
           <GraphTagNo>-1</GraphTagNo>
           <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>3</GraphTagNo>
-          <Color>Purple</Color>
+          <GraphTagNo>2</GraphTagNo>
+          <Color>Red</Color>
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
           <GraphTagNo>4</GraphTagNo>
-          <Color>Yellow</Color>
+          <Color>Red</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
@@ -77,26 +78,26 @@
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>11</GraphTagNo>
-          <Color>Cyan</Color>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>12</GraphTagNo>
-          <Color>Green</Color>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>13</GraphTagNo>
-          <Color>GreenYellow</Color>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>14</GraphTagNo>
-          <Color>Orange</Color>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
       </GraphTagList>
@@ -106,29 +107,30 @@
       <IsUpdated>false</IsUpdated>
       <Title>Graph2</Title>
       <CenterScale>0</CenterScale>
-      <Scale>10</Scale>
+      <Scale>100</Scale>
       <MinimumX_Mode1>0</MinimumX_Mode1>
-      <MinimumX_Mode2>120</MinimumX_Mode2>
+      <MinimumX_Mode2>0</MinimumX_Mode2>
       <MinimumX_Mode3>0</MinimumX_Mode3>
       <MaxX_Mode1>1000</MaxX_Mode1>
-      <MaxX_Mode2>240</MaxX_Mode2>
-      <MaxX_Mode3>10000</MaxX_Mode3>
-      <DistanceX_Mode1>100</DistanceX_Mode1>
-      <DistanceX_Mode2>12</DistanceX_Mode2>
-      <DistanceX_Mode3>1000</DistanceX_Mode3>
+      <MaxX_Mode2>200</MaxX_Mode2>
+      <MaxX_Mode3>50000</MaxX_Mode3>
+      <DistanceX_Mode1>1000</DistanceX_Mode1>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
+      <DistanceX_Mode3>25000</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
       <MinimumY_Mode3>0</MinimumY_Mode3>
-      <MaxY_Mode1>10000</MaxY_Mode1>
-      <MaxY_Mode2>10000</MaxY_Mode2>
-      <MaxY_Mode3>10000</MaxY_Mode3>
-      <DistanceY_Mode1>1</DistanceY_Mode1>
+      <MaxY_Mode1>2000</MaxY_Mode1>
+      <MaxY_Mode2>2000</MaxY_Mode2>
+      <MaxY_Mode3>2000</MaxY_Mode3>
+      <DistanceY_CenterScale_Mode1>50</DistanceY_CenterScale_Mode1>
+      <DistanceY_Mode1>1000</DistanceY_Mode1>
       <DistanceY_Mode2>1000</DistanceY_Mode2>
       <DistanceY_Mode3>1000</DistanceY_Mode3>
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
-          <GraphTagNo>-1</GraphTagNo>
+          <GraphTagNo>22</GraphTagNo>
           <Color>Red</Color>
           <BaseScale>false</BaseScale>
         </GraphTag>
@@ -191,32 +193,33 @@
     </GraphSetting>
     <GraphSetting>
       <IsUpdated>false</IsUpdated>
-      <Title>Graph3</Title>
+      <Title />
       <CenterScale>0</CenterScale>
-      <Scale>10</Scale>
+      <Scale>100</Scale>
       <MinimumX_Mode1>0</MinimumX_Mode1>
-      <MinimumX_Mode2>120</MinimumX_Mode2>
+      <MinimumX_Mode2>0</MinimumX_Mode2>
       <MinimumX_Mode3>0</MinimumX_Mode3>
       <MaxX_Mode1>1000</MaxX_Mode1>
-      <MaxX_Mode2>240</MaxX_Mode2>
-      <MaxX_Mode3>10000</MaxX_Mode3>
-      <DistanceX_Mode1>100</DistanceX_Mode1>
-      <DistanceX_Mode2>12</DistanceX_Mode2>
-      <DistanceX_Mode3>1000</DistanceX_Mode3>
+      <MaxX_Mode2>200</MaxX_Mode2>
+      <MaxX_Mode3>50000</MaxX_Mode3>
+      <DistanceX_Mode1>1000</DistanceX_Mode1>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
+      <DistanceX_Mode3>25000</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
       <MinimumY_Mode3>0</MinimumY_Mode3>
-      <MaxY_Mode1>10000</MaxY_Mode1>
-      <MaxY_Mode2>10000</MaxY_Mode2>
-      <MaxY_Mode3>10000</MaxY_Mode3>
-      <DistanceY_Mode1>1</DistanceY_Mode1>
+      <MaxY_Mode1>2000</MaxY_Mode1>
+      <MaxY_Mode2>2000</MaxY_Mode2>
+      <MaxY_Mode3>2000</MaxY_Mode3>
+      <DistanceY_CenterScale_Mode1>50</DistanceY_CenterScale_Mode1>
+      <DistanceY_Mode1>1000</DistanceY_Mode1>
       <DistanceY_Mode2>1000</DistanceY_Mode2>
       <DistanceY_Mode3>1000</DistanceY_Mode3>
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
           <GraphTagNo>-1</GraphTagNo>
-          <Color>Red</Color>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
@@ -278,32 +281,33 @@
     </GraphSetting>
     <GraphSetting>
       <IsUpdated>false</IsUpdated>
-      <Title>Graph4</Title>
+      <Title />
       <CenterScale>0</CenterScale>
-      <Scale>10</Scale>
+      <Scale>100</Scale>
       <MinimumX_Mode1>0</MinimumX_Mode1>
-      <MinimumX_Mode2>120</MinimumX_Mode2>
+      <MinimumX_Mode2>0</MinimumX_Mode2>
       <MinimumX_Mode3>0</MinimumX_Mode3>
       <MaxX_Mode1>1000</MaxX_Mode1>
-      <MaxX_Mode2>240</MaxX_Mode2>
-      <MaxX_Mode3>10000</MaxX_Mode3>
-      <DistanceX_Mode1>100</DistanceX_Mode1>
-      <DistanceX_Mode2>12</DistanceX_Mode2>
-      <DistanceX_Mode3>1000</DistanceX_Mode3>
+      <MaxX_Mode2>200</MaxX_Mode2>
+      <MaxX_Mode3>50000</MaxX_Mode3>
+      <DistanceX_Mode1>1000</DistanceX_Mode1>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
+      <DistanceX_Mode3>25000</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
       <MinimumY_Mode3>0</MinimumY_Mode3>
-      <MaxY_Mode1>10000</MaxY_Mode1>
-      <MaxY_Mode2>10000</MaxY_Mode2>
-      <MaxY_Mode3>10000</MaxY_Mode3>
-      <DistanceY_Mode1>1</DistanceY_Mode1>
+      <MaxY_Mode1>2000</MaxY_Mode1>
+      <MaxY_Mode2>2000</MaxY_Mode2>
+      <MaxY_Mode3>2000</MaxY_Mode3>
+      <DistanceY_CenterScale_Mode1>50</DistanceY_CenterScale_Mode1>
+      <DistanceY_Mode1>1000</DistanceY_Mode1>
       <DistanceY_Mode2>1000</DistanceY_Mode2>
       <DistanceY_Mode3>1000</DistanceY_Mode3>
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
           <GraphTagNo>-1</GraphTagNo>
-          <Color>Red</Color>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
@@ -365,32 +369,121 @@
     </GraphSetting>
     <GraphSetting>
       <IsUpdated>false</IsUpdated>
-      <Title>Graph5</Title>
+      <Title />
       <CenterScale>0</CenterScale>
-      <Scale>10</Scale>
+      <Scale>100</Scale>
       <MinimumX_Mode1>0</MinimumX_Mode1>
-      <MinimumX_Mode2>120</MinimumX_Mode2>
+      <MinimumX_Mode2>0</MinimumX_Mode2>
       <MinimumX_Mode3>0</MinimumX_Mode3>
       <MaxX_Mode1>1000</MaxX_Mode1>
-      <MaxX_Mode2>240</MaxX_Mode2>
-      <MaxX_Mode3>10000</MaxX_Mode3>
-      <DistanceX_Mode1>100</DistanceX_Mode1>
-      <DistanceX_Mode2>12</DistanceX_Mode2>
-      <DistanceX_Mode3>1000</DistanceX_Mode3>
+      <MaxX_Mode2>200</MaxX_Mode2>
+      <MaxX_Mode3>50000</MaxX_Mode3>
+      <DistanceX_Mode1>1000</DistanceX_Mode1>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
+      <DistanceX_Mode3>25000</DistanceX_Mode3>
       <MinimumY_Mode1>0</MinimumY_Mode1>
       <MinimumY_Mode2>0</MinimumY_Mode2>
       <MinimumY_Mode3>0</MinimumY_Mode3>
-      <MaxY_Mode1>10000</MaxY_Mode1>
-      <MaxY_Mode2>10000</MaxY_Mode2>
-      <MaxY_Mode3>10000</MaxY_Mode3>
-      <DistanceY_Mode1>1</DistanceY_Mode1>
+      <MaxY_Mode1>2000</MaxY_Mode1>
+      <MaxY_Mode2>2000</MaxY_Mode2>
+      <MaxY_Mode3>2000</MaxY_Mode3>
+      <DistanceY_CenterScale_Mode1>50</DistanceY_CenterScale_Mode1>
+      <DistanceY_Mode1>1000</DistanceY_Mode1>
       <DistanceY_Mode2>1000</DistanceY_Mode2>
       <DistanceY_Mode3>1000</DistanceY_Mode3>
       <GraphTagList>
         <GraphTag>
           <IsUpdated>false</IsUpdated>
           <GraphTagNo>-1</GraphTagNo>
-          <Color>Red</Color>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
+          <BaseScale>false</BaseScale>
+        </GraphTag>
+      </GraphTagList>
+      <NumbeOfShotMode2>1</NumbeOfShotMode2>
+    </GraphSetting>
+    <GraphSetting>
+      <IsUpdated>false</IsUpdated>
+      <Title />
+      <CenterScale>0</CenterScale>
+      <Scale>100</Scale>
+      <MinimumX_Mode1>0</MinimumX_Mode1>
+      <MinimumX_Mode2>0</MinimumX_Mode2>
+      <MinimumX_Mode3>0</MinimumX_Mode3>
+      <MaxX_Mode1>1000</MaxX_Mode1>
+      <MaxX_Mode2>200</MaxX_Mode2>
+      <MaxX_Mode3>50000</MaxX_Mode3>
+      <DistanceX_Mode1>1000</DistanceX_Mode1>
+      <DistanceX_Mode2>10</DistanceX_Mode2>
+      <DistanceX_Mode3>25000</DistanceX_Mode3>
+      <MinimumY_Mode1>0</MinimumY_Mode1>
+      <MinimumY_Mode2>0</MinimumY_Mode2>
+      <MinimumY_Mode3>0</MinimumY_Mode3>
+      <MaxY_Mode1>2000</MaxY_Mode1>
+      <MaxY_Mode2>2000</MaxY_Mode2>
+      <MaxY_Mode3>2000</MaxY_Mode3>
+      <DistanceY_CenterScale_Mode1>50</DistanceY_CenterScale_Mode1>
+      <DistanceY_Mode1>1000</DistanceY_Mode1>
+      <DistanceY_Mode2>1000</DistanceY_Mode2>
+      <DistanceY_Mode3>1000</DistanceY_Mode3>
+      <GraphTagList>
+        <GraphTag>
+          <IsUpdated>false</IsUpdated>
+          <GraphTagNo>-1</GraphTagNo>
+          <Color />
           <BaseScale>false</BaseScale>
         </GraphTag>
         <GraphTag>
@@ -453,17 +546,17 @@
   </GraphSettingList>
   <SamplingCountLimit>0</SamplingCountLimit>
   <SamplingTiming_Mode2>100</SamplingTiming_Mode2>
-  <SamplingTiming_Mode3>500000</SamplingTiming_Mode3>
+  <SamplingTiming_Mode3>50000</SamplingTiming_Mode3>
   <MeasureTime_Mode2>0</MeasureTime_Mode2>
   <MeasureTime_Mode3>0</MeasureTime_Mode3>
   <Mode1_MeasCondition>
     <IsUpdated>false</IsUpdated>
-    <MeasConditionType>MEAS_INT_TIME2SHOTS</MeasConditionType>
-    <Interval_count>1</Interval_count>
-    <Average_count>1</Average_count>
-    <Inverval_time2shot_time>2</Inverval_time2shot_time>
-    <Inverval_time2shot_shots>1200</Inverval_time2shot_shots>
-    <Inverval_time2time_meastime>2</Inverval_time2time_meastime>
-    <Inverval_time2time_stoptime>2</Inverval_time2time_stoptime>
+    <MeasConditionType>MEAS_INT_TIME2TIME</MeasConditionType>
+    <Interval_count>100</Interval_count>
+    <Average_count>50</Average_count>
+    <Inverval_time2shot_time>1</Inverval_time2shot_time>
+    <Inverval_time2shot_shots>50</Inverval_time2shot_shots>
+    <Inverval_time2time_meastime>1</Inverval_time2time_meastime>
+    <Inverval_time2time_stoptime>1</Inverval_time2time_stoptime>
   </Mode1_MeasCondition>
 </MeasureSetting>

@@ -438,8 +438,10 @@ namespace RM_3000.Forms.Parts
                     Application.DoEvents();
 
                     this.measureStatus = MeasureStatus.Stop;
+                    SetCondition(false);
                     SetControlEnables();
                     OnMeasureStatusChanged();
+
                 }
             }
             catch (Exception ex)
@@ -466,8 +468,10 @@ namespace RM_3000.Forms.Parts
                     Application.DoEvents();
 
                     this.measureStatus = MeasureStatus.Exit;
+                    SetCondition(false);
                     SetControlEnables();
                     OnMeasureStatusChanged();
+
                 }
             }
             catch (Exception ex)

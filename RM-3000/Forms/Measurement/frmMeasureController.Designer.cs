@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblDuringMeasurementMode = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHardTime = new System.Windows.Forms.Label();
+            this.lblLastCommTime = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMeasureCount = new System.Windows.Forms.Label();
             this.lblUnit = new System.Windows.Forms.Label();
@@ -38,7 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblMeasureTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblStatus = new RM_3000.Controls.AutoFontSizeLabel(this.components);
             this.picbtnExit = new System.Windows.Forms.PictureBox();
             this.picbtnStop = new System.Windows.Forms.PictureBox();
             this.picbtnStart = new System.Windows.Forms.PictureBox();
@@ -46,7 +48,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
-            this.lblLastCommTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbtnExit)).BeginInit();
@@ -90,6 +91,16 @@
             this.lblHardTime.Size = new System.Drawing.Size(71, 22);
             this.lblHardTime.TabIndex = 7;
             this.lblHardTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLastCommTime
+            // 
+            this.lblLastCommTime.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblLastCommTime.Location = new System.Drawing.Point(137, 0);
+            this.lblLastCommTime.Name = "lblLastCommTime";
+            this.lblLastCommTime.Size = new System.Drawing.Size(114, 22);
+            this.lblLastCommTime.TabIndex = 8;
+            this.lblLastCommTime.Text = "TXT_LAST_COMM_TIME";
+            this.lblLastCommTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -171,10 +182,13 @@
             // 
             // lblStatus
             // 
+            this.lblStatus.AutoFontSize = true;
             this.lblStatus.BackColor = System.Drawing.SystemColors.Control;
             this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStatus.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblStatus.Font = new System.Drawing.Font("Meiryo UI", 12.04999F);
             this.lblStatus.Location = new System.Drawing.Point(889, 30);
+            this.lblStatus.MaxFontSize = 14.25F;
+            this.lblStatus.MinFontSize = 8F;
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(98, 39);
             this.lblStatus.TabIndex = 9;
@@ -269,16 +283,6 @@
             this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // lblLastCommTime
-            // 
-            this.lblLastCommTime.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblLastCommTime.Location = new System.Drawing.Point(137, 0);
-            this.lblLastCommTime.Name = "lblLastCommTime";
-            this.lblLastCommTime.Size = new System.Drawing.Size(114, 22);
-            this.lblLastCommTime.TabIndex = 8;
-            this.lblLastCommTime.Text = "TXT_LAST_COMM_TIME";
-            this.lblLastCommTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // frmMeasureController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -320,7 +324,7 @@
         private System.Windows.Forms.Label lblUnit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMeasureCount;
-        private System.Windows.Forms.Label lblStatus;
+        private RM_3000.Controls.AutoFontSizeLabel lblStatus;
         private System.Windows.Forms.Label lblHardTime;
         private System.Windows.Forms.Label lblLastCommTime;
     }

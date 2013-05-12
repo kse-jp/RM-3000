@@ -764,7 +764,7 @@ namespace RM_3000.Sequences
                     else if (measureSetting.Mode == (int)ModeType.Mode2) 
                     {
                             if(measureSetting.MeasureTime_Mode2 != 0 &&
-                            RealTimeData.GetStartTime().AddSeconds(measureSetting.MeasureTime_Mode2) < ((Mode2Header)reserveData.HeaderData).Time)
+                            RealTimeData.GetStartTime().AddSeconds(measureSetting.MeasureTime_Mode2) < sampleData.SampleTime)
                                 bLimit = true;
                     }
                     

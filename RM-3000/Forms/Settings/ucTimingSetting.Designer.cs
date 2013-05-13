@@ -462,7 +462,7 @@
             this.grpTimming.Size = new System.Drawing.Size(833, 152);
             this.grpTimming.TabIndex = 8;
             this.grpTimming.TabStop = false;
-            this.grpTimming.Text = "測定タイミング";
+            this.grpTimming.Text = "TXT_MEAS_TIMING";
             // 
             // ucTimingSetting
             // 

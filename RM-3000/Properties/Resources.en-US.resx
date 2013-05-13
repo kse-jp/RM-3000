@@ -1431,4 +1431,8 @@ In order to measure correctly, please check attachment of a temperature sensor a
     <value>3D-4</value>
     <comment>3D-4</comment>
   </data>
+  <data name="TXT_MEAS_TIMING" xml:space="preserve">
+    <value>Mesurement Timing</value>
+    <comment>測定タイミング</comment>
+  </data>
 </root>

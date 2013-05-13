@@ -330,7 +330,7 @@
     <comment>設定レンジ</comment>
   </data>
   <data name="TXT_READ" xml:space="preserve">
-    <value>Read</value>
+    <value>读取</value>
     <comment>Read</comment>
   </data>
   <data name="TXT_ROTATION" xml:space="preserve">
@@ -1434,5 +1434,9 @@ Please try restart agin.</comment>
   <data name="TXT_3D_WIN4" xml:space="preserve">
     <value>3D显示-4</value>
     <comment>3D-4</comment>
+  </data>
+  <data name="TXT_MEAS_TIMING" xml:space="preserve">
+    <value>测量同位</value>
+    <comment>測定タイミング</comment>
   </data>
 </root>

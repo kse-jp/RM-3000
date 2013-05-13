@@ -1420,4 +1420,8 @@
     <value>括弧が閉じられていません。</value>
     <comment>括弧が閉じられていません。</comment>
   </data>
+  <data name="TXT_MEAS_TIMING" xml:space="preserve">
+    <value>測定タイミング</value>
+    <comment>測定タイミング</comment>
+  </data>
 </root>

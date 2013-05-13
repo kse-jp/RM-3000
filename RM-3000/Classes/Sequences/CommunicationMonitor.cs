@@ -264,7 +264,7 @@ namespace RM_3000.Sequences
                             if (SystemSetting.ChannelsSetting.ChannelSettingList[i].ChKind != SystemSetting.HardInfoStruct.BoardInfos[i].ChannelKind)
                             {
                                 //メッセージ表示要求を画面に投げる
-                                this.ShowMessageRequestEvent(AppResource.GetString("MSG_DIFF_CHSETTING")
+                                this.ShowMessageRequestEvent("MSG_DIFF_CHSETTING"
                                     , System.Windows.Forms.MessageBoxButtons.OK
                                     , System.Windows.Forms.MessageBoxIcon.Exclamation);
                                 //System.Windows.Forms.MessageBox.Show(AppResource.GetString("MSG_DIFF_CHSETTING"));

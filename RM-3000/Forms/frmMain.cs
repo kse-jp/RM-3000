@@ -76,7 +76,7 @@ namespace RM_3000
         {
             if (this.InvokeRequired)
             {
-                this.BeginInvoke((MethodInvoker)delegate() { CommunicationMonitor_ShowMessageRequestEvent(message, buttons, icon); });
+                this.BeginInvoke((MethodInvoker)delegate() { CommunicationMonitor_ShowMessageRequestEvent(AppResource.GetString(message), buttons, icon); });
                 return;
             }
 

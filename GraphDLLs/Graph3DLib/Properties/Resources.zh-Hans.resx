@@ -126,7 +126,7 @@
     <comment>L</comment>
   </data>
   <data name="BtnReset" xml:space="preserve">
-    <value>クリア</value>
+    <value>复位</value>
     <comment>Reset</comment>
   </data>
   <data name="BtnRight" xml:space="preserve">
@@ -154,15 +154,15 @@
     <comment>Z</comment>
   </data>
   <data name="LblRotateSpeed" xml:space="preserve">
-    <value>回転速度</value>
+    <value>转速</value>
     <comment>Speed</comment>
   </data>
   <data name="LblRotationCtrl" xml:space="preserve">
-    <value>ズーム／回転</value>
+    <value>扩大/转弯</value>
     <comment>Rotation Control</comment>
   </data>
   <data name="PanelName" xml:space="preserve">
-    <value>表示調整</value>
+    <value>表示调整</value>
     <comment>Control Panel</comment>
   </data>
 </root>

@@ -402,7 +402,7 @@ namespace RM_3000.Forms.Graph
                     if (this.AnalyzeData.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.B)
                         sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_B;
                     else if (this.AnalyzeData.ChannelsSetting.ChannelSettingList[i].ChKind == ChannelKindType.R)
-                        sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_R * (double)SystemSetting.SystemConfig.ValueRate_3D_R;
+                        sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_R / (double)SystemSetting.SystemConfig.ValueRate_3D_R;
                     else
                         sensorsHighValues[i] = (double)SystemSetting.SystemConfig.SensorHighValue_B;
 #endif

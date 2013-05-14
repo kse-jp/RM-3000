@@ -2711,11 +2711,16 @@ namespace GraphLib
                     double zoomsize = (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) * _GraphModel.AxisZoomPercentY / (Math.Pow(2, zoomno));
                     _IsAxisYZoom = true;
 
-                    if ((_GraphModel.AxisZoomY * 2) + zoomsize < _GraphModel.MaxPlotY - _GraphModel.MinPlotY && zoomsize >= 1
+                    double checkval = ((_GraphModel.MaxPlotY - _GraphModel.MinPlotY) - ((_GraphModel.AxisZoomY * 2) + (zoomsize*2))) / _GraphModel.GridLineData.MaxGridNoY;
+
+                    if ((_GraphModel.AxisZoomY * 2) + (zoomsize*2) < _GraphModel.MaxPlotY - _GraphModel.MinPlotY && zoomsize >= 1
                         && _GraphModel.AxisZoomY + zoomsize <= (_GraphModel.MaxPlotY - _GraphModel.MinPlotY) / 2)
                     {
-                        _GraphModel.AxisZoomY += zoomsize;
-                        _ZoomNumberAxisY++;
+                        if (checkval >= 1 || (checkval > 0 && checkval < 1 && _GraphModel.GridLineData.DecimalPointY > 0))
+                        {
+                            _GraphModel.AxisZoomY += zoomsize;
+                            _ZoomNumberAxisY++;
+                        }
                     }
 
                     //_Log4NetClass.ShowInfo("_GraphModel.AxisZoomY" + _GraphModel.AxisZoomY.ToString(), "BtnZoomInY_Click");

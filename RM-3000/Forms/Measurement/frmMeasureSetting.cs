@@ -833,8 +833,17 @@ namespace RM_3000.Forms.Measurement
                 return;
 
             if (rdoEveryShot.Checked)
+            {
                 if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS)
                     this.dirty = true;
+
+                numAverageCount.Enabled = false;
+                numIntervalCount.Enabled = false;
+                numTime2Shot_Shots.Enabled = false;
+                numTime2Shot_Time.Enabled = false;
+                numTime2Time_MeasTime.Enabled = false;
+                numTime2Time_StopTime.Enabled = false;
+            }
         }
 
         private void rdoINT_Shot_CheckedChanged(object sender, EventArgs e)
@@ -843,8 +852,18 @@ namespace RM_3000.Forms.Measurement
                 return;
 
             if (rdoINT_Shot.Checked)
+            {
                 if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS)
                     this.dirty = true;
+
+                numAverageCount.Enabled = false;
+                numIntervalCount.Enabled = true;
+                numTime2Shot_Shots.Enabled = false;
+                numTime2Shot_Time.Enabled = false;
+                numTime2Time_MeasTime.Enabled = false;
+                numTime2Time_StopTime.Enabled = false;
+
+            }
         }
 
         private void rdoAverage_CheckedChanged(object sender, EventArgs e)
@@ -853,9 +872,18 @@ namespace RM_3000.Forms.Measurement
                 return;
 
             if (rdoAverage.Checked)
-                if(this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS)
+            {
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS)
                     this.dirty = true;
+            
+                numAverageCount.Enabled = false;
+                numIntervalCount.Enabled = true;
+                numTime2Shot_Shots.Enabled = false;
+                numTime2Shot_Time.Enabled = false;
+                numTime2Time_MeasTime.Enabled = false;
+                numTime2Time_StopTime.Enabled = false;
 
+            }
         }
 
         private void rdoINT_Time2Shot_CheckedChanged(object sender, EventArgs e)

@@ -126,15 +126,15 @@
   </data>
   <data name="AxisXSetting" xml:space="preserve">
     <value>X轴设定</value>
-    <comment>Axist X Setting</comment>
+    <comment>X軸設定</comment>
   </data>
   <data name="AxisYSetting" xml:space="preserve">
     <value>Y轴设定</value>
-    <comment>Axist Y Setting</comment>
+    <comment>Y軸設定</comment>
   </data>
   <data name="BGCSetting" xml:space="preserve">
-    <value>背景色设定</value>
-    <comment>Background Color Setting</comment>
+    <value>背景颜色设定</value>
+    <comment>背景色設定</comment>
   </data>
   <data name="btnCancel" xml:space="preserve">
     <value>取消</value>
@@ -145,49 +145,51 @@
     <comment>OK</comment>
   </data>
   <data name="ErrorInvalidMaxPlot" xml:space="preserve">
-    <value>无效的最大情节数。</value>
-    <comment>Invalid MaxPlot</comment>
+    <value>无效的最大描画点数。</value>
+    <comment>無効な最大描画点数です。</comment>
   </data>
   <data name="ErrorInvalidMaxValue" xml:space="preserve">
     <value>无效的最大值。</value>
-    <comment>Invalid MaxValue</comment>
+    <comment>無効な最大値です。</comment>
   </data>
   <data name="ErrorInvalidMinValue" xml:space="preserve">
     <value>无效的最小值。</value>
-    <comment>Invalid MinValue</comment>
+    <comment>無効な最小値です。</comment>
   </data>
   <data name="ErrorMaxLessThanMin" xml:space="preserve">
-    <value>请设定最大值大于最小值。</value>
-    <comment>MaxValue must more than MinValue</comment>
+    <value>请设定最大值必须大于最小值。</value>
+    <comment>最大値は最小値よりも大きくなければなりません。</comment>
   </data>
   <data name="ErrorMessageCaption" xml:space="preserve">
     <value>错误</value>
-    <comment>Error</comment>
+    <comment>エラー</comment>
   </data>
   <data name="extLegend" xml:space="preserve">
     <value>凡例</value>
+    <comment>凡例</comment>
   </data>
   <data name="FGCSetting" xml:space="preserve">
-    <value>前景色</value>
+    <value>前景颜色</value>
+    <comment>前景色</comment>
   </data>
   <data name="lblAxisName" xml:space="preserve">
     <value>轴标签</value>
-    <comment>Axis Label</comment>
+    <comment>軸ラベル</comment>
   </data>
   <data name="lblCurrentData" xml:space="preserve">
     <value>现在值</value>
-    <comment>Current Data</comment>
+    <comment>現在値</comment>
   </data>
   <data name="lblMaxPlot" xml:space="preserve">
-    <value>最大情节</value>
-    <comment>MaxPlot</comment>
+    <value>最大描画点</value>
+    <comment>最大描画点</comment>
   </data>
   <data name="lblMaxVal" xml:space="preserve">
     <value>最大值</value>
-    <comment>MaxValue</comment>
+    <comment>最大値</comment>
   </data>
   <data name="lblMinVal" xml:space="preserve">
     <value>最小值</value>
-    <comment>MinValue</comment>
+    <comment>最小値</comment>
   </data>
 </root>

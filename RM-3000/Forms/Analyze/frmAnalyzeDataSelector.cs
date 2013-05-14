@@ -57,7 +57,11 @@ namespace RM_3000.Forms.Analyze
                 }, cts.Token );
 
                 //コールバッグ
-                task.ContinueWith((x) => { if (x.IsCompleted) LoadListCompleted(); });
+                task.ContinueWith((x) => 
+                { 
+                    if (x.IsCompleted && !cts.IsCancellationRequested) LoadListCompleted(); 
+                }
+                );
 
             }
         }
@@ -193,6 +197,7 @@ namespace RM_3000.Forms.Analyze
         /// </summary>
         private void LoadListCompleted()
         {
+
             if (this.InvokeRequired)
             {
                 this.Invoke((MethodInvoker)delegate { LoadListCompleted(); });

@@ -155,14 +155,14 @@
   </data>
   <data name="LblRotateSpeed" xml:space="preserve">
     <value>转速</value>
-    <comment>Speed</comment>
+    <comment>回転速度</comment>
   </data>
   <data name="LblRotationCtrl" xml:space="preserve">
-    <value>扩大/转弯</value>
-    <comment>Rotation Control</comment>
+    <value>扩大/回转</value>
+    <comment>ズーム／回転</comment>
   </data>
   <data name="PanelName" xml:space="preserve">
     <value>表示调整</value>
-    <comment>Control Panel</comment>
+    <comment>表示調整</comment>
   </data>
 </root>

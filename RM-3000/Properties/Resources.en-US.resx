@@ -1435,4 +1435,12 @@ In order to measure correctly, please check attachment of a temperature sensor a
     <value>Mesurement Timing</value>
     <comment>測定タイミング</comment>
   </data>
+  <data name="MSG_COMM_COMMENT_CALIBRATION" xml:space="preserve">
+    <value>Get channel data 1 for ch{0}</value>
+    <comment>ch{0} チャンネルデータを取得中１</comment>
+  </data>
+  <data name="MSG_COMM_COMMENT_TEMP" xml:space="preserve">
+    <value>Get channel data 2 for ch{0}</value>
+    <comment>ch{0} チャンネルデータを取得中２</comment>
+  </data>
 </root>

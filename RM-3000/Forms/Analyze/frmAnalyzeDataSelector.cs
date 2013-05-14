@@ -124,8 +124,9 @@ namespace RM_3000.Forms.Analyze
                     //リストに追加
                     AnalyzeDataList.Add(tmp);
                 }
-                catch
+                catch//(Exception ex)
                 {
+                    //MessageBox.Show(ex.Message);
                 }
                 finally
                 {

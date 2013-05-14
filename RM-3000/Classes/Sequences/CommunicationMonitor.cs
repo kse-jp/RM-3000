@@ -27,7 +27,7 @@ namespace RM_3000.Sequences
 
         public event ShowMessageRequestHandler ShowMessageRequestEvent = delegate { };
 
-        public delegate void ShowCommunicationCommentHandler(string comment);
+        public delegate void ShowCommunicationCommentHandler(string comment, int chIndex);
 
         public event ShowCommunicationCommentHandler ShowCommunicationCommentEvent = delegate { };
 
@@ -285,7 +285,7 @@ namespace RM_3000.Sequences
                 }
                 finally
                 {
-                    this.ShowCommunicationCommentEvent("");
+                    this.ShowCommunicationCommentEvent("", -1);
 
                     Thread.Sleep(1000);
                 }
@@ -433,7 +433,7 @@ namespace RM_3000.Sequences
                     continue;
                 }
 
-                this.ShowCommunicationCommentEvent(string.Format(AppResource.GetString("MSG_COMM_COMMENT_CALIBRATION"), chIndex));
+                this.ShowCommunicationCommentEvent("MSG_COMM_COMMENT_CALIBRATION", chIndex);
 
                 command_KD = (KD_Command)KD_Command.CreateSendData(KD_Command.SubCommandType.R);
                 command_KD.Channel = (byte)chIndex;
@@ -476,7 +476,7 @@ namespace RM_3000.Sequences
                     SystemSetting.HardInfoStruct.BoardInfos[chIndex - 1].ChannelKind != DataCommon.ChannelKindType.R) 
                     continue;
 
-                this.ShowCommunicationCommentEvent(string.Format(AppResource.GetString("MSG_COMM_COMMENT_TEMP"), chIndex));
+                this.ShowCommunicationCommentEvent("MSG_COMM_COMMENT_TEMP", chIndex);
 
                 command_TD = (TD_Command)TD_Command.CreateSendData(TD_Command.SubCommandType.R);
                 command_TD.Channel = (byte)chIndex;

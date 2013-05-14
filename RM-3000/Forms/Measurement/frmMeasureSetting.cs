@@ -829,81 +829,102 @@ namespace RM_3000.Forms.Measurement
 
         private void rdoEveryShot_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.binding)
-                return;
-
             if (rdoEveryShot.Checked)
             {
-                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS)
-                    this.dirty = true;
-
                 numAverageCount.Enabled = false;
                 numIntervalCount.Enabled = false;
                 numTime2Shot_Shots.Enabled = false;
                 numTime2Shot_Time.Enabled = false;
                 numTime2Time_MeasTime.Enabled = false;
                 numTime2Time_StopTime.Enabled = false;
+
+                if (this.binding)
+                    return;
+
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_ALL_SHOTS)
+                    this.dirty = true;
             }
         }
 
         private void rdoINT_Shot_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.binding)
-                return;
 
             if (rdoINT_Shot.Checked)
             {
-                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS)
-                    this.dirty = true;
-
-                numAverageCount.Enabled = false;
                 numIntervalCount.Enabled = true;
+                numAverageCount.Enabled = false;
                 numTime2Shot_Shots.Enabled = false;
                 numTime2Shot_Time.Enabled = false;
                 numTime2Time_MeasTime.Enabled = false;
                 numTime2Time_StopTime.Enabled = false;
 
+                if (this.binding)
+                    return;
+
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_SHOTS)
+                    this.dirty = true;
             }
         }
 
         private void rdoAverage_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.binding)
-                return;
 
             if (rdoAverage.Checked)
             {
-                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS)
-                    this.dirty = true;
-            
-                numAverageCount.Enabled = false;
-                numIntervalCount.Enabled = true;
+                numIntervalCount.Enabled = false;
+                numAverageCount.Enabled = true;
                 numTime2Shot_Shots.Enabled = false;
                 numTime2Shot_Time.Enabled = false;
                 numTime2Time_MeasTime.Enabled = false;
                 numTime2Time_StopTime.Enabled = false;
+
+                if (this.binding)
+                    return;
+
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_AVG_SHOTS)
+                    this.dirty = true;
+
 
             }
         }
 
         private void rdoINT_Time2Shot_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.binding)
-                return;
-
             if (rdoINT_Time2Shot.Checked)
-                if(this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS)
+            {
+                numAverageCount.Enabled = false;
+                numIntervalCount.Enabled = false;
+                numTime2Shot_Shots.Enabled = true;
+                numTime2Shot_Time.Enabled = true;
+                numTime2Time_MeasTime.Enabled = false;
+                numTime2Time_StopTime.Enabled = false;
+
+                if (this.binding)
+                    return;
+
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2SHOTS)
                     this.dirty = true;
+
+            }
         }
 
         private void rdoINT_Time2Time_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.binding)
-                return;
-
             if (rdoINT_Time2Time.Checked)
-                if(this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME)
+            {
+                numAverageCount.Enabled = false;
+                numIntervalCount.Enabled = false;
+                numTime2Shot_Shots.Enabled = false;
+                numTime2Shot_Time.Enabled = false;
+                numTime2Time_MeasTime.Enabled = true;
+                numTime2Time_StopTime.Enabled = true;
+
+                if (this.binding)
+                    return;
+
+                if (this.MeasSetting.Mode1_MeasCondition.MeasConditionType != Mode1_MeasCondition.EnumMeasConditionType.MEAS_INT_TIME2TIME)
                     this.dirty = true;
+            }
         }
 
         #endregion

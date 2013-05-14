@@ -1439,4 +1439,12 @@ Please try restart agin.</comment>
     <value>测量同位</value>
     <comment>測定タイミング</comment>
   </data>
+  <data name="MSG_COMM_COMMENT_CALIBRATION" xml:space="preserve">
+    <value>ch{0} 正在读取频道的数据1</value>
+    <comment>ch{0} チャンネルデータを取得中１</comment>
+  </data>
+  <data name="MSG_COMM_COMMENT_TEMP" xml:space="preserve">
+    <value>ch{0} 正在读取频道的数据2</value>
+    <comment>ch{0} チャンネルデータを取得中２</comment>
+  </data>
 </root>

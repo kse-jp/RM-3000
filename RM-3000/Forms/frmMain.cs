@@ -91,15 +91,18 @@ namespace RM_3000
         /// <param name="message"></param>
         /// <param name="buttons"></param>
         /// <param name="icon"></param>
-        void CommunicationMonitor_ShowCommunicationCommentEvent(string comment)
+        void CommunicationMonitor_ShowCommunicationCommentEvent(string comment , int chIndex)
         {
             if (this.InvokeRequired)
             {
-                this.BeginInvoke((MethodInvoker)delegate() { CommunicationMonitor_ShowCommunicationCommentEvent(comment); });
+                this.BeginInvoke((MethodInvoker)delegate() { CommunicationMonitor_ShowCommunicationCommentEvent(comment, chIndex); });
                 return;
             }
 
-            lblCommComment.Text = comment;
+            if (comment != "")
+                lblCommComment.Text = string.Format(AppResource.GetString(comment), chIndex);
+            else
+                lblCommComment.Text = comment;
         }
 
 

@@ -2395,17 +2395,29 @@ namespace RM_3000.Forms.Parts
                 }
                 else
                 {
-                    int idx = (int)this.currentIndex - 1;
+                    //int idx = (int)this.currentIndex - 1;
+                    //if (idx < 0) idx = 0;
+                    //this.tagValueListForm.SetDataCalc(this.calcDataList[0][idx], 0);
 
-                    if (idx < 0) idx = 0;
+                    var calcmin = this.ScrollSub.Value * (decimal)incx;
+                    int idx = Convert.ToInt32((this.currentIndex - calcmin) / (decimal)incx);
 
-                    this.tagValueListForm.SetDataCalc(this.calcDataList[0][idx], 0);
-                }
+                    if (idx < 0)
+                        idx = 0;
 
-                //if (this.maxOverShotCountForMode2 > 1 && this.mode == 2)
-                //{
-                //    RefreshOverShot();
-                //}
+                    if (idx > this.dataList[0].Count - 1)
+                    {
+                        this.tagValueListForm.SetData(null, 0);
+                    }
+                    else
+                    {
+                        this.tagValueListForm.SetData(this.dataList[0][idx], 0);
+                        if (this.calcDataList[0].Count > 0)
+                        {
+                            this.tagValueListForm.SetDataCalc(this.calcDataList[0][idx], 0);
+                        }
+                    }
+                }              
             }
         }
 

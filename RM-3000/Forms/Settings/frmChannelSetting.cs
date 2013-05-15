@@ -49,6 +49,7 @@ namespace RM_3000.Forms.Settings
         /// <param name="log">ログ</param>
         public frmChannelSetting(LogManager log)
         {
+
             InitializeComponent();
 
             this.log = log;

@@ -17,10 +17,14 @@ namespace Riken.IO.Communication.RM
 {
     public class CommRM3000 : CommRMUSB_Base
     {
+        /// <summary>
+        /// 緊急停止イベント用ハンドラ
+        /// </summary>
+        /// <param name="data"></param>
         public delegate void EmergencyStopHandler(DataRecord_Base data);
 
         /// <summary>
-        /// 
+        /// 緊急停止イベント
         /// </summary>
         public event EmergencyStopHandler OnEmergencyStop;
 

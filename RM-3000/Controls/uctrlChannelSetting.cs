@@ -173,6 +173,7 @@ namespace RM_3000.Controls
                     // 海外モードの時
                     if (SystemSetting.HardInfoStruct.IsExportMode)
                     {
+
                         this.PointVisible = false;
                         NowPointLimit = 0;
                     }

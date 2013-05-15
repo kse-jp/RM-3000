@@ -629,12 +629,6 @@ namespace RM_3000.Sequences
         /// <param name="e"></param>
         void comm_OnEmergencyStop(DataRecord_Base data)
         {
-            //if (SystemSetting.SystemConfig.IsDebugMode)
-            //{
-            //    System.IO.File.AppendAllText(System.Windows.Forms.Application.StartupPath + "\\communicationLog.log"
-            //        , DateTime.Now.ToString() + " " + data.ToString() + System.Environment.NewLine);
-            //}
-
             //緊急停止状態とする
             TestStatus = TestStatusType.EmergencyStop;
         }

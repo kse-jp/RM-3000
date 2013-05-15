@@ -95,6 +95,7 @@ namespace RM_3000.Forms.Measurement
         {
             System.IO.FileStream fs;
 
+
             //Pattern Read Button
             fs = System.IO.File.OpenRead("Resources\\Images\\Buttons\\Common\\ReadFile_OFF.png");
             imageList1.Add(Image.FromStream(fs, false, false));

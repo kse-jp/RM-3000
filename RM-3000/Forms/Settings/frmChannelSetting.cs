@@ -386,20 +386,21 @@ namespace RM_3000.Forms.Settings
 
             for (int k = 0; k < this.uctrlArray.Length; k++)
             {
-                if (this.uctrlArray[k].boardType == uctrlChannelSetting.BoardType.Type_T
-                    || this.uctrlArray[k].boardType == uctrlChannelSetting.BoardType.None)
-                {
-                    this.uctrlArray[k].PointVisible = false;
-                    continue;
-                }
+                this.uctrlArray[k].SetExportMode(SystemSetting.HardInfoStruct.IsExportMode);
+                //if (this.uctrlArray[k].boardType == uctrlChannelSetting.BoardType.Type_T
+                //    || this.uctrlArray[k].boardType == uctrlChannelSetting.BoardType.None)
+                //{
+                //    this.uctrlArray[k].PointVisible = false;
+                //    continue;
+                //}
 
-                //小数点桁数
-                this.uctrlArray[k].PointVisible = !SystemSetting.HardInfoStruct.IsExportMode;
+                ////小数点桁数
+                //this.uctrlArray[k].PointVisible = !SystemSetting.HardInfoStruct.IsExportMode;
 
-                if (SystemSetting.HardInfoStruct.IsExportMode)
-                    this.uctrlArray[k].NumPoint = 0;
-                else
-                    this.uctrlArray[k].NumPoint = this.setting.ChannelSettingList[k].NumPoint;
+                //if (SystemSetting.HardInfoStruct.IsExportMode)
+                //    this.uctrlArray[k].NumPoint = 0;
+                //else
+                //    this.uctrlArray[k].NumPoint = this.setting.ChannelSettingList[k].NumPoint;
             }
         }
 

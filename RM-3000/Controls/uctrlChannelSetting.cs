@@ -723,6 +723,60 @@ namespace RM_3000.Controls
                 ntbFullScale_L.Focus();
             }
         }
+
+        /// <summary>
+        /// 海外モードの設定
+        /// </summary>
+        /// <param name="value"></param>
+        public void SetExportMode(bool value)
+        {
+            if (this.boardType != BoardType.None && this.boardType != BoardType.Type_T)
+            {
+                this.PointVisible = value;
+            }
+            else
+            {
+                this.PointVisible = false;
+            }
+
+            if (this.PointVisible)
+            {
+                //小数点桁数の調整
+                switch (this.boardType)
+                {
+                    case BoardType.Type_B:
+                    case BoardType.Type_R:
+                        NowPointLimit = SystemSetting.SystemConfig.NumPointLimit;
+                        break;
+
+                    case BoardType.Type_L:
+                        NowPointLimit = 3;
+                        break;
+
+                    case BoardType.Type_V:
+
+                        //レンジによって切り替え
+                        switch (Range_V)
+                        {
+                            case 0:
+                            case 3:
+                                NowPointLimit = 2;
+                                break;
+                            case 1:
+                                NowPointLimit = 3;
+                                break;
+                            case 2:
+                                NowPointLimit = 4;
+                                break;
+                            default:
+                                NowPointLimit = 0;
+                                break;
+
+                        }
+                        break;
+                }
+            }
+        }
         #endregion
 
     }

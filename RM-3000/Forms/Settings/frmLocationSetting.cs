@@ -109,6 +109,8 @@ namespace RM_3000
                 frmLocationSetting2 win2 = new frmLocationSetting2(this.log);
                 this.locationSetting2 = win2;
 
+                this.locationSetting2.visibleKanagata(this.chkDispKanagata.Checked);
+
                 win2.locationSetting = this;
                 win2.setLocationSetting(this);
 
@@ -338,7 +340,8 @@ namespace RM_3000
         {
             try
             {
-                this.locationSetting2.visibleKanagata(this.chkDispKanagata.Checked);
+                if(this.locationSetting2 != null)
+                    this.locationSetting2.visibleKanagata(this.chkDispKanagata.Checked);
             }
             catch (Exception ex)
             {

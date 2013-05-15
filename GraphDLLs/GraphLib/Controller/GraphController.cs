@@ -197,7 +197,7 @@ namespace GraphLib.Controller
                         {
                             if (_GraphModel.GraphRawData.Count > 0)
                                 _GraphModel.GridLineData.MaxGridValueX = _GraphModel.GraphRawData[_GraphModel.GraphRawData.Count - 1][0];
-                            _GraphModel.GridLineData.MinGridValueX = _GraphModel.GridLineData.MaxGridValueX - (_GraphModel.PlotCountX * _GraphModel.IncrementX) + (_GraphModel.AxisZoomX * _GraphModel.IncrementX);
+                            _GraphModel.GridLineData.MinGridValueX = _GraphModel.GridLineData.MaxGridValueX - (_GraphModel.PlotCountX * _GraphModel.IncrementX) + (_GraphModel.AxisZoomX * _GraphModel.IncrementX) + _GraphInfo.AddIndex;
                         }
                         else
                         {
@@ -208,7 +208,7 @@ namespace GraphLib.Controller
 
 
                         if (_GraphModel.GridLineData.MinGridValueX < 0)
-                            _GraphModel.GridLineData.MinGridValueX = 0;
+                            _GraphModel.GridLineData.MinGridValueX = 0 + _GraphInfo.AddIndex;
 
                     }
 

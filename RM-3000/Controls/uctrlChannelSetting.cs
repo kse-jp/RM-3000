@@ -732,7 +732,7 @@ namespace RM_3000.Controls
         {
             if (this.boardType != BoardType.None && this.boardType != BoardType.Type_T)
             {
-                this.PointVisible = value;
+                this.PointVisible = !value;
             }
             else
             {

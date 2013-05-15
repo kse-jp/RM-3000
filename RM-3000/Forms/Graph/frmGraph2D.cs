@@ -1234,7 +1234,11 @@ namespace RM_3000.Forms.Graph
             }
             graphinfo.AxisPositionX = null;
             graphinfo.MinMaxRangeX = graphinfo.MaxValueX - graphinfo.MinValueX;
-            graphinfo.MaxDataSizeX = Convert.ToInt32(graphinfo.MaxValueX - graphinfo.MinValueX);
+            if (this.IsMeasure)
+                graphinfo.MaxDataSizeX = Convert.ToInt32(graphinfo.MaxValueX - graphinfo.MinValueX) + 1;
+            else
+                graphinfo.MaxDataSizeX = Convert.ToInt32(graphinfo.MaxValueX - graphinfo.MinValueX);
+
             graphinfo.PlotCountX = graphinfo.MaxDataSizeX;
             graphinfo.ShotCount = 1;
             if (this.IsMeasure)
@@ -1249,6 +1253,7 @@ namespace RM_3000.Forms.Graph
             graphinfo.ShowValueLabelY = true;
             graphinfo.MeasureButtonShow = !this.IsMeasure;
             graphinfo.IncrementX = 1;
+            graphinfo.AddIndex = 1;
 
             graphinfo.DecimalPointY = GetDecimalPoint(graphSetting);
 
@@ -1315,6 +1320,7 @@ namespace RM_3000.Forms.Graph
             graphinfo.ShowValueLabelY = true;
             graphinfo.MeasureButtonShow = !this.IsMeasure;
             graphinfo.DecimalPointX = 1;
+            graphinfo.AddIndex = 0;
 
             graphinfo.ChannelInfos = new List<GraphLib.ChannelInfo>();
             graphinfo.ChannelInfos.Clear();
@@ -1395,6 +1401,7 @@ namespace RM_3000.Forms.Graph
             graphinfo.MinMaxRangeX = graphinfo.MaxValueX - graphinfo.MinValueX;
             graphinfo.MaxDataSizeX = Convert.ToInt32((graphinfo.MaxValueX - graphinfo.MinValueX) / graphinfo.IncrementX) + 1;
             graphinfo.PlotCountX = graphinfo.MaxDataSizeX - 1;
+            graphinfo.AddIndex = 0;
 
             graphinfo.ChannelInfos = new List<GraphLib.ChannelInfo>();
             graphinfo.ChannelInfos.Clear();

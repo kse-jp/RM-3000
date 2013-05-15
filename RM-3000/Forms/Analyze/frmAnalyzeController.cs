@@ -743,6 +743,7 @@ namespace RM_3000.Forms.Parts
                 }
                 else
                 {
+                    // Mode1, 3
                     decimal maxx = 0;
                     if (this.AnalyzeData.MeasureSetting.GraphSettingList[0] != null)
                     {
@@ -759,18 +760,21 @@ namespace RM_3000.Forms.Parts
                         maxx = Convert.ToDecimal((double)modeval / incx);
                     }
 
-                    // Mode1, 3
-                    this.ScrollSub.Maximum = this.AnalyzeData.MeasureData.SamplesCount;
+                    //mode 1 index is start from 1
+                    var index = 0;
+                    var count = 0;
+                    if (this.mode == 1)
+                        index = 1;
+                    else
+                        count = 1;
+
+
+                    this.ScrollSub.Maximum = this.AnalyzeData.MeasureData.SamplesCount - count;
                     this.scaleX = ((int)maxx < this.ScrollSub.Maximum) ? (int)maxx : this.ScrollSub.Maximum;
                     if (this.scaleX == 0)
                         this.scaleX = 1;
 
-                    this.ScrollSub.LargeChange = this.scaleX;
-
-                    //mode 1 index is start from 1
-                    var index = 0;
-                    if (this.mode == 1)
-                        index = 1;
+                    this.ScrollSub.LargeChange = this.scaleX + count;
 
                     this.ScrollSub.Minimum = index;
                     this.ScrollSub.Value = index;
@@ -1350,16 +1354,19 @@ namespace RM_3000.Forms.Parts
             {
                 lblScrollValue.Text = this.ScrollSub.Value.ToString();  // For Debug
                 var index = 0;
+                var count = 0;
                 //mode 1 index start from 1
                 if (this.mode == 1)
                     index = 1;
+                else 
+                    count = 1;
 
-                if (this.ScrollSub.Value > (this.ScrollSub.Maximum - this.ScrollSub.LargeChange) + index)
+                if (this.ScrollSub.Value > (this.ScrollSub.Maximum - this.ScrollSub.LargeChange) + index + count)
                 {
-                    if (this.ScrollSub.Maximum - this.ScrollSub.LargeChange + index < this.ScrollSub.Minimum)
+                    if (this.ScrollSub.Maximum - this.ScrollSub.LargeChange + index + count < this.ScrollSub.Minimum)
                         this.ScrollSub.Value = 0;
                     else
-                        this.ScrollSub.Value = this.ScrollSub.Maximum - this.ScrollSub.LargeChange + index;
+                        this.ScrollSub.Value = this.ScrollSub.Maximum - this.ScrollSub.LargeChange + index + count;
                     return;
                 }
 
@@ -1930,9 +1937,12 @@ namespace RM_3000.Forms.Parts
                     }
 
                     var index = 0;
+                    var count = 0;
 
                     if (this.mode == 1)
                         index = 1;
+                    else
+                        count = 1;
 
                     // Mode1, 3は全データ数（スクロールバーの最大値）まで
                     if (scale <= minlimit)
@@ -1954,10 +1964,10 @@ namespace RM_3000.Forms.Parts
                     {
                         // スクロールバーのサム幅を変更
                         this.scaleX = scale;
-                        this.ScrollSub.LargeChange = this.scaleX;
+                        this.ScrollSub.LargeChange = this.scaleX + count;
 
                         if (this.ScrollSub.Value + this.ScrollSub.LargeChange >= this.ScrollSub.Maximum)
-                            this.ScrollSub.Value = this.ScrollSub.Maximum - this.ScrollSub.LargeChange + index;
+                            this.ScrollSub.Value = this.ScrollSub.Maximum - this.ScrollSub.LargeChange + index + count;
 
                         // 2Dグラフを更新する
                         UpdateGraph2D();
@@ -1976,12 +1986,16 @@ namespace RM_3000.Forms.Parts
             {
                 if (f != null)
                 {
-                    if (f.MaximumX > Convert.ToDecimal(this.ShotCount * incx))
+                    var count = 0;
+                    if (mode == 3)
+                        count = 1;
+
+                    if (f.MaximumX > Convert.ToDecimal((this.ShotCount - count) * incx))
                     {
                         if (this.mode == 1 && this.ShotCount == 1)
                             f.MaximumX = Convert.ToDecimal(2);
                         else
-                            f.MaximumX = Convert.ToDecimal(this.ShotCount * incx);
+                            f.MaximumX = Convert.ToDecimal((this.ShotCount - count) * incx);
                     }
                 }
             }
@@ -2417,7 +2431,7 @@ namespace RM_3000.Forms.Parts
                             this.tagValueListForm.SetDataCalc(this.calcDataList[0][idx], 0);
                         }
                     }
-                }              
+                }
             }
         }
 

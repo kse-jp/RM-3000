@@ -162,6 +162,10 @@ namespace GraphLib
         /// MeasureButtonShow
         /// </summary>
         public bool MeasureButtonShow;
+        /// <summary>
+        /// Add Index Default =0 ,For Moving graph like Mode1 index is start from 1
+        /// </summary>
+        public int AddIndex;
         #endregion
 
         #region Public Properites
@@ -1362,10 +1366,10 @@ namespace GraphLib
 
                 _AxisZoomConstValueX = (double)(_GraphModel.PlotCountX * _ZoomPercent * 0.01);
 
+                _GraphController.GraphInfo = graphinfo;
 
                 if (_IsLoadedData && (!_IsRealTime || !_GraphModel.IsEnabled))
-                {
-                    _GraphController.GraphInfo = graphinfo;
+                {                    
                     _GraphController.UpdatePlotData();
                     this.RefreshGraph();
 

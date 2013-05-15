@@ -537,6 +537,16 @@ namespace RM_3000.Forms.Measurement
                         if (rs.TagNo_2 != -1)
                             SystemSetting.DataTagSetting.GetTag(rs.TagNo_2).Point = 0;
                     }
+
+                    SystemSetting.DataTagSetting.Serialize();
+
+                    foreach (ChannelSetting cs in SystemSetting.ChannelsSetting.ChannelSettingList)
+                    {
+                        if(cs != null)
+                            cs.NumPoint = 0;
+                    }
+
+                    SystemSetting.ChannelsSetting.Serialize();
                 }
 
                 if (this.log != null) this.log.PutLog(string.Format("frmMeasureStart.btnStart_Click() - saved measure setting file to [{0}]", this.measSetting.FilePath));

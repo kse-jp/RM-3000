@@ -104,11 +104,11 @@
             0,
             0,
             196608});
-            this.uctrlChannelSetting1.Hold_B = 0;
+            this.uctrlChannelSetting1.Hold_B = 1;
             this.uctrlChannelSetting1.Name = "uctrlChannelSetting1";
             this.uctrlChannelSetting1.NumPoint = 0;
             this.uctrlChannelSetting1.PointVisible = true;
-            this.uctrlChannelSetting1.Precision_B = false;
+            this.uctrlChannelSetting1.Precision_B = true;
             this.uctrlChannelSetting1.Precision_R = false;
             this.uctrlChannelSetting1.Range_L = 0;
             this.uctrlChannelSetting1.Range_V = 0;

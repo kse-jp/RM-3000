@@ -170,53 +170,61 @@ namespace RM_3000.Controls
                     if (cmbKindBoard.SelectedIndex != (int)this._boardType)
                         cmbKindBoard.SelectedIndex = (int)this._boardType;
 
-                    //小数点桁数の調整
-                    switch (value)
+                    // 海外モードの時
+                    if (SystemSetting.HardInfoStruct.IsExportMode)
                     {
-                        case BoardType.Type_B:
-                        case BoardType.Type_R:
-                            this.PointVisible = true;
-                            NowPointLimit = SystemSetting.SystemConfig.NumPointLimit;
-                            break;
-
-                        case BoardType.Type_L:
-                            this.PointVisible = true;
-                            NowPointLimit = 3;
-                            break;
-
-                        case BoardType.Type_T:
-                            this.PointVisible = false;
-                            NowPointLimit = 0;
-                            break;
-
-                        case BoardType.Type_V:
-                            this.PointVisible = true;
-
-                            //レンジによって切り替え
-                            switch (Range_V)
-                            {
-                                case 0:
-                                case 3:
-                                    NowPointLimit = 2;
-                                    break;
-                                case 1:
-                                    NowPointLimit = 3;
-                                    break;
-                                case 2:
-                                    NowPointLimit = 4;
-                                    break;
-                                default:
-                                    NowPointLimit = 0;
-                                    break;
-
-                            }
-                            break;
-                        default:
-                            this.PointVisible = false;
-                            NowPointLimit = 0;
-                            break;
+                        this.PointVisible = false;
+                        NowPointLimit = 0;
                     }
+                    else
+                    {
+                        //小数点桁数の調整
+                        switch (value)
+                        {
+                            case BoardType.Type_B:
+                            case BoardType.Type_R:
+                                this.PointVisible = true;
+                                NowPointLimit = SystemSetting.SystemConfig.NumPointLimit;
+                                break;
 
+                            case BoardType.Type_L:
+                                this.PointVisible = true;
+                                NowPointLimit = 3;
+                                break;
+
+                            case BoardType.Type_T:
+                                this.PointVisible = false;
+                                NowPointLimit = 0;
+                                break;
+
+                            case BoardType.Type_V:
+                                this.PointVisible = true;
+
+                                //レンジによって切り替え
+                                switch (Range_V)
+                                {
+                                    case 0:
+                                    case 3:
+                                        NowPointLimit = 2;
+                                        break;
+                                    case 1:
+                                        NowPointLimit = 3;
+                                        break;
+                                    case 2:
+                                        NowPointLimit = 4;
+                                        break;
+                                    default:
+                                        NowPointLimit = 0;
+                                        break;
+
+                                }
+                                break;
+                            default:
+                                this.PointVisible = false;
+                                NowPointLimit = 0;
+                                break;
+                        }
+                    }
                 }
             }
         }

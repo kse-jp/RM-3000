@@ -158,7 +158,7 @@ namespace RM_3000.Sequences
                 comm = new CommRM3000();
 
             //緊急停止時イベント
-            comm.OnEmergencyStop += new EventHandler(comm_OnEmergencyStop);
+            comm.OnEmergencyStop += new CommRM3000.EmergencyStopHandler(comm_OnEmergencyStop);
         }
 
 
@@ -627,8 +627,14 @@ namespace RM_3000.Sequences
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void comm_OnEmergencyStop(object sender, EventArgs e)
+        void comm_OnEmergencyStop(DataRecord_Base data)
         {
+            //if (SystemSetting.SystemConfig.IsDebugMode)
+            //{
+            //    System.IO.File.AppendAllText(System.Windows.Forms.Application.StartupPath + "\\communicationLog.log"
+            //        , DateTime.Now.ToString() + " " + data.ToString() + System.Environment.NewLine);
+            //}
+
             //緊急停止状態とする
             TestStatus = TestStatusType.EmergencyStop;
         }

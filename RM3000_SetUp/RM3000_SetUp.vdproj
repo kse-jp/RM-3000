@@ -517,7 +517,7 @@
             "SourcePath" = "8:..\\External\\2DGraph\\zh-Hans\\GraphLib.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_302719B940EF4310B67CC436B3CDB408"
+            "Folder" = "8:_8A88BE99302348C9B7814B87DB843273"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -548,7 +548,7 @@
             "SourcePath" = "8:..\\External\\3DGraph\\ja-JP\\Graph3DLib.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_10B621EC7A5048EE99F5BAE22114FF83"
+            "Folder" = "8:_FDAF3B3F55B74B6DBBE9EFDA7FDFADF8"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -618,7 +618,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4882.30207, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:CommonLib, Version=1.0.4882.31851, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_59D57ED525027CF759748705BB62C4A1"
@@ -649,7 +649,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:OKD_Calc_Wrapper, Version=1.0.4882.30205, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:OKD_Calc_Wrapper, Version=1.0.4882.31849, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_5B4CEFCC283B5F1A6015472F2C383CB9"
@@ -692,7 +692,7 @@
             "SourcePath" = "8:..\\External\\3DGraph\\zh-Hans\\Graph3DLib.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_302719B940EF4310B67CC436B3CDB408"
+            "Folder" = "8:_8A88BE99302348C9B7814B87DB843273"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -842,7 +842,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rmusb_Wrapper, Version=1.0.4882.30202, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Rmusb_Wrapper, Version=1.0.4882.31846, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_96B4C100304FAE2748B1319A112962BA"
@@ -995,7 +995,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:GraphLib, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:GraphLib, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_B6652A9488FE47B85BF262C39C51E436"
@@ -1058,7 +1058,7 @@
             "SourcePath" = "8:..\\External\\2DGraph\\ja-JP\\GraphLib.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_10B621EC7A5048EE99F5BAE22114FF83"
+            "Folder" = "8:_FDAF3B3F55B74B6DBBE9EFDA7FDFADF8"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1089,7 +1089,7 @@
             "SourcePath" = "8:..\\External\\2DGraph\\en-US\\GraphLib.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_DE925842A8CC4A2A983AF5F645508E4C"
+            "Folder" = "8:_4B3168556FA44C818F530F0FFEB977B4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1120,7 +1120,7 @@
             "SourcePath" = "8:..\\External\\3DGraph\\en-US\\Graph3DLib.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_DE925842A8CC4A2A983AF5F645508E4C"
+            "Folder" = "8:_4B3168556FA44C818F530F0FFEB977B4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1139,7 +1139,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4882.30206, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:DataCommon, Version=1.0.4882.31850, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_C398BF5B24F294F6761AE6732FCA4D0B"
@@ -1275,6 +1275,28 @@
                     "Property" = "8:_54B710D546F848FBAE59895C531B85E8"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_4B3168556FA44C818F530F0FFEB977B4"
+                            {
+                            "Name" = "8:en-US"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_44335BB7F0AD414D8A1CEA5E5ED19D2C"
+                                "Folders"
+                                {
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_8A88BE99302348C9B7814B87DB843273"
+                            {
+                            "Name" = "8:zh-Hans"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_87F8F26D31CC446682F5FCA621A9704D"
+                                "Folders"
+                                {
+                                }
+                            }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_94ECEE1198E146DBA8BFC94CF64EA79E"
                             {
                             "Name" = "8:Resources"
@@ -1284,39 +1306,17 @@
                             "Property" = "8:_BD31E5E8DEBB47E2B9D4C9E01473E8F0"
                                 "Folders"
                                 {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_10B621EC7A5048EE99F5BAE22114FF83"
-                                    {
-                                    "Name" = "8:ja-JP"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_72CD6BACD1F745ABADA59279EDF79D98"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_302719B940EF4310B67CC436B3CDB408"
-                                    {
-                                    "Name" = "8:zh-Hans"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_87F8F26D31CC446682F5FCA621A9704D"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_DE925842A8CC4A2A983AF5F645508E4C"
-                                    {
-                                    "Name" = "8:en-US"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_44335BB7F0AD414D8A1CEA5E5ED19D2C"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_FDAF3B3F55B74B6DBBE9EFDA7FDFADF8"
+                            {
+                            "Name" = "8:ja-JP"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_72CD6BACD1F745ABADA59279EDF79D98"
+                                "Folders"
+                                {
                                 }
                             }
                         }
@@ -1340,7 +1340,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RM-3000"
         "ProductCode" = "8:{E71BC58D-616E-441C-8072-C20DB2BE8FB9}"
-        "PackageCode" = "8:{EDE79252-9DAE-4F74-9189-1FAB79CF9042}"
+        "PackageCode" = "8:{20FB9F41-E57D-41C7-86D2-32C4ADF958AB}"
         "UpgradeCode" = "8:{FE1B347F-2373-4DFF-92D2-20B87EF23D13}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

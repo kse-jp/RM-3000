@@ -17,10 +17,12 @@ namespace Riken.IO.Communication.RM
 {
     public class CommRM3000 : CommRMUSB_Base
     {
+        public delegate void EmergencyStopHandler(DataRecord_Base data);
+
         /// <summary>
         /// 
         /// </summary>
-        public event EventHandler OnEmergencyStop;
+        public event EmergencyStopHandler OnEmergencyStop;
 
         //public const int  MAX_BOTTOL_COUNT = 20;
         //public const int MAX_SENSOR_COUNT = 10;
@@ -285,15 +287,35 @@ namespace Riken.IO.Communication.RM
 
                     if (tmpBuf2 == DataRecord_Base.EMERGENCY)
                     {
+                        //緊急停止だが、コマンドを作成
+                        DataRecord_Base data = SelectDataInstance(DataBuffer.ToArray());
+
                         //緊急停止を送信
-                        OnEmergencyStop(this, new EventArgs());
+                        OnEmergencyStop(data);
 
-                        //全データをクリアする
-                        //受信済みデータもクリアする。
-                        base.ReadQueue_Data.Clear();
+                        ////全データをクリアする
+                        ////受信済みデータもクリアする。
+                        //base.ReadQueue_Data.Clear();
 
-                        //ワード単位の処理完了でクリア
-                        DataWordBuffer.Clear();
+                        ////ワード単位の処理完了でクリア
+                        //DataWordBuffer.Clear();
+
+                        if (ReserveDataMethod != null)
+                        {
+                            try
+                            {
+                                lock (_ReservedDataListLock)
+                                {
+                                    _ReservedDataList.Add(data);
+                                    //ReserveDataMethod.Invoke(data);
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                System.Diagnostics.Debug.Print(ex.Message);
+                            }
+                        }
+
                         //データバッファのクリア
                         DataBuffer.Clear();
                     }

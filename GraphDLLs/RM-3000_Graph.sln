@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphLib", "GraphLib\GraphLib.csproj", "{E59E66C3-450A-49A0-9EFC-6C8F0A4E5537}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{1EAFBC40-B2E9-4658-9B59-6B011486510E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph3DLib", "Graph3DLib\Graph3DLib.csproj", "{005F7861-01C0-41EB-8976-E75A2ECD9C48}"
 EndProject
 Global
@@ -27,16 +25,7 @@ Global
 		{E59E66C3-450A-49A0-9EFC-6C8F0A4E5537}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E59E66C3-450A-49A0-9EFC-6C8F0A4E5537}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E59E66C3-450A-49A0-9EFC-6C8F0A4E5537}.Release|x86.ActiveCfg = Release|Any CPU
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Debug|Mixed Platforms.ActiveCfg = Release|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Debug|Mixed Platforms.Build.0 = Release|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Debug|x86.ActiveCfg = Debug|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Debug|x86.Build.0 = Debug|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Release|Any CPU.ActiveCfg = Release|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Release|Mixed Platforms.Build.0 = Release|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Release|x86.ActiveCfg = Release|x86
-		{1EAFBC40-B2E9-4658-9B59-6B011486510E}.Release|x86.Build.0 = Release|x86
+		{E59E66C3-450A-49A0-9EFC-6C8F0A4E5537}.Release|x86.Build.0 = Release|Any CPU
 		{005F7861-01C0-41EB-8976-E75A2ECD9C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{005F7861-01C0-41EB-8976-E75A2ECD9C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{005F7861-01C0-41EB-8976-E75A2ECD9C48}.Debug|Mixed Platforms.ActiveCfg = Release|Any CPU
@@ -47,6 +36,7 @@ Global
 		{005F7861-01C0-41EB-8976-E75A2ECD9C48}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{005F7861-01C0-41EB-8976-E75A2ECD9C48}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{005F7861-01C0-41EB-8976-E75A2ECD9C48}.Release|x86.ActiveCfg = Release|Any CPU
+		{005F7861-01C0-41EB-8976-E75A2ECD9C48}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

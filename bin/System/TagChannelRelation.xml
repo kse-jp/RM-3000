@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TagChannelRelationSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <IsUpdated>false</IsUpdated>
+  <IsUpdated>true</IsUpdated>
   <RelationList>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
@@ -17,7 +17,7 @@
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>2</ChannelNo>
-      <TagNo_1>-1</TagNo_1>
+      <TagNo_1>2</TagNo_1>
       <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
@@ -53,14 +53,14 @@
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>8</ChannelNo>
-      <TagNo_1>11</TagNo_1>
-      <TagNo_2>12</TagNo_2>
+      <TagNo_1>-1</TagNo_1>
+      <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>
       <ChannelNo>9</ChannelNo>
-      <TagNo_1>13</TagNo_1>
-      <TagNo_2>14</TagNo_2>
+      <TagNo_1>-1</TagNo_1>
+      <TagNo_2>-1</TagNo_2>
     </RelationSetting>
     <RelationSetting>
       <IsUpdated>false</IsUpdated>

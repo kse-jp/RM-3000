@@ -4,29 +4,13 @@
   <BolsterWidth>3000</BolsterWidth>
   <BolsterDepth>1500</BolsterDepth>
   <UsedMold>true</UsedMold>
-  <MoldWidth>2650</MoldWidth>
+  <MoldWidth>2500</MoldWidth>
   <MoldDepth>1400</MoldDepth>
   <MoldPressWidth>2000</MoldPressWidth>
   <MoldPressDepth>600</MoldPressDepth>
   <PositionList>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
-      <ChNo>1</ChNo>
-      <X>2960</X>
-      <Z>680</Z>
-      <Way>INVAILED</Way>
-      <Target>RUM</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>2</ChNo>
-      <X>500</X>
-      <Z>450</Z>
-      <Way>RIGHT</Way>
-      <Target>UPPER_PRESS</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
       <X>-1</X>
       <Z>-1</Z>
@@ -38,14 +22,6 @@
       <ChNo>-1</ChNo>
       <X>-1</X>
       <Z>-1</Z>
-      <Way>INVAILED</Way>
-      <Target>INVAILED</Target>
-    </PositionSetting>
-    <PositionSetting>
-      <IsUpdated>false</IsUpdated>
-      <ChNo>-1</ChNo>
-      <X>-100</X>
-      <Z>-100</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
     </PositionSetting>
@@ -67,11 +43,11 @@
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
-      <ChNo>8</ChNo>
-      <X>2490</X>
-      <Z>145</Z>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
       <Way>INVAILED</Way>
-      <Target>STRIPPER</Target>
+      <Target>INVAILED</Target>
     </PositionSetting>
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
@@ -84,8 +60,32 @@
     <PositionSetting>
       <IsUpdated>false</IsUpdated>
       <ChNo>-1</ChNo>
-      <X>-100</X>
-      <Z>-100</Z>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
+      <Way>INVAILED</Way>
+      <Target>INVAILED</Target>
+    </PositionSetting>
+    <PositionSetting>
+      <IsUpdated>false</IsUpdated>
+      <ChNo>-1</ChNo>
+      <X>-1</X>
+      <Z>-1</Z>
       <Way>INVAILED</Way>
       <Target>INVAILED</Target>
     </PositionSetting>

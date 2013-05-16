@@ -9,10 +9,10 @@
       <BoardSetting xsi:type="B_BoardSetting">
         <IsUpdated>false</IsUpdated>
         <Hold>1</Hold>
-        <Precision>false</Precision>
+        <Precision>true</Precision>
       </BoardSetting>
       <Mode1_Trigger>SELF</Mode1_Trigger>
-      <NumPoint>0</NumPoint>
+      <NumPoint>1</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
@@ -21,10 +21,10 @@
       <BoardSetting xsi:type="B_BoardSetting">
         <IsUpdated>false</IsUpdated>
         <Hold>1</Hold>
-        <Precision>false</Precision>
+        <Precision>true</Precision>
       </BoardSetting>
       <Mode1_Trigger>SELF</Mode1_Trigger>
-      <NumPoint>0</NumPoint>
+      <NumPoint>1</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
@@ -33,10 +33,10 @@
       <BoardSetting xsi:type="B_BoardSetting">
         <IsUpdated>false</IsUpdated>
         <Hold>1</Hold>
-        <Precision>false</Precision>
+        <Precision>true</Precision>
       </BoardSetting>
       <Mode1_Trigger>SELF</Mode1_Trigger>
-      <NumPoint>0</NumPoint>
+      <NumPoint>1</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
@@ -45,10 +45,10 @@
       <BoardSetting xsi:type="B_BoardSetting">
         <IsUpdated>false</IsUpdated>
         <Hold>1</Hold>
-        <Precision>false</Precision>
+        <Precision>true</Precision>
       </BoardSetting>
       <Mode1_Trigger>SELF</Mode1_Trigger>
-      <NumPoint>0</NumPoint>
+      <NumPoint>1</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
@@ -74,22 +74,14 @@
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>8</ChNo>
-      <ChKind>R</ChKind>
-      <BoardSetting xsi:type="R_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Precision>true</Precision>
-      </BoardSetting>
+      <ChKind>N</ChKind>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
     <ChannelSetting>
       <IsUpdated>true</IsUpdated>
       <ChNo>9</ChNo>
-      <ChKind>R</ChKind>
-      <BoardSetting xsi:type="R_BoardSetting">
-        <IsUpdated>false</IsUpdated>
-        <Precision>true</Precision>
-      </BoardSetting>
+      <ChKind>N</ChKind>
       <Mode1_Trigger>MAIN</Mode1_Trigger>
       <NumPoint>0</NumPoint>
     </ChannelSetting>
@@ -105,7 +97,7 @@
     <IsUpdated>true</IsUpdated>
     <MainTrigger>1</MainTrigger>
     <Mode2_Trigger>MAIN</Mode2_Trigger>
-    <Degree1>120</Degree1>
-    <Degree2>240</Degree2>
+    <Degree1>160</Degree1>
+    <Degree2>200</Degree2>
   </ChannelMeasSetting>
 </ChannelsSetting>

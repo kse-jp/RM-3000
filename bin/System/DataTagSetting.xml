@@ -6,57 +6,57 @@
       <IsUpdated>true</IsUpdated>
       <TagNo>1</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>1345</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>CH1</TagNameE>
       <TagNameJ>CH1</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH1</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>2</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>1352</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>CH2</TagNameE>
       <TagNameJ>CH2</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH2</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>3</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>1352</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>CH3</TagNameE>
       <TagNameJ>CH3</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH3</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>4</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>1223.2907170650361311839911062</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>CH4</TagNameE>
       <TagNameJ>CH4</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH4</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -65,12 +65,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>CH5</TagNameE>
       <TagNameJ>CH5</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH5</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -79,12 +79,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>CH6</TagNameE>
       <TagNameJ>CH6</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH6</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -93,12 +93,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>CH7</TagNameE>
       <TagNameJ>CH7</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH7</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -107,12 +107,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>CH8</TagNameE>
       <TagNameJ>CH8</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH8</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -121,12 +121,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>CH9</TagNameE>
       <TagNameJ>CH9</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH9</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -135,68 +135,68 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>CH10</TagNameE>
       <TagNameJ>CH10</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>CH10</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>11</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>0</StaticZero>
-      <TagNameE />
+      <StaticZero>1122.9499467518636847710330139</StaticZero>
+      <TagNameE>R1-MAX</TagNameE>
       <TagNameJ>R1-MAX</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R1-MAX</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>12</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>1300.6751918158567774936061381</StaticZero>
-      <TagNameE />
+      <StaticZero>1122.9499467518636847710330139</StaticZero>
+      <TagNameE>R1-MIN</TagNameE>
       <TagNameJ>R1-MIN</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R1-MIN</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>13</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>1300.6751918158567774936061381</StaticZero>
-      <TagNameE />
+      <StaticZero>1696.3537626066718386346004655</StaticZero>
+      <TagNameE>R2-MAX</TagNameE>
       <TagNameJ>R2-MAX</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R2-MAX</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>14</TagNo>
       <TagKind>0</TagKind>
-      <Point>0</Point>
+      <Point>1</Point>
       <Expression />
-      <StaticZero>1342.1818753933291378225298930</StaticZero>
-      <TagNameE />
+      <StaticZero>1696.3537626066718386346004655</StaticZero>
+      <TagNameE>R2-MIN</TagNameE>
       <TagNameJ>R2-MIN</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R2-MIN</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -204,55 +204,55 @@
       <TagKind>0</TagKind>
       <Point>0</Point>
       <Expression />
-      <StaticZero>1342.1818753933291378225298930</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>R3-MAX</TagNameE>
       <TagNameJ>R3-MAX</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R3-MAX</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>16</TagNo>
       <TagKind>0</TagKind>
-      <Point>1</Point>
+      <Point>0</Point>
       <Expression />
-      <StaticZero>1166.3287086446104589114194237</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>R3-MIN</TagNameE>
       <TagNameJ>R3-MIN</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R3-MIN</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>17</TagNo>
       <TagKind>0</TagKind>
-      <Point>1</Point>
+      <Point>0</Point>
       <Expression />
-      <StaticZero>1217.3813607775871926815323042</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>R4-MAX</TagNameE>
       <TagNameJ>R4-MAX</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R4-MAX</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>18</TagNo>
       <TagKind>0</TagKind>
-      <Point>1</Point>
+      <Point>0</Point>
       <Expression />
-      <StaticZero>1217.3813607775871926815323042</StaticZero>
-      <TagNameE />
+      <StaticZero>0</StaticZero>
+      <TagNameE>R4-MIN</TagNameE>
       <TagNameJ>R4-MIN</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>R4-MIN</TagNameC>
+      <UnitE>um</UnitE>
       <UnitJ>um</UnitJ>
-      <UnitC />
+      <UnitC>um</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -261,12 +261,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
-      <TagNameE />
+      <TagNameE>SPEED</TagNameE>
       <TagNameJ>回転数</TagNameJ>
-      <TagNameC />
-      <UnitE />
+      <TagNameC>SPEED</TagNameC>
+      <UnitE>spm</UnitE>
       <UnitJ>spm</UnitJ>
-      <UnitC />
+      <UnitC>spm</UnitC>
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -331,6 +331,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ />
+      <TagNameC />
+      <UnitE />
+      <UnitJ />
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -339,6 +345,12 @@
       <Point>0</Point>
       <Expression />
       <StaticZero>0</StaticZero>
+      <TagNameE />
+      <TagNameJ />
+      <TagNameC />
+      <UnitE />
+      <UnitJ />
+      <UnitC />
     </DataTag>
     <DataTag>
       <IsUpdated>true</IsUpdated>
@@ -389,15 +401,15 @@
     <DataTag>
       <IsUpdated>true</IsUpdated>
       <TagNo>31</TagNo>
-      <TagKind>2</TagKind>
+      <TagKind>0</TagKind>
       <Point>0</Point>
-      <Expression>(@1[CH1]+@2[CH2]+@3[CH3]+@4[CH4])/4</Expression>
+      <Expression />
       <StaticZero>0</StaticZero>
       <TagNameE />
-      <TagNameJ>演算A</TagNameJ>
+      <TagNameJ />
       <TagNameC />
       <UnitE />
-      <UnitJ>um</UnitJ>
+      <UnitJ />
       <UnitC />
     </DataTag>
     <DataTag>

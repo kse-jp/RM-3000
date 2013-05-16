@@ -1493,7 +1493,7 @@ namespace Graph3DLib
                         Dispatcher.BeginInvoke(new Action(_AnimationControl.StartInvoke), DispatcherPriority.Send, null);
                         _IsAnimationStart = true;
 
-                        //Dispatcher.Invoke(new Action(ShowStripper), null);
+                        Dispatcher.Invoke(new Action(ShowStripper), null);
 
                         _IsMeterStop = false;
                         _MeterTimer.Start();
@@ -1828,8 +1828,8 @@ namespace Graph3DLib
         {
             try
             {
-                //if (_IsAnimationStart && _AnimationControl.Duration < 5000)
-                //    Dispatcher.Invoke(new Action(HiddenStripper), null);
+                if (_IsAnimationStart && _AnimationControl.Duration < 5000)
+                    Dispatcher.Invoke(new Action(HiddenStripper), null);
 
                 if (_GraphController != null)
                     _GraphController.ClearData();
